@@ -86,17 +86,17 @@ zone-size = 32*s
     margin-top -1 * bdw
 
     transform-origin 50% 50%
-    animation rotate-blocks 60s ease infinite
+    animation rotate-blocks 30s ease infinite
 
 .one-zone
   display block
 
 .two-zones
   .zone-one
-    left 25%
+    left 15%
 
   .zone-two
-    left 75%
+    left 85%
     border-color lighten(mcolor, 50%)
     color lighten(mcolor, 33%)
     &:before
@@ -105,12 +105,10 @@ zone-size = 32*s
   .data-bundle
     position absolute
     top 50%
-    left 50%
-
-    margin-left -10*s
+    left 30%
 
 .three-zones
-  zone-size = 24*s
+  zone-size = 25*s
 
   .zone
     width zone-size
@@ -136,13 +134,13 @@ zone-size = 32*s
       margin-top -1 * bdw
 
   .zone-one
-    left 10%
+    left 7.5%
 
   .zone-two
     left 50%
 
   .zone-three
-    left 90%
+    left 92.5%
 
   .data-bundle
     top 50%

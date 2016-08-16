@@ -30,12 +30,9 @@ bkw = 1.5*s
 .hub-wrapper
   width 100*s
   height 100*s
-  position relative
 
 .hub, .spoke
-  background #fff
   border-width bdw
-  z-index 100
 
 hub-size = 40*s
 .hub
@@ -47,18 +44,8 @@ hub-size = 40*s
 
   font-size 7*s
   line-height 1.25
-  font-weight bold
-  padding 0 4*s
+  padding 0 5*s
 
-  display flex
-  justify-content center
-  align-items center
-
-  position absolute
-  top 50%
-  left 50%
-
-  color mcolor
   &:before
     width hub-size
     height hub-size
@@ -83,13 +70,6 @@ spoke-size = 22*s
   border-radius 0.5*spoke-size
 
   font-size 5*s
-  line-height 1
-
-  display flex
-  justify-content center
-  align-items center
-
-  position absolute
   &:before
     width spoke-size
     height spoke-size

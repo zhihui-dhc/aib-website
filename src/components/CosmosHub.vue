@@ -76,7 +76,7 @@ hub-size = 32*s
     margin-top -1 * bdw
 
     transform-origin 50% 50%
-    animation rotate-blocks 60s ease infinite
+    animation rotate-blocks 30s ease infinite
 
 
 spoke-size = 20*s

@@ -1,16 +1,21 @@
 <template>
 <div class="data-bundle">
   <div class="datastream datastream-top">
-    <p>0101010101010101010101010101010101010101010101010</p>
+    <p>{{ hexString }}</p>
   </div>
   <div class="datastream datastream-bottom">
-    <p>0101010101010101010101010101010101010101010101010</p>
+    <p>{{ hexString }}</p>
   </div>
 </div>
 </template>
 
 <script>
 export default {
+  data () {
+    return {
+      hexString: '2b12fcf1b09288fcaff797d71e950e71ae42b91e8bdb2304758dfcffc2b620e3'
+    }
+  }
 }
 </script>
 

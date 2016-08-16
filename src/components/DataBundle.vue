@@ -1,10 +1,10 @@
 <template>
 <div class="data-bundle" v-bind:style="bundleStyle">
   <div class="datastream datastream-top" v-bind:style="streamStyle">
-    <p v-bind:style="pStyle">0101010101010101010101010101010101010101010101010</p>
+    <p v-bind:style="pStyle">{{ hexString }}</p>
   </div>
   <div class="datastream datastream-bottom" v-bind:style="streamStyle">
-    <p v-bind:style="pStyle">0101010101010101010101010101010101010101010101010</p>
+    <p v-bind:style="pStyle">{{ hexString }}</p>
   </div>
 </div>
 </template>
@@ -33,7 +33,8 @@ export default {
   },
   data () {
     return {
-      smallMult: 0.3
+      smallMult: 0.3,
+      hexString: '2b12fcf1b09288fcaff797d71e950e71ae42b91e8bdb2304758dfcffc2b620e3'
     }
   },
   props: ['streamwidth', 'light-color']

@@ -1,5 +1,8 @@
 <template>
 <section-cover></section-cover>
+
+<countdown class="countdown-top"></countdown>
+
 <section class="section-default"><div class="section-container">
   <zone type="one-zone"></zone>
   <div class="section-content">
@@ -37,10 +40,18 @@
 
 <section class="section-default"><div class="section-container">
   <multiple-hubs></multiple-hubs>
-  <div class="section-content"> <p>The Cosmos hub isn&rsquo;t the center of the universe. Any zone can be a hub.</p> </div> </div></section> 
+  <div class="section-content">
+    <p>The Cosmos hub isn&rsquo;t the center of the universe. Any zone can be a hub.</p>
+  </div>
+</div></section> 
+
+<section class="section-default"><div class="section-container">
+  <countdown></countdown>
+</div></section> 
 </template>
 
 <script>
+import Countdown from './Countdown.vue'
 import CosmosHub from './CosmosHub.vue'
 import MultipleHubs from './MultipleHubs.vue'
 import SectionCover from './SectionCover.vue'
@@ -48,6 +59,7 @@ import Zone from './Zone.vue'
 export default {
   components: {
     CosmosHub,
+    Countdown,
     MultipleHubs,
     SectionCover,
     Zone
@@ -110,8 +122,13 @@ export default {
   border 1px solid txt
 
 .section-content
-  padding-top x
+  padding-top 1.5*x
   p
     font-size 1.25*x
 
+.countdown-top
+  margin-top -8*x
+  margin-bottom 3*x
+  margin-left auto
+  margin-right auto
 </style>
