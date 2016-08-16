@@ -23,6 +23,8 @@ export default {
 @import '../styles/variables.styl'
 
 s = 5px
+bdw = 0.4*s
+bkw = 1.5*s
 
 .wrapper
   width 100*s
@@ -31,7 +33,7 @@ s = 5px
 
 .hub, .spoke
   background #fff
-  border 1.2*s solid mcolor
+  border bdw solid mcolor
   z-index 100
 
 hub-size = 32*s
@@ -57,6 +59,26 @@ hub-size = 32*s
 
   color mcolor
 
+  &:before
+    content ''
+    box-sizing border-box
+    display block
+    position absolute
+    top 0
+    left 0
+    width hub-size
+    height hub-size
+
+    border-radius hub-size
+    border bkw dashed mcolor
+
+    margin-left -1 * bdw
+    margin-top -1 * bdw
+
+    transform-origin 50% 50%
+    animation rotate-blocks 60s ease infinite
+
+
 spoke-size = 20*s
 .spoke
   width spoke-size
@@ -73,6 +95,26 @@ spoke-size = 20*s
   align-items center
 
   position absolute
+
+  &:before
+    content ''
+    box-sizing border-box
+    display block
+    position absolute
+    top 0
+    left 0
+    width spoke-size
+    height spoke-size
+
+    border-radius spoke-size
+    border bkw dashed mcolor
+
+    margin-left -1 * bdw
+    margin-top -1 * bdw
+
+    transform-origin 50% 50%
+    animation rotate-blocks 60s ease infinite
+
 
 .spoke-one, .spoke-one + .data-bundle
   left 70*s
@@ -106,32 +148,32 @@ spoke-size = 20*s
 .spoke-six + .data-bundle
   transform rotate(-180deg)
 
-.eth-color
+.eth-color, .eth-color:before
   border-color eth-color
 .eth-color + .data-bundle .datastream.datastream-top
   background eth-color
 
-.btc-color
+.btc-color, .btc-color:before
   border-color btc-color
 .btc-color + .data-bundle .datastream.datastream-top
   background btc-color
 
-.dash-color
+.dash-color, .dash-color:before
   border-color dash-color
 .dash-color + .data-bundle .datastream.datastream-top
   background dash-color
 
-.xmr-color
+.xmr-color, .xmr-color:before
   border-color xmr-color
 .xmr-color + .data-bundle .datastream.datastream-top
   background xmr-color
 
-.maid-color
+.maid-color, .maid-color:before
   border-color maid-color
 .maid-color + .data-bundle .datastream.datastream-top
   background maid-color
 
-.doge-color
+.doge-color, .doge-color:before
   border-color doge-color
 .doge-color + .data-bundle .datastream.datastream-top
   background doge-color

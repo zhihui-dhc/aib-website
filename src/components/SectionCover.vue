@@ -56,7 +56,8 @@ export default {
   background bc
   width 100vw
   height 56.25vw
-
+  //height 100vh
+  //max-height 16/9 * 100vw
   display flex
   flex-flow column
   justify-content center

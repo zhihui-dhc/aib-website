@@ -33,6 +33,8 @@ export default {
 @import '../styles/variables.styl'
 
 s = 5px
+bdw = 0.4*s
+bkw = 1.5*s
 
 .wrapper
   width 100*s
@@ -41,7 +43,7 @@ s = 5px
 
 .zone
   background #fff
-  border 1.2*s solid mcolor
+  border bdw solid mcolor
   z-index 100
 
 zone-size = 32*s
@@ -67,6 +69,25 @@ zone-size = 32*s
 
   color mcolor
 
+  &:before
+    content ''
+    box-sizing border-box
+    display block
+    position absolute
+    top 0
+    left 0
+    width zone-size
+    height zone-size
+
+    border-radius zone-size
+    border bkw dashed mcolor
+
+    margin-left -1 * bdw
+    margin-top -1 * bdw
+
+    transform-origin 50% 50%
+    animation rotate-blocks 60s ease infinite
+
 .one-zone
   display block
 
@@ -76,8 +97,10 @@ zone-size = 32*s
 
   .zone-two
     left 75%
-    border-color lighten(mcolor, 33%)
+    border-color lighten(mcolor, 50%)
     color lighten(mcolor, 33%)
+    &:before
+      border-color lighten(mcolor,33%)
 
   .data-bundle
     position absolute
@@ -101,6 +124,16 @@ zone-size = 32*s
     font-weight normal
 
     border-color eth-color
+
+    &:before
+      width zone-size
+      height zone-size
+
+      border-radius zone-size
+      border-color eth-color
+
+      margin-left -1 * bdw
+      margin-top -1 * bdw
 
   .zone-one
     left 10%

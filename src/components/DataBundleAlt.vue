@@ -19,7 +19,7 @@ export default {
 
 s = 5px
 
-db-width = 28*s
+db-width = 40*s
 db-height = 8*s
 
 .data-bundle

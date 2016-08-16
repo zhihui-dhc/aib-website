@@ -36,27 +36,19 @@
 </div></section>
 
 <section class="section-default"><div class="section-container">
-  <div class="section-visualization">
-    <div class="viz-vert-hub">Cosmos Hub</div>
-    <div class="viz-vert">Vertex</div>
-    <div class="viz-vert">Vertex</div>
-    <div class="viz-vert">Vertex</div>
-    <div class="viz-vert">Vertex</div>
-
-    <div class="viz-vert-hub">Peer Hub</div> <div class="viz-vert">Vertex</div> <div class="viz-vert">Vertex</div>
-    <div class="viz-vert">Vertex</div>
-    <div class="viz-vert">Vertex</div>
-  </div>
+  <multiple-hubs></multiple-hubs>
   <div class="section-content"> <p>The Cosmos hub isn&rsquo;t the center of the universe. Any zone can be a hub.</p> </div> </div></section> 
 </template>
 
 <script>
 import CosmosHub from './CosmosHub.vue'
+import MultipleHubs from './MultipleHubs.vue'
 import SectionCover from './SectionCover.vue'
 import Zone from './Zone.vue'
 export default {
   components: {
     CosmosHub,
+    MultipleHubs,
     SectionCover,
     Zone
   },
@@ -71,6 +63,22 @@ export default {
         { key: 'spoke-six', value: 'EVM', color: 'eth-color' }
       ],
       distSpokes: [
+        { key: 'spoke-one', value: 'BTC', color: 'btc-color' },
+        { key: 'spoke-two', value: 'ETH', color: 'eth-color' },
+        { key: 'spoke-three', value: 'XMR', color: 'xmr-color' },
+        { key: 'spoke-four', value: 'MAID', color: 'maid-color' },
+        { key: 'spoke-five', value: 'DOGE', color: 'doge-color' },
+        { key: 'spoke-six', value: 'DASH', color: 'dash-color' }
+      ],
+      twoOneSpokes: [
+        { key: 'spoke-one', value: 'BTC', color: 'btc-color' },
+        { key: 'spoke-two', value: 'ETH', color: 'eth-color' },
+        { key: 'spoke-three', value: 'XMR', color: 'xmr-color' },
+        { key: 'spoke-four', value: 'MAID', color: 'maid-color' },
+        { key: 'spoke-five', value: 'DOGE', color: 'doge-color' },
+        { key: 'spoke-six', value: 'DASH', color: 'dash-color' }
+      ],
+      twoTwoSpokes: [
         { key: 'spoke-one', value: 'BTC', color: 'btc-color' },
         { key: 'spoke-two', value: 'ETH', color: 'eth-color' },
         { key: 'spoke-three', value: 'XMR', color: 'xmr-color' },
