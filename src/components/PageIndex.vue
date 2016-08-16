@@ -1,104 +1,90 @@
 <template>
-<section class="section-cover">
-  <h1>Cosmos</h1>
-  <nav>
-    <a href="#">Whitepaper</a>
-    <a href="#">Plan</a>
-    <a href="#">FAQ</a>
-  </nav>
-  <p id="crowdscale-countdown">58 days til October 8th</p>
-</section>
-
+<section-cover></section-cover>
 <section class="section-default"><div class="section-container">
-  <div class="section-visualization">
-    <div class="viz-vert-zone">Zone</div>
-  </div>
+  <zone type="one-zone"></zone>
   <div class="section-content">
     <p>A Cosmos <a href="#">zone</a> is a distributed ledger (blockchain). Each zone can have differing transaction logic and policies.</p>
   </div>
 </div></section>
 
 <section class="section-default"><div class="section-container">
-  <div class="section-visualization">
-    <div class="viz-vert-zone">Zone</div>
-    <div class="viz-edge-ibc">IBC</div>
-    <div class="viz-vert-zone">Zone</div>
-  </div>
+  <zone type="two-zones"></zone>
   <div class="section-content">
     <p>We&rsquo;ve developed a trick that allows zones to communicate with each other directly. It&rsquo;s based on classical BFT algorithms like Tendermint.</p>
   </div>
 </div></section>
 
 <section class="section-default"><div class="section-container">
-  <div class="section-visualization">
-    <div class="viz-vert-hub">Cosmos Hub</div>
-    <div class="viz-vert-evm">EVM</div>
-    <div class="viz-vert-evm">EVM</div>
-    <div class="viz-vert-evm">EVM</div>
-    <div class="viz-vert-evm">EVM</div>
-    <div class="viz-vert-evm">EVM</div>
-  </div>
+  <cosmos-hub hub-name="Cosmos Hub" :spokes="evmSpokes"></cosmos-hub>
   <div class="section-content">
     <p>With this technique, we could make Ethereum scale by constructing a common hub blockchain. All inter-zone token movements go through the hub.</p>
   </div>
 </div></section>
 
 <section class="section-default"><div class="section-container">
-  <div class="section-visualization">
-    <div class="viz-vert-evm">EVM 1.0</div>
-    <div class="viz-vert-evm">EVM 2.0</div>
-    <div class="viz-vert-evm">EVM 3.0</div>
-  </div>
+  <zone type="three-zones"></zone>
   <div class="section-content">
     <p>Upgrading the EVM would be seamless, with less risk of contentious hard-forks. Anyone could plug in a better smart contract system.</p>
   </div>
 </div></section>
 
 <section class="section-default"><div class="section-container">
-  <div class="section-visualization">
-    <div class="viz-vert-hub">Cosmos Hub</div>
-    <div class="viz-vert-evm">BTC</div>
-    <div class="viz-vert-evm">ETH</div>
-    <div class="viz-vert-evm">XMR</div>
-    <div class="viz-vert-evm">DOGE</div>
-  </div>
+  <cosmos-hub hub-name="Cosmos Hub" :spokes="distSpokes"></cosmos-hub>
   <div class="section-content">
-    <p>We could immport other blockchains and have a distributed exchange on its own zone.</p>
+    <p>We could import other blockchains and have a distributed exchange on its own zone.</p>
   </div>
 </div></section>
 
 <section class="section-default"><div class="section-container">
   <div class="section-visualization">
     <div class="viz-vert-hub">Cosmos Hub</div>
-    <div class="viz-vert"></div>
-    <div class="viz-vert"></div>
-    <div class="viz-vert"></div>
-    <div class="viz-vert"></div>
+    <div class="viz-vert">Vertex</div>
+    <div class="viz-vert">Vertex</div>
+    <div class="viz-vert">Vertex</div>
+    <div class="viz-vert">Vertex</div>
 
-    <div class="viz-vert-hub">Peer Hub</div>
-    <div class="viz-vert"></div>
-    <div class="viz-vert"></div>
-    <div class="viz-vert"></div>
-    <div class="viz-vert"></div>
+    <div class="viz-vert-hub">Peer Hub</div> <div class="viz-vert">Vertex</div> <div class="viz-vert">Vertex</div>
+    <div class="viz-vert">Vertex</div>
+    <div class="viz-vert">Vertex</div>
   </div>
-  <div class="section-content">
-    <p>The Cosmos hub isn&rsquo;t the center of the universe. Any zone can be a hub.</p>
-  </div>
-</div></section>
-
-
+  <div class="section-content"> <p>The Cosmos hub isn&rsquo;t the center of the universe. Any zone can be a hub.</p> </div> </div></section> 
 </template>
 
 <script>
+import CosmosHub from './CosmosHub.vue'
+import SectionCover from './SectionCover.vue'
+import Zone from './Zone.vue'
 export default {
+  components: {
+    CosmosHub,
+    SectionCover,
+    Zone
+  },
+  data () {
+    return {
+      evmSpokes: [
+        { key: 'spoke-one', value: 'EVM', color: 'eth-color' },
+        { key: 'spoke-two', value: 'EVM', color: 'eth-color' },
+        { key: 'spoke-three', value: 'EVM', color: 'eth-color' },
+        { key: 'spoke-four', value: 'EVM', color: 'eth-color' },
+        { key: 'spoke-five', value: 'EVM', color: 'eth-color' },
+        { key: 'spoke-six', value: 'EVM', color: 'eth-color' }
+      ],
+      distSpokes: [
+        { key: 'spoke-one', value: 'BTC', color: 'btc-color' },
+        { key: 'spoke-two', value: 'ETH', color: 'eth-color' },
+        { key: 'spoke-three', value: 'XMR', color: 'xmr-color' },
+        { key: 'spoke-four', value: 'MAID', color: 'maid-color' },
+        { key: 'spoke-five', value: 'DOGE', color: 'doge-color' },
+        { key: 'spoke-six', value: 'DASH', color: 'dash-color' }
+      ]
+    }
+  }
 }
 </script>
 
 <style lang="stylus" scoped>
 @import '../styles/variables.styl'
-
-.section-cover
-  background bc
 
 .section-default
   border-top 1px solid bc
@@ -110,15 +96,14 @@ export default {
     padding 3*x 0
     
 
-.viz-vert-zone
-.viz-vert-hub
-  display inline-block
-  border 2px solid bc
-  font-size 2*x
-  padding x
+.section-visualization
+  width 480px
+  height 480px
+  border 1px solid txt
 
-.viz-vert-evm
-  display inline-block
-  border 1px solid bc
-  padding 0.5*x
+.section-content
+  padding-top x
+  p
+    font-size 1.25*x
+
 </style>

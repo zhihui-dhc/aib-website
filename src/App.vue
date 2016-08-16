@@ -18,6 +18,15 @@ export default {
 global-reset()
 reset-html5()
 
+*
+  box-sizing border-box
+
 body
   df()
+
+a
+  color link
+  text-decoration none
+  &:hover
+    color hover
 </style>
