@@ -20,7 +20,7 @@ Vue.component('page-whitepaper', PageWhitepaper)
 Vue.component('page-plan', PageWhitepaper)
 Vue.component('page-faq', PageFaq)
 
-let router = new VueRouter({history: true})
+let router = new VueRouter({history: false})
 
 // basic transitions
 router.beforeEach(function () {

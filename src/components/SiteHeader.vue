@@ -1,10 +1,10 @@
 <template>
   <header id="site-header">
-    <a href="#" id="nav-item-home">Cosmos</a>
+    <a v-link="{ path: '/' }" id="nav-home">Cosmos</a>
     <nav id="nav-site">
-      <a href="#" id="nav-item-whitepaper">Whitepaper</a>
-      <a href="#" id="nav-item-plan">Plan</a>
-      <a href="#" id="nav-item-faq">FAQ</a>
+      <a v-link="{ path: '/whitepaper' }">Whitepaper</a>
+      <a v-link="{ path: '/plan' }">Plan</a>
+      <a v-link="{ path: '/faq' }">FAQ</a>
     </nav>
   </header>
 </template>
