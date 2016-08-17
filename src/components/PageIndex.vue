@@ -18,7 +18,9 @@
 </div></section>
 
 <section class="section-default"><div class="section-container">
-  <cosmos-hub hub-name="Cosmos Hub" :spokes="evmSpokes"></cosmos-hub>
+  <div class="gfx-wrapper">
+    <cosmos-hub hub-name="Cosmos Hub" :spokes="evmSpokes"></cosmos-hub>
+  </div>
   <div class="section-content">
     <p>With this technique, we could make Ethereum scale by constructing a common hub blockchain. All inter-zone token movements go through the hub.</p>
   </div>
@@ -32,7 +34,9 @@
 </div></section>
 
 <section class="section-default"><div class="section-container">
-  <cosmos-hub hub-name="Cosmos Hub" :spokes="distSpokes"></cosmos-hub>
+  <div class="gfx-wrapper">
+    <cosmos-hub hub-name="Cosmos Hub" :spokes="distSpokes"></cosmos-hub>
+  </div>
   <div class="section-content">
     <p>We could import other blockchains and have a distributed exchange on its own zone.</p>
   </div>

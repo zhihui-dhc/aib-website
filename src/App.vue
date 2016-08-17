@@ -36,6 +36,11 @@ a
   &:hover
     color hover
 
+.gfx-wrapper
+  width 100*s
+  height 100*s
+  position relative
+
 @keyframes rotate-blocks
   0%
     transform scale(1.04) rotate(0deg)

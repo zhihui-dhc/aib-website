@@ -1,9 +1,10 @@
 <template>
-<div class="wrapper">
+<div class="hub-container">
   <div class="hub">{{ hubName }}</div>
-
   <template v-for="spoke in spokes">
-    <div class="spoke {{ spoke.key }} {{ spoke.color }}">{{ spoke.value }}</div>
+    <div class="spoke {{ spoke.key }} {{ spoke.color }}">
+      {{ spoke.value }}
+    </div>
     <data-bundle></data-bundle>
   </template>
 </div>
@@ -22,14 +23,8 @@ export default {
 <style lang="stylus">
 @import '../styles/variables.styl'
 
-s = 5px
 bdw = 0.4*s
 bkw = 1.5*s
-
-.wrapper
-  width 100*s
-  height 100*s
-  position relative
 
 .hub, .spoke
   background #fff
