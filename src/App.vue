@@ -27,12 +27,15 @@ reset-html5()
 
 body
   df()
+  padding-top 3*x
 
 a
   color link
   text-decoration none
   &:hover
     color hover
+
+@import './styles/article.styl'
 
 .gfx-wrapper
   width 100*s

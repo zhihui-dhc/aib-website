@@ -20,7 +20,12 @@
   height 3*x
   line-height 3*x
 
-  background hsla(0,0,100%,75%)
+  position fixed
+  top 0
+  left 0
+
+  background #fff
+  background hsla(0,0,100%,95%)
 
   display flex
   flex-flow row
@@ -30,11 +35,14 @@
   a
     display block
     text-decoration none
-    padding 0 x
+    padding 0 0.75*x
 
     color txt
     &:hover 
       color link
+
+  #nav-home
+    font-weight bold
 
   #nav-site
     flex 1

@@ -1,12 +1,6 @@
 <template>
   <footer id="site-footer">
-    <a href="#" id="nav-item-home">&copy; 2016 Cosmos Foundation</a>
-
-    <nav id="nav-site">
-      <a href="#" id="nav-item-whitepaper">Whitepaper</a>
-      <a href="#" id="nav-item-plan">Plan</a>
-      <a href="#" id="nav-item-faq">FAQ</a>
-    </nav>
+    <p>&copy; 2016 Cosmos Inc</p>
   </footer>
 </template>
 
@@ -21,26 +15,10 @@
   height 3*x
   line-height 3*x
 
-  background hsla(0,0,100%,75%)
-
   display flex
   flex-flow row
 
   border-top 1px solid bc
-
-  a
-    display block
-    text-decoration none
+  p
     padding 0 x
-
-    color txt
-    &:hover 
-      color link
-
-  #nav-site
-    flex 1
-
-    display flex
-    flex-flow row
-    justify-content flex-end
 </style>

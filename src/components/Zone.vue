@@ -9,10 +9,10 @@
     <cosmos-hub id="two-hubs-two" hub-name="Zone 2"></cosmos-hub>
   </div>
   <div class="three-hubs" template v-if="type === 'three-zones'">
-    <cosmos-hub class="three-hubs-one" hub-name="EVM 1.0"></cosmos-hub>
+    <cosmos-hub id="three-hubs-one" hub-name="EVM 1.0"></cosmos-hub>
     <arrow></arrow>
-    <cosmos-hub class="three-hubs-two" hub-name="EVM 2.0"></cosmos-hub>
-    <cosmos-hub class="three-hubs-three" hub-name="EVM 3.0"></cosmos-hub>
+    <cosmos-hub id="three-hubs-two" hub-name="EVM 2.0"></cosmos-hub>
+    <cosmos-hub id="three-hubs-three" hub-name="EVM 3.0"></cosmos-hub>
   </div>
 </div>
 </template>
@@ -79,13 +79,13 @@ bkw = 1.5*s
       margin-left -1 * bdw
       margin-top -1 * bdw
 
-  #three-hubs-one
+  #three-hubs-one .hub
     left 7.5%
 
-  #three-hubs-two
+  #three-hubs-two .hub
     left 50%
 
-  #three-hubs-three
+  #three-hubs-three .hub
     left 92.5%
 
   .data-bundle
