@@ -40,10 +40,10 @@ bkw = 1.5*s
 
 .two-hubs
   #two-hubs-one .hub
-    left 20%
+    left 21%
 
   #two-hubs-two .hub
-    left 80%
+    left 79%
     border-color lighten(mcolor, 50%)
     color lighten(mcolor, 33%)
     &:before
@@ -65,6 +65,7 @@ bkw = 1.5*s
     border-radius 0.5*hub-size
     padding 0 x
 
+    font-size 4*s
     line-height 1.0
     font-weight normal
 
