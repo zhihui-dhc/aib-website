@@ -16,6 +16,7 @@
 .section-cover
   width 100vw
   height 80vh
+  min-height 480px
   max-height 133.33vw
   display flex
   flex-flow column
