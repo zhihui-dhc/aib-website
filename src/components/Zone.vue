@@ -1,18 +1,18 @@
 <template>
 <div class="gfx-wrapper">
   <div class="one-hub" template v-if="type === 'one-zone'">
-    <cosmos-hub class="hub-one" hub-name="Zone"></cosmos-hub>
+    <cosmos-hub hub-name="Zone"></cosmos-hub>
   </div>
   <div class="two-hubs" v-if="type === 'two-zones'">
-    <cosmos-hub class="hub-one" hub-name="Zone 1"></cosmos-hub>
+    <cosmos-hub id="two-hubs-one" hub-name="Zone 1"></cosmos-hub>
     <data-bundle reversed="true"></data-bundle>
-    <cosmos-hub class="hub-two" hub-name="Zone 2"></cosmos-hub>
+    <cosmos-hub id="two-hubs-two" hub-name="Zone 2"></cosmos-hub>
   </div>
   <div class="three-hubs" template v-if="type === 'three-zones'">
-    <cosmos-hub class="hub-one">EVM 1.0</cosmos-hub>
+    <cosmos-hub class="three-hubs-one" hub-name="EVM 1.0"></cosmos-hub>
     <arrow></arrow>
-    <cosmos-hub class="hub-two">EVM 2.0</cosmos-hub>
-    <cosmos-hub class="hub-three">EVM 3.0</cosmos-hub>
+    <cosmos-hub class="three-hubs-two" hub-name="EVM 2.0"></cosmos-hub>
+    <cosmos-hub class="three-hubs-three" hub-name="EVM 3.0"></cosmos-hub>
   </div>
 </div>
 </template>
@@ -31,17 +31,17 @@ export default {
 }
 </script>
 
-<style lang="stylus" scoped>
+<style lang="stylus">
 @import '../styles/variables.styl'
 
 bdw = 0.4*s
 bkw = 1.5*s
 
 .two-hubs
-  .hub-one
+  #two-hubs-one .hub
     left 15%
 
-  .hub-two
+  #two-hubs-two .hub
     left 85%
     border-color lighten(mcolor, 50%)
     color lighten(mcolor, 33%)
@@ -79,13 +79,13 @@ bkw = 1.5*s
       margin-left -1 * bdw
       margin-top -1 * bdw
 
-  .hub-one
+  #three-hubs-one
     left 7.5%
 
-  .hub-two
+  #three-hubs-two
     left 50%
 
-  .hub-three
+  #three-hubs-three
     left 92.5%
 
   .data-bundle

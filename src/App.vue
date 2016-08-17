@@ -1,19 +1,17 @@
 <template>
   <site-header></site-header>
-  <page-index></page-index>
+  <router-view></router-view>
   <site-footer></site-footer>
 </template>
 
 <script>
 import SiteHeader from './components/SiteHeader.vue'
 import SiteFooter from './components/SiteFooter.vue'
-import PageIndex from './components/PageIndex'
 
 export default {
   components: {
     SiteHeader,
-    SiteFooter,
-    PageIndex
+    SiteFooter
   }
 }
 </script>

@@ -23,18 +23,17 @@ export default {
 <style lang="stylus" scoped>
 @import '../styles/variables.styl'
 
-s = 3px
-bdw = 0.4*s
-bkw = 1.5*s
+bdw = 0.4*sm
+bkw = 1.5*sm
 
 .hub-wrapper
-  width 100*s
-  height 100*s
+  width 100*sm
+  height 100*sm
 
 .hub, .spoke
   border-width bdw
 
-hub-size = 40*s
+hub-size = 40*sm
 .hub
   width hub-size
   height hub-size
@@ -42,9 +41,9 @@ hub-size = 40*s
   margin-left -0.5*hub-size
   border-radius 0.5*hub-size
 
-  font-size 7*s
+  font-size 7*sm
   line-height 1.25
-  padding 0 5*s
+  padding 0 5*sm
 
   &:before
     width hub-size
@@ -61,7 +60,7 @@ hub-size = 40*s
   color lighten(mcolor, 33%)
   border-color lighten(mcolor, 33%)
 
-spoke-size = 22*s
+spoke-size = 22*sm
 .spoke
   width spoke-size
   height spoke-size
@@ -69,7 +68,7 @@ spoke-size = 22*s
   margin-left -0.5*spoke-size
   border-radius 0.5*spoke-size
 
-  font-size 5*s
+  font-size 5*sm
   &:before
     width spoke-size
     height spoke-size
@@ -81,21 +80,21 @@ spoke-size = 22*s
     margin-top -1 * bdw
 
 .spoke-one, .spoke-one + .data-bundle
-  left 70*s
-  top 15.4*s
+  left 70*sm
+  top 15.4*sm
 .spoke-two, .spoke-two + .data-bundle
-  left 30*s
-  top 15.4*s
+  left 30*sm
+  top 15.4*sm
 .spoke-three, .spoke-three + .data-bundle
-  left 10*s
-  top 50*s
+  left 10*sm
+  top 50*sm
 .spoke-four, .spoke-four + .data-bundle
-  left 30*s
-  top 84.6*s
+  left 30*sm
+  top 84.6*sm
 .spoke-five, .spoke-five + .data-bundle
-  left 70*s
-  top 84.6*s
+  left 70*sm
+  top 84.6*sm
 .spoke-six, .spoke-six + .data-bundle
-  left 90*s
-  top 50*s
+  left 90*sm
+  top 50*sm
 </style>
