@@ -23,6 +23,7 @@
   position fixed
   top 0
   left 0
+  z-index 1000
 
   background #fff
   background hsla(0,0,100%,95%)

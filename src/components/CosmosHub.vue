@@ -24,7 +24,7 @@ export default {
 @import '../styles/variables.styl'
 
 bdw = 0.4*s
-bkw = 1.5*s
+bkw = 1.4*s
 
 .hub, .spoke
   background #fff
@@ -41,7 +41,7 @@ hub-size = 32*s
 
   font-size 5*s
   line-height 1.25
-  padding 0 s
+  padding 0 1.5*s
   font-weight bold
 
   display flex
@@ -74,7 +74,7 @@ hub-size = 32*s
     animation rotate-blocks 30s ease infinite
 
 
-spoke-size = 20*s
+spoke-size = 19*s
 .spoke
   width spoke-size
   height spoke-size
@@ -110,7 +110,6 @@ spoke-size = 20*s
     transform-origin 50% 50%
     animation rotate-blocks 60s ease infinite
 
-
 .spoke-one, .spoke-one + .data-bundle
   left 70*s
   top 15.4*s
@@ -145,6 +144,20 @@ spoke-size = 20*s
 
 .eth-color, .eth-color:before
   border-color eth-color
+.btc-color, .btc-color:before
+  border-color btc-color
+.dash-color, .dash-color:before
+  border-color dash-color
+.xmr-color, .xmr-color:before
+  border-color xmr-color
+.maid-color, .maid-color:before
+  border-color maid-color
+.doge-color, .doge-color:before
+  border-color doge-color
+
+/*
+.eth-color, .eth-color:before
+  border-color eth-color
 .eth-color + .data-bundle .datastream.datastream-top
   background eth-color
 
@@ -172,4 +185,5 @@ spoke-size = 20*s
   border-color doge-color
 .doge-color + .data-bundle .datastream.datastream-top
   background doge-color
+*/
 </style>

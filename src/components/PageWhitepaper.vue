@@ -1465,15 +1465,17 @@ Han</a> for various contributions.</li>
 </ul>
 
 </div>
+<section class="section-default"><div class="section-container">
+  <countdown></countdown>
+</div></section> 
 </template>
 
 <script>
+import Countdown from './Countdown.vue'
+
 export default {
   components: {
-  },
-  data () {
-    return {
-    }
+    Countdown
   }
 }
 </script>

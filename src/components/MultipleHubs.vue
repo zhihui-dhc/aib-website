@@ -1,14 +1,15 @@
 <template>
-  <div class="hubs-wrapper">
+<div class="hubs-wrapper">
   <cosmos-hub id="hub-one" hub-name="Cosmos Hub" :spokes="spokesOne"></cosmos-hub>
-  <cosmos-hub id="hub-two" hub-name="Peer Hub" :spokes="spokesTwo" light-color="true"></cosmos-hub>
-  <data-bundle></data-bundle>
-  </div>
+  <cosmos-hub id="hub-two" hub-name="Peer Hub" :spokes="spokesTwo"></cosmos-hub>
+  <data-bundle id="multiple-hubs-connector"></data-bundle>
+</div>
 </template>
 
 <script>
 import CosmosHub from './CosmosHubSmall.vue'
-import DataBundle from './DataBundleAlt.vue'
+import DataBundle from './DataBundle.vue'
+
 export default {
   components: {
     CosmosHub,
@@ -40,19 +41,13 @@ export default {
 <style lang="stylus" scoped>
 @import '../styles/variables.styl'
 
-hub-height = 360px
-spacing = -3 * x
-
-.hubs-wrapper
-  width 480px
-  height hub-height
-  position relative
+spacing = -16*sm
 
 #hub-one
 #hub-two
   position absolute
   top 50%
-  margin-top -150px
+  margin-top -50*sm
 
 #hub-one
   left spacing
@@ -60,7 +55,9 @@ spacing = -3 * x
 #hub-two
   right spacing
 
-.data-bundle
+#multiple-hubs-connector
   top 50%
-  left 150px
+  left 50%
+
+  margin-left -15*s
 </style>

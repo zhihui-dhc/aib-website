@@ -1,11 +1,11 @@
 <template>
-<div class="gfx-wrapper">
+<div class="gfx-wrapper height-forty">
   <div class="one-hub" template v-if="type === 'one-zone'">
     <cosmos-hub hub-name="Zone"></cosmos-hub>
   </div>
   <div class="two-hubs" v-if="type === 'two-zones'">
     <cosmos-hub id="two-hubs-one" hub-name="Zone 1"></cosmos-hub>
-    <data-bundle reversed="true"></data-bundle>
+    <data-bundle></data-bundle>
     <cosmos-hub id="two-hubs-two" hub-name="Zone 2"></cosmos-hub>
   </div>
   <div class="three-hubs" template v-if="type === 'three-zones'">
@@ -19,8 +19,9 @@
 
 <script>
 import CosmosHub from './CosmosHub.vue'
-import DataBundle from './DataBundleAlt.vue'
+import DataBundle from './DataBundle.vue'
 import Arrow from './Arrow.vue'
+
 export default {
   components: {
     CosmosHub,
@@ -39,10 +40,10 @@ bkw = 1.5*s
 
 .two-hubs
   #two-hubs-one .hub
-    left 15%
+    left 20%
 
   #two-hubs-two .hub
-    left 85%
+    left 80%
     border-color lighten(mcolor, 50%)
     color lighten(mcolor, 33%)
     &:before
@@ -51,10 +52,10 @@ bkw = 1.5*s
   .data-bundle
     position absolute
     top 50%
-    left 30%
+    left 35%
 
 .three-hubs
-  hub-size = 25*s
+  hub-size = 24*s
 
   .hub
     width hub-size
@@ -80,13 +81,13 @@ bkw = 1.5*s
       margin-top -1 * bdw
 
   #three-hubs-one .hub
-    left 7.5%
+    left 13%
 
   #three-hubs-two .hub
     left 50%
 
   #three-hubs-three .hub
-    left 92.5%
+    left 87%
 
   .data-bundle
     top 50%

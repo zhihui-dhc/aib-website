@@ -13,9 +13,8 @@
 
 .section-cover
   width 100vw
-  height 56.25vw
-  //height 100vh
-  //max-height 16/9 * 100vw
+  height 80vh
+  max-height 133.33vw
   display flex
   flex-flow column
   justify-content center
@@ -25,12 +24,11 @@ h1
   text-transform uppercase
   font-size 3*x
   font-weight bold
-  letter-spacing x
+  letter-spacing 0.3em
 
 h2
-  font-size 1.5*x
+  font-size 1.25*x
   color dim
-  margin 0 0 3*x
 
 #countdown
   font-weight bold

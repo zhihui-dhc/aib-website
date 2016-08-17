@@ -14,10 +14,8 @@ export default {
 <style lang="stylus" scoped>
 @import '../styles/variables.styl'
 
-s = 5px
-
 db-width = 80*s
-db-height = 4*s
+db-height = 6*s
 
 .data-bundle
   position absolute
@@ -39,8 +37,7 @@ db-height = 4*s
     height 100%
 
     font-size db-height
-    line-height db-height
-    font-weight bold
+    line-height 1
 
     animation scroll-right 16s linear infinite
 

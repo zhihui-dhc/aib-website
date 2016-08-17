@@ -1,5 +1,5 @@
 <template>
-<div id="countdown-wrapper">
+<div class="countdown-wrapper">
   <div class="key">Crowd sale on October 8th</div>
   <div class="value">{{ countdown }}</div>
   <form>
@@ -37,7 +37,7 @@ export default {
 <style lang="stylus" scoped>
 @import '../styles/variables.styl'
 
-#countdown-wrapper
+.countdown-wrapper
   text-align center
   border 1px solid bc
   padding 0.75*x x

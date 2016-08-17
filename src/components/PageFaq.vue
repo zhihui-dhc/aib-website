@@ -254,15 +254,18 @@ use-case, the Cosmos Hub may be a competitive option, as compared to other
 options for Interledger notary sets.  The Cosmos Hub validators could also offer
 their services as an Interledger notary set.</p>
 </div>
+
+<section class="section-default"><div class="section-container">
+  <countdown></countdown>
+</div></section> 
 </template>
 
 <script>
+import Countdown from './Countdown.vue'
+
 export default {
   components: {
-  },
-  data () {
-    return {
-    }
+    Countdown
   }
 }
 </script>

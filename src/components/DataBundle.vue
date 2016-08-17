@@ -1,53 +1,30 @@
 <template>
 <div class="data-bundle" v-bind:style="bundleStyle">
   <div class="datastream datastream-top" v-bind:style="streamStyle">
-    <p v-bind:style="pStyle">{{ hexString }}</p>
+    <p v-bind:style="pStyle">&rarr;&nbsp;&rarr;&nbsp;&rarr;&nbsp;&rarr;&nbsp;&rarr;&nbsp;&rarr;&nbsp;&rarr;&nbsp;&rarr;&nbsp;&rarr;&nbsp;&rarr;&nbsp;&rarr;&nbsp;&rarr;&nbsp;&rarr;&nbsp;&rarr;&nbsp;&rarr;&nbsp;&rarr;&nbsp;&rarr;&nbsp;&rarr;&nbsp;&rarr;&nbsp;&rarr;&nbsp;&rarr;&nbsp;&rarr;&nbsp;&rarr;&nbsp;&rarr;&nbsp;&rarr;&nbsp;&rarr;&nbsp;&rarr;&nbsp;&rarr;&nbsp;&rarr;&nbsp;&rarr;&nbsp;&rarr;&nbsp;&rarr;&nbsp;&rarr;&nbsp;&rarr;&nbsp;&rarr;&nbsp;&rarr;&nbsp;&rarr;&nbsp;&rarr;&nbsp;&rarr;&nbsp;&rarr;&nbsp;&rarr;&nbsp;&rarr;&nbsp;&rarr;&nbsp;&rarr;&nbsp;&rarr;&nbsp;&rarr;&nbsp;&rarr;&nbsp;&rarr;&nbsp;&rarr;&nbsp;&rarr;&nbsp;&rarr;&nbsp;&rarr;&nbsp;&rarr;&nbsp;&rarr;&nbsp;&rarr;&nbsp;&rarr;&nbsp;&rarr;&nbsp;&rarr;&nbsp;&rarr;&nbsp;&rarr;&nbsp;</p>
   </div>
   <div class="datastream datastream-bottom" v-bind:style="streamStyle">
-    <p v-bind:style="pStyle">{{ hexString }}</p>
+    <p v-bind:style="pStyle">&larr;&nbsp;&larr;&nbsp;&larr;&nbsp;&larr;&nbsp;&larr;&nbsp;&larr;&nbsp;&larr;&nbsp;&larr;&nbsp;&larr;&nbsp;&larr;&nbsp;&larr;&nbsp;&larr;&nbsp;&larr;&nbsp;&larr;&nbsp;&larr;&nbsp;&larr;&nbsp;&larr;&nbsp;&larr;&nbsp;&larr;&nbsp;&larr;&nbsp;&larr;&nbsp;&larr;&nbsp;&larr;&nbsp;&larr;&nbsp;&larr;&nbsp;&larr;&nbsp;&larr;&nbsp;&larr;&nbsp;&larr;&nbsp;&larr;&nbsp;&larr;&nbsp;&larr;&nbsp;&larr;&nbsp;&larr;&nbsp;&larr;&nbsp;&larr;&nbsp;&larr;&nbsp;&larr;&nbsp;&larr;&nbsp;&larr;&nbsp;&larr;&nbsp;&larr;&nbsp;&larr;&nbsp;&larr;&nbsp;&larr;&nbsp;&larr;&nbsp;&larr;&nbsp;&larr;&nbsp;&larr;&nbsp;&larr;&nbsp;&larr;&nbsp;&larr;&nbsp;&larr;&nbsp;&larr;&nbsp;&larr;&nbsp;&larr;&nbsp;&larr;&nbsp;&larr;&nbsp;&larr;&nbsp;&larr;&nbsp;</p>
   </div>
 </div>
 </template>
 
 <script>
 export default {
-  computed: {
-    bundleStyle () {
-      let mult = this.smallMult
-      if (this.streamwidth === 'thin') {
-        return { marginTop: -1 * mult * 8 * 5 + 'px' }
-      }
-    },
-    streamStyle () {
-      let mult = this.smallMult
-      if (this.streamwidth === 'thin') {
-        return { height: mult * 8 * 5 + 'px' }
-      }
-    },
-    pStyle () {
-      let mult = this.smallMult
-      if (this.streamwidth === 'thin') {
-        return { fontSize: mult * 0.666 * 8 * 5 + 'px' }
-      }
-    }
-  },
   data () {
     return {
       smallMult: 0.3,
       hexString: '2b12fcf1b09288fcaff797d71e950e71ae42b91e8bdb2304758dfcffc2b620e3'
     }
-  },
-  props: ['streamwidth', 'light-color']
+  }
 }
 </script>
 
 <style lang="stylus" scoped>
 @import '../styles/variables.styl'
 
-s = 5px
-
-db-width = 28*s
-db-height = 8*s
+db-width = 30*s
+db-height = 6*s
 
 .data-bundle
   position absolute
@@ -65,20 +42,19 @@ db-height = 8*s
     width 100%
     height 100%
 
-    font-size 0.5*0.666*db-height
-    line-height 1.5
-    font-weight bold
+    font-size 3*s
+    line-height 1
 
   &.datastream-top
-    background lighten(mcolor, 33%)
+    background lighten(mcolor, 5%)
     p
-      animation scroll-right 4000ms linear infinite
+      animation scroll-right 8s linear infinite, glow 2.5s infinite
+      color lighten(mcolor, 40%)
   &.datastream-bottom
     background mcolor
     p
-      animation scroll-left 4000ms linear infinite
-  &.light-color
-    background lighten(mcolor, 33%)
+      animation scroll-left 8s linear infinite, glow-alternate 2.5s infinite
+      color lighten(mcolor, 90%)
 
 .data-bundle.light-color
   .datastream.datastream-bottom
@@ -95,4 +71,22 @@ db-height = 8*s
     transform translateX(-100%)
   100%
     transform translateX(0%)
+@keyframes glow
+  0%
+    color lighten(mcolor, 40%)
+  45%
+    color lighten(mcolor, 90%)
+  55%
+    color lighten(mcolor, 90%)
+  100%
+    color lighten(mcolor, 40%)
+@keyframes glow-alternate
+  0%
+    color lighten(mcolor, 90%)
+  45%
+    color lighten(mcolor, 40%)
+  55%
+    color lighten(mcolor, 40%)
+  100k
+    color lighten(mcolor, 90%)
 </style>

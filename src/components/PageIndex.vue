@@ -1,7 +1,9 @@
 <template>
 <section-cover></section-cover>
 
-<countdown class="countdown-top"></countdown>
+<section class="section-default"><div class="section-container">
+  <countdown class="countdown-top"></countdown>
+</div></section>
 
 <section class="section-default"><div class="section-container">
   <zone type="one-zone"></zone>
@@ -18,7 +20,7 @@
 </div></section>
 
 <section class="section-default"><div class="section-container">
-  <div class="gfx-wrapper">
+  <div class="gfx-wrapper square">
     <cosmos-hub hub-name="Cosmos Hub" :spokes="evmSpokes"></cosmos-hub>
   </div>
   <div class="section-content">
@@ -34,7 +36,7 @@
 </div></section>
 
 <section class="section-default"><div class="section-container">
-  <div class="gfx-wrapper">
+  <div class="gfx-wrapper square">
     <cosmos-hub hub-name="Cosmos Hub" :spokes="distSpokes"></cosmos-hub>
   </div>
   <div class="section-content">
@@ -43,7 +45,9 @@
 </div></section>
 
 <section class="section-default"><div class="section-container">
-  <multiple-hubs></multiple-hubs>
+  <div class="gfx-wrapper height-seventy">
+    <multiple-hubs></multiple-hubs>
+  </div>
   <div class="section-content">
     <p>The Cosmos hub isn&rsquo;t the center of the universe. Any zone can be a hub.</p>
   </div>
@@ -110,29 +114,6 @@ export default {
 <style lang="stylus" scoped>
 @import '../styles/variables.styl'
 
-.section-default
-  border-top 1px solid bc
-
-  .section-container
-    width 480px
-    margin 0 auto
-    text-align center
-    padding 3*x 0
-    
-
-.section-visualization
-  width 480px
-  height 480px
-  border 1px solid txt
-
-.section-content
-  padding-top 1.5*x
-  p
-    font-size 1.25*x
-
-.countdown-top
-  margin-top -8*x
-  margin-bottom 3*x
-  margin-left auto
-  margin-right auto
+.countdown-wrapper
+  margin 0 auto
 </style>
