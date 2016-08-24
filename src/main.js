@@ -9,18 +9,18 @@ Vue.config.debug = true
 
 // fetch the page templates
 import App from './App.vue'
-import PageIndex from './components/PageIndex.vue'
-import PageWhitepaper from './components/PageWhitepaper.vue'
-import PagePlan from './components/PagePlan.vue'
-import PageFaq from './components/PageFaq.vue'
+import PageIndex from './components/pages/Index.vue'
+import PageWhitePaper from './components/pages/WhitePaper.vue'
+import PagePlan from './components/pages/Plan.vue'
+import PageFAQ from './components/pages/FAQ.vue'
 
 // register the page templates with Vue
 Vue.component('page-index', PageIndex)
-Vue.component('page-whitepaper', PageWhitepaper)
-Vue.component('page-plan', PageWhitepaper)
-Vue.component('page-faq', PageFaq)
+Vue.component('page-whitepaper', PageWhitePaper)
+Vue.component('page-plan', PageWhitePaper)
+Vue.component('page-faq', PageFAQ)
 
-let router = new VueRouter({history: false})
+let router = new VueRouter({history: true})
 
 // basic transitions
 router.beforeEach(function () {
@@ -29,9 +29,9 @@ router.beforeEach(function () {
 
 router.map({
   '/': {component: PageIndex},
-  '/whitepaper': {component: PageWhitepaper},
+  '/whitepaper': {component: PageWhitePaper},
   '/plan': {component: PagePlan},
-  '/faq': {component: PageFaq}
+  '/faq': {component: PageFAQ}
 })
 
 // filters

@@ -5,8 +5,8 @@
 </template>
 
 <script>
-import SiteHeader from './components/SiteHeader.vue'
-import SiteFooter from './components/SiteFooter.vue'
+import SiteHeader from './components/site/Header.vue'
+import SiteFooter from './components/site/Footer.vue'
 
 export default {
   components: {

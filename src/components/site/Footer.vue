@@ -8,7 +8,7 @@
 </script>
 
 <style lang="stylus" scoped>
-@import '../styles/variables.styl'
+@import '../../styles/variables.styl'
 
 #site-footer
   width 100vw

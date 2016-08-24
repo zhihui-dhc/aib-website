@@ -13,7 +13,7 @@
 </script>
 
 <style lang="stylus" scoped>
-@import '../styles/variables.styl'
+@import '../../styles/variables.styl'
 
 #site-header
   width 100vw

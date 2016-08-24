@@ -59,11 +59,12 @@
 </template>
 
 <script>
-import Countdown from './Countdown.vue'
-import CosmosHub from './CosmosHub.vue'
-import MultipleHubs from './MultipleHubs.vue'
-import SectionCover from './SectionCover.vue'
-import Zone from './Zone.vue'
+import Countdown from '../Countdown.vue'
+import CosmosHub from '../CosmosHub.vue'
+import MultipleHubs from '../MultipleHubs.vue'
+import SectionCover from '../SectionCover.vue'
+import Zone from '../Zone.vue'
+
 export default {
   components: {
     CosmosHub,
@@ -112,7 +113,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-@import '../styles/variables.styl'
+@import '../../styles/variables.styl'
 
 .countdown-wrapper
   margin 0 auto

@@ -177,7 +177,7 @@
 </template>
 
 <script>
-import Countdown from './Countdown.vue'
+import Countdown from '../Countdown.vue'
 
 export default {
   components: {
@@ -187,5 +187,5 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-@import '../styles/variables.styl'
+@import '../../styles/variables.styl'
 </style>
