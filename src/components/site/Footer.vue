@@ -1,10 +1,18 @@
 <template>
+  <section-call-to-action></section-call-to-action>
   <footer id="site-footer">
     <p>&copy; 2016 Cosmos Inc</p>
   </footer>
 </template>
 
 <script>
+import SectionCallToAction from '../sections/CallToAction.vue'
+
+export default {
+  components: {
+    SectionCallToAction
+  }
+}
 </script>
 
 <style lang="stylus" scoped>
@@ -17,8 +25,6 @@
 
   display flex
   flex-flow row
-
-  border-top 1px solid bc
   p
     padding 0 x
 </style>

@@ -13,12 +13,16 @@ import PageIndex from './components/pages/Index.vue'
 import PageWhitePaper from './components/pages/WhitePaper.vue'
 import PagePlan from './components/pages/Plan.vue'
 import PageFAQ from './components/pages/FAQ.vue'
+import PageBlogIndex from './components/pages/BlogIndex.vue'
+import PageBlogPost from './components/pages/BlogPost.vue'
 
 // register the page templates with Vue
 Vue.component('page-index', PageIndex)
 Vue.component('page-whitepaper', PageWhitePaper)
 Vue.component('page-plan', PageWhitePaper)
 Vue.component('page-faq', PageFAQ)
+Vue.component('page-blog-index', PageBlogIndex)
+Vue.component('page-blog-post', PageBlogPost)
 
 let router = new VueRouter({history: true})
 
@@ -31,11 +35,15 @@ router.map({
   '/': {component: PageIndex},
   '/whitepaper': {component: PageWhitePaper},
   '/plan': {component: PagePlan},
-  '/faq': {component: PageFAQ}
+  '/faq': {component: PageFAQ},
+  '/blog': {component: PageBlogIndex},
+  '/blog/:post': {component: PageBlogPost}
 })
 
 // filters
-// import fiveNines from './filters/fiveNines'
-// Vue.filter('fiveNines', fiveNines)
+import dateLong from './filters/dateLong'
+Vue.filter('dateLong', dateLong)
+import dateShort from './filters/dateShort'
+Vue.filter('dateShort', dateShort)
 
 router.start(App, 'app')

@@ -39,7 +39,6 @@ export default {
 
 .countdown-wrapper
   text-align center
-  border 1px solid bc
   padding 0.75*x x
 
   max-width 480px
@@ -79,7 +78,5 @@ export default {
       flex 1
       background mcolor
       color #fff
-      font-weight bold
-
-    
+      border-color mcolor
 </style>

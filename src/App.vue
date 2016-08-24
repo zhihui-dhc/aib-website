@@ -1,18 +1,22 @@
 <template>
   <site-header></site-header>
-  <router-view></router-view>
+  <div id="site-content">
+    <router-view></router-view>
+  </div>
   <site-footer></site-footer>
 </template>
 
 <script>
 import SiteHeader from './components/site/Header.vue'
 import SiteFooter from './components/site/Footer.vue'
+import store from './vuex/store.js'
 
 export default {
   components: {
     SiteHeader,
     SiteFooter
-  }
+  },
+  store
 }
 </script>
 
@@ -28,6 +32,13 @@ reset-html5()
 body
   df()
   padding-top 3*x
+  display flex
+  flex-flow column
+
+  min-height 100vh
+
+#site-content
+  flex 1
 
 a
   color link

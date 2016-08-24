@@ -1,9 +1,7 @@
 <template>
 <section-cover></section-cover>
 
-<section class="section-default"><div class="section-container">
-  <countdown class="countdown-top"></countdown>
-</div></section>
+<section-call-to-action id="scroll-to-here"></section-call-to-action>
 
 <section class="section-default"><div class="section-container">
   <zone type="one-zone"></zone>
@@ -52,23 +50,19 @@
     <p>The Cosmos hub isn&rsquo;t the center of the universe. Any zone can be a hub.</p>
   </div>
 </div></section> 
-
-<section class="section-default"><div class="section-container">
-  <countdown></countdown>
-</div></section> 
 </template>
 
 <script>
-import Countdown from '../Countdown.vue'
+import SectionCallToAction from '../sections/CallToAction.vue'
+import SectionCover from '../sections/Cover.vue'
 import CosmosHub from '../CosmosHub.vue'
 import MultipleHubs from '../MultipleHubs.vue'
-import SectionCover from '../SectionCover.vue'
 import Zone from '../Zone.vue'
 
 export default {
   components: {
     CosmosHub,
-    Countdown,
+    SectionCallToAction,
     MultipleHubs,
     SectionCover,
     Zone
@@ -111,10 +105,3 @@ export default {
   }
 }
 </script>
-
-<style lang="stylus" scoped>
-@import '../../styles/variables.styl'
-
-.countdown-wrapper
-  margin 0 auto
-</style>

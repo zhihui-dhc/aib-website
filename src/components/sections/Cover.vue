@@ -1,6 +1,6 @@
 <template>
 <section class="section-cover">
-  <div class="blockchain">
+  <div class="blockchain" @click="scrollDown">
     <h1>Cosmos</h1>
     <h2>a network of distributed ledgers</h2>
   </div>
@@ -8,10 +8,21 @@
 </template>
 
 <script>
+import $ from 'jquery'
+
+export default {
+  methods: {
+    scrollDown () {
+      console.log('scrolling down!')
+      let height = $('#scroll-to-here').offset().top - 48
+      $('html, body').animate({ scrollTop: height }, 666)
+    }
+  }
+}
 </script>
 
 <style lang="stylus" scoped>
-@import '../styles/variables.styl'
+@import '../../styles/variables.styl'
 
 .section-cover
   width 100vw
@@ -52,6 +63,8 @@ bkw = 10px
 
   border bdw solid bc
 
+  transition 0.3s ease-in-out border-color
+
   &:before
     content ''
     box-sizing border-box
@@ -70,6 +83,15 @@ bkw = 10px
 
     transform-origin 50% 50%
     animation rotate-blocks 30s ease infinite
+
+    cursor pointer
+
+    transition 0.3s ease-in-out border-color
+
+  &:hover
+    border-color lighten(mcolor, 50%)
+    &:before
+      border-color lighten(mcolor, 50%)
 
 @media screen and (min-width: 560px)
   hub-size = 400px
@@ -110,4 +132,10 @@ bkw = 10px
     font-size 3*x
   h2
     font-size 1.25*x
+
+@media screen and (min-width: 1200px)
+  .section-cover
+    margin-top -3*x
+    height 100vh
+    min-height 50vw
 </style>
