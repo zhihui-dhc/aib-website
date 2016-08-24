@@ -14,4 +14,4 @@ Jae, I could use these things:
 * higher res logo
 * email capture code from mailchimp so the crowd sale alert can work
 
-tomorrow - authentication and adding more posts
+Tomorrow I'll work on - authentication and adding posts from the UI.
