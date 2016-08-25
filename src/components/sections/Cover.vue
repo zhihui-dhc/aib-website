@@ -81,7 +81,7 @@ h2
     margin-top -1 * bdw
 
     transform-origin 50% 50%
-    // animation rotate-blocks 30s ease infinite
+    animation rotate-blocks 30s ease infinite
 
     cursor pointer
 
