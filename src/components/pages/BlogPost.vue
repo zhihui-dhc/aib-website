@@ -1,4 +1,5 @@
 <template>
+  <div class="header-padding"></div>
   <div class="article-wrapper">
     <div class="article-date">{{ post.dateCreated | dateShort }}</div>
     <h1>{{ post.title }}</h1>

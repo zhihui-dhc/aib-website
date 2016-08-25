@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import Countdown from '../Countdown.vue'
+import Countdown from '../partials/Countdown.vue'
 
 export default {
   components: {
@@ -20,7 +20,7 @@ export default {
 @import '../../styles/variables.styl'
 
 .section-cd
-  background #f6f6f6
+  border-top 1px solid bc
   .section-container
     padding 0 !important
 

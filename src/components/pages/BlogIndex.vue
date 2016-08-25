@@ -1,4 +1,5 @@
 <template>
+  <div class="header-padding"></div>
   <div class="article-wrapper">
     <h1>Blog</h1>
 

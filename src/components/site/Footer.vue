@@ -19,6 +19,7 @@ export default {
 @import '../../styles/variables.styl'
 
 #site-footer
+  background #fff
   width 100vw
   height 3*x
   line-height 3*x

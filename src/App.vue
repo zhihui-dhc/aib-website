@@ -31,9 +31,9 @@ reset-html5()
 
 body
   df()
-  padding-top 3*x
   display flex
   flex-flow column
+  background mbg
 
   min-height 100vh
 

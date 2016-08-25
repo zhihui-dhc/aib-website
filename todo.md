@@ -1,3 +1,12 @@
+# 2016-08-25
+* Massive homepage updates. Replaced the animations with the upgraded images. Improved the design and functionality.
+* Header design improvements.
+* Background color change across the site.
+* Fixed the Table of Contents on the Whitepaper, will implement the sidebar next
+* Swapped in the Mailchimp code - subscriptions now work!
+
+Friday: ToC sidebar for the Whitepaper, overall usability/design improvements
+
 # 2016-08-24
 * removed hashbang from urls
 * created the blog index page

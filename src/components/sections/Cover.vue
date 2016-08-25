@@ -13,8 +13,7 @@ import $ from 'jquery'
 export default {
   methods: {
     scrollDown () {
-      console.log('scrolling down!')
-      let height = $('#scroll-to-here').offset().top - 48
+      let height = $('#walkthrough-1').offset().top
       $('html, body').animate({ scrollTop: height }, 666)
     }
   }
@@ -26,28 +25,28 @@ export default {
 
 .section-cover
   width 100vw
-  height 80vh
-  min-height 480px
-  max-height 133.33vw
+  height 100vh
+
   display flex
   flex-flow column
   justify-content center
   align-items center
 
+
+hub-size = 18*x
+bdw = 2px
+bkw = 10px
+
 h1
+  font-size 0.125 * hub-size
   text-transform uppercase
-  font-size 2.5*x
   font-weight bold
   letter-spacing 0.25em
   line-height 1.25
 
 h2
-  font-size x
+  font-size 0.05 * hub-size
   color dim
-
-hub-size = 300px
-bdw = 2px
-bkw = 10px
 
 .blockchain
   width hub-size
@@ -82,7 +81,7 @@ bkw = 10px
     margin-top -1 * bdw
 
     transform-origin 50% 50%
-    animation rotate-blocks 30s ease infinite
+    // animation rotate-blocks 30s ease infinite
 
     cursor pointer
 
@@ -93,49 +92,98 @@ bkw = 10px
     &:before
       border-color lighten(mcolor, 50%)
 
-@media screen and (min-width: 560px)
-  hub-size = 400px
+@media screen and (min-width: 375px) and (min-height: 375px)
+  hub-size = 20*x
+  bdw = 2px
+  bkw = 14px
+
+  h1
+    font-size 0.125 * hub-size
+
+  h2
+    font-size 0.05 * hub-size
+
+  .blockchain
+    width hub-size
+    height hub-size
+    border-radius 0.5*hub-size
+
+    &:before
+      width hub-size
+      height hub-size
+      border-radius hub-size
+      border bkw dashed bc
+      margin-left -1 * bdw
+      margin-top -1 * bdw
+
+@media screen and (min-width: 768px) and (min-height: 768px)
+  hub-size = 32*x
+  bdw = 2px
+  bkw = 14px
+
+  h1
+    font-size 0.1 * hub-size
+
+  h2
+    font-size 0.04 * hub-size
+
+  .blockchain
+    width hub-size
+    height hub-size
+    border-radius 0.5*hub-size
+
+    &:before
+      width hub-size
+      height hub-size
+      border-radius hub-size
+      border bkw dashed bc
+      margin-left -1 * bdw
+      margin-top -1 * bdw
+
+@media screen and (min-width: 800px) and (min-height: 800px)
+  hub-size = 36*x
   bdw = 2px
   bkw = 10px
 
-  .blockchain
-    width hub-size
-    height hub-size
-    border-radius 0.5*hub-size
-
-    &:before
-      width hub-size
-      height hub-size
-      border-radius hub-size
-      border bkw dashed bc
-      margin-left -1 * bdw
-      margin-top -1 * bdw
-
-@media screen and (min-width: 960px)
-  hub-size = 560px
-  bdw = 2px
-  bkw = 15px
-
-  .blockchain
-    width hub-size
-    height hub-size
-    border-radius 0.5*hub-size
-
-    &:before
-      width hub-size
-      height hub-size
-      border-radius hub-size
-      border bkw dashed bc
-      margin-left -1 * bdw
-      margin-top -1 * bdw
   h1
-    font-size 3*x
-  h2
-    font-size 1.25*x
+    font-size 0.1 * hub-size
 
-@media screen and (min-width: 1200px)
-  .section-cover
-    margin-top -3*x
-    height 100vh
-    min-height 50vw
+  h2
+    font-size 0.04 * hub-size
+
+  .blockchain
+    width hub-size
+    height hub-size
+    border-radius 0.5*hub-size
+
+    &:before
+      width hub-size
+      height hub-size
+      border-radius hub-size
+      border bkw dashed bc
+      margin-left -1 * bdw
+      margin-top -1 * bdw
+@media screen and (min-width: 1024px) and (min-height: 1024px)
+  hub-size = 44*x
+  bdw = 2px
+  bkw = 14px
+
+  h1
+    font-size 0.1 * hub-size
+
+  h2
+    font-size 0.04 * hub-size
+
+  .blockchain
+    width hub-size
+    height hub-size
+    border-radius 0.5*hub-size
+
+    &:before
+      width hub-size
+      height hub-size
+      border-radius hub-size
+      border bkw dashed bc
+      margin-left -1 * bdw
+      margin-top -1 * bdw
 </style>
