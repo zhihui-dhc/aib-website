@@ -33,7 +33,7 @@ export default {
   align-items center
 
 
-hub-size = 18*x
+hub-size = 16*x
 bdw = 2px
 bkw = 10px
 
@@ -75,27 +75,27 @@ h2
     height hub-size
 
     border-radius hub-size
-    border bkw dashed bc
+    border bkw solid bc
 
     margin-left -1 * bdw
     margin-top -1 * bdw
 
     transform-origin 50% 50%
-    animation rotate-blocks 30s ease infinite
+    transform scale(1.12)
+    // animation rotate-blocks 30s ease infinite
 
     cursor pointer
 
     transition 0.3s ease-in-out border-color
 
   &:hover
-    border-color lighten(mcolor, 50%)
+    border-color dim
     &:before
-      border-color lighten(mcolor, 50%)
+      border-color light
 
 @media screen and (min-width: 375px) and (min-height: 375px)
-  hub-size = 20*x
+  hub-size = 19*x
   bdw = 2px
-  bkw = 14px
 
   h1
     font-size 0.125 * hub-size
@@ -112,14 +112,13 @@ h2
       width hub-size
       height hub-size
       border-radius hub-size
-      border bkw dashed bc
+      border bkw solid bc
       margin-left -1 * bdw
       margin-top -1 * bdw
 
 @media screen and (min-width: 768px) and (min-height: 768px)
   hub-size = 32*x
   bdw = 2px
-  bkw = 14px
 
   h1
     font-size 0.1 * hub-size
@@ -133,17 +132,17 @@ h2
     border-radius 0.5*hub-size
 
     &:before
+      transform scale(1.08)
       width hub-size
       height hub-size
       border-radius hub-size
-      border bkw dashed bc
+      border bkw solid bc
       margin-left -1 * bdw
       margin-top -1 * bdw
 
 @media screen and (min-width: 800px) and (min-height: 800px)
   hub-size = 36*x
   bdw = 2px
-  bkw = 10px
 
   h1
     font-size 0.1 * hub-size
@@ -160,13 +159,13 @@ h2
       width hub-size
       height hub-size
       border-radius hub-size
-      border bkw dashed bc
+      border bkw solid bc
       margin-left -1 * bdw
       margin-top -1 * bdw
+
 @media screen and (min-width: 1024px) and (min-height: 1024px)
   hub-size = 44*x
   bdw = 2px
-  bkw = 14px
 
   h1
     font-size 0.1 * hub-size
@@ -183,7 +182,7 @@ h2
       width hub-size
       height hub-size
       border-radius hub-size
-      border bkw dashed bc
+      border bkw solid bc
       margin-left -1 * bdw
       margin-top -1 * bdw
 </style>
