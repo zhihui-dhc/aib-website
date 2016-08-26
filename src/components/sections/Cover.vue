@@ -32,8 +32,6 @@ export default {
   align-items center
   overflow hidden
 
-  padding-top 3*x
-
 b1c = hsl(mhue,0%,75%)
 b2c = hsl(mhue,0%,93%)
 b3c = hsl(mhue,0%,93%)
