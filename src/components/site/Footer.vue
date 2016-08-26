@@ -19,13 +19,18 @@ export default {
 @import '../../styles/variables.styl'
 
 #site-footer
-  background #fff
   width 100vw
   height 3*x
   line-height 3*x
 
   display flex
   flex-flow row
+
+  // show on top of hovering sidebars
+  position relative
+  z-index 1
+  background #fff
+
   p
     padding 0 x
 </style>

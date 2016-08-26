@@ -1,0 +1,21 @@
+ssize = 0.33*x
+
+.ps-scrollbar-y-rail
+  position absolute
+  right 0 !important
+  width ssize
+  
+.ps-scrollbar-y
+  background hsla(0,0,0,25%)
+  position absolute
+  width ssize
+  height ssize
+
+#toc-wrapper
+  .ps-scrollbar-y-rail
+    opacity 0
+    transition 300ms ease opacity
+  &:hover
+    .ps-scrollbar-y-rail
+      opacity 1
+

@@ -9,8 +9,11 @@ Ethan Buchman ethan@tendermint.com</p>
 <p>For discussions, <a href="http://forum.tendermint.com:3000/">join our Slack</a>!</p>
 <p><em>NOTE: If you can read this on GitHub, then we&#39;re still actively developing this
 document.  Please check regularly for updates!.</em></p>
+
+<div id="toc-wrapper">
 <h2 id="table-of-contents">Table of Contents</h2>
 <ul>
+<li><a href="#cosmos">Cosmos</a></li>
 <li><a href="#introduction">Introduction</a></li>
 <li><a href="#tendermint">Tendermint</a><ul>
 <li><a href="#validators">Validators</a></li>
@@ -100,6 +103,8 @@ specification</a></li>
 <li><a href="#acknowledgements">Acknowledgements</a></li>
 <li><a href="#citations">Citations</a></li>
 </ul>
+</div><!--toc-wrapper-->
+
 <h2 id="introduction">Introduction</h2>
 <p>The combined success of the open-source ecosystem, of decentralized
 file-sharing, and of public cryptocurrencies, has inspired an understanding that
@@ -365,7 +370,7 @@ governance system may pass Hub improvement proposals that account for zone
 failures.  For example, outbound token transfers from some (or all) zones may be
 throttled to allow for the emergency circuit-breaking of zones (a temporary halt
 of token transfers) when an attack is detected.</p>
-<h2 id="inter-blockchain-communication-ibc-">Inter-blockchain Communication (IBC)</h2>
+<h2 id="inter-blockchain-communication-ibc">Inter-blockchain Communication (IBC)</h2>
 <p>Now we look at how the hub and zones communicate with each other.  Say that
 there are three blockchains, &quot;Zone1&quot;, &quot;Zone2&quot;, and &quot;Hub&quot;, and we wish for
 &quot;Zone1&quot; to produce a packet destined for &quot;Zone2&quot; going through &quot;Hub&quot;. For a
@@ -1469,12 +1474,101 @@ Han</a> for various contributions.</li>
 </template>
 
 <script>
+import $ from 'jquery'
+import Ps from 'perfect-scrollbar'
+
 export default {
   components: {
+  },
+  ready () {
+    $('#toc-wrapper a').click(function (e) {
+      e.preventDefault()
+      console.log($(e.target).attr('href'))
+      let scrollSpeed = 666
+      let height = $($(e.target).attr('href')).offset().top - 48 - 16
+      $('html, body').animate({ scrollTop: height }, scrollSpeed)
+    })
+
+    let toc = document.querySelector('#toc-wrapper')
+    Ps.initialize(toc)
   }
 }
 </script>
 
 <style lang="stylus" scoped>
 @import '../../styles/variables.styl'
+
+@media screen and (min-width: 1280px)
+  #toc-wrapper
+    position fixed
+    top 3*x + 0.5*x
+    left 0.5*x
+    bottom 0.5*x
+
+    width 14*x
+
+    padding 0.75*x 0.75*x 0
+    background darken(mbg, 5%)
+
+    overflow hidden
+
+    h2
+      font-size 0.7*x
+      font-weight bold
+      margin 0 0 x
+
+    > ul
+      list-style none
+      font-size 0.7*x
+      padding 0
+
+      > li
+        > a
+          font-weight bold
+
+      li
+        text-overflow ellipsis
+        whitespace no-wrap
+
+        a
+          color txt
+          &:hover
+            color link
+
+      ul
+        margin 0
+        padding-left x
+
+@media screen and (min-width: 1366px)
+  #toc-wrapper
+    width 16*x
+    h2
+      font-size 0.775*x
+    ul
+      font-size 0.775*x
+
+@media screen and (min-width: 1440px)
+  #toc-wrapper
+    width 18*x
+    h2
+      font-size 0.85*x
+    ul
+      font-size 0.85*x
+
+@media screen and (min-width: 1650px)
+  #toc-wrapper
+    padding x x 0
+    width 20*x
+    h2
+      font-size 0.90*x
+    ul
+      font-size 0.90*x
+
+@media screen and (min-width: 1920px)
+  #toc-wrapper
+    width 24*x
+    h2
+      font-size x
+    ul
+      font-size x
 </style>

@@ -45,5 +45,7 @@ import dateLong from './filters/dateLong'
 Vue.filter('dateLong', dateLong)
 import dateShort from './filters/dateShort'
 Vue.filter('dateShort', dateShort)
+import markdown from './filters/markdown'
+Vue.filter('markdown', markdown)
 
 router.start(App, 'app')

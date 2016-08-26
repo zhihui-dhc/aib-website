@@ -74,6 +74,13 @@
         cursor default
         color txt
 
+@media screen and (max-height: 480px)
+  #site-header
+    position static
+    top 0
+    left 0
+    background #fff
+
 @media screen and (min-width: 360px)
   #site-logo
     a
@@ -95,6 +102,16 @@
     padding-right 0.6*x
     a
       font-size x
+
+@media screen and (min-width: 568px)
+  #site-logo
+    flex 1
+  #site-nav
+    flex 2
+    a
+      flex 1
+      border-left 1px solid mbg
+      padding 0 x
 
 @media screen and (min-width: 768px)
   #site-logo

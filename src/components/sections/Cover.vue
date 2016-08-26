@@ -13,7 +13,7 @@ import $ from 'jquery'
 export default {
   methods: {
     scrollDown () {
-      let height = $('#walkthrough-1').offset().top
+      let height = $('#walkthrough-1').offset().top - 48
       $('html, body').animate({ scrollTop: height }, 666)
     }
   }
@@ -28,14 +28,17 @@ export default {
   height 100vh
 
   display flex
-  flex-flow column
   justify-content center
   align-items center
+  overflow hidden
 
+b1c = hsl(mhue,0%,75%)
+b2c = hsl(mhue,0%,95%)
+b3c = hsl(mhue,0%,96%)
 
-hub-size = 16*x
-bdw = 2px
-bkw = 10px
+hub-size = 80vw
+bdw = 0.005 * hub-size
+bkw = 0.025 * hub-size
 
 h1
   font-size 0.125 * hub-size
@@ -60,7 +63,7 @@ h2
 
   position relative
 
-  border bdw solid bc
+  border bdw solid b1c
 
   transition 0.3s ease-in-out border-color
 
@@ -74,8 +77,8 @@ h2
     width hub-size
     height hub-size
 
-    border-radius hub-size
-    border bkw solid bc
+    border-radius 0.5*hub-size
+    border bkw solid b2c
 
     margin-left -1 * bdw
     margin-top -1 * bdw
@@ -88,37 +91,40 @@ h2
 
     transition 0.3s ease-in-out border-color
 
+  &:after
+    content ''
+    box-sizing border-box
+    display block
+    position absolute
+    top 0
+    left 0
+    width hub-size
+    height hub-size
+
+    border-radius 0.5*hub-size
+    border bdw solid b3c
+
+    margin-left -1 * bdw
+    margin-top -1 * bdw
+
+    transform-origin 50% 50%
+    transform scale(2)
+
+    cursor pointer
+
+    transition 0.3s ease-in-out border-color
+
   &:hover
-    border-color dim
+    border-color lighten(mcolor, 85%)
     &:before
-      border-color light
+      border-color lighten(mcolor, 85%)
+    &:after
+      border-color lighten(mcolor, 85%)
 
-@media screen and (min-width: 375px) and (min-height: 375px)
-  hub-size = 19*x
-  bdw = 2px
-
-  h1
-    font-size 0.125 * hub-size
-
-  h2
-    font-size 0.05 * hub-size
-
-  .blockchain
-    width hub-size
-    height hub-size
-    border-radius 0.5*hub-size
-
-    &:before
-      width hub-size
-      height hub-size
-      border-radius hub-size
-      border bkw solid bc
-      margin-left -1 * bdw
-      margin-top -1 * bdw
-
-@media screen and (min-width: 768px) and (min-height: 768px)
-  hub-size = 32*x
-  bdw = 2px
+@media screen and (min-width: 1200px) and (min-height: 600px)
+  hub-size = 33vw
+  bdw = 0.005 * hub-size
+  bkw = 0.025 * hub-size
 
   h1
     font-size 0.1 * hub-size
@@ -130,59 +136,29 @@ h2
     width hub-size
     height hub-size
     border-radius 0.5*hub-size
-
-    &:before
-      transform scale(1.08)
-      width hub-size
-      height hub-size
-      border-radius hub-size
-      border bkw solid bc
-      margin-left -1 * bdw
-      margin-top -1 * bdw
-
-@media screen and (min-width: 800px) and (min-height: 800px)
-  hub-size = 36*x
-  bdw = 2px
-
-  h1
-    font-size 0.1 * hub-size
-
-  h2
-    font-size 0.04 * hub-size
-
-  .blockchain
-    width hub-size
-    height hub-size
-    border-radius 0.5*hub-size
+    border bdw solid b1c
 
     &:before
       width hub-size
       height hub-size
-      border-radius hub-size
-      border bkw solid bc
+
+      border-radius 0.5*hub-size
+      border bkw solid b2c
+
       margin-left -1 * bdw
       margin-top -1 * bdw
 
-@media screen and (min-width: 1024px) and (min-height: 1024px)
-  hub-size = 44*x
-  bdw = 2px
+      transform scale(1.12)
 
-  h1
-    font-size 0.1 * hub-size
-
-  h2
-    font-size 0.04 * hub-size
-
-  .blockchain
-    width hub-size
-    height hub-size
-    border-radius 0.5*hub-size
-
-    &:before
+    &:after
       width hub-size
       height hub-size
-      border-radius hub-size
-      border bkw solid bc
+
+      border-radius 0.5*hub-size
+      border bdw solid b3c
+
       margin-left -1 * bdw
       margin-top -1 * bdw
+
+      transform scale(2)
 </style>

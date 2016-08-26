@@ -13,6 +13,8 @@
       v-bind:class="{ 'btn-walkthrough-key': activeFive }">V</a>
     <a class="btn-walkthrough"  @click="viewStep('#walkthrough-6')"
       v-bind:class="{ 'btn-walkthrough-key': activeSix }">VI</a>
+    <a class="btn-walkthrough"  @click="viewStep('#walkthrough-7')"
+      v-bind:class="{ 'btn-walkthrough-key': activeSeven }">VII</a>
   </nav>
 </template>
 
@@ -36,6 +38,7 @@ export default {
     },
     viewStep (id) {
       let height = $(id).offset().top
+      if (id === '#walkthrough-1') { height -= 48 } // 3*x pad for 1st
       $('html, body').animate({ scrollTop: height }, scrollSpeed)
     }
   },
@@ -49,7 +52,6 @@ export default {
   display flex
   position relative
   z-index 100
-
   background #fff
 
   a.btn-walkthrough
@@ -63,7 +65,7 @@ export default {
 
     &#walkthrough-top
       width auto
-      padding 0 0.5*x
+      padding 0 0.25*x
 
     &:hover
       color link
