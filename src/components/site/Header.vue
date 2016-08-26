@@ -76,9 +76,7 @@
 
 @media screen and (max-height: 480px)
   #site-header
-    position static
-    top 0
-    left 0
+    position absolute
     background #fff
 
 @media screen and (min-width: 360px)

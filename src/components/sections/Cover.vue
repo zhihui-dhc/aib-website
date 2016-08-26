@@ -32,11 +32,13 @@ export default {
   align-items center
   overflow hidden
 
-b1c = hsl(mhue,0%,75%)
-b2c = hsl(mhue,0%,95%)
-b3c = hsl(mhue,0%,96%)
+  padding-top 3*x
 
-hub-size = 80vw
+b1c = hsl(mhue,0%,75%)
+b2c = hsl(mhue,0%,93%)
+b3c = hsl(mhue,0%,93%)
+
+hub-size = 14*x
 bdw = 0.005 * hub-size
 bkw = 0.025 * hub-size
 
@@ -85,7 +87,6 @@ h2
 
     transform-origin 50% 50%
     transform scale(1.12)
-    // animation rotate-blocks 30s ease infinite
 
     cursor pointer
 
@@ -121,8 +122,8 @@ h2
     &:after
       border-color lighten(mcolor, 85%)
 
-@media screen and (min-width: 1200px) and (min-height: 600px)
-  hub-size = 33vw
+@media screen and (min-width: 414px)
+  hub-size = 20*x
   bdw = 0.005 * hub-size
   bkw = 0.025 * hub-size
 
@@ -141,24 +142,148 @@ h2
     &:before
       width hub-size
       height hub-size
-
       border-radius 0.5*hub-size
       border bkw solid b2c
-
       margin-left -1 * bdw
       margin-top -1 * bdw
-
-      transform scale(1.12)
 
     &:after
       width hub-size
       height hub-size
-
       border-radius 0.5*hub-size
       border bdw solid b3c
-
       margin-left -1 * bdw
       margin-top -1 * bdw
 
-      transform scale(2)
+@media screen and (min-width: 768px)
+  hub-size = 30*x
+  bdw = 0.005 * hub-size
+  bkw = 0.025 * hub-size
+
+  h1
+    font-size 0.1 * hub-size
+
+  h2
+    font-size 0.04 * hub-size
+
+  .blockchain
+    width hub-size
+    height hub-size
+    border-radius 0.5*hub-size
+    border bdw solid b1c
+
+    &:before
+      width hub-size
+      height hub-size
+      border-radius 0.5*hub-size
+      border bkw solid b2c
+      margin-left -1 * bdw
+      margin-top -1 * bdw
+
+    &:after
+      width hub-size
+      height hub-size
+      border-radius 0.5*hub-size
+      border bdw solid b3c
+      margin-left -1 * bdw
+      margin-top -1 * bdw
+
+@media screen and (min-width: 1800px)
+  hub-size = 40*x
+  bdw = 0.005 * hub-size
+  bkw = 0.025 * hub-size
+
+  h1
+    font-size 0.1 * hub-size
+
+  h2
+    font-size 0.04 * hub-size
+
+  .blockchain
+    width hub-size
+    height hub-size
+    border-radius 0.5*hub-size
+    border bdw solid b1c
+
+    &:before
+      width hub-size
+      height hub-size
+      border-radius 0.5*hub-size
+      border bkw solid b2c
+      margin-left -1 * bdw
+      margin-top -1 * bdw
+
+    &:after
+      width hub-size
+      height hub-size
+      border-radius 0.5*hub-size
+      border bdw solid b3c
+      margin-left -1 * bdw
+      margin-top -1 * bdw
+
+@media screen and (min-width: 2400px)
+  hub-size = 60*x
+  bdw = 0.005 * hub-size
+  bkw = 0.025 * hub-size
+
+  h1
+    font-size 0.1 * hub-size
+
+  h2
+    font-size 0.04 * hub-size
+
+  .blockchain
+    width hub-size
+    height hub-size
+    border-radius 0.5*hub-size
+    border bdw solid b1c
+
+    &:before
+      width hub-size
+      height hub-size
+      border-radius 0.5*hub-size
+      border bkw solid b2c
+      margin-left -1 * bdw
+      margin-top -1 * bdw
+
+    &:after
+      width hub-size
+      height hub-size
+      border-radius 0.5*hub-size
+      border bdw solid b3c
+      margin-left -1 * bdw
+      margin-top -1 * bdw
+
+@media screen and (min-width: 3600px)
+  hub-size = 80*x
+  bdw = 0.005 * hub-size
+  bkw = 0.025 * hub-size
+
+  h1
+    font-size 0.1 * hub-size
+
+  h2
+    font-size 0.04 * hub-size
+
+  .blockchain
+    width hub-size
+    height hub-size
+    border-radius 0.5*hub-size
+    border bdw solid b1c
+
+    &:before
+      width hub-size
+      height hub-size
+      border-radius 0.5*hub-size
+      border bkw solid b2c
+      margin-left -1 * bdw
+      margin-top -1 * bdw
+
+    &:after
+      width hub-size
+      height hub-size
+      border-radius 0.5*hub-size
+      border bdw solid b3c
+      margin-left -1 * bdw
+      margin-top -1 * bdw
 </style>

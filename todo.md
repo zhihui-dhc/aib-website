@@ -1,4 +1,4 @@
-# 2016-08-26
+# 2016-08-26 https://nylira.github.io/
 * Added more of the HOME.md text to the homepage.
 * Fixed an issue on iOS/Android where the bottom navigation Top/I/II/III etc were hidden by the browser chrome.
 * Homepage sections with graphics now have room for more description text.
@@ -7,8 +7,7 @@
 * Other design improvements.
 
 Code: https://github.com/nylira/cosmos-site-mockup
-Preview: https://nylira.github.io/
-Launching: `npm run build` then copy the files in `./dist` to the github.io repo.
+Launch: `npm install`, `npm run build` then copy the files in `./dist` to the cosmos.github.io repo.
 
 # 2016-08-25
 * Massive homepage updates. Replaced the animations with the upgraded images. Improved the design and functionality.

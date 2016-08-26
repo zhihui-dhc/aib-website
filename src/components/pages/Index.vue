@@ -171,7 +171,6 @@ export default {
     .section-container
       .section-content
         padding-top 0
-        margin-top -3*x
   
 @media screen and (min-width: 360px) and (min-height: 481px)
   .section-slide
