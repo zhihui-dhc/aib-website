@@ -3,7 +3,7 @@
     <div class="section-container">
       <div class="countdown-wrapper">
         <div class="key">Crowd sale on October 8th</div>
-        <div class="value"><countdown-string></countdown-string></div>
+        <div class="value"><countdown></countdown></div>
         <email-signup-form></email-signup-form>
       </div>
     </div>
