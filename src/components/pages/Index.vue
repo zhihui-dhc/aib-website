@@ -104,6 +104,8 @@ export default {
 
 .section-slide-text
   background #fff
+  position relative
+  z-index 1
   .section-container
     .section-content
       padding x 0.75*x
