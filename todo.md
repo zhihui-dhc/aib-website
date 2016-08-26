@@ -6,6 +6,10 @@
 * Implemented a sidebar Table of Contents for the whitepaper.
 * Other design improvements.
 
+Code: https://github.com/nylira/cosmos-site-mockup
+Preview: https://nylira.github.io/
+Launching: `npm run build` then copy the files in `./dist` to the github.io repo.
+
 # 2016-08-25
 * Massive homepage updates. Replaced the animations with the upgraded images. Improved the design and functionality.
 * Header design improvements.
