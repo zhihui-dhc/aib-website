@@ -2,7 +2,7 @@
   <div class="header-padding"></div>
 <div class="article-wrapper">
 
-<h1 id="cosmos">Cosmos</h1>
+<h1 id="cosmos">Cosmos Whitepaper</h1>
 <p><strong>A Network of Distributed Ledgers</strong></p>
 <p>Jae Kwon jae@tendermint.com<br/>
 Ethan Buchman ethan@tendermint.com</p>

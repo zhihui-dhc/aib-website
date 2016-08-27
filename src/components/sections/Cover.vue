@@ -2,7 +2,7 @@
 <section class="section-cover">
   <div class="blockchain" @click="scrollDown">
     <h1>Cosmos</h1>
-    <h2>a network of distributed ledgers</h2>
+    <h2>the network of blockchains</h2>
   </div>
 </section>
 </template>

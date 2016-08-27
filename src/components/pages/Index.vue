@@ -3,81 +3,130 @@
 
 <section id="walkthrough-1" class="section-slide-text"><div class="section-container">
   <div class="section-content">
-
-<p>Cosmos is a project with an ambitious mission – to create a network of
-distributed ledgers that solve long-standing problems in the cryptocurrency and
-blockchain space.</p>
-<p>Cosmos is a network of independent parallel blockchains that are each powered by
-classical BFT consensus algorithms like Tendermint
-<a href="http://github.com/tendermint/tendermint">1</a>.  The first blockchain in this
-network will be the Cosmos Hub.  The Cosomos Hub connects to many other
-blockchains (or <em>zones</em>) via a novel inter-blockchain communication protocol.
-The Cosmos Hub tracks numerous token types, and keeps record of the total
-number of tokens in each connected zone.  Tokens can be transferred from one
-zone to another, securely and quickly, without the need for a liquid exchange
-between zones, because all inter-zone coin transfers go through the Cosmos Hub.</p>
-<p>This architecture solves so many problems that the blockchain space faces today,
-including application interoperability, scalability, and seamless upgradability.
-For example, zones derived from Bitcoind, Go-Ethereum, CryptoNote, ZCash, or any
-blockchain system can be plugged into the Cosmos Hub.  These zones allow Cosmos
-to scale infinitely to meet global transaction demand.  And, zones are a great
-fit for a distributed exchange, which will be supported as well.</p>
-<p>Cosmos is not just a single distributed ledger, and the Cosmos Hub isn’t a
-walled garden or the center of its universe.  We are designing a protocol for an
-open network of distributed legers that can serve as a new foundation for our
-future financial systems, based on principles of cryptography, sound economics,
-consensus theory, transparency, and accountability.</p>
+    <p>
+    Building a blockchain for the future
+    </p>
+    <p>
+    Cosmos is a project with an ambitious mission. We are aiming to create a
+    network of distributed ledgers to solve long-standing problems in the
+    cryptocurrency and blockchain space.   
+    </p>
+    <p>
+    Put simply, Cosmos is a network of independent parallel blockchains called
+    zones. The zones are powered by classical Byzantine fault tolerance (BFT)
+    consensus algorithms, like <a href="http://tendermint.com">Tendermint</a>,
+    which is already in use by platforms like <a href="https://erisindustries.com/components/erisdb/">Eris</a>.
+    </p>
+    <p>
+    You can read more about the advantages our BFT proof-of-stake model over
+    proof-of-work, the approach Bitcoin uses, in our
+    <a href="https://github.com/cosmos/cosmos/blob/master/WHITEPAPER.md">white-paper</a>.
+    </p>
+    <p> 
+    The first blockchain in this Cosmos network is the Cosmos hub. The Cosmos
+    hub connects to zones via a novel inter-blockchain communication protocol
+    called IBC (inter-blockchain communication).
+    </p>
+    <p>
+    The Cosmos hub tracks numerous token types (whether it be Bitcoin,
+    Ethereum, ZeroCash, CryptoNote, your local banking institution, etc.), and
+    keeps a record of the total number of tokens in each zone. Because all
+    inter-zone coin transfers go through the Cosmos hub, you can transfer
+    tokens from one zone to another, securely and quickly, without the need for
+    a liquid exchange between zones.
+    </p>
   </div>
   <walkthrough-nav step="1"></walkthrough-nav>
 </div></section>
 
 <section id="walkthrough-2" class="section-slide"><div class="section-container">
-  <div class="image image-thinner"><img src="../../assets/images/ex_zone.png"></div>
+  <div class="image image-thinner"><img src="../../assets/images/ex_dist_exchange.png"></div>
   <walkthrough-nav step="2"></walkthrough-nav>
   <div class="section-content">
-    <p>A Cosmos <a href="#">zone</a> is a distributed ledger (blockchain). Each zone can have differing transaction logic and policies.</p>
+    <center><h2>Interoperability</h2></center>
+    <p>
+    Cosmos can interoperate with multiple other applications and
+    cryptocurrencies, something other blockchains can’t do well. By creating a
+    new zone, you can plug any blockchain system into the Cosmos hub and pass
+    tokens back and forth between those zones, without the need for an
+    intermediary.
+    </p>
+    <p>
+    For example, if you wanted to trade bitcoins for ether today, you would
+    have to sell your bitcoins for a fiat currency on an open exchange and then
+    use that fiat currency to buy ether on another exchange. The problem is,
+    many of our  exchanges today are plagued by hacks, theft, and cons. Two
+    prime examples are what happened at <a href="http://www.thedailybeast.com/articles/2016/05/19/behind-the-biggest-bitcoin-heist-in-history-inside-the-implosion-of-mt-gox.html">Mt. Gox</a> and more recently
+    <a href="http://www.reuters.com/article/us-bitfinex-hacked-hongkong-idUSKCN10E0KP">Bitfinex</a>.  
+    </p>
   </div>
 </div></section>
 
 <section id="walkthrough-3" class="section-slide"><div class="section-container">
-  <div class="image image-wider"><img src="../../assets/images/ex_zone_ibc.png"></div>
+  <div class="image image-thinner"><img src="../../assets/images/ex_evm_sharding.png"></div>
   <walkthrough-nav step="3"></walkthrough-nav>
   <div class="section-content">
-    <p>We&rsquo;ve developed a trick that allows zones to communicate with each other directly. It&rsquo;s based on classical BFT algorithms like Tendermint.</p>
+    <center><h2>Scalability</h2></center>
+    <p>
+    Scaling is another open issue for blockchains. Both Ethereum and Bitcoin
+    support only a fraction of the transactions seen daily on payment networks
+    like Visa or Mastercard. In contrast, zones allow Cosmos to scale out
+    indefinitely. If your transaction speed slows in one zone because too many
+    people are using it, you simply add another zone to the hub and direct half
+    the users over that zone, thereby doubling your transaction speed.
+    Meanwhile, the Cosmos hub ensures that any zones connected to it remain in
+    sync. 
+    </p>
   </div>
 </div></section>
 
 <section id="walkthrough-4" class="section-slide"><div class="section-container">
-  <div class="image"><img src="../../assets/images/ex_evm_sharding.png"></div>
+  <div class="image"><img src="../../assets/images/ex_evm_upgrading.png"></div>
   <walkthrough-nav step="4"></walkthrough-nav>
   <div class="section-content">
-    <p>With this technique, we could make Ethereum scale by constructing a common hub blockchain. All inter-zone token movements go through the hub.</p>
+    <center><h2>Upgradability</h2></center>
+    <p>
+    Another problem blockchains run into is how to handle upgrades when new
+    versions come out. Getting all of the validators (“miners” in the case of
+    Bitcoin) to upgrade to a new version of a blockchain simultaneously is
+    tricky, and could lead to hard forks. This is exactly what happened when
+    Ethereum hard-forked into ETH and ETC due to political/governance issues
+    surrounding the DAO hack. With Cosmos, upgrading is not an issue. You
+    simply plug a new zone into the Cosmos hub, and invite users to move their
+    funds over to it at their leisure.  
+    </p>
   </div>
 </div></section>
 
 <section id="walkthrough-5" class="section-slide"><div class="section-container">
-  <div class="image image-wider"><img src="../../assets/images/ex_evm_upgrading.png"></div>
+  <div class="image image-wider"><img src="../../assets/images/ex_network.png"></div>
   <walkthrough-nav step="5"></walkthrough-nav>
   <div class="section-content">
-    <p>Upgrading the EVM would be seamless, with less risk of contentious hard-forks. Anyone could plug in a better smart contract system.</p>
+    <center><h2>Decentralization</h2></center>
+    <p>
+    One of the great tragedies of cryptocurrencies today has been their failure
+    to interoperate with existing systems — and each other. Cosmos offers a way
+    to link them together, but without creating a new centralized clearinghouse
+    or exchange. 
+    </p>
+    <p>
+    Cosmos is not just a single distributed ledger, and the Cosmos hub isn't a
+    walled garden or the center of its universe. We are designing a protocol
+    for an open network of distributed ledgers that can serve as a new
+    foundation for our future financial systems, based on principles of
+    cryptography, sound economics, consensus theory, transparency, and
+    accountability.
+    </p>
+    <p>
+    You can use Cosmos as a testing ground for a new cryptocurrency design, an
+    upgrade to an existing cryptocurrency, as a means for decentralized
+    exchange, or as a platform for scalable smart contracts. 
+    </p>
+    <p>
+    The only question is, what will you build on Cosmos?
+    </p>
   </div>
 </div></section>
-
-<section id="walkthrough-6" class="section-slide"><div class="section-container">
-  <div class="image"><img src="../../assets/images/ex_dist_exchange.png"></div>
-  <walkthrough-nav step="6"></walkthrough-nav>
-  <div class="section-content">
-    <p>We could import other blockchains and have a distributed exchange on its own zone.</p>
-  </div>
-</div></section>
-
-<section id="walkthrough-7" class="section-slide"><div class="section-container">
-  <div class="image image-wider"><img src="../../assets/images/ex_network.png"></div>
-  <walkthrough-nav step="7"></walkthrough-nav>
-  <div class="section-content">
-    <p>The Cosmos hub isn&rsquo;t the center of the universe. Any zone can be a hub.</p>
-  </div>
-</div></section> 
 </template>
 
 <script>
@@ -109,6 +158,7 @@ export default {
   .section-container
     .section-content
       padding x 0.75*x
+      padding-top 1.8*x
       p
         padding 0 0 1em
         &:first-of-type
@@ -123,13 +173,14 @@ export default {
     flex-flow column
 
     width 100vw
-    height 100vh
+    // height 100vh
     border-top 1px solid bc
 
     .image
       flex 2
       overflow hidden
-      padding-top 3*x
+      padding-top 2*x
+      padding-bottom 2*x
 
       display flex
       justify-content center
@@ -147,14 +198,18 @@ export default {
     .section-content
       background #fff
       padding 0 0.75*x
-      flex 1
-      display flex
+      //flex 1
+      //display flex
+
+      h2
+        font-size: 1.5em
+        color: #555
+        margin: 1.5*x 0
 
       p
-        padding-top x
+        margin 1.5*x auto
         max-width 40em
-        margin 0 auto
-        text-align center
+        // text-align center
 
 @media screen and (max-height: 480px)
   .section-slide
@@ -165,42 +220,44 @@ export default {
         padding 1.5*x 0
       .section-content
         p
-          padding 0.5*x 0 1.5*x
+          // padding 0.5*x 0 1.5*x
 
   .section-slide-text
     .section-container
       .section-content
-        padding-top 0
+        // padding-top 0
   
 @media screen and (min-width: 360px) and (min-height: 481px)
   .section-slide
     .section-container
       .section-content
-        padding 0 x
+        h2
+          margin-top 0.5*x
+        padding-bottom 1.5*x
 
   .section-slide-text
     .section-container
       .section-content
-        padding x
+        // padding x
 
 @media screen and (min-width: 414px)
   .section-slide
     .section-container
       .section-content
-        padding 0 1.5*x
+        h2
+          margin-top x
+        padding-bottom 2*x
 
   .section-slide-text
     .section-container
       .section-content
-        padding 1.5*x
+        // padding 1.5*x
 
 @media screen and (min-width: 768px)
   .section-slide
     .section-container
       .section-content
-        padding 0 4*x
-        p
-          padding-top 2.5*x
+        //
 
   .section-slide-text
     .section-container
@@ -216,16 +273,13 @@ export default {
       .section-content
         order 0
         align-items center
-        p
-          padding-top 0
+        padding-bottom 0
+        h2
+          margin-top 1.5*x
 
   .section-slide-text
     .section-container
       .section-content
         max-width 1200px
-        margin 0 auto
-        padding-left 4*x
-        padding-right 4*x
-        padding-bottom 3*x
         column-count 3
 </style>
