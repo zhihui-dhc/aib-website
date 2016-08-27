@@ -71,8 +71,16 @@ export default {
       color txt
       font-weight bold
 
+    -webkit-touch-callout none
+    -webkit-user-select none
+    -khtml-user-select none
+    -moz-user-select none
+    -ms-user-select none
+    user-select none
+
 @media screen and (min-width: 360px)
   .walkthrough
     a.btn-walkthrough
       line-height 3*x
+
 </style>

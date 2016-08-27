@@ -1,8 +1,8 @@
 <template>
 <section class="section-cover">
   <div class="blockchain" @click="scrollDown">
-    <h1>Cosmos</h1>
-    <h2>the network of blockchains</h2>
+    <h1><img src="../../assets/images/cosmos_logo_m.png" alt="Cosmos" height="50"/></h1>
+    <h2>a blockchain network</h2>
   </div>
 </section>
 </template>
@@ -46,6 +46,8 @@ h1
   font-weight bold
   letter-spacing 0.25em
   line-height 1.25
+  img
+    height 32px
 
 h2
   font-size 0.05 * hub-size
@@ -127,9 +129,11 @@ h2
 
   h1
     font-size 0.1 * hub-size
+    img
+      height 42px
 
   h2
-    font-size 0.04 * hub-size
+    font-size 0.05 * hub-size
 
   .blockchain
     width hub-size
@@ -160,6 +164,8 @@ h2
 
   h1
     font-size 0.1 * hub-size
+    img
+      height 50px
 
   h2
     font-size 0.04 * hub-size
