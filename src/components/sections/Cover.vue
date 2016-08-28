@@ -1,8 +1,8 @@
 <template>
-<section class="section-cover">
+<section class="section-cover stabilizeVH">
   <div class="blockchain" @click="scrollDown">
     <h1><img src="../../assets/images/cosmos_logo_m.png" alt="Cosmos" height="50"/></h1>
-    <h2>a blockchain network</h2>
+    <h2>internet of blockchains</h2>
   </div>
 </section>
 </template>
@@ -45,9 +45,9 @@ h1
   text-transform uppercase
   font-weight bold
   letter-spacing 0.25em
-  line-height 1.25
+  line-height 0
   img
-    height 32px
+    height 28px
 
 h2
   font-size 0.05 * hub-size

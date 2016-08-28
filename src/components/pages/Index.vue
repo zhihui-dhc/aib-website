@@ -40,7 +40,7 @@
 </div></section>
 
 <section id="walkthrough-2" class="section-slide"><div class="section-container">
-  <div class="image image-thinner"><img src="../../assets/images/ex_dist_exchange.png"></div>
+  <div class="image stabilizeVH"><img class="" src="../../assets/images/ex_dist_exchange.png"></div>
   <walkthrough-nav step="2"></walkthrough-nav>
   <div class="section-content">
     <center><h2>Interoperability</h2></center>
@@ -63,7 +63,7 @@
 </div></section>
 
 <section id="walkthrough-3" class="section-slide"><div class="section-container">
-  <div class="image image-thinner"><img src="../../assets/images/ex_evm_sharding.png"></div>
+  <div class="image stabilizeVH"><img class="" src="../../assets/images/ex_evm_sharding.png"></div>
   <walkthrough-nav step="3"></walkthrough-nav>
   <div class="section-content">
     <center><h2>Scalability</h2></center>
@@ -81,7 +81,7 @@
 </div></section>
 
 <section id="walkthrough-4" class="section-slide"><div class="section-container">
-  <div class="image"><img src="../../assets/images/ex_evm_upgrading.png"></div>
+  <div class="image image-shorter stabilizeVH"><img class="" src="../../assets/images/ex_evm_upgrading.png"></div>
   <walkthrough-nav step="4"></walkthrough-nav>
   <div class="section-content">
     <center><h2>Upgradability</h2></center>
@@ -99,7 +99,7 @@
 </div></section>
 
 <section id="walkthrough-5" class="section-slide"><div class="section-container">
-  <div class="image image-wider"><img src="../../assets/images/ex_network.png"></div>
+  <div class="image image-taller stabilizeVH"><img class="" src="../../assets/images/ex_network.png"></div>
   <walkthrough-nav step="5"></walkthrough-nav>
   <div class="section-content">
     <center><h2>Decentralization</h2></center>
@@ -186,14 +186,14 @@ export default {
       justify-content center
       align-items center
       img
-        width 90vw
-        max-width 50vh
-        height auto
+        width auto
+        max-width 80vw
+        max-height 40vh
 
-      &.image-thinner img
-        max-width 40vh
-      &.image-wider img
-        max-width 75vh
+      &.image-shorter img
+        max-height 20vh
+      &.image-taller img
+        max-height 50vh
 
     .section-content
       background #fff
@@ -215,7 +215,7 @@ export default {
   .section-slide
     .section-container
       height auto
-      min-height 100vh
+      // min-height 100vh
       .image
         padding 1.5*x 0
       .section-content
