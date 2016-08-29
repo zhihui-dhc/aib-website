@@ -74,17 +74,20 @@
     or exchange. 
     </p>
     <p>
-    Cosmos is not just a single distributed ledger, and the Cosmos hub isn't a
-    walled garden or the center of its universe. We are designing a protocol
-    for an open network of distributed ledgers that can serve as a new
-    foundation for our future financial systems, based on principles of
-    cryptography, sound economics, consensus theory, transparency, and
-    accountability.
+    Cosmos is built on principles of cryptography, sound economics, consensus
+    theory, transparency, and accountability to serve as a new foundation for
+    our future financial systems.
     </p>
     <p>
     You can use Cosmos as a testing ground for a new cryptocurrency design, an
     upgrade to an existing cryptocurrency, as a means for decentralized
-    exchange, or as a platform for scalable smart contracts. 
+    exchange, or as a platform for scalable smart contracts.
+    </p>
+    <p>
+    Cosmos is not just a single distributed ledger, and the Cosmos hub isn't a
+    walled garden or the center of its universe — anyone can use this protocol
+    to create their own hub to compete with Cosmos in a free market of
+    blockchains
     </p>
     <p>
     The only question is, what will you build on Cosmos?
