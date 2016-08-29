@@ -13,6 +13,7 @@
     * Added Table of Contents
 
 Tomorrow: Improve ToC for mobile devices. Allow sharing of particular sections of the page(s). Fix ToC header hover bug. Add more icons.
+FIxed header issue
 
 # 2016-08-26 https://nylira.github.io/
 * Added more of the HOME.md text to the homepage.
