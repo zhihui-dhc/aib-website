@@ -24,7 +24,7 @@ Vue.component('page-faq', PageFaq)
 Vue.component('page-blog-index', PageBlogIndex)
 Vue.component('page-blog-post', PageBlogPost)
 
-let router = new VueRouter({history: true})
+let router = new VueRouter({history: false})
 
 // basic transitions
 router.beforeEach(function () {
