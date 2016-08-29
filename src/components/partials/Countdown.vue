@@ -16,7 +16,7 @@ export default {
   },
   methods: {
     updateCountdown () {
-      this.countdown = moment('2016-10-15').countdown(new Date(), countdown.MONTHS | countdown.DAYS).toString()
+      this.countdown = moment('2016-10-17').countdown(new Date(), countdown.MONTHS | countdown.DAYS).toString()
     }
   },
   ready () {

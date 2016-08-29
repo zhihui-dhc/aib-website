@@ -2,7 +2,7 @@
   <section class="section-default section-cd">
     <div class="section-container">
       <div class="countdown-wrapper">
-        <div class="key">Crowd sale on October 8th</div>
+        <div class="key">Crowd sale on October 17th</div>
         <div class="value"><countdown></countdown></div>
         <email-signup-form></email-signup-form>
       </div>
