@@ -4,36 +4,41 @@
 <section id="walkthrough-1" class="section-slide-text"><div class="section-container">
   <div class="section-content">
     <p>
-    Building a blockchain for the future
+    Building an internet of blockchains
+    </p>
+    <h2>Purpose</h2>
+    <p>
+    Cosmos is a project with an ambitious mission: To create a network of
+    distributed ledgers that will solve long-standing problems in the
+    cryptocurrency and blockchain communities.
+    </p>
+    <h2>Architecture</h2>
+    <p>
+    The Cosmos network consists of many independent, parallel blockchains,
+    called zones, each powered by classical Byzantine fault-tolerant (BFT)
+    consensus protocols like
+    <a href="http://tendermint.com">Tendermint</a> (already used by platforms
+    like <a href="https://erisindustries.com/components/erisdb/">ErisDB</a>,
+    and soon, <a href="https://www.hyperledger.org/">Hyperledger</a>).
+    Some zones act as hubs with respect to other zones, allowing many zones
+    to interoperate through a shared hub. The architecture is a more general
+    application of the Bitcoin sidechains concept, using classic BFT and
+    Proof-of-Stake algorithms, instead of Proof-of-Work (see our whitepaper for
+    more details).
+    <h2>Cosmos Hub</h2>
+    <p>
+    The first blockchain in the Cosmos network is the Cosmos hub. The Cosmos
+    hub connects to zones via the novel IBC (inter-blockchain communication)
+    protocol and keeps a record of the total number of tokens in each zone.
+    Because all inter-zone token transfers go through the Cosmos hub, you can
+    transfer tokens from one zone to another, quickly and securely, without the
+    need for a liquid exchange or a trusted third party between zones. 
     </p>
     <p>
-    Cosmos is a project with an ambitious mission. We are aiming to create a
-    network of distributed ledgers to solve long-standing problems in the
-    cryptocurrency and blockchain space.   
-    </p>
-    <p>
-    Put simply, Cosmos is a network of independent parallel blockchains called
-    zones. The zones are powered by classical Byzantine fault tolerance (BFT)
-    consensus algorithms, like <a href="http://tendermint.com">Tendermint</a>,
-    which is already in use by platforms like <a href="https://erisindustries.com/components/erisdb/">Eris</a>.
-    </p>
-    <p>
-    You can read more about the advantages our BFT proof-of-stake model over
-    proof-of-work, the approach Bitcoin uses, in our
-    <a href="https://github.com/cosmos/cosmos/blob/master/WHITEPAPER.md">white-paper</a>.
-    </p>
-    <p> 
-    The first blockchain in this Cosmos network is the Cosmos hub. The Cosmos
-    hub connects to zones via a novel inter-blockchain communication protocol
-    called IBC (inter-blockchain communication).
-    </p>
-    <p>
-    The Cosmos hub tracks numerous token types (whether it be Bitcoin,
-    Ethereum, ZeroCash, CryptoNote, your local banking institution, etc.), and
-    keeps a record of the total number of tokens in each zone. Because all
-    inter-zone coin transfers go through the Cosmos hub, you can transfer
-    tokens from one zone to another, securely and quickly, without the need for
-    a liquid exchange between zones.
+    The Cosmos hub can connect to many different kinds of zones, as long as
+    each zone speaks IBC. As a result, Cosmos can support a variety of
+    currencies and scripting languages like those found in Bitcoin, Ethereum,
+    ZeroCash, CryptoNote, and more.
     </p>
   </div>
   <walkthrough-nav step="1"></walkthrough-nav>
@@ -90,10 +95,11 @@
     versions come out. Getting all of the validators (“miners” in the case of
     Bitcoin) to upgrade to a new version of a blockchain simultaneously is
     tricky, and could lead to hard forks. This is exactly what happened when
-    Ethereum hard-forked into ETH and ETC due to political/governance issues
-    surrounding the DAO hack. With Cosmos, upgrading is not an issue. You
-    simply plug a new zone into the Cosmos hub, and invite users to move their
-    funds over to it at their leisure.  
+    <a href="http://qz.com/730004/everything-you-need-to-know-about-the-ethereum-hard-fork/">Ethereum hard-forked</a>
+    into ETH and ETC due to political/governance issues surrounding the DAO
+    hack. With Cosmos, upgrading is not an issue. You simply plug a new zone
+    into the Cosmos hub, and invite users to move their funds over to it at
+    their leisure.  
     </p>
   </div>
 </div></section>
@@ -166,6 +172,10 @@ export default {
           font-size 1.25*x
           margin-bottom 1em
           border-bottom 1px solid bc
+      h2
+        font-size: 1.2em
+        color: #555
+        margin: 0.5*x 0
 
 .section-slide
   .section-container
