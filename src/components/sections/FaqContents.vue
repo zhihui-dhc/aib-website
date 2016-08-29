@@ -27,6 +27,8 @@
 
 @media screen and (min-width: 1280px)
   .toc-wrapper
+    z-index 2
+    background-color #f7f8f8
     > ul
       > li
         border-bottom 1px solid bc

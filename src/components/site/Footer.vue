@@ -28,7 +28,7 @@ export default {
 
   // show on top of hovering sidebars
   position relative
-  z-index 1
+  z-index 3
   background #fff
 
   p
