@@ -2,7 +2,7 @@
   <div class="header-padding"></div>
 <div class="article-wrapper">
 
-<h1 id="cosmos">Cosmos Whitepaper</h1>
+<h1 id="whitepaper">Cosmos Whitepaper</h1>
 <p><strong>A Network of Distributed Ledgers</strong></p>
 <p>Jae Kwon jae@tendermint.com<br/>
 Ethan Buchman ethan@tendermint.com</p>
@@ -10,10 +10,9 @@ Ethan Buchman ethan@tendermint.com</p>
 <p><em>NOTE: If you can read this on GitHub, then we&#39;re still actively developing this
 document.  Please check regularly for updates!.</em></p>
 
-<div id="toc-wrapper">
-<h2 id="table-of-contents">Table of Contents</h2>
+<div class="toc-wrapper">
+<h2><a href="#page-top">Whitepaper</a></h2>
 <ul>
-<li><a href="#cosmos">Cosmos</a></li>
 <li><a href="#introduction">Introduction</a></li>
 <li><a href="#tendermint">Tendermint</a><ul>
 <li><a href="#validators">Validators</a></li>
@@ -1467,108 +1466,20 @@ Han</a> for various contributions.</li>
 <h4 id="unsorted-links">Unsorted links</h4>
 <ul>
 <li><a href="https://www.docdroid.net/ec7xGzs/314477721-ethereum-platform-review-opportunities-and-challenges-for-private-and-consortium-blockchains.pdf.html">https://www.docdroid.net/ec7xGzs/314477721-ethereum-platform-review-opportunities-and-challenges-for-private-and-consortium-blockchains.pdf.html</a></li>
-
 </ul>
-
   </div>
 </template>
 
 <script>
-import $ from 'jquery'
-import Ps from 'perfect-scrollbar'
+import tocScroll from '../../scripts/tocScroll.js'
 
 export default {
-  components: {
-  },
   ready () {
-    $('#toc-wrapper a').click(function (e) {
-      e.preventDefault()
-      console.log($(e.target).attr('href'))
-      let scrollSpeed = 666
-      let height = $($(e.target).attr('href')).offset().top - 48 - 16
-      $('html, body').animate({ scrollTop: height }, scrollSpeed)
-    })
-
-    let toc = document.querySelector('#toc-wrapper')
-    Ps.initialize(toc)
+    tocScroll()
   }
 }
 </script>
 
 <style lang="stylus" scoped>
 @import '../../styles/variables.styl'
-
-@media screen and (min-width: 1280px)
-  #toc-wrapper
-    position fixed
-    top 3*x + 0.5*x
-    left 0.5*x
-    bottom 0.5*x
-
-    width 14*x
-
-    padding 0.75*x 0.75*x 0
-    background darken(mbg, 5%)
-
-    overflow hidden
-
-    h2
-      font-size 0.7*x
-      font-weight bold
-      margin 0 0 x
-
-    > ul
-      list-style none
-      font-size 0.7*x
-      padding 0
-
-      > li
-        > a
-          font-weight bold
-
-      li
-        text-overflow ellipsis
-        whitespace no-wrap
-
-        a
-          color txt
-          &:hover
-            color link
-
-      ul
-        margin 0
-        padding-left x
-
-@media screen and (min-width: 1366px)
-  #toc-wrapper
-    width 16*x
-    h2
-      font-size 0.775*x
-    ul
-      font-size 0.775*x
-
-@media screen and (min-width: 1440px)
-  #toc-wrapper
-    width 18*x
-    h2
-      font-size 0.85*x
-    ul
-      font-size 0.85*x
-
-@media screen and (min-width: 1650px)
-  #toc-wrapper
-    padding x x 0
-    width 20*x
-    h2
-      font-size 0.90*x
-    ul
-      font-size 0.90*x
-
-@media screen and (min-width: 1920px)
-  #toc-wrapper
-    width 24*x
-    h2
-      font-size x
-    ul
-      font-size x
 </style>

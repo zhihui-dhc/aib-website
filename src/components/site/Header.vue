@@ -7,7 +7,7 @@
     </div>
     <nav id="site-nav">
       <a class="nav-link" v-link="{ path: '/blog' }">Blog</a>
-      <a v-link="{ path: '/plan' }">Plan</a>
+      <a v-link="{ path: '/plan' }">Crowdfund</a>
       <a v-link="{ path: '/faq' }">FAQ</a>
       <a v-link="{ path: '/whitepaper' }">Whitepaper</a>
     </nav>

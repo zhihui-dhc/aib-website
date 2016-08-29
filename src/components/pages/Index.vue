@@ -1,48 +1,6 @@
 <template>
 <section-cover></section-cover>
-
-<section id="walkthrough-1" class="section-slide-text"><div class="section-container">
-  <div class="section-content">
-    <p>
-    Building an internet of blockchains
-    </p>
-    <h2>Purpose</h2>
-    <p>
-    Cosmos is a project with an ambitious mission: To create a network of
-    distributed ledgers that will solve long-standing problems in the
-    cryptocurrency and blockchain communities.
-    </p>
-    <h2>Architecture</h2>
-    <p>
-    The Cosmos network consists of many independent, parallel blockchains,
-    called zones, each powered by classical Byzantine fault-tolerant (BFT)
-    consensus protocols like
-    <a href="http://tendermint.com">Tendermint</a> (already used by platforms
-    like <a href="https://erisindustries.com/components/erisdb/">ErisDB</a>,
-    and soon, <a href="https://www.hyperledger.org/">Hyperledger</a>).
-    Some zones act as hubs with respect to other zones, allowing many zones
-    to interoperate through a shared hub. The architecture is a more general
-    application of the Bitcoin sidechains concept, using classic BFT and
-    Proof-of-Stake algorithms, instead of Proof-of-Work (see our whitepaper for
-    more details).
-    <h2>Cosmos Hub</h2>
-    <p>
-    The first blockchain in the Cosmos network is the Cosmos hub. The Cosmos
-    hub connects to zones via the novel IBC (inter-blockchain communication)
-    protocol and keeps a record of the total number of tokens in each zone.
-    Because all inter-zone token transfers go through the Cosmos hub, you can
-    transfer tokens from one zone to another, quickly and securely, without the
-    need for a liquid exchange or a trusted third party between zones. 
-    </p>
-    <p>
-    The Cosmos hub can connect to many different kinds of zones, as long as
-    each zone speaks IBC. As a result, Cosmos can support a variety of
-    currencies and scripting languages like those found in Bitcoin, Ethereum,
-    ZeroCash, CryptoNote, and more.
-    </p>
-  </div>
-  <walkthrough-nav step="1"></walkthrough-nav>
-</div></section>
+<section-home-text></section-home-text>
 
 <section id="walkthrough-2" class="section-slide"><div class="section-container">
   <div class="image stabilizeVH"><img class="" src="../../assets/images/ex_dist_exchange.png"></div>
@@ -136,16 +94,18 @@
 </template>
 
 <script>
-import SectionCallToAction from '../sections/CallToAction.vue'
 import SectionCover from '../sections/Cover.vue'
+import SectionHomeText from '../sections/HomeText.vue'
+import SectionCallToAction from '../sections/CallToAction.vue'
 import WalkthroughNav from '../partials/WalkthroughNav.vue'
 
 import watchWalkthroughBtns from '../../scripts/watchWalkthroughBtns.js'
 
 export default {
   components: {
-    SectionCallToAction,
     SectionCover,
+    SectionHomeText,
+    SectionCallToAction,
     WalkthroughNav
   },
   ready () {
@@ -157,33 +117,12 @@ export default {
 <style lang="stylus" scoped>
 @import '../../styles/variables.styl'
 
-.section-slide-text
-  background #fff
-  position relative
-  z-index 1
-  .section-container
-    .section-content
-      padding x 0.75*x
-      padding-top 1.8*x
-      p
-        padding 0 0 1em
-        &:first-of-type
-          font-weight 600
-          font-size 1.25*x
-          margin-bottom 1em
-          border-bottom 1px solid bc
-      h2
-        font-size: 1.2em
-        color: #555
-        margin: 0.5*x 0
-
 .section-slide
   .section-container
     display flex
     flex-flow column
 
     width 100vw
-    // height 100vh
     border-top 1px solid bc
 
     .image
@@ -193,7 +132,6 @@ export default {
       display flex
       justify-content center
       align-items center
-      margin-top 20px
 
       height 51vh
       img
@@ -213,35 +151,23 @@ export default {
     .section-content
       background #fff
       padding 0 0.75*x
-      //flex 1
-      //display flex
 
       h2
-        font-size: 1.5em
-        color: #555
-        margin: 1.5*x 0
+        font-size 1.5em
+        color txt
+        margin 1.5*x 0
 
       p
         margin 1.5*x auto
         max-width 40em
-        // text-align center
 
 @media screen and (max-height: 480px)
   .section-slide
     .section-container
       height auto
-      // min-height 100vh
       .image
         padding 1.5*x 0
-      .section-content
-        p
-          // padding 0.5*x 0 1.5*x
 
-  .section-slide-text
-    .section-container
-      .section-content
-        // padding-top 0
-  
 @media screen and (min-width: 360px) and (min-height: 481px)
   .section-slide
     .section-container
@@ -250,11 +176,6 @@ export default {
           margin-top 0.5*x
         padding-bottom 1.5*x
 
-  .section-slide-text
-    .section-container
-      .section-content
-        // padding x
-
 @media screen and (min-width: 414px)
   .section-slide
     .section-container
@@ -262,23 +183,6 @@ export default {
         h2
           margin-top x
         padding-bottom 2*x
-
-  .section-slide-text
-    .section-container
-      .section-content
-        // padding 1.5*x
-
-@media screen and (min-width: 768px)
-  .section-slide
-    .section-container
-      .section-content
-        //
-
-  .section-slide-text
-    .section-container
-      .section-content
-        column-count 2
-        column-gap 2*x
 
 @media screen and (min-width: 1200px)
   .section-slide
@@ -291,10 +195,4 @@ export default {
         padding-bottom 0
         h2
           margin-top 1.5*x
-
-  .section-slide-text
-    .section-container
-      .section-content
-        max-width 1200px
-        column-count 3
 </style>

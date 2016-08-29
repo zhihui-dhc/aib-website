@@ -2,9 +2,27 @@
   <div class="header-padding"></div>
   <div class="article-wrapper">
 
-    <h1>Plan</h1>
+    <h1>Crowdfund Plan</h1>
 
-    <h2 id="cosmos-crowdfund-plan">Cosmos Crowdfund Plan</h2>
+    <div class="toc-wrapper">
+      <h2><a href="#page-top">Crowdfund Plan</a></h2>
+      <ul>
+        <li><a href="#definitions">Definitions</a>
+          <ul>
+            <li><a href="#essential-cosmos-software-and-services">Essential Cosmos Software and Services</a></li>
+          </ul>
+        </li>
+        <li><a href="#funding">Funding</a>
+          <ul>
+            <li><a href="#phase-0-the-prefund">Phase 0: the Prefund</a></li>
+            <li><a href="#phase-1-the-crowdfund">Phase 1: the Crowdfund</a></li>
+            <li><a href="#funding-milestones">Funding Milestones</a></li>
+          </ul>
+        </li>
+        <li><a href="#timeline">Timeline</a></li>
+      <ul>
+    </div>
+
     <p>DATE: July 22nd, 2016<br/>
       LAST UPDATED: Aug 12th, 2016<br/>
       NOTE: The details in this plan override what is currently in the whitepaper.</p>
@@ -47,6 +65,7 @@
           years after Genesis.</p>
       </li>
     </ul>
+
     <h2 id="definitions">Definitions</h2>
     <p><strong>Cosmos Inc</strong>: Cosmos Inc is a for-profit legal entity that manages the
       Crowdfund and Genesis of the Cosmos Hub.  Besides the initial development of the
@@ -128,13 +147,17 @@
       <li>Ethereum peg <em>with sufficient funding</em></li>
       <li>Bitcoin peg <em>with partner, if possible</em></li>
     </ul>
+
     <h2 id="funding">Funding</h2>
+
     <p>Funds will be raised by Cosmos Inc in 2 phases.</p>
+
     <h3 id="phase-0-the-prefund">Phase 0: the Prefund</h3>
     <p>During the Prefund, 5% of future Genesis atoms will be sold to qualified
       investors with a cap and/or discount.  The proceeds from the Early Investors
       will be used to prepare for and execute the crowdfund, as well as to pay for
       legal expenses.</p>
+
     <h3 id="phase-1-the-crowdfund">Phase 1: the Crowdfund</h3>
     <p>During the Crowdfund, 75% of future Genesis atoms will be sold to sophisticated
       members of the public who wish to support or participate in this project.
@@ -150,6 +173,7 @@
       <li>If the crowdfund exceeds $5M -- Ethereum peg</li>
       <li>If the crowdfund exceeds $7M -- Open-source hardware wallet (sold separately)</li>
     </ul>
+
     <h2 id="timeline">Timeline</h2>
     <ol>
       <li>Prefund for 5% of Genesis atoms</li>
@@ -174,12 +198,19 @@
 </template>
 
 <script>
+import tocScroll from '../../scripts/tocScroll.js'
+
 export default {
-  components: {
+  ready () {
+    tocScroll()
   }
 }
 </script>
 
 <style lang="stylus" scoped>
 @import '../../styles/variables.styl'
+
+@media screen and (min-width: 1280px)
+  .toc-wrapper
+    border-right 1px solid bc
 </style>
