@@ -179,21 +179,26 @@ export default {
     .image
       flex 2
       overflow hidden
-      padding-top 2*x
-      padding-bottom 2*x
 
       display flex
       justify-content center
       align-items center
+      margin-top 20px
+
+      height 51vh
       img
         width auto
         max-width 80vw
         max-height 40vh
 
-      &.image-shorter img
-        max-height 20vh
-      &.image-taller img
-        max-height 50vh
+      &.image-shorter
+        height 32vh
+        img
+          max-height 20vh
+      &.image-taller
+        height 55vh
+        img
+          max-height 45vh
 
     .section-content
       background #fff
