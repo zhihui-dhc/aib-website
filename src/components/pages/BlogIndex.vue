@@ -1,7 +1,7 @@
 <template>
   <div class="header-padding"></div>
   <div class="article-wrapper">
-    <h1>Blog</h1>
+    <h1>Cosmos Blog</h1>
 
     <div v-for="post in posts">
       <a v-link="{ path: '/blog/' + post.slug }">

@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import $ from 'jquery'
 
 // setup addons
 Vue.use(VueRouter)
@@ -13,7 +12,7 @@ import App from './App.vue'
 import PageIndex from './components/pages/Index.vue'
 import PageWhitePaper from './components/pages/WhitePaper.vue'
 import PagePlan from './components/pages/Plan.vue'
-import PageFAQ from './components/pages/FAQ.vue'
+import PageFaq from './components/pages/Faq.vue'
 import PageBlogIndex from './components/pages/BlogIndex.vue'
 import PageBlogPost from './components/pages/BlogPost.vue'
 
@@ -21,7 +20,7 @@ import PageBlogPost from './components/pages/BlogPost.vue'
 Vue.component('page-index', PageIndex)
 Vue.component('page-whitepaper', PageWhitePaper)
 Vue.component('page-plan', PageWhitePaper)
-Vue.component('page-faq', PageFAQ)
+Vue.component('page-faq', PageFaq)
 Vue.component('page-blog-index', PageBlogIndex)
 Vue.component('page-blog-post', PageBlogPost)
 
@@ -36,7 +35,7 @@ router.map({
   '/': {component: PageIndex},
   '/whitepaper': {component: PageWhitePaper},
   '/plan': {component: PagePlan},
-  '/faq': {component: PageFAQ},
+  '/faq': {component: PageFaq},
   '/blog': {component: PageBlogIndex},
   '/blog/:post': {component: PageBlogPost}
 })
@@ -50,32 +49,3 @@ import markdown from './filters/markdown'
 Vue.filter('markdown', markdown)
 
 router.start(App, 'app')
-
-// stabilize vh class items
-function stabilizeVH (element) {
-  var HEIGHT_CHANGE_TOLERANCE = 100 // Approximate height of URL bar in Chrome on tablet
-  var viewportHeight = window.innerHeight
-  var elementHeight = element.offsetHeight
-  var originalElementPercent = element.offsetHeight / viewportHeight
-
-  window.addEventListener('resize', function () {
-    if (Math.abs(viewportHeight - window.innerHeight) > HEIGHT_CHANGE_TOLERANCE) {
-      viewportHeight = window.innerHeight
-      elementHeight = window.innerHeight * originalElementPercent
-      update()
-    }
-  })
-
-  function update () {
-    element.style.height = elementHeight + 'px'
-  }
-
-  update()
-}
-
-$(function () {
-  var elements = document.querySelectorAll('.stabilizeVH')
-  for (var i = 0; i < elements.length; i++) {
-    stabilizeVH(elements[i])
-  }
-})

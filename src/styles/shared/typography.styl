@@ -3,3 +3,22 @@ a
   text-decoration none
   &:hover
     color hover
+
+
+a[href^="//"]:after
+a[href^="http://"]:after
+a[href^="https://"]:after
+a[href^="ftp://"]:after
+a[href^="ftps://"]:after
+  display inline-block
+  box-sizing border-box
+
+  content 'link'
+  font-family 'Material Icons'
+  font-size x
+  line-height x
+
+  color link
+  vertical-align middle
+
+  margin-left 0.25em

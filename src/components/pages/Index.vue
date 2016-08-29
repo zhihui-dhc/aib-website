@@ -1,43 +1,6 @@
 <template>
 <section-cover></section-cover>
-
-<section id="walkthrough-1" class="section-slide-text"><div class="section-container">
-  <div class="section-content">
-    <p>
-    Building a blockchain for the future
-    </p>
-    <p>
-    Cosmos is a project with an ambitious mission. We are aiming to create a
-    network of distributed ledgers to solve long-standing problems in the
-    cryptocurrency and blockchain space.   
-    </p>
-    <p>
-    Put simply, Cosmos is a network of independent parallel blockchains called
-    zones. The zones are powered by classical Byzantine fault tolerance (BFT)
-    consensus algorithms, like <a href="http://tendermint.com">Tendermint</a>,
-    which is already in use by platforms like <a href="https://erisindustries.com/components/erisdb/">Eris</a>.
-    </p>
-    <p>
-    You can read more about the advantages our BFT proof-of-stake model over
-    proof-of-work, the approach Bitcoin uses, in our
-    <a href="https://github.com/cosmos/cosmos/blob/master/WHITEPAPER.md">white-paper</a>.
-    </p>
-    <p> 
-    The first blockchain in this Cosmos network is the Cosmos hub. The Cosmos
-    hub connects to zones via a novel inter-blockchain communication protocol
-    called IBC (inter-blockchain communication).
-    </p>
-    <p>
-    The Cosmos hub tracks numerous token types (whether it be Bitcoin,
-    Ethereum, ZeroCash, CryptoNote, your local banking institution, etc.), and
-    keeps a record of the total number of tokens in each zone. Because all
-    inter-zone coin transfers go through the Cosmos hub, you can transfer
-    tokens from one zone to another, securely and quickly, without the need for
-    a liquid exchange between zones.
-    </p>
-  </div>
-  <walkthrough-nav step="1"></walkthrough-nav>
-</div></section>
+<section-home-text></section-home-text>
 
 <section id="walkthrough-2" class="section-slide"><div class="section-container">
   <div class="image stabilizeVH"><img class="" src="../../assets/images/ex_dist_exchange.png"></div>
@@ -130,16 +93,18 @@
 </template>
 
 <script>
-import SectionCallToAction from '../sections/CallToAction.vue'
 import SectionCover from '../sections/Cover.vue'
+import SectionHomeText from '../sections/HomeText.vue'
+import SectionCallToAction from '../sections/CallToAction.vue'
 import WalkthroughNav from '../partials/WalkthroughNav.vue'
 
 import watchWalkthroughBtns from '../../scripts/watchWalkthroughBtns.js'
 
 export default {
   components: {
-    SectionCallToAction,
     SectionCover,
+    SectionHomeText,
+    SectionCallToAction,
     WalkthroughNav
   },
   ready () {
@@ -151,29 +116,12 @@ export default {
 <style lang="stylus" scoped>
 @import '../../styles/variables.styl'
 
-.section-slide-text
-  background #fff
-  position relative
-  z-index 1
-  .section-container
-    .section-content
-      padding x 0.75*x
-      padding-top 1.8*x
-      p
-        padding 0 0 1em
-        &:first-of-type
-          font-weight 600
-          font-size 1.25*x
-          margin-bottom 1em
-          border-bottom 1px solid bc
-
 .section-slide
   .section-container
     display flex
     flex-flow column
 
     width 100vw
-    // height 100vh
     border-top 1px solid bc
 
     .image
@@ -183,7 +131,6 @@ export default {
       display flex
       justify-content center
       align-items center
-      margin-top 20px
 
       height 51vh
       img
@@ -203,35 +150,23 @@ export default {
     .section-content
       background #fff
       padding 0 0.75*x
-      //flex 1
-      //display flex
 
       h2
-        font-size: 1.5em
-        color: #555
-        margin: 1.5*x 0
+        font-size 1.5em
+        color txt
+        margin 1.5*x 0
 
       p
         margin 1.5*x auto
         max-width 40em
-        // text-align center
 
 @media screen and (max-height: 480px)
   .section-slide
     .section-container
       height auto
-      // min-height 100vh
       .image
         padding 1.5*x 0
-      .section-content
-        p
-          // padding 0.5*x 0 1.5*x
 
-  .section-slide-text
-    .section-container
-      .section-content
-        // padding-top 0
-  
 @media screen and (min-width: 360px) and (min-height: 481px)
   .section-slide
     .section-container
@@ -240,11 +175,6 @@ export default {
           margin-top 0.5*x
         padding-bottom 1.5*x
 
-  .section-slide-text
-    .section-container
-      .section-content
-        // padding x
-
 @media screen and (min-width: 414px)
   .section-slide
     .section-container
@@ -252,23 +182,6 @@ export default {
         h2
           margin-top x
         padding-bottom 2*x
-
-  .section-slide-text
-    .section-container
-      .section-content
-        // padding 1.5*x
-
-@media screen and (min-width: 768px)
-  .section-slide
-    .section-container
-      .section-content
-        //
-
-  .section-slide-text
-    .section-container
-      .section-content
-        column-count 2
-        column-gap 2*x
 
 @media screen and (min-width: 1200px)
   .section-slide
@@ -281,10 +194,4 @@ export default {
         padding-bottom 0
         h2
           margin-top 1.5*x
-
-  .section-slide-text
-    .section-container
-      .section-content
-        max-width 1200px
-        column-count 3
 </style>
