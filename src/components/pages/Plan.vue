@@ -210,6 +210,7 @@ export default {
 <style lang="stylus" scoped>
 @import '../../styles/variables.styl'
 
-.toc-wrapper
-  border-right 1px solid bc
+@media screen and (min-width: 1280px)
+  .toc-wrapper
+    border-right 1px solid bc
 </style>
