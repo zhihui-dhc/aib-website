@@ -17,8 +17,7 @@
         called zones, each powered by classical Byzantine fault-tolerant (BFT)
         consensus protocols like
         <a href="http://tendermint.com">Tendermint</a> (already used by platforms
-        like <a href="https://erisindustries.com/components/erisdb/">ErisDB</a>,
-        and soon, <a href="https://www.hyperledger.org/">Hyperledger</a>).
+        like <a href="https://erisindustries.com/components/erisdb/">ErisDB</a>).
         Some zones act as hubs with respect to other zones, allowing many zones
         to interoperate through a shared hub. The architecture is a more general
         application of the Bitcoin sidechains concept, using classic BFT and
