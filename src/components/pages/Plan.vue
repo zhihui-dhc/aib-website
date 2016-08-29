@@ -19,7 +19,6 @@
             <li><a href="#funding-milestones">Funding Milestones</a></li>
           </ul>
         </li>
-        <li><a href="#funding">Funding</a></li>
         <li><a href="#timeline">Timeline</a></li>
       <ul>
     </div>
