@@ -12,7 +12,7 @@ import App from './App.vue'
 import PageIndex from './components/pages/Index.vue'
 import PageWhitePaper from './components/pages/WhitePaper.vue'
 import PagePlan from './components/pages/Plan.vue'
-import PageFaq from './components/pages/Faq.vue'
+import PageFaq from './components/pages/FAQ.vue'
 import PageBlogIndex from './components/pages/BlogIndex.vue'
 import PageBlogPost from './components/pages/BlogPost.vue'
 
@@ -24,7 +24,8 @@ Vue.component('page-faq', PageFaq)
 Vue.component('page-blog-index', PageBlogIndex)
 Vue.component('page-blog-post', PageBlogPost)
 
-let router = new VueRouter({history: false})
+// history: true to allow /pagename rather than /#!pagename
+let router = new VueRouter({history: true})
 
 // basic transitions
 router.beforeEach(function () {
