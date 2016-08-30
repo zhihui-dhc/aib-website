@@ -11,17 +11,20 @@ import SiteHeader from './components/site/Header.vue'
 import SiteFooter from './components/site/Footer.vue'
 import store from './vuex/store.js'
 import stabilizeVH from './scripts/stabilizeVH.js'
+import $ from 'jquery'
 
 export default {
   components: {
     SiteHeader,
     SiteFooter
   },
-  ready () {
-    stabilizeVH()
-  },
   store
 }
+
+$(function () {
+  stabilizeVH()
+})
+
 </script>
 
 <style lang="stylus">
