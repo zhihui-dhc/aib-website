@@ -103,6 +103,7 @@ import SectionCallToAction from '../sections/CallToAction.vue'
 import WalkthroughNav from '../partials/WalkthroughNav.vue'
 
 import watchWalkthroughBtns from '../../scripts/watchWalkthroughBtns.js'
+import stabilizeVH from '../../scripts/stabilizeVH.js'
 
 export default {
   components: {
@@ -112,6 +113,7 @@ export default {
     WalkthroughNav
   },
   ready () {
+    stabilizeVH()
     watchWalkthroughBtns()
   }
 }
