@@ -36,14 +36,14 @@
       <li><p>
       Cosmos Foundation will hold a crowdfunding campaign to sell tokens,
       called <i>atoms</i>, that give the holder limited license to use the Cosmos hub.
-      Proceeds will go to the Cosmos Inc. to develop the essential Cosmos
+      Proceeds will go to the Cosmos Foundation to develop the essential Cosmos
       software and services.
       </p></li>
       <li>There will be 20,000,000 atoms on Genesis day. On Genesis day, the
         distribution of atoms will be split between:
         <ul>
           <li>Pre-funders (5%)</li>
-          <li>Cosmos Inc (20%)</li>
+          <li>Cosmos Foundation (20%)</li>
           <li>Crowdfund Funders (75%)</li>
         </ul>
       </li>
@@ -118,17 +118,17 @@
     <!-- DEFINITIONS ------------------------------------------------------>
 
     <h2 id="definitions">Definitions</h2>
-    <p><strong>Cosmos Inc</strong>:
+    <p><strong>Cosmos Ecosystem</strong>:
+      The Cosmos network and supporting software and services, including
+      validator and client software.
+    </p>
+    <p><strong>Cosmos Foundation</strong>:
       A non-profit Canadian legal entity that manages the crowdfund and genesis
       of the Cosmos hub. Besides the initial development of the essential
       Cosmos software and services, Cosmos Foundation. has no further
       obligations with regards to the Cosmos ecosystem, Cosmos hub, or
       derivatives (forks) of the Cosmos hub, but instead is a general
       participant in the network.
-    </p>
-    <p><strong>Cosmos Ecosystem</strong>:
-      The Cosmos network and supporting software and services, including
-      validator and client software.
     </p>
     <p><strong>Cosmos Hub</strong>:
       A blockchain, or zone, that connects to many other zones. The hub
@@ -194,7 +194,7 @@
       <li>EoCF + 12 months: begin sale of compatible open-source hardware wallet</li>
       <li>EoCF + 13 months: beta release candidate of Alpha Hub for security audit</li>
       <li>EoCF + 15 months: launch Cosmos Hub beta</li>
-      <li>EoCF + 15 months+: Continuous development, timeline set by Cosmos Inc</li>
+      <li>EoCF + 15 months+: Continuous development, timeline set by Cosmos Foundation</li>
       <li>Timeline for Bitcoin and Ethereum pegs will be set after alpha release of Cosmos Hub, and depends on funding and partnership</li>
     </ol>
 

@@ -1,7 +1,7 @@
 <template>
   <section-call-to-action></section-call-to-action>
   <footer id="site-footer">
-    <p>&copy; 2016 Cosmos Inc</p>
+    <p>&copy; 2016 Cosmos Foundation</p>
   </footer>
 </template>
 
