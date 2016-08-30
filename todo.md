@@ -1,3 +1,14 @@
+# 2016-08-30
+* General
+    * Split the Plan, FAQ and Whitepaper content into two files each. The Table of Contents and the actual Content. Files are in `./src/components/content/`
+* Table of Contents:
+    * Design improvements & bug fixes.
+    * There's a toggle button to show and hide the ToC.
+    * ToC is now enabled for landscape tablets.
+    * ToC is now a a separate screen for portrait tablets and lower.
+
+Tomorrow: Allow users to link to specific parts of the Whitepaper, FAQ, and Crowdfund pages. Design improvements for the Crowdfund page (perhaps a graphic for the ). Make the ToC links easier to click on for mobile users. A 'You Are Here' indicator for where in the Whitepaper you currently are.
+
 # 2016-08-29
 * General
     * Improved Table of Contents design
@@ -12,8 +23,6 @@
 * FAQ
     * Added Table of Contents
 
-Tomorrow: Improve ToC for mobile devices. Allow sharing of particular sections of the page(s). Fix ToC header hover bug. Add more icons.
-FIxed header issue
 
 # 2016-08-26 https://nylira.github.io/
 * Added more of the HOME.md text to the homepage.

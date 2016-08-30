@@ -15,18 +15,22 @@
 
   h2
     font-size 2*x
-    margin-bottom 1.25*x
+    border-bottom 1px solid bc
+    padding-bottom 0.75*x
+    margin-bottom 1.75*x
   h3
-    font-size 1.75*x
+    font-size 1.5*x
     margin-bottom x
   h4
-    font-size 1.5*x
+    font-size 1.25*x
     margin-bottom 0.75*x
   h5
-    font-size 1.5*x
+    font-size 1.125*x
+    font-weight bold
     margin-bottom 0.5*x
   h6
-    font-size 1.25*x
+    font-size x
+    font-weight bold
     margin-bottom 0.25*x
 
   p, ol, ul, blockquote, img, pre
@@ -54,10 +58,12 @@
 
   pre
     display block
-    background bc
+    background #fff
+    border 1px solid bc
     font-family monospace
     padding 0.75*x x
     overflow-x scroll
+    font-size 0.8*x
 
   p, li
     overflow-x hidden
@@ -65,3 +71,16 @@
 
   img
     max-width 100%
+
+@media screen and (min-width: 960px)
+  .article-wrapper
+    padding-left 1.5*x
+    padding-right 1.5*x
+    padding-top 3*x
+
+  .master-detail-wrapper.toc-visible
+    margin-left 15*x
+
+@media screen and (min-width: 1200px)
+  .master-detail-wrapper.toc-visible
+    margin-left 20*x
