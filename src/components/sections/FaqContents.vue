@@ -1,6 +1,5 @@
 <template>
   <div class="toc-wrapper">
-    <h2><a href="#page-top">FAQ</a></h2>
     <ul>
       <li><a href="#whats-sharding">What is sharding?</a></li>
       <li><a href="#how-is-sharding-done">How does Cosmos do sharding?</a></li>

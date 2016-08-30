@@ -5,7 +5,6 @@
     <h1>Crowdfund Plan</h1>
 
     <div class="toc-wrapper">
-      <h2><a href="#page-top">Crowdfund Plan</a></h2>
       <ul>
         <li><a href="#funding">Funding</a>
           <ul>
