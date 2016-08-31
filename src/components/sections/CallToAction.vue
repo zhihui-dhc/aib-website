@@ -28,9 +28,6 @@ export default {
 .section-cd
   border-top 1px solid bc
 
-  // show on top of hovering sidebars
-  position relative
-  z-index 1
   background mbg
 
   .section-container

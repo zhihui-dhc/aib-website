@@ -2,27 +2,17 @@
   <div class="header-padding"></div>
   <div class="article-wrapper">
     <h1>Cosmos Blog</h1>
-
-    <div v-for="post in posts">
-      <a v-link="{ path: '/blog/' + post.slug }">
-        <h3>{{ post.title }}</h3>
-      </a>
-      <p>{{ post.dateCreated | dateShort }}</p>
-    </div>
- </div>
+    <a v-link="{ path: '/blog/purpose-of-cosmos'}">
+      <h3>Purpose of Cosmos</h3>
+    </a>
+    <p>2016-08-31</p>
+    <a v-link="{ path: '/blog/disclaimers-for-crowdfund-participants'}">
+      <h3>Disclaimers for Crowdfund Participants</h3>
+    </a>
+    <p>2016-07-20</p>
+    <a v-link="{ path: '/blog/just-a-test'}">
+      <h3>Just a Test</h3>
+    </a>
+    <p>2016-04-04</p>
+  </div><!--article-wrapper-->
 </template>
-
-<script>
-export default {
-  vuex: {
-    getters: {
-      posts: state => state.posts.posts
-    }
-  }
-}
-</script>
-
-<style lang="stylus" scoped>
-@import '../../styles/variables.styl'
-</style>
-

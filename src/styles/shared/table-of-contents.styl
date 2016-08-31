@@ -1,82 +1,123 @@
-@media screen and (min-width: 1280px)
+.toc-wrapper
+  border 1px solid bc
+  font-size 0.75*x
+  line-height 1.5
+
+  background mbg
+
+  .toc-header
+    padding 0 0.75*x
+    border-bottom 1px solid bc
+    display flex
+    align-items center
+
+    .toc-title
+      flex 1
+      color light
+      text-transform uppercase
+      line-height 2.5em
+
+    .toc-toggle.material-icons
+      color light
+      font-size x
+      cursor pointer
+      &:hover
+        color link
+
+  > ul
+    list-style none
+    padding 0
+
+    > li
+      border-bottom 1px solid bc
+      
+      &:last-of-type
+        border-bottom none
+
+      > a
+        padding 0.5*x 0.75*x
+        font-weight bold
+      ul
+        padding-left 1.5*x
+        margin 0 0 0.75*x
+        ul
+          margin 0
+
+    li
+      a
+        color txt
+        display block
+        &:hover
+          color link
+
+.toc-hidden-bar
+  position fixed
+  top 3*x + 0.5*x
+  left 0.5*x
+  bottom 0.5*x
+  width 2*x
+  max-height 100vh
+  border 1px solid bc
+
+  background mbg
+
+  text-align center
+  cursor pointer
+
+  i.material-icons
+    font-size x
+    line-height 2*x
+
+  &:hover
+    i.material-icons
+      color link
+
+@media screen and (max-width: 959px)
+  .toc-hidden-bar
+    width 3*x
+    height 3*x
+    border-radius 1.5*x
+
+    top auto
+    left auto
+    bottom 0.5*x
+    right 0.5*x
+
+    display flex
+    align-items center
+    justify-content center
+    
+    background alpha(mbg,85%)
+
+    i.material-icons
+      font-size 1.5*x
+
   .toc-wrapper
     position fixed
     top 3*x
     left 0
+    right 0
     bottom 0
 
-    width 14*x
-    max-height 100vh
+    z-index 1000
 
-    padding 2*x 0 0
-
+    border none
     overflow hidden
-    border-right 1px solid bc
 
-    h2
-      position fixed
-      top 3*x
-      left 0
-      right 0
-      margin 0
-
-      a
-        font-size 0.7*x
-        line-height 2*x
-        color #fff
-
-        display block
-        padding 0 x
-
-        background alpha(txt,85%)
-        border-bottom 1px solid bc
-
-        &:hover
-          background link
-          color #fff
-
-    > ul
-      list-style none
-      font-size 0.7*x
-      padding 0
-
-      > li
-        border-bottom 1px solid bc
-        > a
-          display block
-          font-weight normal
-          padding 0.5*x x
-          font-weight bold
-
-      li
-        a
-          color txt
-          display block
-          padding-left 0.5*x
-          &:hover
-            background #fff
-
-      ul
-        margin 0 0 0.5*x
-        padding-left 1.5*x
-
-@media screen and (min-width: 1366px)
+@media screen and (min-width: 960px)
   .toc-wrapper
-    width 16*x
-    h2 a, ul
-      font-size 0.775*x
-@media screen and (min-width: 1440px)
-  .toc-wrapper
-    width 18*x
-    h2 a, ul
-      font-size 0.85*x
-@media screen and (min-width: 1650px)
+    max-height 100vh
+    overflow hidden
+
+    position fixed
+    top 3.5*x
+    left 0.5*x
+    bottom 0.5*x
+
+    width 15*x
+
+@media screen and (min-width: 1200px)
   .toc-wrapper
     width 20*x
-    h2 a, ul
-      font-size 0.90*x
-@media screen and (min-width: 1920px)
-  .toc-wrapper
-    width 24*x
-    h2 a, ul
-      font-size x
+    font-size 0.85*x
+    line-height 1.5

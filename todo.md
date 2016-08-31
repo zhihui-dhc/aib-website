@@ -1,3 +1,26 @@
+# 2016-08-31
+Added a script to generate Vue-compatible HTML posts (and associated page routing) from Markdown files.
+* Edit the blog posts in `./src/posts/`
+* Build the blog only with `npm run blog`, or everything with `npm run build`
+* The generated Vue/HTML files are stored in `./src/components/blog/`
+
+I've re-enabled the `Blog` link on the site header for easy testing. Feel free to delete the Markdown files and start putting in blog posts. Be sure to add the YAML meta data to each `.md` file or the script won't work correctly. I've added more info to the readme too.
+
+Regarding the `app.js` size issue: the file is much smaller when it's minified. With `npm run build` and serving the `./dist` directory, `app.js` is only 172kb without gzip.
+
+Future stuff: add a RSS feed for the blog, blog design, ToC updates
+
+# 2016-08-30
+* General
+    * Split the Plan, FAQ and Whitepaper content into two files each. The Table of Contents and the actual Content. Files are in `./src/components/content/`
+* Table of Contents:
+    * Design improvements & bug fixes.
+    * There's a toggle button to show and hide the ToC.
+    * ToC is now enabled for landscape tablets.
+    * ToC is now a a separate screen for portrait tablets and lower.
+
+Tomorrow: Allow users to link to specific parts of the Whitepaper, FAQ, and Crowdfund pages. Design improvements for the Crowdfund page (perhaps a graphic for the ). Make the ToC links easier to click on for mobile users. A 'You Are Here' indicator for where in the Whitepaper you currently are.
+
 # 2016-08-29
 * General
     * Improved Table of Contents design
@@ -12,8 +35,6 @@
 * FAQ
     * Added Table of Contents
 
-Tomorrow: Improve ToC for mobile devices. Allow sharing of particular sections of the page(s). Fix ToC header hover bug. Add more icons.
-FIxed header issue
 
 # 2016-08-26 https://nylira.github.io/
 * Added more of the HOME.md text to the homepage.

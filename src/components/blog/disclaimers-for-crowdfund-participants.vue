@@ -1,0 +1,39 @@
+<template>
+  <div class="header-padding"></div>
+  <div class="article-wrapper">
+<div class="article-date">2016-07-20</div>
+
+<h1>Disclaimers for Crowdfund Participants</h1>
+
+<ul>
+<li>
+<p>The Essential Cosmos Software and Services may not complete in the advertised
+timeline due to unforeseen issues and circumstances.</p>
+</li>
+<li>
+<p>The Cosmos Hub may not gain significant market adoption due to a failure for
+the atom holders to coorinate effectively, or due to competition.</p>
+</li>
+<li>
+<p>The first 24 hours of the Crowdfund is uncapped, so there may be significant
+dillution relative to the total number of atoms at Genesis.</p>
+</li>
+<li>
+<p>There may be unintended bugs in software and theory that cause the project to
+fail for any number of reasons, including but not limited to, bugs in
+Tendermint Core, bugs in the Cosmos Hub TMSP application, bugs in client or
+wallet software, etc.</p>
+</li>
+<li>
+<p>There may be irreconciliable differences among atom holders that cause the
+Cosmos Hub blockchain to split (hard-fork) into two or more blockchains.  This
+may cause economic harm for end-users and related services such as
+crypto-exchanges .</p>
+</li>
+<li>
+<p>A majority or supermajority of the atom holders may pass proposals that go
+against the interest of the remaining atom holders.</p>
+</li>
+</ul>
+  </div><!--article-wrapper-->
+</template>
