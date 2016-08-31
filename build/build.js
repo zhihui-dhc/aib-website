@@ -22,11 +22,11 @@ rm('-rf', assetsPath)
 mkdir('-p', assetsPath)
 cp('-R', 'static/', assetsPath)
 
-var fs = require('fs')
+// var fs = require('fs')
 
 webpack(webpackConfig, function (err, stats) {
   // profile the built js
-  fs.writeFileSync('./stats.json', JSON.stringify(stats.toJson()), null, 2)
+  // fs.writeFileSync('./stats.json', JSON.stringify(stats.toJson()), null, 2)
   spinner.stop()
   if (err) throw err
   process.stdout.write(stats.toString({
