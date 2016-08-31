@@ -1,3 +1,15 @@
+# 2016-08-31
+Added a script to generate Vue-compatible HTML posts (and associated page routing) from Markdown files.
+* Edit the blog posts in `./src/posts/`
+* Build the blog only with `npm run blog`, or everything with `npm run build`
+* The generated Vue/HTML files are stored in `./src/components/blog/`
+
+I've re-enabled the `Blog` link on the site header for easy testing. Feel free to delete the Markdown files and start putting in blog posts. Be sure to add the YAML meta data to each `.md` file or the script won't work correctly. I've added more info to the readme too.
+
+Regarding the `app.js` size issue: the file is much smaller when it's minified. With `npm run build` and serving the `./dist` directory, `app.js` is only 172kb without gzip.
+
+Future stuff: add a RSS feed for the blog, blog design, ToC updates
+
 # 2016-08-30
 * General
     * Split the Plan, FAQ and Whitepaper content into two files each. The Table of Contents and the actual Content. Files are in `./src/components/content/`

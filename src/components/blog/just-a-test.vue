@@ -1,0 +1,20 @@
+<template>
+  <div class="header-padding"></div>
+  <div class="article-wrapper">
+<div class="article-date">2016-04-04</div>
+
+<h1>Just a Test</h1>
+
+<p>Here is some markdown data. This is <strong>just</strong> a <em>test</em>.</p>
+<ul>
+<li>One</li>
+<li>Two</li>
+<li>Three</li>
+</ul>
+<ol>
+<li>Four</li>
+<li>Five</li>
+<li>Six</li>
+</ol>
+  </div><!--article-wrapper-->
+</template>
