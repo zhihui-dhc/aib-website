@@ -141,17 +141,15 @@ export default {
       height 51vh
       img
         width auto
-        max-width 80vw
-        max-height 40vh
+        max-width 80%
+        max-height 80%
 
       &.image-shorter
         height 32vh
         img
-          max-height 20vh
+          max-height 60%
       &.image-taller
         height 55vh
-        img
-          max-height 45vh
 
     .section-content
       background #fff
@@ -170,8 +168,6 @@ export default {
   .section-slide
     .section-container
       height auto
-      .image
-        padding 1.5*x 0
 
 @media screen and (min-width: 360px) and (min-height: 481px)
   .section-slide
