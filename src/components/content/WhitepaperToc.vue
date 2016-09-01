@@ -17,7 +17,12 @@
 <li><a href="#tmsp">TMSP</a></li>
 </ul>
 </li>
-<li><a href="#cosmos-overview">Cosmos Overview</a></li>
+<li><a href="#cosmos-overview">Cosmos Overview</a>
+  <ul>
+  <li><a href="#tendermint-bft-dpos">Tendermint-BFT DPoS</a></li>
+  <li><a href="#cosmos-governance">Governance</a></li>
+  </ul>
+</li>
 <li><a href="#the-hub-and-zones">The Hub and Zones</a><ul>
 <li><a href="#the-hub">The Hub</a></li>
 <li><a href="#the-zones">The Zones</a></li>
@@ -85,7 +90,7 @@ Attacks</a></li>
 <li><a href="#tmsp-specification">TMSP Specification</a></li>
 <li><a href="#ibc-packet-delivery-acknowledgement">IBC Packet Delivery
 Acknowledgement</a></li>
-<li><a href="#merkle-tree--proof-specification">Merkle tree &amp; proof
+<li><a href="#merkle-tree-proof-specification">Merkle tree &amp; proof
 specification</a></li>
 <li><a href="#transaction-types">Transaction Types</a><ul>
 <li><a href="#ibcblockcommittx">IBCBlockCommitTx</a></li>
@@ -101,8 +106,8 @@ specification</a></li>
 </template>
 
 <script>
-import $ from 'jquery'
 import Ps from 'perfect-scrollbar'
+import watchTocClicks from '../../scripts/watchTocClicks.js'
 
 export default {
   methods: {
@@ -114,35 +119,11 @@ export default {
         Ps.destroy(document.querySelector('.toc-wrapper'))
         this.tocVisible = false
       }
-    },
-    watchClicks () {
-      let self = this
-      $('.toc-wrapper a').click(function (e) {
-        e.preventDefault()
-        let scrollSpeed = 666
-        let targetElement = $(e.target).attr('href')
-        let height
-
-        if (targetElement === '#page-top') {
-          height = 0
-        } else {
-          height = $(targetElement).offset().top - 48 - 16
-        }
-
-        // if it's a small screen, hide the toc on click
-        let vw = $(window).width()
-        if (vw < 960) {
-          self.showToc(false)
-        }
-
-        // scroll to the element
-        $('html, body').animate({ scrollTop: height }, scrollSpeed)
-      })
     }
   },
   ready () {
     Ps.initialize(document.querySelector('.toc-wrapper'))
-    this.watchClicks()
+    watchTocClicks()
   },
   props: ['toc-visible']
 }

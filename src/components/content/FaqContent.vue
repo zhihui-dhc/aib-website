@@ -193,3 +193,12 @@
     zones.
   </p>
 </template>
+
+<script>
+import linkifyHeadings from '../../scripts/linkifyHeadings.js'
+export default {
+  ready () {
+    linkifyHeadings()
+  }
+}
+</script>

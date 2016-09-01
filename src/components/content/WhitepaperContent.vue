@@ -200,7 +200,7 @@ delegate validator gets hacked or violates the protocol.  The proven safety
 guarantees of Tendermint BFT consensus, and the collateral deposit of
 stakeholders (of validators and delegators) provide provable, quantifiable
 security for nodes and even light clients.</p>
-<h3 id="governance">Governance</h3>
+<h3 id="cosmos-governance">Governance</h3>
 <p>Distributed public ledgers should have a constitution and a governance system.
 Bitcoin relies on the Bitcoin Foundation (to some degree) and mining to
 coordinate upgrades, but this is a slow process.  Ethereum split into ETH and
@@ -581,7 +581,7 @@ punished by losing <code>VetoPenaltyAtoms</code> (DEFAULT 0.1%) of its atoms.</p
 <p>All other proposals, such as a proposal to upgrade the protocol, will be
 coordinated via the generic <code>TextProposal</code>.</p>
 <h2 id="roadmap">Roadmap</h2>
-<p>See <a href="https://github.com/cosmos/cosmos/blob/master/PLAN.md">the Plan</a>.</p>
+<p>See <a v-link="{ path: '/plan' }">the Plan</a>.</p>
 <h2 id="related-work">Related Work</h2>
 <p>There have been many innovations in blockchain consensus and scalability in the
 past couple of years.  This section provides a brief survey of a select number
@@ -1371,3 +1371,14 @@ Han</a> for various contributions.</li>
 <li><a href="https://www.docdroid.net/ec7xGzs/314477721-ethereum-platform-review-opportunities-and-challenges-for-private-and-consortium-blockchains.pdf.html">https://www.docdroid.net/ec7xGzs/314477721-ethereum-platform-review-opportunities-and-challenges-for-private-and-consortium-blockchains.pdf.html</a></li>
 </ul>
 </template>
+
+<script>
+import linkifyHeadings from '../../scripts/linkifyHeadings.js'
+import scrollToHash from '../../scripts/scrollToHash.js'
+export default {
+  ready () {
+    scrollToHash()
+    linkifyHeadings()
+  }
+}
+</script>

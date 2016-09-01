@@ -29,8 +29,9 @@
 </template>
 
 <script>
-import $ from 'jquery'
 import Ps from 'perfect-scrollbar'
+import watchTocClicks from '../../scripts/watchTocClicks.js'
+// import youAreHere from '../../scripts/youAreHere.js'
 
 export default {
   methods: {
@@ -42,35 +43,12 @@ export default {
         Ps.destroy(document.querySelector('.toc-wrapper'))
         this.tocVisible = false
       }
-    },
-    watchClicks () {
-      let self = this
-      $('.toc-wrapper a').click(function (e) {
-        e.preventDefault()
-        let scrollSpeed = 666
-        let targetElement = $(e.target).attr('href')
-        let height
-
-        if (targetElement === '#page-top') {
-          height = 0
-        } else {
-          height = $(targetElement).offset().top - 48 - 16
-        }
-
-        // if it's a small screen, hide the toc on click
-        let vw = $(window).width()
-        if (vw < 960) {
-          self.showToc(false)
-        }
-
-        // scroll to the element
-        $('html, body').animate({ scrollTop: height }, scrollSpeed)
-      })
     }
   },
   ready () {
     Ps.initialize(document.querySelector('.toc-wrapper'))
-    this.watchClicks()
+    watchTocClicks()
+    // youAreHere()
   },
   props: ['toc-visible']
 }

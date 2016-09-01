@@ -35,20 +35,39 @@
         border-bottom none
 
       > a
-        padding 0.5*x 0.75*x
-        font-weight bold
-      ul
-        padding-left 1.5*x
-        margin 0 0 0.75*x
-        ul
-          margin 0
-
-    li
-      a
-        color txt
         display block
+        padding 0.5*x 0.75*x
+
+        font-weight bold
+        color txt
+
         &:hover
           color link
+          background #fff
+
+      ul
+        margin 0
+        padding 0 0 0.5*x
+        li
+          a
+            display block
+            padding 0.25*x 0.5*x
+            padding-left 1.5*x
+
+            line-height 1.25*x
+            color txt
+
+            &:hover
+              color link
+              background #fff
+            &.active
+              background link !important
+              color #fff !important
+        ul
+          padding 0
+          li
+            a
+              padding-left 3*x
 
 .toc-hidden-bar
   position fixed

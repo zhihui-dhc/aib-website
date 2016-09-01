@@ -1,3 +1,18 @@
+# 2016-09-01
+## General
+* Plan/FAQ/Whitepaper pages no longer resets the page position when you return to them via the header navigation buttons.
+* Added a 'link' button next to h2 & h3 headings in the Plan/FAQ/Whitepaper. Clicking on it instantly adds the url to your clipboard for easy sharing.
+* Fixed an issue where visiting e.g. `http://localhost:8080/whitepaper#federated-name-resolution-system` wouldn't animate the page scroll to the right place. Also removes the hash from the url  to not mess with the browser history.
+## Table of Contents
+* Increased the clickable area for Table of Contents for easier mobile browsing.
+* Hiding the ToC now centers the main page content.
+## Whitepaper
+* Under "Cosmos Overview", added "Tendermint-BFT DPoS" and "Governance" to the Whitepaper ToC.
+* Fixed the `Merkle tree & proof specification` ToC link.
+* Linked to the website version of the the Plan under the "Roadmap" section.
+
+Todo: Design improvements for the Crowdfund page. A progress indicator for the Whitepaper and FAQ. Blog RSS Feed. 
+
 # 2016-08-31
 Added a script to generate Vue-compatible HTML posts (and associated page routing) from Markdown files.
 * Edit the blog posts in `./src/posts/`
