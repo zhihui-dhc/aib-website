@@ -1,8 +1,8 @@
 # 2016-09-01
 ## General
-* Plan/FAQ/Whitepaper pages no longer resets the page position when you return to them via the header navigation buttons.
-* Added a 'link' button next to h2 & h3 headings in the Plan/FAQ/Whitepaper. Clicking on it instantly adds the url to your clipboard for easy sharing.
-* Fixed an issue where visiting e.g. `http://localhost:8080/whitepaper#federated-name-resolution-system` wouldn't animate the page scroll to the right place. Also removes the hash from the url  to not mess with the browser history.
+* Visiting the Plan/FAQ/Whitepaper pages again via the top navigation no longer resets the page position.
+* Added a link icon next to h2/h3/h4 in the Plan/FAQ/Whitepaper. Clicking on them adds the url to your clipboard.
+* Fixed an issue where visiting pages with hashes. http://localhost:8080/whitepaper#federated-name-resolution-system now scrolls you to the right place. Also cleaned up the effect of hashes on browser back history.
 ## Table of Contents
 * Increased the clickable area for Table of Contents for easier mobile browsing.
 * Hiding the ToC now centers the main page content.
@@ -11,7 +11,8 @@
 * Fixed the `Merkle tree & proof specification` ToC link.
 * Linked to the website version of the the Plan under the "Roadmap" section.
 
-Also started on a 'YouAreHere' widget for the longer pages. WIP.
+Also started on a 'YouAreHere' widget for the longer pages. This will also include a cookie to save the user's current position on the Whitepaper.
+
 Todo: Design improvements for the Crowdfund page. A progress indicator for the Whitepaper and FAQ. Blog RSS Feed. 
 
 # 2016-08-31
