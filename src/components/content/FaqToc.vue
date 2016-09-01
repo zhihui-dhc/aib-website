@@ -47,7 +47,7 @@ export default {
   },
   ready () {
     Ps.initialize(document.querySelector('.toc-wrapper'))
-    watchTocClicks()
+    watchTocClicks(this.showToc)
     // youAreHere()
   },
   props: ['toc-visible']

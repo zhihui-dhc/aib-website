@@ -1,7 +1,6 @@
 import $ from 'jquery'
 
-export default function () {
-  let self = this
+export default function (showToc) {
   $('.toc-wrapper a').click(function (e) {
     e.preventDefault()
     let scrollSpeed = 666
@@ -17,7 +16,7 @@ export default function () {
     // if it's a small screen, hide the toc on click
     let vw = $(window).width()
     if (vw < 960) {
-      self.showToc(false)
+      showToc(false)
     }
 
     // scroll to the element
