@@ -184,9 +184,11 @@
 
 <script>
 import linkifyHeadings from '../../scripts/linkifyHeadings.js'
+import scrollToHash from '../../scripts/scrollToHash.js'
 export default {
   ready () {
     linkifyHeadings()
+    scrollToHash()
   }
 }
 </script>

@@ -11,6 +11,7 @@
 * Fixed the `Merkle tree & proof specification` ToC link.
 * Linked to the website version of the the Plan under the "Roadmap" section.
 
+Also started on a 'YouAreHere' widget for the longer pages. WIP.
 Todo: Design improvements for the Crowdfund page. A progress indicator for the Whitepaper and FAQ. Blog RSS Feed. 
 
 # 2016-08-31
