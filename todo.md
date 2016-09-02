@@ -1,3 +1,13 @@
+# 2016-09-02
+* Implemented working location tracking for the FAQ/Whitepaper.
+* For larger displays, the table of contents also scrolls with content on the FAQ/Whitepaper pages.
+
+There is a caveat on the Whitepaper page. The h4 headings under TMSP Specification in the Appendix are not listed in the table of contents, which breaks the location tracking. I understand why they aren't listed in the ToC, because it would make the ToC much longer for just a few small sections. What I've done is turned the h4s into h5s just for that section.
+
+Todo for next week: I want to improve the ToC for mobile. Crowdfund page design improvements. Better blog design + rss feed. Bug stomping.
+
+Also have to fix an issue in Firefox with the Whitepaper ToC CSS.
+
 # 2016-09-01
 ## General
 * Visiting the Plan/FAQ/Whitepaper pages again via the top navigation no longer resets the page position.
@@ -12,8 +22,6 @@
 * Linked to the website version of the the Plan under the "Roadmap" section.
 
 Also started on a 'YouAreHere' widget for the longer pages. This will also include a cookie to save the user's current position on the Whitepaper.
-
-Todo: Design improvements for the Crowdfund page. A progress indicator for the Whitepaper and FAQ. Blog RSS Feed. 
 
 # 2016-08-31
 Added a script to generate Vue-compatible HTML posts (and associated page routing) from Markdown files.

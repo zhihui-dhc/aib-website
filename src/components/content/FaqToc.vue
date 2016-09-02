@@ -1,4 +1,5 @@
 <template>
+  <div class="toc-tracker"></div>
   <div class="toc-hidden-bar" v-show="!tocVisible" @click="showToc(true)">
     <i class="material-icons">menu</i>
   </div>
@@ -31,7 +32,9 @@
 <script>
 import Ps from 'perfect-scrollbar'
 import watchTocClicks from '../../scripts/watchTocClicks.js'
-// import youAreHere from '../../scripts/youAreHere.js'
+import visibleElementsTrack from '../../scripts/visibleElementsTrack.js'
+import visibleTocActivate from '../../scripts/visibleTocActivate.js'
+import percentageScrolling from '../../scripts/percentageScrolling.js'
 
 export default {
   methods: {
@@ -48,9 +51,23 @@ export default {
   ready () {
     Ps.initialize(document.querySelector('.toc-wrapper'))
     watchTocClicks(this.showToc)
-    // youAreHere()
+    this.setVisibleElements(visibleElementsTrack())
+    percentageScrolling()
   },
-  props: ['toc-visible']
+  props: ['toc-visible'],
+  vuex: {
+    getters: {
+      visibleElements: state => state.progress.visibleElements.faq
+    },
+    actions: {
+      setVisibleElements ({ dispatch }, elements) {
+        dispatch('SET_VISIBLE_IDS_FAQ', elements)
+      }
+    }
+  },
+  watch: {
+    visibleElements () { visibleTocActivate(this.visibleElements) }
+  }
 }
 
 </script>
@@ -59,6 +76,7 @@ export default {
 @import '../../styles/variables.styl'
 
 .toc-wrapper
-  ul > li > a
-    font-weight normal
+  ul > li
+    > a
+      font-weight normal
 </style>

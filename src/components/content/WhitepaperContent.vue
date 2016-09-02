@@ -981,7 +981,7 @@ validator set, and for the application to receive the block information, such as
 the height and the commit votes.  </p>
 <p>TMSP requests/responses are simple Protobuf messages.  Check out the <a href="https://github.com/tendermint/tmsp/blob/master/types/types.proto">schema
 file</a>.</p>
-<h4 id="appendtx">AppendTx</h4>
+<h5 id="appendtx">AppendTx</h5>
 <ul>
 <li><strong>Arguments</strong>:<ul>
 <li><code>Data ([]byte)</code>: The request transaction bytes</li>
@@ -997,7 +997,7 @@ file</a>.</p>
 Append and run a transaction.  If the transaction is valid, returns
 CodeType.OK</li>
 </ul>
-<h4 id="checktx">CheckTx</h4>
+<h5 id="checktx">CheckTx</h5>
 <ul>
 <li><strong>Arguments</strong>:<ul>
 <li><code>Data ([]byte)</code>: The request transaction bytes</li>
@@ -1017,7 +1017,7 @@ You can make CheckTx semi-stateful and clear the state upon <code>Commit</code> 
 <code>BeginBlock</code>,
 to allow for dependent sequences of transactions in the same block.</li>
 </ul>
-<h4 id="commit">Commit</h4>
+<h5 id="commit">Commit</h5>
 <ul>
 <li><strong>Returns</strong>:<ul>
 <li><code>Data ([]byte)</code>: The Merkle root hash</li>
@@ -1027,7 +1027,7 @@ to allow for dependent sequences of transactions in the same block.</li>
 <li><strong>Usage</strong>:<br/>
 Return a Merkle root hash of the application state.</li>
 </ul>
-<h4 id="query">Query</h4>
+<h5 id="query">Query</h5>
 <ul>
 <li><strong>Arguments</strong>:<ul>
 <li><code>Data ([]byte)</code>: The query request bytes</li>
@@ -1040,13 +1040,13 @@ Return a Merkle root hash of the application state.</li>
 </ul>
 </li>
 </ul>
-<h4 id="flush">Flush</h4>
+<h5 id="flush">Flush</h5>
 <ul>
 <li><strong>Usage</strong>:<br/>
 Flush the response queue.  Applications that implement <code>types.Application</code>
 need not implement this message -- it&#39;s handled by the project.</li>
 </ul>
-<h4 id="info">Info</h4>
+<h5 id="info">Info</h5>
 <ul>
 <li><strong>Returns</strong>:<ul>
 <li><code>Data ([]byte)</code>: The info bytes</li>
@@ -1055,7 +1055,7 @@ need not implement this message -- it&#39;s handled by the project.</li>
 <li><strong>Usage</strong>:<br/>
 Return information about the application state.  Application specific.</li>
 </ul>
-<h4 id="setoption">SetOption</h4>
+<h5 id="setoption">SetOption</h5>
 <ul>
 <li><strong>Arguments</strong>:<ul>
 <li><code>Key (string)</code>: Key to set</li>
@@ -1071,7 +1071,7 @@ Set application options.  E.g. Key=&quot;mode&quot;, Value=&quot;mempool&quot; f
 connection, or Key=&quot;mode&quot;, Value=&quot;consensus&quot; for a consensus connection.
 Other options are application specific.</li>
 </ul>
-<h4 id="initchain">InitChain</h4>
+<h5 id="initchain">InitChain</h5>
 <ul>
 <li><strong>Arguments</strong>:<ul>
 <li><code>Validators ([]Validator)</code>: Initial genesis-validators</li>
@@ -1080,7 +1080,7 @@ Other options are application specific.</li>
 <li><strong>Usage</strong>:<br/>
 Called once upon genesis</li>
 </ul>
-<h4 id="beginblock">BeginBlock</h4>
+<h5 id="beginblock">BeginBlock</h5>
 <ul>
 <li><strong>Arguments</strong>:<ul>
 <li><code>Height (uint64)</code>: The block height that is starting</li>
@@ -1089,7 +1089,7 @@ Called once upon genesis</li>
 <li><strong>Usage</strong>:<br/>
 Signals the beginning of a new block. Called prior to any AppendTxs.</li>
 </ul>
-<h4 id="endblock">EndBlock</h4>
+<h5 id="endblock">EndBlock</h5>
 <ul>
 <li><strong>Arguments</strong>:<ul>
 <li><code>Height (uint64)</code>: The block height that ended</li>

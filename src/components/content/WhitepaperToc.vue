@@ -108,6 +108,9 @@ specification</a></li>
 <script>
 import Ps from 'perfect-scrollbar'
 import watchTocClicks from '../../scripts/watchTocClicks.js'
+import visibleElementsTrack from '../../scripts/visibleElementsTrack.js'
+import visibleTocActivate from '../../scripts/visibleTocActivate.js'
+import percentageScrolling from '../../scripts/percentageScrolling.js'
 
 export default {
   methods: {
@@ -124,8 +127,23 @@ export default {
   ready () {
     Ps.initialize(document.querySelector('.toc-wrapper'))
     watchTocClicks(this.showToc)
+    this.setVisibleElements(visibleElementsTrack())
+    percentageScrolling()
   },
-  props: ['toc-visible']
+  props: ['toc-visible'],
+  vuex: {
+    getters: {
+      visibleElements: state => state.progress.visibleElements.faq
+    },
+    actions: {
+      setVisibleElements ({ dispatch }, elements) {
+        dispatch('SET_VISIBLE_IDS_FAQ', elements)
+      }
+    }
+  },
+  watch: {
+    visibleElements () { visibleTocActivate(this.visibleElements) }
+  }
 }
 </script>
 
