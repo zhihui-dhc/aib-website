@@ -1,4 +1,5 @@
 <template>
+  <div class="toc-tracker"></div>
   <div class="toc-hidden-bar" v-show="!tocVisible" @click="showToc(true)">
     <i class="material-icons">menu</i>
   </div>
@@ -29,8 +30,11 @@
 </template>
 
 <script>
-import $ from 'jquery'
 import Ps from 'perfect-scrollbar'
+import watchTocClicks from '../../scripts/watchTocClicks.js'
+import visibleElementsTrack from '../../scripts/visibleElementsTrack.js'
+import visibleTocActivate from '../../scripts/visibleTocActivate.js'
+import percentageScrolling from '../../scripts/percentageScrolling.js'
 
 export default {
   methods: {
@@ -42,37 +46,28 @@ export default {
         Ps.destroy(document.querySelector('.toc-wrapper'))
         this.tocVisible = false
       }
-    },
-    watchClicks () {
-      let self = this
-      $('.toc-wrapper a').click(function (e) {
-        e.preventDefault()
-        let scrollSpeed = 666
-        let targetElement = $(e.target).attr('href')
-        let height
-
-        if (targetElement === '#page-top') {
-          height = 0
-        } else {
-          height = $(targetElement).offset().top - 48 - 16
-        }
-
-        // if it's a small screen, hide the toc on click
-        let vw = $(window).width()
-        if (vw < 960) {
-          self.showToc(false)
-        }
-
-        // scroll to the element
-        $('html, body').animate({ scrollTop: height }, scrollSpeed)
-      })
     }
   },
   ready () {
     Ps.initialize(document.querySelector('.toc-wrapper'))
-    this.watchClicks()
+    watchTocClicks(this.showToc)
+    this.setVisibleElements(visibleElementsTrack())
+    percentageScrolling()
   },
-  props: ['toc-visible']
+  props: ['toc-visible'],
+  vuex: {
+    getters: {
+      visibleElements: state => state.progress.visibleElements.faq
+    },
+    actions: {
+      setVisibleElements ({ dispatch }, elements) {
+        dispatch('SET_VISIBLE_IDS_FAQ', elements)
+      }
+    }
+  },
+  watch: {
+    visibleElements () { visibleTocActivate(this.visibleElements) }
+  }
 }
 
 </script>
@@ -81,6 +76,7 @@ export default {
 @import '../../styles/variables.styl'
 
 .toc-wrapper
-  ul > li > a
-    font-weight normal
+  ul > li
+    > a
+      font-weight normal
 </style>

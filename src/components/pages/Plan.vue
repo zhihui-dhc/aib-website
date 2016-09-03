@@ -2,7 +2,7 @@
   <div class="header-padding"></div>
   <div class="master-detail-wrapper" v-bind:class="{ 'toc-visible': tocVisible }">
     <div class="article-wrapper">
-      <plan-toc toc-visible="tocVisible"></plan-toc>
+      <plan-toc :toc-visible.sync="tocVisible"></plan-toc>
       <plan-content></plan-content>
     </div>
   </div>

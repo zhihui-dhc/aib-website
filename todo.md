@@ -1,3 +1,28 @@
+# 2016-09-02
+* Implemented working location tracking for the FAQ/Whitepaper.
+* For larger displays, the table of contents also scrolls with content on the FAQ/Whitepaper pages.
+
+There is a caveat on the Whitepaper page. The h4 headings under TMSP Specification in the Appendix are not listed in the table of contents, which breaks the location tracking. I understand why they aren't listed in the ToC, because it would make the ToC much longer for just a few small sections. What I've done is turned the h4s into h5s just for that section.
+
+Todo for next week: I want to improve the ToC for mobile. Crowdfund page design improvements. Better blog design + rss feed. Bug stomping.
+
+Also have to fix an issue in Firefox with the Whitepaper ToC CSS.
+
+# 2016-09-01
+## General
+* Visiting the Plan/FAQ/Whitepaper pages again via the top navigation no longer resets the page position.
+* Added a link icon next to h2/h3/h4 in the Plan/FAQ/Whitepaper. Clicking on them adds the url to your clipboard.
+* Fixed an issue where visiting pages with hashes. http://localhost:8080/whitepaper#federated-name-resolution-system now scrolls you to the right place. Also cleaned up the effect of hashes on browser back history.
+## Table of Contents
+* Increased the clickable area for Table of Contents for easier mobile browsing.
+* Hiding the ToC now centers the main page content.
+## Whitepaper
+* Under "Cosmos Overview", added "Tendermint-BFT DPoS" and "Governance" to the Whitepaper ToC.
+* Fixed the `Merkle tree & proof specification` ToC link.
+* Linked to the website version of the the Plan under the "Roadmap" section.
+
+Also started on a 'YouAreHere' widget for the longer pages. This will also include a cookie to save the user's current position on the Whitepaper.
+
 # 2016-08-31
 Added a script to generate Vue-compatible HTML posts (and associated page routing) from Markdown files.
 * Edit the blog posts in `./src/posts/`

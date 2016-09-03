@@ -181,3 +181,14 @@
     <li>Timeline for Bitcoin and Ethereum pegs will be set after alpha release of Cosmos Hub, and depends on funding and partnership</li>
   </ol>
 </template>
+
+<script>
+import linkifyHeadings from '../../scripts/linkifyHeadings.js'
+import scrollToHash from '../../scripts/scrollToHash.js'
+export default {
+  ready () {
+    linkifyHeadings()
+    scrollToHash()
+  }
+}
+</script>
