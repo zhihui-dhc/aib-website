@@ -2,12 +2,19 @@
   <div class="toc-hidden-bar" v-show="!tocVisible" @click="showToc(true)">
     <i class="material-icons">menu</i>
   </div>
+  <div class="mobile-only">
+    <div class="toc-hidden-bar" v-show="tocVisible" @click="showToc(false)">
+      <i class="material-icons">close</i>
+    </div>
+  </div>
   <div class="toc-wrapper" v-show="tocVisible">
     <div class="toc-header">
-      <a class="toc-title" href="#page-top">Table of Contents</a>
-      <i class="toc-toggle material-icons" @click="showToc(hide)">chevron_left</i>
+      <div class="toc-title">Table of Contents</div>
+      <i class="toc-toggle material-icons desktop-only" @click="showToc(hide)">chevron_left</i>
+      <i class="toc-toggle material-icons mobile-only" @click="showToc(hide)">close</i>
     </div>
     <ul>
+      <li class="mobile-only"><a href="#page-top">Crowdfund Plan</a>
       <li><a href="#funding">Funding</a>
         <ul>
           <li><a href="#phase-0-the-prefund">Phase 0: the Prefund</a></li>
@@ -30,10 +37,10 @@ export default {
     showToc (value) {
       if (value === true) {
         Ps.initialize(document.querySelector('.toc-wrapper'))
-        this.tocVisible = value
+        this.$store.dispatch('SET_PLAN_TOC_VISIBLE', true)
       } else {
         Ps.destroy(document.querySelector('.toc-wrapper'))
-        this.tocVisible = false
+        this.$store.dispatch('SET_PLAN_TOC_VISIBLE', false)
       }
     }
   },
@@ -41,7 +48,11 @@ export default {
     Ps.initialize(document.querySelector('.toc-wrapper'))
     watchTocClicks(this.showToc)
   },
-  props: ['toc-visible']
+  vuex: {
+    getters: {
+      tocVisible: state => state.toc.plan.tocVisible
+    }
+  }
 }
 </script>
 

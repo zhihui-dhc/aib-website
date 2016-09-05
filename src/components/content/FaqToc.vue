@@ -1,14 +1,20 @@
 <template>
-  <div class="toc-tracker"></div>
   <div class="toc-hidden-bar" v-show="!tocVisible" @click="showToc(true)">
     <i class="material-icons">menu</i>
   </div>
+  <div class="mobile-only">
+    <div class="toc-hidden-bar" v-show="tocVisible" @click="showToc(false)">
+      <i class="material-icons">close</i>
+    </div>
+  </div>
   <div class="toc-wrapper" v-show="tocVisible">
     <div class="toc-header">
-      <a class="toc-title" href="#page-top">Table of Contents</a>
-      <i class="toc-toggle material-icons" @click="showToc(false)">chevron_left</i>
+      <div class="toc-title">Table of Contents</div>
+      <i class="toc-toggle material-icons desktop-only" @click="showToc(hide)">chevron_left</i>
+      <i class="toc-toggle material-icons mobile-only" @click="showToc(hide)">close</i>
     </div>
     <ul>
+      <li class="mobile-only"><a href="#page-top">FAQ</a>
       <li><a href="#whats-sharding">What is sharding?</a></li>
       <li><a href="#how-is-sharding-done">How does Cosmos do sharding?</a></li>
       <li><a href="#whats-an-ibc-packet">What&#39;s an IBC packet?</a></li>
@@ -32,7 +38,7 @@
 <script>
 import Ps from 'perfect-scrollbar'
 import watchTocClicks from '../../scripts/watchTocClicks.js'
-import visibleElementsTrack from '../../scripts/visibleElementsTrack.js'
+import elementsVisibleTrack from '../../scripts/elementsVisibleTrack.js'
 import visibleTocActivate from '../../scripts/visibleTocActivate.js'
 import percentageScrolling from '../../scripts/percentageScrolling.js'
 
@@ -41,32 +47,27 @@ export default {
     showToc (value) {
       if (value === true) {
         Ps.initialize(document.querySelector('.toc-wrapper'))
-        this.tocVisible = value
+        this.$store.dispatch('SET_FAQ_TOC_VISIBLE', true)
       } else {
         Ps.destroy(document.querySelector('.toc-wrapper'))
-        this.tocVisible = false
+        this.$store.dispatch('SET_FAQ_TOC_VISIBLE', false)
       }
     }
   },
   ready () {
     Ps.initialize(document.querySelector('.toc-wrapper'))
     watchTocClicks(this.showToc)
-    this.setVisibleElements(visibleElementsTrack())
+    this.$store.dispatch('SET_FAQ_ELEMENTS_VISIBLE', elementsVisibleTrack())
     percentageScrolling()
   },
-  props: ['toc-visible'],
   vuex: {
     getters: {
-      visibleElements: state => state.progress.visibleElements.faq
-    },
-    actions: {
-      setVisibleElements ({ dispatch }, elements) {
-        dispatch('SET_VISIBLE_IDS_FAQ', elements)
-      }
+      elementsVisible: state => state.toc.faq.elementsVisible,
+      tocVisible: state => state.toc.faq.tocVisible
     }
   },
   watch: {
-    visibleElements () { visibleTocActivate(this.visibleElements) }
+    elementsVisible () { visibleTocActivate(this.elementsVisible) }
   }
 }
 

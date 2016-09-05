@@ -1,8 +1,8 @@
 <template>
+  <plan-toc></plan-toc>
   <div class="header-padding"></div>
-  <div class="master-detail-wrapper" v-bind:class="{ 'toc-visible': tocVisible }">
+  <div class="toc-padding" v-bind:class="{ 'toc-visible': tocVisible }">
     <div class="article-wrapper">
-      <plan-toc :toc-visible.sync="tocVisible"></plan-toc>
       <plan-content></plan-content>
     </div>
   </div>
@@ -17,14 +17,9 @@ export default {
     PlanToc,
     PlanContent
   },
-  data () {
-    return {
-      tocVisible: true
-    }
-  },
-  methods: {
-    toggleToc () {
-      this.tocVisible = !this.tocVisible
+  vuex: {
+    getters: {
+      tocVisible: state => state.toc.plan.tocVisible
     }
   }
 }

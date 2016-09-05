@@ -1,9 +1,11 @@
 <template>
-  <site-header></site-header>
-  <div id="site-content">
-    <router-view></router-view>
+  <div id="app">
+    <site-header></site-header>
+    <div id="site-content">
+      <router-view></router-view>
+    </div>
+    <site-footer></site-footer>
   </div>
-  <site-footer></site-footer>
 </template>
 
 <script>

@@ -1,8 +1,8 @@
 <template>
+  <faq-toc></faq-toc>
   <div class="header-padding"></div>
-  <div class="master-detail-wrapper" v-bind:class="{ 'toc-visible': tocVisible }">
+  <div class="toc-padding" v-bind:class="{ 'toc-visible': tocVisible }">
     <div class="article-wrapper">
-      <faq-toc :toc-visible.sync="tocVisible"></faq-toc>
       <faq-content></faq-content>
     </div>
   </div>
@@ -17,9 +17,9 @@ export default {
     FaqToc,
     FaqContent
   },
-  data () {
-    return {
-      tocVisible: true
+  vuex: {
+    getters: {
+      tocVisible: state => state.toc.faq.tocVisible
     }
   }
 }

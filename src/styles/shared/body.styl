@@ -4,6 +4,9 @@ reset-html5()
 *
   box-sizing border-box
 
+footer, header, nav, menu, article
+  box-sizing border-box
+
 body
   df()
   display flex
@@ -14,3 +17,15 @@ body
 
 #site-content
   flex 1
+
+.desktop-only
+.mobile-only
+  display none !important
+
+@media screen and (max-width: 959px)
+  .mobile-only
+    display block !important
+
+@media screen and (min-width: 960px)
+  .desktop-only
+    display block !important

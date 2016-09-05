@@ -1,16 +1,10 @@
-.toc-tracker
-  border 1px solid #f00
-  position absolute
-  z-index 1001
-  display none
-
 .toc-wrapper
   border 1px solid bc
-  font-size 0.75*x
-  line-height 1.5
-
   background mbg
   position relative
+
+  a
+    text-decoration none
 
   .toc-header
     padding 0 0.75*x
@@ -40,7 +34,7 @@
       background #fff
       position relative
 
-      &:before
+      &:after
         content ''
         position absolute
         top 0
@@ -67,7 +61,6 @@
         color txt
 
       ul
-        margin 0
         padding 0 0 0.5*x
         li
           a
@@ -77,6 +70,11 @@
 
             line-height 1.25*x
             color txt
+            &:before
+              content '–'
+              display inline-block
+              width x
+              color light
 
         ul
           padding 0
@@ -106,6 +104,11 @@
     i.material-icons
       color link
 
+.toc-wrapper
+  z-index 100
+.toc-hidden-bar
+  z-index 101
+
 @media screen and (max-width: 959px)
   .toc-hidden-bar
     width 3*x
@@ -133,8 +136,6 @@
     right 0
     bottom 0
 
-    z-index 1000
-
     border none
     overflow hidden
 
@@ -142,7 +143,6 @@
   .toc-wrapper
     max-height 100vh
     overflow hidden
-
     position fixed
     top 3.5*x
     left 0.5*x
@@ -150,8 +150,15 @@
 
     width 15*x
 
+    font-size 0.75*x
+
 @media screen and (min-width: 1200px)
   .toc-wrapper
-    width 20*x
     font-size 0.85*x
     line-height 1.5
+
+    width 20*x
+
+@media screen and (min-width: 1800px)
+  .toc-wrapper
+    width 25*x

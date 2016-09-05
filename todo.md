@@ -1,3 +1,11 @@
+# 2016-09-05
+* footer design update
+* added a footer section with Twitter/Reddit/Slack links
+* functionality fixes for the ToC and footer, which overlap
+* improved the robustness of the ToC code
+* design experiment with removing color and increasing contrast
+* mobile: increased the ToC size for easier tapping, added a better close button
+
 # 2016-09-02
 * Implemented working location tracking for the FAQ/Whitepaper.
 * For larger displays, the table of contents also scrolls with content on the FAQ/Whitepaper pages.
@@ -6,7 +14,7 @@ There is a caveat on the Whitepaper page. The h4 headings under TMSP Specificati
 
 Todo for next week: I want to improve the ToC for mobile. Crowdfund page design improvements. Better blog design + rss feed. Bug stomping.
 
-Also have to fix an issue in Firefox with the Whitepaper ToC CSS.
+Also have to fix an issue in Firefox with the use of nested lists in the ToC.
 
 # 2016-09-01
 ## General

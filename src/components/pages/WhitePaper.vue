@@ -1,8 +1,8 @@
 <template>
+  <whitepaper-toc></whitepaper-toc>
   <div class="header-padding"></div>
-  <div class="master-detail-wrapper" v-bind:class="{ 'toc-visible': tocVisible }">
+  <div class="toc-padding" v-bind:class="{ 'toc-visible': tocVisible }">
     <div class="article-wrapper">
-      <whitepaper-toc :toc-visible.sync="tocVisible"></whitepaper-toc>
       <whitepaper-content></whitepaper-content>
     </div>
   </div>
@@ -17,14 +17,9 @@ export default {
     WhitepaperToc,
     WhitepaperContent
   },
-  data () {
-    return {
-      tocVisible: true
-    }
-  },
-  methods: {
-    toggleToc () {
-      this.tocVisible = !this.tocVisible
+  vuex: {
+    getters: {
+      tocVisible: state => state.toc.whitepaper.tocVisible
     }
   }
 }

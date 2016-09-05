@@ -27,9 +27,6 @@ export default {
 
 .section-cd
   border-top 1px solid bc
-
-  background mbg
-
   .section-container
     padding 0 !important
 

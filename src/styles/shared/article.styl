@@ -3,6 +3,11 @@
   margin 0 auto
   padding 0 x 3*x
 
+  .article-date
+    color light
+    margin-bottom -2*x
+    margin-top 3*x
+
   h1, h2, h3, h4, h5, h6
     line-height 1.25
     margin-top 2*x
@@ -109,29 +114,23 @@
   img
     max-width 100%
 
-  .article-date
-    color light
-    margin-bottom -2*x
-    margin-top 3*x
-
-
 @media screen and (min-width: 720px)
   .article-wrapper
     padding-left 4*x
     padding-right 4*x
 
 @media screen and (min-width: 960px)
-  .master-detail-wrapper.toc-visible
-    margin-left 15*x
+  .toc-padding.toc-visible
+    margin-left 15*x + x
 
 @media screen and (min-width: 1200px)
+  .toc-padding.toc-visible
+    margin-left 20*x + x
+
   .article-wrapper
     padding-top 3*x
     padding-left 2*x
     padding-right 2*x
-
-  .master-detail-wrapper.toc-visible
-    margin-left 20*x
 
 @media screen and (min-width: 1320px)
   .article-wrapper
@@ -139,5 +138,6 @@
     padding-left 0
     padding-right 0
 
-  .master-detail-wrapper.toc-visible
-    margin-left 20*x
+@media screen and (min-width: 1800px)
+  .toc-padding.toc-visible
+    margin-left 25*x + x

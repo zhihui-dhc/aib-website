@@ -116,11 +116,7 @@ h2
     transition 0.3s ease-in-out border-color
 
   &:hover
-    border-color lighten(mcolor, 85%)
-    &:before
-      border-color lighten(mcolor, 85%)
-    &:after
-      border-color lighten(mcolor, 85%)
+    border-color link
 
 @media screen and (min-width: 414px)
   hub-size = 20*x
