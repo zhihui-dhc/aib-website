@@ -82,5 +82,4 @@ export default {
   .walkthrough
     a.btn-walkthrough
       line-height 3*x
-
 </style>

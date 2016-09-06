@@ -3,13 +3,7 @@
     <div class="section-container">
       <div class="section-content">
         <p>
-        Building an internet of blockchains
-        </p>
-        <h2>Purpose</h2>
-        <p>
-        Cosmos is a project with an ambitious mission: To create a network of
-        distributed ledgers that will solve long-standing problems in the
-        cryptocurrency and blockchain communities.
+        Building an Internet of Blockchains
         </p>
         <h2>Architecture</h2>
         <p>
@@ -87,19 +81,13 @@ export default {
   .section-slide-text
     .section-container
       .section-content
-        padding-left 2*x
-        padding-right 2*x
+        padding-left 1.5*x
+        padding-right 1.5*x
         padding-top 3*x
         padding-bottom x
 
         column-count 2
         column-gap 2*x
 
-@media screen and (min-width: 1200px)
-  .section-slide-text
-    .section-container
-      .section-content
-        padding 4*x 2.5*x 3*x
-        max-width 1280px
-        column-count 3
+        max-width 1200px
 </style>

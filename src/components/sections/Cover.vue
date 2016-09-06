@@ -1,20 +1,36 @@
 <template>
-<section class="section-cover stabilizeVH">
-  <div class="blockchain" @click="scrollDown">
-    <h1><img src="../../assets/images/cosmos_logo_m.png" alt="Cosmos" height="50"/></h1>
-    <h2>internet of blockchains</h2>
-  </div>
-</section>
+  <section class="section-cover stabilizeVH">
+    <div class="cover-main">
+      <h1>The Internet of Blockchains</h1>
+      <div class="description">
+        <p>Cosmos is a project with an ambitious mission: To create a network of distributed ledgers that will solve long-standing problems in the cryptocurrency and blockchain communities. <a class="read-more" @click="scrollDown">More&nbsp;&raquo;</a></p>
+      </div>
+      <cover-benefits></cover-benefits>
+    </div>
+    <cover-alert></cover-alert>
+  </section>
 </template>
 
 <script>
+import CoverBenefits from '../partials/CoverBenefits.vue'
+import CoverAlert from '../partials/CoverAlert.vue'
 import $ from 'jquery'
 
 export default {
+  components: {
+    CoverBenefits,
+    CoverAlert
+  },
   methods: {
     scrollDown () {
       let height = $('#walkthrough-1').offset().top - 48
       $('html, body').animate({ scrollTop: height }, 666)
+    },
+    viewStep (id) {
+      let scrollSpeed = 666
+      let height = $(id).offset().top
+      if (id !== '#walkthrough') { height -= 48 }
+      $('html, body').animate({ scrollTop: height }, scrollSpeed)
     }
   }
 }
@@ -24,266 +40,85 @@ export default {
 @import '../../styles/variables.styl'
 
 .section-cover
-  width 100vw
-  height 100vh
+  padding 5*x x 1.5*x
 
   display flex
-  justify-content center
-  align-items center
-  overflow hidden
-
-b1c = hsl(mhue,0%,75%)
-b2c = hsl(mhue,0%,93%)
-b3c = hsl(mhue,0%,93%)
-
-hub-size = 14*x
-bdw = 0.005 * hub-size
-bkw = 0.025 * hub-size
-
-h1
-  font-size 0.125 * hub-size
-  text-transform uppercase
-  font-weight bold
-  letter-spacing 0.25em
-  line-height 0
-  img
-    height 28px
-
-h2
-  font-size 0.05 * hub-size
-  color dim
-
-.blockchain
-  width hub-size
-  height hub-size
-  border-radius 0.5*hub-size
-
-  display flex
-  justify-content center
-  align-items center
   flex-flow column
 
-  position relative
+.cover-main
+  flex 1
 
-  border bdw solid b1c
+  display flex
+  flex-flow column
+  justify-content center
 
-  transition 0.3s ease-in-out border-color
+h1
+  font-size 1.5*x
+  line-height 1.25
+  font-weight bold
+  text-transform uppercase
 
-  &:before
-    content ''
-    box-sizing border-box
-    display block
-    position absolute
-    top 0
-    left 0
-    width hub-size
-    height hub-size
+  margin 0 0 x
+  max-width 30*x
 
-    border-radius 0.5*hub-size
-    border bkw solid b2c
+.description
+  max-width 36*x
+  margin-bottom 1.5*x
 
-    margin-left -1 * bdw
-    margin-top -1 * bdw
-
-    transform-origin 50% 50%
-    transform scale(1.12)
-
+  a
+    text-decoration underline
     cursor pointer
 
-    transition 0.3s ease-in-out border-color
+@media screen and (max-width: 359px)
+  .description
+    flex 1
 
-  &:after
-    content ''
-    box-sizing border-box
-    display block
-    position absolute
-    top 0
-    left 0
-    width hub-size
-    height hub-size
-
-    border-radius 0.5*hub-size
-    border bdw solid b3c
-
-    margin-left -1 * bdw
-    margin-top -1 * bdw
-
-    transform-origin 50% 50%
-    transform scale(2)
-
-    cursor pointer
-
-    transition 0.3s ease-in-out border-color
-
-  &:hover
-    border-color link
-
-@media screen and (min-width: 414px)
-  hub-size = 20*x
-  bdw = 0.005 * hub-size
-  bkw = 0.025 * hub-size
+@media screen and (min-width: 400px)
+  .section-cover
+    padding-left 1.25*x
+    padding-right 1.25*x
 
   h1
-    font-size 0.1 * hub-size
-    img
-      height 42px
+    font-size 1.75*x
 
-  h2
-    font-size 0.05 * hub-size
-
-  .blockchain
-    width hub-size
-    height hub-size
-    border-radius 0.5*hub-size
-    border bdw solid b1c
-
-    &:before
-      width hub-size
-      height hub-size
-      border-radius 0.5*hub-size
-      border bkw solid b2c
-      margin-left -1 * bdw
-      margin-top -1 * bdw
-
-    &:after
-      width hub-size
-      height hub-size
-      border-radius 0.5*hub-size
-      border bdw solid b3c
-      margin-left -1 * bdw
-      margin-top -1 * bdw
+  .description
+    font-size 1.125*x
 
 @media screen and (min-width: 768px)
-  hub-size = 30*x
-  bdw = 0.005 * hub-size
-  bkw = 0.025 * hub-size
+  .section-cover
+    align-items center
+  .cover-main
+    align-items center
 
   h1
-    font-size 0.1 * hub-size
-    img
-      height 50px
+    font-size 2*x
+    padding-top 3*x
+    text-align center
 
-  h2
-    font-size 0.04 * hub-size
+  .description
+    text-align center
+    margin-bottom 3*x
 
-  .blockchain
-    width hub-size
-    height hub-size
-    border-radius 0.5*hub-size
-    border bdw solid b1c
+@media screen and (min-width: 1024px)
+  .section-cover
+    flex-flow row
+    max-width 960px
+    margin 0 auto
 
-    &:before
-      width hub-size
-      height hub-size
-      border-radius 0.5*hub-size
-      border bkw solid b2c
-      margin-left -1 * bdw
-      margin-top -1 * bdw
+    align-items flex-start
 
-    &:after
-      width hub-size
-      height hub-size
-      border-radius 0.5*hub-size
-      border bdw solid b3c
-      margin-left -1 * bdw
-      margin-top -1 * bdw
+  .cover-main
+    flex 3
+    align-items flex-start
 
-@media screen and (min-width: 1800px)
-  hub-size = 40*x
-  bdw = 0.005 * hub-size
-  bkw = 0.025 * hub-size
+  h1, .description
+    text-align left
 
-  h1
-    font-size 0.1 * hub-size
+@media screen and (min-width: 1280px)
+  .section-cover
+    max-width 1200px
 
-  h2
-    font-size 0.04 * hub-size
+  .cover-main
+    padding-top 2*x
 
-  .blockchain
-    width hub-size
-    height hub-size
-    border-radius 0.5*hub-size
-    border bdw solid b1c
-
-    &:before
-      width hub-size
-      height hub-size
-      border-radius 0.5*hub-size
-      border bkw solid b2c
-      margin-left -1 * bdw
-      margin-top -1 * bdw
-
-    &:after
-      width hub-size
-      height hub-size
-      border-radius 0.5*hub-size
-      border bdw solid b3c
-      margin-left -1 * bdw
-      margin-top -1 * bdw
-
-@media screen and (min-width: 2400px)
-  hub-size = 60*x
-  bdw = 0.005 * hub-size
-  bkw = 0.025 * hub-size
-
-  h1
-    font-size 0.1 * hub-size
-
-  h2
-    font-size 0.04 * hub-size
-
-  .blockchain
-    width hub-size
-    height hub-size
-    border-radius 0.5*hub-size
-    border bdw solid b1c
-
-    &:before
-      width hub-size
-      height hub-size
-      border-radius 0.5*hub-size
-      border bkw solid b2c
-      margin-left -1 * bdw
-      margin-top -1 * bdw
-
-    &:after
-      width hub-size
-      height hub-size
-      border-radius 0.5*hub-size
-      border bdw solid b3c
-      margin-left -1 * bdw
-      margin-top -1 * bdw
-
-@media screen and (min-width: 3600px)
-  hub-size = 80*x
-  bdw = 0.005 * hub-size
-  bkw = 0.025 * hub-size
-
-  h1
-    font-size 0.1 * hub-size
-
-  h2
-    font-size 0.04 * hub-size
-
-  .blockchain
-    width hub-size
-    height hub-size
-    border-radius 0.5*hub-size
-    border bdw solid b1c
-
-    &:before
-      width hub-size
-      height hub-size
-      border-radius 0.5*hub-size
-      border bkw solid b2c
-      margin-left -1 * bdw
-      margin-top -1 * bdw
-
-    &:after
-      width hub-size
-      height hub-size
-      border-radius 0.5*hub-size
-      border bdw solid b3c
-      margin-left -1 * bdw
-      margin-top -1 * bdw
 </style>

@@ -1,3 +1,8 @@
+# 2016-09-06
+* Started revamping the homepage design. Increased the information density above the fold, making it easier to figure out what the project is. Also added the call-to-action above the fold.
+
+Tomorrow - finish revamp of the hompage. Update the design and navigation of the lower sections to be more usable.
+
 # 2016-09-05
 * footer design update
 * added a footer section with Twitter/Reddit/Slack links
