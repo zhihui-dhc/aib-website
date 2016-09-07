@@ -33,7 +33,7 @@ export default {
 @import '../../styles/variables.styl'
 
 section
-  border-top 1px solid bc
+  border-top dbd
 
 .three-col-links
   display flex
@@ -50,8 +50,6 @@ section
     justify-content space-between
 
     cursor pointer
-
-    text-decoration none
     .key
       font-weight bold
       color txt
@@ -59,6 +57,7 @@ section
       color light
     &:hover
       background mbg
+      text-decoration none
 
 @media screen and (min-width: 768px)
   .three-col-links

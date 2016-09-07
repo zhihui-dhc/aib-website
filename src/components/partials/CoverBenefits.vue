@@ -55,8 +55,6 @@ export default {
       i.material-icons
         font-size 1.25*x
         padding-right 0.333*x
-      span
-        text-decoration underline
 
     .value
       display none

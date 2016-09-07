@@ -34,7 +34,9 @@
   flex-flow row
 
   background #fff
-  background hsla(0,0,100%,85%)
+  background hsla(0,0,100%,90%)
+
+  backdrop-filter blur(0.25rem)
 
 #site-logo
   a
@@ -59,45 +61,39 @@
   a
     display block
     text-decoration none
-    padding 0 0.4*x
+    padding 0 0.5rem
 
     color txt
-    font-size 0.75*x
+    font-size 0.75rem
 
     &:hover 
       color link
 
     &.v-link-active
-      background mbg
+      color light
 
       &:hover 
         cursor default
-        color txt
+        color light
 
 @media screen and (max-height: 480px)
   #site-header
     position absolute
-    background #fff
 
 @media screen and (min-width: 360px)
   #site-logo
     a
       padding 0 x
-      img
-        height 1.1*x
   #site-nav
     padding-right 0.6*x
     a
-      font-size 0.9*x
+      font-size 0.875*x
 
 @media screen and (min-width: 414px)
   #site-logo
     a
       padding 0 x
-      img
-        height 1.25*x
   #site-nav
-    padding-right 0.6*x
     a
       font-size x
 
@@ -105,19 +101,15 @@
   #site-logo
     flex 1
   #site-nav
-    flex 2
+    flex 3
     a
       flex 1
       border-left 1px solid mbg
-      padding 0 x
+      padding 0 1rem
 
 @media screen and (min-width: 768px)
   #site-logo
     flex 1
   #site-nav
-    flex 1
-    a
-      flex 1
-      border-left 1px solid mbg
-      padding 0 x
+    flex 2
 </style>

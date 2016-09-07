@@ -1,3 +1,11 @@
+# 2016-09-07
+* Continued revamping the homepage design
+    * Removed the need for stabilizeVH by ditching vh-based layouts.
+* Improved the Crowd Sale call to action
+* Improved typography around the site.
+* Added a color back to links.
+* Blog posts show the author now.
+
 # 2016-09-06
 * Started revamping the homepage design. Increased the information density above the fold, making it easier to figure out what the project is. Also added the call-to-action above the fold.
 

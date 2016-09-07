@@ -1,11 +1,14 @@
 <template>
-  <section class="section-default section-cd">
+  <section id="section-cta">
     <div class="section-container">
-      <div class="countdown-wrapper">
-        <div class="key">Crowd sale on October 17th</div>
-        <div class="value"><countdown></countdown></div>
-        <email-signup-form></email-signup-form>
+      <h2>Crowd Sale</h2>
+      <div class="description">
+        <p>
+          Atom tokens are available for purchase on October 17th, which is in
+          <countdown></countdown>.
+        </p>
       </div>
+      <email-signup-form></email-signup-form>
     </div>
   </section> 
 </template>
@@ -25,34 +28,27 @@ export default {
 <style lang="stylus" scoped">
 @import '../../styles/variables.styl'
 
-.section-cd
-  border-top 1px solid bc
+#section-cta
+  border-top dbd
+
   .section-container
-    padding 0 !important
+    max-width 480px
+    margin 0 auto
 
-.countdown-wrapper
-  text-align center
-  padding 2*x x
+    text-align center
+    padding 3rem 1.5rem
 
-  max-width 480px
-  margin 0 auto
+    h2
+      font-size 1.5rem
+      margin 0 0 1rem
+    .description
+      margin 0 0 1.5rem
 
-  .key
-    color txt
-    font-size 1.25*x
-    text-transform uppercase
-    letter-spacing 0.05em
-
-  .value
-    color light
-    margin-bottom 1.5*x
-
-@media screen and (min-width: 768px)
-  .section-cd
+    form
+      margin-bottom 1rem
+@media screen and (min-width:720px)
+  #section-cta
     .section-container
-      padding 3*x 0 !important
-
-  .countdown-wrapper
-    .key
-      font-size 1.5*x
+      h2
+        font-size 2em
 </style>

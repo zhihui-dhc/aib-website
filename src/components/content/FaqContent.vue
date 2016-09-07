@@ -1,7 +1,7 @@
 <template>
   <h1>FAQ</h1>
 
-  <h4 id="whats-sharding">What is sharding?</h4>
+  <h3 id="whats-sharding">What is sharding?</h3>
   <p>
     Sharding is way to scale horizontally by dividing up the workload into
     pieces. You’ve probably heard of sharding for SQL databases. Blockchain
@@ -14,7 +14,7 @@
     their own drawbacks.
   </p>
 
-  <h4 id="how-is-sharding-done">How does Cosmos do sharding?</h4>
+  <h3 id="how-is-sharding-done">How does Cosmos do sharding?</h3>
   <p>
     Cosmos implements sharding through zones, which are separate blockchains
     that plug into the Cosmos hub. Zones preserve the sovereignty of the
@@ -23,7 +23,7 @@
     hub is what the zone explicitly communicates via IBC packets.
   </p>
 
-  <h4 id="whats-an-ibc-packet">What&#39;s an IBC packet?</h4>
+  <h3 id="whats-an-ibc-packet">What&#39;s an IBC packet?</h3>
   <p>
     An IBC (inter-blockchain communication) is a packet of data that one zone
     passes to another. Instead of sending a packet of bytes via the TCP/IP or
@@ -42,7 +42,7 @@
     (regardless of the source of this data) can verify its integrity.
   </p>
 
-  <h4 id="isnt-this-sidechains">Isn&#39;t this just sidechains, like what <a href="https://www.blockstream.com/sidechains.pdf">Blockstream proposed</a>?</h4>
+  <h3 id="isnt-this-sidechains">Isn&#39;t this just sidechains, like what <a href="https://www.blockstream.com/sidechains.pdf">Blockstream proposed</a>?</h3>
   <p>
     Yes. Exactly. Except in Cosmos, the hubs and zones are all powered by
     Tendermint, a Byzantine fault tolerant (BFT) consensus algorithm, already
@@ -61,7 +61,7 @@
     that the Cosmos hub is a multi-asset blockchain is a big advantage.
   </p>
 
-  <h4 id="compared-to-ethereum">How does Cosmos compare to Ethereum sharding?</h4>
+  <h3 id="compared-to-ethereum">How does Cosmos compare to Ethereum sharding?</h3>
   <p>
     Vitalik is working on sharding solutions for Ethereum, but so far the
     solutions we’ve seen assume all the shards are running on the same
@@ -77,7 +77,7 @@
     Bitcoin, doesn’t have a VM at all. 
   </p>
 
-  <h4 id="why-shards-are-zones">Why do you refer to shards in Cosmos as zones?</h4>
+  <h3 id="why-shards-are-zones">Why do you refer to shards in Cosmos as zones?</h3>
   <p>
     Shards are called zones in Cosmos because they really are like sovereign
     economic zones. We've seen a taste of blockchain governance with the
@@ -88,7 +88,7 @@
     communication.
   </p>
 
-  <h4 id="btc-to-eth-possible">Can I trade bitcoins for ether using Cosmos?</h4>
+  <h3 id="btc-to-eth-possible">Can I trade bitcoins for ether using Cosmos?</h3>
   <p>
     You can, if you trust the respective Ethereum and Bitcoin peg zones. If
     Ethereum and Bitcoin launch alternatives on Cosmos — for example, they
@@ -96,15 +96,15 @@
     able to trade those currencies directly. 
   </p>
 
-  <h4 id="is-escrow-involved">Does Cosmos involve escrow?</h4>
+  <h3 id="is-escrow-involved">Does Cosmos involve escrow?</h3>
   <p>
     Not really. You can think of the Cosmos hub as an escrow agent mediating
     between two zones, but that is the point. However, the pegs in peg-zones
     may well use escrow to allow, for instance, BTC to move into a zone.
   </p>
 
-  <h4 id="is-consensus-configurable">Is consensus configurable?  When I am switching between blockchains won&#39;t my
-    consensus be different in different scenarios?</h4>
+  <h3 id="is-consensus-configurable">Is consensus configurable?  When I am switching between blockchains won&#39;t my
+    consensus be different in different scenarios?</h3>
   <p>
     We can accommodate other proof-of-state consensus mechanisms as long as
     they have a very clean and concise light-client verification protocol.
@@ -115,12 +115,12 @@
     between PoW and Tendermint.
   </p>
 
-  <h4 id="zone-own-validators">Do chosen validators validate transactions for every zone and hub?</h4>
+  <h3 id="zone-own-validators">Do chosen validators validate transactions for every zone and hub?</h3>
   <p>
     No. Validators only validate transactions for their zone.
   </p>
 
-  <h4 id="asymmetric-transfer">What is asymmetric transfer</h4>
+  <h3 id="asymmetric-transfer">What is asymmetric transfer</h3>
   <p>
     It's maybe not the best term, but we coined it to refer to the kind of
     inter-zone token transfer that happens in the Cosmos hub. Cosmos
@@ -130,7 +130,7 @@
     -- the Cosmos Hub.
   </p>
 
-  <h4 id="abandoning-validators">What will be the process for abandoning validators that misbehave?</h4>
+  <h3 id="abandoning-validators">What will be the process for abandoning validators that misbehave?</h3>
   <p>
     If a validator misbehaves by double-signing in the same height and round,
     then the evidence is short and simple — two conflicting votes. This
@@ -145,14 +145,14 @@
     validators' atoms for that zone.
   </p>
 
-  <h4 id="delegators-and-validators">Can delegators also be validators?  Or are delegators never validators?</h4>
+  <h3 id="delegators-and-validators">Can delegators also be validators?  Or are delegators never validators?</h3>
   <p>
     Delegators are never validators. If someone who operates validator nodes
     wishes to delegate, they need to do so with their free and unbonded
     atoms.
   </p>
 
-  <h4 id="cosmos-governance">Why is Cosmos&#39;s governance better than any other options out there?</h4>
+  <h3 id="cosmos-governance">Why is Cosmos&#39;s governance better than any other options out there?</h3>
   <p>
     Cosmos governance is better because its stakeholders and social contract
     are well defined. Due to poorly defined governance, Ethereum had a hard
@@ -169,7 +169,7 @@
     partake in governance.
   </p>
 
-  <h4 id="use-cases">What Cosmos use cases do you think are most compelling in the future?</h4>
+  <h3 id="use-cases">What Cosmos use cases do you think are most compelling in the future?</h3>
   <p>
     One of the great tragedies of cryptocurrencies today is their failure to
     interoperate with existing systems. Cosmos allows everyone to benefit
@@ -184,7 +184,7 @@
     faster, and scalable. Cosmos may be a kind of distributed exchange.
   </p>
 
-  <h4 id="cosmos-interledger">Does Ripple’s Interledger complement Cosmos or do the two compete with one another?</h4>
+  <h3 id="cosmos-interledger">Does Ripple’s Interledger complement Cosmos or do the two compete with one another?</h3>
   <p>
     <a href="https://interledger.org/">Interledger</a> is a protocol for interoperability between ledgers. Cosmos
     and Interledger are more complementary than competing. For instance, you

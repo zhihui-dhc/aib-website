@@ -1,6 +1,7 @@
 <template>
 <h1 id="whitepaper">Cosmos Whitepaper</h1>
-<p><strong>A Network of Distributed Ledgers</strong></p>
+<div class="subtitle">A Network of Distributed Ledgers</div>
+
 <p>Jae Kwon jae@tendermint.com<br/>
 Ethan Buchman ethan@tendermint.com</p>
 <p>For discussions, <a href="http://forum.tendermint.com:3000/">join our Slack</a>!</p>

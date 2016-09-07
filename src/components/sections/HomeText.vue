@@ -2,10 +2,8 @@
   <section id="walkthrough-1" class="section-slide-text">
     <div class="section-container">
       <div class="section-content">
-        <p>
-        Building an Internet of Blockchains
-        </p>
-        <h2>Architecture</h2>
+        <h2>Cosmos Overview</h2>
+        <h3>Architecture</h3>
         <p>
         The Cosmos network consists of many independent, parallel blockchains,
         called zones, each powered by classical Byzantine fault-tolerant (BFT)
@@ -17,7 +15,7 @@
         application of the Bitcoin sidechains concept, using classic BFT and
         Proof-of-Stake algorithms, instead of Proof-of-Work (see our whitepaper for
         more details).
-        <h2>Cosmos Hub</h2>
+        <h3>Cosmos Hub</h3>
         <p>
         The first blockchain in the Cosmos network is the Cosmos hub. The Cosmos
         hub connects to zones via the novel IBC (inter-blockchain communication)
@@ -60,14 +58,16 @@ export default {
       margin 0 auto
       p
         padding 0 0 1em
-        &:first-of-type
-          font-weight 600
-          font-size 1.25*x
-          margin-bottom 1em
-          border-bottom 1px solid bc
+
       h2
-        font-size: 1.2em
-        color: #555
+        border-bottom 1px solid bc
+        font-size 1.5*x
+        padding-bottom 0.5*x
+        margin-bottom 1.5*x
+
+      h3
+        font-size 1.25*x
+        color dim
         margin: 0.5*x 0
 
 @media screen and (min-width: 360px)

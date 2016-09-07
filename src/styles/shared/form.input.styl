@@ -7,20 +7,22 @@
     padding 0 0.5*x
     margin 0
 
-    font-size x
-    line-height 2*x - 2px
+    df()
+    font-weight 300
+    line-height 1
 
     border 1px solid bc
 
     width 100%
 
   input, .input
-    height 2*x
+    height 2rem
 
     &[type="submit"]
       border none
-      background lighten(mcolor, 25%)
+      background mcolor
       color #fff
-      line-height 2*x - 4px
-      height 2*x - 4px
-      box-shadow mcolor 0 4px 0
+      line-height 2rem
+      height 2rem
+
+      cursor pointer

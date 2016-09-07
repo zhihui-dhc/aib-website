@@ -1,22 +1,22 @@
 .article-wrapper
-  max-width 48*x
+  max-width 40rem
   margin 0 auto
-  padding 0 x 3*x
+  padding 0 1.5rem 3rem
 
   .article-date
     color light
-    margin-bottom -2*x
-    margin-top 3*x
+    margin-bottom -2rem
+    margin-top 3rem
 
   h1, h2, h3, h4, h5, h6
     line-height 1.25
-    margin-top 2*x
+    margin-top 2rem
     position relative
 
     i.material-icons
       color lighten(light,50%)
       position absolute
-      top 0.25*x
+      top 0.25rem
       left -1.5em
       font-size 1em
       cursor copy
@@ -31,69 +31,78 @@
         right 0
 
         background #fff
-        padding 0.125*x 0.25*x
+        padding 0.125rem 0.25rem
 
         content 'Copied!'
         font-family sans
-        font-size 0.75*x
+        font-size 0.75rem
         color dim
 
   h1
-    font-size 2*x
-    font-weight bold
-    margin-bottom 2*x
-    margin-top 2*x
+    font-size 2rem
+    line-height 1.25
+    margin-bottom 2rem
+    margin-top 2rem
+    text-align center
+
+  h1 + .subtitle
+    margin-top -1.5rem
+    text-align center
+    color light
+    font-size 1.25rem
+    margin-bottom 2rem
 
   h2
-    font-size 1.75*x
-    border-bottom 1px solid bc
-    padding 0.75*x 0
-    margin-bottom 1.75*x
+    font-size 1.75rem
+    border-bottom 4px solid bc
+    padding 0.75rem 0
+    margin-bottom 1.75rem
     i.material-icons
-      margin 0.75*x 0
+      margin 0.75rem 0
 
   h3
-    font-size 1.5*x
-    padding 0.5*x 0
-    border-bottom 1px solid bc
-    margin-bottom x
+    font-size 1.5rem
+    padding 0.75rem 0
+    border-bottom 1px dotted bc
+    margin-bottom 1.25rem
+    letter-spacing 0.03rem
     i.material-icons
-      margin 0.5*x 0
+      margin 0.75rem 0
     
   h4
-    font-size 1.25*x
-    margin-bottom 0.75*x
+    font-size 1.25rem
+    margin-bottom 0.75rem
     &.visible
       background #f00
 
   h5
-    font-size 1.125*x
+    font-size 1.125rem
     font-weight bold
-    margin-bottom 0.5*x
+    margin-bottom 0.5rem
   h6
     font-size x
     font-weight bold
-    margin-bottom 0.25*x
+    margin-bottom 0.25rem
 
   p, ol, ul, blockquote, img, pre
-    margin-bottom 1.5*x
+    margin-bottom 1.5rem
+
+  li
+    margin 0 0 0.5rem
 
   ul ul, ul ol, ol ul, ol ol
+    padding-left 2rem
+    margin-top 0.5rem
     margin-bottom 0
 
-  ol, ul
-    padding-left 1.5*x
-
-  ol li
+  ol
     list-style decimal
-    list-style-position inside
 
   ul
     list-style square
-    list-style-position inside
 
   strong
-    font-weight bold
+    font-weight 500
 
   em
     font-style italic
@@ -103,47 +112,55 @@
     background #fff
     border 1px solid bc
     font-family monospace
-    padding 0.75*x x
+    padding 0.75rem x
     overflow-x scroll
-    font-size 0.8*x
-
-  p, li
-    overflow-x hidden
-    text-overflow ellipsis
+    font-size 0.8rem
 
   img
     max-width 100%
 
+@media screen and (max-width: 719px)
+
+  .article-wrapper
+    h1, h2, h3, h4, h5, h6
+      i.material-icons
+        display none
+
+    ul, ol
+      padding-left 1.5rem
+
 @media screen and (min-width: 720px)
   .article-wrapper
-    padding-left 4*x
-    padding-right 4*x
+    padding-left 4rem
+    padding-right 4rem
+
+    h1 + .subtitle
+      margin-bottom 3rem
 
 @media screen and (min-width: 960px)
   .toc-padding.toc-visible
-    margin-left 15*x + x
+    margin-left 15rem + 1rem
 
 @media screen and (min-width: 1200px)
   .toc-padding.toc-visible
-    margin-left 20*x + x
+    margin-left 20rem + 1rem
 
   .article-wrapper
-    padding-top 3*x
-    padding-left 2*x
-    padding-right 2*x
+    padding-top 2.5rem
+    padding-left 2rem
+    padding-right 2rem
 
     h1
-      font-size 2.5*x
+      font-size 2.5rem
 
     h2
-      font-size 2*x
+      font-size 2rem
 
 @media screen and (min-width: 1320px)
   .article-wrapper
-    padding-top 3*x
     padding-left 0
     padding-right 0
 
 @media screen and (min-width: 1800px)
   .toc-padding.toc-visible
-    margin-left 25*x + x
+    margin-left 25rem + 1rem

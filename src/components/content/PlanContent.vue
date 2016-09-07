@@ -1,8 +1,8 @@
 <template>
   <h1>Crowdfund Plan</h1>
+  <div class="subtitle">Last Updated: Aug 29th, 2016</div>
 
   <p>
-    <i>LAST UPDATED: Aug 29th, 2016</i><br/><br/>
     We’ve decided to crowdfund our project to raise funds to allow us to
     continue working on the Cosmos hub. Right now, we have already developed
     <a href="http://tendermint.com/">Tendermint</a>, the proof-of-state
@@ -12,16 +12,16 @@
     start on October 17, 2016 and go for 42 days.
   </p>
   <ul>
-    <li><p>
+    <li>
         Cosmos Foundation is a non-profit Canadian entity. Its mission is to
         create, maintain, and further develop, the Cosmos ecosystem.
-    </p></li>
-    <li><p>
+    </li>
+    <li>
         Cosmos Foundation will hold a crowdfunding campaign to sell tokens,
         called <i>atoms</i>, that give the holder limited license to use the Cosmos hub.
         Proceeds will go to the Cosmos Foundation to develop the essential Cosmos
         software and services.
-    </p></li>
+    </li>
     <li>There will be 20,000,000 atoms on Genesis day. On Genesis day, the
       distribution of atoms will be split between:
       <ul>
@@ -30,35 +30,35 @@
         <li>Crowdfund Funders (75%)</li>
       </ul>
     </li>
-    <li><p>
+    <li>
         Upon completion of the crowdfund, all the atom holders, including Cosmos
         Foundation, will play the Delegation Game in a special purpose Ethereum
         smart contract (which holds no ether). The top 100 validators after
         delegation will be chosen as validators for the genesis block, which will
         be the first block in the Cosmos blockchain. 
-    </p></li>
-    <li><p>
+    </li>
+    <li>
         Everyone&#39;s atoms will vest over a period of two years after Genesis.
         Unvested atoms cannot be transferred until vested.  Unvested atoms will
         vest over time, at a rate of 1/(24x365x2) of the account&#39;s atoms,
         every hour.
-    </p></li>
-    <li><p>
+    </li>
+    <li>
         Every validator must participate in governance, or else become
         inactivated and eventually unbonded. Delegators who delegate atoms to
         such validators likewise will also get their delegated atoms inactivated
         and eventually unbonded.
-    </p></li>
-    <li><p>
+    </li>
+    <li>
         Anyone may receive more atoms by passing a governance proposal with an
         attached award. Such reward atoms will be purely inflationary.  
-    </p></li>
-    <li><p>
+    </li>
+    <li>
         One third of the total number of atoms will be distributed back to the
         bonded atom holders for having a stake in consensus. This is a tax
         (disincentive) for not putting atoms at stake, and not participating in
         governance during the first two years after genesis.
-    </p></li>
+    </li>
   </ul>
 
   <!-- FUNDING ------------------------------------------------------>

@@ -1,13 +1,9 @@
 <template>
   <form action="//network.us14.list-manage.com/subscribe/post?u=1b8aeaa81ca615914eb2eb7fc&amp;id=64c73f9f5f" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate form-default" target="_blank" novalidate>
 
-    <div class="mc-field-group">
-      <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email Address">
-    </div>
+    <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email Address">
 
-    <div class="mc-field-group">
-      <input type="submit" value="Alert Me" name="subscribe" id="mc-embedded-subscribe">
-    </div>
+    <input type="submit" value="Alert Me" name="subscribe" id="mc-embedded-subscribe">
 
     <div id="mce-responses" class="clear">
       <div class="response" id="mce-error-response" style="display:none"></div>
@@ -28,8 +24,12 @@
 
 form
   display flex
-  flex-flow row
+  flex-flow column
+  max-width 40rem
+  padding 0 1rem
 
-  max-width 320px
-  margin x auto 0.25*x
+  input
+    flex 1
+    &[type="email"]
+      margin 0 0 0.5rem
 </style>
