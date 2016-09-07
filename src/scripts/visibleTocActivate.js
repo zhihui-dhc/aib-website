@@ -1,5 +1,4 @@
 import $ from 'jquery'
-// import './jquery.bounds.js'
 
 export default function (visibleElements) {
   let anchors = document.querySelectorAll('.toc-wrapper a')
@@ -17,10 +16,4 @@ export default function (visibleElements) {
       $(el).parent().removeClass('active')
     }
   }
-
-  /*
-  let bounds = $('.toc-wrapper li.active').bounds()
-  console.log(bounds)
-  $('.toc-tracker').css(bounds)
-  */
 }

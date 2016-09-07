@@ -1,11 +1,9 @@
 // BLOG ROUTES
 import BlogPurposeOfCosmos from '../components/blog/purpose-of-cosmos.vue'
 import BlogDisclaimersForCrowdfundParticipants from '../components/blog/disclaimers-for-crowdfund-participants.vue'
-import BlogJustATest from '../components/blog/just-a-test.vue'
 let blogRoutes = {
   '/blog/purpose-of-cosmos': { component: BlogPurposeOfCosmos },
-  '/blog/disclaimers-for-crowdfund-participants': { component: BlogDisclaimersForCrowdfundParticipants },
-  '/blog/just-a-test': { component: BlogJustATest }
+  '/blog/disclaimers-for-crowdfund-participants': { component: BlogDisclaimersForCrowdfundParticipants }
 }
 
 // ANY ROUTES ABOVE THIS IS GENERATED FROM `npm run blog`

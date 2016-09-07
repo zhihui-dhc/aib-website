@@ -11,9 +11,5 @@
       <h3>Disclaimers for Crowdfund Participants</h3>
     </a>
     <p>2016-07-20</p>
-    <a class="article-link" v-link="{ path: '/blog/just-a-test'}">
-      <h3>Just a Test</h3>
-    </a>
-    <p>2016-04-04</p>
   </div><!--article-wrapper-->
 </template>

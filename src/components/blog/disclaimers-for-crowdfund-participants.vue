@@ -29,7 +29,7 @@ wallet software, etc.</p>
 <p>There may be irreconciliable differences among atom holders that cause the
 Cosmos Hub blockchain to split (hard-fork) into two or more blockchains.  This
 may cause economic harm for end-users and related services such as
-crypto-exchanges .</p>
+crypto-exchanges.</p>
 </li>
 <li>
 <p>A majority or supermajority of the atom holders may pass proposals that go
