@@ -69,6 +69,7 @@ export default {
 
 h1
   font-size 2rem
+  letter-spacing 0.01em
   line-height 1.25
 
   margin 0 0 2rem
@@ -77,6 +78,7 @@ h1
 h2
   font-size 1.5rem
   margin 0 0 1rem
+  letter-spacing 0.01em
   text-align center
 
 p

@@ -131,6 +131,7 @@ export default {
         font-size 1.5rem
         margin 0 0 1rem
         text-align center
+        letter-spacing 0.01em
       p
         margin 0 0 1.5rem
 
