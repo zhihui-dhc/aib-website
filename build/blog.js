@@ -43,7 +43,12 @@ function markdownToVueData (files) {
     post.body += `<div class="subtitle">${post.dateFriendly} by ${post.author}</div>\n\n`
     post.body += md.render(markdownData)
     post.body += '  </div><!--article-wrapper-->\n'
-    post.body += '</template>'
+    post.body += '</template>\n'
+    post.body += '<script>\n'
+    post.body += 'export default {\n'
+    post.body += `  created () { document.title = '${post.title} - Cosmos' }\n`
+    post.body += '}\n'
+    post.body += '</script>\n'
 
     posts.push(post)
   }

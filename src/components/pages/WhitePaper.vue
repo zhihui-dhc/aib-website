@@ -11,11 +11,21 @@
 <script>
 import WhitepaperToc from '../content/WhitepaperToc.vue'
 import WhitepaperContent from '../content/WhitepaperContent.vue'
+import $ from 'jquery'
 
 export default {
   components: {
     WhitepaperToc,
     WhitepaperContent
+  },
+  created () {
+    document.title = 'Whitepaper - Cosmos'
+  },
+  ready () {
+    let vw = $(window).width()
+    if (vw < 960) {
+      this.$store.dispatch('SET_WHITEPAPER_TOC_VISIBLE', false)
+    }
   },
   vuex: {
     getters: {

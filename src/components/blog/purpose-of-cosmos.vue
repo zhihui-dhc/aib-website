@@ -126,3 +126,8 @@ smart contracts, Cosmos's potential is that of every existing cryptocurrency and
 more in synergy.  The only question is, what will you build on Cosmos?</p>
   </div><!--article-wrapper-->
 </template>
+<script>
+export default {
+  created () { document.title = 'Purpose of Cosmos - Cosmos' }
+}
+</script>

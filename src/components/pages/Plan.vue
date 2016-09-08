@@ -11,11 +11,21 @@
 <script>
 import PlanToc from '../content/PlanToc.vue'
 import PlanContent from '../content/PlanContent.vue'
+import $ from 'jquery'
 
 export default {
   components: {
     PlanToc,
     PlanContent
+  },
+  created () {
+    document.title = 'Crowdfund Plan - Cosmos'
+  },
+  ready () {
+    let vw = $(window).width()
+    if (vw < 960) {
+      this.$store.dispatch('SET_PLAN_TOC_VISIBLE', false)
+    }
   },
   vuex: {
     getters: {

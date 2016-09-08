@@ -24,11 +24,14 @@
     </li>
     <li>There will be 20,000,000 atoms on Genesis day. On Genesis day, the
       distribution of atoms will be split between:
+      <!--
       <ul>
         <li>Pre-funders (5%)</li>
         <li>Cosmos Foundation (20%)</li>
         <li>Crowdfund Funders (75%)</li>
       </ul>
+      -->
+      <viz-atom-split></viz-atom-split>
     </li>
     <li>
         Upon completion of the crowdfund, all the atom holders, including Cosmos
@@ -90,13 +93,16 @@
   </p>
 
   <h3 id="funding-milestones">Funding Milestones</h3>
+  <viz-funding-milestones></viz-funding-milestones>
+  <!--
   <ul>
-    <li>If the crowdfund does not meet the minimum $3M -- the funds will be returned</li>
-    <li>If the crowdfund exceeds $3M -- Essential Cosmos Software</li>
-    <li>If the crowdfund exceeds $5M -- Ethereum peg</li>
-    <li>If the crowdfund exceeds $7M -- Bitcoin peg</li>
-    <li>If the crowdfund exceeds $8M -- Open-source hardware wallet (sold separately)</li>
+    <li>If the crowdfund does not meet the minimum $3M - the funds will be returned</li>
+    <li>If the crowdfund exceeds $3M - Essential Cosmos Software</li>
+    <li>If the crowdfund exceeds $5M - Ethereum peg</li>
+    <li>If the crowdfund exceeds $7M - Bitcoin peg</li>
+    <li>If the crowdfund exceeds $8M - Open-source hardware wallet (sold separately)</li>
   </ul>
+  -->
 
   <!-- DEFINITIONS ------------------------------------------------------>
 
@@ -164,6 +170,8 @@
   </p>
 
   <h2 id="timeline">Timeline</h2>
+  <viz-timeline></viz-timeline>
+  <!--
   <ol>
     <li>Prefund for 5% of Genesis atoms</li>
     <li>Canadian non-profit is created</li>
@@ -180,12 +188,22 @@
     <li>EoCF + 15 months+: Continuous development, timeline set by Cosmos Foundation</li>
     <li>Timeline for Bitcoin and Ethereum pegs will be set after alpha release of Cosmos Hub, and depends on funding and partnership</li>
   </ol>
+  -->
 </template>
 
 <script>
 import linkifyHeadings from '../../scripts/linkifyHeadings.js'
 import scrollToHash from '../../scripts/scrollToHash.js'
+import VizAtomSplit from '../partials/VizAtomSplit.vue'
+import VizFundingMilestones from '../partials/VizFundingMilestones.vue'
+import VizTimeline from '../partials/VizTimeline.vue'
+
 export default {
+  components: {
+    VizAtomSplit,
+    VizFundingMilestones,
+    VizTimeline
+  },
   ready () {
     linkifyHeadings()
     scrollToHash()

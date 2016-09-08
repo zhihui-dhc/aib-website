@@ -14,8 +14,7 @@
         Some zones act as hubs with respect to other zones, allowing many zones
         to interoperate through a shared hub. The architecture is a more general
         application of the Bitcoin sidechains concept, using classic BFT and
-        Proof-of-Stake algorithms, instead of Proof-of-Work (see our whitepaper for
-        more details).
+        Proof-of-Stake algorithms, instead of Proof-of-Work (see <a v-link="{ path: '/whitepaper' }">our whitepaper</a> for more details).
       </p>
         <h2>Cosmos Hub</h2>
         <p>

@@ -1,7 +1,9 @@
 .article-wrapper
-  max-width 40rem
+  max-width 43rem
   margin 0 auto
   padding 0 1.5rem 3rem
+  position relative
+  overflow hidden
 
   .article-date
     color light
@@ -84,6 +86,15 @@
     font-weight bold
     margin-bottom 0.25rem
 
+  .subtitle + p:first-of-type
+    font-size 1.25rem
+    border-bottom 2px solid bc
+    padding-bottom 1.5rem
+    letter-spacing 0.025rem
+
+  p, ul, ol, li, a
+    text-overflow ellipsis
+
   p, ol, ul, blockquote, img, pre
     margin-bottom 1.5rem
 
@@ -120,7 +131,6 @@
     max-width 100%
 
 @media screen and (max-width: 719px)
-
   .article-wrapper
     h1, h2, h3, h4, h5, h6
       i.material-icons
@@ -131,6 +141,7 @@
 
 @media screen and (min-width: 720px)
   .article-wrapper
+    max-width 48rem
     padding-left 4rem
     padding-right 4rem
 
@@ -147,19 +158,12 @@
 
   .article-wrapper
     padding-top 2.5rem
-    padding-left 2rem
-    padding-right 2rem
 
     h1
       font-size 2.5rem
 
     h2
       font-size 2rem
-
-@media screen and (min-width: 1320px)
-  .article-wrapper
-    padding-left 0
-    padding-right 0
 
 @media screen and (min-width: 1800px)
   .toc-padding.toc-visible

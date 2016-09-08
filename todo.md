@@ -1,3 +1,13 @@
+# 2016-09-08
+* Crowdfund Page
+    * Added a atom split graphic
+    * improved the design of Funding Milestones
+    * Improved the design of of the Timeline
+* Turned off the ToC by default on smaller devices to get the user into the content faster.
+* Linked to the Whitepaper from the homepage "see our whitepaper"
+* Fixed an issue with the Whitepaper where long urls broke the width of the page on mobile
+* Added page titles for every page
+
 # 2016-09-07
 * Continued revamping the homepage design
     * Removed the need for stabilizeVH by ditching vh-based layouts.

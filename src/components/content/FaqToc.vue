@@ -79,5 +79,5 @@ export default {
 .toc-wrapper
   ul > li
     > a
-      font-weight normal
+      font-weight 300
 </style>

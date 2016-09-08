@@ -11,11 +11,21 @@
 <script>
 import FaqToc from '../content/FaqToc.vue'
 import FaqContent from '../content/FaqContent.vue'
+import $ from 'jquery'
 
 export default {
   components: {
     FaqToc,
     FaqContent
+  },
+  created () {
+    document.title = 'FAQ - Cosmos'
+  },
+  ready () {
+    let vw = $(window).width()
+    if (vw < 960) {
+      this.$store.dispatch('SET_FAQ_TOC_VISIBLE', false)
+    }
   },
   vuex: {
     getters: {

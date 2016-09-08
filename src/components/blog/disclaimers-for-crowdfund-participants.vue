@@ -38,3 +38,8 @@ against the interest of the remaining atom holders.</p>
 </ul>
   </div><!--article-wrapper-->
 </template>
+<script>
+export default {
+  created () { document.title = 'Disclaimers for Crowdfund Participants - Cosmos' }
+}
+</script>

@@ -103,6 +103,9 @@ export default {
   components: {
     SectionCover,
     SectionCallToAction
+  },
+  created () {
+    document.title = 'The Internet of Blockchains - Cosmos'
   }
 }
 </script>

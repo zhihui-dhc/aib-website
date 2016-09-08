@@ -1,11 +1,9 @@
 <template>
-  <div id="app">
-    <site-header></site-header>
-    <div id="site-content">
-      <router-view></router-view>
-    </div>
-    <site-footer></site-footer>
+  <site-header></site-header>
+  <div id="site-content">
+    <router-view @route-data-loaded="changeTitle"></router-view>
   </div>
+  <site-footer></site-footer>
 </template>
 
 <script>
