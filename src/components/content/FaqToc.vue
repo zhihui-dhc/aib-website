@@ -10,7 +10,7 @@
   <div class="toc-wrapper" v-show="tocVisible">
     <div class="toc-header">
       <div class="toc-title">Table of Contents</div>
-      <i class="toc-toggle material-icons desktop-only" @click="showToc(hide)">chevron_left</i>
+      <i class="toc-toggle material-icons desktop-only" @click="showToc(hide)">chevron_right</i>
       <i class="toc-toggle material-icons mobile-only" @click="showToc(hide)">close</i>
     </div>
     <ul>

@@ -2,7 +2,7 @@
   <header id="site-header">
     <div id="site-logo">
       <a v-link="{ path: '/' }">
-        <img src="../../assets/logo.png" alt="Cosmos">
+        <img src="../../assets/images/cosmos_logo_m.png" alt="Cosmos">
       </a> 
     </div>
     <nav id="site-nav">
@@ -110,6 +110,9 @@
 @media screen and (min-width: 768px)
   #site-logo
     flex 1
+    a
+      img
+        height 1.125rem
   #site-nav
     flex 2
 </style>

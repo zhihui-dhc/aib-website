@@ -2,7 +2,44 @@
   <section-cover></section-cover>
   <section-call-to-action></section-call-to-action>
 
-  <section id="walkthrough-2" class="section-slide"><div class="section-container">
+  <section class="section-slide ss-text">
+    <div class="section-container">
+      <div class="section-content">
+        <h2>Architecture</h2>
+        <p>
+        The Cosmos network consists of many independent, parallel blockchains,
+        called zones, each powered by classical Byzantine fault-tolerant (BFT)
+        consensus protocols like
+        <a href="http://tendermint.com">Tendermint</a> (already used by platforms
+        like <a href="https://erisindustries.com/components/erisdb/">ErisDB</a>).
+        Some zones act as hubs with respect to other zones, allowing many zones
+        to interoperate through a shared hub. The architecture is a more general
+        application of the Bitcoin sidechains concept, using classic BFT and
+        Proof-of-Stake algorithms, instead of Proof-of-Work (see <a v-link="{ path: '/whitepaper' }">our whitepaper</a> for more details).
+        </p>
+      </div>
+      <div class="section-content">
+        <h2>Cosmos Hub</h2>
+        <p>
+        The first blockchain in the Cosmos network is the Cosmos hub. The Cosmos
+        hub connects to zones via the novel IBC (inter-blockchain communication)
+        protocol and keeps a record of the total number of tokens in each zone.
+        Because all inter-zone token transfers go through the Cosmos hub, you can
+        transfer tokens from one zone to another, quickly and securely, without the
+        need for a liquid exchange or a trusted third party between zones. 
+        </p>
+        <p>
+        The Cosmos hub can connect to many different kinds of zones, as long as
+        each zone speaks IBC. As a result, Cosmos can support a variety of
+        currencies and scripting languages like those found in Bitcoin, Ethereum,
+        ZeroCash, CryptoNote, and more.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-slide">
+    <div class="section-container">
       <div class="image"><img class="" src="../../assets/images/ex_dist_exchange.png"></div>
       <div class="section-content">
         <h2>Interoperability</h2>
@@ -22,9 +59,11 @@
           <a href="http://www.reuters.com/article/us-bitfinex-hacked-hongkong-idUSKCN10E0KP">Bitfinex</a>.  
         </p>
       </div>
-  </div></section>
+    </div>
+  </section>
 
-  <section id="walkthrough-3" class="section-slide ss-alt"><div class="section-container">
+  <section class="section-slide ss-alt">
+    <div class="section-container">
       <div class="image"><img class="" src="../../assets/images/ex_evm_sharding.png"></div>
       <div class="section-content">
         <h2>Scalability</h2>
@@ -39,10 +78,12 @@
           sync. 
         </p>
       </div>
-  </div></section>
+    </div>
+  </section>
 
-  <section id="walkthrough-4" class="section-slide"><div class="section-container">
-      <div class="image image-shorter"><img class="" src="../../assets/images/ex_evm_upgrading.png"></div>
+  <section class="section-slide">
+    <div class="section-container">
+      <div class="image"><img class="" src="../../assets/images/ex_evm_upgrading.png"></div>
       <div class="section-content">
         <h2>Upgradability</h2>
         <p>
@@ -57,9 +98,11 @@
           their leisure.  
         </p>
       </div>
-  </div></section>
+    </div>
+  </section>
 
-  <section id="walkthrough-5" class="section-slide ss-alt"><div class="section-container">
+  <section class="section-slide ss-alt">
+    <div class="section-container">
       <div class="image image-taller"><img class="" src="../../assets/images/ex_network.png"></div>
       <div class="section-content">
         <h2>Decentralization</h2>
@@ -183,6 +226,18 @@ export default {
           left 0
           width 100%
           border-top 1px solid bc
+
+    &.ss-text
+      .section-container
+        align-items flex-start
+
+        .section-content:first-of-type
+          padding 0
+          padding-right 1rem
+        .section-content:last-of-type
+          padding 0
+          padding-left 1rem
+
     &.ss-alt
       .section-container
         flex-direction row-reverse
@@ -210,4 +265,11 @@ export default {
 
         &:before
           top 2.5rem
+
+    &.ss-text
+      .section-container
+        .section-content:first-of-type
+          padding-right 2rem
+        .section-content:last-of-type
+          padding-left 2rem
 </style>

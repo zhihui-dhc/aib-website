@@ -1,3 +1,13 @@
+# 2016-09-09
+* General
+    * Design updates
+    * Optimized images, reducing file size by about 1/3.
+    * Added a sitewide favicon and shortcut icons for Android, iOS, etc.
+    * Moved the ToC to the right side of the page to emphasize the content.
+* Homepage
+    * above-the-fold design update for less clutter.
+    * Added a background image for the Homepage.
+
 # 2016-09-08
 * Crowdfund Page
     * Added a atom split graphic

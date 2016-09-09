@@ -13,11 +13,3 @@
     <p>2016-07-20</p>
   </div><!--article-wrapper-->
 </template>
-
-<script>
-export default {
-  created () {
-    document.title = 'Blog - Cosmos'
-  }
-}
-</script>

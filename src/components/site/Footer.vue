@@ -61,13 +61,13 @@ export default {
 
 @media screen and (min-width: 960px)
   #site-footer.toc-visible
-    margin-left 15*x + x
+    margin-right 15*x + x
 
 @media screen and (min-width: 1200px)
   #site-footer.toc-visible
-    margin-left 20*x + x
+    margin-right 20*x + x
 
 @media screen and (min-width: 1800px)
   #site-footer.toc-visible
-    margin-left 25*x + x
+    margin-right 25*x + x
 </style>
