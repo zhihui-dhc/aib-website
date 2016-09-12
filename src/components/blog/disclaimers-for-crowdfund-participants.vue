@@ -4,7 +4,7 @@
   <div class="article-wrapper">
 <h1>Disclaimers for Crowdfund Participants</h1>
 
-<div class="subtitle">2016-07-20 by Jae Kwon</div>
+<div class="subtitle">July 20, 2016 by Jae Kwon</div>
 
 <ul>
 <li>

@@ -2,6 +2,7 @@
 title: Purpose of Cosmos
 date: 2016-08-31
 author: Jae Kwon
+excerpt: Cosmos is a culmination of lessons of prior cryptocurrencies. It's designed to be extended to incorporate future innovations. It's a distributed ledger platform suitable for generations to come.
 ---
 
 We believe in the power of public blockchains to provide a public good,

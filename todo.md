@@ -1,3 +1,12 @@
+# 2016-09-12
+* Homepage
+    * overall design improvements
+    * added a crowd sale timer to the Cover section.
+* Blog
+    * Index page design improvement
+    * Halfway done with RSS feed implementation
+    * updated the blog build script to add a couple things: better date, excerpt
+
 # 2016-09-09
 * General
     * Design updates

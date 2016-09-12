@@ -2,6 +2,7 @@
 title: Disclaimers for Crowdfund Participants
 date: 2016-07-20
 author: Jae Kwon
+excerpt: Important disclaimers for potential crowdfund participants. Please read!
 ---
 
 * The Essential Cosmos Software and Services may not complete in the advertised

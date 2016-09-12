@@ -1,10 +1,10 @@
 <template>
   <section id="section-cta">
     <div class="section-container">
-      <h2>Crowd Sale</h2>
+      <h2>Crowdsale</h2>
       <div class="description">
         <p>
-          Atom tokens are available for purchase on October 17th, which is in
+          Atom tokens are available for early purchase on October 17th, which is in
           <countdown></countdown>.
         </p>
       </div>

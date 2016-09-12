@@ -15,6 +15,8 @@ let staticRouterFile = './src/router/staticRouter.js'
 let routerFile = './src/router/index.js'
 let blogIndexFile = './src/components/pages/BlogIndex.vue'
 
+let rssMaker = require('./rss.js')
+
 function markdownToVueData (files) {
   let posts = []
   for (let i = 0; i < files.length; i++) {
@@ -29,10 +31,11 @@ function markdownToVueData (files) {
     post.slug = toSlugCase(metaData.title)
     post.author = metaData.author
     post.date = moment(metaData.date).valueOf() // ms since epoch
+    post.excerpt = metaData.excerpt
 
     post.filename = post.slug + '.vue'
     post.filepath = blogVueDir + post.filename
-    post.dateFriendly = moment(post.date, 'x').format('YYYY-MM-DD')
+    post.dateFriendly = moment(post.date, 'x').format('LL')
 
     // set up the vue file
     post.body += '<template>\n'
@@ -62,7 +65,7 @@ function writeVueBlogPosts (data) {
     let file = data[i].filepath
     let content = data[i].body
     fs.writeFileSync(file, content, 'utf8')
-    console.log(`✓ ${file}`)
+    console.log(`  ✓ ${file}`)
   }
 }
 
@@ -76,15 +79,16 @@ function writeVueBlogIndex (data) {
   body += '    <h1>Cosmos Blog</h1>\n'
   for (let i = 0; i < data.length; i++) {
     body += `    <a class="article-link" v-link="{ path: '/blog/${data[i].slug}'}">\n`
-    body += `      <h3>${data[i].title}</h3>\n`
+    body += `      <div class="article-title">${data[i].title}</div>\n`
+    body += `      <div class="article-excerpt">${data[i].excerpt}</div>\n`
+    body += `      <div class="article-date">Posted on ${data[i].dateFriendly}</div>\n`
     body += '    </a>\n'
-    body += `    <p>${data[i].dateFriendly}</p>\n`
   } 
   body += '  </div><!--article-wrapper-->\n'
   body += '</template>'
 
   fs.writeFileSync(blogIndexFile, body, 'utf8')
-  console.log(`✓ ${blogIndexFile}`)
+  console.log(`  ✓ ${blogIndexFile}`)
 }
 
 function writeBlogRoutes (data) {
@@ -109,10 +113,15 @@ function writeBlogRoutes (data) {
   body += staticRouter
 
   fs.writeFileSync(routerFile, body, 'utf8')
-  console.log(`✓ ${routerFile}`)
+  console.log(`  ✓ ${routerFile}\n`)
+  console.log('  Cosmos Blog built successfully.')
 }
 
+
 let postData = markdownToVueData(posts)
+
+// rssMaker(postData)
+
 writeVueBlogPosts(postData)
 writeVueBlogIndex(postData)
 writeBlogRoutes(postData)

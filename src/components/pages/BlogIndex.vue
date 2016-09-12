@@ -4,12 +4,19 @@
   <div class="article-wrapper" id="blog-index">
     <h1>Cosmos Blog</h1>
     <a class="article-link" v-link="{ path: '/blog/purpose-of-cosmos'}">
-      <h3>Purpose of Cosmos</h3>
+      <div class="article-title">Purpose of Cosmos</div>
+      <div class="article-excerpt">Cosmos is a culmination of lessons of prior cryptocurrencies. It's designed to be extended to incorporate future innovations. It's a distributed ledger platform suitable for generations to come.</div>
+      <div class="article-date">Posted on August 31, 2016</div>
     </a>
-    <p>2016-08-31</p>
     <a class="article-link" v-link="{ path: '/blog/disclaimers-for-crowdfund-participants'}">
-      <h3>Disclaimers for Crowdfund Participants</h3>
+      <div class="article-title">Disclaimers for Crowdfund Participants</div>
+      <div class="article-excerpt">Important disclaimers for potential crowdfund participants. Please read!</div>
+      <div class="article-date">Posted on July 20, 2016</div>
     </a>
-    <p>2016-07-20</p>
+    <a class="article-link" v-link="{ path: '/blog/test-post'}">
+      <div class="article-title">Test Post</div>
+      <div class="article-excerpt">Just a test post, please ignore.</div>
+      <div class="article-date">Posted on June 8, 2016</div>
+    </a>
   </div><!--article-wrapper-->
 </template>

@@ -118,7 +118,7 @@
           our future financial systems.
         </p>
       </div>
-      <div class="section-content-two">
+      <div class="section-content section-content-extended">
         <p>
           You can use Cosmos as a testing ground for a new cryptocurrency design, an
           upgrade to an existing cryptocurrency, as a means for decentralized
@@ -172,7 +172,6 @@ export default {
         max-width 26rem
 
     .section-content
-    .section-content-two
       h2
         font-size 1.5rem
         margin 0 0 1rem
@@ -191,7 +190,7 @@ export default {
 @media screen and (min-width: 960px)
   .section-slide
     .section-container
-      max-width 50rem
+      max-width 56rem
       display flex
       align-items center
       flex-flow row wrap
@@ -201,31 +200,14 @@ export default {
         flex 1 0 50%
 
       .image
-        padding-right 1rem
+        padding-right 2rem
         margin 0
 
       .section-content
-        padding-left 1rem
+        padding-left 2rem
 
         h2
           text-align left
-
-      .section-content-two
-        padding-top 3rem
-        column-count 1
-
-        max-width 40rem
-        margin 0 auto
-        border-top none
-        position relative
-
-        &:before
-          content ''
-          position absolute
-          top 1rem
-          left 0
-          width 100%
-          border-top 1px solid bc
 
     &.ss-text
       .section-container
@@ -233,21 +215,24 @@ export default {
 
         .section-content:first-of-type
           padding 0
-          padding-right 1rem
+          padding-right 2rem
         .section-content:last-of-type
           padding 0
-          padding-left 1rem
+          padding-left 2rem
 
     &.ss-alt
       .section-container
         flex-direction row-reverse
         .image
           padding-right 0
-          padding-left 1rem
+          padding-left 2rem
         .section-content
           padding-left 0
-          padding-right 1rem
-
+          padding-right 2rem
+          &.section-content-extended
+            padding 0
+            padding-right 2rem
+            margin-right 50%
 
 @media screen and (min-width: 1200px)
   .section-slide
@@ -255,21 +240,15 @@ export default {
       max-width 64rem
 
       .image
-        padding-right 2rem
+        padding-right 3rem
 
       .section-content
-        padding-left 2rem
-
-      .section-content-two
-        padding-top 5rem
-
-        &:before
-          top 2.5rem
+        padding-left 3rem
 
     &.ss-text
       .section-container
-        .section-content:first-of-type
-          padding-right 2rem
-        .section-content:last-of-type
-          padding-left 2rem
+        .section-content
+          padding-right 3rem
+          &.section-content-extended
+            margin-right 50%
 </style>
