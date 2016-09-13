@@ -1,28 +1,94 @@
-.form-default
-  input, .input, textarea
-    display block
-    -webkit-appearance none
-    background #fff
-    border-radius 0
-    padding 0 0.5*x
-    margin 0
+/*==============================================================================*/
+// Inputs
 
-    df()
-    font-weight 300
-    line-height 1
+.input
+input[type=text]
+input[type=password]
+input[type=url]
+input[type=email]
+input[type=search]
+input[type=tel]
+input[type=number]
+input[type=datetime-local]
+textarea
+select
+  border 1px solid bc
+  vertical-align top
+  padding x*0.25 - 1px 0.5rem
 
-    border 1px solid bc
+  df()
+  line-height x*1.5
 
-    width 100%
+  // box-shadow inset 1px 1px 1px #eee
+  display block
 
-  input, .input
-    height 2rem
+  &:disabled
+    user-select none
+    cursor not-allowed
 
-    &[type="submit"]
-      border none
-      background mcolor
-      color #fff
-      line-height 2rem
-      height 2rem
+    color dim
+    text-shadow none
+    box-shadow none
+    background mbg
 
-      cursor pointer
+.input:focus
+input:focus,
+textarea:focus
+select:focus
+  box-shadow 0 0 x*0.5 lighten(mcolor,75%)
+  border-color link
+
+input[type=text]
+input[type=password]
+input[type=url]
+input[type=email]
+input[type=search]
+input[type=tel]
+input[type=number]
+input[type=datetime-local]
+  height 2rem
+
+textarea
+  height 12rem
+
+/*==============================================================================*/
+// Addons
+
+.input-group-addon
+  background mbg
+  border 1px solid bc
+  border-left none
+  padding 0 0.5rem
+
+  color dim
+  line-height x*2 - 2px
+  font-size 0.75rem
+
+@media screen and (min-width: 360px)
+  .input-group-addon
+    font-size 1rem
+
+/*==============================================================================*/
+// Placeholder Text
+
+/* WebKit, Blink, Edge */
+::-webkit-input-placeholder
+  color placeholder-color
+
+/* Mozilla Firefox 4 to 18 */
+:-moz-placeholder
+  color placeholder-color
+  opacity 1
+
+/* Mozilla Firefox 19+ */
+::-moz-placeholder
+  color placeholder-color
+  opacity 1
+
+/* Internet Explorer 10-11 */
+:-ms-input-placeholder
+  color placeholder-color
+
+/* Standard (https//drafts.csswg.org/selectors-4/#placeholder) */
+:placeholder-shown
+  color placeholder-color

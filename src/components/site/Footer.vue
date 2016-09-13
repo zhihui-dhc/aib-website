@@ -1,6 +1,6 @@
 <template>
   <footer id="site-footer" v-bind:class="{ 'toc-visible': tocVisible }">
-    <section-call-to-action></section-call-to-action>
+    <section-call-to-action v-if="!isThisAFundPage"></section-call-to-action>
     <section-social-media></section-social-media>
     <div id="site-bottom">
       <p>&copy; 2016 Cosmos Foundation</p>
@@ -27,6 +27,13 @@ export default {
         visible = true
       }
       return visible
+    },
+    isThisAFundPage () {
+      let path = this.$route.path.replace('/', '')
+      if (path === 'fund') {
+        return true
+      }
+      return false
     }
   },
   components: {

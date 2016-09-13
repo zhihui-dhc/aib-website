@@ -3,17 +3,19 @@ import VueRouter from 'vue-router'
 
 // STATIC ROUTES
 import PageIndex from '../components/pages/Index.vue'
-import PageWhitepaper from '../components/pages/Whitepaper.vue'
-import PagePlan from '../components/pages/Plan.vue'
-import PageFaq from '../components/pages/FAQ.vue'
 import PageBlogIndex from '../components/pages/BlogIndex.vue'
+import PageFaq from '../components/pages/FAQ.vue'
+import PagePlan from '../components/pages/Plan.vue'
+import PageWhitepaper from '../components/pages/Whitepaper.vue'
+import PageFund from '../components/pages/Fund.vue'
 
 let staticRoutes = {
   '/': { component: PageIndex },
-  '/whitepaper': { component: PageWhitepaper },
-  '/plan': { component: PagePlan },
+  '/blog': { component: PageBlogIndex },
   '/faq': { component: PageFaq },
-  '/blog': { component: PageBlogIndex }
+  '/plan': { component: PagePlan },
+  '/whitepaper': { component: PageWhitepaper },
+  '/fund': { component: PageFund }
 }
 
 let routes = Object.assign(staticRoutes, blogRoutes)
@@ -22,10 +24,6 @@ export default function (vue) {
   vue.use(VueRouter)
 
   let router = new VueRouter({history: true})
-
-  router.beforeEach(function () {
-    window.scrollTo(0, 0)
-  })
 
   router.map(routes)
 

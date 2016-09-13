@@ -1,0 +1,53 @@
+btn()
+  background subtle-gradient
+  border 1px solid #ddd
+  box-shadow inset #fff 0 0 x*0.5
+
+  padding 0.5*x - 1px 1rem
+
+  margin 0
+  display inline-block
+
+  df()
+  font-weight 400
+  height 2rem
+  line-height 1rem
+  text-align center
+
+  cursor pointer
+  user-select none
+  vertical-align bottom
+
+  &:hover
+    background subtle-gradient-hover
+    box-shadow inset #fff 0 0 x*0.75
+    color #000
+
+  &:active
+    padding-top 0.5*x
+    padding-bottom 0.5*x - 2px
+
+  &.disabled
+    opacity 0.4
+    cursor not-allowed
+
+.btn
+  btn()
+
+.btn-small
+  height x*1.5
+  font-size 0.75*x
+  line-height 1rem
+  padding 0.375*x - 1px x
+  &:active
+    padding-top 0.375*x
+    padding-bottom 0.375*x - 2px
+
+.btn-large
+  height x*3
+  font-size 1.25*x
+  font-weight normal
+  padding 0.875*x - 1px x
+  &:active
+    padding-top 0.875*x
+    padding-bottom 0.875*x - 2px

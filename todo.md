@@ -1,3 +1,11 @@
+# 2016-09-13
+* Changed the port of the dev server to 8700 to reduce port conflicts
+* Implemented a basic user flow for the crowd fund process. Viewable at localhost:8700/fund
+    * Basic list of countries
+    * Basic input validation
+    * Added a quick exchange rate calculator
+* You can use the `<-`  and `->` to quickly view the pages without inputting data.
+
 # 2016-09-12
 * Homepage
     * overall design improvements

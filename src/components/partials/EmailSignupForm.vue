@@ -3,7 +3,7 @@
 
     <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email Address">
 
-    <input type="submit" value="Alert Me" name="subscribe" id="mc-embedded-subscribe">
+    <input type="submit" value="Alert Me" name="subscribe" id="mc-embedded-subscribe" class="btn">
 
     <div id="mce-responses" class="clear">
       <div class="response" id="mce-error-response" style="display:none"></div>
