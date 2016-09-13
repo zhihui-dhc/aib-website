@@ -43,7 +43,7 @@
         <div class="form-group">
           <label>Deposit Address</label>
           <div class="input-group">
-            <input type="text" value="1NAfx5GEZHR8t69LjxTeShPP4XXaxeUqQw">
+            <input type="text" :value="bitcoinAddress">
           </div>
         </div><!--form-group-->
         <div class="form-group">
@@ -88,6 +88,7 @@ export default {
   },
   data () {
     return {
+      bitcoinAddress: '1NAfx5GEZHR8t69LjxTeShPP4XXaxeUqQw',
       step: 1,
       crowdfund: {
         name: '',
