@@ -2,16 +2,29 @@
   <div class="select-wrapper">
     <select id="{{ id }}" v-model="model" required>
       <option v-if="empty" value="" disabled selected hidden>Select&hellip;</option>
-      <option v-for="option in options | orderBy 'text'" v-bind:value="option.value">{{ option.text }}</option>
+      <option v-for="option in options | orderBy 'text'" v-bind:value="option.value">
+        {{ option.text }}
+      </option>
     </select>
   </div>
 </template>
 
 <script>
 export default {
-  props: ['id', 'model', 'options', 'empty'],
-  ready () {
-    console.log(this.options)
+  props: {
+    id: String,
+    model: String,
+    options: {
+      type: Array,
+      default () {
+        return [
+          { value: 'CN', text: 'China' },
+          { value: 'JP', text: 'Japan' },
+          { value: 'US', text: 'United States of America' }
+        ]
+      }
+    },
+    empty: Boolean
   }
 }
 </script>

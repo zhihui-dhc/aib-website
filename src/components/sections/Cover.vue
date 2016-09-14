@@ -136,6 +136,10 @@ export default {
   #section-cover
     background-image url('../../assets/images/bg_cover_2048.jpg')
 
+    .section-container
+      min-height 600px
+      height 80vh
+
 @media screen and (min-width: 800px)
   #section-cover
     background-image url('../../assets/images/bg_cover_2560_1600.jpg')

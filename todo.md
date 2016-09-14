@@ -1,3 +1,15 @@
+# 2016-09-14
+* Crowdfund pages:
+    * Added two more pages to the crowdfund process. Now it is:
+        1. Get customer information
+        2. Get crowdfund wallet information
+        3. Get amount of atoms the customer wants to buy, default 1000 (currently limited to 1 to 1 million)
+        4. Present the customer with a bitcoin address and amount of BTC to pay.
+    * The Dev navigation are the two `<` `>` buttons. They will be hidden on launch.
+    * Improved overall design and usability for mobile and desktop.
+    * Fixed issues with the countries list.
+* Homepage: Fixed an issue where the page height is too short on short desktop browser windows.
+
 # 2016-09-13
 * Changed the port of the dev server to 8700 to reduce port conflicts
 * Implemented a basic user flow for the crowd fund process. Viewable at localhost:8700/fund
