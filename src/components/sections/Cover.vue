@@ -1,28 +1,20 @@
 <template>
   <section id="section-cover">
-    <div class="section-container">
-      <h1 id="cover-title"><span>The Internet of Blockchains</span></h1>
-      <div id="cover-description"><span>
-        <strong>Cosmos</strong> is a project with an ambitious mission: To create a network of distributed ledgers that will solve long-standing problems in the cryptocurrency and blockchain communities.
-      </span></div>
-      <div id="cover-countdown">
-        <countdown-detailed></countdown-detailed>
-      </div>
+    <div class="section-container" @click="scrollDown">
+      <!--<div id="logo-slash"></div>-->
+      <h1 id="cover-title"><img src="../../assets/images/cosmos_logo_m.png" title="Cosmos"></h1>
+      <h2 id="cover-subtitle">Internet of Blockchains</h1>
     </div>
   </section>
 </template>
 
 <script>
-import CountdownDetailed from '../partials/CountdownDetailed.vue'
 import $ from 'jquery'
 
 export default {
-  components: {
-    CountdownDetailed
-  },
   methods: {
     scrollDown () {
-      let height = $('#walkthrough-1').offset().top - 48
+      let height = $('#home-text').offset().top - 48
       $('html, body').animate({ scrollTop: height }, 666)
     },
     viewStep (id) {
@@ -39,120 +31,150 @@ export default {
 @import '../../styles/variables.styl'
 
 #section-cover
-  background-color #000
-  background-size cover
-  border-top 3rem solid mbg
+  overflow hidden
+  min-height 85vh
+
+  display flex
+  align-items center
+  justify-content center
 
   .section-container
-    max-width 40rem
-    min-height 80vh
-    padding 0 1.5rem
-    margin 0 auto
-
-    text-align center
+    width 15rem
+    height 15rem
+    border 1px solid hsl(0,0,75%)
+    border-radius 15rem
+    margin-top 3rem
 
     display flex
     flex-flow column
     justify-content center
     align-items center
-    align-content center
 
-#cover-title span
-#cover-description span
-#cover-countdown span
-  background hsla(0,0,0, 0.25)
+    position relative
 
-#cover-title
-#cover-description
-  margin-bottom 2rem
+    background mbg
+    box-shadow inset hsl(0,0,95%) 0 0 2rem
 
-#cover-title
-  span
-    color hsla(0,0,100%,0.93)
-    font-size 2rem
-    line-height 1.25
-    margin-bottom 2rem
+    transition 100ms ease all
 
-#cover-description span
-#cover-countdown span
-  font-size 1rem
-  line-height 1.8
-  letter-spacing 0.04rem
-  color hsl(0,0,78%)
-  color hsl(mhue,msat,60%)
-  strong
-    font-weight 500
-    text-transform uppercase
+    &:hover
+      border-color link
+      cursor pointer
 
-@media screen and (min-width: 360px)
+    &:before
+      content ''
+      width 16rem
+      height 16rem
+      border 0.5rem solid hsl(0,0,88)
+      border-radius 16rem
+
+      position absolute
+      top 50%
+      left 50%
+      margin-left -8rem - 0.5rem
+      margin-top -8rem - 0.5rem
+
+      box-shadow hsl(0,0,95%) 0 0 6rem 2rem
+
+    &:after
+      content ''
+      width 32rem
+      height 32rem
+      border 1rem solid hsl(0,0,95)
+      border-radius 32rem
+
+      position absolute
+      top 50%
+      left 50%
+      margin-left -16rem - 1rem
+      margin-top -16rem - 1rem
+
+      box-shadow hsl(0,0,95%) 0 0 6rem 2rem
+
+#logo-slash
+  width 24rem
+  height 2rem
+  background bc
+
+  position absolute
+  top 50%
+  left 50%
+
+  margin-left -12rem
+  margin-top -1rem
+
+  transform rotate(-45deg)
+
+  z-index -1
+
+#cover-title img
+  height 1.8rem
+
+#cover-subtitle
+  text-align center
+  font-size 0.9rem
+  color txt
+
+@media screen and (min-width:720px)
   #section-cover
     .section-container
-      padding 0 1.75rem
+      width 15rem * 1.5
+      height 15rem * 1.5
+      border-radius 15rem * 1.5
+      &:before
+        width 16rem * 1.5
+        height 16rem * 1.5
+        border-radius 16rem * 1.5
+        margin-left -8rem * 1.5 - 0.5rem
+        margin-top -8rem * 1.5 - 0.5rem
+      &:after
+        width 32rem * 1.5
+        height 32rem * 1.5
+        border-radius 32rem
+        margin-left -16rem * 1.5 - 1rem
+        margin-top -16rem * 1.5 - 1rem
 
-  #cover-title
-  #cover-description
-    margin-bottom 3rem
+  #logo-slash
+    width 24rem * 1.5
+    margin-left -12rem * 1.5
+    margin-top -1rem * 1.5
 
-@media screen and (min-width:414px)
+  #cover-title img
+    height 1.8rem * 1.25
+
+  #cover-subtitle
+    font-size 0.9rem * 1.25
+
+@media screen and (min-width:1200px)
   #section-cover
-    .section-container
-      padding-left 2rem
-      padding-right 2rem
-
-  #cover-title
-    margin-bottom 3rem
-    span
-      font-size 2.5rem
-
-  #cover-description span
-  #cover-countdown span
-    font-size 1.125rem
-
-@media screen and (min-width: 720px)
-  #cover-description span
-  #cover-countdown span
-    font-size 1.25rem
-
-  #cover-description
-    margin-bottom 4.5rem
-
-@media screen and (max-width: 359px)
-  #section-cover
-    background-image url('../../assets/images/bg_cover_1136.jpg')
-
-@media screen and (min-width: 360px)
-  #section-cover
-    background-image url('../../assets/images/bg_cover_1280.jpg')
-
-@media screen and (min-width: 375px)
-  #section-cover
-    background-image url('../../assets/images/bg_cover_1334.jpg')
-
-@media screen and (min-width: 414px)
-  #section-cover
-    background-image url('../../assets/images/bg_cover_1920.jpg')
-
-@media screen and (min-width: 768px)
-  #section-cover
-    background-image url('../../assets/images/bg_cover_2048.jpg')
-
-    .section-container
-      min-height 600px
-      height 80vh
-
-@media screen and (min-width: 800px)
-  #section-cover
-    background-image url('../../assets/images/bg_cover_2560_1600.jpg')
-
-@media screen and (min-width: 1366px)
-  #section-cover
-    background-image url('../../assets/images/bg_cover_2732_2048.jpg')
+    height 100vh
 
 @media screen and (min-width: 1440px)
   #section-cover
-    background-image url('../../assets/images/bg_cover_2880_1800.jpg')
+    .section-container
+      width 15rem * 2
+      height 15rem * 2
+      border-radius 15rem * 2
+      &:before
+        width 16rem * 2
+        height 16rem * 2
+        border-radius 16rem * 2
+        margin-left -8rem * 2 - 0.5rem
+        margin-top -8rem * 2 - 0.5rem
+      &:after
+        width 32rem * 2
+        height 32rem * 2
+        border-radius 32rem
+        margin-left -16rem * 2 - 1rem
+        margin-top -16rem * 2 - 1rem
 
-@media screen and (min-width: 1441px)
-  #section-cover
-    background-image url('../../assets/images/bg_cover.jpg')
+  #logo-slash
+    width 24rem * 2
+    margin-left -12rem * 2
+
+  #cover-title img
+    height 1.8rem * 1.5
+
+  #cover-subtitle
+    font-size 1rem * 1.5
 </style>

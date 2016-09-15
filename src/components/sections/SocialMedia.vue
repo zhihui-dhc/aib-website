@@ -1,17 +1,17 @@
 <template>
   <section>
     <nav class="three-col-links">
-      <a href="https://twitter.com/cosmos_hq">
-        <span class="key">Twitter</span>
-        <span class="value">@cosmos_hq</span>
+      <a href="https://www.reddit.com/r/thecosmos" target="_blank">
+        <img src="../../assets/images/logo-bw-reddit.png" alt="Reddit">
+        <span class="label">r/thecosmos</span>
       </a>
-      <a href="http://forum.tendermint.com:3000/">
-        <span class="key">Slack</span>
-        <span class="value">Tendermint</span>
+      <a href="http://forum.tendermint.com:3000/" target="_blank">
+        <img src="../../assets/images/logo-bw-slack.png" alt="Slack">
+        <span class="label">Tendermint</span>
       </a>
-      <a href="https://www.reddit.com/r/thecosmos">
-        <span class="key">Reddit</span>
-        <span class="value">r/thecosmos</span>
+      <a href="https://twitter.com/cosmos_hq" target="_blank">
+        <img src="../../assets/images/logo-bw-twitter.png" alt="Twitter">
+        <span class="label">@cosmos_hq</span>
       </a>
     </nav>
   </section>
@@ -37,65 +37,49 @@ section
 
 .three-col-links
   display flex
-  flex-flow column
-  overflow hidden
+  justify-content center
 
   a
-    flex 1
-    margin-bottom 1px
-    background #fff
-    padding 0.75*x x
-
     display flex
-    justify-content space-between
-
     cursor pointer
-    .key
-      font-weight bold
-      color txt
-    .value
-      color light
+    padding 1.5rem
+
+    img
+      width 2rem
+      height 2rem
+      opacity 0.666
+
+    .label
+      display none
+      padding-left 0.333rem
+      color dim
+
     &:hover
-      background mbg
       text-decoration none
+      img
+        opacity 1
+      .label
+        color txt
 
-@media screen and (min-width: 768px)
+@media screen and (min-width: 360px)
   .three-col-links
-    flex-flow row
-    justify-content center
-    justify-content space-around
-
-    max-width 960px
-    margin 0 auto
-    padding 4*x 0
-
     a
-      flex-flow column
+      img
+        width 3rem
+        height 3rem
+    
+@media screen and (min-width: 720px)
+  .three-col-links
+    padding 3rem 0
+    a
+      display flex
       align-items center
-      justify-content center
-      flex 1
-
-      height 10*x
-      max-width 10*x
-      border-radius 10*x
-      border 1px solid bc
-
-      position relative
-
-      &:after
-        content ''
+      .label
         display block
-        position absolute
-        top 50%
-        left 50%
-        margin-left -5.5*x - 6px
-        margin-top -5.5*x - 6px
 
-        width 11*x
-        height 11*x
-        border-radius 13*x
-        border 6px solid lighten(bc, 50%)
-      &:hover
-        background #fff
-        border-color dim
+@media screen and (min-width: 1200px)
+  .three-col-links
+    a
+      padding-left 3rem
+      padding-right 3rem
 </style>

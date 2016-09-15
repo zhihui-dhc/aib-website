@@ -8,19 +8,15 @@
     <div id="fund-steps-nav">
       <div id="step-indicator-one" class="step-indicator" :class="{'active': stepOneActive }">
         <div class="key">1</div>
-        <div class="value">Customer Info</div>
       </div>
       <div id="step-indicator-two" class="step-indicator" :class="{'active': stepTwoActive }">
         <div class="key">2</div>
-        <div class="value">Wallet Setup</div>
       </div>
       <div id="step-indicator-three" class="step-indicator" :class="{'active': stepThreeActive }">
         <div class="key">3</div>
-        <div class="value">Purchase Quantity</div>
       </div>
       <div id="step-indicator-four" class="step-indicator" :class="{'active': stepFourActive }">
         <div class="key">4</div>
-        <div class="value">Payment</div>
       </div>
     </div>
 
@@ -227,37 +223,51 @@ h1
   text-align center
 
 #fund-steps-nav
+  margin 0 0 1.5rem
+
   display flex
-  border-top 1px solid bc
+  justify-content space-around
+
+  position relative
+
+  &:after
+    content ''
+    width 100%
+    height 0
+    border-top 2px solid bc
+    position absolute
+    top 50%
+    left 0
+    margin-top -1px
+    z-index -1
 
   .step-indicator
-    flex 1
     color light
-    padding 0.25rem 0.75rem
+    border 1px solid bc
+    background mbg
 
-    border-right 1px solid bc
-    border-bottom 1px solid bc
+    text-align center
+    line-height 2*x - 2px
+    width 2rem
+    border-radius 2rem
 
-    &:last-of-type
-      border-right none
+    position relative
+
+    transition 300ms ease all
+
+    user select none
 
     &.active
-      background #fff
       color txt
-      border-bottom 1px solid #fff
-      font-weight 400
-
-    .key, .value
-      display inline
-    .value
-      display none
+      background #fff
+      font-weight bold
+      border-color ibc
 
 #fund-steps
   background #fff
   padding 1rem
   position relative
-  margin 1rem auto
-  margin-top 0
+  margin 0 auto
 
   .dev-counter-nav
     position absolute
@@ -292,13 +302,8 @@ h1
   h1
     margin 3rem 0
 
-  #fund-steps-nav
-    border-left 1px solid bc
-    border-right 1px solid bc
-
   #fund-steps
     border 1px solid bc
-    border-top none
     padding 1rem 2rem
     max-width 36rem
     margin-bottom 3rem

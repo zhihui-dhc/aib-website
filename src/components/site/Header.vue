@@ -34,9 +34,11 @@
   flex-flow row
 
   background #fff
-  background hsla(0,0,100%,90%)
+  background hsla(0,0,100%,95%)
 
   backdrop-filter blur(0.25rem)
+
+  box-shadow hsla(0,0,0,0.04) 0 0.2rem 0.3rem
 
 #site-logo
   a
@@ -70,11 +72,19 @@
       color link
 
     &.v-link-active
+      position relative
+      background mbg
       color light
 
-      &:hover 
-        cursor default
-        color light
+      &:after
+        display none
+        content ''
+        position absolute
+        top 0
+        left 0
+        height 2px
+        width 100%
+        background txt
 
 @media screen and (max-height: 480px)
   #site-header

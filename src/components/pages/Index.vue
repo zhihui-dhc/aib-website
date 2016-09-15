@@ -1,11 +1,13 @@
 <template>
   <section-cover></section-cover>
-  <section-call-to-action></section-call-to-action>
 
-  <section class="section-slide ss-text">
+  <section class="section-slide ss-text" id="home-text">
     <div class="section-container">
+      <h2>Building an Internet of Blockchains</h2>
       <div class="section-content">
-        <h2>Architecture</h2>
+        <h3>Purpose</h3>
+        <p><strong>Cosmos</strong> is a project with an ambitious mission: To create a network of distributed ledgers that will solve long-standing problems in the cryptocurrency and blockchain communities.</p>
+        <h3>Architecture</h3>
         <p>
         The Cosmos network consists of many independent, parallel blockchains,
         called zones, each powered by classical Byzantine fault-tolerant (BFT)
@@ -17,9 +19,7 @@
         application of the Bitcoin sidechains concept, using classic BFT and
         Proof-of-Stake algorithms, instead of Proof-of-Work (see <a v-link="{ path: '/whitepaper' }">our whitepaper</a> for more details).
         </p>
-      </div>
-      <div class="section-content">
-        <h2>Cosmos Hub</h2>
+        <h3>Cosmos Hub</h3>
         <p>
         The first blockchain in the Cosmos network is the Cosmos hub. The Cosmos
         hub connects to zones via the novel IBC (inter-blockchain communication)
@@ -37,6 +37,8 @@
       </div>
     </div>
   </section>
+
+  <section-call-to-action></section-call-to-action>
 
   <section class="section-slide">
     <div class="section-container">
@@ -148,7 +150,7 @@ export default {
     SectionCallToAction
   },
   created () {
-    document.title = 'The Internet of Blockchains - Cosmos'
+    document.title = 'Internet of Blockchains - Cosmos'
   }
 }
 </script>
@@ -163,29 +165,34 @@ export default {
     padding 3rem 1.5rem 1.5rem
     max-width 32rem
     margin 0 auto
+
     .image
-      margin 0 0 3rem
+      margin 0 0 2rem
       img
         display block
         margin 0 auto
-        width 100%
+        width 75%
         max-width 26rem
 
-    .section-content
-      h2
-        font-size 1.5rem
-        margin 0 0 1rem
-        text-align center
-        letter-spacing 0.01em
-      p
-        margin 0 0 1.5rem
+    h2
+      font-size 1.5rem
+      margin 0 0 1rem
+      text-align center
+      letter-spacing 0.01em
+
+    h3
+      font-size 1.25rem
+      font-weight 400
+      margin 0 0 0.5rem
+
+    p
+      margin 0 0 1.5rem
 
 @media screen and (min-width:720px)
   .section-slide
     .section-container
-      .section-content
-        h2
-          font-size 2em
+      h2
+        font-size 2em
 
 @media screen and (min-width: 960px)
   .section-slide
@@ -211,14 +218,13 @@ export default {
 
     &.ss-text
       .section-container
-        align-items flex-start
+        display block
 
-        .section-content:first-of-type
-          padding 0
-          padding-right 2rem
-        .section-content:last-of-type
-          padding 0
-          padding-left 2rem
+        .section-content
+          column-count 2
+          column-gap 3rem
+        h2
+          margin-bottom 3rem
 
     &.ss-alt
       .section-container
@@ -247,8 +253,7 @@ export default {
 
     &.ss-text
       .section-container
+        max-width 72rem
         .section-content
-          padding-right 3rem
-          &.section-content-extended
-            margin-right 50%
+          column-gap 4rem
 </style>

@@ -33,7 +33,7 @@ export default {
 @require '../../styles/variables.styl'
 
 .select-wrapper
-  border 1px solid bc
+  border 1px solid ibc
   height 2rem
 
   position relative
@@ -49,7 +49,7 @@ export default {
     top -1px
     right -1px
 
-    border 1px solid bc
+    border 1px solid ibc
     background subtle-gradient
 
     font-family 'Material Icons'

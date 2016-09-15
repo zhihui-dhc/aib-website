@@ -1,3 +1,13 @@
+# 2016-09-15
+* Homepage update
+    * Reverted the top sections back to before
+    * Desgin improvement.
+    * Reduced the size of the images by roughly 25%.
+* Footer updated to icons instead of circles.
+* Crowdfund page - the 1/2/3/4 tabs look less like tabs and more like a status indicator.
+* ToC - content animation when hiding the ToC for desktop displays
+* Overall site design updates & bug fixes
+
 # 2016-09-14
 * Crowdfund pages:
     * Added two more pages to the crowdfund process. Now it is:

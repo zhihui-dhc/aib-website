@@ -1,6 +1,7 @@
 btn()
   background subtle-gradient
-  border 1px solid #ddd
+  border 1px solid ibc
+  border-radius 0
   box-shadow inset hsla(0,0,100%,0.5) 0 0 0.5rem
 
   padding 0.5*x - 1px 1rem
@@ -12,13 +13,14 @@ btn()
   font-weight 400
   height 2rem
   line-height 1rem
-  text-align center
 
   cursor pointer
   user-select none
 
   display flex
   justify-content center
+  align-items center
+  -webkit-appearance none
 
   &:hover
     background subtle-gradient-hover

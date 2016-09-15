@@ -3,7 +3,7 @@
 
     <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email Address">
 
-    <input type="submit" value="Alert Me" name="subscribe" id="mc-embedded-subscribe" class="btn">
+    <input type="submit" class="btn" value="Notify Me" name="subscribe" id="mc-embedded-subscribe">
 
     <div id="mce-responses" class="clear">
       <div class="response" id="mce-error-response" style="display:none"></div>
@@ -23,13 +23,13 @@
 @import '../../styles/variables.styl'
 
 form
-  display flex
-  flex-flow column
   max-width 40rem
   padding 0 1rem
 
-  input
-    flex 1
-    &[type="email"]
-      margin 0 0 0.5rem
+  input, .btn
+    display block
+    width 100%
+
+  input[type="email"]
+    margin 0 0 0.5rem
 </style>
