@@ -6,7 +6,7 @@
       </a> 
     </div>
     <nav id="site-nav">
-      <a class="nav-link" v-link="{ path: '/blog' }">Blog</a>
+      <a class="nav-link" v-link="{ path: '/blog', exact: true }">Blog</a>
       <a v-link="{ path: '/plan' }">Plan</a>
       <a v-link="{ path: '/faq' }">FAQ</a>
       <a v-link="{ path: '/whitepaper' }">Whitepaper</a>

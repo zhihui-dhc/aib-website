@@ -1,3 +1,11 @@
+# 2016-09-16
+* Blog
+    * code is now in `./blog/` - reorganized and improved
+    * added a footer to blog posts with links to Blog Index, Share on Facebook, and Share on Twitter
+    * mobile - added a hovering back button for individual posts to get back to the Blog Index
+    * working global RSS feed for the blog added.
+* Overall site design updates
+
 # 2016-09-15
 * Homepage update
     * Reverted the top sections back to before

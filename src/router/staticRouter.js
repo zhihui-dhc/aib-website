@@ -1,7 +1,6 @@
-// ANY ROUTES ABOVE THIS IS GENERATED FROM `npm run blog`
+// STATIC ROUTES
 import VueRouter from 'vue-router'
 
-// STATIC ROUTES
 import PageIndex from '../components/pages/Index.vue'
 import PageBlogIndex from '../components/pages/BlogIndex.vue'
 import PageFaq from '../components/pages/FAQ.vue'

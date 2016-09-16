@@ -14,14 +14,8 @@ import $ from 'jquery'
 export default {
   methods: {
     scrollDown () {
-      let height = $('#home-text').offset().top - 48
+      let height = $('#home-text').offset().top - 48 + 8
       $('html, body').animate({ scrollTop: height }, 666)
-    },
-    viewStep (id) {
-      let scrollSpeed = 666
-      let height = $(id).offset().top
-      if (id !== '#walkthrough') { height -= 48 }
-      $('html, body').animate({ scrollTop: height }, scrollSpeed)
     }
   }
 }
@@ -55,7 +49,7 @@ export default {
     background mbg
     box-shadow inset hsl(0,0,95%) 0 0 2rem
 
-    transition 100ms ease all
+    text-select none
 
     &:hover
       border-color link

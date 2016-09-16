@@ -1,7 +1,6 @@
 var RSS = require('rss')
  
 module.exports = exports = function (posts) {
-	/* vars create an rss feed */
 	var feed = new RSS({
 		title: 'Cosmos Blog',
 		description: 'The Internet of Blockchains',
@@ -16,7 +15,6 @@ module.exports = exports = function (posts) {
 		ttl: '60',
 	})
 	 
-	/* loop over data and add to feed */
 	for (var i = 0; i < posts.length; i++) {
 		var p = posts[i]
 		feed.item({
@@ -28,9 +26,5 @@ module.exports = exports = function (posts) {
 		})
 	}
 	 
-	// cache the xml to send to clients 
-	var xml = feed.xml()
-
-	console.log(xml)
-	return xml
+	return feed.xml()
 }

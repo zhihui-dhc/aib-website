@@ -7,8 +7,8 @@
   "scripts": {
     "dev": "node build/dev-server.js",
     "prod": "node build/prod-server.js",
-    "build": "node build/blog.js && node build/build.js",
-    "blog": "node build/blog.js",
+    "blog": "node blog/build.js",
+    "build": "node blog/build.js && node build/build.js",
     "unit": "karma start test/unit/karma.conf.js --single-run",
     "e2e": "node test/e2e/runner.js",
     "test": "npm run unit && npm run e2e",

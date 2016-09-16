@@ -28,7 +28,7 @@ For detailed explanation on how things work, checkout the [guide](http://vuejs-t
 
 ## Blogging
 
-Create and edit posts with Markdown in the `./src/posts/` directory.
+Create and edit posts with Markdown in the `./blog/posts/` directory.
 
 Be sure to include YAML meta data for each Markdown file. Here's an example post:
 
@@ -36,6 +36,7 @@ Be sure to include YAML meta data for each Markdown file. Here's an example post
     title: Just a Test
     date: 2016-04-04
     author: Peng Zhong
+    excerpt: Just a short introductory excerpt.
     ---
 
     Here is some markdown data. This is **just** a *test*.
@@ -48,4 +49,4 @@ Be sure to include YAML meta data for each Markdown file. Here's an example post
     2. Five
     3. Six
 
-Build the blog only with `npm run blog`, or everything with `npm run build`.
+Build the blog files with `npm run blog`. Build the entire site with with `npm run build`.

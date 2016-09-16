@@ -18,7 +18,6 @@
 <script>
 </script>
 
-
 <style lang="stylus" scoped>
 @import '../../styles/variables.styl'
 
