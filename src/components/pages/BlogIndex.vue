@@ -21,3 +21,12 @@
     </a>
   </div><!--article-wrapper-->
 </template>
+<script>
+export default {
+  head: {
+    title: {
+      inner: 'Blog'
+    }
+  }
+}
+</script>

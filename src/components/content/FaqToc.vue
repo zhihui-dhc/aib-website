@@ -74,8 +74,6 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-@import '../../styles/variables.styl'
-
 .toc-wrapper
   ul > li
     > a

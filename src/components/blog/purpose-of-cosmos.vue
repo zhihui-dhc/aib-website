@@ -136,11 +136,15 @@ export default {
     ArticleBackBtn,
     ArticleFooter
   },
-  created () { document.title = 'Purpose of Cosmos - Cosmos' },
   data () {
     return {
       facebookUrl: `https://www.facebook.com/sharer/sharer.php?u=${window.location.href}`,
       twitterUrl: `https://twitter.com/home?status=Purpose%20of%20Cosmos%20${window.location.href}`
+    }
+  },
+  head: {
+    title: {
+      inner: 'Purpose of Cosmos'
     }
   }
 }

@@ -1,23 +1,24 @@
-import $ from 'jquery'
 import copyToClipboard from './copyToClipboard.js'
 
 export default function () {
-  $('h2[id], h3[id], h4[id]').append(function () {
-    let href = '#' + $(this).attr('id')
-    return `<i class="material-icons article-link" href="${href}">link</i>`
+  let headings = Array.from(document.querySelectorAll('h2[id], h3[id], h4[id]'))
+  headings.map(function (h) {
+    let href = '#' + h.id
+    h.innerHTML += `<i class="material-icons article-link" href="${href}">link</i>`
   })
 
-  $('i.article-link').click(function () {
-    let link = this
-    let url = window.location.href + $(this).attr('href')
+  function watchClick (link) {
+    let url = window.location.href + link.getAttribute('href')
     copyToClipboard(url)
 
     // show the Copied! message for 1 second
-    $(link).addClass('active')
+    link.classList.add('active')
 
     setTimeout(function () {
-      $(link).removeClass('active')
+      link.classList.remove('active')
       // console.log('a second passed!')
     }, 1000)
-  })
+  }
+  let articleLinks = Array.from(document.querySelectorAll('i.article-link'))
+  articleLinks.map(link => link.addEventListener('click', function () { watchClick(link) }))
 }

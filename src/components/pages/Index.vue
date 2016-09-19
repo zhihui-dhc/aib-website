@@ -149,8 +149,10 @@ export default {
     SectionCover,
     SectionCallToAction
   },
-  created () {
-    document.title = 'Internet of Blockchains - Cosmos'
+  head: {
+    title: {
+      inner: 'Internet of Blockchains'
+    }
   }
 }
 </script>

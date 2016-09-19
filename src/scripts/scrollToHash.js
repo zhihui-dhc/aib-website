@@ -1,5 +1,5 @@
 /* eslint-env browser */
-import $ from 'jquery'
+import scrollTo from 'scroll-to'
 
 export default function () {
   let hash = window.location.hash
@@ -11,9 +11,9 @@ export default function () {
 
     // scroll to the hash with an animation
     // it has to be in document ready otherwise loading images will break it
-    $(document).ready(function () {
-      let height = $(hash).offset().top - 48 - 16
-      $('html, body').animate({scrollTop: height}, scrollSpeed)
+    document.addEventListener('DOMContentLoaded', function () {
+      let y = hash.offsetTop - 48
+      scrollTo(0, y, { duration: scrollSpeed })
     })
   }
 }

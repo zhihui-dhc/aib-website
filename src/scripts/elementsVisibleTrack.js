@@ -1,5 +1,4 @@
 /* global IntersectionObserver */
-import $ from 'jquery'
 import 'intersection-observer'
 
 let visibleElements = []
@@ -34,9 +33,9 @@ function onChange (entries) {
 export default function () {
   let io = new IntersectionObserver(onChange, { threshold: [ 1 ] })
 
-  // observe headings
-  $('h2, h3, h4').each(function (index) {
-    io.observe(this)
+  let headings = document.querySelectorAll('h2, h3, h4')
+  Array.from(headings).map(function (el) {
+    io.observe(el)
   })
 
   return visibleElements

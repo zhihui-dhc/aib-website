@@ -9,13 +9,13 @@
 </template>
 
 <script>
-import $ from 'jquery'
+import scrollTo from 'scroll-to'
 
 export default {
   methods: {
     scrollDown () {
-      let height = $('#home-text').offset().top - 48 + 8
-      $('html, body').animate({ scrollTop: height }, 666)
+      let y = document.querySelector('#home-text').offsetTop - 48 + 8
+      scrollTo(0, y, { duration: 666 })
     }
   }
 }

@@ -10,8 +10,7 @@ import 'moment-countdown'
 export default {
   data () {
     return {
-      countdown: '',
-      countdownFunction: countdown
+      countdown: ''
     }
   },
   methods: {
@@ -20,10 +19,8 @@ export default {
     }
   },
   ready () {
-    let self = this
-    setInterval(function () {
-      self.updateCountdown()
-    }, 1000)
+    this.updateCountdown()
+    setInterval(() => this.updateCountdown(), 1000)
   }
 }
 </script>

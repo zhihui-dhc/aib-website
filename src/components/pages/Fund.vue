@@ -153,16 +153,12 @@
 
 <script>
 import CustomSelect from '../forms/CustomSelect.vue'
-import ExchangeRateCalculator from '../partials/ExchangeRateCalculator.vue'
 import DevCounterNav from '../forms/DevCounterNav.vue'
-
-import $ from 'jquery'
 
 export default {
   components: {
     CustomSelect,
-    DevCounterNav,
-    ExchangeRateCalculator
+    DevCounterNav
   },
   computed: {
     bitcoinPrice () {
@@ -186,18 +182,24 @@ export default {
       }
     }
   },
+  head: {
+    title: {
+      inner: 'Purchase Atoms'
+    }
+  },
   methods: {
     goToStep (step) {
       this.step = step
-      console.log(JSON.stringify(this.customer))
+      // console.log(JSON.stringify(this.customer))
     },
     goHome () {
       this.$route.router.go('/')
     }
   },
   ready () {
-    $('.highlight-on-focus').click(function () {
-      $(this).select()
+    let highlights = document.querySelectorAll('.highlight-on-focus')
+    Array.from(highlights).map(function (el) {
+      el.addEventListener('click', function () { this.select() })
     })
   },
   vuex: {

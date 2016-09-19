@@ -48,11 +48,15 @@ export default {
     ArticleBackBtn,
     ArticleFooter
   },
-  created () { document.title = 'Disclaimers for Crowdfund Participants - Cosmos' },
   data () {
     return {
       facebookUrl: `https://www.facebook.com/sharer/sharer.php?u=${window.location.href}`,
       twitterUrl: `https://twitter.com/home?status=Disclaimers%20for%20Crowdfund%20Participants%20${window.location.href}`
+    }
+  },
+  head: {
+    title: {
+      inner: 'Disclaimers for Crowdfund Participants'
     }
   }
 }

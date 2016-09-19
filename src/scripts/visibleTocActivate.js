@@ -1,19 +1,16 @@
-import $ from 'jquery'
-
 export default function (visibleElements) {
-  let anchors = document.querySelectorAll('.toc-wrapper a')
+  let anchors = Array.from(document.querySelectorAll('.toc-wrapper a'))
 
-  for (let i = 0; i < anchors.length; i++) {
-    let el = anchors[i]
-    let id = $(el).attr('href')
+  anchors.map(function (el) {
+    let id = el.getAttribute('href')
     id = id.replace('#', '')
 
     if (visibleElements.find(el => el.id === id)) {
-      $(el).addClass('active')
-      $(el).parent().addClass('active')
+      el.classList.add('active')
+      el.parentElement.classList.add('active')
     } else {
-      $(el).removeClass('active')
-      $(el).parent().removeClass('active')
+      el.classList.remove('active')
+      el.parentElement.classList.remove('active')
     }
-  }
+  })
 }

@@ -35,11 +35,15 @@ export default {
     ArticleBackBtn,
     ArticleFooter
   },
-  created () { document.title = 'Test Post - Cosmos' },
   data () {
     return {
       facebookUrl: `https://www.facebook.com/sharer/sharer.php?u=${window.location.href}`,
       twitterUrl: `https://twitter.com/home?status=Test%20Post%20${window.location.href}`
+    }
+  },
+  head: {
+    title: {
+      inner: 'Test Post'
     }
   }
 }

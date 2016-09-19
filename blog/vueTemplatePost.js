@@ -22,11 +22,15 @@ module.exports = exports = function (post) {
   f += '    ArticleBackBtn,\n'
   f += '    ArticleFooter\n'
   f += '  },\n'
-  f += `  created () { document.title = '${post.title} - Cosmos' },\n`
   f += '  data () {\n'
   f += '    return {\n'
   f += `      facebookUrl: ${facebookUrl},\n`
   f += `      twitterUrl: ${twitterUrl}\n`
+  f += '    }\n'
+  f += '  },\n'
+  f += '  head: {\n'
+  f += '    title: {\n'
+  f += `      inner: '${post.title}'\n`
   f += '    }\n'
   f += '  }\n'
   f += '}\n'

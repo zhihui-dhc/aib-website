@@ -11,19 +11,19 @@
 <script>
 import FaqToc from '../content/FaqToc.vue'
 import FaqContent from '../content/FaqContent.vue'
-import $ from 'jquery'
 
 export default {
   components: {
     FaqToc,
     FaqContent
   },
-  created () {
-    document.title = 'FAQ - Cosmos'
+  head: {
+    title: {
+      inner: 'FAQ'
+    }
   },
   ready () {
-    let vw = $(window).width()
-    if (vw < 960) {
+    if (document.documentElement.clientWidth < 960) {
       this.$store.dispatch('SET_FAQ_TOC_VISIBLE', false)
     }
   },
