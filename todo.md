@@ -2,7 +2,7 @@
 * Removed the dependency on jQuery in favor of vanilla js, reduzing size of vendor.js from 435 kB -> 359 kB
 * Enabled the creation of gzipped files when you run `npm run build`. Sample file size improvements:
     Old: app.css (41.8 kB), vendor.js (359 kB), app.js (243 kB), total 648 kB
-    New: app.css.gz (6.76 kB), vendor.js.gz (111 kB), app.js.gz (82.1 kB), total 200 kB (71% smaller)
+    New: app.css.gz (6.76 kB), vendor.js.gz (70 kB), app.js.gz (80.9 kB), total 158 kB (76% smaller)
 * Cleaned up the images directory by moving PSDs out and crushing the PNGs
 * Updated page titles
 
