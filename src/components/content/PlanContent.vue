@@ -1,6 +1,24 @@
 <template>
   <h1>Crowdfund Plan</h1>
-  <div class="subtitle">Last Updated: Aug 29th, 2016</div>
+  <div class="subtitle">Last Updated: Sept 21st, 2016</div>
+
+  <p>
+    <em>
+      <font style="background-color:yellow">Update 1 (Sept 21st, 2016):</font><br/>
+      We are exploring an alternative plan which involves a smaller pre-funding round from non-US funders, US-accredited funders, and strategic validating partners. 
+      We will make a final decision by the end of September.  If we proceed with this alternative plan, we will delay the main crowdfund until as late as Jan/Feb next year.
+      Sorry for any inconvenience or confusion.  Please <a href="mailto:prefund@tendermint.com">contact us</a> if you have any questions.
+    </em>
+  </p>
+
+  <p>
+    <em>
+      <font style="background-color:yellow">Update 2 (Sept 21st, 2016):</font><br/>
+      The crowdfund will be administrated by the US Delaware entity behind Tendermint, called ALL IN BITS, Inc.  Previously we had mentioned that the crowdfund
+      will be administrated by a Canadian non-profit entity.  This is no longer the case.
+    </em>
+  </p>
+  <hr /><br />
 
   <p>
     We’ve decided to crowdfund our project to raise funds to allow us to
@@ -13,32 +31,31 @@
   </p>
   <ul>
     <li>
-        Cosmos Foundation is a non-profit Canadian entity. Its mission is to
-        create, maintain, and further develop, the Cosmos ecosystem.
+      All in Bits, Inc (AIB) is a for-profit Delaware C-Corp behind Tendermint.
+      Its mission is to create, maintain, and further develop, Tendermint and Cosmos.
     </li>
     <li>
-        Cosmos Foundation will hold a crowdfunding campaign to sell tokens,
+        AIB will hold a crowdfunding campaign to sell tokens,
         called <i>atoms</i>, that give the holder limited license to use the Cosmos hub.
-        Proceeds will go to the Cosmos Foundation to develop the essential Cosmos
-        software and services.
+        Proceeds will go to the AIB to develop the essential Cosmos software and services.
     </li>
     <li>There will be 20,000,000 atoms on Genesis day. On Genesis day, the
       distribution of atoms will be split between:
       <!--
       <ul>
         <li>Pre-funders (5%)</li>
-        <li>Cosmos Foundation (20%)</li>
+        <li>AIB (20%)</li>
         <li>Crowdfund Funders (75%)</li>
       </ul>
       -->
       <viz-atom-split></viz-atom-split>
     </li>
     <li>
-        Upon completion of the crowdfund, all the atom holders, including Cosmos
-        Foundation, will play the Delegation Game in a special purpose Ethereum
-        smart contract (which holds no ether). The top 100 validators after
-        delegation will be chosen as validators for the genesis block, which will
-        be the first block in the Cosmos blockchain. 
+        Upon completion of the crowdfund, all the atom holders, including AIB,
+        will play the Delegation Game in a special purpose Ethereum smart
+        contract (which holds no ether). The top 100 validators after
+        delegation will be chosen as validators for the genesis block, which
+        will be the first block in the Cosmos blockchain. 
     </li>
     <li>
         Everyone&#39;s atoms will vest over a period of two years after Genesis.
@@ -67,7 +84,7 @@
   <!-- FUNDING ------------------------------------------------------>
 
   <h2 id="funding">Funding</h2>
-  <p>Cosmos Foundation is raising funds in two phases.</p>
+  <p>AIB is raising funds in two phases.</p>
 
   <h3 id="phase-0-the-prefund">Phase 0: Prefund (completed August 4, 2016)</h3>
   <p>
@@ -111,14 +128,6 @@
     The Cosmos network and supporting software and services, including
     validator and client software.
   </p>
-  <p><strong>Cosmos Foundation</strong>:
-    A non-profit Canadian legal entity that manages the crowdfund and genesis
-    of the Cosmos hub. Besides the initial development of the essential
-    Cosmos software and services, Cosmos Foundation. has no further
-    obligations with regards to the Cosmos ecosystem, Cosmos hub, or
-    derivatives (forks) of the Cosmos hub, but instead is a general
-    participant in the network.
-  </p>
   <p><strong>Cosmos Hub</strong>:
     A blockchain, or zone, that connects to many other zones. The hub
     facilitates token movement between zones. The Cosmos hub will be the
@@ -156,7 +165,7 @@
   <p><strong>Early Funders</strong>:
     Qualified investors who purchased 5% of the genesis atoms prior to the
     crowdfund. The majority of the proceeds from the early funding will go
-    toward legal and PR fees, and also help pay salary for Cosmos Foundation
+    toward legal and PR fees, and also help pay salary for AIB
     employees until the crowdfund is complete.
   </p>
   <p><strong>Validator</strong>:
@@ -185,7 +194,7 @@
     <li>EoCF + 12 months: begin sale of compatible open-source hardware wallet</li>
     <li>EoCF + 13 months: beta release candidate of Alpha Hub for security audit</li>
     <li>EoCF + 15 months: launch Cosmos Hub beta</li>
-    <li>EoCF + 15 months+: Continuous development, timeline set by Cosmos Foundation</li>
+    <li>EoCF + 15 months+: Continuous development, timeline set by AIB</li>
     <li>Timeline for Bitcoin and Ethereum pegs will be set after alpha release of Cosmos Hub, and depends on funding and partnership</li>
   </ol>
   -->

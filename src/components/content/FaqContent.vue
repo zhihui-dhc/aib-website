@@ -107,12 +107,11 @@
     consensus be different in different scenarios?</h3>
   <p>
     We can accommodate other proof-of-state consensus mechanisms as long as
-    they have a very clean and concise light-client verification protocol.
-    Or, we may even at some point upgrade Tendermint so that it supports
-    additional consensus features. But any changes will be up to the Cosmos
-    Foundation and the Cosmos governance. But adapter zones will make that
-    unnecessary. That's what a Bitcoin peg zone is  — an adapter zone to sit
-    between PoW and Tendermint.
+    they have a very clean and concise light-client verification protocol.  Or,
+    we may even at some point upgrade Tendermint so that it supports additional
+    consensus features. But any changes will be up to the hub's governance
+    system.  But adapter zones will make that unnecessary. That's what a
+    Bitcoin peg zone is  — an adapter zone to sit between PoW and Tendermint.
   </p>
 
   <h3 id="zone-own-validators">Do chosen validators validate transactions for every zone and hub?</h3>
