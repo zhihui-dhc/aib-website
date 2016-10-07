@@ -60,7 +60,7 @@
           <li>
             <a href="#the-atom-token">The Atom Token</a>
             <ul>
-              <li><a href="#crowdfund">Crowdfund</a></li>
+              <li><a href="#fundraiser">Fundraiser</a></li>
               <li><a href="#vesting">Vesting</a></li>
             </ul>
           </li>

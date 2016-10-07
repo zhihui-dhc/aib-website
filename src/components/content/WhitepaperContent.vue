@@ -481,12 +481,12 @@ transaction fees are rewarded to validators and delegators who delegate to
 validators.</p>
 <p>The <code>BurnAtomTx</code> transaction can be used to recover any proportionate amount of
 tokens from the reserve pool.</p>
-<h4 id="crowdfund">Crowdfund</h4>
+<h4 id="fundraiser">Fundraiser</h4>
 <p>The initial distribution of atom tokens and validators on Genesis will go to the
-funders of the Cosmos Crowdsale (75%), pre-funders (5%), and ALL IN BITS, Inc (20%).
+donors of the Cosmos Fundraiser (75%), lead donors (5%), and ALL IN BITS, Inc (20%).
 From genesis onward, 1/3 of the total amount of atoms will be rewarded to bonded
 validators and delegators every year.</p>
-<p>See the <a href="https://github.com/cosmos/cosmos/blob/master/PLAN.md">Crowdfund Plan</a>
+<p>See the <a href="https://github.com/cosmos/cosmos/blob/master/PLAN.md">Cosmos Plan</a>
 for additional details.</p>
 <h4 id="vesting">Vesting</h4>
 <p>To prevent the crowdfund from attracting short-term speculators only interested
