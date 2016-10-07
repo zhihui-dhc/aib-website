@@ -3,7 +3,7 @@
 
   <section class="section-slide ss-text" id="home-text">
     <div class="section-container">
-      <h2>Building an Internet of Blockchains</h2>
+      <h2>Building a Network of Blockchains</h2>
       <div class="section-content">
         <h3>Purpose</h3>
         <p><strong>Cosmos</strong> is a project with an ambitious mission: To create a network of distributed ledgers that will solve long-standing problems in the cryptocurrency and blockchain communities.</p>
@@ -149,10 +149,8 @@ export default {
     SectionCover,
     SectionCallToAction
   },
-  head: {
-    title: {
-      inner: 'Internet of Blockchains'
-    }
+  created () {
+    document.title = 'Network of Blockchains - Cosmos'
   }
 }
 </script>

@@ -1,10 +1,10 @@
 <template>
   <section id="section-cta">
     <div class="section-container">
-      <h2>Token Crowdfund</h2>
+      <h2>Fundraising Event</h2>
       <div class="description">
         <p>
-          Atom tokens are available for purchase soon.
+          Cosmos fundraising event starts Feb 2017.
         </p>
       </div>
       <email-signup-form></email-signup-form>

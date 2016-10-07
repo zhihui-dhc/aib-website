@@ -3,7 +3,7 @@
     <div class="section-container" @click="scrollDown">
       <!--<div id="logo-slash"></div>-->
       <h1 id="cover-title"><img src="../../assets/images/cosmos_logo_m.png" title="Cosmos"></h1>
-      <h2 id="cover-subtitle">Internet of Blockchains</h1>
+      <h2 id="cover-subtitle">Network of Blockchains</h1>
     </div>
   </section>
 </template>
