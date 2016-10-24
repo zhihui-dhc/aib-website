@@ -45,5 +45,6 @@ export default {
 </script>
 
 <style lang="stylus">
-@import './styles/screen.styl'
+@import './styles/screen.styl' screen
+@import './styles/print.styl' print
 </style>
