@@ -5,7 +5,7 @@
   <div class="article-wrapper">
     <h1>Purpose of Cosmos</h1>
 
-    <div class="subtitle">August 30, 2016 by Jae Kwon</div>
+    <div class="subtitle">August 31, 2016 by Jae Kwon</div>
 
 <p>We believe in the power of public blockchains to provide a public good,
 powered by a collection of self-motivated actors governed by the rules of a

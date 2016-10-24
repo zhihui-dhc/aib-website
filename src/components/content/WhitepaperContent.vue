@@ -4,7 +4,7 @@
 
 <p>Jae Kwon jae@tendermint.com<br/>
 Ethan Buchman ethan@tendermint.com</p>
-<p>For discussions, <a href="http://forum.tendermint.com:3000/">join our Slack</a>!</p>
+<p>For discussions, <a href="http://forum.tendermint.com:3000/">join our Slack</a>! For a PDF copy, <a href="/static/whitepaper.pdf">click here</a>.</p>
 <p><em>NOTE: If you can read this on GitHub, then we&#39;re still actively developing this
 document.  Please check regularly for updates!.</em></p>
 
@@ -1438,7 +1438,13 @@ Han</a> for various contributions.</li>
 <script>
 import linkifyHeadings from '../../scripts/linkifyHeadings.js'
 import scrollToHash from '../../scripts/scrollToHash.js'
+import whitepaperPdf from '../../assets/whitepaper.pdf'
 export default {
+  data () {
+    return {
+      whitepaper: whitepaperPdf
+    }
+  },
   ready () {
     linkifyHeadings()
     scrollToHash()

@@ -11,6 +11,7 @@
 <div class="toc-wrapper" v-show="tocVisible">
 <div class="toc-header">
   <div class="toc-title">Table of Contents</div>
+  <i class="material-icons" @click="print">print</i>
   <i class="toc-toggle material-icons desktop-only" @click="showToc(hide)">chevron_right</i>
   <i class="toc-toggle material-icons mobile-only" @click="showToc(hide)">close</i>
 </div>
@@ -164,6 +165,9 @@ export default {
         Ps.destroy(document.querySelector('.toc-wrapper'))
         this.$store.dispatch('SET_WHITEPAPER_TOC_VISIBLE', false)
       }
+    },
+    print () {
+      window.print()
     }
   },
   ready () {

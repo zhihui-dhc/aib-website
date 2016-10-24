@@ -66,6 +66,13 @@ module.exports = {
         }
       },
       {
+        test: /\.pdf/,
+        loader: 'file',
+        query: {
+          name: utils.assetsPath('[name].[ext]')
+        }
+      },
+      {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
         loader: 'url',
         query: {
