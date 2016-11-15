@@ -12,7 +12,7 @@
     <a class="article-link" v-link="{ path: '/blog/purpose-of-cosmos'}">
       <div class="article-title">Purpose of Cosmos</div>
       <div class="article-excerpt">Cosmos is a culmination of lessons of prior cryptocurrencies. It's designed to be extended to incorporate future innovations. It's a distributed ledger platform suitable for generations to come.</div>
-      <div class="article-date">Posted on August 31, 2016</div>
+      <div class="article-date">Posted on August 30, 2016</div>
     </a>
   </div><!--article-wrapper-->
 </template>

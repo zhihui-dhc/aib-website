@@ -6,7 +6,7 @@
     </div>
     <div class="event">
       <div class="key">2016-08-xx</div>
-      <div class="value">The Canadian non-profit Cosmos Foundation is created.</div>
+      <div class="value">The Canadian non-profit Cosmos Network Foundation is created.</div>
     </div>
     <div class="event">
       <div class="key">2016-10-17</div>
@@ -50,7 +50,7 @@
     </div>
     <div class="event">
       <div class="key">EoCF + 15 months+</div>
-      <div class="value">Continuous development with the timeline set by Cosmos Foundation.</div>
+      <div class="value">Continuous development with the timeline set by Cosmos Network Foundation.</div>
     </div>
     <div class="event">
       <div class="key">&ndash;</div>

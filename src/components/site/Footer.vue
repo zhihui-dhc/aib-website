@@ -3,7 +3,7 @@
     <section-call-to-action v-if="!isThisAFundPage"></section-call-to-action>
     <section-social-media></section-social-media>
     <div id="site-bottom">
-      <p>&copy; 2016 ALL IN BITS, Inc</p>
+      <p>&copy; 2016 Cosmos Network Foundation</p>
     </div>
   </footer>
 </template>
