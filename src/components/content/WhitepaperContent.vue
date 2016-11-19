@@ -482,8 +482,9 @@ validators.</p>
 <p>The <code>BurnAtomTx</code> transaction can be used to recover any proportionate amount of
 tokens from the reserve pool.</p>
 <h4 id="fundraiser">Fundraiser</h4>
-<p>The initial distribution of atom tokens and validators on Genesis will go to the
-donors of the Cosmos Fundraiser (75%), lead donors (5%), and ALL IN BITS, Inc (20%).
+<p>The initial distribution of atom tokens and validators on Genesis will go to
+the donors of the Cosmos Fundraiser (75%), lead donors (5%), Cosmos Network
+Foundation (10%), and ALL IN BITS, Inc (10%).
 From genesis onward, 1/3 of the total amount of atoms will be rewarded to bonded
 validators and delegators every year.</p>
 <p>See the <a href="https://github.com/cosmos/cosmos/blob/master/PLAN.md">Cosmos Plan</a>
