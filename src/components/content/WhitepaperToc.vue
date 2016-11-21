@@ -181,13 +181,13 @@ export default {
   mounted () {
     Ps.initialize(document.querySelector('.toc-wrapper'))
     watchTocClicks(this.showToc)
-    this.$store.commit('setFaqElementsVisible',
-      inViewport(document.querySelector('h2, h3, h4')))
+    this.$store.commit('setWhitepaperElementsVisible',
+      inViewport(document.querySelectorAll('h2, h3, h4')))
     percentageScrolling()
   },
   props: ['toc-visible'],
   watch: {
-    elementsVisible () { visibleTocActivate(this.whitepaperElementsVisible) }
+    whitepaperElementsVisible () { visibleTocActivate(this.whitepaperElementsVisible) }
   }
 }
 </script>

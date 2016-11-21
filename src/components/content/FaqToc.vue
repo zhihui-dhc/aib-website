@@ -69,7 +69,7 @@ export default {
     Ps.initialize(document.querySelector('.toc-wrapper'))
     watchTocClicks(this.showToc)
     this.$store.commit('setFaqElementsVisible',
-      inViewport(document.querySelector('h2, h3, h4')))
+      inViewport(document.querySelectorAll('h2, h3, h4')))
     percentageScrolling()
   },
   props: ['toc-visible'],
