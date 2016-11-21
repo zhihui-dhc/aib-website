@@ -32,7 +32,7 @@ export default {
   },
   mounted () {
     if (document.documentElement.clientWidth < 960) {
-      this.$store.dispatch('SET_WHITEPAPER_TOC_VISIBLE', false)
+      this.$store.commit('setWhitepaperTocVisible', false)
     }
   }
 }

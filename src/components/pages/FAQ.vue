@@ -1,12 +1,12 @@
 <template>
   <div>
-  <faq-toc></faq-toc>
-  <div class="header-padding"></div>
-  <div class="toc-padding" v-bind:class="{ 'toc-visible': faqTocVisible }">
-    <div class="article-wrapper">
-      <faq-content></faq-content>
+    <faq-toc></faq-toc>
+    <div class="header-padding"></div>
+    <div class="toc-padding" v-bind:class="{ 'toc-visible': faqTocVisible }">
+      <div class="article-wrapper">
+        <faq-content></faq-content>
+      </div>
     </div>
-  </div>
   </div>
 </template>
 
@@ -32,7 +32,7 @@ export default {
   },
   mounted () {
     if (document.documentElement.clientWidth < 960) {
-      this.$store.dispatch('SET_FAQ_TOC_VISIBLE', false)
+      this.$store.commit('setFaqTocVisible', false)
     }
   }
 }

@@ -40,7 +40,7 @@
 <script>
 import Ps from 'perfect-scrollbar'
 import watchTocClicks from '../../scripts/watchTocClicks.js'
-import elementsVisibleTrack from '../../scripts/elementsVisibleTrack.js'
+import inViewport from '../../scripts/inViewport.js'
 import visibleTocActivate from '../../scripts/visibleTocActivate.js'
 import percentageScrolling from '../../scripts/percentageScrolling.js'
 
@@ -68,7 +68,8 @@ export default {
   mounted () {
     Ps.initialize(document.querySelector('.toc-wrapper'))
     watchTocClicks(this.showToc)
-    this.$store.commit('setFaqElementsVisible', elementsVisibleTrack())
+    this.$store.commit('setFaqElementsVisible',
+      inViewport(document.querySelector('h2, h3, h4')))
     percentageScrolling()
   },
   props: ['toc-visible'],
