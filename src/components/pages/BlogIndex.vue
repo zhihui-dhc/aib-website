@@ -4,10 +4,15 @@
   <div class="article-wrapper" id="blog-index">
     <h1>Cosmos Blog</h1>
     <div class="subtitle"><a href="/static/feed.xml">Subscribe</a> for the latest updates.</div>
+    <a class="article-link" v-link="{ path: '/blog/bft-the-most-secure-proof-of-stake'}">
+      <div class="article-title">BFT: the most secure Proof-of-Stake</div>
+      <div class="article-excerpt">Many people have rallied against the use of PoS, claiming it is impossible to secure. But that is simply not true. Using BFT, you absolutely can secure PoS.  It’s just that we haven’t seen any BFT-PoS public blockchains yet.</div>
+      <div class="article-date">Posted on November 14, 2016</div>
+    </a>
     <a class="article-link" v-link="{ path: '/blog/purpose-of-cosmos'}">
       <div class="article-title">Purpose of Cosmos</div>
       <div class="article-excerpt">Cosmos is a culmination of lessons of prior cryptocurrencies. It's designed to be extended to incorporate future innovations. It's a distributed ledger platform suitable for generations to come.</div>
-      <div class="article-date">Posted on August 31, 2016</div>
+      <div class="article-date">Posted on August 30, 2016</div>
     </a>
   </div><!--article-wrapper-->
 </template>
