@@ -1,8 +1,7 @@
 <template>
   <div class="select-wrapper">
-    <select id="{{ id }}" v-model="model" required>
-      <option v-if="empty" value="" disabled selected hidden>Select&hellip;</option>
-      <option v-for="option in options | orderBy 'text'" v-bind:value="option.value">
+    <select :id="id" v-model="model" required>
+      <option v-for="option in orderedOptions" v-bind:value="option.value">
         {{ option.text }}
       </option>
     </select>
@@ -10,10 +9,24 @@
 </template>
 
 <script>
+import { orderBy } from 'lodash'
 export default {
+  computed: {
+    orderedOptions () {
+      return orderBy(this.options, ['text'], ['asc'])
+    }
+  },
   props: {
     id: String,
-    model: String,
+    model: {
+      type: String,
+      default () {
+        return {
+          value: '',
+          text: 'Select...'
+        }
+      }
+    },
     options: {
       type: Array,
       default () {

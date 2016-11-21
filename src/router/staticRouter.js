@@ -1,30 +1,30 @@
 // STATIC ROUTES
 import VueRouter from 'vue-router'
+function page (filename) { return require('../components/pages/' + filename) }
+function post (filename) { return require('../components/blog/' + filename) }
 
-import PageIndex from '../components/pages/Index.vue'
-import PageBlogIndex from '../components/pages/BlogIndex.vue'
-import PageFaq from '../components/pages/FAQ.vue'
-import PagePlan from '../components/pages/Plan.vue'
-import PageWhitepaper from '../components/pages/Whitepaper.vue'
-import PageFund from '../components/pages/Fund.vue'
+var staticRoutes = [
+  { path: '/', component: page('Index') },
 
-let staticRoutes = {
-  '/': { component: PageIndex },
-  '/blog': { component: PageBlogIndex },
-  '/faq': { component: PageFaq },
-  '/plan': { component: PagePlan },
-  '/whitepaper': { component: PageWhitepaper },
-  '/fund': { component: PageFund }
-}
+  { path: '/blog', component: page('BlogIndex') },
+  { path: '/faq', component: page('FAQ') },
+  { path: '/plan', component: page('Plan') },
+  { path: '/whitepaper', component: page('Whitepaper') },
+  { path: '/fund', component: page('Fund') }
 
-let routes = Object.assign(staticRoutes, blogRoutes)
+  // wildcards
+  // { path: '/404', component: page('404') },
+  // { path: '*', component: page('404') }
+]
 
-export default function (vue) {
-  vue.use(VueRouter)
+const routes = staticRoutes.concat(blogRoutes)
 
-  let router = new VueRouter({history: true})
+const router = new VueRouter({
+  mode: 'history',
+  routes,
+  scrollBehavior (to, from, savedPosition) {
+    return { x: 0, y: 0 }
+  }
+})
 
-  router.map(routes)
-
-  return router
-}
+export default router

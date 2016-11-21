@@ -1,8 +1,8 @@
 <template>
   <div id="article-footer">
-    <a id="link-blog-index" v-link="{ path: '/blog' }">
+    <router-link id="link-blog-index" to="/blog">
       <i class="material-icons">chevron_left</i> Blog Index
-    </a>
+    </router-link>
     <div id="article-footer-share">
       <a :href="facebookUrl" target="_blank"><img src="../../assets/images/logo-bw-facebook.png" alt="Share on Facebook"></a>
       <a :href="twitterUrl" target="_blank"><img src="../../assets/images/logo-bw-twitter.png" alt="Share on Twitter"></a>

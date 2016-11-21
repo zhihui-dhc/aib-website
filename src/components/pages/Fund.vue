@@ -1,4 +1,5 @@
 <template>
+  <div>
   <div class="header-padding"></div>
 
   <div class="fund-wrapper">
@@ -149,6 +150,7 @@
 
     </div>
   </div>
+  </div>
 </template>
 
 <script>
@@ -196,7 +198,7 @@ export default {
       this.$route.router.go('/')
     }
   },
-  ready () {
+  mounted () {
     let highlights = document.querySelectorAll('.highlight-on-focus')
     Array.from(highlights).map(function (el) {
       el.addEventListener('click', function () { this.select() })

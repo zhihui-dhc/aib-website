@@ -1,20 +1,23 @@
 <template>
   <header id="site-header">
     <div id="site-logo">
-      <a v-link="{ path: '/' }">
+      <router-link to="/">
         <img src="../../assets/images/cosmos_logo_m.png" alt="Cosmos">
-      </a> 
+      </router-link> 
     </div>
     <nav id="site-nav">
-      <a class="nav-link" v-link="{ path: '/blog', exact: true }">Blog</a>
-      <a v-link="{ path: '/plan' }">Plan</a>
-      <a v-link="{ path: '/faq' }">FAQ</a>
-      <a v-link="{ path: '/whitepaper' }">Whitepaper</a>
+      <router-link to="/blog" exact>Blog</router-link>
+      <router-link to="/plan">Plan</router-link>
+      <router-link to="/faq">FAQ</router-link>
+      <router-link to="/whitepaper">Whitepaper</router-link>
     </nav>
   </header>
 </template>
 
 <script>
+export default {
+  name: 'site-header'
+}
 </script>
 
 <style lang="stylus" scoped>
@@ -71,7 +74,7 @@
     &:hover 
       color link
 
-    &.v-link-active
+    &.router-link-active
       position relative
       background mbg
       color light

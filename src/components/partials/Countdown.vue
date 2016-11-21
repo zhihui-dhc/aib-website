@@ -18,7 +18,7 @@ export default {
       this.countdown = moment('2016-10-17').countdown(new Date(), countdown.MONTHS | countdown.DAYS).toString()
     }
   },
-  ready () {
+  mounted () {
     this.updateCountdown()
     setInterval(() => this.updateCountdown(), 1000)
   }

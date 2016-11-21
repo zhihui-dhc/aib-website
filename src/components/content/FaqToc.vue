@@ -1,13 +1,14 @@
 <template>
-  <div class="toc-hidden-bar" v-show="!tocVisible" @click="showToc(true)">
+  <div>
+  <div class="toc-hidden-bar" v-show="!faqTocVisible" @click="showToc(true)">
     <i class="material-icons">menu</i>
   </div>
   <div class="mobile-only">
-    <div class="toc-hidden-bar" v-show="tocVisible" @click="showToc(false)">
+    <div class="toc-hidden-bar" v-show="faqTocVisible" @click="showToc(false)">
       <i class="material-icons">close</i>
     </div>
   </div>
-  <div class="toc-wrapper" v-show="tocVisible">
+  <div class="toc-wrapper" v-show="faqTocVisible">
     <div class="toc-header">
       <div class="toc-title">Table of Contents</div>
       <i class="toc-toggle material-icons desktop-only" @click="showToc(hide)">chevron_right</i>
@@ -33,6 +34,7 @@
       <li><a href="#cosmos-interledger">Does Ripple’s Interledger complement Cosmos or do the two compete with one another?</a></li>
     </ul>
   </div>
+  </div>
 </template>
 
 <script>
@@ -42,40 +44,41 @@ import elementsVisibleTrack from '../../scripts/elementsVisibleTrack.js'
 import visibleTocActivate from '../../scripts/visibleTocActivate.js'
 import percentageScrolling from '../../scripts/percentageScrolling.js'
 
+import { mapGetters } from 'vuex'
+
 export default {
+  computed: {
+    ...mapGetters([
+      'faqTocVisible',
+      'faqElementsVisible'
+    ])
+  },
   methods: {
     showToc (value) {
       if (value === true) {
         Ps.initialize(document.querySelector('.toc-wrapper'))
-        this.$store.dispatch('SET_FAQ_TOC_VISIBLE', true)
+        this.$store.commit('setFaqTocVisible', true)
       } else {
         Ps.destroy(document.querySelector('.toc-wrapper'))
-        this.$store.dispatch('SET_FAQ_TOC_VISIBLE', false)
+
+        this.$store.commit('setFaqTocVisible', false)
       }
     }
   },
-  ready () {
+  mounted () {
     Ps.initialize(document.querySelector('.toc-wrapper'))
     watchTocClicks(this.showToc)
-    this.$store.dispatch('SET_FAQ_ELEMENTS_VISIBLE', elementsVisibleTrack())
+    this.$store.commit('setFaqElementsVisible', elementsVisibleTrack())
     percentageScrolling()
   },
-  vuex: {
-    getters: {
-      elementsVisible: state => state.toc.faq.elementsVisible,
-      tocVisible: state => state.toc.faq.tocVisible
-    }
-  },
+  props: ['toc-visible'],
   watch: {
-    elementsVisible () { visibleTocActivate(this.elementsVisible) }
+    faqElementsVisible () { visibleTocActivate(this.faqElementsVisible) }
   }
 }
-
 </script>
 
 <style lang="stylus" scoped>
-.toc-wrapper
-  ul > li
-    > a
-      font-weight 300
+.toc-wrapper ul > li > a
+  font-weight 300
 </style>

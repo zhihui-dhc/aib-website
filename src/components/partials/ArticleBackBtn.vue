@@ -1,7 +1,7 @@
 <template>
-  <a id="article-back-btn" v-link="{ path: '/blog' }">
+  <router-link id="article-back-btn" to="/blog">
     <i class="material-icons">chevron_left</i>
-  </a>
+  </router-link>
 </template>
 
 

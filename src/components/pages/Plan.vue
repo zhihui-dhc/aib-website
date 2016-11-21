@@ -1,7 +1,9 @@
 <template>
+  <div>
   <div class="header-padding"></div>
   <div class="article-wrapper">
     <plan-content></plan-content>
+  </div>
   </div>
 </template>
 
@@ -15,7 +17,7 @@ export default {
   created () {
     document.title = 'Plan - Cosmos'
   },
-  ready () {
+  mounted () {
     this.$store.dispatch('SET_PLAN_TOC_VISIBLE', false)
   },
   vuex: {

@@ -1,4 +1,5 @@
 <template>
+  <div>
   <h1>FAQ</h1>
 
   <h3 id="whats-sharding">What is sharding?</h3>
@@ -191,13 +192,14 @@
     traditional financial system or to enable communication between two
     zones.
   </p>
+  </div>
 </template>
 
 <script>
 import linkifyHeadings from '../../scripts/linkifyHeadings.js'
 import scrollToHash from '../../scripts/scrollToHash.js'
 export default {
-  ready () {
+  mounted () {
     linkifyHeadings()
     scrollToHash()
   }

@@ -1,4 +1,6 @@
 <template>
+  <div>
+
   <section-cover></section-cover>
 
   <section class="section-slide ss-text" id="home-text">
@@ -17,7 +19,7 @@
         Some zones act as hubs with respect to other zones, allowing many zones
         to interoperate through a shared hub. The architecture is a more general
         application of the Bitcoin sidechains concept, using classic BFT and
-        Proof-of-Stake algorithms, instead of Proof-of-Work (see <a v-link="{ path: '/whitepaper' }">our whitepaper</a> for more details).
+        Proof-of-Stake algorithms, instead of Proof-of-Work (see <router-link to="/whitepaper">our whitepaper</router-link> for more details).
         </p>
         <h3>Cosmos Hub</h3>
         <p>
@@ -138,6 +140,7 @@
       </div>
     </div>
   </section>
+  </div>
 </template>
 
 <script>

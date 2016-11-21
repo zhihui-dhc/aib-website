@@ -17,6 +17,7 @@ import EmailSignupForm from '../partials/EmailSignupForm'
 import Countdown from '../partials/Countdown.vue'
 
 export default {
+  name: 'section-call-to-action',
   components: {
     Countdown,
     EmailSignupForm
@@ -24,7 +25,7 @@ export default {
 }
 </script>
 
-<style lang="stylus" scoped">
+<style lang="stylus">
 @import '../../styles/variables.styl'
 
 #section-cta
@@ -46,6 +47,7 @@ export default {
 
     form
       margin-bottom 1rem
+
 @media screen and (min-width:720px)
   #section-cta
     .section-container

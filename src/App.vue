@@ -1,15 +1,17 @@
 <template>
+  <div id="app">
   <site-header></site-header>
   <div id="site-content">
     <router-view></router-view>
   </div>
   <site-footer></site-footer>
+  </div>
 </template>
 
 <script>
 import SiteHeader from './components/site/Header.vue'
 import SiteFooter from './components/site/Footer.vue'
-import store from './vuex/store.js'
+import store from './store/index.js'
 
 export default {
   components: {

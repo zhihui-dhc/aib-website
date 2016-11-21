@@ -1,5 +1,5 @@
 ---
-title: "BFT: the most secure Proof-of-Stake"
+title: "BFT: The Most Secure Proof-of-Stake"
 date: 2016-11-15
 author: Jae Kwon
 excerpt: Many people have rallied against the use of PoS, claiming it is impossible to secure. But that is simply not true. Using BFT, you absolutely can secure PoS.  It’s just that we haven’t seen any BFT-PoS public blockchains yet.

@@ -1,4 +1,5 @@
 <template>
+  <div>
 <h1 id="whitepaper">Cosmos Whitepaper</h1>
 <div class="subtitle">A Network of Distributed Ledgers</div>
 
@@ -1435,6 +1436,7 @@ Han</a> for various contributions.</li>
 <ul>
 <li><a href="https://www.docdroid.net/ec7xGzs/314477721-ethereum-platform-review-opportunities-and-challenges-for-private-and-consortium-blockchains.pdf.html">https://www.docdroid.net/ec7xGzs/314477721-ethereum-platform-review-opportunities-and-challenges-for-private-and-consortium-blockchains.pdf.html</a></li>
 </ul>
+  </div>
 </template>
 <script>
 import linkifyHeadings from '../../scripts/linkifyHeadings.js'
@@ -1446,7 +1448,7 @@ export default {
       whitepaper: whitepaperPdf
     }
   },
-  ready () {
+  mounted () {
     linkifyHeadings()
     scrollToHash()
   }

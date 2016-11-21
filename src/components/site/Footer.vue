@@ -13,6 +13,7 @@ import SectionCallToAction from '../sections/CallToAction.vue'
 import SectionSocialMedia from '../sections/SocialMedia.vue'
 
 export default {
+  name: 'site-footer',
   computed: {
     tocVisible () {
       let path = this.$route.path.replace('/', '')

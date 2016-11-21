@@ -2,6 +2,7 @@ import scrollTo from 'scroll-to'
 
 export default function (showToc) {
   function scrollToIt (e) {
+    console.log('scrolling to it!')
     e.preventDefault()
 
     let scrollSpeed = 666
