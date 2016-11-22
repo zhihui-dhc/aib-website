@@ -21,12 +21,8 @@
 <script>
 export default {
   head: {
-    title () {
-      return {
-        inner: this.$t('siteHeader.blog'),
-        separator: '-',
-        complement: 'Cosmos - ' + this.$t('site.networkOfBlockchains')
-      }
+    title: {
+      inner: 'Blog'
     }
   }
 }
