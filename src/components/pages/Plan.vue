@@ -15,8 +15,12 @@ export default {
     PlanContent
   },
   head: {
-    title: {
-      inner: 'FAQ'
+    title () {
+      return {
+        inner: this.$t('siteHeader.plan'),
+        separator: '-',
+        complement: 'Cosmos - ' + this.$t('site.networkOfBlockchains')
+      }
     }
   }
 }

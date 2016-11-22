@@ -26,8 +26,12 @@ export default {
     ])
   },
   head: {
-    title: {
-      inner: 'Whitepaper'
+    title () {
+      return {
+        inner: this.$t('siteHeader.whitepaper'),
+        separator: '-',
+        complement: 'Cosmos - ' + this.$t('site.networkOfBlockchains')
+      }
     }
   },
   mounted () {

@@ -6,10 +6,10 @@
       </router-link> 
     </div>
     <nav id="site-nav">
-      <router-link to="/blog" exact>Blog</router-link>
-      <router-link to="/plan">Plan</router-link>
-      <router-link to="/faq">FAQ</router-link>
-      <router-link to="/whitepaper">Whitepaper</router-link>
+      <router-link to="/blog" exact>{{ $t('siteHeader.blog') }}</router-link>
+      <router-link to="/plan">{{ $t('siteHeader.plan') }}</router-link>
+      <router-link to="/faq">{{ $t('siteHeader.faq') }}</router-link>
+      <router-link to="/whitepaper">{{ $t('siteHeader.whitepaper') }}</router-link>
     </nav>
   </header>
 </template>
@@ -46,7 +46,7 @@ export default {
 #site-logo
   a
     height 3*x
-    padding 0 0.5*x
+    padding 0 0.75*x
 
     display flex
     align-items center
@@ -103,9 +103,6 @@ export default {
       font-size 0.875*x
 
 @media screen and (min-width: 414px)
-  #site-logo
-    a
-      padding 0 x
   #site-nav
     a
       font-size x

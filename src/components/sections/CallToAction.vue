@@ -1,11 +1,9 @@
 <template>
   <section id="section-cta">
     <div class="section-container">
-      <h2>Fundraising Event</h2>
+      <h2>{{ $t('sectionCallToAction.title') }}</h2>
       <div class="description">
-        <p>
-          Cosmos fundraising event starts Feb 2017.
-        </p>
+        <p>{{ $t('sectionCallToAction.description') }}</p>
       </div>
       <email-signup-form></email-signup-form>
     </div>

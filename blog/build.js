@@ -65,8 +65,8 @@ function writePostsIndexFile (data) {
   f += '  <div>\n'
   f += '  <div class="header-padding"></div>\n'
   f += '  <div class="article-wrapper" id="blog-index">\n'
-  f += `    <h1>${blogTitle}</h1>\n`
-  f += '    <div class="subtitle"><a href="/static/feed.xml">Subscribe</a> for the latest updates.</div>\n'
+  f += '    <h1>{{ $t(\'siteBlog.title\') }}</h1>\n'
+  f += '    <div class="subtitle" v-html="$t(\'siteBlog.subtitle\')"></div>\n'
   for (let i = 0; i < data.length; i++) {
     f += `    <router-link class="article-link" to="/blog/${data[i].slug}">\n`
     f += `      <div class="article-title">${data[i].title}</div>\n`

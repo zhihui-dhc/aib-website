@@ -3,8 +3,8 @@
   <div>
   <div class="header-padding"></div>
   <div class="article-wrapper" id="blog-index">
-    <h1>Cosmos Blog</h1>
-    <div class="subtitle"><a href="/static/feed.xml">Subscribe</a> for the latest updates.</div>
+    <h1>{{ $t('siteBlog.title') }}</h1>
+    <div class="subtitle" v-html="$t('siteBlog.subtitle')"></div>
     <router-link class="article-link" to="/blog/bft-the-most-secure-proof-of-stake">
       <div class="article-title">BFT: The Most Secure Proof-of-Stake</div>
       <div class="article-excerpt">Many people have rallied against the use of PoS, claiming it is impossible to secure. But that is simply not true. Using BFT, you absolutely can secure PoS.  It’s just that we haven’t seen any BFT-PoS public blockchains yet.</div>
@@ -21,8 +21,12 @@
 <script>
 export default {
   head: {
-    title: {
-      inner: 'Blog'
+    title () {
+      return {
+        inner: this.$t('siteHeader.blog'),
+        separator: '-',
+        complement: 'Cosmos - ' + this.$t('site.networkOfBlockchains')
+      }
     }
   }
 }

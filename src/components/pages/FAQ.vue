@@ -26,8 +26,12 @@ export default {
     ])
   },
   head: {
-    title: {
-      inner: 'FAQ'
+    title () {
+      return {
+        inner: this.$t('siteHeader.faq'),
+        separator: '-',
+        complement: 'Cosmos - ' + this.$t('site.networkOfBlockchains')
+      }
     }
   },
   mounted () {
