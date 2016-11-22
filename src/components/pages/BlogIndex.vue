@@ -21,10 +21,13 @@
 <script>
 export default {
   head: {
-    title: {
-      inner: {{ $t('siteBlog.title') }},
-      separator: '-',
-      complement: 'Cosmos - ' + this.$t('site.networkOfBlockchains')    }
+    title () {
+      return {
+        inner: this.$t('siteBlog.title'),
+        separator: '-',
+        complement: 'Cosmos - ' + this.$t('site.networkOfBlockchains')
+      }
+    }
   }
 }
 </script>
