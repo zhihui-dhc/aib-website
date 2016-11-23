@@ -19,7 +19,7 @@ Vue.use(VueRouter)
 Vue.use(VueI18n)
 
 // I18N: default language
-Vue.config.lang = 'ja'
+Vue.config.lang = 'en'
 
 // I18N: set lcoales
 Vue.locale('en', require('./locales/en.json'))

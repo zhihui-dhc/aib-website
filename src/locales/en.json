@@ -6,7 +6,8 @@
     "blog": "Blog",
     "plan": "Plan",
     "faq": "FAQ",
-    "whitepaper": "Whitepaper"
+    "whitepaper": "Whitepaper",
+    "wp": "WP"
   },
   "siteBlog": {
     "title": "Cosmos Blog",

@@ -1,22 +1,22 @@
 <template>
   <div id="app">
-  <site-header></site-header>
-  <div id="site-content">
-    <router-view></router-view>
-  </div>
-  <site-footer></site-footer>
+    <app-header></app-header>
+    <div id="app-content">
+      <router-view></router-view>
+    </div>
+    <app-footer></app-footer>
   </div>
 </template>
 
 <script>
-import SiteHeader from './components/site/Header.vue'
-import SiteFooter from './components/site/Footer.vue'
+import AppHeader from './components/AppHeader.vue'
+import AppFooter from './components/AppFooter.vue'
 import store from './store/index.js'
 
 export default {
   components: {
-    SiteHeader,
-    SiteFooter
+    AppHeader,
+    AppFooter
   },
   head: {
     meta: [

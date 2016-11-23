@@ -1,12 +1,68 @@
 .section-default
-  .section-container
-    text-align center
-    padding 3*x 0
-    
-    .section-content
-      margin 0 auto
-      max-width 40*x
-      padding 1.5*x 1.5*x 0
+  border-bottom 1px solid bc
+  background c-site-fg
 
-.header-padding
-  height 3*x
+  .section-container
+    padding x 0
+    max-width 1200px
+    margin 0 auto
+
+    &:empty
+      display none
+
+    .section-header
+      display flex
+      align-items center
+      justify-content center
+      text-align center
+      padding x x 0
+
+      i.fa
+        font-size 1.25*x
+        margin-right 0.5*x
+        color link
+
+      h2
+        font-weight 600
+        color mcolor
+        max-width 44*x
+
+    .section-content
+      padding x
+      &:empty
+        display none
+
+  &.section-dark
+    background mcolor linear-gradient(top, lighten(mcolor,5%), darken(mcolor,5%))
+    background mcolor
+    border-bottom-color lighten(mcolor, 10%)
+
+    .key, a, h2
+      color lighten(mcolor,93%) !important
+
+    .value, .content p
+      color lighten(mcolor,70%)
+
+@media screen and (min-width: 360px)
+  .section-default
+    .section-container
+      .section-header
+      .section-content
+        padding-left 1.5*x
+        padding-right 1.5*x
+
+@media screen and (min-width: 400px)
+  .section-default
+    .section-container
+      .section-header
+        h2
+          font-size 1.25*x
+
+@media screen and (min-width: 720px)
+  .section-default
+    .section-container
+      padding 2*x 0
+      .section-header
+        padding-bottom 2*x
+        h2
+          font-size 1.5*x

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Cosmos Blog]]></title><description><![CDATA[The Internet of Blockchains]]></description><link>http://cosmos.network</link><image><url>http://cosmos.network/static/favicon.png</url><title>Cosmos Blog</title><link>http://cosmos.network</link></image><generator>RSS for Node</generator><lastBuildDate>Tue, 22 Nov 2016 06:25:59 GMT</lastBuildDate><atom:link href="http://cosmos.network/static//rss.xml" rel="self" type="application/rss+xml"/><pubDate>Tue, 22 Nov 2016 06:25:59 GMT</pubDate><copyright><![CDATA[2016 Cosmos Foundation]]></copyright><language><![CDATA[en]]></language><managingEditor><![CDATA[Cosmos Foundation]]></managingEditor><webMaster><![CDATA[Cosmos Foundation]]></webMaster><ttl>60</ttl><item><title><![CDATA[BFT: The Most Secure Proof-of-Stake]]></title><description><![CDATA[<p>Bitcoin brought the world’s attention to the blockchain. But alas, the Bitcoin
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Cosmos Blog]]></title><description><![CDATA[The Internet of Blockchains]]></description><link>http://cosmos.network</link><image><url>http://cosmos.network/static/favicon.png</url><title>Cosmos Blog</title><link>http://cosmos.network</link></image><generator>RSS for Node</generator><lastBuildDate>Wed, 23 Nov 2016 01:51:33 GMT</lastBuildDate><atom:link href="http://cosmos.network/static//rss.xml" rel="self" type="application/rss+xml"/><pubDate>Wed, 23 Nov 2016 01:51:33 GMT</pubDate><copyright><![CDATA[2016 Cosmos Foundation]]></copyright><language><![CDATA[en]]></language><managingEditor><![CDATA[Cosmos Foundation]]></managingEditor><webMaster><![CDATA[Cosmos Foundation]]></webMaster><ttl>60</ttl><item><title><![CDATA[BFT: The Most Secure Proof-of-Stake]]></title><description><![CDATA[<p>Bitcoin brought the world’s attention to the blockchain. But alas, the Bitcoin
 version of blockchain isn’t sufficient for the world’s blockchain needs. That
 is because Bitcoin’s proof of work (PoW) consensus <a href="http://motherboard.vice.com/read/bitcoin-could-consume-as-much-electricity-as-denmark-by-2020">requires an enormous amounts
 of energy</a>. In addition, transactions are painstakingly slow, taking an hour or
@@ -82,7 +82,7 @@ other blockchain consensus algorithm, including PoW, can provide the level of
 collateralization that is possible with BFT-PoS.</p>
 <p>BFT-PoS performs extremely well. Today, in global public blockchain with a few
 hundred validators, you can get transaction finality on the  order of 3
-seconds, easily -- no need to wait for additional block confirmations! The
+seconds, easily – no need to wait for additional block confirmations! The
 theory has proven to us that these are optimal fault-tolerance thresholds for
 “instant-finality” blockchains.  While more validators does slow down
 consensus, if <a href="https://www.nngroup.com/articles/law-of-bandwidth/">Nielsen’s
@@ -139,10 +139,10 @@ they will all have some capacity for interoperability.  Ethereum is a wonderful
 idea, but the design decisions, while motivated by important considerations
 (like the need for a simple specification and guaranteed determinism), neglect a
 great many more (like the difficulty of designing a secure general purpose
-programming environment), and lends Ethereum it's own sovereignty problem, which
+programming environment), and lends Ethereum it’s own sovereignty problem, which
 is that it excludes users who want access to the platform but want alternatives
 to the current state transition machine.</p>
-<p>Of course, Ethereum doesn't address the problem of turning fiat currency into
+<p>Of course, Ethereum doesn’t address the problem of turning fiat currency into
 ether, either, short of having banks and major government bodies issue their
 currency on Ethereum.  And while
 <a href="http://www.coindesk.com/south-africa-diy-ethereum-blockchain-tests/">many</a>
@@ -156,7 +156,7 @@ libertarian, with a slight anarchist leaning which is ultimately betrayed by the
 economics of Proof-of-Work.  Ethereum is less a political statement and more an
 avant garde academic excercise in distributed systems, computer science, and
 contract theory.  Dogecoin is a testament to the capacity for Humans to bond
-over the absurd, a phenomenon more commonly known as &quot;being social&quot;.  Steem
+over the absurd, a phenomenon more commonly known as “being social”.  Steem
 offers a more structured version of being social, with a basis in content
 production and curation.  And so on. But there are many more idealogical
 currencies to create, many more virtual machine designs to try, each affording a
@@ -169,10 +169,10 @@ something that can interface in a sane manner with the currencies issued by nati
 something that formalizes the relationship between cryptocurrencies and connects them without compromising their independence;
 something with extreme flexibility that does not compromise security.</p>
 <p>Enter Cosmos. Cosmos is a network and a framework for interoperability between
-blockchains.  It consists of a web of &quot;hubs&quot; and &quot;zones&quot;, where each &quot;zone&quot; is
+blockchains.  It consists of a web of “hubs” and “zones”, where each “zone” is
 effectively an independent blockchain with an arbitrary cryptocurrency design
 (be it like Bitcoin, Ethereum, ZeroCash, CryptoNote, your local banking
-institution, etc.), and each &quot;hub&quot; is a multi-asset cryptocurrency that
+institution, etc.), and each “hub” is a multi-asset cryptocurrency that
 facilitates interoperability between some set of zones.</p>
 <p>Hubs and zones are powered by the <a href="http://tendermint.com/">Tendermint</a>
 <a href="https://github.com/tendermint/tendermint/wiki/Byzantine-Consensus-Algorithm">Proof-of-Stake (PoS) consensus
@@ -203,7 +203,7 @@ the correct number of PoW chains is one, and the correct number of PoS chains is
 in the thousands or millions, on par with the number of currencies, rewards
 systems, and various other token-based systems in the world.</p>
 <p>Cosmos reflects this position in that it makes no distinction between hubs - there
-is no &quot;top&quot; hub, and the most popular or successful hub is a matter of adoption
+is no “top” hub, and the most popular or successful hub is a matter of adoption
 by zones.  Furthermore, there is no fundamental distinction between zones and
 hubs, such that any zone with sufficient functionality can become a hub.  While
 we will release one particular hub in order to get things started (the aptly
@@ -220,6 +220,6 @@ retaining a backbone of interoperability that keeps barriers to entry low while
 holding stewards of the system accountable and quality of service high.</p>
 <p>Whether as testing grounds for new cryptocurrency designs, or an upgrade to
 existing ones, as a means for decentralized exchange, or a platform for scalable
-smart contracts, Cosmos's potential is that of every existing cryptocurrency and
+smart contracts, Cosmos’s potential is that of every existing cryptocurrency and
 more in synergy.  The only question is, what will you build on Cosmos?</p>
 ]]></description><link>http://cosmos.network/posts/purpose-of-cosmos</link><guid isPermaLink="true">http://cosmos.network/posts/purpose-of-cosmos</guid><dc:creator><![CDATA[Jae Kwon]]></dc:creator></item></channel></rss>
