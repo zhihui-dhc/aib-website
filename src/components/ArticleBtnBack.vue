@@ -5,7 +5,7 @@
 </template>
 
 
-<style lang="stylus" scoped>
+<style lang="stylus">
 @import '../styles/variables.styl'
 
 .article-btn-back

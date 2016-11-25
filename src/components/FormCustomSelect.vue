@@ -42,7 +42,7 @@ export default {
 }
 </script>
 
-<style lang="stylus" scoped>
+<style lang="stylus">
 @require '../styles/variables.styl'
 
 .form-custom-select

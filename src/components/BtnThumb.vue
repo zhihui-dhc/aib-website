@@ -1,12 +1,12 @@
 <template>
-  <div class="partial-thumb-button">
+  <div class="thumb-button">
     <i :class="iconClass"></i>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'partial-thumb-button',
+  name: 'thumb-button',
   computed: {
     iconClass () {
       return 'fa fa-' + this.icon
@@ -18,10 +18,10 @@ export default {
 }
 </script>
 
-<style lang="stylus" scoped>
+<style lang="stylus">
 @require '../styles/variables.styl'
 
-.partial-thumb-button
+.thumb-button
   position fixed
   bottom x
   right x
