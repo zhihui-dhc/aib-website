@@ -1,18 +1,18 @@
 <template>
   <div class="page-faq-nav">
     <div class="toc-hidden-bar" v-show="!faqTocVisible" @click="showToc(true)">
-      <i class="material-icons">menu</i>
+      <i class="fa fa-bars"></i>
     </div>
     <div class="mobile-only">
       <div class="toc-hidden-bar" v-show="faqTocVisible" @click="showToc(false)">
-        <i class="material-icons">close</i>
+        <i class="fa fa-times"></i>
       </div>
     </div>
     <div class="toc-wrapper" v-show="faqTocVisible">
       <div class="toc-header">
         <div class="toc-title">Table of Contents</div>
-        <i class="toc-toggle material-icons desktop-only" @click="showToc(hide)">chevron_right</i>
-        <i class="toc-toggle material-icons mobile-only" @click="showToc(hide)">close</i>
+        <i class="toc-toggle fa fa-angle-right desktop-only" @click="showToc(hide)"></i>
+        <i class="toc-toggle fa fa-times mobile-only" @click="showToc(hide)"></i>
       </div>
       <ul>
         <li class="mobile-only"><a href="#page-top">FAQ</a>

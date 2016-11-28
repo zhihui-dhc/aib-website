@@ -1,11 +1,14 @@
 <template>
-  <section class="section-cover">
-    <div class="section-container" @click="scrollDown">
-      <!--<div class="logo-slash"></div>-->
-      <h1 class="cover-title"><img src="../assets/images/cosmos_logo_m.png" title="Cosmos"></h1>
-      <h2 class="cover-subtitle">{{ $t('site.networkOfBlockchains') }}</h1>
-    </div>
-  </section>
+  <div>
+    <section class="section-cover">
+      <div class="section-container" @click="scrollDown">
+        <!--<div class="logo-slash"></div>-->
+        <h1 class="cover-title"><img src="../assets/images/cosmos_logo_m.png" title="Cosmos"></h1>
+        <h2 class="cover-subtitle">{{ $t('site.networkOfBlockchains') }}</h1>
+      </div>
+    </section>
+    <div class="home-text"></div>
+  </div>
 </template>
 
 <script>

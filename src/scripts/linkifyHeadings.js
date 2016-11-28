@@ -4,7 +4,7 @@ export default function () {
   let headings = Array.from(document.querySelectorAll('h2[id], h3[id], h4[id]'))
   headings.map(function (h) {
     let href = '#' + h.id
-    h.innerHTML += `<i class="material-icons article-link" href="${href}">link</i>`
+    h.innerHTML += `<i class="fa fa-link article-link" href="${href}"></i>`
   })
 
   function watchClick (link) {

@@ -1,11 +1,11 @@
 <template>
   <div class="article-footer">
     <router-link class="link-blog-index" to="/blog">
-      <i class="material-icons">chevron_left</i> Blog Index
+      <i class="fa fa-angle-left"></i> Blog Index
     </router-link>
     <div class="article-footer-share">
-      <a :href="facebookUrl" target="_blank"><img src="../assets/images/logo-bw-facebook.png" alt="Share on Facebook"></a>
-      <a :href="twitterUrl" target="_blank"><img src="../assets/images/logo-bw-twitter.png" alt="Share on Twitter"></a>
+      <a :href="facebookUrl" target="_blank"><i class="fa fa-footbook"></i></a>
+      <a :href="twitterUrl" target="_blank"><i class="fa fa-twatter"></i></a>
     </div>
   </div>
 </template>

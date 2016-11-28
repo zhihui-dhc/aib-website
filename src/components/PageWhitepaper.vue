@@ -1,10 +1,16 @@
 <template>
-  <div>
-  <page-whitepaper-nav></page-whitepaper-nav>
-  <div class="header-padding"></div>
-  <div class="toc-padding" v-bind:class="{ 'toc-visible': whitepaperTocVisible }">
-    <page-whitepaper-body></page-whitepaper-body>
-  </div>
+  <div class="page-whitepaper">
+    <page-whitepaper-nav></page-whitepaper-nav>
+    <div class="toc-padding" v-bind:class="{ 'toc-visible': whitepaperTocVisible }">
+    <section class="section-default">
+      <div class="section-container">
+        <div class="section-content">
+          <div class="article-body">
+            <page-whitepaper-body></page-whitepaper-body>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
@@ -39,7 +45,3 @@ export default {
   }
 }
 </script>
-
-<style lang="stylus">
-@import '../styles/variables.styl'
-</style>

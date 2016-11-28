@@ -16,7 +16,6 @@
         <span class="label">GitHub</span>
       </a>
     </nav>
-
   </header>
 </template>
 
@@ -49,7 +48,7 @@ highlighted-border-top-color()
 
   a.nav-home
     height 3*x
-    padding 0 0.75*x
+    padding 0 x
 
     default-border-top()
 
@@ -58,7 +57,7 @@ highlighted-border-top-color()
 
     img
       display block
-      height x
+      height x*1.125
       width auto
 
   nav
@@ -75,7 +74,6 @@ highlighted-border-top-color()
 
       margin-top -4px
       line-height 3*x - 4px
-      font-size 0.9*x
 
       .short
         display inline

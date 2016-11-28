@@ -1,20 +1,20 @@
 <template>
   <div>
     <div class="toc-hidden-bar" v-show="!whitepaperTocVisible" @click="showToc(true)">
-      <i class="material-icons">menu</i>
+      <i class="fa fa-bars"></i>
     </div>
     <div class="mobile-only">
       <div class="toc-hidden-bar" v-show="whitepaperTocVisible" @click="showToc(false)">
-        <i class="material-icons">close</i>
+        <i class="fa fa-times"></i>
       </div>
     </div>
 
     <div class="toc-wrapper" v-show="whitepaperTocVisible">
       <div class="toc-header">
         <div class="toc-title">Table of Contents</div>
-        <i class="material-icons" @click="printWhitepaper">print</i>
-        <i class="toc-toggle material-icons desktop-only" @click="showToc(hide)">chevron_right</i>
-        <i class="toc-toggle material-icons mobile-only" @click="showToc(hide)">close</i>
+        <i class="fa fa-print" @click="printWhitepaper"></i>
+        <i class="toc-toggle fa fa-angle-right desktop-only" @click="showToc(hide)"></i>
+        <i class="toc-toggle fa fa-times mobile-only" @click="showToc(hide)"></i>
       </div>
       <ul>
         <li class="mobile-only">
@@ -192,7 +192,3 @@ export default {
   }
 }
 </script>
-
-<style lang="stylus">
-@import '../styles/variables.styl'
-</style>

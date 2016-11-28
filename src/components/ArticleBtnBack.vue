@@ -1,6 +1,6 @@
 <template>
   <router-link class="article-btn-back" to="/blog">
-    <i class="material-icons">chevron_left</i>
+    <i class="fa fa-angle-left"></i>
   </router-link>
 </template>
 
@@ -22,7 +22,7 @@
   align-items center
   justify-content center
   
-  background alpha(mbg,85%)
+  background alpha(c-app-bg,85%)
   border 1px solid bc
 
   i.material-icons

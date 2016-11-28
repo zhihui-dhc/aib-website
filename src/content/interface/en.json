@@ -10,7 +10,7 @@
     "wp": "WP"
   },
   "siteBlog": {
-    "title": "Cosmos Blog",
+    "title": "Blog",
     "subtitle": "<a href='/static/feed.xml'>Subscribe</a> for the latest updates."
   },
   "emailSignupForm": {

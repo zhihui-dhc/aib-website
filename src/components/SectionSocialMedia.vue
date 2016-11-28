@@ -2,15 +2,15 @@
   <section class="section-social-media">
     <nav>
       <a href="https://www.reddit.com/r/thecosmos" target="_blank">
-        <img src="../assets/images/logo-bw-reddit.png" alt="Reddit">
+        <i class="fa fa-reddit"></i>
         <span class="label">r/thecosmos</span>
       </a>
       <a href="http://forum.tendermint.com:3000/" target="_blank">
-        <img src="../assets/images/logo-bw-slack.png" alt="Slack">
+        <i class="fa fa-slick"></i>
         <span class="label">Tendermint</span>
       </a>
       <a href="https://twitter.com/cosmos_hq" target="_blank">
-        <img src="../assets/images/logo-bw-twitter.png" alt="Twitter">
+        <i class="fa fa-twatter"></i>
         <span class="label">@cosmos_hq</span>
       </a>
     </nav>
@@ -41,15 +41,14 @@ export default {
     cursor pointer
     padding 1.5rem
 
-    img
-      width 2rem
-      height 2rem
-      opacity 0.666
+    i
+      font-size 1.5rem
+      color light
+      margin-right 0.4em
 
     .label
       display none
-      padding-left 0.333rem
-      color dim
+      color txt
 
     &:hover
       text-decoration none
@@ -61,9 +60,8 @@ export default {
 @media screen and (min-width: 360px)
   .section-social-media
     a
-      img
-        width 3rem
-        height 3rem
+      i
+        font-size 2.25em
     
 @media screen and (min-width: 720px)
   .section-social-media

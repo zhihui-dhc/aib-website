@@ -15,6 +15,10 @@ export default {
 <style lang="stylus">
 @import '../styles/variables.styl'
 
+.page-header + .section-default
+  .section-container
+    padding-top 0
+
 .page-header
   position relative
   margin-top 2.4*x
@@ -23,9 +27,6 @@ export default {
   display flex
   align-items center
   flex-flow column nowrap
-
-  background bc
-  margin-bottom 4px
 
   h1, p
     text-align center
@@ -51,8 +52,6 @@ export default {
 
     a
       color link
-      background hsla(0,0,0,0.2)
-      padding 0 0.25*x
 
 @media screen and (min-height: 400px)
   .page-header
@@ -67,10 +66,9 @@ export default {
 
     &.page-header-wide
       padding 3*x 0
-      max-width 48em
+      max-width 40em
       margin-left auto
       margin-right auto
       h1
-        max-width 30*x
         font-weight 600
 </style>

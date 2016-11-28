@@ -1,2 +1,41 @@
-@import './variables.styl'
-@import './shared/*'
+@require './variables.styl'
+@require './vendor/*'
+
+global-reset()
+
+*
+  box-sizing border-box
+
+body
+  df()
+  display flex
+  flex-flow column
+  background c-app-bg
+  min-height 100vh
+  -webkit-text-size-adjust none
+
+a
+  color link
+  text-decoration none
+
+body, input, button, textarea
+  font-size x
+  line-height 1.5
+  font-family sans
+
+#site-content
+  flex 1
+  min-height 80vh
+
+.desktop-only, .mobile-only
+  display none !important
+
+@media screen and (max-width: 959px)
+  .mobile-only
+    display block !important
+
+@media screen and (min-width: 960px)
+  .desktop-only
+    display block !important
+
+@require './partials/*'

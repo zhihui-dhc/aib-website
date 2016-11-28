@@ -1,10 +1,16 @@
 <template>
-  <div>
+  <div class="page-plan">
     <page-faq-nav></page-faq-nav>
-    <div class="header-padding"></div>
     <div class="toc-padding" v-bind:class="{ 'toc-visible': faqTocVisible }">
-    <page-faq-body></page-faq-body>
-    </div>
+    <section class="section-default">
+      <div class="section-container">
+        <div class="section-content">
+          <div class="article-body">
+            <page-faq-body></page-faq-body>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
@@ -40,7 +46,3 @@ export default {
   }
 }
 </script>
-
-<style lang="stylus">
-@import '../styles/variables.styl'
-</style>

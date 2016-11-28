@@ -4,29 +4,21 @@ reset-html5()
 *
   box-sizing border-box
 
-footer, header, nav, menu, article
-  box-sizing border-box
-
 body
   df()
   display flex
   flex-flow column
-  background mbg
+  background c-app-bg
   min-height 100vh
   -webkit-text-size-adjust none
 
-  font-size 0.875*x
+  font-size x
   font-family sans
   line-height 1.5
   font-weight 300
 
-@media screen and (min-width: 360px)
-  body
-    font-size 0.9375*x
-
-@media screen and (min-width: 414px)
-  body
-    font-size x
+a
+  text-decoration none
 
 #site-content
   flex 1

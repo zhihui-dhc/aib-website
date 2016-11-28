@@ -11,19 +11,19 @@ import App from './App'
 import { sync } from 'vuex-router-sync'
 import store from './store/index.js'
 import router from './router/index.js'
-
-sync(store, router) // done.
+sync(store, router)
 
 Vue.use(VueHead)
 Vue.use(VueRouter)
 Vue.use(VueI18n)
 
-// I18N: default language
+// i18n settings
 Vue.config.lang = 'en'
-
-// I18N: set lcoales
-Vue.locale('en', require('./locales/en.json'))
-Vue.locale('ja', require('./locales/ja.json'))
+Vue.config.fallbackLang = 'en'
+Vue.locale('en', require('./content/interface/en.json'))
+Vue.locale('ja', require('./content/interface/ja.json'))
+Vue.locale('ko', require('./content/interface/ko.json'))
+Vue.locale('zh', require('./content/interface/zh.json'))
 
 /* eslint no-unused-vars: 0 */
 const app = new Vue({

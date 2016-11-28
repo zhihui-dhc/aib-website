@@ -1,7 +1,7 @@
 <template>
-  <div class="component">
+  <div class="page-blog-entry">
     <div class="page-header page-header-wide">
-      <h1>{{ entry.title }} </h1>
+      <h1>{{ entry.title }}</h1>
       <p>{{ entry.dateFriendly }} <template v-if="entry.author">by {{ entry.author }}</template></p>
     </div>
 
@@ -19,6 +19,7 @@
 <script>
 import ArticleBtnBack from './ArticleBtnBack'
 import ArticleFooter from './ArticleFooter'
+import PageHeader from './PageHeader'
 
 import { mapGetters } from 'vuex'
 
@@ -26,7 +27,8 @@ export default {
   name: 'page-blog-entry',
   components: {
     ArticleBtnBack,
-    ArticleFooter
+    ArticleFooter,
+    PageHeader
   },
   computed: {
     entry () {
@@ -35,6 +37,13 @@ export default {
         return this.allPosts.find(p => p.slug === slug)
       }
       return {}
+    },
+    entrySubtitle () {
+      let string = this.entry.dateFriendly
+      if (this.entry.author) {
+        string += ' by ' + this.entry.author
+      }
+      return string
     },
     facebookUrl () {
       let url = 'https://www.facebook.com/sharer/sharer.php?u='

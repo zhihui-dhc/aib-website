@@ -45,6 +45,10 @@ module.exports = {
         loader: 'vue'
       },
       {
+        test: /\.md$/,
+        loader: 'vue-markdown-loader'
+      },
+      {
         test: /\.js$/,
         loader: 'babel',
         include: projectRoot,

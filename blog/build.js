@@ -7,7 +7,7 @@ let toSlugCase = require('to-slug-case')
 let toPascalCase = require('to-pascal-case')
 let yaml = require('js-yaml')
 
-let postsDirectory = './src/content/blog/'
+let postsDirectory = './src/content/en/blog/'
 let posts = glob.sync(postsDirectory + '*.md')
 
 let postsJsonFile = './src/store/json/posts.json'

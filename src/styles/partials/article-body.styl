@@ -1,7 +1,17 @@
 .article-body
-  font-size x
-  padding-bottom 1.5*x
+  line-height 1.58
 
+  max-width 40em
+  margin-left auto
+  margin-right auto
+  hr
+    border none
+    border-top 4px solid bc
+    background transparent
+    height 0
+    margin 0
+    padding 0
+    margin 2*x 0
   a
     &:hover
       text-decoration underline
@@ -37,7 +47,7 @@
   hyphens auto
 
   p, ul, ol, table, blockquote, img, .btn
-    margin-bottom 1.5em
+    margin-bottom 1.38em
 
   .youtube
     display block
@@ -70,9 +80,9 @@
     font-weight 400
     position relative
 
-    i.material-icons
+    i.fa
       position absolute
-      top 0.25rem
+      top 0.333em
       left -1.5em
       font-size 1em
       cursor copy
@@ -173,9 +183,6 @@
 
 @media screen and (min-width: 720px)
   .article-body
-    max-width 48em
-    margin 0 auto
-
     h1
       font-size 2*x
       padding 2*x 0
@@ -193,8 +200,6 @@
     margin-right 20rem + 1rem
 
   .article-body
-    padding-top 2.5rem
-
     h1
       font-size 2.5rem
 
