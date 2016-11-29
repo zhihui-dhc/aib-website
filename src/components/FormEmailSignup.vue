@@ -13,9 +13,10 @@
 <style lang="stylus">
 @import '../styles/variables.styl'
 
-.form-email-signup
-  max-width 40rem
+.form-default.form-email-signup
   padding 0 1rem
+  background transparent
+  border none
 
   input, .btn
     display block

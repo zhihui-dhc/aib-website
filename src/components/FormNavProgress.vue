@@ -1,10 +1,10 @@
 <template>
   <div class="form-nav-progress">
-    <button type="button" class="btn btn-small" v-bind:class="{ 'disabled': atMinimum }" @click="decrement">
-      <i class="material-icons">chevron_left</i>
+    <button type="button" class="btn btn-small" :class="{ 'disabled': atMinimum }" @click="decrement">
+      <i class="fa fa-angle-left"></i>
     </button>
-    <button type="button" class="btn btn-small" v-bind:class="{ 'disabled': atMaximum }" @click="increment">
-      <i class="material-icons">chevron_right</i>
+    <button type="button" class="btn btn-small" :class="{ 'disabled': atMaximum }" @click="increment">
+      <i class="fa fa-angle-right"></i>
     </button>
   </div>
 </template>
@@ -26,24 +26,29 @@ export default {
       return false
     }
   },
+  data () {
+    return {
+      min: 1,
+      max: 4
+    }
+  },
   methods: {
     decrement (event) {
       if (this.step > this.min) {
-        this.step -= 1
+        this.$emit('update', this.step - 1)
         event.target.blur()
       }
     },
     increment (event) {
       if (this.step < this.max) {
-        this.step += 1
+        this.$emit('update', this.step + 1)
         event.target.blur()
       }
     }
   },
-  props: ['step', 'min', 'max']
+  props: ['step']
 }
 </script>
-
 
 <style lang="stylus">
 @import '../styles/variables.styl'
@@ -58,4 +63,3 @@ export default {
     &:first-of-type
       border-right none
 </style>
-

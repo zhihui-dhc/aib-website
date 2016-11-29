@@ -47,5 +47,36 @@
     "title": "Decentralization",
     "textOne": "One of the great tragedies of cryptocurrencies today has been their failure to interoperate with existing systems — and each other. Cosmos offers a way to link them together, but without creating a new centralized clearinghouse or exchange.<br><br>Cosmos is built on principles of cryptography, sound economics, consensus theory, transparency, and accountability to serve as a new foundation for our future financial systems.",
     "textTwo": "You can use Cosmos as a testing ground for a new cryptocurrency design, an upgrade to an existing cryptocurrency, as a means for decentralized exchange, or as a platform for scalable smart contracts.<br><br>Cosmos is not just a single distributed ledger, and the Cosmos hub isn't a walled garden or the center of its universe — anyone can use this protocol to create their own hub to compete with Cosmos in a free market of blockchains<br><br>The only question is, what will you build on Cosmos?"
+  },
+  "siteFund": {
+    "title": "Purchase Atoms",
+    "btnContinue": "Continue",
+    "btnFinished": "Finished",
+    "stepOne": {
+      "title": "Customer Info",
+      "subtitle": "We require some info from you to generate a personalized bitcoin address.",
+      "name": "Name",
+      "email": "Email Address",
+      "nationality": "Nationality"
+    },
+    "stepTwo": {
+      "title": "Wallet Setup",
+      "subtitle": "Generate your public key and paste it into the text field below.",
+      "generatePublicKey": "Generate Public Key",
+      "launchKeygen": "Launch Keygen",
+      "pastePublicKey": "Paste Public Key"
+    },
+    "stepThree": {
+      "title": "Purchase Quantity",
+      "subtitle": "How many Atoms do you wish to purchase?",
+      "atomCount": "Number of Atoms",
+      "btcPrice": "Bitcoin Price"
+    },
+    "stepFour": {
+      "title": "Payment",
+      "subtitle": "Make the payment to the deposit address below. Atoms will arrive in your crowdfund wallet within minutes.",
+      "depositAddress": "Deposit Address",
+      "totalPrice": "Total Price"
+    }
   }
 }

@@ -1,22 +1,65 @@
 .form-default
+  margin-bottom 1rem
+  border 1px solid bc
+  background #fff
+
+  .form-header, .form-footer
+    padding 1rem
+
+  .form-header
+    border-bottom 1px dotted bc
+    margin-bottom 0.5rem
+
+    .title
+      font-weight 500
+      margin-bottom 0.25rem
+
+    .subtitle
+      color dim
+
   .form-group
-    margin 0 0 1.5rem
+    padding 0.5rem 1rem
 
   .form-footer
-    margin-top 2rem
-    display flex
-    justify-content space-between
-    border-top 1px solid bc
-    padding 1.5rem 0
+    margin-top 1rem
+    border-top 1px dotted bc
 
-  label
-    display block
-    padding 0.25rem 0
-    line-height 1.5rem
-    margin 0 0 0.25rem
-    font-weight 400
-
-  .input-group
     display flex
-    input, .btn, textarea, .input
-      width 100%
+    justify-content flex-end
+
+  .form-group
+    label
+      display block
+      margin-bottom 0.5rem
+      font-weight 400
+      overflow hidden
+      height 0
+
+    .input-group
+      display flex
+      input, .btn, textarea, .input
+        width 100%
+
+@media screen and (min-width: 360px)
+  .form-default
+    .form-header, .form-footer
+      padding 1.25rem
+    .form-group
+      padding 0.625rem 1.25rem
+    .form-header
+      .title
+        font-size 1.125rem
+
+@media screen and (min-width: 360px)
+  .form-default
+    .form-header, .form-footer
+      padding 1.5rem
+    .form-group
+      padding 0.725rem 1.5rem
+    .form-header
+      .title
+        font-size 1.25rem
+
+@media screen and (min-width: 720px)
+  .form-default
+    margin-bottom 3rem

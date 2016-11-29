@@ -28,12 +28,6 @@ export default {
 <style lang="stylus">
 @require '../styles/variables.styl'
 
-default-border-top()
-  border-top 4px solid bc
-
-highlighted-border-top-color()
-  border-top-color light !important
-
 .app-header
   position fixed
   top 0
@@ -50,8 +44,6 @@ highlighted-border-top-color()
     height 3*x
     padding 0 x
 
-    default-border-top()
-
     display flex
     align-items center
 
@@ -65,15 +57,14 @@ highlighted-border-top-color()
     display flex
     justify-content flex-end
     default-border-top()
-    padding-right 0.5*x
+    padding-right 0.5rem
     a
       display block
       padding 0 0.5*x
       color txt
       default-border-top()
 
-      margin-top -4px
-      line-height 3*x - 4px
+      line-height 3*x
 
       .short
         display inline
@@ -84,33 +75,32 @@ highlighted-border-top-color()
         display none
 
       &:hover
-        text-decoration none
-        highlighted-border-top-color()
+        color link
 
       &.router-link-active
-        highlighted-border-top-color()
+        color light
 
 @media screen and (min-width: 360px)
   .app-header
     nav
       a
         font-size x
+
+@media screen and (min-width: 400px)
+  .app-header
+    nav
+      a
         .short
           display none
         .long
           display inline
 
-@media screen and (min-width: 400px)
+@media screen and (min-width: 480px)
   .app-header
     nav
       padding-left 0.75*x
       a
         padding 0 0.75*x
-
-@media screen and (min-width: 480px)
-  .app-header
-    nav
-      a
         &.nav-github
           display block
 

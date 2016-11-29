@@ -10,14 +10,13 @@
         <div class="section-content">
           <div class="article-body" v-html="entry.body"></div>
           <article-footer :facebook-url="facebookUrl" :twitter-url="twitterUrl"></article-footer>
-        </div><!--section-content-->
-      </div><!--section-container-->
+        </div>
+      </div>
     </section>
   </div>
 </template>
 
 <script>
-import ArticleBtnBack from './ArticleBtnBack'
 import ArticleFooter from './ArticleFooter'
 import PageHeader from './PageHeader'
 
@@ -26,7 +25,6 @@ import { mapGetters } from 'vuex'
 export default {
   name: 'page-blog-entry',
   components: {
-    ArticleBtnBack,
     ArticleFooter,
     PageHeader
   },

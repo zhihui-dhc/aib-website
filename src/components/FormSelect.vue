@@ -1,6 +1,7 @@
 <template>
   <div class="form-custom-select">
-    <select :id="id" v-model="model" required>
+    <select :id="id" :value="value" required>
+      <option value="" v-if="empty">Select&hellip;</option>
       <option v-for="option in orderedOptions" v-bind:value="option.value">
         {{ option.text }}
       </option>
@@ -18,25 +19,8 @@ export default {
   },
   props: {
     id: String,
-    model: {
-      type: String,
-      default () {
-        return {
-          value: '',
-          text: 'Select...'
-        }
-      }
-    },
-    options: {
-      type: Array,
-      default () {
-        return [
-          { value: 'CN', text: 'China' },
-          { value: 'JP', text: 'Japan' },
-          { value: 'US', text: 'United States of America' }
-        ]
-      }
-    },
+    value: String,
+    options: Array,
     empty: Boolean
   }
 }
@@ -65,8 +49,8 @@ export default {
     border 1px solid ibc
     background subtle-gradient
 
-    font-family 'Material Icons'
-    content "arrow_drop_down"
+    font-family 'FontAwesome'
+    content '\f0d7'
     text-align center
     line-height x*2 - 2px
     color dim

@@ -36,8 +36,10 @@ export default {
   &:hover
     color link
     text-decoration none
-  i.material-icons
+  i.fa
     font-size 1rem
+    color txt
+    padding 0 x
 
 .article-footer-share
   flex 1
@@ -47,12 +49,6 @@ export default {
   a
     height 3rem
     padding 0.5rem
-
-    img
-      opacity 0.666
-      width 2rem
-      height 2rem
-
-    &:hover img
-      opacity 1
+    color txt
+    padding 0.5em 1rem
 </style>

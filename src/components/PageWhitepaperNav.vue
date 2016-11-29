@@ -156,9 +156,7 @@ import watchTocClicks from '../scripts/watchTocClicks.js'
 import inViewport from '../scripts/inViewport.js'
 import visibleTocActivate from '../scripts/visibleTocActivate.js'
 import percentageScrolling from '../scripts/percentageScrolling.js'
-
 import { mapGetters } from 'vuex'
-
 export default {
   name: 'page-whitepaper-nav',
   computed: {

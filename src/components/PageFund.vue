@@ -1,176 +1,143 @@
 <template>
-  <div class="page-fund">
-  <div class="header-padding"></div>
-
+  <div class="page-fund page-default">
   <div class="fund-wrapper">
-
-    <h1>Purchase Atoms</h1>
-
-    <div class="fund-steps-nav">
-      <div class="step-indicator" :class="{'active': stepOneActive }">
-        <div class="key">1</div>
-      </div>
-      <div class="step-indicator" :class="{'active': stepTwoActive }">
-        <div class="key">2</div>
-      </div>
-      <div class="step-indicator" :class="{'active': stepThreeActive }">
-        <div class="key">3</div>
-      </div>
-      <div class="step-indicator" :class="{'active': stepFourActive }">
-        <div class="key">4</div>
-      </div>
-    </div>
+    <h1>{{ $t('siteFund.title') }}</h1>
+    <page-fund-nav :step="step"></page-fund-nav>
 
     <div class="fund-steps">
-      <form-nav-progress :step.sync="step" min="1" max="4"></form-nav-progress>
+      <!--<form-nav-progress :step="step" @update="setFundProgress($event)"></form-nav-progress>-->
 
       <div class="fund-step" v-show="step === 1">
-        <div class="step-header">
-          <h2>Customer Info</h2>
-          <div class="subtitle">We need some information from you to generate a personalized bitcoin address.</div>
-        </div>
-        <form class="form-default" v-on:submit.prevent="goToStep(2)">
+        <form class="form-default" v-on:submit.prevent="setFundProgress(2)">
+          <div class="form-header">
+            <div class="title">{{ $t('siteFund.stepOne.title') }}</div>
+            <div class="subtitle">{{ $t('siteFund.stepOne.subtitle') }}</div>
+          </div>
           <div class="form-group">
-            <label for="cf-name">Your Name</label>
+            <label for="cf-name">{{ $t('siteFund.stepOne.name') }}</label>
             <div class="input-group">
-              <input class="cf-name" type="text" v-model="customer.name" required placeholder="Your Name" pattern=".{1,254}" title="1 to 254 characters">
+              <input class="cf-name" type="text" v-model="customer.name" required :placeholder="$t('siteFund.stepOne.name')" pattern=".{1,254}" title="1 to 254 characters">
             </div>
-          </div><!--form group-->
+          </div>
           <div class="form-group">
-            <label for="cf-email">Your Email</label>
+            <label for="cf-email">{{ $t('siteFund.stepOne.email') }}</label>
             <div class="input-group">
-              <input class="cf-email" type="email" v-model="customer.email" required placeholder="your@email.com" pattern=".{3,254}" title="3 to 254 characters">
+              <input class="cf-email" type="email" v-model="customer.email" required :placeholder="$t('siteFund.stepOne.email')" pattern=".{3,254}" title="3 to 254 characters">
             </div>
-          </div><!--form group-->
+          </div>
           <div class="form-group">
-            <label for="cf-nationality">Your Nationality</label>
+            <label for="cf-nationality">{{ $t('siteFund.stepOne.nationality') }}</label>
             <div class="input-group">
-              <custom-select class="cf-nationality" :options="countries" :empty="true" :model.sync="customer.nationality">
+              <form-select class="cf-nationality" :options="allCountries" :empty="true" :model="customer.nationality">
             </div>
-          </div><!--form group-->
+          </div>
           <div class="form-footer">
-            <div class="form-footer-left">
-            </div>
-            <div class="form-footer-right">
-              <input type="submit" class="btn" value="Continue">
-            </div>
-          </div><!--form footer-->
+            <input type="submit" class="btn" :value="$t('siteFund.btnContinue')">
+          </div>
         </form>
-      </div><!--fund step-->
+      </div>
 
       <div class="fund-step" v-show="step === 2">
-        <div class="step-header">
-          <h2>Wallet Setup</h2>
-          <div class="subtitle">Generate your public key and paste it into the text field below.</div>
-        </div>
-        <form class="form-default" v-on:submit.prevent="goToStep(3)">
+        <form class="form-default" v-on:submit.prevent="setFundProgress(3)">
+          <div class="form-header">
+            <div class="title">{{ $t('siteFund.stepTwo.title') }}</div>
+            <div class="subtitle">{{ $t('siteFund.stepTwo.subtitle') }}</div>
+          </div>
           <div class="form-group">
-            <label>Generate Public Key</label>
+            <label>{{ $t('siteFund.stepTwo.generatePublicKey') }}</label>
             <div class="input-group">
               <a class="btn" target="_blank" href="https://google.com">
-                <i class="material-icons">vpn_key</i>
-                <span class="text">Open Key Generator</span>
+                <i class="fa fa-key"></i>
+                <span class="text">{{ $t('siteFund.stepTwo.launchKeygen') }}</span>
               </a>
             </div>
-          </div><!--form-group-->
+          </div>
           <div class="form-group">
-            <label>Paste Public Key</label>
+            <label>{{ $t('siteFund.stepTwo.pastePublicKey') }}</label>
             <div class="input-group">
               <textarea required></textarea>
             </div>
-          </div><!--form-group-->
+          </div>
           <div class="form-footer">
-            <div class="form-footer-left">
-            </div>
-            <div class="form-footer-right">
-              <input type="submit" class="btn" value="Continue">
-            </div>
-          </div><!--form footer-->
+            <input type="submit" class="btn" :value="$t('siteFund.btnContinue')">
+          </div>
         </form>
-      </div><!--fund step-->
+      </div>
 
       <div class="fund-step" v-show="step === 3">
-        <div class="step-header">
-          <h2>Purchase Quantity</h2>
-          <div class="subtitle">How many Atoms do you wish to purchase?</div>
-        </div>
-        <form class="form-default" v-on:submit.prevent="goToStep(4)">
+        <form class="form-default" v-on:submit.prevent="setFundProgress(4)">
+          <div class="form-header">
+            <div class="title">{{ $t('siteFund.stepThree.title') }}</div>
+            <div class="subtitle">{{ $t('siteFund.stepThree.subtitle') }}</div>
+          </div>
           <div class="form-group">
-            <label>Number of Atoms</label>
+            <label>{{ $t('siteFund.stepThree.atomCount') }}</label>
             <div class="input-group">
               <input class="highlight-on-focus" type="number" v-model="customer.atoms" required min="1" max="1000000">
               <div class="input-group-addon">Atoms</div>
             </div>
-          </div><!--form-group-->
+          </div>
           <div class="form-group">
-            <label>Bitcoin Price</label>
+            <label>{{ $t('siteFund.stepThree.btcPrice') }}</label>
             <div class="input-group">
               <input class="highlight-on-focus" type="number" disabled :value="bitcoinPrice">
               <div class="input-group-addon">BTC</div>
             </div>
-          </div><!--form-group-->
+          </div>
           <div class="form-footer">
-            <div class="form-footer-left">
-            </div>
-            <div class="form-footer-right">
-              <input type="submit" class="btn" value="Continue">
-            </div>
-          </div><!--form footer-->
+            <input type="submit" class="btn" :value="$t('siteFund.btnContinue')">
+          </div>
         </form>
-      </div><!--fund step-->
+      </div>
 
       <div class="fund-step" v-show="step === 4">
-        <div class="step-header">
-          <h2>Payment</h2>
-          <div class="subtitle">Make the payment to the deposit address below. Atoms will arrive in your crowdfund wallet within minutes.</div>
-        </div>
         <form class="form-default" v-on:submit.prevent="goHome">
+          <div class="form-header">
+            <div class="title">{{ $t('siteFund.stepFour.title') }}</div>
+            <div class="subtitle">{{ $t('siteFund.stepFour.subtitle') }}</div>
+          </div>
           <div class="form-group">
-            <label>Deposit Address</label>
+            <label>{{ $t('siteFund.stepFour.depositAddress') }}</label>
             <div class="input-group">
               <input class="highlight-on-focus" type="text" :value="bitcoinAddress">
             </div>
-          </div><!--form-group-->
+          </div>
           <div class="form-group">
-            <label>Total Price</label>
+            <label>{{ $t('siteFund.stepFour.totalPrice') }}</label>
             <div class="input-group">
               <input class="highlight-on-focus" type="number" disabled :value="bitcoinPrice">
               <div class="input-group-addon">BTC</div>
             </div>
-          </div><!--form-group-->
+          </div>
           <div class="form-footer">
-            <div class="form-footer-left">
-            </div>
-            <div class="form-footer-right">
-              <input type="submit" class="btn" value="Return Home">
-            </div>
-          </div><!--form footer-->
+            <input type="submit" class="btn" :value="$t('siteFund.btnFinished')">
+          </div>
         </form>
-      </div><!--fund step-->
-
+      </div>
     </div>
   </div>
   </div>
 </template>
 
 <script>
-import FormCustomSelect from './FormCustomSelect'
+import FormSelect from './FormSelect'
 import FormNavProgress from './FormNavProgress'
-
+import PageFundNav from './PageFundNav'
+import { mapGetters } from 'vuex'
 export default {
   name: 'page-fund',
   components: {
-    FormCustomSelect,
-    FormNavProgress
+    FormSelect,
+    FormNavProgress,
+    PageFundNav
   },
   computed: {
     bitcoinPrice () {
       return this.customer.atoms / 27394
     },
-    stepOneActive () { if (this.step === 1) { return true } },
-    stepTwoActive () { if (this.step === 2) { return true } },
-    stepThreeActive () { if (this.step === 3) { return true } },
-    stepFourActive () { if (this.step === 4) { return true } }
+    ...mapGetters([
+      'allCountries'
+    ])
   },
   data () {
     return {
@@ -185,30 +152,20 @@ export default {
       }
     }
   },
-  head: {
-    title: {
-      inner: 'Purchase Atoms'
-    }
-  },
   methods: {
-    goToStep (step) {
+    setFundProgress (step) {
       this.step = step
-      // console.log(JSON.stringify(this.customer))
     },
     goHome () {
-      this.$route.router.go('/')
+      this.$router.push('/')
     }
   },
   mounted () {
+    document.title = 'Purchase Atoms - Cosmos'
     let highlights = document.querySelectorAll('.highlight-on-focus')
     Array.from(highlights).map(function (el) {
       el.addEventListener('click', function () { this.select() })
     })
-  },
-  vuex: {
-    getters: {
-      countries: state => state.countries.countries
-    }
   }
 }
 </script>
@@ -222,99 +179,34 @@ export default {
     margin 0 auto
 
   h1
-    font-size 2rem
-    line-height 1.25
-    margin-bottom 2rem
-    margin-top 2rem
+    font-size 1.25rem
+    font-weight 500
+    padding 1rem 0
     text-align center
-
-.fund-steps-nav
-  margin 0 0 1.5rem
-
-  display flex
-  justify-content space-around
-
-  position relative
-
-  &:after
-    content ''
-    width 100%
-    height 0
-    border-top 2px solid bc
-    position absolute
-    top 50%
-    left 0
-    margin-top -1px
-    z-index -1
-
-  .step-indicator
-    color light
-    border 1px solid bc
-    background mbg
-
-    text-align center
-    line-height 2*x - 2px
-    width 2rem
-    border-radius 2rem
-
-    position relative
-
-    transition 300ms ease all
-
-    user select none
-
-    &.active
-      color txt
-      background c-app-bg
-      font-weight bold
-      border-color ibc
 
 .fund-steps
-  background c-app-bg
-  padding 1rem
   position relative
-  margin 0 auto
 
   .form-nav-progress
     position absolute
     top -1px
     right -1px
 
-  .step-header
-    border-bottom 1px solid bc
-    padding 1rem 0
-    margin 0 0 1rem
-
-    h2
-      font-size 1.5rem
-      line-height 1.25
-      margin 0 0 0.75rem
-
-    .subtitle
-      color dim
-      margin 0 0 0.5rem
-
 @media screen and (min-width: 360px)
-  .fund-steps
-    padding-left 1.25rem
-    padding-right 1.25rem
+  .page-fund
+    h1
+      font-size 1.375rem
+      padding 1.25rem 0
 
-@media screen and (min-width: 414px)
-  .fund-steps
-    padding-left 1.5rem
-    padding-right 1.5rem
+@media screen and (min-width: 400px)
+  .page-fund
+    h1
+      font-size 1.5rem
+      padding 1.5rem 0
 
 @media screen and (min-width: 720px)
-  .page-fund h1
-    margin 3rem 0
-
-  .fund-steps
-    border 1px solid bc
-    padding 1rem 2rem
-    max-width 36rem
-    margin-bottom 3rem
-
-@media screen and (min-width: 1200px)
-  .page-fund h1
-    font-size 2.5rem
+  .page-fund
+    h1
+      font-size 1.75rem
+      margin-bottom 1rem
 </style>
