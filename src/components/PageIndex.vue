@@ -1,7 +1,13 @@
 <template>
   <div>
     <section-cover></section-cover>
-    <section class="section-home ss-text" id="home-intro">
+
+    <div class="section-home sh-video">
+      <h2>What is Cosmos?</h2>
+      <iframe src="https://player.vimeo.com/video/183530279?title=0&byline=0&portrait=0" width="960" height="540" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    </div>
+
+    <section class="section-home sh-text" id="home-intro">
       <div class="section-container">
         <h2>{{ $t('sectionHomeIntro.title') }}</h2>
         <div class="section-content">
@@ -25,7 +31,7 @@
         </div>
       </div>
     </section>
-    <section class="section-home ss-alt">
+    <section class="section-home sh-alt">
       <div class="section-container">
         <div class="image"><img class="" src="../assets/images/ex_evm_sharding.png"></div>
         <div class="section-content">
@@ -43,7 +49,7 @@
         </div>
       </div>
     </section>
-    <section class="section-home ss-alt">
+    <section class="section-home sh-alt">
       <div class="section-container">
         <div class="image image-taller"><img class="" src="../assets/images/ex_network.png"></div>
         <div class="section-content">
@@ -87,8 +93,25 @@ export default {
 .section-home
   border-top dbd
 
+  &#home-intro
+    .btn
+      max-width 13*x
+      margin 0 auto
+      margin-top 2*x
+
+  &.sh-video
+    padding 3rem 0
+    iframe
+      width 100vw
+      height 56.25vw
+      display block
+      max-width 960px
+      max-height 540px
+      margin-left auto
+      margin-right auto
+
   .section-container
-    padding 3rem 1.5rem 1.5rem
+    padding 3rem 1rem
     max-width 32rem
     margin 0 auto
 
@@ -100,31 +123,33 @@ export default {
         width 75%
         max-width 26rem
 
-    h2
-      font-size 1.5rem
-      margin 0 0 1rem
-      text-align center
-      letter-spacing 0.01em
+  h2
+    font-size 1.5rem
+    margin-bottom 1rem
+    text-align center
 
-    h3
-      font-size 1.25rem
-      font-weight 400
-      margin 0 0 0.5rem
+  h2 + .section-content
+  h2 + iframe
+    margin-top 2rem
 
-    p
-      margin 0 0 1.5rem
+  h3
+    font-size 1.25rem
+    margin-bottom 0.5rem
 
-  &#home-intro
-    .btn
-      max-width 13*x
-      margin 0 auto
-      margin-top 2*x
+  p
+    margin 0 0 1.5rem
 
 @media screen and (min-width:720px)
   .section-home
-    .section-container
-      h2
-        font-size 2em
+    h2
+      font-size 2rem
+
+    h3
+      font-size 1.5rem
+
+    &.sh-video
+      iframe
+        margin-top 1.5rem
 
 @media screen and (min-width: 960px)
   .section-home
@@ -148,7 +173,14 @@ export default {
         h2
           text-align left
 
-    &.ss-text
+    &.sh-video
+      .section-container
+        display block
+
+        h2
+          margin-bottom 3rem
+
+    &.sh-text
       .section-container
         display block
 
@@ -158,7 +190,7 @@ export default {
         h2
           margin-bottom 3rem
 
-    &.ss-alt
+    &.sh-alt
       .section-container
         flex-direction row-reverse
         .image
@@ -183,7 +215,7 @@ export default {
       .section-content
         padding-left 3rem
 
-    &.ss-text
+    &.sh-text
       .section-container
         max-width 72rem
         .section-content
