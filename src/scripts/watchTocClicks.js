@@ -12,16 +12,18 @@ export default function (showToc) {
     if (el.id === '#page-top') {
       y = 0
     } else {
-      y = el.offsetTop - 48
+      y = el.offsetTop - 48 - 16
     }
 
     // if it's a small screen, hide the toc on click
-    if (document.documentElement.clientWidth < 960) { showToc(false) }
+    if (document.documentElement.clientWidth < 960) {
+      showToc(false)
+    }
 
     // scroll to the element
     scrollTo(0, y, { duration: scrollSpeed })
   }
 
-  let tocLinks = Array.from(document.querySelectorAll('.toc-wrapper a'))
+  let tocLinks = Array.from(document.querySelectorAll('.minimal-toc a'))
   tocLinks.map(el => el.addEventListener('click', scrollToIt))
 }

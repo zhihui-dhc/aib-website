@@ -14,6 +14,7 @@ const mutations = {
     state.faq.elementsVisible = value
   },
   setFaqTocVisible (state, value) {
+    console.log('MUTATION: setFaqTocVisible', value)
     state.faq.tocVisible = value
   },
   setWhitepaperElementsVisible (state, value) {

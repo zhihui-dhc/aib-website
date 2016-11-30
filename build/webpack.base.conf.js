@@ -107,5 +107,22 @@ module.exports = {
   stats: {
     // hide some command line spam when building the project
     children: false
-  }
+  },
+	vueMarkdown: {
+		// markdown-it config
+		preset: 'default',
+		html: true,
+    typographer: true,
+		preprocess: function(markdownIt, source) {
+			// do anything here
+			return source
+		},
+		use: [
+			require('markdown-it-anchor'),
+			[require('markdown-it-table-of-contents'), {
+        includeLevel: [2, 3, 4],
+        containerClass: 'minimal-toc'
+      }]
+		]
+	}
 }

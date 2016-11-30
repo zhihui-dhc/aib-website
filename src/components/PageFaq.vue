@@ -6,7 +6,8 @@
       <div class="section-container">
         <div class="section-content">
           <div class="article-body">
-            <page-faq-body></page-faq-body>
+            <ja v-if="lang === 'ja'"></ja>
+            <en v-else></en>
           </div>
         </div>
       </div>
@@ -17,15 +18,22 @@
 <script>
 import { mapGetters } from 'vuex'
 import PageFaqNav from './PageFaqNav'
-import PageFaqBody from './PageFaqBody'
+import Vue from 'vue'
+
+import en from '../content/en/FAQ.md'
+import ja from '../content/ja/FAQ.md'
 
 export default {
   name: 'page-faq',
   components: {
     PageFaqNav,
-    PageFaqBody
+    en,
+    ja
   },
   computed: {
+    lang () {
+      return Vue.config.lang
+    },
     ...mapGetters([
       'faqTocVisible'
     ])

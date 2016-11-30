@@ -6,7 +6,7 @@
       <div class="section-container">
         <div class="section-content">
           <div class="article-body">
-            <page-whitepaper-body></page-whitepaper-body>
+            <en></en>
           </div>
         </div>
       </div>
@@ -17,12 +17,12 @@
 <script>
 import { mapGetters } from 'vuex'
 import PageWhitepaperNav from './PageWhitepaperNav'
-import PageWhitepaperBody from './PageWhitepaperBody'
+import en from '../content/en/WHITEPAPER.md'
 
 export default {
   components: {
     PageWhitepaperNav,
-    PageWhitepaperBody
+    en
   },
   computed: {
     ...mapGetters([

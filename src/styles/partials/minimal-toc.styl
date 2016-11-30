@@ -1,54 +1,48 @@
-.toc-wrapper
+.minimal-toc
   border 1px solid bc
   background c-app-bg
   position relative
+  z-index 100
 
   a
     text-decoration none
 
-  .toc-header
+  &:before
+    display block
     border-bottom 1px solid bc
-    display flex
-    align-items center
-    padding-right 0.25em
+    padding 0 0.75em
 
-    .toc-title
-      flex 1
-      color light
-      text-transform uppercase
-      line-height 2.5em
-      padding 0 0.75rem
+    content 'Table of Contents'
+    color light
+    text-transform uppercase
+    line-height 2.5em
 
-    .fa
-      padding 0 0.5rem
-      color light
-      font-size x
-      cursor pointer
-      &:hover
-        color link
-
-  ul li 
-    a
-      &:hover
-        color link
-        text-decoration none
-
-    a.active
-      position relative
-
-      &:after
-        content ''
-        position absolute
-        top 0
-        left 0
-        bottom 0
-        right 0
-        border-left 2px solid txt
-
-  > ul
+  ul
     list-style none
     padding 0
 
+    li 
+      margin 0
+      a
+        position relative
+        &:after
+          content ''
+          position absolute
+          top 0
+          left 0
+          bottom 0
+          right 0
+          border-left 2px solid transparent
+
+        &:hover
+          color link
+          text-decoration none
+
+      a.active
+        &:after
+          border-left-color txt
+  
+  > ul
     > li
       border-bottom 1px solid bc
       
@@ -63,6 +57,7 @@
         color txt
 
       ul
+        margin-bottom 0
         li
           a
             display block
@@ -85,54 +80,8 @@
             a
               padding-left 3*x
 
-.toc-hidden-bar
-  position fixed
-  top 3*x + 0.5*x
-  right 0.5*x
-  bottom 0.5*x
-  width 2*x
-  max-height 100vh
-  border 1px solid bc
-
-  background c-app-bg
-
-  text-align center
-  cursor pointer
-
-  i.fa
-    font-size x
-    line-height 2*x
-
-  &:hover
-    i.fa
-      color link
-
-.toc-wrapper
-  z-index 100
-.toc-hidden-bar
-  z-index 101
-
 @media screen and (max-width: 959px)
-  .toc-hidden-bar
-    width 3*x
-    height 3*x
-    border-radius 1.5*x
-
-    top auto
-    left auto
-    bottom 0.5*x
-    right 0.5*x
-
-    display flex
-    align-items center
-    justify-content center
-    
-    background alpha(c-app-bg,85%)
-
-    i.fa
-      font-size 1.5*x
-
-  .toc-wrapper
+  .minimal-toc
     position fixed
     top 3*x
     left 0
@@ -143,25 +92,23 @@
     overflow hidden
 
 @media screen and (min-width: 960px)
-  .toc-wrapper
+  .minimal-toc
     max-height 100vh
     overflow hidden
     position fixed
     top 3.5*x
     right 0.5*x
     bottom 0.5*x
-
     width 15*x
-
     font-size 0.75*x
 
 @media screen and (min-width: 1200px)
-  .toc-wrapper
+  .minimal-toc
     font-size 0.85*x
     line-height 1.5
 
     width 20*x
 
 @media screen and (min-width: 1800px)
-  .toc-wrapper
+  .minimal-toc
     width 25*x

@@ -1,5 +1,5 @@
 export default function (visibleElements) {
-  let anchors = Array.from(document.querySelectorAll('.toc-wrapper a'))
+  let anchors = Array.from(document.querySelectorAll('.minimal-toc a'))
 
   anchors.map(function (el) {
     let id = el.getAttribute('href')

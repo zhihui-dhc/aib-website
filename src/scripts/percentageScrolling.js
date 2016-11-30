@@ -1,12 +1,12 @@
 function scrollIt (scrollSpeedMult = 1.0) {
-  let toc = document.querySelector('.toc-wrapper')
+  let toc = document.querySelector('.minimal-toc')
 
   let htmlScrollHeight = document.body.scrollHeight
   let htmlViewportHeight = document.documentElement.clientHeight
   let amountOfHtmlToScroll = htmlScrollHeight - htmlViewportHeight
 
-  let sidebarScrollHeight = document.querySelector('.toc-wrapper').scrollHeight
-  let sidebarHeight = document.querySelector('.toc-wrapper').offsetHeight
+  let sidebarScrollHeight = document.querySelector('.minimal-toc').scrollHeight
+  let sidebarHeight = document.querySelector('.minimal-toc').offsetHeight
   let amountOfSidebarToScroll = sidebarScrollHeight - sidebarHeight
 
   // console.log('htmlScrollH', htmlScrollHeight, 'htmlViewport', htmlViewportHeight)
