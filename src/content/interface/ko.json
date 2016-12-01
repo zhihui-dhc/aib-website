@@ -1,2 +1,85 @@
 {
+  "site": {
+    "networkOfBlockchains": "블록 체인 네트워크"
+  },
+  "siteHeader": {
+    "blog": "블로그",
+    "plan": "계획",
+    "faq": "자주하는 질문",
+    "whitepaper": "백지",
+    "wp": "WP"
+  },
+  "siteBlog": {
+    "title": "블로그",
+    "subtitle": "최신 업데이트를 보려면 <a href='/static/ko.xml'> 구독 </a>하십시오."
+  },
+  "emailSignupForm": {
+    "emailAddress": "이메일 주소",
+    "notifyMe": "구독하기"
+  },
+  "sectionCallToAction": {
+    "title": "모금 행사",
+    "description": "코스모스 모금 행사는 2017 년 2 월에 시작됩니다."
+  },
+  "sectionHomeVideo": {
+    "title": "Cosmos 란 무엇인가?"
+  },
+  "sectionHomeIntro": {
+    "title": "블록 체인 네트워크 구축",
+    "purpose": "목적",
+    "purposeText": "<strong> Cosmos </ strong>는 야심적인 임무를 가진 프로젝트입니다. cryptocurrency 및 블록 체인 커뮤니티에서 오랜 기간 지속되는 문제를 해결할 분산 원장 네트워크를 만드는 것입니다.",
+    "architecture": "건축물",
+    "architectureText": "Cosmos 네트워크는 존 (zone)이라고 불리는 많은 독립적이고 평행 한 블록 체인으로 구성되어 있으며, 각각은 <a href='http://tendermint.com'> 텐더 믹스 (Tendermint) </a>와 같은 고전적인 비잔틴 결함 허용 프로토콜 (BFT) <a href='https://erisindustries.com/components/erisdb/'> ErisDB </a>와 같은 플랫폼에 의해). 일부 영역은 다른 영역과 관련하여 허브 역할을하므로 공유 영역을 통해 많은 영역을 상호 운용 할 수 있습니다. 아키텍처는 Proof-of-Work 대신 BFT 및 Proof-of-Stake 알고리즘을 사용하여 Bitcoin sidechains 개념을보다 일반적으로 적용합니다.",
+    "cosmosHub": "Cosmos 허브",
+    "cosmosHubText": "코스모스 네트워크의 첫 번째 블록 체인은 코스모스 허브입니다. Cosmos 허브는 새로운 IBC (Inter-Blockchain Communication) 프로토콜을 통해 영역에 연결하고 각 영역의 총 토큰 수를 기록합니다. 모든 영역 간 토큰 전송이 Cosmos 허브를 통과하기 때문에 영역간에 유체 교환이나 신뢰할 수있는 제 3 자 없이도 한 영역에서 다른 영역으로 빠르고 안전하게 토큰을 전송할 수 있습니다. <br> <br> The Cosmos 허브는 각 영역이 IBC를 말하는 한 여러 종류의 영역에 연결할 수 있습니다. 결과적으로 Cosmos는 Bitcoin, Ethereum, ZeroCash, CryptoNote 등에서 볼 수있는 다양한 통화 및 스크립팅 언어를 지원할 수 있습니다.",
+    "readTheWhitepaper": "백서 읽기"
+  },
+  "sectionHomeInteroperability": {
+    "title": "상호 운용성",
+    "text": "Cosmos는 여러 다른 응용 프로그램 및 cryptocurrencies와 상호 작용할 수 있습니다. 다른 블록 체인은 잘 수행 할 수없는 것입니다. 새로운 영역을 생성하면 어떤 블록 체인 시스템을 Cosmos 허브에 꽂아 중개 할 필요없이 이러한 영역간에 토큰을 전달할 수 있습니다. <br> <br> 예를 들어, 이더넷 용 비트 동전을 거래하려면 오늘, 열린 교환기에서 피아트 화폐로 비트 동전을 판매 한 다음 다른 환전소에서 에테르를 사기 위해 그 피아트 화폐를 사용해야합니다. 문제는 오늘날 우리 교류의 많은 부분이 해킹, 절도, 단점에 시달리고 있다는 것입니다. 가장 중요한 두 가지 예는 <a href = 'http : //www.thedailybeast.com/articles/2016/05/19/behind-the-biggest-bitcoin-heist-in-history-inside-the-implosion- of-mt-gox.html '> 후지산 Gox </a> 및 최근에 <a href='http://www.reuters.com/article/us-bitfinex-hacked-hongkong-idUSKCN10E0KP'> Bitfinex </a>가 있습니다."
+  },
+  "sectionHomeScalability": {
+    "title": "확장 성",
+    "text": "스케일링은 블록 체인에 대한 또 다른 미해결 문제입니다. Ethereum과 Bitcoin은 모두 Visa 나 Mastercard와 같은 지불 네트워크에서 매일 볼 수있는 트랜잭션의 일부만을 지원합니다. 대조적으로, 구역은 코스모스가 무한대로 확장되도록합니다. 너무 많은 사람들이 사용하고 있기 때문에 하나의 영역에서 트랜잭션 속도가 느려지는 경우 허브에 다른 영역을 추가하고 해당 영역을 통해 사용자 절반을 지시하기 만하면 트랜잭션 속도가 두 배가됩니다. 한편 Cosmos 허브는 연결된 모든 존이 동기화 상태를 유지하도록합니다."
+  },
+  "sectionHomeUpgradability": {
+    "title": "업그레이드 가능성",
+    "text": "블록 체인의 또 다른 문제점은 새 버전이 나올 때 업그레이드를 처리하는 방법입니다. Bitchin의 경우에는 모든 유효성 검사기 ( '광부')를 동시에 블록 체인의 새 버전으로 업그레이드하는 것은 까다 롭고 단단한 포크로 이어질 수 있습니다. 이것은 정확하게 <a href='http://qz.com/730004/everything-you-need-to-know-about-the-ethereum-hard-fork/'> Ethereum 하드 포크 </ a > DAO 해킹을 둘러싼 정치 / 거버넌스 문제로 인해 ETH와 ETC에 포함됩니다. Cosmos를 사용하면 업그레이드가 중요하지 않습니다. 새로운 영역을 Cosmos 허브에 연결하기 만하면 사용자가 여유있게 자금을 이동할 수 있습니다."
+  },
+  "sectionHomeDecentralization": {
+    "title": "분산",
+    "textOne": "Cryptocurrencies의 큰 비극 중 하나는 오늘날 기존 시스템과 서로 상호 작용하지 못하는 것입니다. 코스모스는 새로운 중앙 집중식 교환소 또는 교환을 만들지 않고 함께 연결할 수있는 방법을 제공합니다. <br> <br> 코스모스는 암호학, 건전한 경제학, 합의 이론, 투명성 및 책임 성의 원칙을 토대로 새로운 기반으로 기능합니다. 우리의 미래 금융 시스템.",
+    "textTwo": "새로운 cryptocurrency 설계, 기존 cryptocurrency로 업그레이드, 분산 교환을위한 수단 또는 확장 가능한 스마트 계약을위한 플랫폼으로 Cosmos를 사용할 수 있습니다. <br> Cosmos는 단일 배포판 만이 아닙니다 원장, 그리고 코스모스 허브는 벽으로 둘러싸인 정원이나 우주의 중심이 아닙니다. 누구나이 프로토콜을 사용하여 자유 시장에서 우주와 경쟁 할 수 있습니다. <br> <br> 유일한 질문은, 우주에서 무엇을 쌓을 건가요?"
+  },
+  "siteFund": {
+    "title": "원자 구매",
+    "btnContinue": "잇다",
+    "btnFinished": "끝마친",
+    "stepOne": {
+      "title": "고객 정보",
+      "subtitle": "우리는 개인화 된 비트 코인 주소를 생성하기 위해 필요한 정보가 필요합니다.",
+      "name": "이름",
+      "email": "이메일 주소",
+      "nationality": "국적"
+    },
+    "stepTwo": {
+      "title": "월렛 설정",
+      "subtitle": "공개 키를 생성하여 아래의 텍스트 필드에 붙여 넣으십시오.",
+      "generatePublicKey": "공개 키 생성",
+      "launchKeygen": "키겐을 시작하십시오",
+      "pastePublicKey": "공개 키 붙여 넣기"
+    },
+    "stepThree": {
+      "title": "구매 수량",
+      "subtitle": "얼마나 많은 원자를 구매 하시겠습니까?",
+      "atomCount": "원자 수",
+      "btcPrice": "비트 코인 가격"
+    },
+    "stepFour": {
+      "title": "지불",
+      "subtitle": "아래의 입금 주소로 지불하십시오. 원자는 몇 분 안에 군중 지갑에 도착합니다.",
+      "depositAddress": "보증금 주소",
+      "totalPrice": "총 가격"
+    }
+  }
 }

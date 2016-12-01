@@ -3,7 +3,7 @@
     <section-cover></section-cover>
 
     <div class="section-home sh-video">
-      <h2>What is Cosmos?</h2>
+      <h2>{{ $t('sectionHomeVideo.title') }}</h2>
       <iframe src="https://player.vimeo.com/video/183530279?title=0&byline=0&portrait=0" width="960" height="540" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
     </div>
 

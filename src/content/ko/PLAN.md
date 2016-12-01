@@ -1,214 +1,214 @@
-# Cosmos Plan
+# 코스모스 계획
 
-LAST UPDATED: Oct 6th, 2016<br/>
-NOTE: The details in this plan override what is currently in the whitepaper,
-and all other plans published prior.
+마지막 업데이트 : 2016 년 10 월 6 일 <br/>
+참고 :이 계획의 세부 사항은 현재 백서의 내용보다 우선합니다.
+이전에 발표 된 다른 모든 계획.
 
 <hr />
 
-* Cosmos Network Foundation (CNF) is a non-profit Switzerland Foundation. Its purpose is
-  to conduct a Fundraiser designed to collect donations, to contract with
-  entities and their agents for the development of the Cosmos Essential
-  Software and Services (CESS), and to help foster a community around the CESS.
+* 코스모스 네트워크 재단 (CNF)은 비영리 재단입니다. 그 목적은
+  기부금 모으기, 기부금 모금을위한 모금 행사 실시
+  Cosmos Essential 개발을위한 엔티티와 에이전트
+  소프트웨어 및 서비스 (CESS)를 지원하고 CESS 관련 커뮤니티를 육성합니다.
 
-* CNF is planning a Fundraiser for future staking tokens, called "atoms", that
-  give the holder limited license to validate the Cosmos Hub and Dex. The
-  contributions made in connection with the Fundraiser will go to the CNF to
-  develop the CESS.
+CNF는 "원자 (atom)"라고 불리는 미래의 토킹 토큰을위한 기금 모금을 계획하고있다.
+  소유자에게 코스모스 허브 및 덱스의 유효성을 검사 할 수있는 제한된 라이센스를 제공하십시오. 그만큼
+  기금 모금 활동과 관련된 기부금은 CNF에
+  CESS를 개발하십시오.
 
-* All in Bits, Inc. (AIB) is a for-profit Delaware C-Corp behind Tendermint.
-  The CNF has contracted with AIB to develop the CESS.
+* All in Bits, Inc. (AIB)는 Tendermint의 영리를 목적으로하는 Delaware C-Corp입니다.
+  CNF는 CIB를 개발하기 위해 AIB와 계약했다.
 
-* The CNF has received several commitments for donations from various
-  individuals that will be tied to a portion of future atoms.  The CNF’s initial
-  donors committed an amount equal to 5% of CNF’s initial donation goal. Further,
-  the CNF has entered into a number of strategic partnerships and received
-  commitments for donations from interested individuals pre-Fundraiser for an
-  amount equal to [ XX %] of the CNF fundraising goal. 
+* CNF는 다양한 기부금 약속을 받았다.
+  미래의 원자의 일부에 묶일 개인. CNF의 초기
+  기부자는 CNF의 초기 기부 목표액의 5 %에 ​​해당하는 금액을 기탁했습니다. 더욱이,
+  CNF는 여러 가지 전략적 파트너십을 체결하고
+  관심있는 개인이 기부금을 기부하기로 한 기금 모금.
+  금액은 CNF 기금 모금 목표의 [XX %]와 같습니다.
 
-* THE PREFUND IS CLOSED FOR THE GENERAL PUBLIC. If you have to ask about the
-  prefund now, you don't qualify. The only exception is for strategic partners,
-  such as crypto exchanges, who would make ideal validators.
+* 선불은 일반 대중을 위해 닫힙니다. 만약 당신이
+  선매, 당신은 자격이 없습니다. 유일한 예외는 전략적 파트너,
+  이상적인 검증자를 만들 암호 교환과 같은
 
-* The CNF reserves the right to receive further donations in the future from
-  strategic partners at a discount rate of up to 25%.
+* CNF는 앞으로 더 많은 기부금을받을 권리를 보유합니다.
+  전략적 파트너를 최대 25 % 할인 된 가격으로 구매할 수 있습니다.
 
-* Before the first day the Fundraiser is opened, the total number of atoms
-  granted, the total amount of donations received, and a pseudonymous list of
-  distinct persons and entities along with their discount rates, will be
-  published.
+* 첫날 기금 모금 행사가 열리기 전에 총 원자 수
+  수여 된 기부금의 총 금액, 그리고 기부금의 가명리스트
+  뚜렷한 개인과 단체는 할인율과 함께
+  출판.
 
-* The projected date of the Fundraiser for all other parties, notwithstanding
-  the initial donors and pre-Fundraiser donors, is Q1 of 2017.
+* 다른 당사자들을위한 기금 모금 행사의 예상 날짜
+  초기 기부자와 기금 모금인 기증자는 2017 년 1 분기입니다.
 
-* At most the Fundraiser will last for 6 weeks. Note that after the Fundraiser,
-  no more atoms will be distributed by the CNF (unless approved by the on-chain
-  governance mechanism).
+* 기금 모금 행사는 기껏해야 6 주 동안 지속됩니다. 모금 행사가 끝나면,
+  더 이상 원자가 CNF에 의해 배포되지 않습니다 (체인을 통해 승인되지 않는 한)
+  거버넌스 메커니즘).
 
-* Governance can approve proposals for the creation of new atoms. For further
-  information concerning the proposed on-chain governance mechanism for the
-  creation of more atoms, please see the whitepaper for details.
+* 거버넌스는 새로운 원자 생성을위한 제안을 승인 할 수 있습니다. 추가 정보
+  제안 된 온 - 체인 거버넌스 메커니즘에 관한 정보
+  더 많은 원자를 생성하려면 자세한 내용은 백서를 참조하십시오.
 
-* The atoms will not be available for use until after genesis day. At the
-  earliest, genesis day is estimated to be sometime in Q3 2017. Even after
-  genesis day however, there is an initial vesting period.
+* 원자는 창세 이후까지 사용할 수 없습니다. 에서
+  초기, 창세기의 날은 2017 년 3 분기에 언젠가 추정된다.
+  그러나 창세기에는 초기 가득 기간이있다.
 
-* Atoms will vest over a period of two years after Genesis. Unvested atoms
-  cannot be transferred until vested. Unvested atoms will vest over time, at a
-  rate of 1/(24x365x2) of the account's initial (genesis) atoms, every hour.
+* 원자는 창세기 이후 2 년 동안 완고하게 될 것입니다. 미확인 원자
+  기권 될 때까지 양도 할 수 없다. 미확인 된 원자는 시간이 지남에 따라
+  계정 초기 (기원) 원자 1 / (24x365x2) 비율.
 
-* In the first day of the Fundraiser, suggested donations per atom will be
-  $0.10. A discount of 25% for strategic funders implies an atom price of
-  $0.075. A discount of 12% for Pre-Fundraisers implies an atom price of
-  $0.088.
+* 기금 모금 첫날, 원자 당 제안 된 기부금은
+  $ 0.10. 전략적 자금 조달자를위한 25 %의 할인은
+  $ 0.075. 사전 자금 조달자를위한 12 %의 할인은
+  $ 0.088.
 
-* The CNF’s fundraising goal may be capped. More details will be
-  released soon.
+* CNF의 기금 모금 목표는 제한 될 수 있습니다. 자세한 내용은 다음과 같습니다.
+  곧 발표했다.
 
-* After the Fundraiser, the total number of atoms distributed multiplied by 1/3
-  is inflated and allocated for the CNF, AIB, and the Initial Donors.
+* 기금 모금 행사가 끝난 후, 배포 된 총 원자 수에 1/3을 곱합니다.
+  CNF, AIB 및 초기 기부자를 위해 부 풀리고 배정됩니다.
 
-* On Genesis day, the distribution of atoms will be split between:
-  * CNF (10%)
-  * AIB (10%)
-  * Initial Donors (5%)
-  * Pre-Fundraiser Donors + Fundraiser Donors (75%)
+* 창세기의 날에 원자의 분포는 다음과 같이 나뉘어집니다 :
+  * CNF (10 %)
+  * AIB (10 %)
+  * 초기 기부자 (5 %)
+  * 기금 모금 전 기부자 + 기금 모금 기부자 (75 %)
 
-* Upon completion of the Fundraiser, all atom holders, including the CNF and AIB
-  play the Delegation Game in a special purpose Ethereum smart contract (which
-  holds no Ether). The top 100 validators after delegation will be chosen as
-  validators on Genesis. For more information on the Delegation Game please
-  refer to the white paper for details.
+* 기금 모금 행사가 끝나면 CNF 및 AIB를 포함한 모든 원자 보유자
+  위임 게임을 특수 목적의 이테 리움 스마트 계약 (
+  Ether 없음). 위임 후 상위 100 명의 유효성 검사기는 다음과 같이 선택됩니다.
+  창세기의 유효성 검사기. 위임 게임에 대한 자세한 내용은
+  자세한 내용은 백서를 참조하십시오.
 
-* Every validator must participate in governance, or else run the risk that
-  they will become inactivated and eventually unbonded.  Delegators who
-  delegate atoms to such validators will also likewise get their delegated
-  atoms inactivated and eventually unbonded. 
+* 모든 유효성 검사기는 반드시 거버넌스에 참여해야합니다.
+  그들은 불 활성화되고 궁극적으로 결합 해제 될 것이다. 위임자
+  그러한 유효성 검사기에 원자를 위임하면 마찬가지로 위임 된
+  불 활성화되고 결국 결합되지 않은 원자.
 
-* 1/5 of the total number of atoms will be inflated every year and distributed
-  back to the bonded and active atom holders (validators and delegators) for
-  their work validating and securing the ledger.
+* 총 원자 수의 1/5이 매년 팽창되어 분산됩니다.
+  보세 및 활성 원자 보유자 (유효성 확인자 및 위임자)에게
+  그들의 업무는 장부를 확인하고 확보했다.
 
-* The Unbonding Period is 1 month long.
+* 분리 기간은 1 개월입니다.
 
-* Inactive or unbonded atom holders do not earn the inflationary atoms, and are
-  thus taxed. This makes atoms ill-suited as a medium of exchange or a store of
-  value. Instead, atoms are a tool, like Bitcoin miners are a tool. 
+* 비활성 또는 결합되지 않은 원자 보유자는 인플레이션 원자를 얻지 않으며
+  세금이 부과됩니다. 이것은 원자를 교환 매체 나 상점으로 부적합하게 만든다.
+  값. 대신, 원자는 도구입니다 Bitcoin 광부는 도구입니다.
 
-* Bonding atoms and staking them put the atoms at risk of slashing. Validators
-  must run the sanctioned consensus protocol without deviation, or risk losing
-  some or all of their atoms. Running the Cosmos sanctioned consensus protocol
-  requires expert ability to run secure servers that must take extraordinary
-  measures to prevent hacking. Delegators must choose who to validate to
-  wisely, or risk losing those portions of atoms delegated to the incompetent,
-  malicious, or hacked validator.
+* 원자를 결합하고 그 원자를 측설하는 것은 원자를 깎을 위험에 놓이게한다. 검사기
+  편차없이 합의 된 합의 프로토콜을 실행하거나 위험을 감수해야합니다.
+  원자의 일부 또는 전부. 코스모스 공인 합의 프로토콜 실행
+  특별한 조치를 취해야하는 보안 서버를 실행할 수있는 숙련 된 기능이 필요합니다.
+  해킹 방지 조치. 위임자는 유효성을 검사 할 사람을 선택해야합니다.
+  현명하게, 또는 무능력자에게 위임 된 원자의 부분을 잃어 버릴 위험이있다.
+  악성 또는 해킹 된 검사 도구.
 
-* Tokens are virtual concepts on the blockchain. All mentions of tokens, like
-  atoms, as if they were physical objects, are an approximation of what they
-  actually represent.  As we have observed with the ETH/ETC hard-fork,
-  political tensions can cause the ledger to split. Furthermore, there is no
-  central entity that is responsible for the upkeep of the blockchain. Atoms
-  are not a claim to anything or anyone, not even the Cosmos Network Foundation. The
-  software may be buggy, and even its underlying theory may be flawed, causing
-  confusion, contention, and critical network failure for all those
-  participating in the Cosmos network.
+* 토큰은 블록 체인의 가상 개념입니다. 토큰에 대한 모든 언급은
+  원자는 마치 물리적 인 물체 인 것처럼, 그것들의 근사치이다.
+  실제로 나타냅니다. 우리가 ETH / ETC 하드 포크에서 관찰 한 바와 같이,
+  정치적 긴장으로 인해 원장이 분열 될 수 있습니다. 또한,
+  블록 체인의 유지에 책임이있는 중앙 실체. 원자
+  코스모스 네트워크 재단 (Cosmos Network Foundation)조차도 아무에게나 다른 사람에 대한 클레임이 아닙니다. 그만큼
+  소프트웨어가 버그가있을 수 있으며 심지어 기본 이론에도 결함이있을 수 있습니다.
+  혼란, 경합 및 모든 중요한 네트워크 장애
+  코스모스 네트워크에 참여했습니다.
 
-* The CNF, AIB, all donors as well as any atom token holders or any Cosmos
-  network participant, understand and accept that the Cosmos Network is still
-  in an early development stage, and its application is experimental in nature
-  that carries significant operational, technological, regulatory, reputational
-  risk.  Nothing contained herein represents any form of warranty.  All
-  participants in the Cosmos Network understand and agree, to the fullest
-  extent permitted by applicable law, that no Cosmos Network participant will
-  hold any of the developers, contractors, third parties or any other Cosmos
-  Network participant liable for any and all damages or injury caused by or
-  related to the use of, or inability to use, the Cosmos Network and the CESS
-  under any cause of action in all jurisdictions, including, but not limited
-  to, actions for breach of warranty, breach of contract, negligence, Nor shall
-  any developers, contractors, third parties or Cosmos Network participants be
-  liable for any indirect, incidental, special, exemplary or consequential
-  damages, including for loss of profits, goodwill or data, in any way arising
-  out of the use of, or the inability to use of the Cosmos Network and the CESS
+* CNF, AIB, 모든 기증자 및 모든 원자 토큰 보유자 또는 모든 우주
+  네트워크 참여자는, 코스모스 네트워크가 여전히 존재한다는 것을 이해하고 받아 들인다.
+  초기 개발 단계에서, 그리고 그 적용은 실제로 실험적이다.
+  중요한 운영, 기술, 규제, 평판
+  위험. 여기에 포함 된 내용은 어떠한 형태의 보증도 의미하지 않습니다. 모든
+  코스모스 네트워크 참가자들은 최대한 이해하고 동의합니다.
+  해당 법률에서 허용하는 한도 내에서 코스모스 네트워크 참가자가
+  개발자, 계약자, 제 3 자 또는 기타 우주를 보유하십시오.
+  네트워크 참여자가 발생하는 모든 손해 또는 피해에 대해 책임을집니다.
+  코스모스 네트워크와 CESS의 사용 또는 사용 불능과 관련하여
+  제한된 것은 아니지만 모든 관할권에서의 행동의 모든 원인에 따라
+  보증 위반, 계약 위반, 과실에 대한 조치, 또는
+  모든 개발자, 계약자, 제 3 자 또는 코스모스 네트워크 참가자는
+  간접적, 부수적, 특별, 모범적 또는 결과적
+  이익 손실, 영업권 또는 데이터 손실을 비롯한 어떠한 손해
+  코스모스 네트워크와 CESS의 사용 또는 사용 불가
 
-* All atom holders are free to fork, slash, and hack each other in accordance
-  with the spirit of the Cosmos Constitution.
+* 모든 원자 보유자는 자유롭게 서로 포크, 슬래시 및 해킹 할 수 있습니다.
+  코스모스 헌법의 정신으로
 
-* All validators and delegators must abide by the Cosmos Constitution.
+* 모든 유효성 확인자와 위임자는 Cosmos 헌법을 준수해야합니다.
 
-* A more fleshed out list of risks will be published soon.
+* 더 위험한 목록이 곧 공개 될 것입니다.
 
-* A roadmap and the constitution will be released soon.
+* 로드맵과 헌법은 곧 발표 될 예정이다.
 
-## Definitions
+## 정의
 
-**Activate Atoms**: Atoms that are staked by active validators (or delegators
-that delegate to active validators).  A validator that goes offline or fails to
-participate in governance will become inactivated.  Their atoms and delegated
-atoms then become inactive, before eventually becoming unbonded.  Inactive
-atoms do not earn transaction fees or inflationary atoms.  Inactive atoms may
-become reactivated by fixing the infraction.
+**Activate Atoms**: 활성 유효성 검사기 (또는 위임자)가 측설 한 원자
+활성 유효성 검사기에 위임). 오프라인 상태이거나 실패한 유효성 검사기
+거버넌스에 참여하는 것이 비활성화 될 것입니다. 그들의 원자와 위임 된
+그런 다음 원자는 결국 비활성 상태가되어 결국 접합되지 않게됩니다. 비활성
+원자는 거래 수수료 나 인플레이션 원자를 얻지 못한다. 비활성 원자들은
+위반을 고치면 재 활성화된다.
 
-**Bonded Atoms**: Atoms that have been posted as collateral and are “at stake”,
-either directly as a validator, or indirectly as a delegator delegating to
-another validator.  Bonded atoms are at risk of being slashed partially or
-completely if the validator gets hacked or is used to coordinate an attack on
-the network.
+**보세 원자**: 담보로 게시되고 "위험에 처한"원자,
+유효성 검사기로 직접 사용하거나 위임자로 간접적으로 사용
+또 다른 유효성 검사기. 결합 된 원자는 부분적으로 또는 부분적으로 깎일 위험이있다.
+유효성 검사기가 해킹 당하거나 공격을 조정하는 데 사용되는 경우 완전히
+네트워크.
 
-**Cosmos Constitution**: A plainly written document that includes the social
-contract of the Cosmos Network. All bonded validators and delegators must abide
-by the Cosmos Constitution.
+**코스모스 헌법** (Cosmos Constitution):
+코스모스 네트워크의 계약. 모든 보세 검사 및 위임자는 준수해야합니다.
+코스모스 헌법에 의해.
 
-**Cosmos Dex**: A distributed exchange zone that connects to the hub zone. The
-Cosmos Dex provides fast centralized matching with distributed custody of
-funds.
+**Cosmos Dex**: 허브 존에 연결하는 분산 교환 구역. 그만큼
+Cosmos Dex는 신속한 중앙 집중식 매칭을 제공합니다.
+자금.
 
-**Cosmos Hub**: A zone that connects to many other zones. The hub acts as a
-root custodian and facilitates token movement between zones.
+**코스모스 허브**: 다른 많은 구역과 연결되는 구역. 허브는
+루트 관리자로서 영역 간 토큰 이동을 용이하게합니다.
 
-**Cosmos Hub Block Reward**: The blockchain will reward the Validators and
-Delegators in proportion to their bonded atoms, and afterwards account for any
-commissions that delegators pay to the delegated validators. The reward will
-consist of two types -- transaction fees, and inflationary atoms. The
-transaction fees will be any fee collected by a validator. In addition, there
-will be inflationary atoms at a rate of 1/5 of the total number of atoms per
-year. Cosmos holders who do not put their atoms at stake by being a validator
-or delegating to a validator will not receive any of the Cosmos Hub Block
-Rewards.
+**코스모스 허브 블록 리워드**: 블록 체인은 유효성 검사기 및
+대표단은 보세 원자에 비례하여, 그리고 이후에는
+위임자가 위임 된 유효성 검사자에게 지불하는 수수료. 보상은
+거래 수수료와 인플레이션 원자의 두 가지 유형으로 구성됩니다. 그만큼
+거래 수수료는 검사자가 수집 한 수수료가됩니다. 또한, 거기
+인플레이션 원자가 총 원자 수의 1/5의 비율로
+년. 유효성 검사자가 됨으로써 원자를 위험에 빠뜨리지 않는 코스모스 보유자
+또는 유효성 검사자에게 위임하면 코스모스 허브 블록
+보상.
 
-**Cosmos Network**: Includes the Cosmos Hub, Dex, and all other connected
-zones.
+**코스모스 네트워크**: 코스모스 허브, 덱스 및 기타 모든 연결 서비스가 포함됩니다.
+영역.
 
-**Cosmos Network Participant**: any party, individual, enterprise, blockchain
-or network that uses, develops, creates or interacts with any aspect of the
-Cosmos Network or any component that constitutes the CESS.  
+**코스모스 네트워크 참여자**: 파티, 개인, 기업, 블록 체인
+또는 네트워크를 사용, 개발, 생성 또는 상호 작용하는 네트워크
+Cosmos Network 또는 CESS를 구성하는 구성 요소.
 
-**Delegator**: An atom holder who puts their atoms at stake by delegating its
-validating power and voting power to a validator.  Delegators risk losing their
-tokens if the delegated validator gets hacked or participates in an attack.
+**위임자**: 자신의 원자를 위임하여 위태롭게하는 원자 보유자.
+유효성 검사기에 대한 유효성 및 투표권을 검증합니다. 대표단은 자신들을 잃을 위험에 처한다.
+위임 된 유효성 검사기가 해킹 당하거나 공격에 참여하는 경우 토큰.
 
-**Governance**: An ongoing process where the bonded atom holders can vote to
-ratify or reject proposals as proposed by any atom holder. Proposals can change
-preset parameters, amend the Constitution, inflate the atom supply, and more.
+**통제**: 보세 원자 보유자가에 투표 할 수있는 진행중인 과정
+임의의 원자 보유자가 제안한 제안을 비준하거나 거부한다. 제안이 변경 될 수 있음
+미리 설정된 매개 변수, 헌법 수정, 원자 공급 확대 등을 할 수 있습니다.
 
-**Unbonding Period**: A fixed amount of time.  Previously bonded atoms must
-post a special UnbondTx transaction and wait the unbonding period before atoms
-become freely transferrable.
+**보증 기간**: 일정 기간. 이전에 결합 된 원자는
+특별한 UnbondTx 트랜잭션을 게시하고 원자보다 먼저 연결 해제 기간을 기다리십시오.
+자유롭게 이동할 수있게된다.
 
-**Validator**: Validators are full nodes of a Cosmos zone that have the
-responsibility of committing blocks in that zone. The Cosmos Hub will start
-with 100 validator spots. Due to the limited number of validator spots, not
-everyone who has atoms can be a validator. Instead, everyone else can bond
-atoms and delegate their consensus voting power to any of the 100 validators.
-Before Genesis, the Cosmos Crowdfund funders will play the Delegation Game to
-determine the top 100 bonded delegates who will become the genesis validators.
-Validators can lose some or all their stake if they get hacked, deviate from
-the sanctioned protocol, or otherwise collude to disrupt the network.
+**Validator**: 유효성 검사기는 Cosmos 영역의 전체 노드입니다.
+그 지역에서 블록을 저지해야 할 책임. 코스모스 허브가 시작됩니다.
+100 개의 유효성 검사기가 있습니다. 제한된 수의 유효성 검사기 때문에
+원자가있는 사람은 모두 유효성 검사기가 될 수 있습니다. 대신, 다른 모든 사람은 본드 할 수 있습니다.
+100 명의 유효성 검사자 중 누구에게나 그들의 합의 투표권을 위임했다.
+창세기 이전에, 코스모스 크라우드 펀드 기금 모금 운동가는
+창세기 검증자가 될 상위 100 명의 보좌관을 결정하십시오.
+유효성 검사기가 해킹 당하거나 다른 곳에서 벗어나면 일부 또는 전체 지분을 잃을 수 있습니다.
+승인 된 프로토콜, 그렇지 않으면 네트워크를 혼란에 빠뜨릴 수 있습니다.
 
-### Cosmos Essential Software and Services
+### 코스모스 필수 소프트웨어 및 서비스
 
-* **Tendermint**
-* **Cosmos Hub**
-* **Cosmos Dex**
+* **텐더 민트**
+* **코스모스 허브**
+* **코스모스 덱스**
 * **Ethereum Peg**
 * **Bitcoin Peg**
-* **EVM Zone**
+* **EVM 구역**

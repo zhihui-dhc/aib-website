@@ -19,6 +19,7 @@
 <script>
 import ArticleFooter from './ArticleFooter'
 import PageHeader from './PageHeader'
+import Vue from 'vue'
 
 import { mapGetters } from 'vuex'
 
@@ -31,10 +32,7 @@ export default {
   computed: {
     entry () {
       let slug = this.$route.params.entry
-      if (this.allPosts) {
-        return this.allPosts.find(p => p.slug === slug)
-      }
-      return {}
+      return this.allPosts[Vue.config.lang].find(p => p.slug === slug)
     },
     entrySubtitle () {
       let string = this.entry.dateFriendly

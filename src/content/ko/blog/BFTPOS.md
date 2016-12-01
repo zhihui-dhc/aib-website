@@ -1,130 +1,128 @@
 ~~~
-title: "BFT: The Most Secure Proof-of-Stake"
+title: "BFT : 가장 안전한 스테이크 증언"
+slug: bft-the-most-secure-proof-of-stake
 date: 2016-11-15
 author: Jae Kwon
-excerpt: Many people have rallied against the use of PoS, claiming it is impossible to secure. But that is simply not true. Using BFT, you absolutely can secure PoS.  It’s just that we haven’t seen any BFT-PoS public blockchains yet.
+excerpt: 많은 사람들이 PoS 사용에 반발하여 확보가 불가능하다고 주장하면서 하지만 그건 사실이 아닙니다. BFT를 사용하면 절대적으로 PoS를 확보 할 수 있습니다. BFT-PoS 공개 블록을 아직 보지 못했습니다.
 ~~~
 
-Bitcoin brought the world’s attention to the blockchain. But alas, the Bitcoin
-version of blockchain isn’t sufficient for the world’s blockchain needs. That
-is because Bitcoin’s proof of work (PoW) consensus [requires an enormous amounts
-of energy](http://motherboard.vice.com/read/bitcoin-could-consume-as-much-electricity-as-denmark-by-2020). In addition, transactions are painstakingly slow, taking an hour or
-longer to commit. And because PoW miners have little incentive to be loyal to
-one chain or other, upgrades are difficult to coordinate.
- 
-We need an approach to manage blockchains securely that does not impose a huge
-energy cost on our planet. That approach is Byzantine fault-tolerance
-(BFT)-based [proof-of-stake](https://bitcointalk.org/index.php?topic=27787.0) (PoS).  We call it BFT-PoS.
- 
-Before I delve into the merits of BFT-PoS, let me first address the concept of
-Byzantine faults without going into confusing detail about [Lamport’s General
-and his armies](http://pages.cs.wisc.edu/~sschang/OS-Qual/reliability/byzantine.htm). 
+Bitcoin은 블록 체인에 세계의 관심을 불러 일으켰습니다. 그러나 아아, Bitcoin
+blockchain 버전은 세계의 블록 체인 요구 사항에 충분하지 않습니다. 그
+Bitcoin의 작업 증명 (PoW) 합의 [엄청난 양의에너지](http://motherboard.vice.com/read/bitcoin-could-consume-as-much-electricity-as-denmark-by-2020). 또한 트랜잭션은 한 시간 또는
+커밋하는 데 오래 걸린다. 그리고 광부 광부들은 충성스러운 인센티브가 거의 없기 때문에
+하나의 체인 또는 기타, 업그레이드를 조정하기가 어렵습니다.
+ 
+블록 체인을 안전하게 관리하는 접근 방식이 필요합니다.
+지구의 에너지 비용. 그 접근 방식은 비잔틴 결함 허용 오차입니다.
+(BFT) 기반의 [스테이크 증명](https://bitcointalk.org/index.php?topic=27787.0) (PoS). 우리는 이것을 BFT-PoS라고 부릅니다.
+ 
+BFT-PoS의 장점에 대해 알아보기 전에 먼저
+비잔틴 잘못은 [Lamport 's General]에 대한 혼란스러운 세부 사항에 빠지지 않고그의 군대](http://pages.cs.wisc.edu/~sschang/OS-Qual/reliability/byzantine.htm).
 
-In a distributed system, where data is replicated across hundreds or thousands
-of nodes, there needs to be some type of fault-tolerance or consensus
-algorithm, for the simple fact that computers break down or go offline from
-time to time. So if a portion of those nodes fail, the system as a whole still
-needs to reach a consensus.
- 
-Standard fault-tolerant consensus algorithms like
-[Raft](https://raft.github.io/raft.pdf) and
-[Paxos](https://en.wikipedia.org/wiki/Paxos_(computer_science)) assume that
-when a node fails, it simply stops working and doesn’t send back a reply.
-Google, Facebook, and some existing database products already use this family
-of consensus algorithms within their firewalls to ensure that services remain
-available despite faulty computers.
+수백 또는 수천 개의 데이터가 복제되는 분산 시스템에서
+노드 중 일부 유형에는 내결함성이나 컨센서스가 있어야합니다.
+알고리즘, 컴퓨터가 고장 나거나 오프라인 상태가되는 간단한 사실
+때로는. 따라서 노드 중 일부가 실패하면 전체 시스템은 여전히
+합의에 도달해야합니다.
+ 
+표준 내결함성 컨센서스 알고리즘
+[Raft](https://raft.github.io/raft.pdf) 및
+[Paxos](https://en.wikipedia.org/wiki/Paxos_ (computer_science))는 다음과 같이 가정합니다.
+노드가 실패하면 작동을 멈추고 응답을 되돌려 보내지 않습니다.
+Google, Facebook 및 일부 기존 데이터베이스 제품에서 이미이 제품군을 사용하고 있습니다.
+방화벽 내에서 합의 알고리즘을 사용하여 서비스가 남아 있도록 보장
+결함이있는 컴퓨터에도 사용할 수 있습니다.
 
-But these algorithms aren’t suitable for public blockchains, because there is
-no firewall in a public blockchain.  Anyone with mining power (in PoW) or
-staking tokens (in PoS) can participate, or even try to sabotage the network.
-To reach consensus on a public blockchain, we need Byzantine fault-tolerance.
-In a Byzantine fault, the faulty node can behave in a completely arbitrary
-manner. Nodes can even collude to try and maximize the damage they cause.
- 
-So essentially, the purpose of a BFT consensus algorithm is to establish trust
-between otherwise unrelated parties over an untrusted network like the
-Internet.
- 
-BFT is nothing new. The concept was first introduced in an academic paper by
-[Lamport, Shostak, and Pease in
-1982](http://research.microsoft.com/en-us/um/people/lamport/pubs/byz.pdf). But
-Lamport et al only demonstrated the theoretical feasibility of the algorithm in
-a synchronous environment, where all the messages always arrive on time.  
- 
-But in the real world, you can’t really trust the Internet to deliver anything
-on time. So in 1988, [Dwork, Lynch, and Stockmeyer](http://groups.csail.mit.edu/tds/papers/Lynch/jacm88.pdf) (DLS) proposed an algorithm
-that works in mostly asynchronous environments.  Later in 1999, [Miguel Castro
-and Barbara Liskov](http://pmg.csail.mit.edu/papers/osdi99.pdf) proposed a practical solution for continuous BFT consensus
-that was, and still is today, the state-of-the-art in BFT algorithms.
- 
-But for a long time, the mainstream press ignored these seminal works. Nobody
-understood the importance of BFT outside academia and major institutions like
-IBM and DARPA, until 2009 when Bitcoin came along. Bitcoin was the first open
-decentralized application to provide BFT consensus on a global currency ledger,
-but using a completely novel solution to the Byzantine general’s problem: PoW.  
- 
-In PoW, miners compete, based on who has the most processing power, to validate
-transactions. And for their efforts they are rewarded with transaction fees and
-newly minted bitcoins. This is how Bitcoin creates new currency.  Bitcoin
-miners around the globe compete in a lottery-like system for these newly issued
-bitcoins, and the efficient market makes it so that the cost of the energy used
-by the global mining network is on the order of the block reward (plus
-transaction fees).  Today, that turns out to be around $1M worth of electricity
-per day.  In addition, Bitcoin mining is being commoditized by [large data
-centers in places of the world where electricity is more
-affordable](https://bitcointalk.org/index.php?topic=1072474.0), making it
-difficult for laymen to participate.
- 
-PoS, on the other hand, does away with the energy dependence of PoW entirely.
-In PoS, miners are replaced with “validators” who have a stake in the system.
-Validators don’t have to invest in expensive processing systems but they do
-have to purchase “staking tokens.” Any normal laptop will suffice to solve the
-algorithm.  
- 
+그러나 이러한 알고리즘은 공용 블록 체인에 적합하지 않습니다.
+공개 블록 체인에 방화벽이 없습니다. 광업 능력을 지닌 사람 (PoW) 또는
+(PoS에서) 스테이크 토큰이 참여하거나 심지어 네트워크를 방해하려고 시도 할 수도 있습니다.
+공용 블록 체인에 대한 합의에 도달하려면 비잔틴 결함 허용 기능이 필요합니다.
+비잔틴 결함에서, 결함 노드는 완전히 임의적으로 행동 할 수있다.
+방법. 노드는 결점을 최대화하려고 시도 할 수 있습니다.
+ 
+따라서 본질적으로 BFT 합의 알고리즘의 목적은 신뢰를 확립하는 것입니다
+신뢰할 수없는 네트워크를 통해 다른 관계가없는 당사자들과
+인터넷.
+ 
+BFT는 새로운 것이 아닙니다. 개념은 처음으로 학술 논문에서 소개되었습니다.
+[Lamport, Shostak 및 Pease in
+1982](http://research.microsoft.com/en-us/um/people/lamport/pubs/byz.pdf). 그러나
+Lamport 등은 알고리즘의 이론적 타당성을
+모든 메시지가 항상 정시에 도착하는 동기식 환경
+ 
+그러나 현실 세계에서 무엇이든 제공하기 위해 인터넷을 믿을 수는 없습니다.
+제 시간에. 1988 년 [Dwork, Lynch, Stockmeyer](http://groups.csail.mit.edu/tds/papers/Lynch/jacm88.pdf) (DLS)는 알고리즘을 제안했습니다.
+대부분 비동기 환경에서 작동합니다. 1999 년 말, [Miguel Castro
+와 Barbara Liskov](http://pmg.csail.mit.edu/papers/osdi99.pdf)는 지속적인 BFT 컨센서스를위한 실용적인 해결책을 제안했다.
+BFT 알고리즘의 최첨단 기술이었습니다.
+ 
+그러나 오랜 기간 동안 주류 언론은이 정액 작품을 무시했습니다. 아무도
+외부 학계와 주요 기관과 같은 BFT의 중요성을 이해했습니다.
+IBM과 DARPA, Bitcoin이 등장 할 때까지 2009. Bitcoin이 첫 번째 공개되었습니다.
+글로벌 통화 원장에 대한 BFT 합의를 제공하는 분산 애플리케이션,
+그러나 비잔틴 일반 문제에 대한 완전히 새로운 해결책을 사용하십시오 : PoW. 
+
+PoW에서 광부는 누가 가장 많은 처리 능력을 가지고 있는지에 따라 경쟁을합니다
+업무. 그리고 그들의 노력으로 그들은 거래 수수료와
+새롭게 작성된 비트 코인. 이것은 Bitcoin이 새로운 통화를 만드는 방법입니다. 비트 코인
+전세계 광부들은 새로 발행 된 이들을 위해 복권과 같은 시스템에서 경쟁합니다
+비트 코인을 사용하고 있으며 효율적인 시장으로 인해 사용 된 에너지의 비용
+글로벌 광산 네트워크에 의해 블록 보상 (플러스
+거래 수수료). 오늘날, 그것은 약 1M의 가치가있는 전기로 밝혀졌습니다.
+하루에. 또한, Bitcoin 광산은 [큰 데이터에 의해 commoditized되고있다
+전기가 더 많이 흐르는 세계의 중심지
+저렴한 가격](https://bitcointalk.org/index.php?topic=1072474.0)
+평신도가 참여하기 어렵다.
+ 
+PoS는 다른 한편으로는 PoW의 에너지 의존도를 완전히 없애줍니다.
+PoS에서는 광부가 시스템의 지분을 가진 "유효성 검사기"로 대체됩니다.
+검사기는 값 비싼 처리 시스템에 투자 할 필요가 없지만
+"스테 킹 토큰 (steaking token)"을 구입해야합니다.
+연산.
+ 
 Peercoin, [BitShares](https://bitshares.org/),
-[Nxt](https://en.wikipedia.org/wiki/Nxt), and others already use some form of
-PoS, and Ethereum is planning a move to PoS in the near future. Yet, while PoS
-makes practical sense, many people have [rallied against the use of
-PoS](https://download.wpsoftware.net/bitcoin/pos.pdf), claiming it is
-impossible to secure. But that is simply not true. Using BFT, you absolutely
-can secure PoS.  It’s just that we haven’t seen any BFT-PoS public blockchains
-yet.
+[Nxt](https://en.wikipedia.org/wiki/Nxt) 및 다른 사람들은 이미
+PoS 및 Ethereum은 가까운 미래에 PoS 로의 이전을 계획하고 있습니다. 그러나 PoS
+실용적인 의미로, 많은 사람들이 [
+PoS](https://download.wpsoftware.net/bitcoin/pos.pdf)라고 주장하면서
+불가능하다. 하지만 그건 사실이 아닙니다. BFT를 사용하면 절대적으로
+PoS를 확보 할 수 있습니다. BFT-PoS 공개 블록 체인을 보지 못했습니다.
+아직.
 
-While the theory may be difficult to explain or understand, the ultimate
-results provided by proper BFT algorithms are simple to grasp.  Unlike PoW
-blockchains, BFT-PoS blockchains do not fork (i.e. get double-spend attacked)
-at all unless ⅓ or more validators coordinate such an attack.  And, when 1/3 or
-more validators do cause a double-spend attack, we can computationally
-determine which validators were responsible for the attack, destroy their
-staking tokens and eject them from the network.  It’s as if the staking tokens
-are virtualized PoW miners that blow up when used to attack the system.  No
-other blockchain consensus algorithm, including PoW, can provide the level of
-collateralization that is possible with BFT-PoS.
+이론이 설명하거나 이해하기 어려울 수도 있지만 궁극적 인
+적절한 BFT 알고리즘에 의해 제공된 결과는 이해하기 쉽습니다. PoW와 달리
+블록 체인, BFT-PoS 블록 체인이 분기되지 않음 (즉, 이중 지출 공격 발생)
+1/3 이상의 유효성 검사기가 그러한 공격을 조정하지 않는 한 전혀. 그리고 1/3 또는
+더 많은 유효성 검사기가 이중 소비 공격을 야기하므로 계산적으로
+어떤 밸리데이터가 공격을 담당했는지 결정하고,
+스테이크 토큰을 가져와 네트워크에서 꺼냅니다. 그것은 토큰을 스테이 킹하는 것과 같습니다.
+가상 공격을받은 PoW 광부로서 시스템을 공격 할 때 폭발합니다. 아니
+PoW를 포함한 다른 블록 체인 컨센서스 알고리즘은
+BFT-PoS로 가능할 수있는 담보 제공
 
-BFT-PoS performs extremely well. Today, in global public blockchain with a few
-hundred validators, you can get transaction finality on the  order of 3
-seconds, easily -- no need to wait for additional block confirmations! The
-theory has proven to us that these are optimal fault-tolerance thresholds for
-“instant-finality” blockchains.  While more validators does slow down
-consensus, if [Nielsen’s
-law](https://www.nngroup.com/articles/law-of-bandwidth/) continues to hold,
-we’ll even be able to support an exponentially increasing number of validators
-every year with the same performance.
+BFT-PoS는 매우 잘 수행됩니다. 오늘날, 몇 개의 글로벌 공개 블록 체인
+백개의 유효성 검사기를 사용하면 트랜잭션 최종성을 3
+초, 쉽게 - 추가 블록 확인을 기다릴 필요가 없습니다! 그만큼
+이론은 이것이 최적의 폴트 허용 임계 값이라는 것을 우리에게 입증 해주었습니다.
+"즉시 최종"블록 체인. 더 많은 검사기가 속도를 늦추지 만
+공감대, [Nielsen
+법률](https://www.nngroup.com/articles/law-of-bandwidth/)
+우리는 기하 급수적으로 증가하는 검증자를 지원할 수도 있습니다.
+매년 같은 공연으로.
 
-In addition, BFT-PoS will also increase the security of mobile wallets. Few of
-the mobile wallets in existence today take full advantage of the security
-offered by Bitcoin, for the simple fact that nobody is willing to wait an hour
-for a transaction to clear. Instead, most wallets just assume that [the person
-sending the money isn’t trying to double spend
+또한 BFT-PoS는 모바일 지갑 보안을 강화합니다. 몇몇
+현재 존재하는 모바일 지갑은 보안을 최대한 활용합니다.
+아무도 1 시간을 기다릴 용의가 없다는 단순한 사실 때문에 Bitcoin이 제공했습니다.
+트랜잭션을 지우려면 대신, 대부분의 지갑은 [사람
+돈을 보내는 것은 지출을 두 배로하려고하지 않고있다.
 it](https://www.coingecko.com/buzz/peter-todd-explains-the-problems-with-unconfirmed-bitcoin-transactions).
-And, though we don’t have time to dive into it here, efficient mobile wallet
-protocols, or “light client SPV” protocols are the key to future blockchain
-interoperability.
+그리고 여기에 들어가기에는 시간이 없지만 효율적인 모바일 지갑
+프로토콜 또는 "라이트 클라이언트 SPV"프로토콜이 미래의 블록 체인의 열쇠입니다
+상호 운용성.
 
-While PoW worked well for Bitcoin, it’s costly, slow, and environmentally
-unfriendly. The best alternative out there right now is BFT-PoS. It’s an
-enduring, energy efficient solution that works well in asynchronous
-environments. And best of all, because BFT was developed by the best and the
-brightest in the computer science industry, it’s provably secure. You can’t do
-any better than that.
-
+PoW는 Bitcoin에서 잘 작동했지만 비용이 많이 들고 느리며 환경 적으로
+해로운. 지금 가장 좋은 대안은 BFT-PoS입니다. 그것은
+비동기 적으로 잘 작동하는 지속성있는 에너지 효율적인 솔루션
+환경. 무엇보다 BFT가 최고로 개발되었으므로
+컴퓨터 과학 업계에서 가장 밝은, 그것은 안전합니다. 너는 할 수 없어.
+그것보다 낫지.

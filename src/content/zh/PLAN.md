@@ -1,214 +1,214 @@
-# Cosmos Plan
+# Cosmos计划
 
-LAST UPDATED: Oct 6th, 2016<br/>
-NOTE: The details in this plan override what is currently in the whitepaper,
-and all other plans published prior.
+最后更新：2016年10月6日<br />
+注意：此计划中的详细信息将覆盖白皮书中当前的内容，
+和所有其他计划公布之前。
 
 <hr />
 
-* Cosmos Network Foundation (CNF) is a non-profit Switzerland Foundation. Its purpose is
-  to conduct a Fundraiser designed to collect donations, to contract with
-  entities and their agents for the development of the Cosmos Essential
-  Software and Services (CESS), and to help foster a community around the CESS.
+* Cosmos网络基金会（CNF）是一个非营利的瑞士基金会。它的目的是
+  开展募捐活动，旨在收集捐款，与其签订合同
+  实体及其代理人发展Cosmos基本要素
+  软件和服务（CESS），并帮助培养CESS周围的社区。
 
-* CNF is planning a Fundraiser for future staking tokens, called "atoms", that
-  give the holder limited license to validate the Cosmos Hub and Dex. The
-  contributions made in connection with the Fundraiser will go to the CNF to
-  develop the CESS.
+* CNF正在规划一个募款人，用于未来放置令牌，称为“原子”
+  授予持有人有限许可证以验证Cosmos Hub和Dex。的
+  与募捐人有关的捐款将捐赠给CNF
+  开发CESS。
 
-* All in Bits, Inc. (AIB) is a for-profit Delaware C-Corp behind Tendermint.
-  The CNF has contracted with AIB to develop the CESS.
+* All in Bits，Inc.（AIB）是Tendermint之后的一家营利性特拉华C-Corp。
+  CNF已与AIB签约开发CESS。
 
-* The CNF has received several commitments for donations from various
-  individuals that will be tied to a portion of future atoms.  The CNF’s initial
-  donors committed an amount equal to 5% of CNF’s initial donation goal. Further,
-  the CNF has entered into a number of strategic partnerships and received
-  commitments for donations from interested individuals pre-Fundraiser for an
-  amount equal to [ XX %] of the CNF fundraising goal. 
+* CNF已收到来自各种捐款的几项承诺
+  将被绑定到未来原子的一部分的个体。 CNF的初始
+  捐赠者承诺等于CNF初始捐赠目标的5％。进一步，
+  CNF已经进入了一些战略合作伙伴并收到
+  承诺捐款从感兴趣的个人前募款活动
+  金额相当于CNF筹款目标的[XX％]。
 
-* THE PREFUND IS CLOSED FOR THE GENERAL PUBLIC. If you have to ask about the
-  prefund now, you don't qualify. The only exception is for strategic partners,
-  such as crypto exchanges, who would make ideal validators.
+* 选举结果是关闭一般公众的。如果你要问一下
+  现在，你不合格。唯一的例外是战略合作伙伴，
+  例如加密交换，谁将做出理想的验证器。
 
-* The CNF reserves the right to receive further donations in the future from
-  strategic partners at a discount rate of up to 25%.
+* 中国人民保险基金保留将来从中收取进一步捐款的权利
+  战略合作伙伴，折扣率高达25％。
 
-* Before the first day the Fundraiser is opened, the total number of atoms
-  granted, the total amount of donations received, and a pseudonymous list of
-  distinct persons and entities along with their discount rates, will be
-  published.
+* 在第一天之前募款人开放，原子总数
+  授予，接收的捐赠总额和假名单
+  不同的个人和实体，以及它们的折现率
+  发表。
 
-* The projected date of the Fundraiser for all other parties, notwithstanding
-  the initial donors and pre-Fundraiser donors, is Q1 of 2017.
+* 募捐人对所有其他方的预计日期，尽管如此
+  初始捐赠者和募捐前捐赠者，是2017年第一季度。
 
-* At most the Fundraiser will last for 6 weeks. Note that after the Fundraiser,
-  no more atoms will be distributed by the CNF (unless approved by the on-chain
-  governance mechanism).
+* 最多募款人将持续6周。注意，募捐人，
+  不再有CNF分布的原子（除非被链上批准）
+  治理机制）。
 
-* Governance can approve proposals for the creation of new atoms. For further
-  information concerning the proposed on-chain governance mechanism for the
-  creation of more atoms, please see the whitepaper for details.
+* 治理可以批准创建新原子的提案。为了更进一步的
+  关于拟议的链上治理机制的信息
+  创建更多的原子，请参阅白皮书的详细信息。
 
-* The atoms will not be available for use until after genesis day. At the
-  earliest, genesis day is estimated to be sometime in Q3 2017. Even after
-  genesis day however, there is an initial vesting period.
+* 原子直到发生后才可使用。在
+  最早，创世日估计是在2017年第三季度的某个时间
+  但是，有一个初始归属期。
 
-* Atoms will vest over a period of two years after Genesis. Unvested atoms
-  cannot be transferred until vested. Unvested atoms will vest over time, at a
-  rate of 1/(24x365x2) of the account's initial (genesis) atoms, every hour.
+* 原子在Genesis后的两年内归属。未被感染的原子
+  不能转移直到归属。未投资的原子将随着时间的推移而归属
+  率为1 /（24x365x2）的帐户的初始（起源）原子，每小时。
 
-* In the first day of the Fundraiser, suggested donations per atom will be
-  $0.10. A discount of 25% for strategic funders implies an atom price of
-  $0.075. A discount of 12% for Pre-Fundraisers implies an atom price of
-  $0.088.
+* 在筹款活动的第一天，建议每个原子捐赠
+  $ 0.10。战略出资者的折扣25％意味着原子价格
+  $ 0.075。前募款的折扣为12％意味着原子价格
+  $ 0.088。
 
-* The CNF’s fundraising goal may be capped. More details will be
-  released soon.
+* CNF的筹款目标可能受到限制。更多细节将
+  发布很快。
 
-* After the Fundraiser, the total number of atoms distributed multiplied by 1/3
-  is inflated and allocated for the CNF, AIB, and the Initial Donors.
+* 募捐人之后，原子分布的总数乘以1/3
+  充值并分配给CNF，AIB和初始捐赠者。
 
-* On Genesis day, the distribution of atoms will be split between:
-  * CNF (10%)
-  * AIB (10%)
-  * Initial Donors (5%)
-  * Pre-Fundraiser Donors + Fundraiser Donors (75%)
+* 在创世纪日，原子的分布将分为：
+  * CNF（10％）
+  * AIB（10％）
+  *初始捐款（5％）
+  *募款前捐款者+筹款捐赠者（75％）
 
-* Upon completion of the Fundraiser, all atom holders, including the CNF and AIB
-  play the Delegation Game in a special purpose Ethereum smart contract (which
-  holds no Ether). The top 100 validators after delegation will be chosen as
-  validators on Genesis. For more information on the Delegation Game please
-  refer to the white paper for details.
+* 募捐人完成后，所有原子持有人，包括CNF和AIB
+  在一个特殊目的以太坊的智能合同（这是
+  不含醚）。授权后前100个验证器将被选为
+  验证者。有关代表团游戏的更多信息
+  有关详细信息，请参阅白皮书。
 
-* Every validator must participate in governance, or else run the risk that
-  they will become inactivated and eventually unbonded.  Delegators who
-  delegate atoms to such validators will also likewise get their delegated
-  atoms inactivated and eventually unbonded. 
+* 每个验证者必须参与治理，否则承担风险
+  它们将变得失活并最终不结合。代表谁
+  委托原子到这样的验证器也将同样得到他们的委托
+  原子失活并最终未键合。
 
-* 1/5 of the total number of atoms will be inflated every year and distributed
-  back to the bonded and active atom holders (validators and delegators) for
-  their work validating and securing the ledger.
+* 原子总数的1/5将每年膨胀并分布
+  回到粘合和活性原子持有者（验证者和委托者）
+  他们的工作验证和保证分类帐。
 
-* The Unbonding Period is 1 month long.
+* Unbonding期限为1个月。
 
-* Inactive or unbonded atom holders do not earn the inflationary atoms, and are
-  thus taxed. This makes atoms ill-suited as a medium of exchange or a store of
-  value. Instead, atoms are a tool, like Bitcoin miners are a tool. 
+* 无活性或未结合的原子持有者不会获得膨胀原子，而是
+  从而征税。这使得原子不适合作为交换媒介或存储
+  值。相反，原子是一个工具，比如比特币矿工是一个工具。
 
-* Bonding atoms and staking them put the atoms at risk of slashing. Validators
-  must run the sanctioned consensus protocol without deviation, or risk losing
-  some or all of their atoms. Running the Cosmos sanctioned consensus protocol
-  requires expert ability to run secure servers that must take extraordinary
-  measures to prevent hacking. Delegators must choose who to validate to
-  wisely, or risk losing those portions of atoms delegated to the incompetent,
-  malicious, or hacked validator.
+* 粘合原子和铆接他们使原子有被削减的危险。验证器
+  必须运行经批准的协商一致协议，而不会有偏差或风险丢失
+  部分或全部原子。运行Cosmos认可协议
+  需要专家能力来运行必须采取非凡的安全服务器
+  防止黑客的措施。代理人必须选择要验证的人
+  明智地，或者失去委托给无能的原子的那些部分的风险，
+  恶意或黑客的验证器。
 
-* Tokens are virtual concepts on the blockchain. All mentions of tokens, like
-  atoms, as if they were physical objects, are an approximation of what they
-  actually represent.  As we have observed with the ETH/ETC hard-fork,
-  political tensions can cause the ledger to split. Furthermore, there is no
-  central entity that is responsible for the upkeep of the blockchain. Atoms
-  are not a claim to anything or anyone, not even the Cosmos Network Foundation. The
-  software may be buggy, and even its underlying theory may be flawed, causing
-  confusion, contention, and critical network failure for all those
-  participating in the Cosmos network.
+* 令牌是区块链上的虚拟概念。所有提到的令牌，像
+  原子，就像它们是物理对象一样，是它们的近似
+  实际上代表。正如我们观察到的ETH / ETC硬叉，
+  政治紧张局势可能导致分类帐分裂。此外，没有
+  中央实体负责区块链的维护。原子
+  不是任何或任何人的声称，甚至不是Cosmos网络基金会。的
+  软件可能是错误的，甚至其根本的理论可能有缺陷，导致
+  混乱，争用和所有这些的关键网络故障
+  参与Cosmos网络。
 
-* The CNF, AIB, all donors as well as any atom token holders or any Cosmos
-  network participant, understand and accept that the Cosmos Network is still
-  in an early development stage, and its application is experimental in nature
-  that carries significant operational, technological, regulatory, reputational
-  risk.  Nothing contained herein represents any form of warranty.  All
-  participants in the Cosmos Network understand and agree, to the fullest
-  extent permitted by applicable law, that no Cosmos Network participant will
-  hold any of the developers, contractors, third parties or any other Cosmos
-  Network participant liable for any and all damages or injury caused by or
-  related to the use of, or inability to use, the Cosmos Network and the CESS
-  under any cause of action in all jurisdictions, including, but not limited
-  to, actions for breach of warranty, breach of contract, negligence, Nor shall
-  any developers, contractors, third parties or Cosmos Network participants be
-  liable for any indirect, incidental, special, exemplary or consequential
-  damages, including for loss of profits, goodwill or data, in any way arising
-  out of the use of, or the inability to use of the Cosmos Network and the CESS
+* CNF，AIB，所有捐赠者以及任何原子记号持有者或任何Cosmos
+  网络参与者，理解并接受Cosmos网络仍然
+  在早期发展阶段，其应用是实验性质的
+  具有重要的运营，技术，监管，声誉
+  风险。本文中的任何内容均不代表任何形式的保证。所有
+  Cosmos网络的参与者理解并同意，最充分
+  适用法律允许的范围，没有Cosmos网络参与者
+  持有任何开发商，承包商，第三方或任何其他Cosmos
+  网络参与者对由或造成的任何和所有损害或伤害负责
+  涉及使用或无法使用Cosmos网络和CESS
+  在所有司法管辖区的任何诉讼因素，包括但不限于
+  违反保证，违反合同，疏忽，不得采取行动
+  任何开发商，承包商，第三方或Cosmos网络参与者
+  对任何间接，偶然，特殊，示例性或后果性的责任
+  损害赔偿，包括利润损失，商誉或数据，以任何方式产生
+  不使用或无法使用Cosmos网络和CESS
 
-* All atom holders are free to fork, slash, and hack each other in accordance
-  with the spirit of the Cosmos Constitution.
+* 所有原子保持器是自由的叉，斜线和相互攻击
+  与Cosmos宪法的精神。
 
-* All validators and delegators must abide by the Cosmos Constitution.
+* 所有验证人和授权人必须遵守“Cosmos宪法”。
 
-* A more fleshed out list of risks will be published soon.
+* 更多的风险清单将很快公布。
 
-* A roadmap and the constitution will be released soon.
+* 路线图和宪法将很快公布。
 
-## Definitions
+## 定义
 
-**Activate Atoms**: Atoms that are staked by active validators (or delegators
-that delegate to active validators).  A validator that goes offline or fails to
-participate in governance will become inactivated.  Their atoms and delegated
-atoms then become inactive, before eventually becoming unbonded.  Inactive
-atoms do not earn transaction fees or inflationary atoms.  Inactive atoms may
-become reactivated by fixing the infraction.
+**激活原子**：由活动验证器（或委托者）放样的原子
+代理到活动验证器）。离线或失败的验证程序
+参与治理将失效。他们的原子和委托
+原子然后变得无活性，最终变得不结合。非活动
+原子不赚取交易费或通胀原子。无活性原子可以
+通过固定违规被重新激活。
 
-**Bonded Atoms**: Atoms that have been posted as collateral and are “at stake”,
-either directly as a validator, or indirectly as a delegator delegating to
-another validator.  Bonded atoms are at risk of being slashed partially or
-completely if the validator gets hacked or is used to coordinate an attack on
-the network.
+**保税原子**：已被贴上抵押品并且“岌岌可危”的原子，
+直接作为验证器，或间接作为委托的委托器
+另一个验证器。键合的原子有被部分削减的风险
+完全如果验证器被黑客攻击或用于协调攻击
+网络。
 
-**Cosmos Constitution**: A plainly written document that includes the social
-contract of the Cosmos Network. All bonded validators and delegators must abide
-by the Cosmos Constitution.
+**Cosmos宪法**：包括社会的明白书面文件
+Cosmos网络的合同。所有粘贴验证人和委托人必须遵守
+由Cosmos宪法。
 
-**Cosmos Dex**: A distributed exchange zone that connects to the hub zone. The
-Cosmos Dex provides fast centralized matching with distributed custody of
-funds.
+**CosmosDex**：连接到中心区的分布式交换区。的
+Cosmos Dex提供快速集中匹配和分布式保管
+资金。
 
-**Cosmos Hub**: A zone that connects to many other zones. The hub acts as a
-root custodian and facilitates token movement between zones.
+**Cosmos中心**：连接到许多其他区域的区域。集线器作为一个
+根保管人并且促进区域之间的令牌移动。
 
-**Cosmos Hub Block Reward**: The blockchain will reward the Validators and
-Delegators in proportion to their bonded atoms, and afterwards account for any
-commissions that delegators pay to the delegated validators. The reward will
-consist of two types -- transaction fees, and inflationary atoms. The
-transaction fees will be any fee collected by a validator. In addition, there
-will be inflationary atoms at a rate of 1/5 of the total number of atoms per
-year. Cosmos holders who do not put their atoms at stake by being a validator
-or delegating to a validator will not receive any of the Cosmos Hub Block
-Rewards.
+**Cosmos中心区块奖励**：区块链将奖励验证者和
+委托者与他们的绑定原子成比例，然后考虑任何
+委托人向委托验证人支付的佣金。奖励会
+包括两种类型 - 交易费用和通货膨胀原子。的
+交易费用将由验证人收取的任何费用。另外，有
+将是以每原子总原子数的1/5的速率的通胀原子
+年。Cosmos持有者不会通过作为验证者把他们的原子置于危险之中
+或授权验证者不会收到任何Cosmos Hub Block
+奖励。
 
-**Cosmos Network**: Includes the Cosmos Hub, Dex, and all other connected
-zones.
+**Cosmos网络**：包括Cosmos Hub，Dex和所有其他连接
+区域。
 
-**Cosmos Network Participant**: any party, individual, enterprise, blockchain
-or network that uses, develops, creates or interacts with any aspect of the
-Cosmos Network or any component that constitutes the CESS.  
+**Cosmos网络参与者**：任何一方，个人，企业，区块链
+或网络，使用，开发，创建或与任何方面的互动
+Cosmos网络或构成CESS的任何组件。
 
-**Delegator**: An atom holder who puts their atoms at stake by delegating its
-validating power and voting power to a validator.  Delegators risk losing their
-tokens if the delegated validator gets hacked or participates in an attack.
+**委托者**：一个原子持有者通过委托它的原子在他的原子
+验证器的验证电源和投票电源。代理人可能会失去他们
+代理如果委派的验证器被黑客攻击或参与攻击。
 
-**Governance**: An ongoing process where the bonded atom holders can vote to
-ratify or reject proposals as proposed by any atom holder. Proposals can change
-preset parameters, amend the Constitution, inflate the atom supply, and more.
+**治理**：保税原子持有人可以投票的正在进行的过程
+批准或拒绝任何原子持有人提议的提案。建议可以更改
+预置参数，修改宪法，膨胀原子供应等。
 
-**Unbonding Period**: A fixed amount of time.  Previously bonded atoms must
-post a special UnbondTx transaction and wait the unbonding period before atoms
-become freely transferrable.
+**非绑定期**：固定的时间量。以前键合的原子必须
+发布一个特殊的UnbondTx事务并等待原子之前的非绑定周期
+成为可自由转移。
 
-**Validator**: Validators are full nodes of a Cosmos zone that have the
-responsibility of committing blocks in that zone. The Cosmos Hub will start
-with 100 validator spots. Due to the limited number of validator spots, not
-everyone who has atoms can be a validator. Instead, everyone else can bond
-atoms and delegate their consensus voting power to any of the 100 validators.
-Before Genesis, the Cosmos Crowdfund funders will play the Delegation Game to
-determine the top 100 bonded delegates who will become the genesis validators.
-Validators can lose some or all their stake if they get hacked, deviate from
-the sanctioned protocol, or otherwise collude to disrupt the network.
+**验证器**：验证器是Cosmos区域的完整节点
+在该区域提交块的责任。Cosmos中心将开始
+有100个验证点。由于验证器点数有限，不能
+每个有原子的人都可以成为验证者。相反，其他人都可以约束
+并将其共识投票权授予100个验证者中的任何一个。
+在创世之前，CosmosCrowdfund资助者将参加代表团比赛
+确定将成为创始验证者的前100名保税代表。
+验证者如果被黑客入侵，可能会失去一些或所有的利益
+批准的协议，或以其他方式串通以中断网络。
 
-### Cosmos Essential Software and Services
+### Cosmos Essential软件和服务
 
 * **Tendermint**
-* **Cosmos Hub**
-* **Cosmos Dex**
+* **Cosmos中心**
+* **CosmosDex**
 * **Ethereum Peg**
 * **Bitcoin Peg**
-* **EVM Zone**
+* **EVM区域**

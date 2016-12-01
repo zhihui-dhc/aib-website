@@ -1,5 +1,6 @@
 ~~~
 title: Cosmosの目的
+slug: purpose-of-cosmos
 date: 2016-08-31
 author: Jae Kwon
 excerpt: Cosmosは、以前のクリプトカルトの教訓の頂点です。 将来のイノベーションを組み込むように拡張されています。 世代に適した分散型元帳プラットフォームです。

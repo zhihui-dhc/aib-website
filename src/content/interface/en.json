@@ -11,7 +11,7 @@
   },
   "siteBlog": {
     "title": "Blog",
-    "subtitle": "<a href='/static/feed.xml'>Subscribe</a> for the latest updates."
+    "subtitle": "<a href='/static/en.xml'>Subscribe</a> for the latest updates."
   },
   "emailSignupForm": {
     "emailAddress": "Email Address",
@@ -20,6 +20,9 @@
   "sectionCallToAction": {
     "title": "Fundraising Event",
     "description": "Cosmos fundraising event starts Feb 2017."
+  },
+  "sectionHomeVideo": {
+    "title": "What is Cosmos?"
   },
   "sectionHomeIntro": {
     "title": "Building a Network of Blockchains",

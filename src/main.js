@@ -18,7 +18,7 @@ Vue.use(VueRouter)
 Vue.use(VueI18n)
 
 // i18n settings
-Vue.config.lang = 'en'
+Vue.config.lang = 'ko'
 Vue.config.fallbackLang = 'en'
 Vue.locale('en', require('./content/interface/en.json'))
 Vue.locale('ja', require('./content/interface/ja.json'))

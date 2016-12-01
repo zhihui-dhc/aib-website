@@ -1,5 +1,6 @@
 ~~~
 title: "BFT：最も安全な証拠"
+slug: bft-the-most-secure-proof-of-stake
 date: 2016-11-15
 author: Jae Kwon
 excerpt: PoSの使用に対して多くの人々が集まり、安全を確保することは不可能であると主張しています。 しかし、それは単に真実ではありません。 BFTを使用すると、PoSを確実に保護できます。 BFT-PoS公開ブロックチェーンはまだ見ていません。

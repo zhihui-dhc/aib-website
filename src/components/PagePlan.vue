@@ -2,8 +2,8 @@
   <div class="page-plan page-default">
     <div class="article-body">
       <ja v-if="lang === 'ja'"></ja>
-      <ko v-else-if="lang === 'ja'"></ko>
-      <zh v-else-if="lang === 'ja'"></zh>
+      <ko v-else-if="lang === 'ko'"></ko>
+      <zh v-else-if="lang === 'zh'"></zh>
       <en v-else></en>
     </div>
   </div>

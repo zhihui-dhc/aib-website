@@ -21,6 +21,9 @@
     "title": "募金イベント",
     "description": "Cosmosの募金イベントは2017年2月に始まります。"
   },
+  "sectionHomeVideo": {
+    "title": "Cosmosとは何ですか？"
+  },
   "sectionHomeIntro": {
     "title": "ブロックチェーンネットワークの構築",
     "purpose": "目的",

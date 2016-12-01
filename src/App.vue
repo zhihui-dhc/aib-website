@@ -16,7 +16,11 @@ import store from './store/index.js'
 export default {
   components: {
     AppHeader,
-    AppFooter
+    AppFooter,
+    enRss: require('./assets/rss/en.xml'),
+    jaRss: require('./assets/rss/ja.xml'),
+    koRss: require('./assets/rss/ko.xml'),
+    zhRss: require('./assets/rss/zh.xml')
   },
   head: {
     meta: [
@@ -25,7 +29,7 @@ export default {
       { name: 'theme-color', content: '#ffffff' }
     ],
     link: [
-      { r: 'alternate', t: 'application/rss+xml', h: require('./assets/feed.xml') },
+      { r: 'alternate', t: 'application/rss+xml', h: require('./assets/rss/en.xml') },
       { r: 'apple-touch-icon', sz: '57x57', h: require('./assets/favicon/apple-icon-57x57.png') },
       { r: 'apple-touch-icon', sz: '60x60', h: require('./assets/favicon/apple-icon-60x60.png') },
       { r: 'apple-touch-icon', sz: '72x72', h: require('./assets/favicon/apple-icon-72x72.png') },

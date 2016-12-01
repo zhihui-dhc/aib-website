@@ -1,139 +1,134 @@
 ~~~
-title: Purpose of Cosmos
+title: Cosmos的目的
+slug: purpose-of-cosmos
 date: 2016-08-31
 author: Jae Kwon
-excerpt: Cosmos is a culmination of lessons of prior cryptocurrencies. It's designed to be extended to incorporate future innovations. It's a distributed ledger platform suitable for generations to come.
+excerpt: Cosmos是以前的加密货币的经验教训的顶点。 它旨在扩展到包含未来的创新。 它是一个分布式分类帐平台，适合未来。
 ~~~
 
-We believe in the power of public blockchains to provide a public good,
-powered by a collection of self-motivated actors governed by the rules of a
-shared consensus ledger, in an environment of competition and freedom of choice.
-We have learned important lessons from the successes and failures of prior
-cryptocurrencies,  and have been creating innovations of our own that will
-unleash a new era of speed, security, scalability, and usability.
+我们相信公共区块链的力量提供公共利益，
+动力由一个自我激励的演员的集合由a的规则控制
+共享共识分类帐，在竞争和选择自由的环境中。
+我们从先前的成功和失败中学到了重要的教训
+加密货币，并已经创造了我们自己的创新
+释放速度，安全性，可扩展性和可用性的新时代。
 
-Cosmos is a culmination of these lessons and innovations, designed to be
-extended to incorporate even future innovations, to create a distributed ledger
-platform suitable for generations to come.
+Cosmos是这些教训和创新的高潮，旨在
+扩展到纳入未来的创新，创建分布式分类帐
+平台适合世代来。
 
-One of the great tragedies of cryptocurrencies has been their failure to
-interoperate with existing systems, and even with each other.  It is as if each
-virtual currency, on its own blockchain and with its own community, were too
-sovereign for its own good.  This is made most apparent when you attempt to buy
-your first Bitcoin: you discover that it is remarkably difficult to buy the new
-internet money over the internet, at least without divulging considerable
-amounts of personal information and allowing weeks for it to be verified by
-third parties (exchanges) you hardly know and have been warned not to trust with
-too much of your money.	
+加密货币的一个巨大悲剧是他们的失败
+与现有系统互操作，甚至与彼此互操作。它就好像每个
+虚拟货币，在自己的区块链上和与自己的社区，太
+主权为自己的好。这是最明显的，当你试图买
+你的第一个比特币：你发现，这是非常困难的买新的
+互联网上的钱，至少没有泄露相当多
+数量的个人信息，并允许它的验证周数
+第三方（交易所)你几乎不知道，并已被警告不信任
+太多的钱。
 
-While mechanisms like [atomic
-swaps](https://en.bitcoin.it/wiki/Atomic_cross-chain_trading) between chains can
-help link communities, they suffer from a need for mature liquidity markets and
-active participants on each side (or suffer long timeouts).  The [alt-coin
-ecosystem](https://coinmarketcap.com/) is an alchemical soup of enthusiasts
-experimenting in various ways in new cryptocurrency design, but each alt-coin
-stands alone, siloed by the lack of a general inter-blockchain communication
-system, many needlessly wasting electricty through convoluted Proof-of-Work
-(PoW) designs.
+虽然机制像[原子swaps](https://en.bitcoin.it/wiki/Atomic_cross-chain_trading)
+帮助链接社区，他们需要成熟的流动性市场
+每个活动参与者（或遭受长时间超时)。 [alt-coin生态系统](https://coinmarketcap.com/)是爱好者的炼金汤
+在新的加密货币设计中以各种方式进行尝试，但是每个alt-coin
+孤独，由于缺乏一般的区块间链通信而沉默
+系统，许多不必要的浪费电气通过复杂的工作证明
+（PoW)设计。
 
-[Ethereum](https://ethereum.org/) sought to address the problem, somewhat
-indirectly, by inventing a new platform for computation, allowing arbitrary
-financial systems to be written against a common virtual machine using a common
-development environment.  Presuming all new cryptocurrencies launch on Ethereum,
-they will all have some capacity for interoperability.  Ethereum is a wonderful
-idea, but the design decisions, while motivated by important considerations
-(like the need for a simple specification and guaranteed determinism), neglect a
-great many more (like the difficulty of designing a secure general purpose
-programming environment), and lends Ethereum it's own sovereignty problem, which
-is that it excludes users who want access to the platform but want alternatives
-to the current state transition machine.
+[Ethereum](https://ethereum.org/)试图解决这个问题
+间接地，通过发明一个新的计算平台，允许任意
+金融系统要使用公共的虚拟机来编写
+开发环境。假设所有新的加密货币在以太坊上市，
+他们将具有一定的互操作能力。以太坊是一个美好的
+想法，但设计决定，同时受到重要考虑的驱动
+（如需要一个简单的规范和保证的确定论)，忽略a
+更多（比如设计一个安全的通用目的的困难
+编程环境)，并借给以太坊它自己的主权问题，这
+是，它排除了想要访问平台但想要替代品的用户
+到当前状态转换机。
 
-Of course, Ethereum doesn't address the problem of turning fiat currency into
-ether, either, short of having banks and major government bodies issue their
-currency on Ethereum.  And while
+当然，以太坊并没有解决将法定货币转换成的问题
+乙醚，没有银行和主要政府机构发行
+以色列的货币。而且
 [many](http://www.coindesk.com/south-africa-diy-ethereum-blockchain-tests/)
 [such](http://www.coindesk.com/south-africa-diy-ethereum-blockchain-tests/)
-[institutions](http://www.coindesk.com/fidor-ethereum-core-banking/) are
-investigating the Ethereum blockchain, there are both scalability and governance
-concerns that will restrict its full scale adoption, and hence impede
-integration with existing systems and currencies.
+[机构](http://www.coindesk.com/fidor-ethereum-core-banking/)
+调查以太坊blockchain，有可扩展性和治理
+这将限制其全面采用，从而阻碍
+与现有系统和货币的集成。
 
-Each existing cryptocurrency supports some cultural ideal.  Bitcoin is decidedly
-libertarian, with a slight anarchist leaning which is ultimately betrayed by the
-economics of Proof-of-Work.  Ethereum is less a political statement and more an
-avant garde academic excercise in distributed systems, computer science, and
-contract theory.  Dogecoin is a testament to the capacity for Humans to bond
-over the absurd, a phenomenon more commonly known as "being social".  Steem
-offers a more structured version of being social, with a basis in content
-production and curation.  And so on. But there are many more idealogical
-currencies to create, many more virtual machine designs to try, each affording a
-unique experiment in the intersection between governance, culture, and
-economics.  Would it not be a tragedy for all these experiments to be so rigidly
-siloed from one another by great chasms of incompatibility?
+每个现有的cryptocurrency支持一些文化理想。比特币是明智的
+自由主义者，有一个轻微的无政府主义倾斜，最终被背叛
+经济学的工作证明。以太坊不是一个政治声明，而是一个
+分布式系统，计算机科学中的先锋派学术演习
+合同理论。 Dogecoin是人类结合的能力的证明
+超越荒谬的，一种更常被称为“社会”的现象。 Steem
+提供一个更加结构化的社会性版本，内容基础
+生产和管理。等等。但有更多的理想
+货币创造，更多的虚拟机设计尝试，每一个提供一个
+独特的实验，在治理，文化和
+经济学。不是所有这些实验都是如此僵硬的悲剧
+彼此之间由不相容的伟大的chasms相互孤立？
 
-Clearly, what we need is something more general than Ethereum - a sort of meta-Ethereum; 
-something that can integrate existing codebases and the states of existing blockchains;
-something that can interface in a sane manner with the currencies issued by nation states; 
-something that formalizes the relationship between cryptocurrencies and connects them without compromising their independence;
-something with extreme flexibility that does not compromise security.
+显然，我们需要的是比以太坊更一般的东西 - 一种元以太网;
+可以集成现有的代码库和现有区块链的状态;
+可以与民族国家发行的货币以相同的方式接口的东西;
+使加密货币之间的关系形式化并连接它们而不损害它们的独立性;
+具有极高的灵活性，不会危及安全性的东西。
 
-Enter Cosmos. Cosmos is a network and a framework for interoperability between
-blockchains.  It consists of a web of "hubs" and "zones", where each "zone" is
-effectively an independent blockchain with an arbitrary cryptocurrency design
-(be it like Bitcoin, Ethereum, ZeroCash, CryptoNote, your local banking
-institution, etc.), and each "hub" is a multi-asset cryptocurrency that
-facilitates interoperability between some set of zones.
+输入Cosmos。 Cosmos是一个网络和框架之间的互操作性
+区块链。它由一个“集线器”和“区域”的网络组成，每个“区域”是
+实际上是具有任意加密货币设计的独立区块链
+（就像Bitcoin，Ethereum，ZeroCash，CryptoNote，你的本地银行
+机构等)，并且每个“集线器”是多资产加密货币
+促进一些区域集之间的互操作性。
 
-Hubs and zones are powered by the [Tendermint](http://tendermint.com/)
-[Proof-of-Stake (PoS) consensus
-algorithm](https://github.com/tendermint/tendermint/wiki/Byzantine-Consensus-Algorithm),
-using the [TMSP
-interface](http://tendermint.com/blog/tendermint-socket-protocol/) to host
-applications written in any programming language.  TMSP permits enormous
-flexibility in application design, and enables the application to inherit the
-security features of a Tendermint-powered blockchain.
+集线器和区域由[Tendermint](http://tendermint.com/)
+[Proof-of-Stake（PoS) consensus 算法](https://github.com/tendermint/tendermint/wiki/Byzantine-Consensus-Algorithm)
+使用[TMSP接口](http://tendermint.com/blog/tendermint-socket-protocol/)主机
+应用程序以任何编程语言编写。 TMSP允许巨大
+灵活性的应用程序设计，并使应用程序能够继承
+Tendermint供电的区块链的安全特性。
 
-Zones communicate with one another through a hub, primarily in the form of
-assymetric transfer of some set of tokens from one zone to another.
-Effectively, a hub is a blockchain with many
-[sidechains](https://blockstream.com/sidechains.pdf), but using PoS instead of
-PoW leads to a dramatic reduction in overhead without sacrificing security.  The
-trick is that each zone acts as a light client for the hub, and the hub acts as
-a light client for all its zones.  [Tendermint makes this
-efficient](https://github.com/tendermint/tendermint/wiki/Light-Client-Protocol)
-with compact light client proofs that are secure so long as the validator set is
-known, which can be achieved by ensuring the light client [synchronizes with
-validator set changes at least as often as they are permitted to
-occur](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity/).
+区域通过集线器彼此通信，主要以形式
+一些令牌从一个区域到另一个区域的非对称传输。
+有效地，一个枢纽是一个区块链有很多
+[sidechains](https://blockstream.com/sidechains.pdf)，但使用PoS而不是
+PoW导致大量降低开销而不牺牲安全性。的
+诀窍是每个区域作为中枢的轻客户端，中枢充当
+所有区域的轻客户端。 [Tendermint做到这一点
+高效](https://github.com/tendermint/tendermint/wiki/Light-Client-Protocol)
+只要验证器集合是紧凑的轻客户端证明是安全的
+已知的，这可以通过确保光客户端[同步来实现验证器集合的更改频率至少与允许的相同发生](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity/)。
 
-Many people have [rallied against the use of
-Proof-of-Stake](https://download.wpsoftware.net/bitcoin/pos.pdf), claiming it is
-impossible to secure.  Simultaneously, they acknowledge that it is nearly
-trivial to secure many PoS chains using a single, secure PoW chain.  It is [my
-own position](https://twitter.com/buchmanster/status/738550345597648896) that
-the correct number of PoW chains is one, and the correct number of PoS chains is
-in the thousands or millions, on par with the number of currencies, rewards
-systems, and various other token-based systems in the world.
+很多人都反对使用
+[Proof-of-Stake](https://download.wpsoftware.net/bitcoin/pos.pdf)，声称它是
+不可能安全。同时，他们承认它几乎
+使用单个，安全的PoW链安全许多PoS链。这是[我的
+自己的位置](https://twitter.com/buchmanster/status/738550345597648896)
+PoW链的正确数量为一，并且PoS链的正确数量为
+在数千或数百万，与货币数量相等，奖励
+系统和各种其他基于令牌的系统。
 
-Cosmos reflects this position in that it makes no distinction between hubs - there
-is no "top" hub, and the most popular or successful hub is a matter of adoption
-by zones.  Furthermore, there is no fundamental distinction between zones and
-hubs, such that any zone with sufficient functionality can become a hub.  While
-we will release one particular hub in order to get things started (the aptly
-named Adam hub), there is nothing stopping this hub from becoming obsolete as
-other hubs, even the likes of Bitcoin or Ethereum themselves, come to compete
-with it, and potentially replace it.
+Cosmos反映了这一立场，因为它不区分中心 - 那里
+是没有“顶”中心，最流行或成功的中心是采用的问题
+按区域。此外，区域和之间没有根本区别
+集线器，使得具有足够功能的任何区域可以变为集线器。而
+我们将发布一个特定的中心，以便开始（适当地
+名为亚当中心)，没有什么能阻止这个中心变得过时
+其他中心，甚至比特币或以太坊自己，喜欢比赛
+与它，并可能取代它。
 
-Cosmos thus introduces a new kind of market dynamic that formalizes the power
-struggle between the various cryptocurrency offerings, demolishing the barriers
-to interoperability and enabling competition between hubs to contribute to the
-economic security of each hub itself - validators who misbehave will be
-abandoned for better behaving ones.  The result is a heterogeneous network,
-adapting for each community and each locale according to its needs, and yet
-retaining a backbone of interoperability that keeps barriers to entry low while
-holding stewards of the system accountable and quality of service high.
+Cosmos因此引入了一种新的形式化权力的市场动态
+在各种cryptocurrency产品之间的斗争，拆除障碍
+以实现互操作性并实现集线器之间的竞争
+经济安全的每个中心本身 - 验证者谁行为不端
+抛弃为更好的行为。结果是异构网络，
+根据其需要适应每个社区和每个地区，然而
+保持互操作性的骨干，同时保持进入低门槛
+控股系统负责人和服务质量高。
 
-Whether as testing grounds for new cryptocurrency designs, or an upgrade to
-existing ones, as a means for decentralized exchange, or a platform for scalable
-smart contracts, Cosmos's potential is that of every existing cryptocurrency and
-more in synergy.  The only question is, what will you build on Cosmos?
+是否作为新的cryptocurrency设计的测试依据，或升级到
+现有的，作为分散交换的手段，或可扩展的平台
+智能合同，Cosmos的潜力是每一个现有的加密货币和
+更多的协同。唯一的问题是，你将在Cosmos上建立什么？

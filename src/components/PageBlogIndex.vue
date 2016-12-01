@@ -16,6 +16,7 @@
 import { mapGetters } from 'vuex'
 import CardPost from './CardPost'
 import PageHeader from './PageHeader'
+import Vue from 'vue'
 
 export default {
   name: 'page-blog-index',
@@ -23,9 +24,14 @@ export default {
     PageHeader,
     CardPost
   },
-  computed: mapGetters({
-    posts: 'allPosts'
-  }),
+  computed: {
+    posts () {
+      return this.allPosts[Vue.config.lang]
+    },
+    ...mapGetters([
+      'allPosts'
+    ])
+  },
   mounted () {
     document.title = 'Blog - Tendermint'
   }
