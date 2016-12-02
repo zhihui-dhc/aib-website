@@ -10,6 +10,7 @@ let postsJsonFile = './src/store/json/posts.json'
 let rssTemplate = require('./rssTemplate.js')
 
 let md = require('markdown-it')({
+  preset: 'default',
   html: true,
   linkify: true,
   typographer: true

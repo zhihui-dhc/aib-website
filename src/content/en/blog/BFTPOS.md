@@ -72,8 +72,7 @@ bitcoins, and the efficient market makes it so that the cost of the energy used
 by the global mining network is on the order of the block reward (plus
 transaction fees).  Today, that turns out to be around $1M worth of electricity
 per day.  In addition, Bitcoin mining is being commoditized by [large data
-centers in places of the world where electricity is more
-affordable](https://bitcointalk.org/index.php?topic=1072474.0), making it
+centers in places of the world where electricity is more affordable](https://bitcointalk.org/index.php?topic=1072474.0), making it
 difficult for laymen to participate.
  
 PoS, on the other hand, does away with the energy dependence of PoW entirely.

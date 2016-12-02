@@ -4,6 +4,7 @@ import Vue from 'vue'
 import VueHead from 'vue-head'
 import VueRouter from 'vue-router'
 import VueI18n from 'vue-i18n'
+import VueVuelidate from 'vuelidate'
 
 import App from './App'
 
@@ -16,6 +17,7 @@ sync(store, router)
 Vue.use(VueHead)
 Vue.use(VueRouter)
 Vue.use(VueI18n)
+Vue.use(VueVuelidate)
 
 // i18n settings
 Vue.config.lang = 'en'

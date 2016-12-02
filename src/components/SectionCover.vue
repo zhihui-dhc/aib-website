@@ -142,7 +142,7 @@ export default {
   .cover-subtitle
     font-size 0.9rem * 1.25
 
-@media screen and (min-width:1200px)
+@media screen and (min-width:1080px)
   .section-cover
     height 100vh
 

@@ -17,7 +17,7 @@ Bitcoin의 작업 증명 (PoW) 합의 [엄청난 양의에너지](http://motherb
 (BFT) 기반의 [스테이크 증명](https://bitcointalk.org/index.php?topic=27787.0) (PoS). 우리는 이것을 BFT-PoS라고 부릅니다.
  
 BFT-PoS의 장점에 대해 알아보기 전에 먼저
-비잔틴 잘못은 [Lamport 's General]에 대한 혼란스러운 세부 사항에 빠지지 않고그의 군대](http://pages.cs.wisc.edu/~sschang/OS-Qual/reliability/byzantine.htm).
+비잔틴 잘못은 [Lamport's General에 대한 혼란스러운 세부 사항에 빠지지 않고그의 군대](http://pages.cs.wisc.edu/~sschang/OS-Qual/reliability/byzantine.htm).
 
 수백 또는 수천 개의 데이터가 복제되는 분산 시스템에서
 노드 중 일부 유형에는 내결함성이나 컨센서스가 있어야합니다.

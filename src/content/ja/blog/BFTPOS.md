@@ -8,18 +8,18 @@ excerpt: PoSの使用に対して多くの人々が集まり、安全を確保�
 
 Bitcoinはブロックチェーンに世界の注目を集めました。しかし、悲しいかな、Bitcoin
 ブロックチェーンのバージョンは、世界のブロックチェーンのニーズには十分ではありません。それ
-Bitcoinの作業証明書（PoW）のコンセンサス[膨大な量
-エネルギー]（http://motherboard.vice.com/read/bitcoin-could-consume-as-much-electricity-as-denmark-by-2020）。さらに、トランザクションは辛抱強く遅く、1時間かかります。
+Bitcoinの作業証明書（PoW)のコンセンサス[膨大な量
+エネルギー](http://motherboard.vice.com/read/bitcoin-could-consume-as-much-electricity-as-denmark-by-2020)。さらに、トランザクションは辛抱強く遅く、1時間かかります。
 コミットする時間が長くなります。そして、PoWの鉱夫は忠誠を払うインセンティブがほとんどないので
 1つのチェーンまたは他のアップグレードを調整することは困難です。
  
 ブロックチェーンを安全に管理するためのアプローチが必要
 地球上のエネルギーコスト。そのアプローチは、ビザンチンのフォールトトレランス
-（BFT）ベースの（「立証証拠」（https://bitcointalk.org/index.php?topic=27787.0）（PoS））。我々はそれをBFT-PoSと呼ぶ。
+（BFT)ベースの（[立証証拠](https://bitcointalk.org/index.php?topic=27787.0)（PoS))。我々はそれをBFT-PoSと呼ぶ。
  
 BFT-PoSのメリットを掘り下げる前に、最初に
 ビザンチンの断層は、[Lamport's General
-と彼の軍隊]（http://pages.cs.wisc.edu/~sschang/OS-Qual/reliability/byzantine.htm）。
+と彼の軍隊](http://pages.cs.wisc.edu/~sschang/OS-Qual/reliability/byzantine.htm)。
 
 データが数百または数千に渡って複製される分散システム
 何らかのタイプのフォールトトレランスまたはコンセンサスが必要です
@@ -28,16 +28,16 @@ BFT-PoSのメリットを掘り下げる前に、最初に
 コンセンサスに達する必要があります。
  
 標準フォールトトレラントコンセンサスアルゴリズム
-[Raft]（https://raft.github.io/raft.pdf）と
-[Paxos]（https://en.wikipedia.org/wiki/Paxos_（computer_science））は
+[Raft](https://raft.github.io/raft.pdf)と
+[Paxos](https://en.wikipedia.org/wiki/Paxos_（computer_science))は
 ノードに障害が発生した場合、単に動作を停止し、応答を返送しません。
 Google、Facebook、および一部の既存のデータベース製品はすでにこのファミリを使用しています
 ファイアウォール内のコンセンサスアルゴリズムを使用して、サービスが残っていることを確認する
 障害のあるコンピュータでも使用できます。
 
 しかし、これらのアルゴリズムはパブリックなブロックチェーンには適していません。
-パブリックブロックチェイン内にファイアウォールはありません。鉱業権を有する者（PoW）または
-（PoSの）ステークトークンが参加したり、ネットワークを妨害しようとすることさえあります。
+パブリックブロックチェイン内にファイアウォールはありません。鉱業権を有する者（PoW)または
+（PoSの)ステークトークンが参加したり、ネットワークを妨害しようとすることさえあります。
 公的なブロックチェーン上でコンセンサスを得るためには、ビザンチンのフォールトトレランスが必要です。
 ビザンチンの障害では、障害のあるノードは完全に任意の形で行動することができます
 方法。ノードは、それらが引き起こす被害を最大限にしようと共謀することさえできます。
@@ -48,14 +48,14 @@ Google、Facebook、および一部の既存のデータベース製品はすで
  
 BFTは新しいものではありません。このコンセプトは、
 [Lamport、Shostak、Pease in
-1982]（http://research.microsoft.com/en-us/um/people/lamport/pubs/byz.pdf）だけど
+1982](http://research.microsoft.com/en-us/um/people/lamport/pubs/byz.pdf)だけど
 Lamportらは、このアルゴリズムの理論的実現可能性を、
 すべてのメッセージが常に到着する同期環境です。
  
 しかし現実の世界では、何かを提供するためにインターネットを本当に信頼することはできません
-定刻。だから1988年に[Dwork、Lynch、Stockmeyer]（http://groups.csail.mit.edu/tds/papers/Lynch/jacm88.pdf）（DLS）はアルゴリズムを提案した
+定刻。だから1988年に[Dwork、Lynch、Stockmeyer](http://groups.csail.mit.edu/tds/papers/Lynch/jacm88.pdf)（DLS)はアルゴリズムを提案した
 ほとんど非同期環境で動作します。その後、1999年に[Miguel Castro
-Barbara Liskov]（http://pmg.csail.mit.edu/papers/osdi99.pdf）は、継続的なBFTコンセンサス
+Barbara Liskov](http://pmg.csail.mit.edu/papers/osdi99.pdf)は、継続的なBFTコンセンサス
 それはBFTアルゴリズムの最先端技術であったが、それはまだ今日である。
  
 しかし、長い間、主流の報道機関はこれらの精緻な研究を無視していました。誰も
@@ -70,10 +70,9 @@ PoWでは、鉱業者は、処理能力の最も高い者に基づいて競争�
 世界各地の鉱夫が新しく発行されたこれらの宝くじのようなシステムで競合する
 ビットコインを使用し、効率的な市場では、使用されるエネルギーのコスト
 グローバル鉱業ネットワークでは、ブロック報酬（プラス
-取引手数料）。今日、それは約1Mの価値の電気であることが分かった
+取引手数料)。今日、それは約1Mの価値の電気であることが分かった
 1日あたりさらに、Bitcoinの鉱業は[大規模なデータ
-電気がいっぱいの世界の中心にある
-手頃な価格]（https://bitcointalk.org/index.php?topic=1072474.0）、それを作る
+電気がいっぱいの世界の中心にある手頃な価格](https://bitcointalk.org/index.php?topic=1072474.0)、それを作る
 一般人が参加することは困難です。
  
 一方、PoSは、PoWのエネルギー依存性を完全に排除します。
@@ -82,18 +81,18 @@ PoSでは、鉱夫はシステムの利害関係者である「バリデータ�
 「ステキングトークン」を購入する必要があります。通常のラップトップであれば、
 アルゴリズム。
  
-Peercoin、[BitShares]（https://bitshares.org/）、
-[Nxt]（https://en.wikipedia.org/wiki/Nxt）などは、すでに何らかの形で
+Peercoin、[BitShares](https://bitshares.org/)、
+[Nxt](https://en.wikipedia.org/wiki/Nxt)などは、すでに何らかの形で
 PoS、およびEthereumは、近い将来PoSへの移行を計画しています。しかし、PoS
 実用的な意味を持って、多くの人々が[
-PoS]（https://download.wpsoftware.net/bitcoin/pos.pdf）であると主張している
+PoS](https://download.wpsoftware.net/bitcoin/pos.pdf)であると主張している
 安全を確保することは不可能です。しかし、それは単に真実ではありません。 BFTを使用すると、あなたは絶対に
 PoSを保護することができます。 BFT-PoSのパブリックブロックチェーンは見られません
 まだ。
 
 理論が説明したり理解したりするのは難しいかもしれませんが、究極の
 適切なBFTアルゴリズムによって得られる結果は把握するのが簡単です。 PoWとは異なり
-BFT-PoSブロックチェーンがフォークしない（つまり、二重の攻撃を受ける）
+BFT-PoSブロックチェーンがフォークしない（つまり、二重の攻撃を受ける)
 3分の1以上のバリデーターがそのような攻撃を調整しない限り、そして、1/3または
 より多くのバリデータが二重支出攻撃を引き起こす場合、我々は計算上
 どのバリデータが攻撃の原因であったのかを判断し、
@@ -108,7 +107,7 @@ BFT-PoSは非常に優れたパフォーマンスを発揮します。今日、�
 理論は、これらが最適なフォールトトレランスしきい値であることを証明しています。
 "瞬間的な"ブロックチェーン。より多くのバリデータが減速しますが
 コンセンサス、[Nielsen's
-法律]（https://www.nngroup.com/articles/law-of-bandwidth/）は引き続き維持され、
+法律](https://www.nngroup.com/articles/law-of-bandwidth/)は引き続き維持され、
 私たちは指数関数的に増加する数のバリデータをサポートすることさえできるでしょう
 毎年同じパフォーマンスで
 
@@ -116,8 +115,7 @@ BFT-PoSは非常に優れたパフォーマンスを発揮します。今日、�
 今日存在するモバイルウォレットは、セキュリティを最大限に活用しています
 Bitcoinによって提供された、単純な事実のため誰も1時間待つつもりはない
 トランザクションがクリアされるようにします。代わりに、ほとんどの財布は[人
-お金を送ることは二重にしようとしていない
-それ]（https://www.coingecko.com/buzz/peter-todd-explains-the-problems-with-unconfirmed-bitcoin-transactions）。
+お金を送ることは二重にしようとしていないそれ](https://www.coingecko.com/buzz/peter-todd-explains-the-problems-with-unconfirmed-bitcoin-transactions)。
 そして、私たちはここでそれに乗り込む時間はありませんが、効率的なモバイルウォレット
 プロトコル、または「ライトクライアントSPV」プロトコルは、将来のブロックチェーンの鍵です
 相互運用性。

@@ -11,7 +11,7 @@
   },
   "siteBlog": {
     "title": "ブログ",
-    "subtitle": "最新のアップデートについては<a href='/static/feed.xml'>購読</a>してください。"
+    "subtitle": "最新のアップデートについては<a href='/static/ja.xml'>購読</a>してください。"
   },
   "emailSignupForm": {
     "emailAddress": "Eメールアドレス",

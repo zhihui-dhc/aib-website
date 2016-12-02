@@ -113,8 +113,8 @@ module.exports = {
 		preset: 'default',
 		html: true,
     typographer: true,
+    linkify: true,
 		preprocess: function(markdownIt, source) {
-			// do anything here
 			return source
 		},
 		use: [

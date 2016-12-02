@@ -17,44 +17,44 @@ excerpt: Cosmosは、以前のクリプトカルトの教訓の頂点です。 �
 将来のイノベーションを組み込み、分散元帳を作成するように拡張
 次世代に適したプラットフォーム
 
-cryptocurrenciesの大きな悲劇の1つは、彼らの失敗であった。
+Cryptocurrenciesの大きな悲劇の1つは、彼らの失敗であった。
 既存のシステムと相互運用することができ、相互にも相互運用できます。あたかもそれぞれ
 バーチャル通貨、独自のブロックチェーン、それにそれ自身のコミュニティもそうだった
 自分の利益のために主権。これはあなたが購入しようとするときに最も明らかになります
 あなたの最初のBitcoin：あなたはそれが新しい
 インターネットを通じたインターネットの通話、少なくとも漏れなく
 個人情報の量は、個人情報の
-あなたがほとんど知っておらず、信頼できないように警告されている第三者（交流）
+あなたがほとんど知っておらず、信頼できないように警告されている第三者（交流)
 あなたのお金が多すぎます。
 
 [アトミック
-スワップ]（https://en.bitcoin.it/wiki/Atomic_cross-chain_trading）チェーン間
+スワップ](https://en.bitcoin.it/wiki/Atomic_cross-chain_trading)チェーン間
 成熟した流動性市場の必要性に苦しんでおり、
-各側のアクティブな参加者（または長いタイムアウトに苦しむ）。 [alt-coin
-エコシステム]（https://coinmarketcap.com/）は愛好家の錬金術師のスープです
+各側のアクティブな参加者（または長いタイムアウトに苦しむ)。 [alt-coin
+エコシステム](https://coinmarketcap.com/)は愛好家の錬金術師のスープです
 新しい暗号化設計ではさまざまな方法で実験を行っていますが、各アルトコイン
 一般的なブロック間通信がないため
 システムでは、複雑な校正証明書を使用して不必要に多くの電力を浪費しています
-（PoW）設計に基づいている。
+（PoW)設計に基づいている。
 
-[Ethereum]（https://ethereum.org/）はこの問題に多少対処したい
+[Ethereum](https://ethereum.org/)はこの問題に多少対処したい
 計算のための新しいプラットフォームを発明して、間接的に、任意の
 共通の仮想マシンに対して一般的な方法で書き込まれる金融システム
 開発環境すべての新しい暗号化通信がEthereumで開始されると仮定すると、
 彼らはすべて相互運用性のためのいくらかの能力を持っています。エテリアムは素晴らしい
 アイデア、しかし重要な考慮事項によって動機付けられている間、設計の決定
-（単純な仕様と保証された決定論の必要性のように）、
+（単純な仕様と保証された決定論の必要性のように)、
 非常に多くのこと（安全な汎用目的の設計の難しさ
-プログラミング環境）、そしてそれ自身の主権問題であるEthereumを貸す。
+プログラミング環境)、そしてそれ自身の主権問題であるEthereumを貸す。
 プラットフォームへのアクセスを希望するユーザーを除外しますが、代わりに必要なユーザー
 現在の状態遷移マシンに送信する。
 
 もちろん、エテリアムは金銭の通貨を
 エーテル、いずれか、銀行や主要な政府機関を持っていない
 Ethereumの通貨。そして、
-[多くの]（http://www.coindesk.com/south-africa-diy-ethereum-blockchain-tests/）
-[そのような]（http://www.coindesk.com/south-africa-diy-ethereum-blockchain-tests/）
-[機関]（http://www.coindesk.com/fidor-ethereum-core-banking/）は次のとおりです。
+[多くの](http://www.coindesk.com/south-africa-diy-ethereum-blockchain-tests/)
+[そのような](http://www.coindesk.com/south-africa-diy-ethereum-blockchain-tests/)
+[機関](http://www.coindesk.com/fidor-ethereum-core-banking/)は次のとおりです。
 Ethereumブロックチェーンを調査すると、スケーラビリティとガバナンスの両方があります
 それが本格的な採用を制限する懸念があるため、
 既存のシステムと通貨との統合。
@@ -75,21 +75,21 @@ Ethereumブロックチェーンを調査すると、スケーラビリティと
 明らかに、我々が必要とするのは、Ethereumよりも一般的なものです.Etthereumはメタエタリウムの一種です。
 既存のコードベースと既存のブロックチェーンの状態を統合できるもの。
 国家によって発行された通貨とまったく同じようにインターフェースできるもの。
-cryptocurrencies間の関係を公式化し、それらの独立性を損なうことなくそれらを接続するもの。
+Cryptocurrencies間の関係を公式化し、それらの独立性を損なうことなくそれらを接続するもの。
 セキュリティを脅かさない極限の柔軟性を備えたもの
 
 宇宙に入る。コスモスはネットワークと相互運用性の枠組みです
 ブロックチェーン。それは "ハブ"と "ゾーン"のウェブから成り、各 "ゾーン"は
 事実上、任意の暗号解読設計を備えた独立したブロックチェーン
 （Bitcoin、Ethereum、ZeroCash、CryptoNote、あなたのローカルバンキング
-機関など）、各「ハブ」は、マルチアセット暗号化であり、
+機関など)、各「ハブ」は、マルチアセット暗号化であり、
 一部のゾーンセット間の相互運用性を促進します。
 
-ハブとゾーンは、[Tendermint]（http://tendermint.com/）
-[証拠の証拠（PoS）コンセンサス
-アルゴリズム]（https://github.com/tendermint/tendermint/wiki/Byzantine-Consensus-Algorithm）、
+ハブとゾーンは、[Tendermint](http://tendermint.com/)
+[証拠の証拠（PoS)コンセンサス
+アルゴリズム](https://github.com/tendermint/tendermint/wiki/Byzantine-Consensus-Algorithm)、
 [TMSP
-インターフェース]（http://tendermint.com/blog/tendermint-socket-protocol/）をホストする
+インターフェース](http://tendermint.com/blog/tendermint-socket-protocol/)をホストする
 任意のプログラミング言語で書かれたアプリケーション。 TMSPは膨大な
 アプリケーション設計の柔軟性を提供し、アプリケーションが
 Tendermintで動くブロックチェーンのセキュリティ機能
@@ -97,21 +97,17 @@ Tendermintで動くブロックチェーンのセキュリティ機能
 ゾーンは、主にハブを介して互いに通信します。
 1つのゾーンから別のゾーンへのトークンセットの非対称転送。
 事実、ハブは多数のブロックチェーン
-[sidechains]（https://blockstream.com/sidechains.pdf）、代わりにPoSを使用する
+[sidechains](https://blockstream.com/sidechains.pdf)、代わりにPoSを使用する
 PoWを使用すると、セキュリティを犠牲にすることなくオーバーヘッドが大幅に削減されます。ザ
 それぞれのゾーンがハブの軽いクライアントとして機能し、ハブが
-すべてのゾーンのための軽いクライアント。 [テンダーミントはこれを作る
-効率的]（https://github.com/tendermint/tendermint/wiki/Light-Client-Protocol）
+すべてのゾーンのための軽いクライアント。 [テンダーミントはこれを作る効率的](https://github.com/tendermint/tendermint/wiki/Light-Client-Protocol)
 バリデータセットが存在する限り、コンパクトなライトクライアントプルーフがセキュアです
-これはライトクライアントを確実にすることで実現できます[
-バリデータセットは少なくとも許可されている回数だけ変更されます
-発生する]（https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity/）。
+これはライトクライアントを確実にすることで実現できます[バリデータセットは少なくとも許可されている回数だけ変更されます発生する](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity/)。
 
-多くの人々が[
-ステークホルダーの証明書（https://download.wpsoftware.net/bitcoin/pos.pdf）が主張している
+多くの人々が[ステークホルダーの証明書](https://download.wpsoftware.net/bitcoin/pos.pdf)が主張している
 安全を確保することは不可能です。同時に、彼らはそれがほぼ
 1つの安全なPoWチェーンを使用して多数のPoSチェーンを保護することは些細なことです。それは[私の
-自分の位置]（https://twitter.com/buchmanster/status/738550345597648896）
+自分の位置](https://twitter.com/buchmanster/status/738550345597648896)
 PoWチェーンの正しい数は1であり、PoSチェーンの正しい数は
 何千万も何百万という、通貨の数、報酬
 システム、および世界のさまざまな他のトークンベースのシステムです。
@@ -121,7 +117,7 @@ PoWチェーンの正しい数は1であり、PoSチェーンの正しい数は
 ゾーン別。さらに、ゾーンと
 十分な機能を備えた任意のゾーンがハブになることができるようになります。中
 私たちは物事を始めるために1つの特定のハブをリリースします（適切に
-Adamハブという名前の）、このハブの廃止を阻むものは何もありません
+Adamハブという名前の)、このハブの廃止を阻むものは何もありません
 BitcoinやEthereumのような他のハブも競争に来る
 潜在的にそれを置き換えることができます。
 

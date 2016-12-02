@@ -11,12 +11,16 @@
       <div class="section-container">
         <h2>{{ $t('sectionHomeIntro.title') }}</h2>
         <div class="section-content">
-          <h3>{{ $t('sectionHomeIntro.purpose') }}</h3>
-          <p v-html="$t('sectionHomeIntro.purposeText')"></p>
-          <h3>{{ $t('sectionHomeIntro.architecture') }}</h3>
-          <p v-html="$t('sectionHomeIntro.architectureText')"></p>
-          <h3>{{ $t('sectionHomeIntro.cosmosHub') }}</h3>
-          <p v-html="$t('sectionHomeIntro.cosmosHubText')"></p>
+          <div class="col">
+            <h3>{{ $t('sectionHomeIntro.purpose') }}</h3>
+            <p v-html="$t('sectionHomeIntro.purposeText')"></p>
+            <h3>{{ $t('sectionHomeIntro.architecture') }}</h3>
+            <p v-html="$t('sectionHomeIntro.architectureText')"></p>
+          </div>
+          <div class="col">
+            <h3>{{ $t('sectionHomeIntro.cosmosHub') }}</h3>
+            <p v-html="$t('sectionHomeIntro.cosmosHubText')"></p>
+          </div>
         </div>
         <router-link to="/whitepaper" class="btn">{{ $t('sectionHomeIntro.readTheWhitepaper') }}</router-link>
       </div>
@@ -185,8 +189,11 @@ export default {
         display block
 
         .section-content
-          column-count 2
-          column-gap 3rem
+          display flex
+          flex-flow row
+          .col
+            flex 1
+            margin 0 1.5rem
         h2
           margin-bottom 3rem
 

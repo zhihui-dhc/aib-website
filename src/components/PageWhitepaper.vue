@@ -6,7 +6,8 @@
       <div class="section-container">
         <div class="section-content">
           <div class="article-body">
-            <en></en>
+            <zh v-if="lang === 'zh'"></zh>
+            <en v-else></en>
           </div>
         </div>
       </div>
@@ -18,13 +19,19 @@
 import { mapGetters } from 'vuex'
 import PageWhitepaperNav from './PageWhitepaperNav'
 import en from '../content/en/WHITEPAPER.md'
+import zh from '../content/zh/WHITEPAPER.md'
+import Vue from 'vue'
 
 export default {
   components: {
     PageWhitepaperNav,
-    en
+    en,
+    zh
   },
   computed: {
+    lang () {
+      return Vue.config.lang
+    },
     ...mapGetters([
       'whitepaperTocVisible'
     ])

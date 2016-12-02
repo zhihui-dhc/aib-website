@@ -71,9 +71,8 @@ IBM和DARPA，直到2009年比特币出现。比特币是第一次打开
 比特币，有效的市场使得使用的能源的成本
 由全球矿业网络对块的奖励（加上
 交易费)。今天，事实证明是价值约100万美元的电力
-每天。此外，比特币挖掘正在被大数据商品化
-在世界上电力更多的地方的中心
-价格](https://bitcointalk.org/index.php?topic=1072474.0)，使它
+每天。此外，比特币挖掘正在被[大数据商品化
+在世界上电力更多的地方的中心价格](https://bitcointalk.org/index.php?topic=1072474.0)，使它
 困难的外行人参加。
  
 另一方面，PoS完全消除了PoW的能量依赖性。
@@ -85,8 +84,7 @@ IBM和DARPA，直到2009年比特币出现。比特币是第一次打开
 Peercoin，[BitShares](https://bitshares.org/)，
 [Nxt](https://en.wikipedia.org/wiki/Nxt)，而其他人已经使用某种形式
 PoS和Ethereum正在计划在不久的将来迁移到PoS。然而，虽然PoS
-有实际意义，很多人都反对使用
-PoS](https://download.wpsoftware.net/bitcoin/pos.pdf)，声称是
+有实际意义，很多人都[反对使用PoS](https://download.wpsoftware.net/bitcoin/pos.pdf)，声称是
 不可能安全。但这根本不是真的。使用BFT，你绝对
 可以保护PoS。这只是我们没有看到任何BFT-PoS公共区块链
 然而。
