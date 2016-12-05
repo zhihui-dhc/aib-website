@@ -2,7 +2,6 @@
   <div>
     <section class="section-cover">
       <div class="section-container" @click="scrollDown">
-        <!--<div class="logo-slash"></div>-->
         <h1 class="cover-title"><img src="../assets/images/cosmos_logo_m.png" title="Cosmos"></h1>
         <h2 class="cover-subtitle">{{ $t('site.networkOfBlockchains') }}</h1>
       </div>
@@ -88,22 +87,6 @@ export default {
 
       box-shadow hsl(0,0,95%) 0 0 6rem 2rem
 
-.logo-slash
-  width 24rem
-  height 2rem
-  background bc
-
-  position absolute
-  top 50%
-  left 50%
-
-  margin-left -12rem
-  margin-top -1rem
-
-  transform rotate(-45deg)
-
-  z-index -1
-
 .cover-title img
   height 1.8rem
 
@@ -130,11 +113,6 @@ export default {
         border-radius 32rem
         margin-left -16rem * 1.5 - 1rem
         margin-top -16rem * 1.5 - 1rem
-
-  .logo-slash
-    width 24rem * 1.5
-    margin-left -12rem * 1.5
-    margin-top -1rem * 1.5
 
   .cover-title img
     height 1.8rem * 1.25
@@ -164,10 +142,6 @@ export default {
         border-radius 32rem
         margin-left -16rem * 2 - 1rem
         margin-top -16rem * 2 - 1rem
-
-  .logo-slash
-    width 24rem * 2
-    margin-left -12rem * 2
 
   .cover-title img
     height 1.8rem * 1.5
