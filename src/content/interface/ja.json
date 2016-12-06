@@ -59,7 +59,10 @@
       "title": "顧客情報",
       "subtitle": "私たちは、個人化されたビットコインアドレスを生成するための情報を必要とします。",
       "name": "氏名",
+      "nameInvalid": "名前は必須です",
       "email": "電子メールアドレス",
+      "emailInvalid": "電子メールは必須で、有効である必要があります",
+      "select": "選択...",
       "nationality": "国籍"
     },
     "stepTwo": {
@@ -67,12 +70,14 @@
       "subtitle": "公開鍵を生成し、それを下のテキストフィールドに貼り付けます。",
       "generatePublicKey": "公開鍵を生成する",
       "launchKeygen": "キージェンを起動",
-      "pastePublicKey": "公開鍵を貼り付け"
+      "pastePublicKey": "公開鍵を貼り付け",
+      "pastePublicKeyInvalid": "公開鍵が必要です - 上記を作成してください"
     },
     "stepThree": {
       "title": "購入数量",
       "subtitle": "何個の原子を購入したいですか？",
       "atomCount": "原子数",
+      "atomCountInvalid": "原子数はゼロより大きくなければなりません",
       "btcPrice": "Bitcoin価格"
     },
     "stepFour": {

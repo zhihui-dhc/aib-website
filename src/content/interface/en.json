@@ -59,7 +59,10 @@
       "title": "Customer Info",
       "subtitle": "We require some info from you to generate a personalized bitcoin address.",
       "name": "Name",
+      "nameInvalid": "Name is required",
       "email": "Email Address",
+      "emailInvalid": "Email is required and must be valid",
+      "select": "Select...",
       "nationality": "Nationality"
     },
     "stepTwo": {
@@ -67,12 +70,14 @@
       "subtitle": "Generate your public key and paste it into the text field below.",
       "generatePublicKey": "Generate Public Key",
       "launchKeygen": "Launch Keygen",
-      "pastePublicKey": "Paste Public Key"
+      "pastePublicKey": "Paste Public Key",
+      "pastePublicKeyInvalid": "Public Key is required - create one above"
     },
     "stepThree": {
       "title": "Purchase Quantity",
       "subtitle": "How many Atoms do you wish to purchase?",
       "atomCount": "Number of Atoms",
+      "atomCountInvalid": "Atom count must be more than zero",
       "btcPrice": "Bitcoin Price"
     },
     "stepFour": {

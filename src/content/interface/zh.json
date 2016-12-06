@@ -59,7 +59,10 @@
       "title": "客户信息",
       "subtitle": "我们需要您的一些信息来生成个性化的比特币地址。",
       "name": "名称",
+      "nameInvalid": "名称是必需的",
       "email": "电子邮件地址",
+      "emailInvalid": "电子邮件是必需的，必须有效",
+      "select": "选择...",
       "nationality": "国籍"
     },
     "stepTwo": {
@@ -67,12 +70,14 @@
       "subtitle": "生成您的公钥，并将其粘贴到下面的文本字段中。",
       "generatePublicKey": "生成公钥",
       "launchKeygen": "启动密钥生成器",
-      "pastePublicKey": "粘贴公钥"
+      "pastePublicKey": "粘贴公钥",
+      "pastePublicKeyInvalid": "公钥是必需的 - 在上面创建一个"
     },
     "stepThree": {
       "title": "购买数量",
       "subtitle": "您想购买多少个原子？",
       "atomCount": "原子数",
+      "atomCountInvalid": "原子计数必须大于零",
       "btcPrice": "比特币价格"
     },
     "stepFour": {

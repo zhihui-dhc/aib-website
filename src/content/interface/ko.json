@@ -59,7 +59,10 @@
       "title": "고객 정보",
       "subtitle": "우리는 개인화 된 비트 코인 주소를 생성하기 위해 필요한 정보가 필요합니다.",
       "name": "이름",
+      "nameInvalid": "이름은 필수 항목입니다",
       "email": "이메일 주소",
+      "emailInvalid": "이메일은 필수이며 유효해야합니다",
+      "select": "고르다...",
       "nationality": "국적"
     },
     "stepTwo": {
@@ -67,12 +70,14 @@
       "subtitle": "공개 키를 생성하여 아래의 텍스트 필드에 붙여 넣으십시오.",
       "generatePublicKey": "공개 키 생성",
       "launchKeygen": "키겐을 시작하십시오",
-      "pastePublicKey": "공개 키 붙여 넣기"
+      "pastePublicKey": "공개 키 붙여 넣기",
+      "pastePublicKeyInvalid": "공개 키가 필요합니다 - 위에 하나 생성"
     },
     "stepThree": {
       "title": "구매 수량",
       "subtitle": "얼마나 많은 원자를 구매 하시겠습니까?",
       "atomCount": "원자 수",
+      "atomCountInvalid": "원자 수는 0보다 커야합니다",
       "btcPrice": "비트 코인 가격"
     },
     "stepFour": {

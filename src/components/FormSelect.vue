@@ -1,7 +1,7 @@
 <template>
   <div class="form-custom-select">
     <select :id="id" :value="value" required>
-      <option value="" v-if="empty">Select&hellip;</option>
+      <option value="" v-if="empty">{{ $t('siteFund.stepOne.select') }}</option>
       <option v-for="option in orderedOptions" v-bind:value="option.value">
         {{ option.text }}
       </option>
