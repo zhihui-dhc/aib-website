@@ -12,6 +12,7 @@
 import AppHeader from './components/AppHeader.vue'
 import AppFooter from './components/AppFooter.vue'
 import store from './store/index.js'
+import Vue from 'vue'
 
 export default {
   components: {
@@ -45,6 +46,22 @@ export default {
       { r: 'icon', t: 'image/png', sz: '16x16', h: require('./assets/favicon/favicon-16x16.png') },
       { r: 'manifest', h: require('./assets/favicon/manifest.json') }
     ]
+  },
+  mounted () {
+    let language = navigator.language || navigator.userLanguage
+    let lang
+    switch (language) {
+      case 'ja':
+        lang = 'ja'; break
+      case 'ko':
+        lang = 'ko'; break
+      case 'zh-CN':
+        lang = 'zh'; break
+      default:
+        lang = 'en'; break
+    }
+    // console.log('The language is: ' + language)
+    Vue.config.lang = lang
   },
   store
 }
