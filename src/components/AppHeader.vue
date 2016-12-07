@@ -35,15 +35,11 @@ export default {
   z-index 100
   width 100vw
   display flex
-
-  background c-app-bg
-  background hsla(0,0,100%,95%)
   box-shadow hsla(0,0,0,0.04) 0 0.2rem 0.3rem
 
   a.nav-home
     height 3*x
     padding 0 x
-
     display flex
     align-items center
 
@@ -63,7 +59,6 @@ export default {
       padding 0 0.5*x
       color txt
       default-border-top()
-
       line-height 3*x
 
       .short
