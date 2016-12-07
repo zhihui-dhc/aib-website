@@ -35,6 +35,8 @@ export default {
   z-index 100
   width 100vw
   display flex
+  background #fff
+  background hsla(0,0,100%,0.95)
   box-shadow hsla(0,0,0,0.04) 0 0.2rem 0.3rem
 
   a.nav-home
