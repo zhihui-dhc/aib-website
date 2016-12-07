@@ -67,13 +67,10 @@ export default {
         display inline
       .long
         display none
-
       &.nav-github
         display none
-
       &:hover
         color link
-
       &.router-link-active
         color light
 
