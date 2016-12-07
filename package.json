@@ -103,7 +103,7 @@
     "vue-template-compiler": "^2.1.4",
     "vuex": "^2.0.0",
     "vuex-router-sync": "^3.0.0",
-    "webpack": "^1.13.3",
+    "webpack": "^1.14.0",
     "webpack-dev-middleware": "^1.8.4",
     "webpack-hot-middleware": "^2.13.2",
     "webpack-merge": "^1.0.2"
