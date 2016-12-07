@@ -4,6 +4,7 @@ import Vue from 'vue'
 import VueHead from 'vue-head'
 import VueRouter from 'vue-router'
 import VueI18n from 'vue-i18n'
+import VueAnalytics from 'vue-ua'
 
 import App from './App'
 
@@ -16,6 +17,13 @@ sync(store, router)
 Vue.use(VueHead)
 Vue.use(VueRouter)
 Vue.use(VueI18n)
+Vue.use(VueAnalytics, {
+  appName: 'Tendermint Website',
+  appVersion: '1.0',
+  trackingId: 'UA-51029217-1',
+  debug: false,
+  vueRouter: router
+})
 
 // i18n settings
 Vue.config.lang = 'en'
