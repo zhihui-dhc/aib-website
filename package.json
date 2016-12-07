@@ -16,13 +16,11 @@
     "toc": "doctoc --title '**Table of Contents**' src/content/en/FAQ.md"
   },
   "dependencies": {
-    "babel-runtime": "^6.18.0",
-    "google-translate": "^1.0.7",
-    "vue": "^2.1.4",
-    "vue-ua": "^1.1.2",
-    "vuelidate": "^0.1.1"
+    "vue": "^2.1.4"
   },
   "devDependencies": {
+    "babel-runtime": "^6.18.0",
+    "vue-ua": "^1.1.2",
     "babel-core": "^6.18.2",
     "babel-eslint": "^7.1.1",
     "babel-loader": "^6.2.8",
