@@ -18,7 +18,7 @@ Vue.use(VueHead)
 Vue.use(VueRouter)
 Vue.use(VueI18n)
 Vue.use(VueAnalytics, {
-  appName: 'Tendermint Website',
+  appName: 'Cosmos Website',
   appVersion: '1.0',
   trackingId: 'UA-51029217-1',
   debug: false,
