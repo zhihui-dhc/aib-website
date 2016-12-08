@@ -88,5 +88,14 @@
     "postId": "purpose-of-cosmos",
     "parentComment": "",
     "childComments": []
+  },
+  {
+    "id": "dd92nf0d",
+    "author": "blefescu",
+    "dateCreated": 1481087685500,
+    "body": "Just a test child comment",
+    "postId": "purpose-of-cosmos",
+    "parentComment": "dedsiejd",
+    "childComments": []
   }
 ]

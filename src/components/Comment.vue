@@ -7,12 +7,21 @@
         </div>
     </div>
     <div class="body" v-html="markdown(comment.body)"></div>
-    <div class="children"></div>
+    <div class="children">
+      <template
+        v-for="childComment in childComments"
+        
+      >
+      {{ childComment.body }}
+      </template>
+    </div>
   </div>
 </template>
 
 <script>
 import moment from 'moment'
+import Comment from './Comment'
+import { mapGetters } from 'vuex'
 let md = require('markdown-it')({
   preset: 'default',
   html: true,
@@ -20,7 +29,19 @@ let md = require('markdown-it')({
   typographer: true
 })
 export default {
-  props: ['comment'],
+  components: {
+    Comment
+  },
+  computed: {
+    childComments () {
+      let children = []
+      children.push(this.allComments[10])
+      return children
+    },
+    ...mapGetters([
+      'allComments'
+    ])
+  },
   methods: {
     markdown (body) {
       return md.render(body)
@@ -31,7 +52,8 @@ export default {
     humanDate (unixDate) {
       return moment(unixDate, 'x').format('YYYY-MM-DD HH:MM:SS')
     }
-  }
+  },
+  props: ['comment']
 }
 </script>
 

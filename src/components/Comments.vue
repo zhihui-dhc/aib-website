@@ -1,7 +1,7 @@
 <template>
   <div class="pz-comments-container">
     <div class="pz-comments">
-      <comment v-for="comment in allComments" :comment="comment"></comment>
+      <comment v-for="comment in comments" :comment="comment"></comment>
     </div>
   </div>
 </template>
@@ -14,6 +14,9 @@ export default {
     Comment
   },
   computed: {
+    comments () {
+      return this.allComments.filter(c => c.parentComment === '')
+    },
     ...mapGetters([
       'allComments'
     ])
@@ -25,6 +28,8 @@ export default {
 @import '../styles/variables.styl'
 
 .pz-comments-container
+  max-width 40rem
+  margin 0 auto
   margin-bottom 0.5rem
 
 .pz-comments > .pz-comment
