@@ -55,9 +55,10 @@ export default {
     }
   },
   methods: {
-    setLang (language) {
-      Vue.config.lang = language
-      console.log('switching to', language)
+    setLang (lang) {
+      console.log('switching to', lang)
+      Vue.config.lang = lang
+      window.localStorage.setItem('language', lang)
     }
   }
 }

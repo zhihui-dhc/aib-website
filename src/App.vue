@@ -48,20 +48,27 @@ export default {
     ]
   },
   mounted () {
-    let language = navigator.language || navigator.userLanguage
-    let lang
-    switch (language) {
-      case 'ja':
-        lang = 'ja'; break
-      case 'ko':
-        lang = 'ko'; break
-      case 'zh-CN':
-        lang = 'zh'; break
-      default:
-        lang = 'en'; break
+    let lsLang = window.localStorage.getItem('language')
+    if (lsLang) {
+      console.log('localStorage language exists!', lsLang)
+      Vue.config.lang = lsLang
+    } else {
+      let browserLang = navigator.language || navigator.userLanguage
+      let lang
+      switch (browserLang) {
+        case 'ja':
+          lang = 'ja'; break
+        case 'ko':
+          lang = 'ko'; break
+        case 'zh-CN':
+          lang = 'zh'; break
+        default:
+          lang = 'en'; break
+      }
+      console.log('localStorage language does not exist, setting it', lang)
+      Vue.config.lang = lang
+      window.localStorage.setItem('language', lang)
     }
-    // console.log('The language is: ' + language)
-    Vue.config.lang = lang
   },
   store
 }
