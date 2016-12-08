@@ -16,9 +16,13 @@ import inViewport from '../scripts/inViewport.js'
 import visibleTocActivate from '../scripts/visibleTocActivate.js'
 import percentageScrolling from '../scripts/percentageScrolling.js'
 import { mapGetters } from 'vuex'
+import Vue from 'vue'
 export default {
   name: 'page-whitepaper-nav',
   computed: {
+    lang () {
+      return Vue.config.lang
+    },
     ...mapGetters([
       'whitepaperTocVisible',
       'whitepaperElementsVisible'
@@ -34,21 +38,26 @@ export default {
         this.$store.commit('setWhitepaperTocVisible', false)
       }
     },
-    printWhitepaper () { window.print() }
+    initToc () {
+      if (!this.whitepaperTocVisible) {
+        document.querySelector('.minimal-toc').style.display = 'none'
+      }
+      Ps.initialize(document.querySelector('.minimal-toc'))
+      watchTocClicks(this.showToc)
+      this.$store.commit('setWhitepaperElementsVisible',
+        inViewport(document.querySelectorAll('h2, h3, h4')))
+      percentageScrolling()
+    }
   },
   mounted () {
-    if (!this.whitepaperTocVisible) {
-      document.querySelector('.minimal-toc').style.display = 'none'
-    }
-
-    Ps.initialize(document.querySelector('.minimal-toc'))
-    watchTocClicks(this.showToc)
-    this.$store.commit('setWhitepaperElementsVisible',
-      inViewport(document.querySelectorAll('h2, h3, h4')))
-    percentageScrolling()
+    this.initToc()
   },
   props: ['toc-visible'],
   watch: {
+    lang () {
+      console.log('language changed, reintializing table of contents')
+      this.initToc()
+    },
     whitepaperElementsVisible () {
       visibleTocActivate(this.whitepaperElementsVisible)
     },

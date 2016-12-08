@@ -785,7 +785,7 @@ IBCPacketTx 交易有下列项组成：
 
 PacketProof 必须有正确的梅克尔证明路径，如下：
 
-IBC/<SrcChainID>/<DstChainID>/<Number>
+    IBC/<SrcChainID>/<DstChainID>/<Number>
 
 当"Zone1"想要向"Zone2"通过"Hub"发送证明，那么IBCPacket 的数据是相同的，无论这个包是在"Zone1"、 "Hub"还是"Zone2"上梅克尔化的。唯一可变的域只有追踪交付的Status （状态），如下所示。
 
