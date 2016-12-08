@@ -12,6 +12,7 @@
 import AppHeader from './components/AppHeader.vue'
 import AppFooter from './components/AppFooter.vue'
 import store from './store/index.js'
+import getLang from './scripts/getLang.js'
 import Vue from 'vue'
 
 export default {
@@ -48,27 +49,7 @@ export default {
     ]
   },
   mounted () {
-    let lsLang = window.localStorage.getItem('language')
-    if (lsLang) {
-      console.log('localStorage language exists!', lsLang)
-      Vue.config.lang = lsLang
-    } else {
-      let browserLang = navigator.language || navigator.userLanguage
-      let lang
-      switch (browserLang) {
-        case 'ja':
-          lang = 'ja'; break
-        case 'ko':
-          lang = 'ko'; break
-        case 'zh-CN':
-          lang = 'zh'; break
-        default:
-          lang = 'en'; break
-      }
-      console.log('localStorage language does not exist, setting it', lang)
-      Vue.config.lang = lang
-      window.localStorage.setItem('language', lang)
-    }
+    Vue.config.lang = getLang()
   },
   store
 }

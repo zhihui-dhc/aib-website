@@ -1,3 +1,4 @@
+export const allComments = state => state.comments.all
 export const allPosts = state => state.posts.all
 export const allCountries = state => state.countries.all
 export const faqElementsVisible = state => state.toc.faq.elementsVisible

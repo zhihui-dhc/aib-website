@@ -13,12 +13,15 @@
         </div>
       </div>
     </section>
+
+    <comments></comments>
   </div>
 </template>
 
 <script>
 import ArticleFooter from './ArticleFooter'
 import PageHeader from './PageHeader'
+import Comments from './Comments'
 import Vue from 'vue'
 
 import { mapGetters } from 'vuex'
@@ -27,7 +30,8 @@ export default {
   name: 'page-blog-entry',
   components: {
     ArticleFooter,
-    PageHeader
+    PageHeader,
+    Comments
   },
   computed: {
     entry () {
