@@ -9,7 +9,9 @@
       <div class="section-container">
         <div class="section-content">
           <div class="article-body" v-html="entry.body"></div>
+    <!--
           <article-footer :facebook-url="facebookUrl" :twitter-url="twitterUrl"></article-footer>
+    -->
         </div>
       </div>
     </section>
@@ -63,7 +65,6 @@ export default {
   },
   mounted () {
     document.title = this.entry.title + ' - Tendermint'
-    console.log('entry', this.entry)
   }
 }
 </script>
