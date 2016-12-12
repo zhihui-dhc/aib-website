@@ -1,7 +1,6 @@
 <template>
   <div class="pz-comments-container">
     <comment-form-btn></comment-form-btn>
-    <comment-form></comment-form>
     <div class="pz-comments">
       <comment00 v-for="comment in comments" :comment="comment"></comment00>
     </div>
@@ -11,17 +10,16 @@
 <script>
 import Comment00 from './Comment00'
 import CommentFormBtn from './CommentFormBtn'
-import CommentForm from './CommentForm'
 import { mapGetters } from 'vuex'
 export default {
   components: {
     CommentFormBtn,
-    CommentForm,
     Comment00
   },
   computed: {
     comments () {
-      return this.allComments.filter(c => c.parentId === '')
+      let comments = this.allComments.filter(c => c.parentId === '')
+      return comments.sort((a, b) => b.dateCreated - a.dateCreated)
     },
     ...mapGetters([
       'allComments'
@@ -37,7 +35,6 @@ export default {
   max-width 40rem
   margin 0 auto
   margin-bottom 0.5rem
-  font-size 0.875rem
 
 .pz-comment
   padding 0.5rem 0 0.5rem 0.5rem

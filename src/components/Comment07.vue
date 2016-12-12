@@ -1,14 +1,14 @@
 <template>
   <div class="pz-comment">
-    <comment-body :comment="comment"></comment-body>
+    <comment-container :comment="comment"></comment-container>
   </div>
 </template>
 
 <script>
-import CommentBody from './CommentBody'
+import CommentContainer from './CommentContainer'
 export default {
   components: {
-    CommentBody
+    CommentContainer
   },
   props: ['comment']
 }

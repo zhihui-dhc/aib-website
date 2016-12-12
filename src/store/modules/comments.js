@@ -7,14 +7,14 @@ const state = {
 const mutations = {
   upvoteComment (state, commentId) {
     let comment = state.all.find(c => c.id === commentId)
-    comment.score += 1
+    comment.upvotes++
   },
   downvoteComment (state, commentId) {
     let comment = state.all.find(c => c.id === commentId)
-    comment.score -= 1
+    comment.downvotes++
   },
   addComment (state, comment) {
-    console.log('submitting comment', comment)
+    // console.log('submitting comment', JSON.stringify(comment))
     state.all.push(comment)
   }
 }

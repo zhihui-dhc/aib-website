@@ -1,5 +1,5 @@
 <template>
-  <a class="pz-comment-form-btn" @click="setCommentFormVisible(true)">
+  <a class="pz-comment-form-btn" @click="goComment">
     <span class="form-input">Add a comment</span>
   </a>
 </template>
@@ -7,8 +7,9 @@
 <script>
 export default {
   methods: {
-    setCommentFormVisible (value) {
-      this.$store.commit('setCommentFormVisible', value)
+    goComment () {
+      this.$store.commit('setNewCommentPostId', this.$route.params.entry)
+      this.$router.push('/blog/comment')
     }
   }
 }

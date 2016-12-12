@@ -5,6 +5,7 @@ const routes = [
   { path: '/', component: r('PageIndex') },
 
   { path: '/blog', component: r('PageBlogIndex') },
+  { path: '/blog/comment', component: r('PageComment') },
   { path: '/blog/:entry', component: r('PageBlogEntry') },
 
   { path: '/faq', component: r('PageFaq') },

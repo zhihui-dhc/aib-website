@@ -10,11 +10,10 @@
 </template>
 
 <script>
-import { orderBy } from 'lodash'
 export default {
   computed: {
     orderedOptions () {
-      return orderBy(this.options, ['text'], ['asc'])
+      return this.options.sort()
     }
   },
   props: {

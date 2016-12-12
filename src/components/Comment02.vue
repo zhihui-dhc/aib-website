@@ -1,6 +1,6 @@
 <template>
   <div class="pz-comment">
-    <comment-body :comment="comment"></comment-body>
+    <comment-container :comment="comment"></comment-container>
     <div class="pz-child-comments">
       <comment03 v-for="cc in childComments" :comment="cc"></comment03>
     </div>
@@ -8,12 +8,12 @@
 </template>
 
 <script>
-import CommentBody from './CommentBody'
+import CommentContainer from './CommentContainer'
 import Comment03 from './Comment03'
 import { mapGetters } from 'vuex'
 export default {
   components: {
-    CommentBody,
+    CommentContainer,
     Comment03
   },
   computed: {
