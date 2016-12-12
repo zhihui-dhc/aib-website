@@ -1,5 +1,10 @@
 import shortid from 'shortid'
 
+const emptyParent = {
+  author: '',
+  dateCreated: 0,
+  body: ''
+}
 const emptyComment = {
   id: shortid.generate(),
   author: 'CosmosUser',
@@ -11,17 +16,14 @@ const emptyComment = {
 }
 
 const state = {
-  parentComment: {
-    author: '',
-    dateCreated: 0,
-    body: ''
-  },
+  parentComment: JSON.parse(JSON.stringify(emptyParent)),
   comment: JSON.parse(JSON.stringify(emptyComment))
 }
 
 const mutations = {
   resetNewComment (state) {
     // console.log('resetting new comment...')
+    state.parentComment = JSON.parse(JSON.stringify(emptyParent))
     state.comment = JSON.parse(JSON.stringify(emptyComment))
   },
   setNewCommentPostId (state, postId) {
