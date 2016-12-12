@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Cosmos Blog]]></title><description><![CDATA[The Internet of Blockchains]]></description><link>http://cosmos.network</link><image><url>http://cosmos.network/static/favicon.png</url><title>Cosmos Blog</title><link>http://cosmos.network</link></image><generator>RSS for Node</generator><lastBuildDate>Mon, 12 Dec 2016 07:05:39 GMT</lastBuildDate><atom:link href="http://cosmos.network/static//rss.xml" rel="self" type="application/rss+xml"/><pubDate>Mon, 12 Dec 2016 07:05:39 GMT</pubDate><copyright><![CDATA[2016 Cosmos Foundation]]></copyright><language><![CDATA[en]]></language><managingEditor><![CDATA[Cosmos Foundation]]></managingEditor><webMaster><![CDATA[Cosmos Foundation]]></webMaster><ttl>60</ttl><item><title><![CDATA[BFT：最安全的证明]]></title><description><![CDATA[<p>比特币将世界的注意力带到区块链。但唉，比特币
+版本的blockchain不足以满足世界的区块链需求。那
+是因为比特币的工作证明（PoW)的共识<a href="http://motherboard.vice.com/read/bitcoin-could-consume-as-much-electricity-as-denmark-by-2020">需要大量的
+能源</a>。此外，交易非常缓慢，需要一个小时或
+更长的提交。而且因为PoW矿工没有激励去忠诚
+一个链或其他，升级难以协调。
+ 
+我们需要一种安全地管理blockchains的方法，而不是强加一个巨大的
+我们星球上的能源成本。这种方法是拜占庭容错
+（BFT)为基础的<a href="https://bitcointalk.org/index.php?topic=27787.0">proof-of-stake</a>（PoS)。我们称之为BFT-PoS。
+ 
+在我深入探讨BFT-PoS的优点之前，让我先谈一下这个概念
+拜占庭的错误，没有进入混乱的细节<a href="http://pages.cs.wisc.edu/~sschang/OS-Qual/reliability/byzantine.htm">Lamport的将军
+和他的军队</a>。</p>
+<p>在分布式系统中，数据被复å¶到数百或数千
+的节点，需要某种类型的容错或共识
+算法，对于计算机崩溃或离线的简单事实
+时间。因此，如果这些节点的一部分失败，系统作为一个整体静止
+需要达成共识。
+ 
+标准容错共识算法如
+<a href="https://raft.github.io/raft.pdf">Raft</a>和
+<a href="https://en.wikipedia.org/wiki/Paxos_%EF%BC%88computer_science">Paxos</a>)假设
+当节点故障时，它只是停止工作，不发送回复。
+Google，Facebook和一些现有的数据库产品已经使用这个系列
+的协议算法在其防火墙内，以确保服务保持
+可用，尽管计算机有故障。</p>
+<p>但是这些算法不适合公共区块链，因为有
+没有防火墙在公共区块链。任何有采矿权力（在PoW)或
+放置令牌（在PoS中)可以参与，或甚至试图破坏网络。
+为了在公共区块链上达成共识，我们需要拜占庭容错。
+在拜占庭故障中，故障节点可以完全任意行为
+方式。节点甚至可以合谋尝试和最大化他们造æ的损害。
+ 
+因此，本质上，BFT一致性算法的目的是建立信任
+在不可信网络之间的其他不相关方
+互联网。
+ 
+BFT不是什么新鲜事。这个概念首先在一篇学术论文中被引入
+<a href="http://research.microsoft.com/en-us/um/people/lamport/pubs/byz.pdf">Lamport，Shostak和Pease
+1982</a>。但
+Lamport等人仅仅证明了算法的理论可行性
+一个同步环境，其中所有的消息总是准时到达。
+ 
+但在现实世界中，你不能真正相信互联网提供任何东西
+准时。因此，在1988年，<a href="http://groups.csail.mit.edu/tds/papers/Lynch/jacm88.pdf">Dwork，Lynch和Stockmeyer</a>（DLS)提出了一种算法
+在大多数异步环境中工作。 1999年后期，<a href="http://pmg.csail.mit.edu/papers/osdi99.pdf">Miguel Castro
+和Barbara Liskov</a>提出了一个连续的BFT共识的实用解决方案
+这就是，现在仍然是BFT算法的最先进的。
+ 
+但长期以来，主流媒体忽视了这些创新的作品。没有人
+了解BFT在学术界和ä¸»要机构之外的重要性
+IBM和DARPA，直到2009年比特币出现。比特币是第一次打开
+分散应用，为全球货币分类帐提供BFT共识，
+但使用一个完全新颖的解决方案拜占庭将军的问题：PoW。
+ 
+在PoW中，矿工根据具有最大处理能力的人进行竞争，以进行验证
+交易。为了他们的努力，他们得到交易费和
+新铸造的比特币。这就是比特币如何创造新货币。比特币
+全球矿工在这些新发行的彩票式系统中竞争
+比特币，有效的市场使得使用的能源的成本
+由全球矿业网络对块的奖励（加上
+交易费)。今天，事实证明是价值约100万美元的电力
+每天。此外，比特币挖掘正在被<a href="https://bitcointalk.org/index.php?topic=1072474.0">大数据商品化
+在世界上电力更多的地方的中心价格</a>，使它
+困难的外行人参加。
+ 
+另一方面，PoS完全消除了PoW的能量依赖性。
+在PoS中，矿工被与系统有利害关系的“验证者”取代。
+验证者不必投资昂贵的处理系统，但他们做
+必须购买“赌注令牌”。任何普通的笔记本电脑都足以解决
+算法。</p>
+<p>Peercoin，<a href="https://bitshares.org/">BitShares</a>，
+<a href="https://en.wikipedia.org/wiki/Nxt">Nxt</a>，而其他人已经使用某种形式
+PoS和Ethereum正在计划在不久的将来迁移到PoS。然而，虽然PoS
+有实际意义，很多人都<a href="https://download.wpsoftware.net/bitcoin/pos.pdf">反对使用PoS</a>，声称是
+不可能安全。但这根本不是真的。使用BFT，你绝对
+可以保护PoS。这只是我们没有看到任何BFT-PoS公共区块链
+然而。</p>
+<p>虽然理论可能难以解释或理解，但最终的
+由适当的BFT算法提供的结果易于掌握。不像PoW
+区块链，BFT-PoS区块链不叉（即获得双重花费攻击)
+除非1/3或更多的验证器协调这种攻击。而且，当1/3或
+更多的验证器确实导致双花费攻击，我们可以计算
+确定哪些验证者负责攻击，销毁它们
+放置令牌并将其从网络中弹出。它就像放置令牌
+是虚拟化的PoW矿工，当用来攻击系统时爆炸。没有
+其他区块链共识算法，包括PoW，都可以提供水平
+可能与BFT-PoS的抵押。</p>
+<p>BFT-PoS性能非常好。今天，在全球公共区块链中有几个
+一百个验证器，你可以得到事务的定单3
+秒，容易 - 无需等待额外的块确认！的
+理论已经证明我们这些是最佳的容错阈值
+“即时决定”区块链。虽然更多的验证器会减慢
+共识，如果<a href="https://www.nngroup.com/articles/law-of-bandwidth/">尼尔森的
+法律</a>继续持有，
+我们甚至能够支持指数增长的验证器数量
+每年都有同样的表现。</p>
+<p>此外，BFT-PoS还将提高移动钱包的安全性。少数
+移动钱包在今天存在的充分利用了安全性
+由Bitcoin提供，因为一个简单的事实，没有人愿意等待一个小时
+以便交易清除。相反，大多数钱包只是假设<a href="https://www.coingecko.com/buzz/peter-todd-explains-the-problems-with-unconfirmed-bitcoin-transactions">人发送钱是不是试图双支出it</a>。
+而且，虽然我们没有时间在这里潜水，高效的移动钱包
+协议或“轻客户端SPV”协议是未来区块链的关键
+互操作性。</p>
+<p>虽然PoW在比特币方面表现良好，但成本高，运行缓慢，而且环境友好
+不友好。现在最好的替代品是BFT-PoS。这是一个
+持久，节能的解决方案，在异步工作良好
+环境。最好的，因为BFT是由最好的和
+最聪明的计算机科学工业，它证明是安全的。你不能做
+任何比那更好。</p>
+]]></description><link>http://cosmos.network/posts/bft-the-most-secure-proof-of-stake</link><guid isPermaLink="true">http://cosmos.network/posts/bft-the-most-secure-proof-of-stake</guid><dc:creator><![CDATA[Jae Kwon]]></dc:creator></item><item><title><![CDATA[Cosmos的目的]]></title><description><![CDATA[<p>我们相信公共区块链的力量提供公共利益，
+动力由一个自我激励的演员的集合由a的规则控制
+共享共识分类帐，在竞争和选择自由的环境中。
+我们从先前的成功和失败中学到了重要的教训
+加密货币，并已经创造了我们自己的创新
+释放速度，安全性，可扩展性和可用性的新时代。</p>
+<p>Cosmos是这些教训和创新的高潮，旨在
+扩展到纳入未来的创新，创建分布式分类帐
+平台适合世代来。</p>
+<p>加密货币的一个巨大悲剧是他们的失败
+与现有系统互操作，甚至与彼此互操作。它就好像每个
+虚拟货币，在自己的区块链上和与自己的社区，太
+主权为自己的好。这是最明显的，当你试图买
+你的第一个比特币：你发现，这是非常困难的买新的
+互联网上的钱，至少没有泄露相当多
+数量的个人信息，并允许它的验证周数
+第三方（交易所)你几乎不知道，并已被警告不信任
+太多的钱。</p>
+<p>虽然机制像<a href="https://en.bitcoin.it/wiki/Atomic_cross-chain_trading">原子swaps</a>
+帮助链接社区，他们需要成熟的流动性市场
+每个活动参与者（或遭受长时间超时)。 <a href="https://coinmarketcap.com/">alt-coin生态系统</a>是爱好者的炼金汤
+在新的加密货币设计中以各种方式进行尝试，但是每个alt-coin
+孤独，由于缺乏一般的区块间链通信而沉默
+系统，许多不必要的浪费电气通过复杂的工作证明
+（PoW)设计。</p>
+<p><a href="https://ethereum.org/">Ethereum</a>试图解决这个问题
+间接地，通过发明一个新的计算平台，允许任意
+金融系统要使用公共的虚拟机来编写
+开发环境。假设所有新的加密货币在以太坊上市，
+他们将具有一定的互操作能力。以太坊是一个美好的
+想法，但设计决定，同时受到重要考虑的驱动
+（如需要一个简单的规范和保证的确定论)，忽略a
+更多（比如设计一个安全的通用目的的困难
+编程环境)，并借给以太坊它自己的主权问题，这
+是，它排除了想要访问平台但想要替代品的用户
+到当前状态转换机。</p>
+<p>当然，以太坊并没有解决将法定货币转换成的问题
+乙醚，没有银行和主要政府机构发行
+以色列的货币。而且
+<a href="http://www.coindesk.com/south-africa-diy-ethereum-blockchain-tests/">many</a>
+<a href="http://www.coindesk.com/south-africa-diy-ethereum-blockchain-tests/">such</a>
+<a href="http://www.coindesk.com/fidor-ethereum-core-banking/">机构</a>
+调查以太坊blockchain，有可扩展性和治理
+这将限制其全面采用，从而阻碍
+与现有系统和货币的集成。</p>
+<p>每个现有的cryptocurrency支持一些文化理想。比特币是明智的
+自由主义者，有一个轻微的无政府主义倾斜，最终被背叛
+经济学的工作证明。以太坊不是一个政治声明，而是一个
+分布式系统，计算机科学中的先锋派学术演习
+合同理论。 Dogecoin是人类结合的能力的证明
+超越荒谬的，一种更常被称为“社会”的现象。 Steem
+提供一个更加结构化的社会性版本，内容基础
+生产和管理。等等。但有更多的理想
+货币创造，更多的虚拟机设计尝试，每一个提供一个
+独特的实验，在治理，文化和
+经济学。不是所有这些实验都是如此僵硬的悲剧
+彼此之间由不相容的伟大的chasms相互孤立？</p>
+<p>显然，我们需要的是比以太坊更一般的东西 - 一种元以太网;
+可以集成现有的代码库和现有区块链的状态;
+可以与民族国家发行的货币以相同的方式接口的东西;
+使加密货币之间的关系形式化并连接它们而不损害它们的独立性;
+具有极高的灵活性，不会危及安全性的东西。</p>
+<p>输入Cosmos。 Cosmos是一个网络和框架之间的互操作性
+区块链。它由一个“集线器”和“区域”的网络组成，每个“区域”是
+实际上是具有任意加密货币设计的独立区块链
+（就像Bitcoin，Ethereum，ZeroCash，CryptoNote，你的本地银行
+机构等)，并且每个“集线器”是多资产加密货币
+促进一些区域集之间的互操作性。</p>
+<p>集线器和区域由<a href="http://tendermint.com/">Tendermint</a>
+<a href="https://github.com/tendermint/tendermint/wiki/Byzantine-Consensus-Algorithm">Proof-of-Stake（PoS) consensus 算法</a>
+使用<a href="http://tendermint.com/blog/tendermint-socket-protocol/">TMSP接口</a>主机
+应用程序以任何编程语言编写。 TMSP允许巨大
+灵活性的应用程序设计，并使应用程序能够继承
+Tendermint供电的区块链的安全特性。</p>
+<p>区域通过集线器彼此通信，主要以形式
+一些令牌从一个区域到另一个区域的非对称传输。
+有效地，一个枢纽是一个区块链有很多
+<a href="https://blockstream.com/sidechains.pdf">sidechains</a>，但使用PoS而不是
+PoW导致大量降低开销而不牺牲安全性。的
+诀窍是每个区域作为中枢的轻客户端，中枢充当
+所有区域的轻客户端。 <a href="https://github.com/tendermint/tendermint/wiki/Light-Client-Protocol">Tendermint做到这一点
+高效</a>
+只要验证器集合是紧凑的轻客户端证明是安全的
+已知的，这可以通过确保光客户端<a href="https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity/">同步来实现验证器集合的更改频率至少与允许的相同发生</a>。</p>
+<p>很多人都反对使用
+<a href="https://download.wpsoftware.net/bitcoin/pos.pdf">Proof-of-Stake</a>，声称它是
+不可能安全。同时，他们承认它几乎
+使用单个，安全的PoW链安全许多PoS链。这是<a href="https://twitter.com/buchmanster/status/738550345597648896">我的
+自己的位置</a>
+PoW链的正确数量为一，并且PoS链的正确数量为
+在数千或数百万，与货币数量相等，奖励
+系统和各种其他基于令牌的系统。</p>
+<p>Cosmos反映了这一立场，因为它不区分中心 - 那里
+是没有“顶”中心，最流行或成功的中心是采用的问题
+按区域。此外，区域和之间没有根本区别
+集线器，使得具有足够功能的任何区域可以变为集线器。而
+我们将发布一个特定的中心，以便开始（适当地
+名为亚当中心)，没有什么能阻止这个中心变得过时
+其他中心，甚至比特币或以太坊自己，喜欢比赛
+与它，并可能取代它。</p>
+<p>Cosmos因此引入了一种新的形式化权力的市场动态
+在各种cryptocurrency产品之间的斗争，拆除障碍
+以实现互操作性并实现集线器之间的竞争
+经济安全的每个中心本身 - 验证者谁行为不端
+抛弃为更好的行为。结果是异构网络，
+根据其需要适应每个社区和每个地区，然而
+保持互操作性的骨干，同时保持进入低门槛
+控股系统负责人和服务质量高。</p>
+<p>是否作为新的cryptocurrency设计的测试依据，或升级到
+现有的，作为分散交换的手段，或可扩展的平台
+智能合同，Cosmos的潜力是每一个现有的加密货币和
+更多的协同。唯一的问题是，你将在Cosmos上建立什么？</p>
+]]></description><link>http://cosmos.network/posts/purpose-of-cosmos</link><guid isPermaLink="true">http://cosmos.network/posts/purpose-of-cosmos</guid><dc:creator><![CDATA[Jae Kwon]]></dc:creator></item></channel></rss>
