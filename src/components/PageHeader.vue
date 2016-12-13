@@ -21,8 +21,7 @@ export default {
 
 .page-header
   position relative
-  margin-top 2.4*x
-  padding 3*x 2*x
+  padding 3rem 2rem 2rem
 
   display flex
   align-items center
@@ -52,10 +51,6 @@ export default {
 
     a
       color link
-
-@media screen and (min-height: 400px)
-  .page-header
-    margin-top 3*x
 
 @media screen and (min-width: 960px)
   .page-header

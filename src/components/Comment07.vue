@@ -1,5 +1,5 @@
 <template>
-  <div class="pz-comment">
+  <div class="pz-comment" :id="commentId">
     <comment-container :comment="comment"></comment-container>
   </div>
 </template>
@@ -9,6 +9,9 @@ import CommentContainer from './CommentContainer'
 export default {
   components: {
     CommentContainer
+  },
+  computed: {
+    commentId () { return `comment-${this.comment.id}` }
   },
   props: ['comment']
 }

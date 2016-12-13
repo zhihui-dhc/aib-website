@@ -1,5 +1,5 @@
 <template>
-  <div class="pz-comments-container">
+  <div class="pz-comments-container" id="comments">
     <comment-form-btn></comment-form-btn>
     <div class="pz-comments">
       <comment00 v-for="comment in comments" :comment="comment"></comment00>
@@ -35,18 +35,4 @@ export default {
   max-width 40rem
   margin 0 auto
   margin-bottom 0.5rem
-
-.pz-comment
-  padding 0.5rem 0 0.5rem 0.5rem
-  background #fff
-  .pz-comment
-    padding-bottom 0.125rem
-    border-left 1px solid bc
-
-    &:last-of-type
-      margin-bottom 0.5rem
-
-.pz-comments > .pz-comment
-  border-top 0.25rem solid c-app-bg
-  border-left none
 </style>

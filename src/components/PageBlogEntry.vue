@@ -2,7 +2,7 @@
   <div class="page-blog-entry">
     <div class="page-header page-header-wide">
       <h1>{{ entry.title }}</h1>
-      <p>{{ entry.dateFriendly }} <template v-if="entry.author">by {{ entry.author }}</template></p>
+      <p>{{ entry.dateFriendly }} <template v-if="entry.author">by {{ entry.author }}</template> | <a href="#comments">Comments</a></p>
     </div>
 
     <section class="section-default">
@@ -25,9 +25,7 @@ import ArticleFooter from './ArticleFooter'
 import PageHeader from './PageHeader'
 import Comments from './Comments'
 import Vue from 'vue'
-
 import { mapGetters } from 'vuex'
-
 export default {
   name: 'page-blog-entry',
   components: {
@@ -39,13 +37,6 @@ export default {
     entry () {
       let slug = this.$route.params.entry
       return this.allPosts[Vue.config.lang].find(p => p.slug === slug)
-    },
-    entrySubtitle () {
-      let string = this.entry.dateFriendly
-      if (this.entry.author) {
-        string += ' by ' + this.entry.author
-      }
-      return string
     },
     facebookUrl () {
       let url = 'https://www.facebook.com/sharer/sharer.php?u='

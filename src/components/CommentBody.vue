@@ -1,10 +1,19 @@
 <template>
   <div class="pz-comment-body">
     <div class="meta">
-      <a class="author" href="#">{{ comment.author }}</a>
-      <div class="date" :title="humanDate(comment.dateCreated)">
-        {{ timeAgo(comment.dateCreated) }}
-      </div>
+      <router-link class="author" to="/users/">
+        {{ comment.author }}
+      </router-link>
+      <template v-if="comment.id">
+        <router-link class="date" :to="permalink":title="humanDate">
+          {{ timeAgo(comment.dateCreated) }}
+        </router-link>
+      </template>
+      <template v-else>
+        <span class="date" :title="humanDate">
+          {{ timeAgo(comment.dateCreated) }}
+        </span>
+      </template>
     </div>
     <div class="pz-comment-text" v-html="markdown(comment.body)"></div>
   </div>
@@ -19,15 +28,20 @@ let md = require('markdown-it')({
   typographer: true
 })
 export default {
+  computed: {
+    permalink () {
+      return `/blog/${this.$route.params.entry}/${this.comment.id}`
+    },
+    humanDate () {
+      return moment(this.comment.dateCreated, 'x').format('YYYY-MM-DD HH:MM:SS')
+    }
+  },
   methods: {
     markdown (body) {
       return md.render(body)
     },
     timeAgo (unixDate) {
       return moment(unixDate, 'x').fromNow()
-    },
-    humanDate (unixDate) {
-      return moment(unixDate, 'x').format('YYYY-MM-DD HH:MM:SS')
     }
   },
   props: ['comment']
@@ -55,6 +69,9 @@ export default {
     .date
       color light
       margin-right 0.25rem
+
+    a.date:hover
+      color link
 
     .score
       color light

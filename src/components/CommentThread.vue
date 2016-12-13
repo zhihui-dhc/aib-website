@@ -1,0 +1,76 @@
+<template>
+  <div class="pz-comments-container">
+    <router-link class="pz-comments-alert" :to="postLink">
+      You're viewing a single comment thread.
+      <strong>View all comments &rsaquo;</strong>
+    </router-link>
+    <div class="pz-comments">
+      <comment00 :comment="threadParent"></comment00>
+    </div>
+    <router-link class="pz-comments-alert" :to="postLink" v-if="pageIsLong">
+      You're reading a single comment's thread.
+      <strong>View all comments &rsaquo;</strong>
+    </router-link>
+  </div>
+</template>
+
+<script>
+import Comment00 from './Comment00'
+import CommentFormBtn from './CommentFormBtn'
+import { mapGetters } from 'vuex'
+import documentHeight from '../scripts/documentHeight'
+export default {
+  components: {
+    CommentFormBtn,
+    Comment00
+  },
+  computed: {
+    pageIsLong () {
+      if (documentHeight > window.innerHeight) return true
+      return false
+    },
+    postLink () {
+      return `/blog/${this.$route.params.entry}#comments`
+    },
+    threadParent () {
+      if (this.allComments.length > 0) {
+        return this.allComments.find(c => c.id === this.$route.params.comment)
+      }
+      return {
+        id: 'none',
+        author: 'Loading...',
+        dateCreated: +Date.now(),
+        body: 'Loading...',
+        postId: '',
+        upvotes: 34,
+        downvotes: 5,
+        parentId: ''
+      }
+    },
+    ...mapGetters([
+      'allComments'
+    ])
+  }
+}
+</script>
+
+<style lang="stylus">
+@import '../styles/variables.styl'
+
+.pz-comments-alert
+  display block
+  background #fff
+  padding 0.5rem
+  color txt
+  margin 0.5rem 0
+  font-size 0.875rem
+  strong
+    display block
+    color link
+    font-weight 500
+
+.pz-comments-container
+  max-width 40rem
+  margin 0 auto
+  margin-bottom 0.5rem
+</style>

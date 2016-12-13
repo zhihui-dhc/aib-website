@@ -21,7 +21,7 @@
         v-model="newComment.comment.body"
         placeholder="Your comment"
         required
-        autofocus
+        id="pz-comment-textarea"
       >
       </textarea>
     </div>
@@ -31,6 +31,7 @@
 
 <script>
 import CommentBody from './CommentBody'
+import shortid from 'shortid'
 import { mapGetters } from 'vuex'
 export default {
   components: {
@@ -45,6 +46,12 @@ export default {
     goBack () {
       this.$router.go(-1)
     },
+    viewComment (commentId) {
+      let postId = this.newComment.comment.postId
+      let url = `/blog/${postId}/${commentId}`
+      console.log('browsing to', url)
+      this.$router.push(url)
+    },
     submitComment () {
       let comment = this.newComment.comment
       if (comment.body === '') {
@@ -55,10 +62,18 @@ export default {
         console.log('body is too short')
         return
       }
+      comment.id = shortid.generate()
       comment.dateCreated = +new Date()
       this.$store.commit('addComment', comment)
+      this.viewComment(comment.id)
       this.$store.commit('resetNewComment')
-      this.goBack()
+    }
+  },
+  mounted () {
+    document.querySelector('#pz-comment-textarea').focus()
+
+    if (this.newComment.comment.postId === '') {
+      this.$router.push('/blog')
     }
   }
 }

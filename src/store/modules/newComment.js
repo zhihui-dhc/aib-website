@@ -1,17 +1,16 @@
-import shortid from 'shortid'
-
 const emptyParent = {
   author: '',
   dateCreated: 0,
   body: ''
 }
 const emptyComment = {
-  id: shortid.generate(),
+  id: '',
   author: 'CosmosUser',
-  dateCreated: +new Date(),
+  dateCreated: 0,
   body: '',
   postId: '',
-  score: 0,
+  upvotes: 0,
+  downvotes: 0,
   parentId: ''
 }
 

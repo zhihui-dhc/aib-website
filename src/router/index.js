@@ -7,6 +7,7 @@ const routes = [
   { path: '/blog', component: r('PageBlogIndex') },
   { path: '/blog/comment', component: r('PageComment') },
   { path: '/blog/:entry', component: r('PageBlogEntry') },
+  { path: '/blog/:entry/:comment', component: r('PageBlogEntryComment') },
 
   { path: '/faq', component: r('PageFaq') },
   { path: '/plan', component: r('PagePlan') },
@@ -22,7 +23,11 @@ const router = new VueRouter({
   mode: 'history',
   routes,
   scrollBehavior (to, from, savedPosition) {
-    return { x: 0, y: 0 }
+    if (to.hash) {
+      return {
+        selector: to.hash
+      }
+    }
   }
 })
 

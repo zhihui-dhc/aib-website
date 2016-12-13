@@ -1,8 +1,8 @@
 <template>
   <div class="pz-comment-container">
     <comment-body :comment="comment"></comment-body>
-    <menu>
-      <a href="#"><i class="fa fa-ellipsis-h"></i></a>
+    <menu class="pz-comment-menu">
+      <a @click="setPopupVisible(true)"><i class="fa fa-ellipsis-h"></i></a>
       <div class="divider"></div>
       <a @click="goComment()"><i class="fa fa-reply"></i></a>
       <div class="divider"></div>
@@ -13,6 +13,13 @@
         </span>
         <a class="down" @click="downvote"><i class="fa fa-chevron-down"></i></a>
       </div>
+    </menu>
+    <div class="popup-wrapper" v-show="popupVisible" @click="setPopupVisible(false)">
+    </div>
+    <menu class="pz-comment-menu-popup" v-show="popupVisible">
+      <a>Share</a>
+      <a>Edit</a>
+      <a>Delete</a>
     </menu>
   </div>
 </template>
@@ -34,7 +41,15 @@ export default {
       return this.comment.upvotes - this.comment.downvotes
     }
   },
+  data () {
+    return {
+      popupVisible: false
+    }
+  },
   methods: {
+    setPopupVisible (val) {
+      this.popupVisible = val
+    },
     upvote () {
       this.$store.commit('upvoteComment', this.comment.id)
     },
@@ -56,32 +71,65 @@ export default {
 
 .pz-comment-container
   max-width 40rem
+  position relative
 
-  menu
-    display flex
-    flex-flow row nowrap
-    justify-content flex-end
+.pz-comment-menu
+  display flex
+  flex-flow row nowrap
+  justify-content flex-end
 
-    font-size 0.75rem
+  font-size 0.75rem
+  color light
+
+  .divider
+    border-right 1px solid lighten(bc,50%)
+  a
+    padding 0 0.75rem
     color light
+    cursor pointer
+    &:hover
+      color link
+  .score
+    display flex
+    a.down
+      padding-right 0.5rem
+    a.up
+      padding-left 0.5rem
+    .value
+      flex 1
+      text-align center
+      font-weight 500
+      min-width 1.75rem
 
-    .divider
-      border-right 1px solid lighten(bc,50%)
-    a
-      padding 0 0.75rem
-      color light
-      cursor pointer
-      &:hover
-        color link
-    .score
-      display flex
-      a.down
-        padding-right 0.5rem
-      a.up
-        padding-left 0.5rem
-      .value
-        flex 1
-        text-align center
-        font-weight 500
-        min-width 1.75rem
+.popup-wrapper
+  position fixed
+  top 0
+  left 0
+  width 100vw
+  height 100vh
+  background hsla(0,100%,50%,0.15)
+  z-index 2000
+
+.pz-comment-menu-popup
+  position absolute
+  top 0
+  left 0
+  width 10rem
+  background #fff
+  box-shadow hsla(0,0,0,0.15) 0 5px 5px
+
+  z-index 2001
+
+  font-size 0.875rem
+  a
+    display block
+    color txt
+    border-bottom 1px solid bc
+    padding 0 0.5rem
+    line-height 2
+    cursor pointer
+    &:hover
+      color link
+    &:last-of-type
+      border-bottom none
 </style>

@@ -29,9 +29,11 @@ export default {
 @require '../styles/variables.styl'
 
 .app-header
+  /*
   position fixed
   top 0
   left 0
+  */
   z-index 100
   width 100vw
   display flex
