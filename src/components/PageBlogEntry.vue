@@ -1,5 +1,5 @@
 <template>
-  <div class="page-blog-entry">
+  <div class="page-default page-blog-entry">
     <div class="page-header page-header-wide">
       <h1>{{ entry.title }}</h1>
       <p>{{ entry.dateFriendly }} <template v-if="entry.author">by {{ entry.author }}</template> | <a href="#comments">Comments</a></p>

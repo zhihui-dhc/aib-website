@@ -1,22 +1,27 @@
 import VueRouter from 'vue-router'
-function r (filename) { return require('../components/' + filename) }
+function r (filename) { return require('../components/Page' + filename) }
 
 const routes = [
-  { path: '/', component: r('PageIndex') },
+  { path: '/', component: r('Index') },
 
-  { path: '/blog', component: r('PageBlogIndex') },
-  { path: '/blog/comment', component: r('PageComment') },
-  { path: '/blog/:entry', component: r('PageBlogEntry') },
-  { path: '/blog/:entry/:comment', component: r('PageBlogEntryComment') },
+  { path: '/blog', component: r('BlogIndex') },
+  { path: '/blog/comment', component: r('Comment') },
+  { path: '/blog/:entry', component: r('BlogEntry') },
+  { path: '/blog/:entry/:comment', component: r('BlogEntryComment') },
 
-  { path: '/faq', component: r('PageFaq') },
-  { path: '/plan', component: r('PagePlan') },
-  { path: '/whitepaper', component: r('PageWhitepaper') },
-  { path: '/fund', component: r('PageFund') }
+  { path: '/faq', component: r('Faq') },
+  { path: '/plan', component: r('Plan') },
+  { path: '/whitepaper', component: r('Whitepaper') },
+  { path: '/fund', component: r('Fund') },
+
+  { path: '/signup', component: r('UserSignUp') },
+  { path: '/signin', component: r('UserSignIn') },
+  { path: '/forgot', component: r('UserForgot') },
+  { path: '/settings', component: r('UserSettings') },
 
   // wildcards
-  // { path: '/404', component: page('404') },
-  // { path: '*', component: page('404') }
+  { path: '/404', component: r('404') },
+  { path: '*', component: r('404') }
 ]
 
 const router = new VueRouter({
