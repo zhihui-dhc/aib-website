@@ -60,7 +60,7 @@ export default {
       }
     },
     getUser () {
-      let user = firebase.auth().currentUser
+      let user = firebase.auth.currentUser
 
       if (user != null) {
         this.user.name = user.displayName
@@ -71,7 +71,7 @@ export default {
     },
     signOut () {
       let self = this
-      firebase.auth().signOut().then(function () {
+      firebase.auth.signOut().then(function () {
         self.clearUser()
         console.log('Signed Out')
       }, function (error) {
@@ -81,7 +81,7 @@ export default {
   },
   mounted () {
     let self = this
-    firebase.auth().onAuthStateChanged(function (user) {
+    firebase.auth.onAuthStateChanged(function (user) {
       if (user) {
         self.getUser()
       } else {

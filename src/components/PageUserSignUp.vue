@@ -60,7 +60,7 @@ export default {
   },
   methods: {
     signUp () {
-      firebase.auth().createUserWithEmailAndPassword(this.email, this.password)
+      firebase.auth.createUserWithEmailAndPassword(this.email, this.password)
         .catch(function (error) {
           // Handle Errors here.
           let errorCode = error.code

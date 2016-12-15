@@ -54,7 +54,7 @@ export default {
       this.$router.push(url)
     },
     submitComment () {
-      let user = firebase.auth().currentUser
+      let user = firebase.auth.currentUser
       let comment = this.newComment.comment
 
       if (comment.body === '') {
@@ -74,7 +74,7 @@ export default {
     }
   },
   mounted () {
-    if (!firebase.auth().currentUser) { this.$router.push('/signin') }
+    if (!firebase.auth.currentUser) { this.$router.push('/signin') }
     if (this.newComment.comment.postId === '') { this.$router.push('/blog') }
 
     document.querySelector('#pz-comment-textarea').focus()

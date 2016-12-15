@@ -9,7 +9,7 @@ import firebase from 'firebase'
 export default {
   methods: {
     goComment () {
-      if (!firebase.auth().currentUser) {
+      if (!firebase.auth.currentUser) {
         this.$router.push('/signin')
       } else {
         this.$store.commit('setNewCommentPostId', this.$route.params.entry)

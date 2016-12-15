@@ -38,7 +38,7 @@ export default {
   },
   methods: {
     resetPassword () {
-      firebase.auth().sendPasswordResetEmail(this.email).then(function () {
+      firebase.auth.sendPasswordResetEmail(this.email).then(function () {
         console.log('email sent')
       }, function (error) {
         console.log(error)

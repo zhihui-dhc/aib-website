@@ -51,7 +51,7 @@ export default {
     signIn () {
       let email = this.email
       let password = this.password
-      firebase.auth().signInWithEmailAndPassword(email, password)
+      firebase.auth.signInWithEmailAndPassword(email, password)
         .catch(function (error) {
           // Handle Errors here.
           var errorCode = error.code
