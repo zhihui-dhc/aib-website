@@ -18,7 +18,9 @@ export default {
   },
   computed: {
     comments () {
-      let comments = this.allComments.filter(c => c.parentId === '')
+      let postId = this.$route.params.entry
+      let comments = this.allComments.filter(
+        c => c.parentId === '' && c.postId === postId)
       return comments.sort((a, b) => b.dateCreated - a.dateCreated)
     },
     ...mapGetters([

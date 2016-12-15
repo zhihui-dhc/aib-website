@@ -1,5 +1,5 @@
 <template>
-  <div class="page-plan page-default">
+  <div class="page page-plan">
     <div class="article-body">
       <ja v-if="lang === 'ja'"></ja>
       <ko v-else-if="lang === 'ko'"></ko>

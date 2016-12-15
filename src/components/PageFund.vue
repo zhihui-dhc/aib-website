@@ -1,7 +1,7 @@
 <template>
-<div class="page-fund page-default">
+<div class="page page-narrow">
+  <page-header :title="$t('siteFund.title')" type="center"></page-header>
   <div class="fund-wrapper">
-    <h1>{{ $t('siteFund.title') }}</h1>
     <page-fund-nav :step="step"></page-fund-nav>
     <div class="fund-steps">
       <form class="form-default" v-show="step === 1" v-on:submit.prevent="goTo(2, $event)">
@@ -124,12 +124,14 @@
 </template>
 
 <script>
+import PageHeader from './PageHeader'
 import PageFundNav from './PageFundNav'
 import FormSelect from './FormSelect'
 import { mapGetters } from 'vuex'
 export default {
   name: 'page-fund',
   components: {
+    PageHeader,
     PageFundNav,
     FormSelect
   },
@@ -215,12 +217,6 @@ export default {
     max-width 32rem
     margin 0 auto
 
-  h1
-    font-size 1.25rem
-    font-weight 500
-    padding 1rem 0
-    text-align center
-
 .fund-steps
   position relative
 
@@ -228,22 +224,4 @@ export default {
     position absolute
     top -1px
     right -1px
-
-@media screen and (min-width: 360px)
-  .page-fund
-    h1
-      font-size 1.375rem
-      padding 1.25rem 0
-
-@media screen and (min-width: 400px)
-  .page-fund
-    h1
-      font-size 1.5rem
-      padding 1.5rem 0
-
-@media screen and (min-width: 720px)
-  .page-fund
-    h1
-      font-size 1.75rem
-      margin-bottom 1rem
 </style>

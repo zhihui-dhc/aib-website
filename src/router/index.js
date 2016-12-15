@@ -16,7 +16,7 @@ const routes = [
 
   { path: '/signup', component: r('UserSignUp') },
   { path: '/signin', component: r('UserSignIn') },
-  { path: '/forgot', component: r('UserForgot') },
+  { path: '/reset', component: r('UserReset') },
   { path: '/settings', component: r('UserSettings') },
 
   // wildcards
@@ -32,6 +32,11 @@ const router = new VueRouter({
       return {
         selector: to.hash
       }
+    }
+    if (savedPosition) {
+      return savedPosition
+    } else {
+      return { x: 0, y: 0 }
     }
   }
 })

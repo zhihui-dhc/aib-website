@@ -2,7 +2,7 @@
   <div class="pz-comment-body">
     <div class="meta">
       <router-link class="author" to="/users/">
-        {{ comment.author }}
+        {{ comment.userId }}
       </router-link>
       <template v-if="comment.id">
         <router-link class="date" :to="permalink":title="humanDate">

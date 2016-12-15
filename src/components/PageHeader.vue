@@ -1,14 +1,27 @@
 <template>
-  <header class="page-header">
+  <header :class="headerClass">
     <h1>{{ title }}</h1>
-    <p v-html="subtitle"></p>
+    <p v-if="subtitle" v-html="subtitle"></p>
   </header>
 </template>
 
 <script>
 export default {
   name: 'page-header',
-  props: ['title', 'subtitle']
+  computed: {
+    headerClass () {
+      let value = 'page-header'
+      if (this.type === 'center') {
+        value += ' page-header-center'
+      } else if (this.type === 'wide') {
+        value += ' page-header-wide'
+      } else {
+        value += ' page-header-default '
+      }
+      return value
+    }
+  },
+  props: ['title', 'subtitle', 'type']
 }
 </script>
 
@@ -21,20 +34,18 @@ export default {
 
 .page-header
   position relative
-  padding 3rem 2rem 2rem
+  padding 2rem
+  letter-spacing -0.025em
 
   display flex
-  align-items center
   flex-flow column nowrap
 
   h1, p
     text-align center
 
   h1
-    font-size 2*x
+    font-size 1.5*x
     line-height 1
-    margin-bottom 0.75*x
-    letter-spacing -0.025em
     font-weight 400
     max-width 40*x
     font-weight 600
@@ -44,6 +55,7 @@ export default {
     color dim
     line-height 1.25*x
     max-width 22*x
+    margin-top 0.75rem
 
     strong
       font-weight 500
@@ -52,12 +64,21 @@ export default {
     a
       color link
 
+  &.page-header-default
+    align-items center
+  &.page-header-center
+    align-items center
+    justify-content center
+    align-content center
+
 @media screen and (min-width: 960px)
   .page-header
-    align-items flex-start
     padding 3*x
     h1, p
       text-align left
+
+    &.page-header-default
+      align-items flex-start
 
     &.page-header-wide
       padding 3*x 0

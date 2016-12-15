@@ -32,6 +32,7 @@
 <script>
 import CommentBody from './CommentBody'
 import shortid from 'shortid'
+import firebase from '../scripts/firebase'
 import { mapGetters } from 'vuex'
 export default {
   components: {
@@ -53,7 +54,9 @@ export default {
       this.$router.push(url)
     },
     submitComment () {
+      let user = firebase.auth().currentUser
       let comment = this.newComment.comment
+
       if (comment.body === '') {
         console.log('body is empty')
         return
@@ -62,6 +65,7 @@ export default {
         console.log('body is too short')
         return
       }
+      comment.userId = user.email
       comment.id = shortid.generate()
       comment.dateCreated = +new Date()
       this.$store.commit('addComment', comment)
@@ -70,11 +74,10 @@ export default {
     }
   },
   mounted () {
-    document.querySelector('#pz-comment-textarea').focus()
+    if (!firebase.auth().currentUser) { this.$router.push('/signin') }
+    if (this.newComment.comment.postId === '') { this.$router.push('/blog') }
 
-    if (this.newComment.comment.postId === '') {
-      this.$router.push('/blog')
-    }
+    document.querySelector('#pz-comment-textarea').focus()
   }
 }
 </script>

@@ -5,11 +5,16 @@
 </template>
 
 <script>
+import firebase from 'firebase'
 export default {
   methods: {
     goComment () {
-      this.$store.commit('setNewCommentPostId', this.$route.params.entry)
-      this.$router.push('/blog/comment')
+      if (!firebase.auth().currentUser) {
+        this.$router.push('/signin')
+      } else {
+        this.$store.commit('setNewCommentPostId', this.$route.params.entry)
+        this.$router.push('/blog/comment')
+      }
     }
   }
 }

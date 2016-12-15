@@ -1,39 +1,65 @@
 <template>
-  <div class="split-page">
-    <page-header title="Sign In" subtitle="Login to your account now">
-    </page-header>
-    <section class="section-default page-content">
-      <div class="section-container">
-        <div class="section-content">
-          <form class="form-default">
-            <div class="input-group">
-              <label for="user-signup-name">User Name</label>
-              <input type="text" id="user-signup-name">
-            </div>
-            <div class="input-group">
-              <label for="user-signup-email">Email</label>
-              <input type="email" id="user-signup-email"> </div>
-            <div class="input-group">
-              <label for="user-signup-password">Password</label>
-              <input type="password" id="user-signup-password">
-            </div>
-            <div class="form-footer">
-              <input type="submit" class="btn" value="Sign Up">
-            </div>
-          </form>
-        </div>
-      </div>
-    </section>
-  </div>
+<div class="page page-narrow">
+  <page-header title="Sign In"></page-header></page-header>
+  <form class="form-default" v-on:submit.prevent.default="signIn">
+    <div class="form-header">
+      <div class="subtitle">Sign in to your account now.</div>
+    </div>
+    <div class="form-group">
+      <label for="user-signin-email">Email</label>
+      <input
+        v-model="email"
+        type="email"
+        id="user-signin-email"
+        placeholder="name@example.com"
+        pattern=".{3,512}" required title="3 to 254 characters"
+        required>
+    </div>
+    <div class="form-group">
+      <label for="user-signin-password">Password</label>
+      <input
+        v-model="password"
+        type="password"
+        id="user-signin-password"
+        placeholder="Password"
+        pattern=".{8,512}" required title="8 to 512 characters"
+        required>
+    </div>
+    <div class="form-footer">
+      <router-link to="/reset">Forgot password?</router-link>
+      <input type="submit" class="btn" value="Sign In">
+    </div>
+  </form>
+</div>
 </template>
 
 <script>
 import PageHeader from './PageHeader'
-
+import firebase from '../scripts/firebase.js'
 export default {
   name: 'page-blog-index',
   components: {
     PageHeader
+  },
+  data () {
+    return {
+      email: '',
+      password: ''
+    }
+  },
+  methods: {
+    signIn () {
+      let email = this.email
+      let password = this.password
+      firebase.auth().signInWithEmailAndPassword(email, password)
+        .catch(function (error) {
+          // Handle Errors here.
+          var errorCode = error.code
+          var errorMessage = error.message
+          console.log(errorCode, errorMessage)
+        })
+      this.$router.push('/')
+    }
   }
 }
 </script>

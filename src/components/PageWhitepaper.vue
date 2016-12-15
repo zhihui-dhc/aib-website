@@ -1,17 +1,11 @@
 <template>
-  <div class="page-whitepaper">
+  <div class="page">
     <page-whitepaper-nav></page-whitepaper-nav>
     <div class="toc-padding" v-bind:class="{ 'toc-visible': whitepaperTocVisible }">
-    <section class="section-default">
-      <div class="section-container">
-        <div class="section-content">
-          <div class="article-body">
-            <zh v-if="lang === 'zh'"></zh>
-            <en v-else></en>
-          </div>
-        </div>
-      </div>
-    </section>
+    <div class="article-body">
+      <zh v-if="lang === 'zh'"></zh>
+      <en v-else></en>
+    </div>
   </div>
 </template>
 

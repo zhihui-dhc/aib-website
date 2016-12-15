@@ -1,19 +1,13 @@
 <template>
-  <div class="page-plan">
+  <div class="page">
     <page-faq-nav></page-faq-nav>
     <div class="toc-padding" v-bind:class="{ 'toc-visible': faqTocVisible }">
-    <section class="section-default">
-      <div class="section-container">
-        <div class="section-content">
-          <div class="article-body">
-            <ja v-if="lang === 'ja'"></ja>
-            <ko v-else-if="lang === 'ko'"></ko>
-            <zh v-else-if="lang === 'zh'"></zh>
-            <en v-else></en>
-          </div>
-        </div>
-      </div>
-    </section>
+    <div class="article-body">
+      <ja v-if="lang === 'ja'"></ja>
+      <ko v-else-if="lang === 'ko'"></ko>
+      <zh v-else-if="lang === 'zh'"></zh>
+      <en v-else></en>
+    </div>
   </div>
 </template>
 

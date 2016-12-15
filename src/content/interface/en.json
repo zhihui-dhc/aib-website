@@ -7,7 +7,9 @@
     "plan": "Plan",
     "faq": "FAQ",
     "whitepaper": "Whitepaper",
-    "wp": "WP"
+    "wp": "WP",
+    "signin": "Sign In",
+    "signup": "Sign Up"
   },
   "siteBlog": {
     "title": "Blog",
