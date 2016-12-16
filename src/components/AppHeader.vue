@@ -19,8 +19,8 @@
     </nav>
   </header>
   <nav v-if="!isTocPage" class="user-nav">
-    <template v-if="user.email">
-      <router-link to="/profile">{{ user.email }}</router-link>
+    <template v-if="sessionUser.email">
+      <router-link to="/settings">{{ sessionUser.email }}</router-link>
       <a @click="signOut">Sign Out</a>
     </template>
     <template v-else>
@@ -32,62 +32,25 @@
 </template>
 
 <script>
-import firebase from '../scripts/firebase.js'
+import firebase from 'firebase'
+import { mapGetters } from 'vuex'
 export default {
   name: 'app-header',
   computed: {
     isTocPage () {
       return this.$route.path === '/whitepaper' || this.$route.path === '/faq'
-    }
-  },
-  data () {
-    return {
-      user: {
-        name: '',
-        email: '',
-        photoUrl: '',
-        uid: ''
-      }
-    }
+    },
+    ...mapGetters([
+      'sessionUser'
+    ])
   },
   methods: {
-    clearUser () {
-      this.user = {
-        name: '',
-        email: '',
-        photoUrl: '',
-        uid: ''
-      }
-    },
-    getUser () {
-      let user = firebase.auth.currentUser
-
-      if (user != null) {
-        this.user.name = user.displayName
-        this.user.email = user.email
-        this.user.photoUrl = user.photoURL
-        this.user.uid = user.uid
-      }
-    },
     signOut () {
-      let self = this
-      firebase.auth.signOut().then(function () {
-        self.clearUser()
-        console.log('Signed Out')
+      firebase.auth().signOut().then(function () {
       }, function (error) {
         console.error('Sign Out Error', error)
       })
     }
-  },
-  mounted () {
-    let self = this
-    firebase.auth.onAuthStateChanged(function (user) {
-      if (user) {
-        self.getUser()
-      } else {
-        // console.log('no user signed in')
-      }
-    })
   }
 }
 </script>

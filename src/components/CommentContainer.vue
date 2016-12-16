@@ -4,7 +4,7 @@
     <menu class="pz-comment-menu">
       <a @click="setPopupVisible(true)"><i class="fa fa-ellipsis-h"></i></a>
       <div class="divider"></div>
-      <a @click="goComment()"><i class="fa fa-reply"></i></a>
+      <a @click="reply()"><i class="fa fa-reply"></i></a>
       <div class="divider"></div>
       <div class="score">
         <a class="up" @click="upvote"><i class="fa fa-chevron-up"></i></a>
@@ -14,23 +14,37 @@
         <a class="down" @click="downvote"><i class="fa fa-chevron-down"></i></a>
       </div>
     </menu>
-    <div class="popup-wrapper" v-show="popupVisible" @click="setPopupVisible(false)">
+    <div class="pz-popup-background" v-show="popupVisible" @click="setPopupVisible(false)">
     </div>
-    <menu class="pz-comment-menu-popup" v-show="popupVisible">
-      <a>Share</a>
-      <a>Edit</a>
-      <a>Delete</a>
-    </menu>
+    <div class="pz-popup-wrapper">
+      <menu class="pz-comment-menu-popup" v-show="popupVisible">
+        <!--<a>Share</a>-->
+        <router-link :to="permalink">Permalink</router-link>
+        <template v-if="thisCommentIsMine">
+          <a @click="edit">Edit</a>
+          <a @click="remove">Delete</a>
+        </template>
+      </menu>
+    </div>
   </div>
 </template>
 
 <script>
 import CommentBody from './CommentBody'
+import firebase from 'firebase'
 export default {
   components: {
     CommentBody
   },
   computed: {
+    thisCommentIsMine () {
+      let user = firebase.auth().currentUser
+      if (user && user.email === this.comment.userId) {
+        return true
+      } else {
+        return false
+      }
+    },
     scoreDetailed () {
       let comment = this.comment
       let percentage =
@@ -39,6 +53,9 @@ export default {
     },
     score () {
       return this.comment.upvotes - this.comment.downvotes
+    },
+    permalink () {
+      return `/blog/${this.$route.params.entry}/${this.comment.id}`
     }
   },
   data () {
@@ -50,16 +67,24 @@ export default {
     setPopupVisible (val) {
       this.popupVisible = val
     },
-    upvote () {
-      this.$store.commit('upvoteComment', this.comment.id)
+    reply () {
+      this.$store.commit('setNewCommentPostId', this.$route.params.entry)
+      this.$store.commit('setNewCommentParent', this.comment)
+      this.$router.push('/comment/new')
     },
     downvote () {
       this.$store.commit('downvoteComment', this.comment.id)
     },
-    goComment () {
-      this.$store.commit('setNewCommentPostId', this.$route.params.entry)
-      this.$store.commit('setNewCommentParent', this.comment)
-      this.$router.push('/blog/comment')
+    edit () {
+      this.$store.commit('setEditComment', this.comment)
+      this.$router.push('/comment/edit')
+    },
+    remove () {
+      this.$store.commit('removeComment', this.comment.id)
+      this.setPopupVisible(false)
+    },
+    upvote () {
+      this.$store.commit('upvoteComment', this.comment.id)
     }
   },
   props: ['comment']
@@ -71,7 +96,6 @@ export default {
 
 .pz-comment-container
   max-width 40rem
-  position relative
 
 .pz-comment-menu
   display flex
@@ -101,35 +125,41 @@ export default {
       font-weight 500
       min-width 1.75rem
 
-.popup-wrapper
+.pz-popup-background
   position fixed
   top 0
   left 0
   width 100vw
   height 100vh
-  background hsla(0,100%,50%,0.15)
-  z-index 2000
+  // background hsla(0,100%,50%,0.15)
+  z-index 100
+
+.pz-popup-wrapper
+  position relative
 
 .pz-comment-menu-popup
   position absolute
-  top 0
-  left 0
+  top 0.5rem
+  right 0
   width 10rem
   background #fff
-  box-shadow hsla(0,0,0,0.15) 0 5px 5px
+  box-shadow hsla(0,0,0,0.15) 0 0.15rem 0.333rem
 
-  z-index 2001
+  z-index 101
 
   font-size 0.875rem
   a
     display block
     color txt
     border-bottom 1px solid bc
-    padding 0 0.5rem
-    line-height 2
+    padding 0 0.75rem
+    line-height 2rem
     cursor pointer
+    user-select none
+
     &:hover
-      color link
+      background link
+      color #fff
     &:last-of-type
       border-bottom none
 </style>

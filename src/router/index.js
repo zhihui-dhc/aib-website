@@ -5,9 +5,11 @@ const routes = [
   { path: '/', component: r('Index') },
 
   { path: '/blog', component: r('BlogIndex') },
-  { path: '/blog/comment', component: r('Comment') },
   { path: '/blog/:entry', component: r('BlogEntry') },
   { path: '/blog/:entry/:comment', component: r('BlogEntryComment') },
+
+  { path: '/comment/new', component: r('CommentNew') },
+  { path: '/comment/edit', component: r('CommentEdit') },
 
   { path: '/faq', component: r('Faq') },
   { path: '/plan', component: r('Plan') },

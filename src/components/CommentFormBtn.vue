@@ -5,15 +5,18 @@
 </template>
 
 <script>
-import firebase from 'firebase'
+import { mapGetters } from 'vuex'
 export default {
+  computed: {
+    ...mapGetters(['sessionUser'])
+  },
   methods: {
     goComment () {
-      if (!firebase.auth.currentUser) {
+      if (!this.sessionUser.email) {
         this.$router.push('/signin')
       } else {
         this.$store.commit('setNewCommentPostId', this.$route.params.entry)
-        this.$router.push('/blog/comment')
+        this.$router.push('/comment/new')
       }
     }
   }
@@ -22,7 +25,6 @@ export default {
 
 <style lang="stylus">
 @import '../styles/variables.styl'
-
 .pz-comment-form-btn
   background #fff
   padding 0.5rem

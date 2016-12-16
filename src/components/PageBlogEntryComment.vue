@@ -1,5 +1,5 @@
 <template>
-  <div class="page-blog-entry">
+  <div class="page page-blog-entry">
     <page-header :title="entry.title" :subtitle="subtitle"></page-header>
     <comment-thread></comment-thread>
   </div>

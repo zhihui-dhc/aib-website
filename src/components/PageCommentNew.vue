@@ -20,9 +20,8 @@
       <textarea
         v-model="newComment.comment.body"
         placeholder="Your comment"
-        required
         id="pz-comment-textarea"
-      >
+        required>
       </textarea>
     </div>
   </form>
@@ -32,7 +31,6 @@
 <script>
 import CommentBody from './CommentBody'
 import shortid from 'shortid'
-import firebase from '../scripts/firebase'
 import { mapGetters } from 'vuex'
 export default {
   components: {
@@ -40,7 +38,8 @@ export default {
   },
   computed: {
     ...mapGetters([
-      'newComment'
+      'newComment',
+      'sessionUser'
     ])
   },
   methods: {
@@ -50,11 +49,10 @@ export default {
     viewComment (commentId) {
       let postId = this.newComment.comment.postId
       let url = `/blog/${postId}/${commentId}`
-      console.log('browsing to', url)
+      // console.log('browsing to', url)
       this.$router.push(url)
     },
     submitComment () {
-      let user = firebase.auth.currentUser
       let comment = this.newComment.comment
 
       if (comment.body === '') {
@@ -65,18 +63,24 @@ export default {
         console.log('body is too short')
         return
       }
+
+      this.submitNewComment()
+      this.viewComment(comment.id)
+      this.$store.commit('resetNewComment')
+    },
+    submitNewComment () {
+      let user = this.sessionUser
+      let comment = this.newComment.comment
+
       comment.userId = user.email
       comment.id = shortid.generate()
       comment.dateCreated = +new Date()
       this.$store.commit('addComment', comment)
-      this.viewComment(comment.id)
-      this.$store.commit('resetNewComment')
     }
   },
   mounted () {
-    if (!firebase.auth.currentUser) { this.$router.push('/signin') }
+    if (!this.sessionUser.email) { this.$router.push('/signin') }
     if (this.newComment.comment.postId === '') { this.$router.push('/blog') }
-
     document.querySelector('#pz-comment-textarea').focus()
   }
 }
