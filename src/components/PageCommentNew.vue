@@ -54,7 +54,6 @@ export default {
     },
     submitComment () {
       let comment = this.newComment.comment
-
       if (comment.body === '') {
         console.log('body is empty')
         return
@@ -63,7 +62,6 @@ export default {
         console.log('body is too short')
         return
       }
-
       this.submitNewComment()
       this.viewComment(comment.id)
       this.$store.commit('resetNewComment')
