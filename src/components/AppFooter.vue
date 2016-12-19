@@ -1,13 +1,15 @@
 <template>
   <footer class="app-footer" v-bind:class="{ 'toc-visible': tocVisible }">
-    <section-call-to-action v-if="!isThisAFundPage"></section-call-to-action>
+    <section-call-to-action v-if="!thisIsAFundPage"></section-call-to-action>
     <section-social-media></section-social-media>
     <div class="app-bottom">
-      <div class="langs">
+      <div class="langs" v-if="thisIsWhitepaper">
         <a @click="setLang('en')" :class="{'active' : lang === 'en'}">English</a>
+        <a @click="setLang('zh')" :class="{'active' : lang === 'zh'}">中文</a>
+        <!--
         <a @click="setLang('ja')" :class="{'active' : lang === 'ja'}">日本語</a>
         <a @click="setLang('ko')" :class="{'active' : lang === 'ko'}">한국어</a>
-        <a @click="setLang('zh')" :class="{'active' : lang === 'zh'}">中文</a>
+        -->
       </div>
       <div class="copyright">
         &copy; 2016 Cosmos Network Foundation
@@ -46,17 +48,17 @@ export default {
       }
       return visible
     },
-    isThisAFundPage () {
-      let path = this.$route.path.replace('/', '')
-      if (path === 'fund') {
-        return true
-      }
+    thisIsAFundPage () {
+      if (this.$route.path.replace('/', '') === 'fund') { return true }
+      return false
+    },
+    thisIsWhitepaper () {
+      if (this.$route.path.replace('/', '') === 'whitepaper') { return true }
       return false
     }
   },
   methods: {
     setLang (lang) {
-      console.log('switching to', lang)
       Vue.config.lang = lang
       window.localStorage.setItem('language', lang)
     }

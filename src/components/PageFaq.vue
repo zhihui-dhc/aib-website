@@ -6,10 +6,7 @@
       <div class="section-container">
         <div class="section-content">
           <div class="article-body">
-            <ja v-if="lang === 'ja'"></ja>
-            <ko v-else-if="lang === 'ko'"></ko>
-            <zh v-else-if="lang === 'zh'"></zh>
-            <en v-else></en>
+            <en></en>
           </div>
         </div>
       </div>
@@ -21,20 +18,12 @@
 import { mapGetters } from 'vuex'
 import PageFaqNav from './PageFaqNav'
 import Vue from 'vue'
-
 import en from '../content/en/FAQ.md'
-import ja from '../content/ja/FAQ.md'
-import ko from '../content/ko/FAQ.md'
-import zh from '../content/zh/FAQ.md'
-
 export default {
   name: 'page-faq',
   components: {
     PageFaqNav,
-    en,
-    ja,
-    ko,
-    zh
+    en
   },
   computed: {
     lang () {

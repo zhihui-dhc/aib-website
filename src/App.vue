@@ -12,7 +12,6 @@
 import AppHeader from './components/AppHeader.vue'
 import AppFooter from './components/AppFooter.vue'
 import store from './store/index.js'
-import Vue from 'vue'
 
 export default {
   components: {
@@ -48,6 +47,7 @@ export default {
     ]
   },
   mounted () {
+    /*
     let lsLang = window.localStorage.getItem('language')
     if (lsLang) {
       console.log('localStorage language exists!', lsLang)
@@ -69,6 +69,7 @@ export default {
       Vue.config.lang = lang
       window.localStorage.setItem('language', lang)
     }
+    */
   },
   store
 }
