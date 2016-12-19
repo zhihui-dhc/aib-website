@@ -24,3 +24,7 @@ export const setNewCommentPostId =
   ({ commit }, postId) => commit('setNewCommentPostId')
 export const resetNewComment =
   ({ commit }) => commit('resetNewComment')
+export const updateSessionUserName =
+  ({ commit }, name) => commit('updateSessionUserName')
+export const updateSessionUserEmail =
+  ({ commit }, email) => commit('updateSessionUserEmail')

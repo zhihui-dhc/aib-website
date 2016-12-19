@@ -2,9 +2,10 @@
 <div class="page page-narrow">
   <page-header title="Settings" type="center">
   </page-header>
-  <form class="form-default" v-on:submit.prevent.default="updateSettings">
+  <form class="form-default" v-on:submit.prevent.default="updateUser">
     <div class="form-header">
       <div class="subtitle">Edit your user settings here.</div>
+      <form-error :form-error="formError"></form-error>
     </div>
     <div class="form-group">
       <label for="user-signup-name">Name</label>
@@ -12,7 +13,6 @@
         v-model="newName"
         type="text"
         id="user-settings-name"
-        :placeholder="namePh"
         pattern=".{1,512}" required title="1 to 512 characters"
         required>
     </div>
@@ -22,7 +22,6 @@
         v-model="newEmail"
         type="email"
         id="user-settings-email"
-        :placeholder="emailPh"
         pattern=".{3,512}" required title="3 to 254 characters"
         required>
     </div>
@@ -37,6 +36,7 @@
         required>
     </div>
     <div class="form-footer">
+      <div></div>
       <input type="submit" class="btn" value="Update Settings">
     </div>
   </form>
@@ -46,20 +46,30 @@
 <script>
 import PageHeader from './PageHeader'
 import { mapGetters } from 'vuex'
+import FormError from './FormError'
 import firebase from 'firebase'
 export default {
   name: 'page-blog-index',
   components: {
-    PageHeader
+    PageHeader,
+    FormError
   },
   computed: {
-    namePh () {
-      if (this.sessionUser.displayName) { return this.sessionUser.displayName }
-      return 'New Name'
+    newName: {
+      get () {
+        return this.$store.state.session.user.displayName
+      },
+      set (value) {
+        this.$store.commit('updateSessionUserName', value)
+      }
     },
-    emailPh () {
-      if (this.sessionUser.email) { return this.sessionUser.email }
-      return 'New Email'
+    newEmail: {
+      get () {
+        return this.$store.state.session.user.email
+      },
+      set (value) {
+        this.$store.commit('updateSessionUserEmail', value)
+      }
     },
     ...mapGetters([
       'sessionUser'
@@ -67,9 +77,68 @@ export default {
   },
   data () {
     return {
-      newName: '',
-      newEmail: '',
-      newPassword: ''
+      newPassword: '',
+      formError: {
+        active: false,
+        code: '',
+        message: ''
+      }
+    }
+  },
+  methods: {
+    setError (code, msg) {
+      if (code === 'auth/requires-recent-login') { this.$router.push('/signin') }
+
+      this.formError = {
+        active: true,
+        code: code,
+        message: msg
+      }
+    },
+    updateUser () {
+      let newName = this.newName
+      let newEmail = this.newEmail
+      let newPassword = this.newPassword
+
+      let user = firebase.auth().currentUser
+      let oldName = user.displayName
+      let oldEmail = user.email
+
+      if (newName !== oldName) { this.updateName(newName) }
+      if (newEmail !== oldEmail) { this.updateEmail(newEmail) }
+      if (newPassword) { this.updatePassword(newPassword) }
+    },
+    updatePassword (password) {
+      let user = firebase.auth().currentUser
+      let setError = this.setError
+      user.updatePassword(password).then(function () {
+        console.log('update password successful', password)
+      }, function (error) {
+        console.log('update password failed', error)
+        setError(error.code, error.message)
+      })
+    },
+    updateEmail (email) {
+      let user = firebase.auth().currentUser
+      let setError = this.setError
+      user.updateEmail(email).then(function () {
+        console.log('update email successful', email)
+      }, function (error) {
+        console.log('update email failed', error)
+        setError(error.code, error.message)
+      })
+    },
+    updateName (name) {
+      let user = firebase.auth().currentUser
+      let setError = this.setError
+      user.updateProfile({
+        displayName: name
+      }).then(function () {
+        console.log('update name successful', name)
+      }, function (error) {
+        console.log('update name failed', error)
+        setError(error.code, error.message)
+      })
     }
   },
   mounted () {

@@ -11,6 +11,7 @@
 import Comment00 from './Comment00'
 import CommentFormBtn from './CommentFormBtn'
 import { mapGetters } from 'vuex'
+import orderedComments from '../scripts/orderedComments'
 export default {
   components: {
     CommentFormBtn,
@@ -18,10 +19,7 @@ export default {
   },
   computed: {
     comments () {
-      let postId = this.$route.params.entry
-      let comments = this.allComments.filter(
-        c => c.parentId === '' && c.postId === postId)
-      return comments.sort((a, b) => b.dateCreated - a.dateCreated)
+      return orderedComments(this.allComments, this.$route.params.entry)
     },
     ...mapGetters([
       'allComments'

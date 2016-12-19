@@ -20,6 +20,12 @@ const mutations = {
   clearSessionUser (state) {
     // console.log('setting session user')
     state.user = JSON.parse(JSON.stringify(emptyUser))
+  },
+  updateSessionUserName (state, name) {
+    state.user.displayName = name
+  },
+  updateSessionUserEmail (state, email) {
+    state.user.email = email
   }
 }
 

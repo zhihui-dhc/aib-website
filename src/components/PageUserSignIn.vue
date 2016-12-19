@@ -4,6 +4,7 @@
   <form class="form-default" v-on:submit.prevent.default="signIn">
     <div class="form-header">
       <div class="subtitle">Sign in to your account now.</div>
+      <form-error :form-error="formError"></form-error>
     </div>
     <div class="form-group">
       <label for="user-signin-email">Email</label>
@@ -35,31 +36,55 @@
 
 <script>
 import PageHeader from './PageHeader'
-import firebase from '../scripts/firebase.js'
+import firebase from 'firebase'
+import FormError from './FormError'
 export default {
   name: 'page-blog-index',
   components: {
-    PageHeader
+    PageHeader,
+    FormError
   },
   data () {
     return {
       email: '',
-      password: ''
+      password: '',
+      formError: {
+        active: false,
+        code: '',
+        message: ''
+      }
     }
   },
   methods: {
     signIn () {
+      let self = this
       let email = this.email
       let password = this.password
-      firebase.auth.signInWithEmailAndPassword(email, password)
+      firebase.auth().signInWithEmailAndPassword(email, password)
         .catch(function (error) {
-          // Handle Errors here.
           var errorCode = error.code
           var errorMessage = error.message
           console.log(errorCode, errorMessage)
+
+          self.formError.active = true
+          self.formError.code = errorCode
+          self.formError.message = errorMessage
         })
-      this.$router.push('/')
+
+      firebase.auth().onAuthStateChanged(function (user) {
+        if (user) {
+          self.$router.push('/')
+        }
+      })
     }
+  },
+  mounted () {
+    let self = this
+    firebase.auth().onAuthStateChanged(function (user) {
+      if (user) {
+        self.email = user.email
+      }
+    })
   }
 }
 </script>

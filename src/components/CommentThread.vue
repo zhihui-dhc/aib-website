@@ -41,7 +41,6 @@ export default {
         author: 'Loading...',
         dateCreated: +Date.now(),
         body: 'Loading...',
-        postId: '',
         upvotes: 34,
         downvotes: 5,
         parentId: ''

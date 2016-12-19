@@ -1,5 +1,5 @@
 <template>
-  <div class="pz-comment" :id="commentId">
+  <div class="pz-comment" :id="`comment-${comment.id}`">
     <comment-container :comment="comment"></comment-container>
   </div>
 </template>

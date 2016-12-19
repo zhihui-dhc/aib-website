@@ -5,21 +5,22 @@
   <form class="form-default" v-on:submit.prevent.default="signUp">
     <div class="form-header">
       <div class="subtitle">Signing up enables commenting and gives you a head start on the fundraising event.</div>
+      <form-error :form-error="formError"></form-error>
     </div>
     <div class="form-group">
       <label for="user-signup-name">Name</label>
       <input
-        v-model="name"
+        v-model="user.displayName"
         type="text"
         id="user-signup-name"
-        placeholder="Name"
-        pattern=".{1,512}" required title="1 to 512 characters"
+        placeholder="Display Name"
+        pattern=".{2,32}" required title="2 to 32 characters"
         required>
     </div>
     <div class="form-group">
       <label for="user-signup-email">Email</label>
       <input
-        v-model="email"
+        v-model="user.email"
         type="email"
         id="user-signup-email"
         placeholder="name@example.com"
@@ -29,7 +30,7 @@
     <div class="form-group">
       <label for="user-signup-password">Password</label>
       <input
-        v-model="password"
+        v-model="user.password"
         type="password"
         id="user-signup-password"
         placeholder="Password"
@@ -37,6 +38,7 @@
         required>
     </div>
     <div class="form-footer">
+      <div></div>
       <input type="submit" class="btn" value="Sign Up">
     </div>
   </form>
@@ -45,31 +47,92 @@
 
 <script>
 import PageHeader from './PageHeader'
-import firebase from '../scripts/firebase.js'
+import FormError from './FormError'
+import firebase from 'firebase'
 export default {
   name: 'page-blog-index',
   components: {
-    PageHeader
+    PageHeader,
+    FormError
   },
   data () {
     return {
-      name: '',
-      email: '',
-      password: ''
+      user: {
+        displayName: '',
+        email: '',
+        password: ''
+      },
+      formError: {
+        active: false,
+        code: '',
+        message: ''
+      }
     }
   },
   methods: {
-    signUp () {
-      firebase.auth.createUserWithEmailAndPassword(this.email, this.password)
+    signUp (event) {
+      if (!event.target.checkValidity()) {
+        this.validateFields(event)
+      } else {
+        this.createUser()
+      }
+    },
+    validateFields (event) {
+      // console.log('I am Safari!')
+      event.preventDefault()
+
+      let inputs = document.querySelectorAll(
+        'input[required],select[required], textarea[required]'
+      )
+
+      for (let i = 0; i < inputs.length; i++) {
+        let input = inputs[i]
+        if (!input.validity.valid) {
+          let msg
+          if (input.id === 'user-signup-name') {
+            msg = 'User name is required (2-32 characters)'
+          }
+          if (input.id === 'user-signup-email') {
+            msg = 'Email must be valid'
+          }
+          if (input.id === 'user-signup-password') {
+            msg = 'Password is required (8-512 characters)'
+          }
+          console.log(input.id, 'is invalid')
+
+          input.focus()
+          input.placeholder = msg
+          input.value = ''
+          return
+        }
+      }
+    },
+    createUser () {
+      let self = this
+      firebase.auth().createUserWithEmailAndPassword(
+      this.user.email, this.user.password)
         .catch(function (error) {
-          // Handle Errors here.
           let errorCode = error.code
           let errorMessage = error.message
           console.log(errorCode, errorMessage)
+          self.formError.active = true
+          self.formError.code = errorCode
+          self.formError.message = errorMessage
         })
 
-      // back to the homepage
-      this.$router.push('/')
+      firebase.auth().onAuthStateChanged(function (user) {
+        if (user) {
+          user.updateProfile({
+            displayName: self.user.displayName
+          }).then(function () {
+            console.log('set firebase user display name', self.user.displayName)
+          }, function (error) {
+            console.log('error', error)
+          })
+
+          self.$router.push('/')
+        }
+      })
     }
   }
 }
