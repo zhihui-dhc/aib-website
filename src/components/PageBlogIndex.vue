@@ -33,7 +33,7 @@ export default {
     ])
   },
   mounted () {
-    document.title = 'Blog - Tendermint'
+    document.title = 'Blog - Cosmos'
   }
 }
 </script>

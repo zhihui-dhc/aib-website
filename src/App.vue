@@ -12,9 +12,10 @@
 import AppHeader from './components/AppHeader.vue'
 import AppFooter from './components/AppFooter.vue'
 import store from './store/index.js'
-import getLang from './scripts/getLang.js'
-import Vue from 'vue'
+// import getLang from './scripts/getLang.js'
+// import Vue from 'vue'
 import firebase from 'firebase'
+
 export default {
   components: {
     AppHeader,
@@ -50,7 +51,7 @@ export default {
   },
   mounted () {
     let self = this
-    Vue.config.lang = getLang()
+    // Vue.config.lang = getLang()
 
     firebase.auth().onAuthStateChanged(function (user) {
       if (user) {
