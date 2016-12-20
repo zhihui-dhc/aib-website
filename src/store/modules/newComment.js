@@ -1,17 +1,17 @@
 const emptyParent = {
-  author: '',
+  userId: '',
   dateCreated: 0,
   body: ''
 }
 const emptyComment = {
   id: '',
-  author: 'CosmosUser',
+  userId: 'CosmosUser',
   dateCreated: 0,
   body: '',
-  postId: '',
   upvotes: 0,
   downvotes: 0,
-  parentId: ''
+  parentId: '',
+  postId: ''
 }
 
 const state = {
@@ -29,12 +29,15 @@ const mutations = {
     // console.log('set new comment post id to ', postId)
     state.comment.postId = postId
   },
+  setNewCommentParentId (state, parentId) {
+    // console.log('set new comment parent id to ', postId)
+    state.comment.parentId = parentId
+  },
   setNewCommentParent (state, comment) {
-    // console.log('set new comment parent to ', comment.author, comment.body)
-    state.parentComment.author = comment.author
+    console.log('set new comment parent to ', comment.userId, comment.body)
+    state.parentComment.userId = comment.userId
     state.parentComment.dateCreated = comment.dateCreated
     state.parentComment.body = comment.body
-    state.comment.parentId = comment.id
   }
 }
 

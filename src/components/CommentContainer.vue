@@ -4,7 +4,7 @@
     <menu class="pz-comment-menu">
       <a @click="setPopupVisible(true)"><i class="fa fa-ellipsis-h"></i></a>
       <div class="divider"></div>
-      <a @click="reply()"><i class="fa fa-reply"></i></a>
+      <a @click="authenticatedReply"><i class="fa fa-reply"></i></a>
       <div class="divider"></div>
       <div class="score">
         <a class="up" @click="upvote"><i class="fa fa-chevron-up"></i></a>
@@ -32,6 +32,7 @@
 <script>
 import CommentBody from './CommentBody'
 import firebase from 'firebase'
+import { mapGetters } from 'vuex'
 export default {
   components: {
     CommentBody
@@ -56,7 +57,8 @@ export default {
     },
     permalink () {
       return `/blog/${this.$route.params.entry}/${this.comment.id}`
-    }
+    },
+    ...mapGetters(['sessionUser'])
   },
   data () {
     return {
@@ -67,10 +69,16 @@ export default {
     setPopupVisible (val) {
       this.popupVisible = val
     },
-    reply () {
-      this.$store.commit('setNewCommentPostId', this.$route.params.entry)
-      this.$store.commit('setNewCommentParent', this.comment)
-      this.$router.push('/comment/new')
+    authenticatedReply () {
+      if (!this.sessionUser.email) {
+        this.$store.commit('setSessionRequest', this.$route.path)
+        this.$router.push('/signin')
+      } else {
+        this.$store.commit('setNewCommentPostId', this.$route.params.entry)
+        this.$store.commit('setNewCommentParentId', this.comment.id)
+        this.$store.commit('setNewCommentParent', this.comment)
+        this.$router.push('/comment/new')
+      }
     },
     downvote () {
       this.$store.commit('downvoteComment', this.comment.id)

@@ -1,5 +1,5 @@
 <template>
-  <a class="pz-comment-form-btn" @click="goComment">
+  <a class="pz-comment-form-btn" @click="authenticatedComment">
     <span class="form-input">Add a comment</span>
   </a>
 </template>
@@ -11,11 +11,13 @@ export default {
     ...mapGetters(['sessionUser'])
   },
   methods: {
-    goComment () {
+    authenticatedComment () {
       if (!this.sessionUser.email) {
+        this.$store.commit('setSessionRequest', this.$route.path)
         this.$router.push('/signin')
       } else {
         this.$store.commit('setNewCommentPostId', this.$route.params.entry)
+        this.$store.commit('setNewCommentParentId', this.$route.params.entry)
         this.$router.push('/comment/new')
       }
     }

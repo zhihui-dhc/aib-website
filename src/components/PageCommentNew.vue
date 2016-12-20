@@ -13,7 +13,7 @@
       </menu>
     </header>
     <comment-body
-      v-if="newComment.parentComment.author"
+      v-if="newComment.parentComment.userId"
       :comment="newComment.parentComment">
     </comment-body>
     <div class="pz-comment-form-body">

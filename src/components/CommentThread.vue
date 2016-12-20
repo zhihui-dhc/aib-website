@@ -38,11 +38,12 @@ export default {
       }
       return {
         id: 'none',
-        author: 'Loading...',
+        userId: 'Loading...',
         dateCreated: +Date.now(),
         body: 'Loading...',
         upvotes: 34,
         downvotes: 5,
+        postId: '',
         parentId: ''
       }
     },

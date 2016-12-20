@@ -38,11 +38,17 @@
 import PageHeader from './PageHeader'
 import firebase from 'firebase'
 import FormError from './FormError'
+import { mapGetters } from 'vuex'
 export default {
   name: 'page-blog-index',
   components: {
     PageHeader,
     FormError
+  },
+  computed: {
+    ...mapGetters([
+      'sessionRequest'
+    ])
   },
   data () {
     return {
@@ -73,9 +79,19 @@ export default {
 
       firebase.auth().onAuthStateChanged(function (user) {
         if (user) {
-          self.$router.push('/')
+          self.success()
         }
       })
+    },
+    success () {
+      let url
+      if (this.sessionRequest) {
+        url = this.sessionRequest
+        this.$store.comment('setSessionRequest', '')
+      } else {
+        url = '/'
+      }
+      this.$router.push(url)
     }
   },
   mounted () {

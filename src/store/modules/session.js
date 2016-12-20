@@ -4,13 +4,13 @@ const emptyUser = {
 }
 
 const state = {
-  request: '',
+  requestU: '',
   user: JSON.parse(JSON.stringify(emptyUser))
 }
 
 const mutations = {
   setSessionRequest (state, url) {
-    // console.log('setting session request', url)
+    console.log('setting session request', url)
     state.requestedUrl = url
   },
   setSessionUser (state, user) {
