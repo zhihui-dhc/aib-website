@@ -1,5 +1,5 @@
 <template>
-  <div class="page">
+  <div class="page page-no-user">
     <page-whitepaper-nav></page-whitepaper-nav>
     <div class="toc-padding" v-bind:class="{ 'toc-visible': whitepaperTocVisible }">
     <div class="article-body">

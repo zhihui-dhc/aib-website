@@ -49,11 +49,15 @@
 import PageHeader from './PageHeader'
 import FormError from './FormError'
 import firebase from 'firebase'
+import { mapGetters } from 'vuex'
 export default {
   name: 'page-blog-index',
   components: {
     PageHeader,
     FormError
+  },
+  computed: {
+    ...mapGetters(['sessionRequest'])
   },
   data () {
     return {
@@ -129,10 +133,17 @@ export default {
           }, function (error) {
             console.log('error', error)
           })
-
-          self.$router.push('/')
+          self.signInSuccess()
         }
       })
+    },
+    signInSuccess () {
+      if (this.sessionRequest) {
+        this.$router.push(this.sessionRequest)
+        this.$store.commit('setSessionRequest', '')
+      } else {
+        this.$router.push('/')
+      }
     }
   }
 }

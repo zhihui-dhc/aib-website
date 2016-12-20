@@ -1,5 +1,5 @@
 <template>
-  <div class="page">
+  <div class="page page-no-user">
     <page-faq-nav></page-faq-nav>
     <div class="toc-padding" v-bind:class="{ 'toc-visible': faqTocVisible }">
     <div class="article-body">

@@ -28,14 +28,10 @@ export default {
 <style lang="stylus">
 @import '../styles/variables.styl'
 
-.page-header + .section-default
-  .section-container
-    padding-top 0
-
 .page-header
   position relative
-  padding 2rem
-  letter-spacing -0.025em
+  padding 2rem 1rem
+  border-bottom 0.25rem solid c-app-fg
 
   display flex
   flex-flow column nowrap
@@ -44,18 +40,17 @@ export default {
     text-align center
 
   h1
-    font-size 1.5*x
-    line-height 1
-    font-weight 400
+    font-size 1.75*x
+    line-height 1.25
     max-width 40*x
-    font-weight 600
     color txt
+    font-weight 500
 
   p
     color dim
     line-height 1.25*x
     max-width 22*x
-    margin-top 0.75rem
+    margin-top 0.5rem
 
     strong
       font-weight 500
@@ -71,20 +66,22 @@ export default {
     justify-content center
     align-content center
 
+@media screen and (min-width: 720px)
+  .page-header
+    h1
+      font-size 2rem
+      font-weight 600
+
 @media screen and (min-width: 960px)
   .page-header
-    padding 3*x
-    h1, p
-      text-align left
-
-    &.page-header-default
-      align-items flex-start
+    padding 3rem
 
     &.page-header-wide
-      padding 3*x 0
+      padding 3rem
       max-width 40em
       margin-left auto
       margin-right auto
-      h1
-        font-weight 600
+
+      h1, p
+        text-align left
 </style>

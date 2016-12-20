@@ -144,7 +144,10 @@ export default {
   mounted () {
     let self = this
     firebase.auth().onAuthStateChanged(function (user) {
-      if (!user) { self.$router.push('/') }
+      if (!user) {
+        self.$store.commit('setSessionRequest', '/settings')
+        self.$router.push('/signin')
+      }
     })
   }
 }

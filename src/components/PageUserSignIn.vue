@@ -46,9 +46,7 @@ export default {
     FormError
   },
   computed: {
-    ...mapGetters([
-      'sessionRequest'
-    ])
+    ...mapGetters(['sessionRequest'])
   },
   data () {
     return {
@@ -79,19 +77,17 @@ export default {
 
       firebase.auth().onAuthStateChanged(function (user) {
         if (user) {
-          self.success()
+          self.signInSuccess()
         }
       })
     },
-    success () {
-      let url
+    signInSuccess () {
       if (this.sessionRequest) {
-        url = this.sessionRequest
-        this.$store.comment('setSessionRequest', '')
+        this.$router.push(this.sessionRequest)
+        this.$store.commit('setSessionRequest', '')
       } else {
-        url = '/'
+        this.$router.push('/')
       }
-      this.$router.push(url)
     }
   },
   mounted () {

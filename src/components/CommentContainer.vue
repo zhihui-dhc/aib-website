@@ -7,11 +7,15 @@
       <a @click="authenticatedReply"><i class="fa fa-reply"></i></a>
       <div class="divider"></div>
       <div class="score">
-        <a class="up" @click="upvote"><i class="fa fa-chevron-up"></i></a>
-        <span class="value" :title="scoreDetailed">
+        <a class="up" @click="upvote">
+          <i class="fa fa-chevron-up"></i>
+        </a>
+        <span class="value" :title="detailedScore">
           {{ score }}
         </span>
-        <a class="down" @click="downvote"><i class="fa fa-chevron-down"></i></a>
+        <a class="down" @click="downvote">
+          <i class="fa fa-chevron-down"></i>
+        </a>
       </div>
     </menu>
     <div class="pz-popup-background" v-show="popupVisible" @click="setPopupVisible(false)">
@@ -20,7 +24,7 @@
       <menu class="pz-comment-menu-popup" v-show="popupVisible">
         <!--<a>Share</a>-->
         <router-link :to="permalink">Permalink</router-link>
-        <template v-if="thisCommentIsMine">
+        <template v-if="myComment">
           <a @click="edit">Edit</a>
           <a @click="remove">Delete</a>
         </template>
@@ -38,7 +42,7 @@ export default {
     CommentBody
   },
   computed: {
-    thisCommentIsMine () {
+    myComment () {
       let user = firebase.auth().currentUser
       if (user && user.email === this.comment.userId) {
         return true
@@ -46,7 +50,7 @@ export default {
         return false
       }
     },
-    scoreDetailed () {
+    detailedScore () {
       let comment = this.comment
       let percentage =
         Math.round(100 * (comment.upvotes / (comment.upvotes + comment.downvotes)))
@@ -70,13 +74,14 @@ export default {
       this.popupVisible = val
     },
     authenticatedReply () {
+      console.log('setting up reply...')
+      this.$store.commit('setNewCommentPostId', this.$route.params.entry)
+      this.$store.commit('setNewCommentParentId', this.comment.id)
+      this.$store.commit('setNewCommentParent', this.comment)
       if (!this.sessionUser.email) {
-        this.$store.commit('setSessionRequest', this.$route.path)
+        this.$store.commit('setSessionRequest', '/comment/new')
         this.$router.push('/signin')
       } else {
-        this.$store.commit('setNewCommentPostId', this.$route.params.entry)
-        this.$store.commit('setNewCommentParentId', this.comment.id)
-        this.$store.commit('setNewCommentParent', this.comment)
         this.$router.push('/comment/new')
       }
     },
@@ -127,6 +132,12 @@ export default {
       padding-right 0.5rem
     a.up
       padding-left 0.5rem
+
+    a.up.active
+      color hsl(20,100%,50%)
+    a.down.active
+      color hsl(200,100%,50%)
+
     .value
       flex 1
       text-align center

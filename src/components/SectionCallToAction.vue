@@ -31,21 +31,17 @@ export default {
     margin 0 auto
 
     text-align center
-    padding 3rem 1.5rem
+    padding 2rem
 
     h2
       font-size 1.5rem
-      margin 0 0 1rem
+      margin-bottom 0.5rem
       letter-spacing 0.01em
+
     .description
-      margin 0 0 1.5rem
+      margin-bottom 1.5rem
+      color dim
 
     form
       margin-bottom 1rem
-
-@media screen and (min-width:720px)
-  .section-call-to-action
-    .section-container
-      h2
-        font-size 2em
 </style>

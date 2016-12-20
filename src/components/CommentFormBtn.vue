@@ -12,12 +12,12 @@ export default {
   },
   methods: {
     authenticatedComment () {
+      this.$store.commit('setNewCommentPostId', this.$route.params.entry)
+      this.$store.commit('setNewCommentParentId', this.$route.params.entry)
       if (!this.sessionUser.email) {
-        this.$store.commit('setSessionRequest', this.$route.path)
+        this.$store.commit('setSessionRequest', '/comment/new')
         this.$router.push('/signin')
       } else {
-        this.$store.commit('setNewCommentPostId', this.$route.params.entry)
-        this.$store.commit('setNewCommentParentId', this.$route.params.entry)
         this.$router.push('/comment/new')
       }
     }

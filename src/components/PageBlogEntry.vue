@@ -1,11 +1,15 @@
 <template>
   <div class="page page-blog-entry">
-    <div class="page-header page-header-wide">
-      <h1>{{ entry.title }}</h1>
-      <p>{{ entry.dateFriendly }} <template v-if="entry.author">by {{ entry.author }}</template> | <a href="#comments">Comments</a></p>
-    </div>
-    <div class="article-body" v-html="entry.body"></div>
-    <!--<article-footer :facebook-url="facebookUrl" :twitter-url="twitterUrl"></article-footer>-->
+    <page-header
+      :title="entry.title"
+      :subtitle="entrySubtitle">
+    </page-header>
+    <section class="section-default">
+      <div class="section-container">
+        <div class="article-body" v-html="entry.body"></div>
+        <!--<article-footer :facebook-url="facebookUrl" :twitter-url="twitterUrl"></article-footer>-->
+      </div>
+    </section>
     <comments></comments>
   </div>
 </template>
@@ -24,6 +28,13 @@ export default {
     Comments
   },
   computed: {
+    entrySubtitle () {
+      let value = this.entry.dateFriendly
+      if (this.entry.author) {
+        value += `by ${this.entry.author} | <a href="#comments">Comments</a>`
+      }
+      return value
+    },
     entry () {
       let slug = this.$route.params.entry
       return this.allPosts[Vue.config.lang].find(p => p.slug === slug)

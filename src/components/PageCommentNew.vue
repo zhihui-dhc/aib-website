@@ -70,7 +70,7 @@ export default {
       let user = this.sessionUser
       let comment = this.newComment.comment
 
-      comment.userId = user.email
+      comment.userId = user.displayName
       comment.id = shortid.generate()
       comment.dateCreated = +new Date()
       this.$store.commit('addComment', comment)

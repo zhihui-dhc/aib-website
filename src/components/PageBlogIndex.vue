@@ -1,14 +1,14 @@
 <template>
   <div class="split-page page-blog-index">
-    <page-header :title="$t('siteBlog.title')" :subtitle="$t('siteBlog.subtitle')"></page-header>
-    <section class="section-default page-content">
-      <div class="section-container">
-        <div class="section-content">
-          <card-post :title="post.title" :desc="post.description" :url="'/blog/' + post.slug" :meta="post.dateFriendly" v-for="post in posts">
-          </card-post>
-        </div>
-      </div>
-    </section>
+    <page-header
+      :title="$t('siteBlog.title')"
+      :subtitle="$t('siteBlog.subtitle')"
+      type="wide">
+    </page-header>
+    <div class="page-content">
+      <card-post :title="post.title" :desc="post.description" :url="'/blog/' + post.slug" :meta="post.dateFriendly" v-for="post in posts">
+      </card-post>
+    </div>
   </div>
 </template>
 

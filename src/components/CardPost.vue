@@ -28,32 +28,30 @@ export default {
 @require '../styles/variables.styl'
 
 .card-post
-  border-bottom 1px dotted bc
   margin 0 auto
 
-  &:first-of-type
-    margin-top -1.5*x
+  border-bottom 0.25rem solid c-app-fg
+
   &:last-of-type
     border-bottom none
 
-  .title
-    font-weight 500
-    line-height 1.25
-    color txt
-  .meta
-    text-transform uppercase
-    font-size 0.75em
-    font-weight 500
-    line-height 2
-    color light
-  .desc
-    max-width 40em
   a
-    padding 1.5*x 0
+    padding 1em
     display block
     color txt
     &:hover .title
       color link
+
+  .title
+    line-height 1.25
+    font-size 1.125em
+    color txt
+
+  .meta
+    color light
+
+  .desc
+    max-width 40em
 
 @media screen and (min-width: 360px)
   .card-post
@@ -66,5 +64,5 @@ export default {
   .card-post
     font-size 1.125*x
     a
-      padding 2*x 0
+      padding 1.5rem
 </style>

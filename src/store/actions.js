@@ -6,6 +6,7 @@ export const setWhitepaperElementsVisible =
   ({ commit }, value) => commit('setWhitepaperElementsVisible')
 export const setWhitepaperTocVisible =
   ({ commit }, value) => commit('setWhitepaperToc')
+
 export const removeComment =
   ({ commit }, commentId) => commit('removeComment')
 export const upvoteComment =
@@ -16,6 +17,7 @@ export const addComment =
   ({ commit }, comment) => commit('addComment')
 export const updateComment =
   ({ commit }, comment) => commit('updateComment')
+
 export const setEditComment =
   ({ commit }, comment) => commit('setEditComment')
 export const setNewCommentParent =
@@ -26,6 +28,9 @@ export const setNewCommentPostId =
   ({ commit }, postId) => commit('setNewCommentPostId')
 export const resetNewComment =
   ({ commit }) => commit('resetNewComment')
+
+export const setSessionRequest =
+  ({ commit }, url) => commit('setSessionRequest')
 export const updateSessionUserName =
   ({ commit }, name) => commit('updateSessionUserName')
 export const updateSessionUserEmail =
