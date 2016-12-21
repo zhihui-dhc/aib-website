@@ -21,10 +21,10 @@ firebase.auth().onAuthStateChanged(function (user) {
   if (user) {
     // console.log('user logged in!')
     ref = firebase.database().ref(`users/${user.uid}/votes`)
+    watchRef()
   } else {
     // console.log('user logged out')
   }
-  watchRef()
 })
 
 const emptyUser = {

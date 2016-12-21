@@ -24,8 +24,8 @@
       <a @click="signOut">Sign Out</a>
     </template>
     <template v-else>
-      <router-link to="/signup" exact>{{ $t('siteHeader.signup') }}</router-link>
-      <router-link to="/signin">{{ $t('siteHeader.signin') }}</router-link>
+      <a @click="signUp" exact>{{ $t('siteHeader.signup') }}</a>
+      <a @click="signIn">{{ $t('siteHeader.signin') }}</a>
     </template>
   </nav>
 </div>
@@ -45,6 +45,14 @@ export default {
     ])
   },
   methods: {
+    signUp () {
+      this.$store.commit('setSessionRequest', this.$route.path)
+      this.$router.push('/signup')
+    },
+    signIn () {
+      this.$store.commit('setSessionRequest', this.$route.path)
+      this.$router.push('/signin')
+    },
     signOut () {
       firebase.auth().signOut().then(function () {
       }, function (error) {

@@ -103,7 +103,7 @@ export default {
     },
     upvote () {
       if (this.sessionVotes[this.comment.id] === 1) {
-        console.log('already upvoted, undoing')
+        // console.log('already upvoted, undoing')
         this.$store.commit('undoUpvoteComment', this.comment.id)
         this.$store.commit('sessionClearVoteComment', this.comment.id)
         return
@@ -114,7 +114,7 @@ export default {
     },
     downvote () {
       if (this.sessionVotes[this.comment.id] === -1) {
-        console.log('already downvoted')
+        // console.log('already downvoted')
         this.$store.commit('undoDownvoteComment', this.comment.id)
         this.$store.commit('sessionClearVoteComment', this.comment.id)
         return
@@ -123,6 +123,17 @@ export default {
         this.$store.commit('sessionDownvoteComment', this.comment.id)
       }
     }
+  },
+  mounted () {
+    /*
+    let self = this
+    this.$store.watch(function (data) {
+      let votes = data.session.votes
+      console.log('sessionVotes changed', votes)
+      console.log('this.comment.id', self.comment.id)
+      console.log(`votes[${self.comment.id}] = `, votes[self.comment.id])
+    })
+    */
   },
   props: ['comment']
 }
@@ -144,6 +155,7 @@ export default {
 
   .divider
     border-right 1px solid lighten(bc,50%)
+
   a
     padding 0 0.75rem
     color light
