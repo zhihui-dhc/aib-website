@@ -27,12 +27,34 @@ export default {
 
 <style lang="stylus">
 @import '../styles/variables.styl'
+
 .pz-comment
   padding 0.5rem 0 0.5rem 0.5rem
   background #fff
+
   .pz-comment
     padding-bottom 0.125rem
     border-left 1px solid bc
     &:last-of-type
       margin-bottom 0.5rem
+
+@media screen and (min-width: 360px)
+  .pz-comment
+    padding-top 0.75rem
+    padding-bottom 0.75rem
+
+@media screen and (min-width: 720px)
+  .pz-comment
+    padding-left 0.75rem
+    .pz-comment
+      border-left-color lighten(bc, 50%)
+
+@media screen and (min-width: 960px)
+  .pz-comment
+    padding-left 1rem
+
+@media screen and (min-width: 1200px)
+  .pz-comment
+    padding-left 2rem
+
 </style>

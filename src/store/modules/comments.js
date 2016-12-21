@@ -19,7 +19,7 @@ ref.on('child_changed', function (snapshot) {
 })
 
 ref.on('child_removed', function (snapshot) {
-  console.log('child removed!')
+  // console.log('child removed!')
   let child = snapshot.val()
   child.id = snapshot.key
   state.all.splice(state.all.indexOf(child), 1)
@@ -27,7 +27,7 @@ ref.on('child_removed', function (snapshot) {
 
 const mutations = {
   removeComment (state, commentId) {
-    console.log('removing comment', commentId)
+    // console.log('removing comment', commentId)
     ref.child(commentId).remove()
   },
   upvoteComment (state, commentId) {
@@ -35,18 +35,28 @@ const mutations = {
     let newVal = JSON.parse(JSON.stringify(oldVal)) + 1
     ref.child(commentId).update({ upvotes: newVal })
   },
+  undoUpvoteComment (state, commentId) {
+    let oldVal = state.all.find(c => c.id === commentId).upvotes
+    let newVal = JSON.parse(JSON.stringify(oldVal)) - 1
+    ref.child(commentId).update({ upvotes: newVal })
+  },
   downvoteComment (state, commentId) {
     let oldVal = state.all.find(c => c.id === commentId).downvotes
     let newVal = JSON.parse(JSON.stringify(oldVal)) + 1
     ref.child(commentId).update({ downvotes: newVal })
   },
+  undoDownvoteComment (state, commentId) {
+    let oldVal = state.all.find(c => c.id === commentId).downvotes
+    let newVal = JSON.parse(JSON.stringify(oldVal)) - 1
+    ref.child(commentId).update({ downvotes: newVal })
+  },
   addComment (state, comment) {
-    console.log('submitting comment', comment)
+    // console.log('submitting comment', comment)
     comment.dateCreated = +new Date()
     ref.child(comment.id).set(comment)
   },
   updateComment (state, comment) {
-    console.log('updating comment', comment)
+    // console.log('updating comment', comment)
     comment.dateUpdated = +new Date()
     ref.child(comment.id).set(comment)
   }

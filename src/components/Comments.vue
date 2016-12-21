@@ -35,4 +35,34 @@ export default {
   max-width 40rem
   margin 0 auto
   margin-bottom 0.5rem
+
+@media screen and (min-width: 360px)
+  .pz-comments-container
+    margin-bottom 1rem
+
+@media screen and (min-width: 400px)
+  .pz-comments-container
+    margin-bottom 2rem
+
+  .pz-comments
+    background #fff
+    padding 0 0.5rem
+
+@media screen and (min-width: 720px)
+  .pz-comments-container
+    margin-bottom 3rem
+
+    width 90vw
+    max-width 100%
+
+  .pz-comments
+    padding-bottom 0.75rem
+
+@media screen and (min-width: 960px)
+  .pz-comments
+    padding-bottom 1rem
+
+@media screen and (min-width: 1200px)
+  .pz-comments
+    padding-bottom 2rem
 </style>

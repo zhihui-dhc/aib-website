@@ -74,6 +74,7 @@ export default {
       comment.id = shortid.generate()
       comment.dateCreated = +new Date()
       this.$store.commit('addComment', comment)
+      console.log(comment.userId)
     }
   },
   mounted () {
@@ -150,4 +151,10 @@ export default {
       box-shadow none
 
       font-size 0.875rem
+
+@media screen and (min-width: 360px)
+  .pz-comment-form
+    .pz-comment-form-body
+      textarea
+        font-size 1rem
 </style>

@@ -52,11 +52,11 @@ export default {
 @import '../styles/variables.styl'
 
 .pz-comment-body
-  max-width 40rem
   font-size 0.875rem
+
   .meta
-    display flex
     font-size 0.75rem
+    display flex
     margin-bottom 0.25rem
 
     a.author
@@ -187,7 +187,7 @@ export default {
 
   blockquote
     border 1px solid lighten(mcolor,85%)
-    padding 0.75*x x
+    padding 0.75rem 1rem
     background lighten(mcolor,95%)
     position relative
 
@@ -198,4 +198,26 @@ export default {
 
     p:last-child, ul:last-child, ol:last-child
       margin-bottom 0
+
+@media screen and (min-width: 360px)
+  .pz-comment-body
+    font-size 1rem
+    .meta
+      font-size 0.85rem
+
+@media screen and (min-width: 720px)
+  .pz-comment-text
+    padding-right 0.75rem
+
+@media screen and (min-width: 960px)
+  .pz-comment-text
+    padding-right 1rem
+
+@media screen and (min-width: 1200px)
+  .pz-comment-text
+    padding-right 1.5rem
+
+@media screen and (min-width: 1600px)
+  .pz-comment-text
+    padding-right 2rem
 </style>

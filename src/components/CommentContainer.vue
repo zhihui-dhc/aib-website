@@ -7,13 +7,13 @@
       <a @click="authenticatedReply"><i class="fa fa-reply"></i></a>
       <div class="divider"></div>
       <div class="score">
-        <a class="up" @click="upvote">
+        <a :class="upClass" @click="upvote">
           <i class="fa fa-chevron-up"></i>
         </a>
         <span class="value" :title="detailedScore">
           {{ score }}
         </span>
-        <a class="down" @click="downvote">
+        <a :class="downClass" @click="downvote">
           <i class="fa fa-chevron-down"></i>
         </a>
       </div>
@@ -42,6 +42,14 @@ export default {
     CommentBody
   },
   computed: {
+    upClass () {
+      if (this.sessionVotes[this.comment.id] === 1) { return 'vote-up active' }
+      return 'vote-up'
+    },
+    downClass () {
+      if (this.sessionVotes[this.comment.id] === -1) { return 'vote-down active' }
+      return 'vote-down'
+    },
     myComment () {
       let user = firebase.auth().currentUser
       if (user && user.email === this.comment.userId) {
@@ -62,7 +70,7 @@ export default {
     permalink () {
       return `/blog/${this.$route.params.entry}/${this.comment.id}`
     },
-    ...mapGetters(['sessionUser'])
+    ...mapGetters(['sessionUser', 'sessionVotes'])
   },
   data () {
     return {
@@ -74,7 +82,7 @@ export default {
       this.popupVisible = val
     },
     authenticatedReply () {
-      console.log('setting up reply...')
+      // console.log('setting up reply...')
       this.$store.commit('setNewCommentPostId', this.$route.params.entry)
       this.$store.commit('setNewCommentParentId', this.comment.id)
       this.$store.commit('setNewCommentParent', this.comment)
@@ -85,9 +93,6 @@ export default {
         this.$router.push('/comment/new')
       }
     },
-    downvote () {
-      this.$store.commit('downvoteComment', this.comment.id)
-    },
     edit () {
       this.$store.commit('setEditComment', this.comment)
       this.$router.push('/comment/edit')
@@ -97,7 +102,26 @@ export default {
       this.setPopupVisible(false)
     },
     upvote () {
-      this.$store.commit('upvoteComment', this.comment.id)
+      if (this.sessionVotes[this.comment.id] === 1) {
+        console.log('already upvoted, undoing')
+        this.$store.commit('undoUpvoteComment', this.comment.id)
+        this.$store.commit('sessionClearVoteComment', this.comment.id)
+        return
+      } else {
+        this.$store.commit('upvoteComment', this.comment.id)
+        this.$store.commit('sessionUpvoteComment', this.comment.id)
+      }
+    },
+    downvote () {
+      if (this.sessionVotes[this.comment.id] === -1) {
+        console.log('already downvoted')
+        this.$store.commit('undoDownvoteComment', this.comment.id)
+        this.$store.commit('sessionClearVoteComment', this.comment.id)
+        return
+      } else {
+        this.$store.commit('downvoteComment', this.comment.id)
+        this.$store.commit('sessionDownvoteComment', this.comment.id)
+      }
     }
   },
   props: ['comment']
@@ -108,7 +132,7 @@ export default {
 @import '../styles/variables.styl'
 
 .pz-comment-container
-  max-width 40rem
+  max-width 50rem
 
 .pz-comment-menu
   display flex
@@ -126,17 +150,23 @@ export default {
     cursor pointer
     &:hover
       color link
+
   .score
     display flex
-    a.down
-      padding-right 0.5rem
-    a.up
-      padding-left 0.5rem
 
-    a.up.active
-      color hsl(20,100%,50%)
-    a.down.active
-      color hsl(200,100%,50%)
+    a.vote-up
+      padding-left 0.5rem
+      &:hover
+        color hsl(20,50%,75%)
+      &.active
+        color hsl(20,100%,50%)
+
+    a.vote-down
+      padding-right 0.5rem
+      &:hover
+        color hsl(200,50%,75%)
+      &.active
+        color hsl(200,100%,50%)
 
     .value
       flex 1
@@ -181,4 +211,18 @@ export default {
       color #fff
     &:last-of-type
       border-bottom none
+
+@media screen and (min-width: 360px)
+  .pz-comment-menu
+    font-size 0.85rem
+    .score
+      a.vote-up
+        padding-left 0.75rem
+      a.vote-down
+        padding-right 0.75rem
+
+  .pz-comment-menu-popup
+    font-size 1rem
+    a
+      padding 0 1rem
 </style>

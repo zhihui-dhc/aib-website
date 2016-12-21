@@ -42,15 +42,18 @@ export default {
   h1
     font-size 1.75*x
     line-height 1.25
-    max-width 40*x
     color txt
     font-weight 500
+
+    max-width 40*x
+    margin 0 auto
 
   p
     color dim
     line-height 1.25*x
+
     max-width 22*x
-    margin-top 0.5rem
+    margin 0.5rem auto 0
 
     strong
       font-weight 500
@@ -61,6 +64,7 @@ export default {
 
   &.page-header-default
     align-items center
+
   &.page-header-center
     align-items center
     justify-content center

@@ -68,9 +68,4 @@ export default {
     display block
     color link
     font-weight 500
-
-.pz-comments-container
-  max-width 40rem
-  margin 0 auto
-  margin-bottom 0.5rem
 </style>

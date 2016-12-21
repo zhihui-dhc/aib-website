@@ -9,3 +9,4 @@ export const newComment = state => state.newComment
 export const editComment = state => state.editComment
 export const sessionRequest = state => state.session.request
 export const sessionUser = state => state.session.user
+export const sessionVotes = state => state.session.votes
