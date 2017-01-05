@@ -16,7 +16,7 @@ export default {
       this.$store.commit('setNewCommentParentId', this.$route.params.entry)
       if (!this.sessionUser.email) {
         this.$store.commit('setSessionRequest', '/comment/new')
-        this.$router.push('/signin')
+        this.$router.push('/signup')
       } else {
         this.$router.push('/comment/new')
       }

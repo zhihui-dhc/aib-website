@@ -1,7 +1,7 @@
 <template>
-<div class="page page-narrow">
+<div class="page">
   <page-header title="Reset Password"></page-header></page-header>
-  <form class="form-default" v-on:submit.prevent.default="resetPassword">
+  <form class="form form-narrow" v-on:submit.prevent.default="resetPassword">
     <div class="form-header">
       <div class="subtitle">Enter your email and we'll send you a password reset link.</div>
     </div>

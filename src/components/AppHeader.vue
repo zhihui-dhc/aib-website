@@ -20,7 +20,7 @@
   </header>
   <nav v-if="!isTocPage" class="user-nav">
     <template v-if="sessionUser.email">
-      <router-link to="/settings">{{ sessionUser.email }}</router-link>
+      <router-link to="/settings">{{ sessionUser.displayName }}</router-link>
       <a @click="signOut">Sign Out</a>
     </template>
     <template v-else>

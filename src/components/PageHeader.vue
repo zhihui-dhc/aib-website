@@ -32,7 +32,7 @@ export default {
   position relative
   padding 2rem 1rem
 
-  border-bottom 0.125rem solid darken(c-app-bg,5%)
+  border-bottom 1px solid bc
   display flex
   flex-flow column nowrap
 
@@ -45,6 +45,7 @@ export default {
     color txt
     font-weight 300
     max-width 40*x
+    margin 0 auto
 
   p
     color dim

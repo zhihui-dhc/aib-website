@@ -63,7 +63,15 @@ export default {
         return
       }
       this.submitNewComment()
-      this.viewComment(comment.id)
+
+      if (comment.parentId) {
+        console.log('parentComment exists, going to it')
+        this.viewComment(comment.parentId)
+      } else {
+        console.log('parentComment doesnt exist, going to view self')
+        this.viewComment(comment.id)
+      }
+
       this.$store.commit('resetNewComment')
     },
     submitNewComment () {

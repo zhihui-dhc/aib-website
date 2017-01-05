@@ -88,7 +88,7 @@ export default {
       this.$store.commit('setNewCommentParent', this.comment)
       if (!this.sessionUser.email) {
         this.$store.commit('setSessionRequest', '/comment/new')
-        this.$router.push('/signin')
+        this.$router.push('/signup')
       } else {
         this.$router.push('/comment/new')
       }
@@ -101,7 +101,12 @@ export default {
       this.$store.commit('removeComment', this.comment.id)
       this.setPopupVisible(false)
     },
+    authenticate () {
+      this.$store.commit('setSessionRequest', this.$route.path + '#comments')
+      this.$router.push('/signup')
+    },
     upvote () {
+      if (!firebase.auth().currentUser) { this.authenticate(); return }
       if (this.sessionVotes[this.comment.id] === 1) {
         // console.log('already upvoted, undoing')
         this.$store.commit('undoUpvoteComment', this.comment.id)
@@ -113,6 +118,7 @@ export default {
       }
     },
     downvote () {
+      if (!firebase.auth().currentUser) { this.authenticate(); return }
       if (this.sessionVotes[this.comment.id] === -1) {
         // console.log('already downvoted')
         this.$store.commit('undoDownvoteComment', this.comment.id)
@@ -123,17 +129,6 @@ export default {
         this.$store.commit('sessionDownvoteComment', this.comment.id)
       }
     }
-  },
-  mounted () {
-    /*
-    let self = this
-    this.$store.watch(function (data) {
-      let votes = data.session.votes
-      console.log('sessionVotes changed', votes)
-      console.log('this.comment.id', self.comment.id)
-      console.log(`votes[${self.comment.id}] = `, votes[self.comment.id])
-    })
-    */
   },
   props: ['comment']
 }

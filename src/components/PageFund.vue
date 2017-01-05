@@ -4,7 +4,7 @@
   <div class="fund-wrapper">
     <page-fund-nav :step="step"></page-fund-nav>
     <div class="fund-steps">
-      <form class="form-default" v-show="step === 1" v-on:submit.prevent="goTo(2, $event)">
+      <form class="form" v-show="step === 1" v-on:submit.prevent="goTo(2, $event)">
         <div class="form-header">
           <div class="title">{{ $t('siteFund.stepOne.title') }}</div>
           <div class="subtitle">{{ $t('siteFund.stepOne.subtitle') }}</div>
@@ -49,7 +49,7 @@
           <input type="submit" class="btn" :value="$t('siteFund.btnContinue')">
         </div>
       </form>
-      <form class="form-default" v-if="step === 2" v-on:submit.prevent="goTo(3, $event)">
+      <form class="form" v-if="step === 2" v-on:submit.prevent="goTo(3, $event)">
         <div class="form-header">
           <div class="title">{{ $t('siteFund.stepTwo.title') }}</div>
           <div class="subtitle">{{ $t('siteFund.stepTwo.subtitle') }}</div>
@@ -73,7 +73,7 @@
           <input type="submit" class="btn" :value="$t('siteFund.btnContinue')">
         </div>
       </form>
-      <form class="form-default" v-if="step === 3" v-on:submit.prevent="goTo(4, $event)">
+      <form class="form" v-if="step === 3" v-on:submit.prevent="goTo(4, $event)">
         <div class="form-header">
           <div class="title">{{ $t('siteFund.stepThree.title') }}</div>
           <div class="subtitle">{{ $t('siteFund.stepThree.subtitle') }}</div>
@@ -96,7 +96,7 @@
           <input type="submit" class="btn" :value="$t('siteFund.btnContinue')">
         </div>
       </form>
-      <form class="form-default" v-if="step === 4" v-on:submit.prevent="goHome">
+      <form class="form" v-if="step === 4" v-on:submit.prevent="goHome">
         <div class="form-header">
           <div class="title">{{ $t('siteFund.stepFour.title') }}</div>
           <div class="subtitle">{{ $t('siteFund.stepFour.subtitle') }}</div>

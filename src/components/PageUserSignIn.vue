@@ -1,7 +1,7 @@
 <template>
-<div class="page page-narrow">
+<div class="page">
   <page-header title="Sign In"></page-header></page-header>
-  <form class="form-default" v-on:submit.prevent.default="signIn">
+  <form class="form form-narrow" v-on:submit.prevent.default="signIn">
     <div class="form-header">
       <div class="subtitle">Sign in to your account now.</div>
       <form-error :form-error="formError"></form-error>

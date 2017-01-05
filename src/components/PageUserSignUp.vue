@@ -1,8 +1,8 @@
 <template>
-<div class="page page-narrow">
+<div class="page">
   <page-header title="Sign Up" type="center">
   </page-header>
-  <form class="form-default" v-on:submit.prevent.default="signUp">
+  <form class="form form-narrow" v-on:submit.prevent.default="signUp">
     <div class="form-header">
       <div class="subtitle">Signing up enables commenting and gives you a head start on the fundraising event.</div>
       <form-error :form-error="formError"></form-error>
@@ -38,7 +38,7 @@
         required>
     </div>
     <div class="form-footer">
-      <div></div>
+      <router-link to="/signin">Have an account?</router-link>
       <input type="submit" class="btn" value="Sign Up">
     </div>
   </form>

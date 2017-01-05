@@ -1,21 +1,20 @@
 <template>
 <div class="page page-user-settings">
-  <page-header title="Settings" type="center">
+  <page-header :title="newName" type="center">
   </page-header>
-  <form class="form-default page-narrow" v-on:submit.prevent.default="updateUser">
+  <form class="form form-narrow" v-on:submit.prevent.default="updateUser">
     <div class="form-header">
       <div class="subtitle">Edit your user settings here.</div>
       <form-error :form-error="formError"></form-error>
     </div>
-    <div class="form-group">
+    <!--<div class="form-group">
       <label for="user-signup-name">Name</label>
       <input
         v-model="newName"
         type="text"
         id="user-settings-name"
-        pattern=".{1,512}" required title="1 to 512 characters"
-        required>
-    </div>
+        disabled>
+    </div>-->
     <div class="form-group">
       <label for="user-signup-email">Email</label>
       <input
@@ -96,15 +95,15 @@ export default {
       }
     },
     updateUser () {
-      let newName = this.newName
+      // let newName = this.newName
       let newEmail = this.newEmail
       let newPassword = this.newPassword
 
       let user = firebase.auth().currentUser
-      let oldName = user.displayName
+      // let oldName = user.displayName
       let oldEmail = user.email
 
-      if (newName !== oldName) { this.updateName(newName) }
+      // if (newName !== oldName) { this.updateName(newName) }
       if (newEmail !== oldEmail) { this.updateEmail(newEmail) }
       if (newPassword) { this.updatePassword(newPassword) }
     },
@@ -127,7 +126,8 @@ export default {
         console.log('update email failed', error)
         setError(error.code, error.message)
       })
-    },
+    }
+    /* ,
     updateName (name) {
       let user = firebase.auth().currentUser
       let setError = this.setError
@@ -139,7 +139,7 @@ export default {
         console.log('update name failed', error)
         setError(error.code, error.message)
       })
-    }
+    } */
   },
   mounted () {
     let self = this
@@ -155,8 +155,4 @@ export default {
 
 <style lang="stylus">
 @import '../styles/variables.styl'
-
-.page-user-settings
-  form.form-default
-    margin-top 2rem
 </style>
