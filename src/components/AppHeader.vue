@@ -76,7 +76,7 @@ export default {
   flex-flow row wrap
   background #fff
   background hsla(0,0,100%,0.95)
-  box-shadow hsla(0,0,0,0.04) 0 0.2rem 0.3rem
+  box-shadow hsla(0,0,0,0.05) 0 0.15rem 0.2rem
 
   a.nav-home
     height 3*x
@@ -95,7 +95,7 @@ export default {
     justify-content flex-end
     default-border-top()
     padding-right 0.5rem
-    font-size 0.75rem
+    font-size 0.875rem
     a
       display block
       padding 0 0.5*x
@@ -123,7 +123,7 @@ export default {
   display flex
   justify-content flex-end
 
-  box-shadow hsla(0,0,0,0.04) 0 0.2rem 0.3rem
+  box-shadow hsla(0,0,0,0.1) 0 0.1rem 0.15rem
   z-index 1
   
   a

@@ -31,8 +31,8 @@ export default {
 .page-header
   position relative
   padding 2rem 1rem
-  border-bottom 0.25rem solid c-app-fg
 
+  border-bottom 0.125rem solid darken(c-app-bg,5%)
   display flex
   flex-flow column nowrap
 
@@ -43,14 +43,12 @@ export default {
     font-size 1.75*x
     line-height 1.25
     color txt
-    font-weight 500
-
+    font-weight 300
     max-width 40*x
-    margin 0 auto
 
   p
     color dim
-    line-height 1.25*x
+    font-size 0.875rem
 
     max-width 22*x
     margin 0.5rem auto 0

@@ -1,8 +1,8 @@
 <template>
-<div class="page page-narrow">
+<div class="page page-user-settings">
   <page-header title="Settings" type="center">
   </page-header>
-  <form class="form-default" v-on:submit.prevent.default="updateUser">
+  <form class="form-default page-narrow" v-on:submit.prevent.default="updateUser">
     <div class="form-header">
       <div class="subtitle">Edit your user settings here.</div>
       <form-error :form-error="formError"></form-error>
@@ -155,4 +155,8 @@ export default {
 
 <style lang="stylus">
 @import '../styles/variables.styl'
+
+.page-user-settings
+  form.form-default
+    margin-top 2rem
 </style>

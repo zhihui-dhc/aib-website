@@ -16,7 +16,7 @@
     "toc": "doctoc --title '**Table of Contents**' src/content/en/FAQ.md"
   },
   "dependencies": {
-    "vue": "^2.1.6"
+    "vue": "^2.1.8"
   },
   "devDependencies": {
     "babel-core": "^6.21.0",
@@ -37,7 +37,7 @@
     "doctoc": "^1.2.0",
     "eslint": "^3.12.2",
     "eslint-config-standard": "^6.2.1",
-    "eslint-friendly-formatter": "^2.0.6",
+    "eslint-friendly-formatter": "^2.0.7",
     "eslint-loader": "^1.6.1",
     "eslint-plugin-html": "^1.7.0",
     "eslint-plugin-promise": "^3.4.0",
@@ -50,7 +50,7 @@
     "firebase": "^3.6.4",
     "function-bind": "^1.1.0",
     "glob": "^7.1.1",
-    "html-webpack-plugin": "^2.24.1",
+    "html-webpack-plugin": "^2.26.0",
     "http-proxy-middleware": "^0.17.3",
     "in-viewport": "^3.4.2",
     "inject-loader": "^3.0.0-beta2",
@@ -65,8 +65,8 @@
     "karma-sinon-chai": "^1.2.4",
     "karma-sourcemap-loader": "^0.3.7",
     "karma-spec-reporter": "0.0.26",
-    "karma-webpack": "^1.8.0",
-    "lodash": "^4.17.2",
+    "karma-webpack": "^1.8.1",
+    "lodash": "^4.17.4",
     "lolex": "^1.5.2",
     "markdown-it": "^8.2.2",
     "markdown-it-anchor": "^2.6.0",
@@ -75,7 +75,7 @@
     "moment": "^2.17.1",
     "moment-countdown": "0.0.3",
     "nib": "^1.1.2",
-    "nightwatch": "^0.9.11",
+    "nightwatch": "^0.9.12",
     "node-zopfli": "^2.0.2",
     "ora": "^0.4.0",
     "perfect-scrollbar": "^0.6.15",
@@ -85,7 +85,7 @@
     "selenium-server": "3.0.1",
     "shelljs": "^0.7.5",
     "shortid": "^2.2.6",
-    "sinon": "^1.17.6",
+    "sinon": "^1.17.7",
     "sinon-chai": "^2.8.0",
     "slug": "^0.9.1",
     "stylus-loader": "^2.4.0",
@@ -93,20 +93,20 @@
     "to-slug-case": "^1.0.0",
     "url-loader": "^0.5.7",
     "vue-head": "^2.0.10",
-    "vue-hot-reload-api": "^2.0.6",
+    "vue-hot-reload-api": "^2.0.7",
     "vue-html-loader": "^1.2.3",
-    "vue-i18n": "^4.9.0",
+    "vue-i18n": "^4.10.0",
     "vue-loader": "^10.0.2",
     "vue-markdown-loader": "^0.6.1",
     "vue-router": "^2.1.1",
     "vue-style-loader": "^1.0.0",
-    "vue-template-compiler": "^2.1.6",
-    "vue-ua": "^1.1.2",
+    "vue-template-compiler": "^2.1.8",
+    "vue-ua": "<1.2.0",
     "vuex": "^2.1.1",
-    "vuex-router-sync": "^4.0.1",
+    "vuex-router-sync": "^4.1.0",
     "webpack": "^1.14.0",
     "webpack-dev-middleware": "^1.9.0",
-    "webpack-hot-middleware": "^2.13.2",
-    "webpack-merge": "^1.1.2"
+    "webpack-hot-middleware": "^2.15.0",
+    "webpack-merge": "^2.0.0"
   }
 }
