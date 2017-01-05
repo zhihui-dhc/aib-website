@@ -64,7 +64,7 @@ export default {
       }
       this.submitNewComment()
 
-      if (comment.parentId) {
+      if (this.newComment.parentComment.userId) {
         console.log('parentComment exists, going to it')
         this.viewComment(comment.parentId)
       } else {

@@ -29,7 +29,9 @@ firebase.auth().onAuthStateChanged(function (user) {
 
 const emptyUser = {
   displayName: '',
-  email: ''
+  email: '',
+  photoUrl: '',
+  uid: ''
 }
 
 const state = {
@@ -43,20 +45,23 @@ const mutations = {
     state.request = url
     // console.log('setting session request', url)
   },
-  setSessionUser (state, user) {
-    state.user = user
-    // console.log('setting session user')
-  },
   clearSessionUser (state) {
     state.user = JSON.parse(JSON.stringify(emptyUser))
     state.votes = {}
     // console.log('setting session user')
   },
-  updateSessionUserName (state, name) {
-    state.user.displayName = name
+  setSessionUserDisplayName (state, value) {
+    state.user.displayName = value
+    console.log('seting vuex user.displayName', value)
   },
-  updateSessionUserEmail (state, email) {
-    state.user.email = email
+  setSessionUserEmail (state, value) {
+    state.user.email = value
+  },
+  setSessionUserPhotoUrl (state, value) {
+    state.user.photoUrl = value
+  },
+  setSessionUserUid (state, value) {
+    state.user.uid = value
   },
   sessionDownvoteComment (state, commentId) {
     ref.child(commentId).set(-1)

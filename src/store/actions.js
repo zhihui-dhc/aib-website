@@ -35,10 +35,16 @@ export const resetNewComment =
 
 export const setSessionRequest =
   ({ commit }, url) => commit('setSessionRequest')
-export const updateSessionUserName =
-  ({ commit }, name) => commit('updateSessionUserName')
-export const updateSessionUserEmail =
-  ({ commit }, email) => commit('updateSessionUserEmail')
+
+export const setSessionUserDisplayName =
+  ({ commit }, displayName) => commit('setSessionUserDisplayName')
+export const setSessionUserEmail =
+  ({ commit }, email) => commit('setSessionUserEmail')
+export const setSessionUserPhotoUrl =
+  ({ commit }, photoUrl) => commit('setSessionUserPhotoUrl')
+export const setSessionUserUid =
+  ({ commit }, uid) => commit('setSessionUserUid')
+
 export const sessionDownvoteComment =
   ({ commit }, commentId) => commit('sessionDownvoteComment')
 export const sessionUpvoteComment =

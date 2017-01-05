@@ -52,17 +52,13 @@ export default {
   mounted () {
     let self = this
     // Vue.config.lang = getLang()
-
     firebase.auth().onAuthStateChanged(function (user) {
       if (user) {
-        let sessionUser = {
-          displayName: user.displayName,
-          email: user.email,
-          photoUrl: user.photoUrl,
-          uid: user.uid
-        }
-        self.$store.commit('setSessionUser', sessionUser)
-        console.log('signed in:', sessionUser.email)
+        self.$store.commit('setSessionUserDisplayName', user.displayName)
+        self.$store.commit('setSessionUserEmail', user.email)
+        self.$store.commit('setSessionUserPhotoUrl', user.photoUrl)
+        self.$store.commit('setSessionUserUid', user.uid)
+        console.log('signed in:', user.email)
       } else {
         self.$store.commit('clearSessionUser')
         console.log('signed out')

@@ -129,7 +129,7 @@ export default {
           user.updateProfile({
             displayName: self.user.displayName
           }).then(function () {
-            console.log('set firebase user display name', self.user.displayName)
+            self.$store.commit('setSessionUserDisplayName', self.user.displayName)
           }, function (error) {
             console.log('error', error)
           })
@@ -145,6 +145,21 @@ export default {
         this.$router.push('/')
       }
     }
+  },
+  mounted () {
+    let self = this
+    firebase.auth().onAuthStateChanged(function (user) {
+      if (user) {
+        self.$store.commit('setSessionUserDisplayName', user.displayName)
+        self.$store.commit('setSessionUserEmail', user.email)
+        self.$store.commit('setSessionUserPhotoUrl', user.photoUrl)
+        self.$store.commit('setSessionUserUid', user.uid)
+        console.log('signed in:', user.email)
+      } else {
+        self.$store.commit('clearSessionUser')
+        console.log('signed out')
+      }
+    })
   }
 }
 </script>

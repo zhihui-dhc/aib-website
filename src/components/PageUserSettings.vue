@@ -59,7 +59,7 @@ export default {
         return this.$store.state.session.user.displayName
       },
       set (value) {
-        this.$store.commit('updateSessionUserName', value)
+        this.$store.commit('setSessionUserDisplayName', value)
       }
     },
     newEmail: {
@@ -67,7 +67,7 @@ export default {
         return this.$store.state.session.user.email
       },
       set (value) {
-        this.$store.commit('updateSessionUserEmail', value)
+        this.$store.commit('setSessionUserEmail', value)
       }
     },
     ...mapGetters([

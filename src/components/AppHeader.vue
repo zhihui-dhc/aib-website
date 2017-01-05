@@ -20,7 +20,7 @@
   </header>
   <nav v-if="!isTocPage" class="user-nav">
     <template v-if="sessionUser.email">
-      <router-link to="/settings">{{ sessionUser.displayName }}</router-link>
+      <router-link to="/settings">{{ displayName }}</router-link>
       <a @click="signOut">Sign Out</a>
     </template>
     <template v-else>
@@ -37,6 +37,13 @@ import { mapGetters } from 'vuex'
 export default {
   name: 'app-header',
   computed: {
+    displayName () {
+      if (this.sessionUser.displayName) {
+        return this.sessionUser.displayName
+      } else {
+        return 'Loading...'
+      }
+    },
     isTocPage () {
       return this.$route.path === '/whitepaper' || this.$route.path === '/faq'
     },
