@@ -7,7 +7,7 @@ let toPascalCase = require('to-pascal-case')
 let yaml = require('js-yaml')
 
 let postsJsonFile = './src/store/json/posts.json'
-let rssTemplate = require('./rssTemplate.js')
+let rssTemplate = require('./blog-rss.js')
 
 let md = require('markdown-it')({
   preset: 'default',
