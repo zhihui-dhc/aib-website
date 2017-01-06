@@ -153,7 +153,7 @@ export default {
 
 @media screen and (min-width: 400px)
   .app-header
-    nav
+    .app-nav
       a
         font-size x
         .short

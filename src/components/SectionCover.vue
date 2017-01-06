@@ -39,6 +39,7 @@ export default {
   display flex
   align-items center
   justify-content center
+  background #eaeaea
 
   .section-container
     background url('../assets/images/cover_image.png') center center

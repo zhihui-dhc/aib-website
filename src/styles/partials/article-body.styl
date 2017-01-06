@@ -40,15 +40,6 @@
       margin-bottom 0
       font-size 0.75rem
 
-  p, ul, ol
-    /* These are technically the same, but use both */
-    overflow-wrap break-word
-    word-wrap break-word
-    text-align justify
-
-  /* Adds a hyphen where the word breaks, if supported (No Blink) */
-  hyphens auto
-
   p, ul, ol, table, blockquote, img, .btn
     margin-bottom 1.38em
 
@@ -193,6 +184,15 @@
     iframe.iframe-video
       max-width 48em
       max-height 27em
+
+    p, ul, ol, blockquote
+      /* These are technically the same, but use both */
+      overflow-wrap break-word
+      word-wrap break-word
+      text-align justify
+
+      /* Adds a hyphen where the word breaks, if supported (No Blink) */
+      hyphens auto
 
 @media screen and (min-width: 960px)
   .toc-padding.toc-visible
