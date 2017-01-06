@@ -84,7 +84,7 @@ export default {
       return {
         inner: 'Cosmos',
         separator: '-',
-        complement: this.$t('site.networkOfBlockchains')
+        complement: this.$t('site.internetOfBlockchains')
       }
     }
   }

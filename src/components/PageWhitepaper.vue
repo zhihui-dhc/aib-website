@@ -35,7 +35,7 @@ export default {
       return {
         inner: this.$t('siteHeader.whitepaper'),
         separator: '-',
-        complement: 'Cosmos - ' + this.$t('site.networkOfBlockchains')
+        complement: 'Cosmos - ' + this.$t('site.internetOfBlockchains')
       }
     }
   },

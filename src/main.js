@@ -29,9 +29,6 @@ Vue.use(VueAnalytics, {
 Vue.config.lang = 'en'
 Vue.config.fallbackLang = 'en'
 Vue.locale('en', require('./content/interface/en.json'))
-Vue.locale('ja', require('./content/interface/ja.json'))
-Vue.locale('ko', require('./content/interface/ko.json'))
-Vue.locale('zh', require('./content/interface/zh.json'))
 
 /* eslint no-unused-vars: 0 */
 const app = new Vue({
