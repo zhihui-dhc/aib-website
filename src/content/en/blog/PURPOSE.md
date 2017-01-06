@@ -2,7 +2,7 @@
 title: Why We Are Building the Internet of Blockchains
 slug: purpose-of-cosmos
 date: 2017-01-05
-author: Jae Kwon and Ethan Buchman
+author: Jae Kwon & Ethan Buchman
 excerpt: Cosmos is a culmination of lessons of prior cryptocurrencies. It's designed to be extended to incorporate future innovations. It's a distributed ledger platform suitable for generations to come.
 ~~~
 

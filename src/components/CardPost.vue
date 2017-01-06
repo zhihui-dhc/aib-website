@@ -29,11 +29,7 @@ export default {
 
 .card-post
   margin 0 auto
-
-  border-bottom 0.25rem solid c-app-fg
-
-  &:last-of-type
-    border-bottom none
+  border-bottom 1px dotted bc
 
   a
     padding 1em
@@ -44,11 +40,13 @@ export default {
 
   .title
     line-height 1.25
-    font-size 1.125em
     color txt
+    font-weight 400
 
   .meta
     color light
+    font-size 0.875rem
+    margin-top 0.5rem
 
   .desc
     max-width 40em
@@ -56,9 +54,9 @@ export default {
 @media screen and (min-width: 360px)
   .card-post
     .title
-      font-size 1.125em
+      font-size 1.25rem
     .meta
-      font-size 0.85em
+      font-size 1rem
 
 @media screen and (min-width: 720px)
   .card-post

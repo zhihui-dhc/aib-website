@@ -1,7 +1,9 @@
 <template>
   <header :class="headerClass">
-    <h1>{{ title }}</h1>
-    <p v-if="subtitle" v-html="subtitle"></p>
+    <div class="text">
+      <h1 class="title">{{ title }}</h1>
+      <p class="meta" v-if="subtitle" v-html="subtitle"></p>
+    </div>
   </header>
 </template>
 
@@ -30,29 +32,25 @@ export default {
 
 .page-header
   position relative
-  padding 2rem 1rem
+  border-bottom 1px dotted bc
 
-  border-bottom 1px solid bc
-  display flex
-  flex-flow column nowrap
+  .text
+    margin 0 auto
+    padding 1.5rem 1rem
+    max-width 48rem
+    display flex
+    flex-flow column nowrap
 
-  h1, p
-    text-align center
-
-  h1
-    font-size 1.75*x
+  .title
+    font-size 2rem
     line-height 1.25
     color txt
-    font-weight 300
-    max-width 40*x
-    margin 0 auto
+    font-weight 500
 
-  p
-    color dim
-    font-size 0.875rem
-
-    max-width 22*x
-    margin 0.5rem auto 0
+  .meta
+    color light
+    margin-top 0.5rem
+    font-size 0.875*x
 
     strong
       font-weight 500
@@ -61,30 +59,30 @@ export default {
     a
       color link
 
-  &.page-header-default
+  &.page-header-default .text
     align-items center
 
-  &.page-header-center
+  &.page-header-center .text
     align-items center
     justify-content center
     align-content center
 
+@media screen and (min-width: 360px)
+  .page-header
+    .meta
+      font-size 1rem
+
 @media screen and (min-width: 720px)
   .page-header
-    h1
-      font-size 2rem
+    .text
+      padding-left 1.5rem
+      padding-right 1.5rem
+    .title
       font-weight 600
 
 @media screen and (min-width: 960px)
   .page-header
-    padding 3rem
-
-    &.page-header-wide
-      padding 3rem
-      max-width 40em
-      margin-left auto
-      margin-right auto
-
-      h1, p
-        text-align left
+    .text
+      padding-top 3rem
+      padding-bottom 3rem
 </style>

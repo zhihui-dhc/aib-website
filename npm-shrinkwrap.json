@@ -3675,7 +3675,7 @@
     },
     "jade": {
       "version": "0.26.3",
-      "from": "jade@0.26.3",
+      "from": "https://registry.npmjs.org/jade/-/jade-0.26.3.tgz",
       "resolved": "https://registry.npmjs.org/jade/-/jade-0.26.3.tgz",
       "dependencies": {
         "commander": {

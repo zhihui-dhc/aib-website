@@ -83,7 +83,7 @@ export default {
   flex-flow row wrap
   background #fff
   background hsla(0,0,100%,0.95)
-  box-shadow hsla(0,0,0,0.05) 0 0.15rem 0.2rem
+  border-bottom 1px solid bc
 
   a.nav-home
     height 3*x
@@ -109,6 +109,7 @@ export default {
       color txt
       default-border-top()
       line-height 3*x
+      font-weight 400
 
       .short
         display inline
@@ -126,24 +127,21 @@ export default {
   top 3rem
   left 0
   width 100vw
-  background hsl(0,0,97%)
   display flex
   justify-content flex-end
-
-  box-shadow hsla(0,0,0,0.1) 0 0.1rem 0.15rem
   z-index 1
+  background #fff
+  border-bottom 1px solid bc
+  padding 0 0.333rem
   
   a
     color txt
     font-size 0.75rem
-    padding 0 0.5rem
+    padding 0 0.333rem
     line-height 1.5rem
-    border-right 1px solid bc
     cursor pointer
     &:hover
       color link
-    &:last-of-type
-      border-right none
 
 @media screen and (min-width: 360px)
   .app-header

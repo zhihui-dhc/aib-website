@@ -95,8 +95,6 @@ export default {
 @import '../styles/variables.styl'
 
 .section-home
-  border-top dbd
-
   &#home-intro
     .btn
       max-width 13*x
@@ -105,6 +103,7 @@ export default {
 
   &.sh-video
     padding 3rem 0
+    background c-app-fg
     iframe
       width 100vw
       height 56.25vw

@@ -1,18 +1,18 @@
 .article-body
   line-height 1.58
-
-  max-width 42em
+  max-width 48em
   margin-left auto
   margin-right auto
   padding 0 1em
+
   hr
     border none
-    border-top 4px solid bc
+    border-top 0.25rem solid bc
     background transparent
     height 0
     margin 0
     padding 0
-    margin 2*x 0
+    margin 1.5rem 0
   a
     &:hover
       text-decoration underline
@@ -35,14 +35,16 @@
     margin-left -1*x
     margin-right -1*x
     padding 0.375*x 0.5*x
-    font-size 0.875*x
     line-height 1.25
     code
       margin-bottom 0
+      font-size 0.75rem
 
-  /* These are technically the same, but use both */
-  overflow-wrap break-word
-  word-wrap break-word
+  p, ul, ol
+    /* These are technically the same, but use both */
+    overflow-wrap break-word
+    word-wrap break-word
+    text-align justify
 
   /* Adds a hyphen where the word breaks, if supported (No Blink) */
   hyphens auto
@@ -109,26 +111,27 @@
         color dim
 
   h1
-    font-size 1.75*x
+    font-size 2rem
     font-weight 500
-    padding-top 2rem
+    padding-top 1rem
     margin 2rem 0 1rem
 
   h1 + h2
     margin-top 0
 
   h2
-    font-size 1.5*x
+    font-size 1.5rem
     margin 2*x 0 x
+
   h2:first-child
     margin-top 0
 
   h3
-    font-size 1.25*x
+    font-size 1.25rem
     margin x 0
 
   h4
-    font-size 1.125*x
+    font-size 1.125rem
     font-style italic
     margin x 0
 
@@ -182,8 +185,9 @@
 
 @media screen and (min-width: 720px)
   .article-body
+    padding 0 2rem
     h1
-      font-size 2rem
+      padding-top 2rem
       font-weight 600
 
     iframe.iframe-video
@@ -197,6 +201,8 @@
 @media screen and (min-width: 1200px)
   .toc-padding.toc-visible
     margin-right 20rem + 1rem
+  .article-body
+    padding 0
 
 @media screen and (min-width: 1800px)
   .toc-padding.toc-visible

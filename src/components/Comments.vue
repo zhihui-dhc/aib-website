@@ -1,7 +1,7 @@
 <template>
   <div class="pz-comments-container" id="comments">
     <comment-form-btn></comment-form-btn>
-    <div class="pz-comments">
+    <div class="pz-comments" v-if="comments.length > 0">
       <comment00 v-for="comment in comments" :comment="comment"></comment00>
     </div>
   </div>

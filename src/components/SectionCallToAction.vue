@@ -24,10 +24,10 @@ export default {
 @import '../styles/variables.styl'
 
 .section-call-to-action
-  border-top dbd
+  background c-app-fg
 
   .section-container
-    max-width 480px
+    max-width 25rem
     margin 0 auto
 
     text-align center
@@ -40,7 +40,7 @@ export default {
 
     .description
       margin-bottom 1.5rem
-      color dim
+      color light
 
     form
       margin-bottom 1rem

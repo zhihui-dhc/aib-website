@@ -6,7 +6,7 @@
       type="wide">
     </page-header>
     <div class="page-content">
-      <card-post :title="post.title" :desc="post.description" :url="'/blog/' + post.slug" :meta="post.dateFriendly" v-for="post in posts">
+      <card-post :title="post.title" :desc="post.description" :url="'/blog/' + post.slug" :meta="post.dateFriendly + ' · ' + post.author" v-for="post in posts">
       </card-post>
     </div>
   </div>
