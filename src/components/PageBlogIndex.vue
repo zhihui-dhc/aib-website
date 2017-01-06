@@ -32,8 +32,14 @@ export default {
       'allPosts'
     ])
   },
-  mounted () {
-    document.title = 'Blog - Cosmos'
+  head: {
+    title () {
+      return {
+        inner: this.$t('siteHeader.blog'),
+        separator: '-',
+        complement: 'Cosmos - ' + this.$t('site.internetOfBlockchains')
+      }
+    }
   }
 }
 </script>

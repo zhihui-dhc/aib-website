@@ -55,8 +55,14 @@ export default {
       'allPosts'
     ])
   },
-  mounted () {
-    document.title = this.entry.title + ' - Tendermint'
+  head: {
+    title () {
+      return {
+        inner: this.entry.title,
+        separator: '-',
+        complement: 'Cosmos - ' + this.$t('site.internetOfBlockchains')
+      }
+    }
   }
 }
 </script>
