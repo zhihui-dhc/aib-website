@@ -37,7 +37,6 @@ export default {
   .text
     margin 0 auto
     padding 1.5rem 1rem
-    max-width 48rem
     display flex
     flex-flow column nowrap
 
