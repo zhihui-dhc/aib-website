@@ -1,10 +1,11 @@
 <template>
   <div class="page page-no-user">
     <page-faq-nav></page-faq-nav>
-    <div class="toc-padding" v-bind:class="{ 'toc-visible': faqTocVisible }">
-    <text-container>
-      <text-content></text-content>
-    </text-container>
+    <toc-padding v-bind:class="{ 'toc-visible': faqTocVisible }">
+      <text-container>
+        <text-content></text-content>
+      </text-container>
+    </toc-padding>
   </div>
 </template>
 
