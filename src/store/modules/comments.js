@@ -1,5 +1,5 @@
 import firebase from '../../scripts/firebase.js'
-let ref = firebase.db.ref('comments')
+let ref = firebase.database().ref('comments')
 
 const state = {
   all: []
