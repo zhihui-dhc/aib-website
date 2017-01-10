@@ -58,6 +58,7 @@ export default {
 
   p, ul, ol, table, blockquote, img, .btn
     margin-bottom 1.38em
+    overflow-x hidden
 
   .youtube
     display block
@@ -145,6 +146,10 @@ export default {
 
   ul, ol
     padding-left 1.5em
+
+  ul ul, ul ol, ol ul, ol ol
+    margin-bottom 0
+    padding-top 0.25em
 
   ul li
     list-style square

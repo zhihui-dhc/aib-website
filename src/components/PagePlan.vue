@@ -9,7 +9,7 @@
 <script>
 import PageHeader from './PageHeader'
 import TextContainer from './TextContainer'
-import TextContent from '../content/en/PLAN.md'
+import TextContent from '../locales/content/en-US/PLAN.md'
 export default {
   name: 'page-plan',
   components: {
@@ -22,7 +22,7 @@ export default {
       return {
         inner: this.$t('siteHeader.plan'),
         separator: '-',
-        complement: 'Cosmos - ' + this.$t('site.internetOfBlockchains')
+        complement: this.$t('site.title')
       }
     }
   }

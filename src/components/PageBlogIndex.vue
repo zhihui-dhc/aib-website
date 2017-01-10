@@ -37,7 +37,7 @@ export default {
       return {
         inner: this.$t('siteHeader.blog'),
         separator: '-',
-        complement: 'Cosmos - ' + this.$t('site.internetOfBlockchains')
+        complement: this.$t('site.title')
       }
     }
   }

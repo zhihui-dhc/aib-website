@@ -2,26 +2,16 @@
   <menu class="page-whitepaper-locale">
     <router-link to="/whitepaper/en-US">English</router-link>
     <router-link to="/whitepaper/zh-CN">中文</router-link>
+    <!--
     <router-link to="/whitepaper/ja">日本語</router-link>
     <router-link to="/whitepaper/ko">한국어</router-link>
+    -->
   </menu>
 </template>
 
 <script>
-import Vue from 'vue'
 export default {
-  name: 'page-whitepaper-locale',
-  computed: {
-    lang () {
-      return Vue.config.lang
-    }
-  },
-  methods: {
-    setLang (lang) {
-      Vue.config.lang = lang
-      window.localStorage.setItem('language', lang)
-    }
-  }
+  name: 'page-whitepaper-locale'
 }
 </script>
 
@@ -31,14 +21,17 @@ export default {
 .page-whitepaper-locale
   display flex
   align-items center
-  padding 0 0.25*x
+  padding 0 0.25rem
   justify-content center
-  height 3rem
-  border-bottom 1px solid bc
+
+  height 2rem
+  border-bottom 1px dotted bc
   a
-    padding 0 0.75*x
+    font-size 0.875rem
+    padding 0 0.75rem
     display block
     cursor pointer
+    color txt
     &.router-link-active
-      color txt
+      color light
 </style>

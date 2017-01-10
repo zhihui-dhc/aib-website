@@ -32,7 +32,7 @@ export default {
   },
   methods: {
     showToc (value) {
-      if (value === true) {
+      if (value) {
         Ps.initialize(document.querySelector('.minimal-toc'))
         this.$store.commit('setWhitepaperTocVisible', true)
       } else {

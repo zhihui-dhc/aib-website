@@ -12,7 +12,7 @@
 import { mapGetters } from 'vuex'
 import PageFaqNav from './PageFaqNav'
 import TextContainer from './TextContainer'
-import TextContent from '../content/en/FAQ.md'
+import TextContent from '../locales/content/en-US/FAQ.md'
 export default {
   name: 'page-faq',
   components: {
@@ -30,7 +30,7 @@ export default {
       return {
         inner: this.$t('siteHeader.faq'),
         separator: '-',
-        complement: 'Cosmos - ' + this.$t('site.internetOfBlockchains')
+        complement: this.$t('site.title')
       }
     }
   },
