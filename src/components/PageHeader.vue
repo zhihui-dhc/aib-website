@@ -2,7 +2,7 @@
   <header :class="headerClass">
     <div class="text">
       <h1 class="title">{{ title }}</h1>
-      <p class="meta" v-if="subtitle" v-html="subtitle"></p>
+      <p class="subtitle" v-if="subtitle" v-html="subtitle"></p>
     </div>
   </header>
 </template>
@@ -13,10 +13,8 @@ export default {
   computed: {
     headerClass () {
       let value = 'page-header'
-      if (this.type === 'center') {
-        value += ' page-header-center'
-      } else if (this.type === 'wide') {
-        value += ' page-header-wide'
+      if (this.type === 'left') {
+        value += ' page-header-left'
       } else {
         value += ' page-header-default '
       }
@@ -37,8 +35,10 @@ export default {
   .text
     margin 0 auto
     padding 1.5rem 1rem
+
     display flex
     flex-flow column nowrap
+    align-items left
 
   .title
     font-size 2rem
@@ -46,7 +46,7 @@ export default {
     color txt
     font-weight 500
 
-  .meta
+  .subtitle
     color light
     margin-top 0.5rem
     font-size 0.875*x
@@ -58,17 +58,9 @@ export default {
     a
       color link
 
-  &.page-header-default .text
-    align-items center
-
-  &.page-header-center .text
-    align-items center
-    justify-content center
-    align-content center
-
 @media screen and (min-width: 360px)
   .page-header
-    .meta
+    .subtitle
       font-size 1rem
 
 @media screen and (min-width: 720px)
@@ -78,6 +70,11 @@ export default {
       padding-right 1.5rem
     .title
       font-weight 600
+
+    &.page-header-default .text
+      align-items center
+      justify-content center
+      align-content center
 
 @media screen and (min-width: 960px)
   .page-header

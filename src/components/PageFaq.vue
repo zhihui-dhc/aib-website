@@ -2,27 +2,25 @@
   <div class="page page-no-user">
     <page-faq-nav></page-faq-nav>
     <div class="toc-padding" v-bind:class="{ 'toc-visible': faqTocVisible }">
-    <div class="article-body">
-      <en></en>
-    </div>
+    <text-container>
+      <text-content></text-content>
+    </text-container>
   </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
 import PageFaqNav from './PageFaqNav'
-import Vue from 'vue'
-import en from '../content/en/FAQ.md'
+import TextContainer from './TextContainer'
+import TextContent from '../content/en/FAQ.md'
 export default {
   name: 'page-faq',
   components: {
     PageFaqNav,
-    en
+    TextContainer,
+    TextContent
   },
   computed: {
-    lang () {
-      return Vue.config.lang
-    },
     ...mapGetters([
       'faqTocVisible'
     ])

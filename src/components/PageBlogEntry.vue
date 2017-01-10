@@ -6,8 +6,9 @@
     </page-header>
     <section class="section-default">
       <div class="section-container">
-        <div class="article-body" v-html="entry.body"></div>
-        <!--<article-footer :facebook-url="facebookUrl" :twitter-url="twitterUrl"></article-footer>-->
+        <text-container>
+          <div v-html="entry.body"></div>
+        </text-container>
       </div>
     </section>
     <comments></comments>
@@ -16,6 +17,7 @@
 
 <script>
 import ArticleFooter from './ArticleFooter'
+import TextContainer from './TextContainer'
 import PageHeader from './PageHeader'
 import Comments from './Comments'
 import Vue from 'vue'
@@ -24,6 +26,7 @@ export default {
   name: 'page-blog-entry',
   components: {
     ArticleFooter,
+    TextContainer,
     PageHeader,
     Comments
   },

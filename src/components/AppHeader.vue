@@ -45,7 +45,7 @@ export default {
       }
     },
     isTocPage () {
-      return this.$route.path === '/whitepaper' || this.$route.path === '/faq'
+      return this.$route.name === 'whitepaper' || this.$route.name === 'faq'
     },
     ...mapGetters([
       'sessionUser'

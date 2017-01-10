@@ -3,7 +3,7 @@
     <page-header
       :title="$t('siteBlog.title')"
       :subtitle="$t('siteBlog.subtitle')"
-      type="wide">
+      type="left">
     </page-header>
     <div class="page-content">
       <card-post :title="post.title" :desc="post.description" :url="'/blog/' + post.slug" :meta="post.dateFriendly + ' · ' + post.author" v-for="post in posts">

@@ -1,4 +1,20 @@
-.article-body
+<template>
+  <div class="body-text">
+    <slot></slot>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'body-text',
+  props: ['content']
+}
+</script>
+
+<style lang="stylus">
+@import '../styles/variables.styl'
+
+.body-text
   line-height 1.58
   max-width 48em
   margin-left auto
@@ -61,6 +77,7 @@
   .left
     float left !important
     padding-right 2.5em !important
+
   .right
     float right !important
     padding-left 2.5em !important
@@ -168,14 +185,14 @@
     margin-top 1.5*x
 
 @media screen and (min-width: 560px)
-  .article-body
+  .body-text
     pre
       font-size x
       margin-left 0
       margin-right 0
 
 @media screen and (min-width: 720px)
-  .article-body
+  .body-text
     padding 0 2rem
     h1
       padding-top 2rem
@@ -185,25 +202,7 @@
       max-width 48em
       max-height 27em
 
-    p, ul, ol, blockquote
-      /* These are technically the same, but use both */
-      overflow-wrap break-word
-      word-wrap break-word
-      text-align justify
-
-      /* Adds a hyphen where the word breaks, if supported (No Blink) */
-      hyphens auto
-
-@media screen and (min-width: 960px)
-  .toc-padding.toc-visible
-    margin-right 15rem + 1rem
-
 @media screen and (min-width: 1200px)
-  .toc-padding.toc-visible
-    margin-right 20rem + 1rem
-  .article-body
+  .body-text
     padding 0
-
-@media screen and (min-width: 1800px)
-  .toc-padding.toc-visible
-    margin-right 25rem + 1rem
+</style>

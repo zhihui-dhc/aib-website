@@ -1,25 +1,21 @@
 <template>
   <div class="page page-plan">
-    <div class="article-body">
-      <en></en>
-    </div>
+    <text-container>
+      <text-content></text-content>
+    </text-container>
   </div>
 </template>
 
 <script>
 import PageHeader from './PageHeader'
-import en from '../content/en/PLAN.md'
-import Vue from 'vue'
-
+import TextContainer from './TextContainer'
+import TextContent from '../content/en/PLAN.md'
 export default {
+  name: 'page-plan',
   components: {
     PageHeader,
-    en
-  },
-  computed: {
-    lang () {
-      return Vue.config.lang
-    }
+    TextContainer,
+    TextContent
   },
   head: {
     title () {

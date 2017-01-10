@@ -1,10 +1,12 @@
 <template>
   <div class="page page-no-user">
+    <page-whitepaper-locale></page-whitepaper-locale>
     <page-whitepaper-nav></page-whitepaper-nav>
     <div class="toc-padding" v-bind:class="{ 'toc-visible': whitepaperTocVisible }">
-    <div class="article-body">
-      <zh v-if="lang === 'zh'"></zh>
-      <en v-else></en>
+      <text-container>
+        <text-en-us v-if="$route.params.locale === 'en-US'"></text-en-us>
+        <text-zh-cn v-if="$route.params.locale === 'zh-CN'"></text-zh-cn>
+      </text-container>
     </div>
   </div>
 </template>
@@ -12,20 +14,19 @@
 <script>
 import { mapGetters } from 'vuex'
 import PageWhitepaperNav from './PageWhitepaperNav'
-import en from '../content/en/WHITEPAPER.md'
-import zh from '../content/zh/WHITEPAPER.md'
-import Vue from 'vue'
-
+import PageWhitepaperLocale from './PageWhitepaperLocale'
+import TextContainer from './TextContainer'
+import TextEnUs from '../locales/content/en-US/WHITEPAPER.md'
+import TextZhCn from '../locales/content/zh-CN/WHITEPAPER.md'
 export default {
   components: {
     PageWhitepaperNav,
-    en,
-    zh
+    PageWhitepaperLocale,
+    TextContainer,
+    TextEnUs,
+    TextZhCn
   },
   computed: {
-    lang () {
-      return Vue.config.lang
-    },
     ...mapGetters([
       'whitepaperTocVisible'
     ])

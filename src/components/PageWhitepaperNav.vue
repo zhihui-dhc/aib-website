@@ -1,9 +1,15 @@
 <template>
   <div class="page-whitepaper-nav mobile-only">
-    <div class="toc-hidden-bar" v-show="!whitepaperTocVisible" @click="showToc(true)">
+    <div
+      class="toc-hidden-bar"
+      v-show="!whitepaperTocVisible"
+      @click="showToc(true)">
       <i class="fa fa-bars"></i>
     </div>
-    <div class="toc-hidden-bar" v-show="whitepaperTocVisible" @click="showToc(false)">
+    <div
+      class="toc-hidden-bar"
+      v-show="whitepaperTocVisible"
+      @click="showToc(false)">
       <i class="fa fa-times"></i>
     </div>
   </div>
@@ -16,13 +22,9 @@ import inViewport from '../scripts/inViewport.js'
 import visibleTocActivate from '../scripts/visibleTocActivate.js'
 import percentageScrolling from '../scripts/percentageScrolling.js'
 import { mapGetters } from 'vuex'
-import Vue from 'vue'
 export default {
   name: 'page-whitepaper-nav',
   computed: {
-    lang () {
-      return Vue.config.lang
-    },
     ...mapGetters([
       'whitepaperTocVisible',
       'whitepaperElementsVisible'
@@ -54,10 +56,6 @@ export default {
   },
   props: ['toc-visible'],
   watch: {
-    lang () {
-      console.log('language changed, reintializing table of contents')
-      this.initToc()
-    },
     whitepaperElementsVisible () {
       visibleTocActivate(this.whitepaperElementsVisible)
     },

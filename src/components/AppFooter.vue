@@ -3,14 +3,6 @@
     <section-call-to-action v-if="!thisIsAFundPage"></section-call-to-action>
     <section-social-media></section-social-media>
     <div class="app-bottom">
-      <div class="langs" v-if="thisIsWhitepaper">
-        <a @click="setLang('en')" :class="{'active' : lang === 'en'}">English</a>
-        <a @click="setLang('zh')" :class="{'active' : lang === 'zh'}">中文</a>
-        <!--
-        <a @click="setLang('ja')" :class="{'active' : lang === 'ja'}">日本語</a>
-        <a @click="setLang('ko')" :class="{'active' : lang === 'ko'}">한국어</a>
-        -->
-      </div>
       <div class="copyright">
         &copy; 2016 Cosmos Network Foundation
       </div>
@@ -22,7 +14,6 @@
 import { mapGetters } from 'vuex'
 import SectionCallToAction from './SectionCallToAction'
 import SectionSocialMedia from './SectionSocialMedia'
-import Vue from 'vue'
 export default {
   name: 'app-footer',
   components: {
@@ -34,34 +25,15 @@ export default {
       'faqTocVisible',
       'whitepaperTocVisible'
     ]),
-    lang () {
-      return Vue.config.lang
-    },
     tocVisible () {
-      let path = this.$route.path.replace('/', '')
+      let name = this.$route.name
       let visible = false
-      if (path === 'faq' && this.faqTocVisible) {
-        visible = true
-      }
-      if (path === 'whitepaper' && this.whitepaperTocVisible) {
-        visible = true
-      }
+      if (name === 'faq' && this.faqTocVisible) { visible = true }
+      if (name === 'whitepaper' && this.whitepaperTocVisible) { visible = true }
       return visible
     },
-    thisIsAFundPage () {
-      if (this.$route.path.replace('/', '') === 'fund') { return true }
-      return false
-    },
-    thisIsWhitepaper () {
-      if (this.$route.path.replace('/', '') === 'whitepaper') { return true }
-      return false
-    }
-  },
-  methods: {
-    setLang (lang) {
-      Vue.config.lang = lang
-      window.localStorage.setItem('language', lang)
-    }
+    thisIsAFundPage () { this.$route.name === 'fund' },
+    thisIsWhitepaper () { return this.$route.name === 'whitepaper' }
   }
 }
 </script>

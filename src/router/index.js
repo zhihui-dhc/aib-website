@@ -11,14 +11,16 @@ const routes = [
   { path: '/comment/new', component: r('CommentNew') },
   { path: '/comment/edit', component: r('CommentEdit') },
 
-  { path: '/faq', component: r('Faq') },
-  { path: '/plan', component: r('Plan') },
-  { path: '/whitepaper', component: r('Whitepaper') },
+  { path: '/faq', name: 'faq', component: r('Faq') },
+  { path: '/plan', name: 'plan', component: r('Plan') },
 
-  { path: '/signup', component: r('UserSignUp') },
-  { path: '/signin', component: r('UserSignIn') },
-  { path: '/reset', component: r('UserReset') },
-  { path: '/settings', component: r('UserSettings') },
+  { path: '/whitepaper', redirect: '/whitepaper/en-US' },
+  { path: '/whitepaper/:locale', name: 'whitepaper', component: r('Whitepaper') },
+
+  { path: '/signup', name: 'signup', component: r('UserSignUp') },
+  { path: '/signin', name: 'signin', component: r('UserSignIn') },
+  { path: '/reset', name: 'reset', component: r('UserReset') },
+  { path: '/settings', name: 'settings', component: r('UserSettings') },
 
   // wildcards
   { path: '/404', component: r('404') },

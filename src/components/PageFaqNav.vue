@@ -1,9 +1,15 @@
 <template>
   <div class="page-faq-nav mobile-only">
-    <div class="toc-hidden-bar" v-show="!faqTocVisible" @click="showToc(true)">
+    <div
+      class="toc-hidden-bar"
+      v-show="!faqTocVisible"
+      @click="showToc(true)">
       <i class="fa fa-bars"></i>
     </div>
-    <div class="toc-hidden-bar" v-show="faqTocVisible" @click="showToc(false)">
+    <div
+      class="toc-hidden-bar"
+      v-show="faqTocVisible"
+      @click="showToc(false)">
       <i class="fa fa-times"></i>
     </div>
   </div>
@@ -16,7 +22,6 @@ import watchTocClicks from '../scripts/watchTocClicks.js'
 import inViewport from '../scripts/inViewport.js'
 import visibleTocActivate from '../scripts/visibleTocActivate.js'
 import percentageScrolling from '../scripts/percentageScrolling.js'
-
 export default {
   name: 'page-faq-nav',
   computed: {
