@@ -14,7 +14,6 @@ const routes = [
   { path: '/faq', component: r('Faq') },
   { path: '/plan', component: r('Plan') },
   { path: '/whitepaper', component: r('Whitepaper') },
-  { path: '/fund', component: r('Fund') },
 
   { path: '/signup', component: r('UserSignUp') },
   { path: '/signin', component: r('UserSignIn') },
