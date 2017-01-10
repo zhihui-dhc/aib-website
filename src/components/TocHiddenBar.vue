@@ -1,3 +1,19 @@
+<template>
+  <div class="toc-hidden-bar">
+    <i :class="'fa fa-' + icon"></i>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'toc-hidden-bar',
+  props: ['icon']
+}
+</script>
+
+<style lang="stylus">
+@import '../styles/variables.styl'
+
 .toc-hidden-bar
   z-index 101
   position fixed
@@ -40,3 +56,4 @@
 
     i.fa
       font-size 1.5*x
+</style>

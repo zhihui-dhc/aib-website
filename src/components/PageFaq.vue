@@ -11,12 +11,14 @@
 <script>
 import { mapGetters } from 'vuex'
 import PageFaqNav from './PageFaqNav'
+import TocPadding from './TocPadding'
 import TextContainer from './TextContainer'
 import TextContent from '../locales/content/en-US/FAQ.md'
 export default {
   name: 'page-faq',
   components: {
     PageFaqNav,
+    TocPadding,
     TextContainer,
     TextContent
   },
