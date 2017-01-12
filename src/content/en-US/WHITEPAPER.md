@@ -212,10 +212,10 @@ The Cosmos Hub is the first public blockchain in the Cosmos Network, powered by
 Tendermint's BFT consensus algorithm.  The Tendermint open-source project was
 born in 2014 to address the speed, scalability, and environmental issues of
 Bitcoin's proof-of-work consensus algorithm.  By using and improving upon
-proven BFT algorithms developed at MIT in 1988 [\[20\]][20], the Tendermint team was the first to
-conceptually demonstrate a proof-of-stake cryptocurrency that addresses the
-nothing-at-stake problem suffered by first-generation proof-of-stake cryptocurrencies
-such as NXT and BitShares.
+proven BFT algorithms developed at MIT in 1988 [\[20\]][20], the Tendermint
+team was the first to conceptually demonstrate a proof-of-stake cryptocurrency
+that addresses the nothing-at-stake problem suffered by first-generation
+proof-of-stake cryptocurrencies such as NXT and BitShares1.0.
 
 Today, practically all Bitcoin mobile wallets use trusted servers to provide
 them with transaction verification.  This is because proof-of-work requires
@@ -353,7 +353,7 @@ sending chain as to how many outbound packets are allowed.
 ![Figure of Zone1, Zone2, and Hub IBC without
 acknowledgement](https://raw.githubusercontent.com/gnuclear/atom-whitepaper/master/msc/ibc_without_ack.png)
 
-In the example above, in order to update the block-hash of
+<CAPTION on a figure> In the example above, in order to update the block-hash of
 "Zone1" on "Hub" (or of "Hub" on "Zone2"), an `IBCBlockCommitTx`
 transaction must be posted on "Hub" with the block-hash of "Zone1" (or on
 "Zone2" with the block-hash of "Hub").
@@ -803,19 +803,18 @@ connectivity, and functions for as long as the P2P network is weakly connected.
 
 #### BitShares delegated stake
 
-While not the first to deploy proof-of-stake (PoS), BitShares [\[12\]][12]
+While not the first to deploy proof-of-stake (PoS), BitShares1.0 [\[12\]][12]
 contributed considerably to research and adoption of PoS blockchains,
 particularly those known as "delegated" PoS.  In BitShares, stake holders elect
 "witnesses", responsible for ordering and committing transactions, and
 "delegates", responsible for coordinating software updates and parameter
-changes.  Though BitShares achieves high performance (100k tx/s, 1s latency) in
-ideal conditions, it is subject to double spend attacks by malicious witnesses
-which fork the blockchain without suffering an explicit economic punishment --
-it suffers from the "nothing-at-stake" problem. BitShares attempts to mitigate
-the problem by allowing transactions to refer to recent block-hashes.
-Additionally, stakeholders can remove or replace misbehaving witnesses on a
-daily basis, though this does nothing to explicitly punish successful 
-double-spend attacks.
+changes.  BitShares2.0 aims to achieve high performance (100k tx/s, 1s latency)
+in ideal conditions, with each block signed by a single signer, and transaction
+finality taking quite a bit longer than the block interval.  A canonical
+specificaiton is still in development.  Stakeholders can remove or replace
+misbehaving witnesses on a daily basis, but there is no significant collateral
+of witnesses or delegators in the likeness of Tendermint PoS that get slashed
+in the case of a successful double-spend attack.
 
 #### Stellar
 
