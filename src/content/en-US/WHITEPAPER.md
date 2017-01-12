@@ -589,16 +589,6 @@ every year.
 See the [Cosmos Plan](https://github.com/cosmos/cosmos/blob/master/PLAN.md)
 for additional details.
 
-#### Vesting
-
-To prevent the fundraiser from attracting short-term speculators only interested
-in pump-and-dump schemes, the genesis atoms will not be transferrable until
-they have vested.  Each account will vest atoms over a period of 2 years at a
-constant rate every hour, determined by the total number of genesis atoms / (2 *
-365 * 24) hours.  Atoms earned by the inflationary block reward are pre-vested,
-and can be transferred immediately, so that bonded validators and delegators can earn
-more than 1/2 of their genesis atoms after the first year.
-
 ### Limitations on the Number of Validators
 
 Unlike Bitcoin or other proof-of-work blockchains, a Tendermint blockchain gets
