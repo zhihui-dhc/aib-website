@@ -56,7 +56,7 @@ function writeRssFile (directory, data) {
 }
 
 let postsData = {
-  en: glob.sync('./src/locales/content/en-US/blog/*.md')
+  en: glob.sync('./src/content/en-US/blog/*.md')
 }
 
 function postsToNestedPosts (postsData) {

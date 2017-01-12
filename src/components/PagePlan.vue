@@ -9,7 +9,7 @@
 <script>
 import PageHeader from './PageHeader'
 import TextContainer from './TextContainer'
-import TextContent from '../locales/content/en-US/PLAN.md'
+import TextContent from '../content/en-US/PLAN.md'
 export default {
   name: 'page-plan',
   components: {
