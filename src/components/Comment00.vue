@@ -56,5 +56,4 @@ export default {
 @media screen and (min-width: 1200px)
   .pz-comment
     padding-left 2rem
-
 </style>

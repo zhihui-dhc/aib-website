@@ -100,7 +100,3 @@ export default {
   }
 }
 </script>
-
-<style lang="stylus">
-@import '../styles/variables.styl'
-</style>
