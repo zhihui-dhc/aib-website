@@ -1,10 +1,10 @@
 <template>
   <menu class="page-whitepaper-locale">
-    <router-link to="/whitepaper/en-US">English</router-link>
+    <router-link to="/whitepaper" exact="true">English</router-link>
+    <router-link to="/whitepaper/ko">한국어</router-link>
     <router-link to="/whitepaper/zh-CN">中文</router-link>
     <!--
     <router-link to="/whitepaper/ja">日本語</router-link>
-    <router-link to="/whitepaper/ko">한국어</router-link>
     -->
   </menu>
 </template>

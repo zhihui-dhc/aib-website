@@ -14,7 +14,8 @@ const routes = [
   { path: '/faq', name: 'faq', component: r('Faq') },
   { path: '/plan', name: 'plan', component: r('Plan') },
 
-  { path: '/whitepaper', redirect: '/whitepaper/en-US' },
+  { path: '/whitepaper', name: 'whitepaper', component: r('Whitepaper') },
+  { path: '/whitepaper/en-US', redirect: '/whitepaper' },
   { path: '/whitepaper/:locale', name: 'whitepaper', component: r('Whitepaper') },
 
   { path: '/signup', name: 'signup', component: r('UserSignUp') },

@@ -4,8 +4,9 @@
     <page-whitepaper-nav></page-whitepaper-nav>
     <toc-padding v-bind:class="{ 'toc-visible': whitepaperTocVisible }">
       <text-container>
-        <text-en-us v-if="$route.params.locale === 'en-US'"></text-en-us>
-        <text-zh-cn v-if="$route.params.locale === 'zh-CN'"></text-zh-cn>
+        <text-ko v-if="$route.params.locale === 'ko'"></text-ko>
+        <text-zh-cn v-else-if="$route.params.locale === 'zh-CN'"></text-zh-cn>
+        <text-en-us v-else></text-en-us>
       </text-container>
     </toc-padding>
   </div>
@@ -18,6 +19,7 @@ import PageWhitepaperLocale from './PageWhitepaperLocale'
 import TocPadding from './TocPadding'
 import TextContainer from './TextContainer'
 import TextEnUs from '../content/en-US/WHITEPAPER.md'
+import TextKo from '../content/ko/WHITEPAPER.md'
 import TextZhCn from '../content/zh-CN/WHITEPAPER.md'
 export default {
   components: {
@@ -26,6 +28,7 @@ export default {
     TocPadding,
     TextContainer,
     TextEnUs,
+    TextKo,
     TextZhCn
   },
   computed: {
