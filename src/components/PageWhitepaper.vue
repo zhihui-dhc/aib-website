@@ -1,6 +1,6 @@
 <template>
   <div class="page page-no-user">
-    <page-whitepaper-locale></page-whitepaper-locale>
+    <locale-menu :langs="['en-US', 'ko', 'zh-CN']"></locale-menu>
     <page-whitepaper-nav></page-whitepaper-nav>
     <toc-padding v-bind:class="{ 'toc-visible': whitepaperTocVisible }">
       <text-container>
@@ -15,7 +15,7 @@
 <script>
 import { mapGetters } from 'vuex'
 import PageWhitepaperNav from './PageWhitepaperNav'
-import PageWhitepaperLocale from './PageWhitepaperLocale'
+import LocaleMenu from './LocaleMenu'
 import TocPadding from './TocPadding'
 import TextContainer from './TextContainer'
 import TextEnUs from '../content/en-US/WHITEPAPER.md'
@@ -24,7 +24,7 @@ import TextZhCn from '../content/zh-CN/WHITEPAPER.md'
 export default {
   components: {
     PageWhitepaperNav,
-    PageWhitepaperLocale,
+    LocaleMenu,
     TocPadding,
     TextContainer,
     TextEnUs,

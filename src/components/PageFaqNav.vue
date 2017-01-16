@@ -70,8 +70,3 @@ export default {
   }
 }
 </script>
-
-<style lang="stylus">
-.page-faq-nav .minimal-toc ul > li > a
-  font-weight 300
-</style>

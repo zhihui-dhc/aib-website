@@ -1,8 +1,10 @@
 <template>
-  <menu class="page-whitepaper-locale">
-    <router-link to="/whitepaper" exact="true">English</router-link>
-    <router-link to="/whitepaper/ko">한국어</router-link>
-    <router-link to="/whitepaper/zh-CN">中文</router-link>
+  <menu class="locale-menu">
+    <router-link v-if="langs.includes('en-US')" to="/whitepaper" exact="true">
+      English
+    </router-link>
+    <router-link v-if="langs.includes('ko')" to="/whitepaper/ko">한국어</router-link>
+    <router-link v-if="langs.includes('zh-CN')" to="/whitepaper/zh-CN">简体中文</router-link>
     <!--
     <router-link to="/whitepaper/ja">日本語</router-link>
     -->
@@ -11,14 +13,15 @@
 
 <script>
 export default {
-  name: 'page-whitepaper-locale'
+  name: 'locale-menu',
+  props: ['langs']
 }
 </script>
 
 <style lang="stylus">
 @import '../styles/variables.styl'
 
-.page-whitepaper-locale
+.locale-menu
   display flex
   align-items center
   padding 0 0.25rem
@@ -32,6 +35,8 @@ export default {
     display block
     cursor pointer
     color txt
+    &:hover
+      color link
     &.router-link-active
       color light
 </style>
