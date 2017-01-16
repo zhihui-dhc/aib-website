@@ -18,7 +18,7 @@ Vue.use(VueHead)
 Vue.use(VueRouter)
 Vue.use(VueI18n)
 Vue.use(VueAnalytics, {
-  appName: 'Cosmos Website',
+  appName: 'Cosmos.Network',
   appVersion: '1.0',
   trackingId: 'UA-51029217-2',
   debug: false,
