@@ -4,8 +4,8 @@
 
 **저자:**
 
-Jae Kwon jae@tendermint.com<br/>
-Ethan Buchman ethan@tendermint.com
+Jae Kwon [jae@tendermint.com](mailto:jae@tendermint.com)<br>
+Ethan Buchman [ethan@tendermint.com](mailto:ethan@tendermint.com)
 
 **번역 및 제작:**
 

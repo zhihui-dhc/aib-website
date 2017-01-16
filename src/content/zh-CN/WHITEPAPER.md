@@ -1,9 +1,8 @@
 # Cosmos
-
 **分布式账本网络**
 
-Jae Kwon  [jae@tendermint.com](mailto:jae@tendermint.com)
-Ethan Buchman  [ethan@tendermint.com](mailto:ethan@tendermint.com)
+Jae Kwon [jae@tendermint.com](mailto:jae@tendermint.com)<br>
+Ethan Buchman [ethan@tendermint.com](mailto:ethan@tendermint.com)
 
 加入我们的 [Slack](http://forum.tendermint.com:3000/)一起讨论吧！
 
