@@ -1301,8 +1301,7 @@ initial packet status to `AckPending`.  Then, it is the receiving chain's
 responsibility to confirm delivery by including an abbreviated `IBCPacket` in the
 app Merkle hash.
 
-![Figure of Zone1, Zone2, and Hub IBC with
-acknowledgement](https://raw.githubusercontent.com/gnuclear/atom-whitepaper/master/msc/ibc_with_ack.png)
+![Figure of Zone1, Zone2, and Hub IBC with acknowledgement](https://raw.githubusercontent.com/gnuclear/atom-whitepaper/master/msc/ibc_with_ack.png)
 
 First, an `IBCBlockCommit` and `IBCPacketTx` are posted on "Hub" that proves
 the existence of an `IBCPacket` on "Zone1".  Say that `IBCPacketTx` has the
@@ -1375,8 +1374,7 @@ above, if "Hub" had not received an `AckSent` status from "Zone2" by block
 350, it would have set the status automatically to `Timeout`.  This evidence of
 a timeout can get posted back on "Zone1", and any tokens can be returned.
 
-![Figure of Zone1, Zone2, and Hub IBC with acknowledgement and
-timeout](https://raw.githubusercontent.com/gnuclear/atom-whitepaper/master/msc/ibc_with_ack_timeout.png)
+![Figure of Zone1, Zone2, and Hub IBC with acknowledgement and timeout](https://raw.githubusercontent.com/gnuclear/atom-whitepaper/master/msc/ibc_with_ack_timeout.png)
 
 ### Merkle Tree & Proof Specification
 

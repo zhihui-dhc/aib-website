@@ -50,8 +50,7 @@ Tendermint采用由绝对多数的选票（+⅔）选定的最优拜占庭容错
 
 除了其超强安全保障外，Tendermint还具备其他功效。以商品型云平台为例，Tendermint共识以分布在五大洲七个数据中心的64位节点为基准，其每秒可以处理成千上万笔交易，提交顺序延迟时间为1-2秒。而值得关注的是，即使是在极其恶劣的敌对环境中，比如验证人崩溃了或者是遇到蓄谋已久的恶意选票，也能维持这种每秒千笔交易的高绩效。详见下图。
 
-![Figure of Tendermint throughput performance]
-(https://raw.githubusercontent.com/gnuclear/atom-whitepaper/master/images/tendermint_throughput_blocksize.png)
+![Figure of Tendermint throughput performance](https://raw.githubusercontent.com/gnuclear/atom-whitepaper/master/images/tendermint_throughput_blocksize.png)
 
 ### 轻客户端
 
@@ -117,9 +116,7 @@ Cosmos网络能够在政策不同的区块间实现互操作性，这一点可�
 
 在这个基础上，Cosmos中心负责管理众多独立区块链（称之为"空间"，有时也叫做"碎片"，根据数据库扩展技术"分片"得出）。中心上的空间会源源不断地提交最新区块，这一点可以让中心跟上每个空间状态的变化。同样地，每个空间也会和中心的状态保持一致（不过空间之间不会同彼此的步伐保持一致，除非间接通过中心来实现）。之后信息包就会从一个空间传递到另一个空间，并通过发布梅克尔证明（Merkle-proof）来说明信息已经被传送或接收。这种机制叫做"区块链间通信"，或者简称为"IBC"机制。
 
-
-![Figure of hub and zones
-acknowledgement](https://raw.githubusercontent.com/gnuclear/atom-whitepaper/master/images/hub_and_zones.png)
+![Figure of hub and zones acknowledgement](https://raw.githubusercontent.com/gnuclear/atom-whitepaper/master/images/hub_and_zones.png)
 
 任何区块都可以自行成为中心，从而形成非循环图，但是有一点需要阐明，那就是我们只会对简单配置（只有一个中心）以及许多没有中心的空间进行描述。
 
@@ -143,8 +140,7 @@ IBC协议可以自然定义为两种交易的使用：一种是IBCBlockCommitTx 
 
 通过将IBC机制分裂成两个单独的交易，即IBCBlockCommitTx 交易与IBCPacketTx交易，我们可以让接收链的本地费用市场机制，来决定承认哪个包裹，与此同时还能确保发送方的完全自由，让其自行决定能够传出的包裹数量。
 
-![Figure of Zone1, Zone2, and Hub IBC without
-acknowledgement](https://raw.githubusercontent.com/gnuclear/atom-whitepaper/master/msc/ibc_without_ack.png)
+![Figure of Zone1, Zone2, and Hub IBC without acknowledgement](https://raw.githubusercontent.com/gnuclear/atom-whitepaper/master/msc/ibc_without_ack.png)
 
 在上述案例中，为了更新"中心"上"空间1"的区块哈希（或者说"空间2"上"中心"的区块哈希），必须将IBCBlockCommitTx交易的"空间1"区块哈希值发布到"中心"上（或者将该交易的"中心"区块哈希值发布到"空间2"中）。
 
@@ -539,9 +535,7 @@ TMSP的要求/回应是简单的Protobuf信息。请参考这里的 [模式文�
 
 在这些案例中，发送人可以通过在AckPending上设置初始包状态来要求提供交付确认。接着就由接收链通过在应用程序的梅克尔哈希中包括一个缩写的IBCPacket 来确认交付。
 
-
-![Figure of Zone1, Zone2, and Hub IBC with
-acknowledgement](https://raw.githubusercontent.com/gnuclear/atom-whitepaper/master/msc/ibc_with_ack.png)
+![Figure of Zone1, Zone2, and Hub IBC with acknowledgement](https://raw.githubusercontent.com/gnuclear/atom-whitepaper/master/msc/ibc_with_ack.png)
 
 首先，IBCBlockCommit 以及IBCPacketTx 是公布在"Hub"（中心）上用来证明"Zone1"（空间1）上的IBCPacket的存在的。假如IBCPacketTx 的值如下：
 
@@ -602,7 +596,6 @@ IBCBlockCommitand 和IBCPacketTx 会公布到"Hub"上来证明缩写的IBCPacket
   - PayloadHash: &lt;The hash bytes of the same "coin" payload&gt;（相同"代币"有效负荷的哈希字节）
 
 同时，"Zone1"可能会积极地假设"代币"包的交付是成功的，除非"Hub"上有证据给出相反的证明。在上述例子中，如果"Hub"没有从"Zone2"接收到区块350的AckSent 状态，那么它就会自动将这个设置到Timeout（超时）。这个超时证据可以贴回到"Zone1"上，然后就可以返回任意代币。
-
 
 ![Figure of Zone1, Zone2, and Hub IBC with acknowledgement and timeout](https://raw.githubusercontent.com/gnuclear/atom-whitepaper/master/msc/ibc_with_ack_timeout.png)
 
