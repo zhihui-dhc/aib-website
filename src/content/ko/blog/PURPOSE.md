@@ -1,3 +1,11 @@
+~~~
+title: Why We Are Building the Internet of Blockchains
+slug: purpose-of-cosmos
+date: 2017-01-05
+author: Jae Kwon & Ethan Buchman
+excerpt: Cosmos is a culmination of lessons of prior cryptocurrencies. It's designed to be extended to incorporate future innovations. It's a distributed ledger platform suitable for generations to come.
+~~~
+
 우리는 블록체인이 공동의 합의원장 규칙 안에서 자발적으로 모인 경쟁과 선택의 자유를 가진 개인들을 통해 공공의 이익을 일구어낼 수 있다고 믿습니다. 이전 암호화폐들의 성공과 실패에서 중요한 교훈을 얻었으며, 이를 바탕으로 우리만의 혁신을 일궈냈습니다. 속도, 보안성, 확장성 그리고 사용성 모두를 확보한 새로운 시대를 열 것입니다.
 
 코스모스(Cosmos)는 그러한 배움과 혁신들의 정점이며, 미래에 다가올 혁신까지도 자유로이 수용할 수 있는 암호화폐 플랫폼입니다. 

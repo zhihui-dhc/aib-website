@@ -1,18 +1,23 @@
 <template>
   <menu class="locale-menu">
-    <router-link v-if="langs.includes('en-US')" to="/whitepaper" exact="true">
+    <router-link v-if="langs.includes('en-US')" :to="dir" exact="true">
       English
     </router-link>
-    <router-link v-if="langs.includes('ja')" to="/whitepaper/ja">日本語</router-link>
-    <router-link v-if="langs.includes('ko')" to="/whitepaper/ko">한국어</router-link>
-    <router-link v-if="langs.includes('zh-CN')" to="/whitepaper/zh-CN">简体中文</router-link>
+    <router-link v-if="langs.includes('ja')" :to="dir + 'ja'">日本語</router-link>
+    <router-link v-if="langs.includes('ko')" :to="dir + 'ko'">한국어</router-link>
+    <router-link v-if="langs.includes('zh-CN')" :to="dir + 'zh-CN'">简体中文</router-link>
   </menu>
 </template>
 
 <script>
 export default {
   name: 'locale-menu',
-  props: ['langs']
+  computed: {
+    dir () {
+      return '/' + this.path + '/'
+    }
+  },
+  props: ['path', 'langs']
 }
 </script>
 

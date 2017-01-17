@@ -5,7 +5,7 @@
       <strong>View all comments &rsaquo;</strong>
     </router-link>
     <div class="pz-comments">
-      <comment00 :comment="threadParent"></comment00>
+      <comment :comment="threadParent"></comment>
     </div>
     <router-link class="pz-comments-alert" :to="postLink" v-if="pageIsLong">
       You're reading a single comment's thread.
@@ -15,14 +15,14 @@
 </template>
 
 <script>
-import Comment00 from './Comment00'
+import Comment from './Comment'
 import CommentFormBtn from './CommentFormBtn'
 import { mapGetters } from 'vuex'
 import documentHeight from '../scripts/documentHeight'
 export default {
   components: {
     CommentFormBtn,
-    Comment00
+    Comment
   },
   computed: {
     pageIsLong () {

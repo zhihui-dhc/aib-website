@@ -2,20 +2,20 @@
   <div class="pz-comments-container" id="comments">
     <comment-form-btn></comment-form-btn>
     <div class="pz-comments" v-if="comments.length > 0">
-      <comment00 v-for="comment in comments" :comment="comment"></comment00>
+      <comment v-for="comment in comments" :comment="comment"></comment>
     </div>
   </div>
 </template>
 
 <script>
-import Comment00 from './Comment00'
+import Comment from './Comment'
 import CommentFormBtn from './CommentFormBtn'
 import { mapGetters } from 'vuex'
 import orderedComments from '../scripts/orderedComments'
 export default {
   components: {
     CommentFormBtn,
-    Comment00
+    Comment
   },
   computed: {
     comments () {

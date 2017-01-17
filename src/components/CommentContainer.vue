@@ -4,7 +4,9 @@
     <menu class="pz-comment-menu">
       <a @click="setPopupVisible(true)"><i class="fa fa-ellipsis-h"></i></a>
       <div class="divider"></div>
-      <a @click="authenticatedReply"><i class="fa fa-reply"></i></a>
+      <a v-if="!limit" @click="authenticatedReply">
+        <i class="fa fa-reply"></i>
+      </a>
       <div class="divider"></div>
       <div class="score">
         <a :class="upClass" @click="upvote">
@@ -38,10 +40,14 @@ import CommentBody from './CommentBody'
 import firebase from 'firebase'
 import { mapGetters } from 'vuex'
 export default {
+  name: 'comment-container',
   components: {
     CommentBody
   },
   computed: {
+    nestLimitReached () {
+      return true
+    },
     upClass () {
       if (this.sessionVotes[this.comment.id] === 1) { return 'vote-up active' }
       return 'vote-up'
@@ -130,7 +136,7 @@ export default {
       }
     }
   },
-  props: ['comment']
+  props: ['limit', 'comment']
 }
 </script>
 
