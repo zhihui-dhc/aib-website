@@ -28,7 +28,7 @@ Vue.use(VueAnalytics, {
 // i18n settings
 Vue.config.lang = 'en'
 Vue.config.fallbackLang = 'en'
-Vue.locale('en', require('./content/interface.json'))
+Vue.locale('en', require('../content/interface.json'))
 
 /* eslint no-unused-vars: 0 */
 const app = new Vue({
