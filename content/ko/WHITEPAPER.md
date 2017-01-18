@@ -101,7 +101,7 @@ Ethan Buchman [ethan@tendermint.com](mailto:ethan@tendermint.com)
 
 코스모스 허브는 텐더민트 BFT 합의 알고리즘에 기반하는, 코스모스 네트워크 내 최초의 퍼블릭 블록체인이다. 텐더민트 오픈 소스 프로젝트는 비트코인의 작업증명(PoW) 합의 알고리즘이 지닌 속도, 확장성, 환경 등의 문제를 처리하기 위해서 2014년에 탄생했다. 1988년 MIT에서 개발한 증명된 BFT 알고리즘들을 활용하고 개선해서, 텐더민트 팀은 제1세대 지분증명(PoS) 암호화폐들이 겪은 Nothing-at-stake 문제를 해결하는 지분증명 암호화폐를 최초로 개념증명하였다. 
 
-오늘날, 대부분의 비트코인 모바일 지갑들은 이체 검증(transaction verification)을 제공하는 신뢰할 수 있는 서버(trusted server)를 이용한다. 이는 PoS가 여러번의 이체확인(confirmation)을 기다려야만, 이체확정된 것으로 간주되기 때문이다. 이중지불(double-spend) 공격이 이미 코인베이스(BoinBase) 같은 서비스들에서 일어난 바 있다.
+오늘날, 대부분의 비트코인 모바일 지갑들은 이체 검증(transaction verification)을 제공하는 신뢰할 수 있는 서버(trusted server)를 이용한다. 이는 PoS가 여러번의 이체확인(confirmation)을 기다려야만, 이체확정된 것으로 간주되기 때문이다. 이중지불(double-spend) 공격이 이미 코인베이스(CoinBase) 같은 서비스들에서 일어난 바 있다.
 
 다른 블록체인 합의 시스템들과는 달리 텐더민트는 즉각적이고 안전한(provably-secure) 모바일-클라이언트 지불 검증을 제공한다. 텐더민트는 분기(fork)할 수 없도록 설계되었기 때문에, 모바일 지갑들에서 즉시 이체확인이 가능하며 실제로 신뢰 없는(trustless) 지불을 실현한다. 이는 IoT관련 어플리케이션들에도 큰 영향을 줄 것이다.
 
