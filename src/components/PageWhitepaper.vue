@@ -18,9 +18,9 @@ import PageWhitepaperNav from './PageWhitepaperNav'
 import LocaleMenu from './LocaleMenu'
 import TocPadding from './TocPadding'
 import TextContainer from './TextContainer'
-import TextEnUs from '../content/en-US/WHITEPAPER.md'
-import TextKo from '../content/ko/WHITEPAPER.md'
-import TextZhCn from '../content/zh-CN/WHITEPAPER.md'
+import TextEnUs from '../../content/en-US/WHITEPAPER.md'
+import TextKo from '../../content/ko/WHITEPAPER.md'
+import TextZhCn from '../../content/zh-CN/WHITEPAPER.md'
 export default {
   components: {
     PageWhitepaperNav,

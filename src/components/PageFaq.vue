@@ -14,7 +14,7 @@ import { mapGetters } from 'vuex'
 import PageFaqNav from './PageFaqNav'
 import TocPadding from './TocPadding'
 import TextContainer from './TextContainer'
-import TextContent from '../content/en-US/FAQ.md'
+import TextContent from '../../content/en-US/FAQ.md'
 export default {
   name: 'page-faq',
   components: {

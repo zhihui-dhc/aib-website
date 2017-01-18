@@ -38,16 +38,16 @@ npm run dev
 ``` bash
 
 # Edit site interface text
-./src/content/interface.json
+./content/interface.json
 
 # Edit FAQ, Plan, or Whitepaper 
-./src/content/en-US/
+./content/en-US/
 npm run build
 
 ```
 ## Edit Blog Posts
 
-Edit blog posts in the `./src/content/en-US/blog/` directory. Include YAML metadata for each post. Here's a full example post:
+Edit blog posts in the `./content/en-US/blog/` directory. Include YAML metadata for each post. Here's a full example post:
 
     ~~~
     title: "TACO: The tastiest food"

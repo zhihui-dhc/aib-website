@@ -13,8 +13,8 @@
 import PageHeader from './PageHeader'
 import LocaleMenu from './LocaleMenu'
 import TextContainer from './TextContainer'
-import TextEnUs from '../content/en-US/PLAN.md'
-import TextKo from '../content/ko/PLAN.md'
+import TextEnUs from '../../content/en-US/PLAN.md'
+import TextKo from '../../content/ko/PLAN.md'
 export default {
   name: 'page-plan',
   components: {

@@ -26,31 +26,31 @@ export default {
     }
   },
   methods: {
-    isComments (component) {
+    isCont (component) {
       return component.$el.classList.contains('pz-comments-container')
     },
     getNestLimitReached () {
       let t = this
       let limited = true
-      if (t.$parent && t.isComments(t.$parent)) {
+      if (t.$parent && t.isCont(t.$parent)) {
         limited = false
       }
-      if (t.$parent && t.$parent.$parent && t.isComments(t.$parent.$parent)) {
+      if (t.$parent && t.$parent.$parent && t.isCont(t.$parent.$parent)) {
         limited = false
       }
-      if (t.$parent && t.$parent.$parent && t.$parent.$parent.$parent && t.isComments(t.$parent.$parent.$parent)) {
+      if (t.$parent && t.$parent.$parent && t.$parent.$parent.$parent && t.isCont(t.$parent.$parent.$parent)) {
         limited = false
       }
-      if (t.$parent && t.$parent.$parent && t.$parent.$parent.$parent && t.$parent.$parent.$parent.$parent && t.isComments(t.$parent.$parent.$parent.$parent)) {
+      if (t.$parent && t.$parent.$parent && t.$parent.$parent.$parent && t.$parent.$parent.$parent.$parent && t.isCont(t.$parent.$parent.$parent.$parent)) {
         limited = false
       }
-      if (t.$parent && t.$parent.$parent && t.$parent.$parent.$parent && t.$parent.$parent.$parent.$parent && t.$parent.$parent.$parent.$parent.$parent && t.isComments(t.$parent.$parent.$parent.$parent.$parent)) {
+      if (t.$parent && t.$parent.$parent && t.$parent.$parent.$parent && t.$parent.$parent.$parent.$parent && t.$parent.$parent.$parent.$parent.$parent && t.isCont(t.$parent.$parent.$parent.$parent.$parent)) {
         limited = false
       }
-      if (t.$parent && t.$parent.$parent && t.$parent.$parent.$parent && t.$parent.$parent.$parent.$parent && t.$parent.$parent.$parent.$parent.$parent && t.$parent.$parent.$parent.$parent.$parent.$parent && t.isComments(t.$parent.$parent.$parent.$parent.$parent.$parent)) {
+      if (t.$parent && t.$parent.$parent && t.$parent.$parent.$parent && t.$parent.$parent.$parent.$parent && t.$parent.$parent.$parent.$parent.$parent && t.$parent.$parent.$parent.$parent.$parent.$parent && t.isCont(t.$parent.$parent.$parent.$parent.$parent.$parent)) {
         limited = false
       }
-      if (t.$parent && t.$parent.$parent && t.$parent.$parent.$parent && t.$parent.$parent.$parent.$parent && t.$parent.$parent.$parent.$parent.$parent && t.$parent.$parent.$parent.$parent.$parent.$parent && t.$parent.$parent.$parent.$parent.$parent.$parent.$parent && t.isComments(t.$parent.$parent.$parent.$parent.$parent.$parent.$parent)) {
+      if (t.$parent && t.$parent.$parent && t.$parent.$parent.$parent && t.$parent.$parent.$parent.$parent && t.$parent.$parent.$parent.$parent.$parent && t.$parent.$parent.$parent.$parent.$parent.$parent && t.$parent.$parent.$parent.$parent.$parent.$parent.$parent && t.isCont(t.$parent.$parent.$parent.$parent.$parent.$parent.$parent)) {
         limited = false
       }
       return limited
