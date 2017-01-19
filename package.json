@@ -16,7 +16,7 @@
     "toc": "doctoc --title '**Table of Contents**' src/content/en/FAQ.md"
   },
   "dependencies": {
-    "@nylira/vue-article-body": "^1.1.0",
+    "@nylira/vue-article-body": "^1.1.2",
     "@nylira/vue-page-header": "^1.1.9",
     "babel-core": "^6.21.0",
     "babel-eslint": "^7.1.1",
