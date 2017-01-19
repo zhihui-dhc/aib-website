@@ -1,6 +1,6 @@
 <template>
   <menu class="locale-menu">
-    <router-link v-if="langs.includes('en-US')" :to="dir" exact="true">
+    <router-link v-if="langs.includes('en-US')" :to="dir" exact>
       English
     </router-link>
     <router-link v-if="langs.includes('ja')" :to="dir + 'ja'">日本語</router-link>
@@ -25,15 +25,22 @@ export default {
 @import '../styles/variables.styl'
 
 .locale-menu
+  position absolute
+  top 3rem
+  left 0
+  z-index 10
+
+  width 100vw
+
   display flex
   align-items center
   padding 0 0.25rem
   justify-content center
 
-  height 2rem
+  height 1.5rem
   border-bottom 1px dotted bc
   a
-    font-size 0.875rem
+    font-size 0.75rem
     padding 0 0.75rem
     display block
     cursor pointer

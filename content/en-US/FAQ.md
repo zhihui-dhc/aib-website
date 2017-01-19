@@ -1,5 +1,7 @@
 # FAQ
 
+Frequently asked questions &amp; answers about Cosmos.
+
 [[toc]]
 
 ### What is sharding?

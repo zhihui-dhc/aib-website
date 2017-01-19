@@ -1,14 +1,14 @@
 <template>
   <div class="page page-blog-entry">
-    <page-header
+    <vue-page-header
       :title="entry.title"
       :subtitle="entrySubtitle">
-    </page-header>
+    </vue-page-header>
     <section class="section-default">
       <div class="section-container">
-        <text-container>
+        <vue-article-body>
           <div v-html="entry.body"></div>
-        </text-container>
+        </vue-article-body>
       </div>
     </section>
     <comments></comments>
@@ -17,8 +17,8 @@
 
 <script>
 import ArticleFooter from './ArticleFooter'
-import TextContainer from './TextContainer'
-import PageHeader from './PageHeader'
+import VueArticleBody from '@nylira/vue-article-body'
+import VuePageHeader from '@nylira/vue-page-header'
 import Comments from './Comments'
 import Vue from 'vue'
 import { mapGetters } from 'vuex'
@@ -26,8 +26,8 @@ export default {
   name: 'page-blog-entry',
   components: {
     ArticleFooter,
-    TextContainer,
-    PageHeader,
+    VueArticleBody,
+    VuePageHeader,
     Comments
   },
   computed: {

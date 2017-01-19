@@ -1,10 +1,9 @@
 # Cosmos Plan
 
-LAST UPDATED: Oct 6th, 2016<br/>
-NOTE: The details in this plan override what is currently in the whitepaper,
+Oct 6th, 2016 - The details in this plan override what is currently in the whitepaper,
 and all other plans published prior.
 
-<hr />
+----------
 
 * Cosmos Network Foundation (CNF) is a non-profit Switzerland Foundation. Its purpose is
   to conduct a Fundraiser designed to collect donations, to contract with

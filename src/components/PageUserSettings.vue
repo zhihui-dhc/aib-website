@@ -1,7 +1,6 @@
 <template>
 <div class="page page-user-settings">
-  <page-header :title="newName" type="center">
-  </page-header>
+  <vue-page-header :title="newName" type="center"></vue-page-header>
   <form class="form form-narrow" v-on:submit.prevent.default="updateUser">
     <div class="form-header">
       <div class="subtitle">Edit your user settings here.</div>
@@ -43,14 +42,14 @@
 </template>
 
 <script>
-import PageHeader from './PageHeader'
+import VuePageHeader from '@nylira/vue-page-header'
 import { mapGetters } from 'vuex'
 import FormError from './FormError'
 import firebase from 'firebase'
 export default {
-  name: 'page-blog-index',
+  name: 'page-user-settings',
   components: {
-    PageHeader,
+    VuePageHeader,
     FormError
   },
   computed: {

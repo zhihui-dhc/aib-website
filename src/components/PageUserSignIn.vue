@@ -1,6 +1,6 @@
 <template>
 <div class="page">
-  <page-header title="Sign In"></page-header></page-header>
+  <vue-page-header title="Sign In"></vue-page-header>
   <form class="form form-narrow" v-on:submit.prevent.default="signIn">
     <div class="form-header">
       <div class="subtitle">Sign in to your account now.</div>
@@ -35,14 +35,14 @@
 </template>
 
 <script>
-import PageHeader from './PageHeader'
+import VuePageHeader from '@nylira/vue-page-header'
 import firebase from 'firebase'
 import FormError from './FormError'
 import { mapGetters } from 'vuex'
 export default {
-  name: 'page-blog-index',
+  name: 'page-user-signin',
   components: {
-    PageHeader,
+    VuePageHeader,
     FormError
   },
   computed: {

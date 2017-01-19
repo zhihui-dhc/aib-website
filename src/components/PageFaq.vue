@@ -2,9 +2,9 @@
   <div class="page page-no-user">
     <page-faq-nav></page-faq-nav>
     <toc-padding v-bind:class="{ 'toc-visible': faqTocVisible }">
-      <text-container>
+      <vue-article-body>
         <text-content></text-content>
-      </text-container>
+      </vue-article-body>
     </toc-padding>
   </div>
 </template>
@@ -13,14 +13,14 @@
 import { mapGetters } from 'vuex'
 import PageFaqNav from './PageFaqNav'
 import TocPadding from './TocPadding'
-import TextContainer from './TextContainer'
+import VueArticleBody from '@nylira/vue-article-body'
 import TextContent from '../../content/en-US/FAQ.md'
 export default {
   name: 'page-faq',
   components: {
     PageFaqNav,
     TocPadding,
-    TextContainer,
+    VueArticleBody,
     TextContent
   },
   computed: {

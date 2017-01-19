@@ -45,7 +45,7 @@ export default {
       }
     },
     isTocPage () {
-      return this.$route.name === 'whitepaper' || this.$route.name === 'whitepaper-localized' || this.$route.name === 'faq'
+      return this.$route.name === 'whitepaper' || this.$route.name === 'whitepaper-localized' || this.$route.name === 'faq' || this.$route.name === 'faq-localized' || this.$route.name === 'plan' || this.$route.name === 'plan-localized'
     },
     ...mapGetters([
       'sessionUser'
