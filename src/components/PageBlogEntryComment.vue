@@ -1,5 +1,5 @@
 <template>
-  <div class="page page-blog-entry">
+  <div class="page-user-menu page-blog-entry-comment">
     <vue-page-header :title="entry.title" :subtitle="subtitle"></vue-page-header>
     <comment-thread></comment-thread>
   </div>
@@ -11,7 +11,7 @@ import CommentThread from './CommentThread'
 import Vue from 'vue'
 import { mapGetters } from 'vuex'
 export default {
-  name: 'page-blog-entry',
+  name: 'page-blog-entry-comment',
   components: {
     VuePageHeader,
     CommentThread

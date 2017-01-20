@@ -1,5 +1,5 @@
 <template>
-  <div class="page page-plan page-no-user">
+  <div class="page-plan">
     <locale-menu path="plan" :langs="['en-US', 'ko']"></locale-menu>
     <vue-article-body>
       <text-ko v-if="$route.params.locale === 'ko'"></text-ko>
