@@ -1,5 +1,5 @@
 <template>
-  <div class="page page-no-user">
+  <div class="page-whitepaper">
     <locale-menu path="whitepaper" :langs="['en-US', 'ko', 'pt', 'zh-CN']"></locale-menu>
     <page-whitepaper-nav></page-whitepaper-nav>
     <toc-padding v-bind:class="{ 'toc-visible': whitepaperTocVisible }">

@@ -1,16 +1,12 @@
 <template>
-  <div class="page page-blog-entry">
+  <div class="page-user-menu page-blog-entry">
     <vue-page-header
       :title="entry.title"
       :subtitle="entrySubtitle">
     </vue-page-header>
-    <section class="section-default">
-      <div class="section-container">
-        <vue-article-body>
-          <div v-html="entry.body"></div>
-        </vue-article-body>
-      </div>
-    </section>
+    <vue-article-body>
+      <div v-html="entry.body"></div>
+    </vue-article-body>
     <comments></comments>
   </div>
 </template>

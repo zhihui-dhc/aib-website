@@ -3,14 +3,14 @@
   "version": "1.0.0",
   "dependencies": {
     "@nylira/vue-article-body": {
-      "version": "1.1.2",
-      "from": "@nylira/vue-article-body@1.1.2",
-      "resolved": "https://registry.npmjs.org/@nylira/vue-article-body/-/vue-article-body-1.1.2.tgz"
+      "version": "1.1.9",
+      "from": "@nylira/vue-article-body@1.1.9",
+      "resolved": "https://registry.npmjs.org/@nylira/vue-article-body/-/vue-article-body-1.1.9.tgz"
     },
     "@nylira/vue-page-header": {
-      "version": "1.1.9",
-      "from": "@nylira/vue-page-header@1.1.9",
-      "resolved": "https://registry.npmjs.org/@nylira/vue-page-header/-/vue-page-header-1.1.9.tgz"
+      "version": "1.2.3",
+      "from": "@nylira/vue-page-header@1.2.3",
+      "resolved": "https://registry.npmjs.org/@nylira/vue-page-header/-/vue-page-header-1.2.3.tgz"
     },
     "abab": {
       "version": "1.0.3",

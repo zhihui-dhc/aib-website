@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="component">
     <section class="section-cover">
       <div class="section-container" @click="scrollDown">
         <h1><img src="../assets/images/cosmos_logo_m.png" alt="Cosmos"></h1>
@@ -33,13 +33,12 @@ export default {
 
 .section-cover
   overflow hidden
-  height 85vh
-  padding-top 4.5rem
-
   display flex
   align-items center
   justify-content center
   background #eaeaea
+  margin-top -3rem
+  height 85vh
 
   .section-container
     background url('../assets/images/cover_image.png') center center

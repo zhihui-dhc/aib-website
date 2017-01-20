@@ -68,6 +68,7 @@ and all other plans published prior.
   is inflated and allocated for the CNF, AIB, and the Initial Donors.
 
 * On Genesis day, the distribution of atoms will be split between:
+
   * CNF (10%)
   * AIB (10%)
   * Initial Donors (5%)

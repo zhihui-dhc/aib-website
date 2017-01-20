@@ -1,47 +1,47 @@
 <template>
-<div class="page">
-  <vue-page-header title="Sign Up" type="center"></vue-page-header>
-  <form class="form form-narrow" v-on:submit.prevent.default="signUp">
-    <div class="form-header">
-      <div class="subtitle">Signing up enables commenting and gives you a head start on the fundraising event.</div>
-      <form-error :form-error="formError"></form-error>
-    </div>
-    <div class="form-group">
-      <label for="user-signup-name">Name</label>
-      <input
-        v-model="user.displayName"
-        type="text"
-        id="user-signup-name"
-        placeholder="Display Name"
-        pattern=".{2,32}" required title="2 to 32 characters"
-        required>
-    </div>
-    <div class="form-group">
-      <label for="user-signup-email">Email</label>
-      <input
-        v-model="user.email"
-        type="email"
-        id="user-signup-email"
-        placeholder="name@example.com"
-        pattern=".{3,512}" required title="3 to 254 characters"
-        required>
-    </div>
-    <div class="form-group">
-      <label for="user-signup-password">Password</label>
-      <input
-        v-model="user.password"
-        type="password"
-        id="user-signup-password"
-        placeholder="Password"
-        pattern=".{8,512}" required title="8 to 512 characters"
-        required>
-    </div>
-    <div class="form-footer">
-      <router-link to="/signin">Have an account?</router-link>
-      <input type="submit" class="btn" value="Sign Up">
-    </div>
-  </form>
-</div>
+  <div class="page-user-menu page-user-signup">
+    <vue-page-header title="Sign Up" type="center"></vue-page-header>
+    <form class="form form-narrow" v-on:submit.prevent.default="signUp">
+      <div class="form-header">
+        <div class="subtitle">Signing up enables commenting and gives you a head start on the fundraising event.</div>
+        <form-error :form-error="formError"></form-error>
+      </div>
+      <div class="form-group">
+        <label for="user-signup-name">Name</label>
+        <input
+          v-model="user.displayName"
+          type="text"
+          id="user-signup-name"
+          placeholder="Display Name"
+          pattern=".{2,32}" required title="2 to 32 characters"
+          required>
+      </div>
+      <div class="form-group">
+        <label for="user-signup-email">Email</label>
+        <input
+          v-model="user.email"
+          type="email"
+          id="user-signup-email"
+          placeholder="name@example.com"
+          pattern=".{3,512}" required title="3 to 254 characters"
+          required>
+      </div>
+      <div class="form-group">
+        <label for="user-signup-password">Password</label>
+        <input
+          v-model="user.password"
+          type="password"
+          id="user-signup-password"
+          placeholder="Password"
+          pattern=".{8,512}" required title="8 to 512 characters"
+          required>
+      </div>
+      <div class="form-footer">
+        <router-link to="/signin">Have an account?</router-link>
+        <input type="submit" class="btn" value="Sign Up">
+      </div>
+    </form>
+  </div>
 </template>
 
 <script>

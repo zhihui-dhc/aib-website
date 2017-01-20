@@ -1,37 +1,37 @@
 <template>
-<div class="page">
-  <vue-page-header title="Sign In"></vue-page-header>
-  <form class="form form-narrow" v-on:submit.prevent.default="signIn">
-    <div class="form-header">
-      <div class="subtitle">Sign in to your account now.</div>
-      <form-error :form-error="formError"></form-error>
-    </div>
-    <div class="form-group">
-      <label for="user-signin-email">Email</label>
-      <input
-        v-model="email"
-        type="email"
-        id="user-signin-email"
-        placeholder="name@example.com"
-        pattern=".{3,512}" required title="3 to 254 characters"
-        required>
-    </div>
-    <div class="form-group">
-      <label for="user-signin-password">Password</label>
-      <input
-        v-model="password"
-        type="password"
-        id="user-signin-password"
-        placeholder="Password"
-        pattern=".{8,512}" required title="8 to 512 characters"
-        required>
-    </div>
-    <div class="form-footer">
-      <router-link to="/reset">Forgot password?</router-link>
-      <input type="submit" class="btn" value="Sign In">
-    </div>
-  </form>
-</div>
+  <div class="page-user-menu page-user-signin">
+    <vue-page-header title="Sign In" type="center"></vue-page-header>
+    <form class="form form-narrow" v-on:submit.prevent.default="signIn">
+      <div class="form-header">
+        <div class="subtitle">Sign in to your account now.</div>
+        <form-error :form-error="formError"></form-error>
+      </div>
+      <div class="form-group">
+        <label for="user-signin-email">Email</label>
+        <input
+          v-model="email"
+          type="email"
+          id="user-signin-email"
+          placeholder="name@example.com"
+          pattern=".{3,512}" required title="3 to 254 characters"
+          required>
+      </div>
+      <div class="form-group">
+        <label for="user-signin-password">Password</label>
+        <input
+          v-model="password"
+          type="password"
+          id="user-signin-password"
+          placeholder="Password"
+          pattern=".{8,512}" required title="8 to 512 characters"
+          required>
+      </div>
+      <div class="form-footer">
+        <router-link to="/reset">Forgot password?</router-link>
+        <input type="submit" class="btn" value="Sign In">
+      </div>
+    </form>
+  </div>
 </template>
 
 <script>

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="page-index">
     <section-cover></section-cover>
 
     <div class="section-home sh-video">

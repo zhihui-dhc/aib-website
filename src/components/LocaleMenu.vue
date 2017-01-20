@@ -1,7 +1,8 @@
 <template>
   <menu class="locale-menu">
     <template v-for="lang in languages">
-      <router-link :to="dir" v-if="lang.code === 'enUS'">{{ lang.name }}</router-link>
+      <router-link :to="dir" v-if="lang.code === 'en-US'" exact>
+        {{ lang.name }}</router-link>
       <router-link :to="dir + lang.code" v-else>{{ lang.name }}</router-link>
     </template>
   </menu>

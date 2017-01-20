@@ -1,5 +1,5 @@
 <template>
-  <div class="page page-no-user">
+  <div class="page-faq">
     <page-faq-nav></page-faq-nav>
     <toc-padding v-bind:class="{ 'toc-visible': faqTocVisible }">
       <vue-article-body>
