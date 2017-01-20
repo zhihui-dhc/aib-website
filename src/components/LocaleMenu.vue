@@ -1,11 +1,9 @@
 <template>
   <menu class="locale-menu">
-    <router-link v-if="langs.includes('en-US')" :to="dir" exact>
-      English
-    </router-link>
-    <router-link v-if="langs.includes('ja')" :to="dir + 'ja'">日本語</router-link>
-    <router-link v-if="langs.includes('ko')" :to="dir + 'ko'">한국어</router-link>
-    <router-link v-if="langs.includes('zh-CN')" :to="dir + 'zh-CN'">简体中文</router-link>
+    <template v-for="lang in languages">
+      <router-link :to="dir" v-if="lang.code === 'enUS'">{{ lang.name }}</router-link>
+      <router-link :to="dir + lang.code" v-else>{{ lang.name }}</router-link>
+    </template>
   </menu>
 </template>
 
@@ -15,6 +13,21 @@ export default {
   computed: {
     dir () {
       return '/' + this.path + '/'
+    },
+    languages () {
+      let enabledCodes = this.langs
+      return this.allLanguages.filter(l => enabledCodes.includes(l.code))
+    }
+  },
+  data () {
+    return {
+      allLanguages: [
+        { name: 'English', code: 'en-US' },
+        { name: 'Português', code: 'pt' },
+        { name: '日本語', code: 'ja' },
+        { name: '한국어', code: 'ko' },
+        { name: '简体中文', code: 'zh-CN' }
+      ]
     }
   },
   props: ['path', 'langs']
@@ -34,14 +47,14 @@ export default {
 
   display flex
   align-items center
-  padding 0 0.25rem
+  padding 0 0.5rem
   justify-content center
 
   height 1.5rem
   border-bottom 1px dotted bc
   a
     font-size 0.75rem
-    padding 0 0.75rem
+    padding 0 0.5rem
     display block
     cursor pointer
     color txt
