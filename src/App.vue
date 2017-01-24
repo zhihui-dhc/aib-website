@@ -72,16 +72,4 @@ export default {
 <style lang="stylus">
 @import './styles/screen.styl' screen
 @import './styles/print.styl' print
-
-.pz-article-body pre + figcaption {
-  font-size: 0.875rem;
-  margin-top: -1.58rem;
-  background: #eee;
-  border: 1px solid #ddd;
-  border-top: none;
-  padding 0.5rem;
-  color: #666;
-  margin-bottom: 1.58rem;
-}
-
 </style>
