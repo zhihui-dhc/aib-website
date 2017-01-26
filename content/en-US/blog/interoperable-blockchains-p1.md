@@ -6,7 +6,7 @@ author: Jae Kwon
 excerpt: Part 1 of a series on Cosmos, the internet of blockchains powered by the Tendermint consensus engine.
 ~~~
 
-> A series on [Cosmos](http://cosmos.network/), the internet of blockchains powered by the [Tendermint](http://tendermint.com/) consensus engine. [View Medium version](https://medium.com/@jaekwon/cosmos-creating-interoperable-blockchains-part-1-2929435ba1fa#.kmwc5d4px)
+> A series on [Cosmos](http://cosmos.network/), the internet of blockchains powered by the [Tendermint](http://tendermint.com/) consensus engine. *View blog post on [Medium](https://medium.com/@jaekwon/cosmos-creating-interoperable-blockchains-part-1-2929435ba1fa#.kmwc5d4px).*
 
 There are several ways to create public blockchain applications today. The
 primary ones are:
