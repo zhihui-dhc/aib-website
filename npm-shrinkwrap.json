@@ -7,6 +7,11 @@
       "from": "@nylira/vue-article-body@1.2.1",
       "resolved": "https://registry.npmjs.org/@nylira/vue-article-body/-/vue-article-body-1.2.1.tgz"
     },
+    "@nylira/vue-input": {
+      "version": "1.3.0",
+      "from": "@nylira/vue-input@1.3.0",
+      "resolved": "https://registry.npmjs.org/@nylira/vue-input/-/vue-input-1.3.0.tgz"
+    },
     "@nylira/vue-page-header": {
       "version": "1.3.5",
       "from": "@nylira/vue-page-header@1.3.5",
