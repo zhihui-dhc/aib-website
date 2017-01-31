@@ -55,3 +55,9 @@ export default {
   }
 }
 </script>
+
+<style lang="stylus">
+@import '../styles/variables.styl'
+.page-whitepaper
+  padding-top 1rem
+</style>

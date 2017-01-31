@@ -32,3 +32,9 @@ export default {
   }
 }
 </script>
+
+<style lang="stylus">
+@import '../styles/variables.styl'
+.page-plan
+  padding-top 1rem
+</style>
