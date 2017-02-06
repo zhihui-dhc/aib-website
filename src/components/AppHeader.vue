@@ -43,7 +43,7 @@
   <menu class="menu-popup menu-user" v-if="activeMenuUser">
     <nav class="nav-user">
       <template v-if="sessionUser.email">
-        <a @click="goto('/settings')">Settings</router-link>
+        <a @click="goto('/settings')">Settings</a>
         <a @click="signOut">Sign Out</a>
       </template>
       <template v-else>
@@ -84,9 +84,13 @@ export default {
     }
   },
   methods: {
-    goto (route) {
+    closeMenus () {
       this.activeMenuApp = false
       this.activeMenuUser = false
+      disableScroll.off()
+    },
+    goto (route) {
+      this.closeMenus()
       // console.log('going to', route)
       this.$router.push(route)
       return
@@ -102,14 +106,17 @@ export default {
       else disableScroll.off()
     },
     signUp () {
+      this.closeMenus()
       this.$store.commit('setSessionRequest', this.$route.path)
       this.$router.push('/signup')
     },
     signIn () {
+      this.closeMenus()
       this.$store.commit('setSessionRequest', this.$route.path)
       this.$router.push('/signin')
     },
     signOut () {
+      this.closeMenus()
       firebase.auth().signOut().then(function () {
       }, function (error) {
         console.error('Sign Out Error', error)
@@ -118,8 +125,7 @@ export default {
     watchWindowSize () {
       let w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0)
       if (w >= 960) {
-        this.activeMenuApp = false
-        this.activeMenuUser = false
+        this.closeMenus()
         this.desktop = true
         return
       }
