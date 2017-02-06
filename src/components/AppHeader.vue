@@ -87,7 +87,7 @@ export default {
     goto (route) {
       this.activeMenuApp = false
       this.activeMenuUser = false
-      console.log('going to', route)
+      // console.log('going to', route)
       this.$router.push(route)
       return
     },
@@ -178,6 +178,7 @@ export default {
       a
         display flex
         align-items center
+        cursor pointer
         i.fa
           margin-right 0.25rem
         img
