@@ -7,11 +7,10 @@ author: Jae Kwon
 
 Dear backers and long term supporters,
 
-Although February 28th was the most recently cited launch date for our Atom
-token sale fundraising event, after careful consideration we've decided to push
-this event back a bit further. For the time being, _no new date_ has been set,
-but we are hopeful that we are delayed by less than a single month. Here is
-why:
+Although February 28th was the most recently cited launch date for our Cosmos
+fundraising event, after careful consideration we've decided to push this event
+back a bit further. For the time being, _no new date_ has been set, but we are
+hopeful that we are delayed by less than a single month. Here is why:
 
 1. After communicating with many of our most committed funders, we have decided
    to accept both Ether (ETH) and Bitcoin (BTC). This is a trickier matter than
@@ -40,7 +39,7 @@ Some time has passed since we first announced that we are doing the fundraiser.
 I really appreciate everyone who continues to stick with us while we work all
 the details out. The decision to delay was made after careful consideration; we
 really want to be absolutely sure everything is going to be as secure as
-possible, leading (hopefully) to a very awesome and successful sale.
+possible, leading (hopefully) to a very awesome and successful fundraiser.
 
 We will announce the new date for the fundraiser two weeks before it goes live.
 You can check the [Tendermint Slack](http://forum.tendermint.com:3000) or
