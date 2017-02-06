@@ -38,7 +38,7 @@ The fees are collected by the validators and distributed proportionately to the 
 ### What is the initial distribution of Atoms?
 
 As a public, decentralized network, the distribution of Atoms is decided by those who run the software for the Cosmos Hub.
-To faciliate a decision, are creating a Swiss non-profit, the Interchain Foundation,
+To faciliate a decision, we are creating a Swiss non-profit, the Interchain Foundation,
 which is responsible for co-ordinating fundraising and allocating funds to get the network off the ground.
 The foundation will suggest a distribution of Atoms according to the results of the fundraiser.
 Users will ultimately decide the distribution for themselves when they run the software.
@@ -52,6 +52,7 @@ The Interchain Foundation has already raised some funds from private individuals
 It will host a public fundraising event soon, probably sometime in March.
 It prefers not to commit to a specific date until all the pieces are in place and finalized.
 In particular, the security of the fundraising process must be vetted extremely carefully.
+Both Ether and Bitcoin will be accepted in the fundraiser.
 The date of the fundraiser will be announced at least two weeks in advance.
 
 ## Comparisons
