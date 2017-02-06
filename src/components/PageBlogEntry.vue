@@ -1,5 +1,5 @@
 <template>
-  <div class="page-user-menu page-blog-entry">
+  <div class="page-blog-entry">
     <vue-page-header
       :title="entry.title"
       :subtitle="entrySubtitle">

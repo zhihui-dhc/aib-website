@@ -1,5 +1,5 @@
 <template>
-<div class="page-user-menu page-user-settings">
+<div class="page-user-settings">
   <vue-page-header :title="newName" type="center"></vue-page-header>
   <form class="form form-narrow" v-on:submit.prevent.default="updateUser">
     <div class="form-header">

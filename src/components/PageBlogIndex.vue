@@ -1,5 +1,5 @@
 <template>
-  <div class="page-user-menu page-split page-blog-index">
+  <div class="page-split page-blog-index">
     <vue-page-header
       :title="$t('siteBlog.title')"
       :subtitle="$t('siteBlog.subtitle')"
