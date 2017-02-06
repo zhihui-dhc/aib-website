@@ -1,9 +1,11 @@
 .minimal-toc
-  border 1px solid bc
   background c-app-bg
-  position relative
   z-index 100
   font-family sans
+  overflow hidden
+  position fixed
+
+  font-size 1rem
 
   a
     text-decoration none
@@ -27,90 +29,63 @@
       list-style none !important
       a
         position relative
-        &:after
-          content ''
-          position absolute
-          top 0
-          left 0
-          bottom 0
-          right 0
-          border-left 2px solid transparent
+
+        line-height 1.5
+        padding 0.25rem 1rem
 
         &:hover
           color link
           text-decoration none
 
       a.active
-        &:after
-          border-left-color txt
+        background alpha(mcolor, 10%)
   
   > ul
     > li
-      border-bottom 1px solid bc
+      border-bottom 1px dotted bc
       
       &:last-of-type
         border-bottom none
 
       > a
         display block
-        padding 0.5*x 0.75*x
-
-        font-weight 500
         color txt
+        font-weight bold
+        padding 0.5rem 1rem
 
       ul
         margin-bottom 0
         li
           a
             display block
-            padding 0.25*x 0.5*x
-            padding-left 1.5*x
-
-            line-height 1.25*x
+            padding-left 2rem
             color txt
-            &:before
-              content '–'
-              display inline-block
-              width x
-              color subtle
-          &:last-of-type a
-            padding-bottom 0.5*x
 
         ul
           padding 0
           li
             a
-              padding-left 3*x
+              padding-left 3rem
+              color dim
 
 @media screen and (max-width: 959px)
   .minimal-toc
-    position fixed
     top 3*x
     left 0
     right 0
     bottom 0
 
-    border none
-    overflow hidden
-
 @media screen and (min-width: 960px)
   .minimal-toc
+    top 3rem
+    left 0
+    bottom 0
+
     max-height 100vh
-    overflow hidden
-    position fixed
-    top 3.5*x
-    right 0.5*x
-    bottom 0.5*x
-    width 15*x
-    font-size 0.75*x
+    width 33.33vw
+
+    border 1px solid bc
 
 @media screen and (min-width: 1200px)
   .minimal-toc
-    font-size 0.85*x
-    line-height 1.5
-
-    width 20*x
-
-@media screen and (min-width: 1800px)
-  .minimal-toc
-    width 25*x
+    width 25vw
