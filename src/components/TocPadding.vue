@@ -13,13 +13,8 @@ export default {
 <style lang="stylus">
 @media screen and (min-width: 960px)
   .toc-padding.toc-visible
-    margin-right 15rem + 1rem
-
+    margin-left 33.333vw
 @media screen and (min-width: 1200px)
   .toc-padding.toc-visible
-    margin-right 20rem + 1rem
-
-@media screen and (min-width: 1800px)
-  .toc-padding.toc-visible
-    margin-right 25rem + 1rem
+    margin-left 25vw
 </style>
