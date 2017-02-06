@@ -1,5 +1,5 @@
 <template>
-  <div class="page-user-menu page-user-signup">
+  <div class="page-user-signup">
     <vue-page-header title="Sign Up" type="center"></vue-page-header>
     <form class="form form-narrow" v-on:submit.prevent.default="signUp">
       <div class="form-header">

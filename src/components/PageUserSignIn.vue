@@ -1,5 +1,5 @@
 <template>
-  <div class="page-user-menu page-user-signin">
+  <div class="page-user-signin">
     <vue-page-header title="Sign In" type="center"></vue-page-header>
     <form class="form form-narrow" v-on:submit.prevent.default="signIn">
       <div class="form-header">

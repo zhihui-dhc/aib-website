@@ -1,5 +1,5 @@
 <template>
-  <div class="page-user-menu page-split page-404">
+  <div class="page-split page-404">
     <vue-page-header
       title="Error 404"
       subtitle="Page Not Found"

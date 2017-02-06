@@ -1,5 +1,5 @@
 <template>
-  <div class="page-user-menu page-blog-entry-comment">
+  <div class="page-blog-entry-comment">
     <vue-page-header :title="entry.title" :subtitle="subtitle"></vue-page-header>
     <comment-thread></comment-thread>
   </div>
