@@ -49,7 +49,7 @@ export default {
   display flex
   align-items center
   padding 0 0.5rem
-  justify-content center
+  justify-content flex-end
 
   height 1.5rem
   border-bottom 1px dotted bc

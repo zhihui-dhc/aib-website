@@ -83,13 +83,9 @@ export default {
 
 @media screen and (min-width: 960px)
   .app-footer.toc-visible
-    margin-right 15*x + x
+    margin-left 20rem
 
 @media screen and (min-width: 1200px)
   .app-footer.toc-visible
-    margin-right 20*x + x
-
-@media screen and (min-width: 1800px)
-  .app-footer.toc-visible
-    margin-right 25*x + x
+    margin-left 26rem
 </style>
