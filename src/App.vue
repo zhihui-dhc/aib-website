@@ -26,11 +26,30 @@ export default {
     zhRss: require('./assets/rss/zh.xml')
   },
   head: {
-    meta: [
-      { name: 'msapplication-TileColor', content: '#ffffff' },
-      { name: 'msapplication-TileImage', content: require('./assets/favicon/ms-icon-144x144.png') },
-      { name: 'theme-color', content: '#ffffff' }
-    ],
+    meta () {
+      return [
+        { n: 'description', c: this.$t('site.desc') },
+
+        { n: 'twitter:card', c: 'summary' },
+        { n: 'twitter:site', c: '@cosmos_hq' },
+        { n: 'twitter:title', c: this.$t('site.title') },
+        { n: 'twitter:description', c: this.$t('site.desc') },
+        { n: 'twitter:creator', c: '@cosmos_hq' },
+        { p: 'twitter:image', c: require('./assets/favicon/apple-icon-180x180.png') },
+
+        { p: 'og:title', c: this.$t('site.title') },
+        { p: 'og:type', c: 'website' },
+        { p: 'og:url', c: window.location.href },
+        { p: 'og:image', c: require('./assets/favicon/apple-icon-180x180.png') },
+        { p: 'og:description', c: this.$t('site.desc') },
+        { p: 'og:site_name', c: this.$t('site.title') },
+        { p: 'fb:admins', c: '' },
+
+        { n: 'msapplication-TileColor', c: '#ffffff' },
+        { n: 'msapplication-TileImage', c: require('./assets/favicon/ms-icon-144x144.png') },
+        { n: 'theme-color', c: '#ffffff' }
+      ]
+    },
     link: [
       { r: 'alternate', t: 'application/rss+xml', h: require('./assets/rss/en.xml') },
       { r: 'apple-touch-icon', sz: '57x57', h: require('./assets/favicon/apple-icon-57x57.png') },

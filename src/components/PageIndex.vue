@@ -82,9 +82,9 @@ export default {
   head: {
     title () {
       return {
-        inner: 'Cosmos',
+        inner: 'Home',
         separator: '-',
-        complement: this.$t('site.internetOfBlockchains')
+        complement: 'Cosmos: Internet of Blockchains'
       }
     }
   }

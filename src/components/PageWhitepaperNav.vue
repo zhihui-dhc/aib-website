@@ -47,7 +47,7 @@ export default {
       Ps.initialize(document.querySelector('.minimal-toc'))
       watchTocClicks(this.showToc)
       this.$store.commit('setWhitepaperElementsVisible',
-        inViewport(document.querySelectorAll('h2, h3, h4')))
+        inViewport(document.querySelectorAll('h2, h3, h4, h5')))
       percentageScrolling()
     }
   },

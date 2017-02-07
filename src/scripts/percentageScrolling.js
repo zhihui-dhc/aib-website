@@ -2,7 +2,7 @@ function scrollIt (scrollSpeedMult = 1.0) {
   let toc = document.querySelector('.minimal-toc')
 
   let htmlScrollHeight = document.body.scrollHeight
-  let htmlViewportHeight = document.documentElement.clientHeight
+  let htmlViewportHeight = window.innerHeight
   let amountOfHtmlToScroll = htmlScrollHeight - htmlViewportHeight
 
   let sidebarScrollHeight = document.querySelector('.minimal-toc').scrollHeight
@@ -10,7 +10,7 @@ function scrollIt (scrollSpeedMult = 1.0) {
   let amountOfSidebarToScroll = sidebarScrollHeight - sidebarHeight
 
   // console.log('htmlScrollH', htmlScrollHeight, 'htmlViewport', htmlViewportHeight)
-  // console.log('sidebarScrollH', sidebarHeight, 'sidebarH', sidebarHeight)
+  // console.log('sidebarScrollH', sidebarScrollHeight, 'sidebarH', sidebarHeight)
 
   window.addEventListener('scroll', function () {
     let htmlScrollTop = this.scrollY
@@ -22,7 +22,7 @@ function scrollIt (scrollSpeedMult = 1.0) {
 }
 export default function () {
   if (document.documentElement.clientWidth >= 960) {
-    scrollIt(0.9)
+    scrollIt(1)
   }
 
   // disable percentage scrolling on smaller displays

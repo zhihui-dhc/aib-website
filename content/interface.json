@@ -1,7 +1,8 @@
 {
   "site": {
-    "title": "Cosmos - Internet of Blockchains",
-    "internetOfBlockchains": "Internet of Blockchains"
+    "title": "Cosmos: Internet of Blockchains",
+    "internetOfBlockchains": "Internet of Blockchains",
+    "desc": "Cosmos is a project with an ambitious mission: To create a network of distributed ledgers that'll solve long-standing problems in the cryptocurrency community."
   },
   "siteHeader": {
     "blog": "Blog",

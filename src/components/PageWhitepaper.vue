@@ -35,17 +35,33 @@ export default {
     TextZhCn
   },
   computed: {
-    ...mapGetters([
-      'whitepaperTocVisible'
-    ])
+    ...mapGetters(['whitepaperTocVisible'])
+  },
+  data () {
+    return {
+      metadata: {
+        page: 'Whitepaper',
+        title: `Whitepaper - ${this.$t('site.title')}`,
+        desc: 'Read the whitepaper to learn everything about Cosmos: The Internet of Blockchains.'
+      }
+    }
   },
   head: {
     title () {
       return {
-        inner: this.$t('siteHeader.whitepaper'),
+        inner: this.metadata.page,
         separator: '-',
         complement: this.$t('site.title')
       }
+    },
+    meta () {
+      return [
+        { n: 'description', c: this.metadata.desc },
+        { n: 'twitter:title', c: this.metadata.title },
+        { n: 'twitter:description', c: this.metadata.desc },
+        { p: 'og:title', c: this.metadata.title },
+        { p: 'og:description', c: this.metadata.desc }
+      ]
     }
   },
   mounted () {

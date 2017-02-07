@@ -61,7 +61,17 @@ export default {
         separator: '-',
         complement: this.$t('site.title')
       }
+    },
+    meta () {
+      return [
+        { n: 'description', c: this.entry.excerpt },
+        { n: 'twitter:title', c: this.entry.title },
+        { n: 'twitter:description', c: this.entry.excerpt },
+        { p: 'og:title', c: this.entry.title },
+        { p: 'og:description', c: this.entry.excerpt }
+      ]
     }
   }
+
 }
 </script>

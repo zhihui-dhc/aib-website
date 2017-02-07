@@ -2,13 +2,14 @@
 import 'intersection-observer'
 
 let visibleElements = []
-let longElement
+let largeElement
 
 function onChange (entries) {
-  if (longElement && visibleElements.length >= 2) {
-    longElement.classList.remove('active')
-    visibleElements.splice(visibleElements.indexOf(longElement), 1)
-    longElement = null
+  // console.log('entries', entries)
+  if (largeElement && visibleElements.length >= 2) {
+    largeElement.classList.remove('active')
+    visibleElements.splice(visibleElements.indexOf(largeElement), 1)
+    largeElement = null
   }
   entries.forEach(entry => {
     let el = entry.target
@@ -19,8 +20,8 @@ function onChange (entries) {
         el.classList.remove('active')
         visibleElements.splice(visibleElements.indexOf(el), 1)
       } else {
-        longElement = el
-        // console.log('longElement:', longElement.id)
+        largeElement = el
+        // console.log('largeElement:', largeElement.id)
       }
     } else {
       el.classList.add('active')
@@ -32,10 +33,6 @@ function onChange (entries) {
 
 export default function (elements) {
   let io = new IntersectionObserver(onChange, { threshold: [ 1 ] })
-
-  Array.from(elements).map(function (el) {
-    io.observe(el)
-  })
-
+  Array.from(elements).map(el => io.observe(el))
   return visibleElements
 }
