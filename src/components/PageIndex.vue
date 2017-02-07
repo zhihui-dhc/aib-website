@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="page-index">
     <section-cover></section-cover>
 
     <div class="section-home sh-video">
@@ -84,7 +84,7 @@ export default {
       return {
         inner: 'Cosmos',
         separator: '-',
-        complement: this.$t('site.networkOfBlockchains')
+        complement: this.$t('site.internetOfBlockchains')
       }
     }
   }
@@ -95,8 +95,6 @@ export default {
 @import '../styles/variables.styl'
 
 .section-home
-  border-top dbd
-
   &#home-intro
     .btn
       max-width 13*x
@@ -105,6 +103,7 @@ export default {
 
   &.sh-video
     padding 3rem 0
+    background c-app-fg
     iframe
       width 100vw
       height 56.25vw

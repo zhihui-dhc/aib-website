@@ -1,5 +1,5 @@
 <template>
-  <form action="//network.us14.list-manage.com/subscribe/post?u=1b8aeaa81ca615914eb2eb7fc&amp;id=64c73f9f5f" method="post" name="mc-embedded-subscribe-form" class="form-email-signup validate form-default" target="_blank" novalidate>
+  <form action="//network.us14.list-manage.com/subscribe/post?u=1b8aeaa81ca615914eb2eb7fc&amp;id=64c73f9f5f" method="post" name="mc-embedded-subscribe-form" class="form-email-signup validate form" target="_blank" novalidate>
 
     <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" :placeholder="$t('emailSignupForm.emailAddress')">
 
@@ -13,7 +13,7 @@
 <style lang="stylus">
 @import '../styles/variables.styl'
 
-.form-default.form-email-signup
+.form.form-email-signup
   padding 0 1rem
   background transparent
   border none

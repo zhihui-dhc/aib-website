@@ -1,6 +1,5 @@
 /* global IntersectionObserver */
 import 'intersection-observer'
-// import $ from 'jquery'
 
 let visibleElements = []
 let longElement

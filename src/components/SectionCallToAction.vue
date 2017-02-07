@@ -24,28 +24,24 @@ export default {
 @import '../styles/variables.styl'
 
 .section-call-to-action
-  border-top dbd
+  background c-app-fg
 
   .section-container
-    max-width 480px
+    max-width 25rem
     margin 0 auto
 
     text-align center
-    padding 3rem 1.5rem
+    padding 2rem
 
     h2
       font-size 1.5rem
-      margin 0 0 1rem
-      letter-spacing 0.01em
+      font-weight 600
+      margin-bottom 0.5rem
+
     .description
-      margin 0 0 1.5rem
+      margin-bottom 1.5rem
+      color light
 
     form
       margin-bottom 1rem
-
-@media screen and (min-width:720px)
-  .section-call-to-action
-    .section-container
-      h2
-        font-size 2em
 </style>

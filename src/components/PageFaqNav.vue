@@ -1,24 +1,31 @@
 <template>
   <div class="page-faq-nav mobile-only">
-    <div class="toc-hidden-bar" v-show="!faqTocVisible" @click="showToc(true)">
-      <i class="fa fa-bars"></i>
-    </div>
-    <div class="toc-hidden-bar" v-show="faqTocVisible" @click="showToc(false)">
-      <i class="fa fa-times"></i>
-    </div>
+    <toc-hidden-bar
+      v-show="!faqTocVisible"
+      @click.native="showToc(true)"
+      icon="bars">
+    </toc-hidden-bar>
+    <toc-hidden-bar
+      v-show="faqTocVisible"
+      @click.native="showToc(false)"
+      icon="times">
+    </toc-hidden-bar>
   </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
+import TocHiddenBar from './TocHiddenBar'
 import Ps from 'perfect-scrollbar'
 import watchTocClicks from '../scripts/watchTocClicks.js'
 import inViewport from '../scripts/inViewport.js'
 import visibleTocActivate from '../scripts/visibleTocActivate.js'
 import percentageScrolling from '../scripts/percentageScrolling.js'
-
 export default {
   name: 'page-faq-nav',
+  components: {
+    TocHiddenBar
+  },
   computed: {
     ...mapGetters([
       'faqTocVisible',
@@ -63,8 +70,3 @@ export default {
   }
 }
 </script>
-
-<style lang="stylus">
-.page-faq-nav .minimal-toc ul > li > a
-  font-weight 300
-</style>

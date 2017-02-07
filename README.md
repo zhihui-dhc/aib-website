@@ -1,52 +1,70 @@
-# cosmos-foundation
+# [cosmos.network](https://cosmos.network)
 
-> The homepage for Cosmos.
+> The homepage for Cosmos, the Internet of Blockchains.
 
-## Build Setup
+## Production
+
+Please ask the team for deployment privileges.
+
+``` bash
+# add the production server if you haven't already
+git remote add production ubuntu@cosmos.network:~/cosmos.git
+```
+
+``` bash
+# deploy it!
+git checkout master
+git merge develop
+git push production master
+```
+
+## Development
+
+Make sure you're running Node 6 LTS or higher.
 
 ``` bash
 # install dependencies
 npm install
 
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
+# write some required files
 npm run build
 
-# run unit tests
-npm run unit
-
-# run e2e tests
-npm run e2e
-
-# run all tests
-npm test
+# serve with hot reload at localhost:8700
+npm run dev
 ```
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## Edit Content
 
-## Blogging
+``` bash
 
-Create and edit posts with Markdown in the `./blog/posts/` directory.
+# Edit site interface text
+./content/interface.json
 
-Be sure to include YAML meta data for each Markdown file. Here's an example post:
+# Edit FAQ, Plan, or Whitepaper 
+./content/en-US/
+npm run build
 
-    ---
-    title: Just a Test
-    date: 2016-04-04
+```
+## Edit Blog Posts
+
+Edit blog posts in the `./content/en-US/blog/` directory. Include YAML metadata for each post. Here's a full example post:
+
+    ~~~
+    title: "TACO: The tastiest food"
+    slug: taco-the-tastiest-food
+    date: 2017-01-01
     author: Peng Zhong
-    excerpt: Just a short introductory excerpt.
-    ---
+    excerpt: Many people have rallied against the edibility of tacos, claiming it is impossible to eat. But that is simply not true.
+    ~~~
 
     Here is some markdown data. This is **just** a *test*.
 
-    * One
-    * Two
-    * Three
+    * Onion
+    * Tomato
+    * Avocado
 
-    1. Four
-    2. Five
-    3. Six
+    1. Lettuce
+    2. Ground beef
+    3. Chili sauce
 
-Build the blog files with `npm run blog`. Build the entire site with with `npm run build`.
+After you're done editing the post, rebuild the blog files with `npm run blog`. Build the entire site with with `npm run build`.

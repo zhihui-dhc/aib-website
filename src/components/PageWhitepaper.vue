@@ -1,37 +1,40 @@
 <template>
   <div class="page-whitepaper">
+    <locale-menu path="whitepaper" :langs="['en-US', 'ko', 'pt', 'zh-CN']"></locale-menu>
     <page-whitepaper-nav></page-whitepaper-nav>
-    <div class="toc-padding" v-bind:class="{ 'toc-visible': whitepaperTocVisible }">
-    <section class="section-default">
-      <div class="section-container">
-        <div class="section-content">
-          <div class="article-body">
-            <zh v-if="lang === 'zh'"></zh>
-            <en v-else></en>
-          </div>
-        </div>
-      </div>
-    </section>
+    <toc-padding v-bind:class="{ 'toc-visible': whitepaperTocVisible }">
+      <vue-article-body>
+        <text-ko v-if="$route.params.locale === 'ko'"></text-ko>
+        <text-pt v-else-if="$route.params.locale === 'pt'"></text-pt>
+        <text-zh-cn v-else-if="$route.params.locale === 'zh-CN'"></text-zh-cn>
+        <text-en-us v-else></text-en-us>
+      </vue-article-body>
+    </toc-padding>
   </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
 import PageWhitepaperNav from './PageWhitepaperNav'
-import en from '../content/en/WHITEPAPER.md'
-import zh from '../content/zh/WHITEPAPER.md'
-import Vue from 'vue'
-
+import LocaleMenu from './LocaleMenu'
+import TocPadding from './TocPadding'
+import VueArticleBody from '@nylira/vue-article-body'
+import TextEnUs from '../../content/en-US/WHITEPAPER.md'
+import TextKo from '../../content/ko/WHITEPAPER.md'
+import TextPt from '../../content/pt/WHITEPAPER.md'
+import TextZhCn from '../../content/zh-CN/WHITEPAPER.md'
 export default {
   components: {
     PageWhitepaperNav,
-    en,
-    zh
+    LocaleMenu,
+    TocPadding,
+    VueArticleBody,
+    TextEnUs,
+    TextKo,
+    TextPt,
+    TextZhCn
   },
   computed: {
-    lang () {
-      return Vue.config.lang
-    },
     ...mapGetters([
       'whitepaperTocVisible'
     ])
@@ -41,7 +44,7 @@ export default {
       return {
         inner: this.$t('siteHeader.whitepaper'),
         separator: '-',
-        complement: 'Cosmos - ' + this.$t('site.networkOfBlockchains')
+        complement: this.$t('site.title')
       }
     }
   },
@@ -52,3 +55,9 @@ export default {
   }
 }
 </script>
+
+<style lang="stylus">
+@import '../styles/variables.styl'
+.page-whitepaper
+  padding-top 1rem
+</style>

@@ -1,9 +1,15 @@
 <template>
   <div class="page-whitepaper-nav mobile-only">
-    <div class="toc-hidden-bar" v-show="!whitepaperTocVisible" @click="showToc(true)">
+    <div
+      class="toc-hidden-bar"
+      v-show="!whitepaperTocVisible"
+      @click="showToc(true)">
       <i class="fa fa-bars"></i>
     </div>
-    <div class="toc-hidden-bar" v-show="whitepaperTocVisible" @click="showToc(false)">
+    <div
+      class="toc-hidden-bar"
+      v-show="whitepaperTocVisible"
+      @click="showToc(false)">
       <i class="fa fa-times"></i>
     </div>
   </div>
@@ -26,7 +32,7 @@ export default {
   },
   methods: {
     showToc (value) {
-      if (value === true) {
+      if (value) {
         Ps.initialize(document.querySelector('.minimal-toc'))
         this.$store.commit('setWhitepaperTocVisible', true)
       } else {
@@ -34,18 +40,19 @@ export default {
         this.$store.commit('setWhitepaperTocVisible', false)
       }
     },
-    printWhitepaper () { window.print() }
+    initToc () {
+      if (!this.whitepaperTocVisible) {
+        document.querySelector('.minimal-toc').style.display = 'none'
+      }
+      Ps.initialize(document.querySelector('.minimal-toc'))
+      watchTocClicks(this.showToc)
+      this.$store.commit('setWhitepaperElementsVisible',
+        inViewport(document.querySelectorAll('h2, h3, h4')))
+      percentageScrolling()
+    }
   },
   mounted () {
-    if (!this.whitepaperTocVisible) {
-      document.querySelector('.minimal-toc').style.display = 'none'
-    }
-
-    Ps.initialize(document.querySelector('.minimal-toc'))
-    watchTocClicks(this.showToc)
-    this.$store.commit('setWhitepaperElementsVisible',
-      inViewport(document.querySelectorAll('h2, h3, h4')))
-    percentageScrolling()
+    this.initToc()
   },
   props: ['toc-visible'],
   watch: {

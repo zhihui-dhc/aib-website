@@ -12,6 +12,9 @@
 import AppHeader from './components/AppHeader.vue'
 import AppFooter from './components/AppFooter.vue'
 import store from './store/index.js'
+// import getLang from './scripts/getLang.js'
+// import Vue from 'vue'
+import firebase from 'firebase'
 
 export default {
   components: {
@@ -45,6 +48,22 @@ export default {
       { r: 'icon', t: 'image/png', sz: '16x16', h: require('./assets/favicon/favicon-16x16.png') },
       { r: 'manifest', h: require('./assets/favicon/manifest.json') }
     ]
+  },
+  mounted () {
+    let self = this
+    // Vue.config.lang = getLang()
+    firebase.auth().onAuthStateChanged(function (user) {
+      if (user) {
+        self.$store.commit('setSessionUserDisplayName', user.displayName)
+        self.$store.commit('setSessionUserEmail', user.email)
+        self.$store.commit('setSessionUserPhotoUrl', user.photoUrl)
+        self.$store.commit('setSessionUserUid', user.uid)
+        console.log('signed in:', user.email)
+      } else {
+        self.$store.commit('clearSessionUser')
+        console.log('signed out')
+      }
+    })
   },
   store
 }

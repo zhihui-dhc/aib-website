@@ -1,43 +1,40 @@
 <template>
-  <div class="page-plan page-default">
-    <div class="article-body">
-      <ja v-if="lang === 'ja'"></ja>
-      <ko v-else-if="lang === 'ko'"></ko>
-      <zh v-else-if="lang === 'zh'"></zh>
-      <en v-else></en>
-    </div>
+  <div class="page-plan">
+    <locale-menu path="plan" :langs="['en-US', 'ko']"></locale-menu>
+    <vue-article-body>
+      <text-ko v-if="$route.params.locale === 'ko'"></text-ko>
+      <text-en-us v-else></text-en-us>
+    </vue-article-body>
   </div>
 </template>
 
 <script>
-import PageHeader from './PageHeader'
-import en from '../content/en/PLAN.md'
-import ja from '../content/ja/PLAN.md'
-import ko from '../content/ko/PLAN.md'
-import zh from '../content/zh/PLAN.md'
-import Vue from 'vue'
-
+import LocaleMenu from './LocaleMenu'
+import VueArticleBody from '@nylira/vue-article-body'
+import TextEnUs from '../../content/en-US/PLAN.md'
+import TextKo from '../../content/ko/PLAN.md'
 export default {
+  name: 'page-plan',
   components: {
-    PageHeader,
-    en,
-    ja,
-    ko,
-    zh
-  },
-  computed: {
-    lang () {
-      return Vue.config.lang
-    }
+    LocaleMenu,
+    VueArticleBody,
+    TextEnUs,
+    TextKo
   },
   head: {
     title () {
       return {
         inner: this.$t('siteHeader.plan'),
         separator: '-',
-        complement: 'Cosmos - ' + this.$t('site.networkOfBlockchains')
+        complement: this.$t('site.title')
       }
     }
   }
 }
 </script>
+
+<style lang="stylus">
+@import '../styles/variables.styl'
+.page-plan
+  padding-top 1rem
+</style>

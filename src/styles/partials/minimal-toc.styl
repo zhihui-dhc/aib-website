@@ -1,15 +1,18 @@
 .minimal-toc
-  border 1px solid bc
-  background c-app-bg
-  position relative
   z-index 100
+  font-family sans
+  overflow hidden
+  position fixed
+
+  font-size 0.875rem
 
   a
     text-decoration none
+    border-bottom none !important
 
   &:before
     display block
-    border-bottom 1px solid bc
+    border-bottom 1px dotted bc
     padding 0 0.75em
 
     content 'Table of Contents'
@@ -18,97 +21,75 @@
     line-height 2.5em
 
   ul
-    list-style none
-    padding 0
+    padding 0 !important
 
     li 
-      margin 0
+      margin-bottom 0 !important
+      list-style none !important
       a
         position relative
-        &:after
-          content ''
-          position absolute
-          top 0
-          left 0
-          bottom 0
-          right 0
-          border-left 2px solid transparent
+
+        line-height 1.5
+        padding 0.25em 1em
 
         &:hover
           color link
           text-decoration none
 
       a.active
-        &:after
-          border-left-color txt
+        background alpha(mcolor, 10%)
   
   > ul
     > li
-      border-bottom 1px solid bc
-      
       &:last-of-type
         border-bottom none
 
       > a
         display block
-        padding 0.5*x 0.75*x
-
-        font-weight 500
         color txt
+        font-weight bold
+        padding 0.5em 1em
 
       ul
         margin-bottom 0
         li
           a
             display block
-            padding 0.25*x 0.5*x
-            padding-left 1.5*x
-
-            line-height 1.25*x
+            padding-left 2em
             color txt
-            &:before
-              content '–'
-              display inline-block
-              width x
-              color subtle
-          &:last-of-type a
-            padding-bottom 0.5*x
 
         ul
           padding 0
           li
             a
-              padding-left 3*x
+              padding-left 3em
+              color dim
+
+@media screen and (min-width: 360px)
+  .minimal-toc
+    font-size 1rem
+
+@media screen and (min-width: 720px)
+  .minimal-toc
+    padding 3rem
 
 @media screen and (max-width: 959px)
   .minimal-toc
-    position fixed
+    background c-app-bg
     top 3*x
     left 0
     right 0
     bottom 0
 
-    border none
-    overflow hidden
-
 @media screen and (min-width: 960px)
   .minimal-toc
+    top 3rem + 1.5rem
+    left 0
+    bottom 0
     max-height 100vh
-    overflow hidden
-    position fixed
-    top 3.5*x
-    right 0.5*x
-    bottom 0.5*x
-    width 15*x
-    font-size 0.75*x
+    width 20rem
 
 @media screen and (min-width: 1200px)
   .minimal-toc
-    font-size 0.85*x
-    line-height 1.5
-
-    width 20*x
-
-@media screen and (min-width: 1800px)
-  .minimal-toc
-    width 25*x
+    padding 1.5rem 3rem
+    width 26rem
