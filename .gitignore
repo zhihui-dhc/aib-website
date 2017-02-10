@@ -10,3 +10,5 @@ dist_master/
 *.swo
 stats.json
 src/scripts/firebase.js
+src/assets/rss/
+src/store/json/posts.json
