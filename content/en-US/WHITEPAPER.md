@@ -89,8 +89,7 @@ determined by the amount of staking tokens bonded as collateral.
 
 _NOTE: Fractions like ⅔ and ⅓ refer to fractions of the total voting power,
 never the total number of validators, unless all the validators have equal
-weight._
-_NOTE: +⅔ means "more than ⅔", while ⅓+ means "⅓ or more"._
+weight. >⅔ means "more than ⅔", ≥⅓ means "at least ⅓"._
 
 ### Consensus
 
@@ -110,10 +109,10 @@ The full details of the protocol are described
 [here](https://github.com/tendermint/tendermint/wiki/Byzantine-Consensus-Algorithm).
 
 Tendermint’s security derives from its use of optimal Byzantine fault-tolerance
-via super-majority (+⅔) voting and a locking mechanism.  Together, they ensure
+via super-majority (>⅔) voting and a locking mechanism.  Together, they ensure
 that:
 
-* ⅓+ voting power must be Byzantine to cause a violation of safety, where more
+* ≥⅓ voting power must be Byzantine to cause a violation of safety, where more
   than two values are committed.  
 * if any set of validators ever succeeds in violating safety, or even attempts
   to do so, they can be identified by the protocol.  This includes both voting
@@ -127,7 +126,8 @@ seconds.  Notably, performance of well over a thousand transactions per second
 is maintained even in harsh adversarial conditions, with validators crashing or
 broadcasting maliciously crafted votes.  See the figure below for details.
 
-![Figure of Tendermint throughput performance](https://raw.githubusercontent.com/gnuclear/atom-whitepaper/master/images/tendermint_throughput_blocksize.png)
+![Figure of Tendermint throughput performance]
+(https://raw.githubusercontent.com/gnuclear/atom-whitepaper/master/images/tendermint_throughput_blocksize.png)
 
 ### Light Clients
 
@@ -135,7 +135,7 @@ A major benefit of Tendermint's consensus algorithm is simplified light client
 security, making it an ideal candidate for mobile and internet-of-things use
 cases.  While a Bitcoin light client must sync chains of block headers and find
 the one with the most proof of work, Tendermint light clients need only to keep
-up with changes to the validator set, and then verify the +⅔ PreCommits
+up with changes to the validator set, and then verify the >⅔ PreCommits
 in the latest block to determine the latest state.
 
 Succinct light client proofs also enable [inter-blockchain
@@ -149,27 +149,27 @@ spends](#preventing-long-range-attacks) and
 [censorship](#overcoming-forks-and-censorship-attacks). These are discussed more
 fully in the [appendix](#appendix).
 
-### TMSP
+### ABCI 
 
 The Tendermint consensus algorithm is implemented in a program called Tendermint
 Core.  Tendermint Core is an application-agnostic "consensus engine" that can
 turn any deterministic blackbox application into a distributedly replicated
 blockchain. Tendermint Core connects to blockchain
-applications via the Tendermint Socket Protocol (TMSP) [\[17\]][17]. Thus, TMSP
+applications via the Application Blockchain Interface (ABCI) [\[17\]][17]. Thus, ABCI
 allows for blockchain applications to be programmed in any language, not just
 the programming language that the consensus engine is written in.  Additionally,
-TMSP makes it possible to easily swap out the consensus layer of any existing
+ABCI makes it possible to easily swap out the consensus layer of any existing
 blockchain stack.
 
 We draw an analogy with the well-known cryptocurrency Bitcoin. Bitcoin is a
 cryptocurrency blockchain where each node maintains a fully audited Unspent
 Transaction Output (UTXO) database. If one wanted to create a Bitcoin-like
-system on top of TMSP, Tendermint Core would be responsible for
+system on top of ABCI, Tendermint Core would be responsible for
 
 * Sharing blocks and transactions between nodes
 * Establishing a canonical/immutable order of transactions (the blockchain)
 
-Meanwhile, the TMSP application would be responsible for
+Meanwhile, the ABCI application would be responsible for
 
 * Maintaining the UTXO database
 * Validating cryptographic signatures of transactions
@@ -281,7 +281,8 @@ then communicated from one zone to another by posting Merkle-proofs as evidence
 that the information was sent and received.  This mechanism is called
 inter-blockchain communication, or IBC for short.
 
-![Figure of hub and zones acknowledgement](https://raw.githubusercontent.com/gnuclear/atom-whitepaper/master/images/hub_and_zones.png)
+![Figure of hub and zones
+acknowledgement](https://raw.githubusercontent.com/gnuclear/atom-whitepaper/master/images/hub_and_zones.png)
 
 Any of the zones can themselves be hubs to form an acyclic graph, but
 for the sake of clarity we will only describe the simple configuration where
@@ -316,7 +317,7 @@ supply.
 
 Atoms of the Cosmos Hub may be staked by validators of a zone connected to the
 Hub.  While double-spend attacks on these zones would result in the slashing of
-atoms with Tendermint's fork-accountability, a zone where +⅔ of the voting power
+atoms with Tendermint's fork-accountability, a zone where >⅔ of the voting power
 are Byzantine can commit invalid state.  The Cosmos Hub does not verify or
 execute transactions committed on other zones, so it is the responsibility of
 users to send tokens to zones that they trust.  In the future, the Cosmos Hub's
@@ -349,9 +350,10 @@ native fee market-mechanism of the receiving chain to determine which packets
 get committed (i.e. acknowledged), while allowing for complete freedom on the 
 sending chain as to how many outbound packets are allowed.
 
-![Figure of Zone1, Zone2, and Hub IBC without acknowledgement](https://raw.githubusercontent.com/gnuclear/atom-whitepaper/master/msc/ibc_without_ack.png)
+![Figure of Zone1, Zone2, and Hub IBC without
+acknowledgement](https://raw.githubusercontent.com/gnuclear/atom-whitepaper/master/msc/ibc_without_ack.png)
 
-In the example above, in order to update the block-hash of
+<CAPTION on a figure> In the example above, in order to update the block-hash of
 "Zone1" on "Hub" (or of "Hub" on "Zone2"), an `IBCBlockCommitTx`
 transaction must be posted on "Hub" with the block-hash of "Zone1" (or on
 "Zone2" with the block-hash of "Hub").
@@ -409,65 +411,75 @@ without both parties having to be online.  And with Tendermint, the Cosmos hub,
 and IBC, traders can move funds in and out of the exchange to and from other
 zones with speed.
 
-### Pegging to Other Cryptocurrencies
+### Bridging to Other Cryptocurrencies
 
-A privileged zone can act as the source of a pegged token of another
-cryptocurrency. A peg is similar to the relationship between a
+A privileged zone can act as the source of a bridged token of another
+cryptocurrency. A bridge is similar to the relationship between a
 Cosmos hub and zone; both must keep up with the latest blocks of the
 other in order to verify proofs that tokens have moved from one to the other.  A
-peg-zone on the Cosmos network keeps up with the Hub as well as the
-other cryptocurrency.  The indirection through the peg-zone allows the logic of
+"bridge-zone" on the Cosmos network keeps up with the Hub as well as the
+other cryptocurrency.  The indirection through the bridge-zone allows the logic of
 the Hub to remain simple and agnostic to other blockchain consensus strategies
 such as Bitcoin's proof-of-work mining.
 
-For instance, a Cosmos zone with a specific validator set, possibly the same as
-that of the Hub, could act as an ether-peg, where the TMSP-application on
-the zone (the "peg-zone") has mechanisms to exchange IBC messages with a
-peg-contract on the external Ethereum blockchain (the "origin").  This contract
-would allow ether holders to send ether to the peg-zone by sending it to the
-peg-contract on Ethereum.  Once ether is received by the peg-contract, the ether
-cannot be withdrawn unless an appropriate IBC packet is received by the
-peg-contract from the peg-zone. When a peg-zone receives an IBC packet proving
-that ether was received in the peg-contract for a particular Ethereum account, a
-corresponding account is created on the peg-zone with that balance.  Ether on
-the peg-zone ("pegged-ether") can then be transferred to and from the Hub,
+#### Sending Tokens to the Cosmos Hub
+
+Each bridge-zone validator would run a Tendermint-powered blockchain with a special
+ABCI bridge-app, but also a full-node of the "origin" blockchain.
+
+When new blocks are mined on the origin, the bridge-zone validators will come
+to agreement on committed blocks by signing and sharing their respective local
+view of the origin's blockchain tip.  When a bridge-zone receives payment on the
+origin (and sufficient confirmations were agreed to have been seen in the case
+of a PoW chain such as Ethereum or Bitcoin), a corresponding account is created
+on the bridge-zone with that balance.
+
+In the case of Ethereum, the bridge-zone can share the same validator-set as the
+Cosmos Hub.  On the Ethereum side (the origin), a bridge-contract would allow
+ether holders to send ether to the bridge-zone by sending it to the bridge-contract
+on Ethereum.  Once ether is received by the bridge-contract, the ether cannot be
+withdrawn unless an appropriate IBC packet is received by the bridge-contract from
+the bridge-zone.  The bridge-contract tracks the validator-set of the bridge-zone, which
+may be identical to the Cosmos Hub's validator-set.
+
+In the case of Bitcoin, the concept is similar except that instead of a single
+bridge-contract, each UTXO would be controlled by a threshold multisignature P2SH
+pubscript.  Due to the limitations of the P2SH system, the signers cannot be
+identical to the Cosmos Hub validator-set.
+
+#### Withdrawing Tokens from Cosmos Hub
+
+Ether on the bridge-zone ("bridged-ether") can be transferred to and from the Hub,
 and later be destroyed with a transaction that sends it to a particular
 withdrawal address on Ethereum. An IBC packet proving that the transaction
-occured on the peg-zone can be posted to the Ethereum peg-contract to allow the
+occured on the bridge-zone can be posted to the Ethereum bridge-contract to allow the
 ether to be withdrawn.
 
-Of course, the risk of such a pegging contract is a rogue validator set.  ⅓+
-Byzantine voting power could cause a fork, withdrawing ether from the
-peg-contract on Ethereum while keeping the pegged-ether on the peg-zone. Worse,
-+⅔ Byzantine voting power can steal ether outright from those who sent it to the
-peg-contract by deviating from the original pegging logic of the peg-zone.
+In the case of Bitcoin, the restricted scripting system makes it difficult to
+mirror the IBC coin-transfer mechanism.  Each UTXO has its own independent
+pubscript, so every UTXO must be migrated to a new UTXO when there is a change
+in the set of Bitcoin escrow signers. One solution is to compress and
+decompress the UTXO-set as necessary to keep the total number of UTXOs down.
 
-It is possible to address these issues by designing the peg to be totally
-accountable.  For example, all IBC packets, from the hub and 
-the origin, might require acknowledgement by the peg-zone in such a way that all
-state transitions of the peg-zone can be efficiently challenged and verified by
-either the hub or the origin's peg-contract.  The Hub and the origin should
-allow the peg-zone validators to post collateral, and token transfers out of the
-peg-contract should be delayed (and collateral unbonding period sufficiently
-long) to allow for any challenges to be made by independent auditors.  We leave
-the design of the specification and implementation of this system open as a
-future Cosmos improvement proposal, to be passed by the Cosmos Hub's governance
-system.
+#### Total Accountability of Bridge Zones
 
-While the socio-political atmosphere is not quite evolved enough yet, we can
-extend the mechanism to allow for zones which peg to the fiat currency of a
-nation state by forming a validator set out of some combination of institutions
-responsible for the nation's currency, most particularly, its banks. Of course,
-extra precautions must be taken to only accept currencies backed by strong legal
-systems which can enforce auditability of the banks' activities by a sufficiently
-large group of trusted notaries and institutions.
+The risk of such a bridgeging contract is a rogue validator set.  ≥⅓ Byzantine
+voting power could cause a fork, withdrawing ether from the bridge-contract on
+Ethereum while keeping the bridged-ether on the bridge-zone. Worse, >⅔ Byzantine
+voting power can steal ether outright from those who sent it to the
+bridge-contract by deviating from the original bridgeging logic of the bridge-zone.
 
-A result of this integration could be, for instance, allowing anyone with
-an account at a bank on the zone to move dollars from their bank account
-to other accounts on the zone, or to the hub, or to another zone entirely.  
-In this regard, the Cosmos Hub can act as a seamless conduit between fiat 
-currencies and cryptocurrencies, removing the barriers that have until now limited 
-their interoperability to the realm of exchanges.
+It is possible to address these issues by designing the bridge to be totally
+accountable.  For example, all IBC packets, from the hub and the origin, might
+require acknowledgement by the bridge-zone in such a way that all state
+transitions of the bridge-zone can be efficiently challenged and verified by
+either the hub or the origin's bridge-contract.  The Hub and the origin should
+allow the bridge-zone validators to post collateral, and token transfers out of
+the bridge-contract should be delayed (and collateral unbonding period
+sufficiently long) to allow for any challenges to be made by independent
+auditors.  We leave the design of the specification and implementation of this
+system open as a future Cosmos improvement proposal, to be passed by the Cosmos
+Hub's governance system.
 
 ### Ethereum Scaling
 
@@ -476,7 +488,7 @@ Ethereum nodes process every single transaction and also store all the states.
 [link](https://docs.google.com/presentation/d/1CjD0W4l4-CwHKUvfF5Vlps76fKLEC6pIwu1a_kC_YRQ/mobilepresent?slide=id.gd284b9333_0_28).
 
 Since Tendermint can commit blocks much faster than Ethereum's proof-of-work,
-EVM zones powered by Tendermint consensus and operating on pegged-ether can
+EVM zones powered by Tendermint consensus and operating on bridged-ether can
 provide higher performance to Ethereum blockchains.  Additionally, though the
 Cosmos Hub and IBC packet mechanics does not allow for arbitrary contract logic
 execution per se, it can be used to coordinate token movements between Ethereum
@@ -487,7 +499,7 @@ Ethereum scaling via sharding.
 
 Cosmos zones run arbitrary application logic, which is defined at the beginning of the
 zone's life and can potentially be updated over time by governance. Such flexibility
-allows Cosmos zones to act as pegs to other cryptocurrencies such as Ethereum or
+allows Cosmos zones to act as bridges to other cryptocurrencies such as Ethereum or
 Bitcoin, and it also permits derivatives of those blockchains, utilizing the
 same codebase but with a different validator set and initial distribution. This
 allows many existing cryptocurrency frameworks, such as those of Ethereum,
@@ -504,7 +516,7 @@ time.
 
 Zones can also serve as blockchain-backed versions of enterprise and government
 systems, where pieces of a particular service that are traditionally run by an
-organization or group of organizations are instead run as a TMSP application on
+organization or group of organizations are instead run as a ABCI application on
 a certain zone, which allows it to inherit the security and interoperability of the
 public Cosmos network without sacrificing control over the underlying service.
 Thus, Cosmos may offer the best of both worlds for organizations looking to
@@ -515,7 +527,7 @@ to a distributed third party.
 
 Some claim that a major problem with consistency-favouring consensus algorithms
 like Tendermint is that any network partition which causes there to be no single
-partition with +⅔ voting power (e.g. ⅓+ going offline) will halt consensus
+partition with >⅔ voting power (e.g. ≥⅓ going offline) will halt consensus
 altogether. The Cosmos architecture can help mitigate this problem by using a global
 hub with regional autonomous zones, where voting power for each zone are
 distributed based on a common geographic region.  For instance, a common
@@ -648,8 +660,8 @@ blockchain. In these cases, the validators can coordinate out of band to force
 the timeout of these malicious validators, if there is a supermajority
 consensus.
 
-In situations where the Cosmos Hub halts due to a ⅓+ coalition of voting power
-going offline, or in situations where a ⅓+ coalition of voting power censor
+In situations where the Cosmos Hub halts due to a ≥⅓ coalition of voting power
+going offline, or in situations where a ≥⅓ coalition of voting power censor
 evidence of malicious behavior from entering the blockchain, the hub must
 recover with a hard-fork reorg-proposal.  (Link to "Forks and Censorship
 Attacks").
@@ -858,7 +870,7 @@ finality can be achieved eventually.
 This is an active area of research by the Casper team.  The challenge is in
 constructing a betting mechanism that can be proven to be an evolutionarily
 stable strategy.  The main benefit of Casper as compared to Tendermint may be in
-offering "availability over consistency" -- consensus does not require a +⅔
+offering "availability over consistency" -- consensus does not require a >⅔
 quorum of voting power -- perhaps at the cost of commit speed or
 implementation complexity.
 
@@ -903,18 +915,20 @@ the transfer of value or market equivalents.
 
 #### Sidechains
 
-Sidechains [\[15\]][15] are a proposed mechanism for scaling the Bitcoin network
-via alternative blockchains that are "pegged" to the Bitcoin blockchain.
-Sidechains allow bitcoins to effectively move from the Bitcoin blockchain to the
-sidechain and back, and allow for experimentation in new features on the
-sidechain.  As in the Cosmos Hub, the sidechain and Bitcoin serve as
-light-clients of each other, using SPV proofs to determine when coins should be
-transferred to the sidechain and back.  Of course, since Bitcoin uses
-proof-of-work, sidechains centered around Bitcoin suffer from the many problems
-and risks of proof-of-work as a consensus mechanism.  Furthermore, this is a
-Bitcoin-maximalist solution that doesn't natively support a variety of tokens
-and inter-zone network topology as Cosmos does. That said, the core mechanism of
-the two-way peg is in principle the same as that employed by the Cosmos network.
+Sidechains [\[15\]][15] are a proposed mechanism for scaling the Bitcoin
+network via alternative blockchains that are "two-way pegged" to the Bitcoin
+blockchain. (Two-way pegging is equivalent to bridging. In Cosmos we say
+"bridging" to distinguish from market-pegging).  Sidechains allow bitcoins to
+effectively move from the Bitcoin blockchain to the sidechain and back, and
+allow for experimentation in new features on the sidechain.  As in the Cosmos
+Hub, the sidechain and Bitcoin serve as light-clients of each other, using SPV
+proofs to determine when coins should be transferred to the sidechain and back.
+Of course, since Bitcoin uses proof-of-work, sidechains centered around Bitcoin
+suffer from the many problems and risks of proof-of-work as a consensus
+mechanism.  Furthermore, this is a Bitcoin-maximalist solution that doesn't
+natively support a variety of tokens and inter-zone network topology as Cosmos
+does. That said, the core mechanism of the two-way peg is in principle the same
+as that employed by the Cosmos network.
 
 #### Ethereum Scalability Efforts
 
@@ -998,12 +1012,13 @@ fork due to asynchrony, Bitcoin cannot reliably implement fork-accountability,
 other than the implicit opportunity cost paid by miners for mining an orphaned
 block.
 
+
 ### Tendermint Consensus 
 
 We call the voting stages _PreVote_ and _PreCommit_. A vote can be for a
-particular block or for _Nil_.  We call a collection of +⅔ PreVotes for a single
-block in the same round a _Polka_, and a collection of +⅔ PreCommits for a
-single block in the same round a _Commit_.  If +⅔ PreCommit for Nil in the same
+particular block or for _Nil_.  We call a collection of >⅔ PreVotes for a single
+block in the same round a _Polka_, and a collection of >⅔ PreCommits for a
+single block in the same round a _Commit_.  If >⅔ PreCommit for Nil in the same
 round, they move to the next round.
 
 Note that strict determinism in the protocol incurs a weak synchrony assumption
@@ -1011,7 +1026,7 @@ as faulty leaders must be detected and skipped.  Thus, validators wait some
 amount of time, _TimeoutPropose_, before they Prevote Nil, and the value of
 TimeoutPropose increases with each round.  Progression through the rest of a
 round is fully asychronous, in that progress is only made once a validator hears
-from +⅔ of the network.  In practice, it would take an extremely strong
+from >⅔ of the network.  In practice, it would take an extremely strong
 adversary to indefinetely thwart the weak synchrony assumption (causing the
 consensus to fail to ever commit a block), and doing so can be made even more
 difficult by using randomized values of TimeoutPropose on each validator.
@@ -1036,7 +1051,7 @@ The full details of the protocol are described
 ### Tendermint Light Clients
 
 The need to sync all block headers is eliminated in Tendermint-PoS as the
-existence of an alternative chain (a fork) means ⅓+ of bonded stake can be
+existence of an alternative chain (a fork) means ≥⅓ of bonded stake can be
 slashed.  Of course, since slashing requires that _someone_ share evidence of a
 fork, light clients should store any block-hash commits that it sees.
 Additionally, light clients could periodically stay synced with changes to the
@@ -1109,7 +1124,7 @@ light-client LRA security.
 
 ### Overcoming Forks and Censorship Attacks
 
-Due to the definition of a block commit, any ⅓+ coalition of voting power can
+Due to the definition of a block commit, any ≥⅓ coalition of voting power can
 halt the blockchain by going offline or not broadcasting their votes. Such a
 coalition can also censor particular transactions by rejecting blocks that
 include these transactions, though this would result in a significant proportion
@@ -1137,7 +1152,7 @@ refrigerator may accept any reorg-proposal signed by +½ of the original
 validators by voting power.
 
 No non-synchronous Byzantine fault-tolerant algorithm can come to consensus when
-⅓+ of voting power are dishonest, yet a fork assumes that ⅓+ of voting power
+≥⅓ of voting power are dishonest, yet a fork assumes that ≥⅓ of voting power
 have already been dishonest by double-signing or lock-changing without
 justification.  So, signing the reorg-proposal is a coordination problem that
 cannot be solved by any non-synchronous protocol (i.e. automatically, and
@@ -1151,8 +1166,8 @@ signed.
 Assuming that the external coordination medium and protocol is robust, it
 follows that forks are less of a concern than censorship attacks.
 
-In addition to forks and censorship, which require ⅓+ Byzantine voting power, a
-coalition of +⅔ voting power may commit arbitrary, invalid state.  This is
+In addition to forks and censorship, which require ≥⅓ Byzantine voting power, a
+coalition of >⅔ voting power may commit arbitrary, invalid state.  This is
 characteristic of any (BFT) consensus system. Unlike double-signing, which
 creates forks with easily verifiable evidence, detecting committment of an
 invalid state requires non-validating peers to verify whole blocks, which
@@ -1168,9 +1183,9 @@ validators of a Tendermint blockchain may be expected to be identifiable,
 commitment of an invalid state may even be punishable by law or some external
 jurisprudence, if desired.
 
-### TMSP Specification
+### ABCI Specification
 
-TMSP consists of 3 primary message types that get delivered from the core to the
+ABCI consists of 3 primary message types that get delivered from the core to the
 application. The application replies with corresponding response messages.
 
 The `AppendTx` message is the work horse of the application. Each transaction in
@@ -1194,12 +1209,12 @@ simplifies the development of secure lightweight clients, as Merkle-hash proofs
 can be verified by checking against the block-hash, and the block-hash is signed
 by a quorum of validators (by voting power).
 
-Additional TMSP messages allow the application to keep track of and change the
+Additional ABCI messages allow the application to keep track of and change the
 validator set, and for the application to receive the block information, such as
-the height and the commit votes.  
+the height and the commit votes.
 
-TMSP requests/responses are simple Protobuf messages.  Check out the [schema
-file](https://github.com/tendermint/tmsp/blob/master/types/types.proto).
+ABCI requests/responses are simple Protobuf messages.  Check out the [schema
+file](https://github.com/tendermint/abci/blob/master/types/types.proto).
 
 ##### AppendTx
   * __Arguments__:
@@ -1286,7 +1301,7 @@ connection, or Key="mode", Value="consensus" for a consensus connection.
     Signals the end of a block.  Called prior to each Commit after all
 transactions
 
-See [the TMSP repository](https://github.com/tendermint/tmsp#message-types) for more details.
+See [the ABCI repository](https://github.com/tendermint/abci#message-types) for more details.
 
 ### IBC Packet Delivery Acknowledgement
 
@@ -1302,7 +1317,8 @@ initial packet status to `AckPending`.  Then, it is the receiving chain's
 responsibility to confirm delivery by including an abbreviated `IBCPacket` in the
 app Merkle hash.
 
-![Figure of Zone1, Zone2, and Hub IBC with acknowledgement](https://raw.githubusercontent.com/gnuclear/atom-whitepaper/master/msc/ibc_with_ack.png)
+![Figure of Zone1, Zone2, and Hub IBC with
+acknowledgement](https://raw.githubusercontent.com/gnuclear/atom-whitepaper/master/msc/ibc_with_ack.png)
 
 First, an `IBCBlockCommit` and `IBCPacketTx` are posted on "Hub" that proves
 the existence of an `IBCPacket` on "Zone1".  Say that `IBCPacketTx` has the
@@ -1375,7 +1391,8 @@ above, if "Hub" had not received an `AckSent` status from "Zone2" by block
 350, it would have set the status automatically to `Timeout`.  This evidence of
 a timeout can get posted back on "Zone1", and any tokens can be returned.
 
-![Figure of Zone1, Zone2, and Hub IBC with acknowledgement and timeout](https://raw.githubusercontent.com/gnuclear/atom-whitepaper/master/msc/ibc_with_ack_timeout.png)
+![Figure of Zone1, Zone2, and Hub IBC with acknowledgement and
+timeout](https://raw.githubusercontent.com/gnuclear/atom-whitepaper/master/msc/ibc_with_ack_timeout.png)
 
 ### Merkle Tree & Proof Specification
 
@@ -1438,7 +1455,7 @@ Trie when the binary variant becomes available.
 ### Transaction Types
 
 In the canonical implementation, transactions are streamed to the Cosmos hub
-application via the TMSP interface.
+application via the ABCI interface.
 
 The Cosmos Hub will accept a number of primary transaction types, including
 `SendTx`, `BondTx`, `UnbondTx`, `ReportHackTx`, `SlashTx`, `BurnAtomTx`,
@@ -1457,7 +1474,7 @@ An `IBCBlockCommitTx` transaction is composed of:
   needed to verify vote signatures
 - `BlockHeight (int)`: The height of the commit
 - `BlockRound (int)`: The round of the commit
-- `Commit ([]Vote)`: The +⅔ Tendermint `Precommit` votes that comprise a block
+- `Commit ([]Vote)`: The >⅔ Tendermint `Precommit` votes that comprise a block
   commit
 - `ValidatorsHash ([]byte)`: A Merkle-tree root hash of the new validator set
 - `ValidatorsHashProof (SimpleProof)`: A SimpleTree Merkle-proof for proving the
@@ -1519,7 +1536,7 @@ IBC/<SrcChainID>/<DstChainID>/<Number>
 When "Zone1" wants to send a packet to "Zone2" through "Hub", the
 `IBCPacket` data are identical whether the packet is Merkle-ized on "Zone1",
 the "Hub", or "Zone2".  The only mutable field is `Status` for tracking
-delivery, as shown below.
+delivery.
 
 ## Acknowledgements ############################################################
 
@@ -1528,7 +1545,7 @@ providing support for our work with Tendermint and Cosmos.
 
 * [Zaki Manian](https://github.com/zmanian) of
   [SkuChain](https://www.skuchain.com/) provided much help in formatting and
-wording, especially under the TMSP section
+wording, especially under the ABCI section
 * [Jehan Tremback](https://github.com/jtremback) of Althea and Dustin Byington
   for helping with initial iterations
 * [Andrew Miller](http://soc1024.com/) of [Honey
@@ -1556,7 +1573,7 @@ wording, especially under the TMSP section
 [14]: https://interledger.org/rfcs/0001-interledger-architecture/
 [15]: https://blockstream.com/sidechains.pdf
 [16]: https://blog.ethereum.org/2015/08/01/introducing-casper-friendly-ghost/
-[17]: https://github.com/tendermint/tmsp
+[17]: https://github.com/tendermint/abci
 [18]: https://github.com/ethereum/EIPs/issues/53
 [19]: http://www.ds.ewi.tudelft.nl/fileadmin/pds/papers/PerformanceAnalysisOfLibswift.pdf
 [20]: http://groups.csail.mit.edu/tds/papers/Lynch/jacm88.pdf
@@ -1579,7 +1596,7 @@ wording, especially under the TMSP section
 * [14] Interledger: https://interledger.org/rfcs/0001-interledger-architecture/
 * [15] Sidechains: https://blockstream.com/sidechains.pdf
 * [16] Casper: https://blog.ethereum.org/2015/08/01/introducing-casper-friendly-ghost/
-* [17] TMSP: https://github.com/tendermint/tmsp
+* [17] ABCI: https://github.com/tendermint/abci
 * [18] Ethereum Sharding: https://github.com/ethereum/EIPs/issues/53
 * [19] LibSwift: http://www.ds.ewi.tudelft.nl/fileadmin/pds/papers/PerformanceAnalysisOfLibswift.pdf
 * [20] DLS: http://groups.csail.mit.edu/tds/papers/Lynch/jacm88.pdf
@@ -1589,3 +1606,4 @@ wording, especially under the TMSP section
 #### Unsorted links
 
 * https://www.docdroid.net/ec7xGzs/314477721-ethereum-platform-review-opportunities-and-challenges-for-private-and-consortium-blockchains.pdf.html
+
