@@ -1,60 +1,78 @@
-.form-narrow
-  max-width 32rem
-  margin 0 auto
-  margin-top -1px
-
 .form
-  margin-bottom 1rem
   border-top 1px solid bc
   border-bottom 1px solid bc
-  background #fff
+  margin-left auto
+  margin-right auto
 
-  .form-header, .form-footer
-    padding 1rem
+  &.form-narrow
+    max-width 32rem
 
-  .form-header
-    border-bottom 1px dotted bc
+.form-header, .form-footer
+  padding 1rem
+
+.form-header
+  border-bottom 1px dotted bc
+
+  .title
+    font-weight bold
+    text-transform uppercase
+
+  .subtitle
+    color dim
+    margin-top 0.25rem
+    &:first-of-type
+      margin-top 0
+    strong
+      color txt
+      font-weight bold
+
+.form-footer
+  display flex
+  justify-content space-between
+  align-items center
+
+.form-group
+  background c-app-fg
+  padding 0.5rem 1rem
+  border-bottom 1px dotted bc
+  label
+    display block
+    font-size 0.66666rem
+    text-transform uppercase
+    color light
+    font-weight bold
+    padding 0.667rem 0 0.333rem
+    line-height 1rem
+
+  .ni-field
     margin-bottom 0.5rem
 
-    .title
-      font-weight 500
+  .ni-form-msg-error
+    display none
 
-    .subtitle
-      color dim
-      margin-top 0.25rem
-      &:first-of-type
-        margin-top 0
+  &.form-group-error
+    .ni-field
+      border-color #f00
+    .ni-form-msg-error
+      display flex
 
-    .subtitle-error
-      color #f00
+.input-group
+  display flex
+  margin-bottom 0.5rem
 
-  .form-group
-    padding 0.5rem 1rem
+  .ni-field, .ni-btn-wrapper
+    flex 5
+    margin 0
 
-  .form-footer
-    margin-top 1rem
-    border-top 1px dotted bc
+  .ni-btn-wrapper
+    max-width 15rem
 
-    display flex
-    justify-content space-between
-    align-items center
-
-  .form-group
-    label
-      display block
-      margin-bottom 0.5rem
-      font-weight 400
-      overflow hidden
-      height 0
-
-  .input-group
-    display flex
-
-    .ni-field, .ni-btn
-      width 100%
-
-    .ni-field + .ni-btn-wrapper .ni-btn
-      border-left none
+  .ni-field + .ni-btn-wrapper
+    flex 1
+  .ni-field + .ni-btn-wrapper .ni-btn
+    border-left none
+  .input-group-addon
+    flex 1
 
 @media screen and (min-width: 360px)
   .form
@@ -83,5 +101,3 @@
 @media screen and (min-width: 720px)
   .form
     margin-bottom 3rem
-  .form-narrow
-    margin 2rem auto

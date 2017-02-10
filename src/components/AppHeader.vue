@@ -35,8 +35,8 @@
     <i v-else class="fa fa-times"></i>
 
     <template v-if="desktop">
-      <div v-if="sessionUser.email">Profile</div>
-      <div v-else>Sign In</div>
+      <div v-if="sessionUser.email">{{ sessionUser.displayName }}</div>
+      <div v-else>Account</div>
     </template>
   </div>
 
@@ -72,9 +72,7 @@ export default {
     isTocPage () {
       return this.$route.name === 'whitepaper' || this.$route.name === 'whitepaper-localized' || this.$route.name === 'faq' || this.$route.name === 'faq-localized' || this.$route.name === 'plan' || this.$route.name === 'plan-localized'
     },
-    ...mapGetters([
-      'sessionUser'
-    ])
+    ...mapGetters(['sessionUser'])
   },
   data () {
     return {
@@ -147,7 +145,7 @@ export default {
   position fixed
   top 0
   left 0
-  z-index 10000
+  z-index 100
   width 100%
 
   background #fff

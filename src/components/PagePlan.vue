@@ -1,23 +1,23 @@
 <template>
   <div class="page-plan">
     <locale-menu path="plan" :langs="['en-US', 'ko']"></locale-menu>
-    <vue-article-body>
+    <article-body>
       <text-ko v-if="$route.params.locale === 'ko'"></text-ko>
       <text-en-us v-else></text-en-us>
-    </vue-article-body>
+    </article-body>
   </div>
 </template>
 
 <script>
 import LocaleMenu from './LocaleMenu'
-import VueArticleBody from '@nylira/vue-article-body'
+import ArticleBody from '@nylira/vue-article-body'
 import TextEnUs from '../../content/en-US/PLAN.md'
 import TextKo from '../../content/ko/PLAN.md'
 export default {
   name: 'page-plan',
   components: {
     LocaleMenu,
-    VueArticleBody,
+    ArticleBody,
     TextEnUs,
     TextKo
   },

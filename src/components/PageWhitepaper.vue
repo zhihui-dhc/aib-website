@@ -3,12 +3,12 @@
     <locale-menu path="whitepaper" :langs="['en-US', 'ko', 'pt', 'zh-CN']"></locale-menu>
     <page-whitepaper-nav></page-whitepaper-nav>
     <toc-padding v-bind:class="{ 'toc-visible': whitepaperTocVisible }">
-      <vue-article-body>
+      <article-body>
         <text-ko v-if="$route.params.locale === 'ko'"></text-ko>
         <text-pt v-else-if="$route.params.locale === 'pt'"></text-pt>
         <text-zh-cn v-else-if="$route.params.locale === 'zh-CN'"></text-zh-cn>
         <text-en-us v-else></text-en-us>
-      </vue-article-body>
+      </article-body>
     </toc-padding>
   </div>
 </template>
@@ -18,7 +18,7 @@ import { mapGetters } from 'vuex'
 import PageWhitepaperNav from './PageWhitepaperNav'
 import LocaleMenu from './LocaleMenu'
 import TocPadding from './TocPadding'
-import VueArticleBody from '@nylira/vue-article-body'
+import ArticleBody from '@nylira/vue-article-body'
 import TextEnUs from '../../content/en-US/WHITEPAPER.md'
 import TextKo from '../../content/ko/WHITEPAPER.md'
 import TextPt from '../../content/pt/WHITEPAPER.md'
@@ -28,7 +28,7 @@ export default {
     PageWhitepaperNav,
     LocaleMenu,
     TocPadding,
-    VueArticleBody,
+    ArticleBody,
     TextEnUs,
     TextKo,
     TextPt,

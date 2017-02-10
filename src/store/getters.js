@@ -10,3 +10,5 @@ export const editComment = state => state.editComment
 export const sessionRequest = state => state.session.request
 export const sessionUser = state => state.session.user
 export const sessionVotes = state => state.session.votes
+
+export const notifications = state => state.notifications

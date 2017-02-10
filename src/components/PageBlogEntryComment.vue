@@ -1,19 +1,19 @@
 <template>
   <div class="page-blog-entry-comment">
-    <vue-page-header :title="entry.title" :subtitle="subtitle"></vue-page-header>
+    <page-header :title="entry.title" :subtitle="subtitle"></page-header>
     <comment-thread></comment-thread>
   </div>
 </template>
 
 <script>
-import VuePageHeader from '@nylira/vue-page-header'
+import PageHeader from '@nylira/vue-page-header'
 import CommentThread from './CommentThread'
 import Vue from 'vue'
 import { mapGetters } from 'vuex'
 export default {
   name: 'page-blog-entry-comment',
   components: {
-    VuePageHeader,
+    PageHeader,
     CommentThread
   },
   computed: {

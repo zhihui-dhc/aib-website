@@ -1,20 +1,20 @@
 <template>
   <div class="page-blog-entry">
-    <vue-page-header
+    <page-header
       :title="entry.title"
       :subtitle="entrySubtitle">
-    </vue-page-header>
-    <vue-article-body>
+    </page-header>
+    <article-body>
       <div v-html="entry.body"></div>
-    </vue-article-body>
+    </article-body>
     <comments></comments>
   </div>
 </template>
 
 <script>
 import ArticleFooter from './ArticleFooter'
-import VueArticleBody from '@nylira/vue-article-body'
-import VuePageHeader from '@nylira/vue-page-header'
+import ArticleBody from '@nylira/vue-article-body'
+import PageHeader from '@nylira/vue-page-header'
 import Comments from './Comments'
 import Vue from 'vue'
 import { mapGetters } from 'vuex'
@@ -22,8 +22,8 @@ export default {
   name: 'page-blog-entry',
   components: {
     ArticleFooter,
-    VueArticleBody,
-    VuePageHeader,
+    ArticleBody,
+    PageHeader,
     Comments
   },
   computed: {

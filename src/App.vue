@@ -5,25 +5,35 @@
       <router-view></router-view>
     </div>
     <app-footer></app-footer>
+    <notifications
+      color="hsl(208,100%,25%)"
+      :notifications="notifications">
+    </notifications>
   </div>
 </template>
 
 <script>
+import firebase from './scripts/firebase.js'
 import AppHeader from './components/AppHeader.vue'
 import AppFooter from './components/AppFooter.vue'
+import Notifications from '@nylira/vue-notifications'
 import store from './store/index.js'
 // import getLang from './scripts/getLang.js'
 // import Vue from 'vue'
-import firebase from './scripts/firebase.js'
+import { mapGetters } from 'vuex'
 
 export default {
   components: {
     AppHeader,
     AppFooter,
+    Notifications,
     enRss: require('./assets/rss/en.xml'),
     jaRss: require('./assets/rss/ja.xml'),
     koRss: require('./assets/rss/ko.xml'),
     zhRss: require('./assets/rss/zh.xml')
+  },
+  computed: {
+    ...mapGetters(['notifications'])
   },
   head: {
     meta () {

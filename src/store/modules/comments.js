@@ -1,4 +1,4 @@
-import firebase from '../../scripts/firebase.js'
+import firebase from 'firebase'
 let ref = firebase.database().ref('comments')
 
 const state = {
