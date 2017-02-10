@@ -22,7 +22,12 @@
             <p v-html="$t('sectionHomeIntro.cosmosHubText')"></p>
           </div>
         </div>
-        <router-link to="/whitepaper" class="btn">{{ $t('sectionHomeIntro.readTheWhitepaper') }}</router-link>
+        <btn
+          icon="file-text-o"
+          @click="go('/whitepaper')"
+          :value="$t('sectionHomeIntro.readWhitepaper')"
+          size="lg">
+        </btn>
       </div>
     </section>
     <section-call-to-action></section-call-to-action>
@@ -72,12 +77,13 @@
 <script>
 import SectionCover from './SectionCover'
 import SectionCallToAction from './SectionCallToAction'
-
+import Btn from '@nylira/vue-button'
 export default {
   name: 'page-index',
   components: {
     SectionCover,
-    SectionCallToAction
+    SectionCallToAction,
+    Btn
   },
   head: {
     title () {
@@ -86,6 +92,11 @@ export default {
         separator: '-',
         complement: 'Cosmos: Internet of Blockchains'
       }
+    }
+  },
+  methods: {
+    go (route) {
+      this.$router.push(route)
     }
   }
 }
@@ -96,10 +107,10 @@ export default {
 
 .section-home
   &#home-intro
-    .btn
-      max-width 13*x
-      margin 0 auto
-      margin-top 2*x
+    .ni-btn-wrapper
+      display block
+      max-width 14rem
+      margin 2rem auto 0
 
   &.sh-video
     padding 3rem 0
@@ -130,6 +141,7 @@ export default {
     font-size 1.5rem
     margin-bottom 1rem
     text-align center
+    font-weight 500
 
   h2 + .section-content
   h2 + iframe

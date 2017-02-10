@@ -47,10 +47,14 @@
       overflow hidden
       height 0
 
-    .input-group
-      display flex
-      input, .btn, textarea, .input
-        width 100%
+  .input-group
+    display flex
+
+    .ni-field, .ni-btn
+      width 100%
+
+    .ni-field + .ni-btn-wrapper .ni-btn
+      border-left none
 
 @media screen and (min-width: 360px)
   .form

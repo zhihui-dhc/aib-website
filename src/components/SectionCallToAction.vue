@@ -35,7 +35,7 @@ export default {
 
     h2
       font-size 1.5rem
-      font-weight 600
+      font-weight 500
       margin-bottom 0.5rem
 
     .description

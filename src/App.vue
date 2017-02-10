@@ -14,7 +14,7 @@ import AppFooter from './components/AppFooter.vue'
 import store from './store/index.js'
 // import getLang from './scripts/getLang.js'
 // import Vue from 'vue'
-import firebase from 'firebase'
+import firebase from './scripts/firebase.js'
 
 export default {
   components: {
@@ -69,8 +69,9 @@ export default {
     ]
   },
   mounted () {
-    let self = this
     // Vue.config.lang = getLang()
+
+    let self = this
     firebase.auth().onAuthStateChanged(function (user) {
       if (user) {
         self.$store.commit('setSessionUserDisplayName', user.displayName)
@@ -80,7 +81,7 @@ export default {
         console.log('signed in:', user.email)
       } else {
         self.$store.commit('clearSessionUser')
-        console.log('signed out')
+        // console.log('signed out')
       }
     })
   },

@@ -30,6 +30,8 @@ export default {
 .card-post
   margin 0 auto
   border-bottom 1px dotted bc
+  &:last-of-type
+    border-bottom none
 
   a
     padding 1em
