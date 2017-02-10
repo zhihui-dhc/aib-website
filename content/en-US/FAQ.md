@@ -121,7 +121,7 @@ Interledger is an extension of the Atomic Swap and related ideas to condition tr
 While notaries are somewhat similar to validators in Cosmos, they only facilitate information transfers,
 and are not actually responsible for holding authoritative state. 
 Furthermore, Interledger suffers from the same drawbacks as Atomic Swaps, in terms of the need for liquid markets and end users being on-line.
-That said, we may be able to use pieces of the Interledger protocol within IBC, though it may also serve
+That said, we may be able to use pieces of the Interledger protocol within IBC, though it may also 
 serve as an alternative or competing means for two blockchains to communicate with one another,
 
 ## Scalability

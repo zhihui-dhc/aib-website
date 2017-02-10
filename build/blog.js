@@ -29,6 +29,7 @@ function postsToObjs (files) {
     post.title = metaData.title
     post.slug = metaData.slug
     post.author = metaData.author
+    post.excerpt = metaData.excerpt
     post.date = moment(metaData.date).valueOf() // ms since epoch
     post.description = metaData.description
     // post.dateFriendly = moment(post.date, 'x').format('LL')

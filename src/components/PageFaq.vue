@@ -28,13 +28,31 @@ export default {
       'faqTocVisible'
     ])
   },
+  data () {
+    return {
+      metadata: {
+        page: 'FAQ',
+        title: `FAQ - ${this.$t('site.title')}`,
+        desc: 'Read the answers to frequently asked questions about Cosmos: The Internet of Blockchains.'
+      }
+    }
+  },
   head: {
     title () {
       return {
-        inner: this.$t('siteHeader.faq'),
+        inner: this.metadata.page,
         separator: '-',
         complement: this.$t('site.title')
       }
+    },
+    meta () {
+      return [
+        { n: 'description', c: this.metadata.desc },
+        { n: 'twitter:title', c: this.metadata.title },
+        { n: 'twitter:description', c: this.metadata.desc },
+        { p: 'og:title', c: this.metadata.title },
+        { p: 'og:description', c: this.metadata.desc }
+      ]
     }
   },
   mounted () {

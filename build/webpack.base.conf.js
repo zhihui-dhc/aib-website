@@ -120,7 +120,7 @@ module.exports = {
 		use: [
 			require('markdown-it-anchor'),
 			[require('markdown-it-table-of-contents'), {
-        includeLevel: [2, 3, 4],
+        includeLevel: [2, 3, 4, 5],
         containerClass: 'minimal-toc'
       }]
 		]

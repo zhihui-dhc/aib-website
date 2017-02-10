@@ -21,13 +21,31 @@ export default {
     TextEnUs,
     TextKo
   },
+  data () {
+    return {
+      metadata: {
+        page: 'Plan',
+        title: `Plan - ${this.$t('site.title')}`,
+        desc: 'Information about the Cosmos fundraising plan. The details in this plan override what is currently in the whitepaper, and all other plans published prior.'
+      }
+    }
+  },
   head: {
     title () {
       return {
-        inner: this.$t('siteHeader.plan'),
+        inner: this.metadata.page,
         separator: '-',
         complement: this.$t('site.title')
       }
+    },
+    meta () {
+      return [
+        { n: 'description', c: this.metadata.desc },
+        { n: 'twitter:title', c: this.metadata.title },
+        { n: 'twitter:description', c: this.metadata.desc },
+        { p: 'og:title', c: this.metadata.title },
+        { p: 'og:description', c: this.metadata.desc }
+      ]
     }
   }
 }
