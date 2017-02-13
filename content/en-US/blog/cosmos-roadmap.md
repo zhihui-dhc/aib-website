@@ -36,29 +36,31 @@ the usefulness, usability and connectivity of the network.
 CESS consists of all the software necessary to deploy a minimal network that is
 deserving of the phrase “Internet of Blockchains”. At its heart lies the Cosmos
 Hub, a complete, multi-asset, proof-of-stake blockchain with built-in
-governance and support for the InterBlockchain Communication (IBC) protocol.
+governance and support for the [InterBlockchain Communication (IBC) protocol](https://github.com/tendermint/basecoin/blob/develop/docs/guide/ibc.md).
 CESS also includes zones that serve as bridges to the public Bitcoin and
-Ethereum networks, as well as a decentralized exchange (the Cosmos DEX) and an
-Ethermint zone, which runs the full Ethereum state machine on Tendermint
-consensus.
+Ethereum networks, as well as a [decentralized exchange (the Cosmos DEX)](https://github.com/cosmos/cosmos/blob/master/DEX.md) and an
+[Ethermint](https://github.com/tendermint/ethermint/) zone, which runs the full Ethereum state machine on Tendermint
+consensus.   
 
 There will be five blockchains that launch with the Cosmos Network: Hub, DEX,
 Bitcoin-Bridge, Ethereum-Bridge, and Ethermint.
 
-The Cosmos Hub itself is built using two key pieces: Tendermint and Basecoin.
+The Cosmos Hub itself is built using two key pieces: [Tendermint](https://github.com/tendermint/tendermint) and [Basecoin](https://github.com/tendermint/basecoin).
 Tendermint is the general purpose consensus engine that will be used, at least
 initially, for all blockchains in Cosmos; it is nearing a production-ready
-state, and is already in use by many different organizations. Basecoin is an
-extendable framework for building multi-asset cryptocurrency applications on
-Tendermint. It’s under active development and includes many working example
-plugins. To build the Hub, we need Basecoin plugins for IBC that will manage
+state, and is [already in use by many different organizations](https://tendermint.com/ecosystem). Basecoin is an
+[extendable framework](https://cosmos.network/blog/cosmos-creating-interoperable-blockchains-part-1) 
+for building multi-asset cryptocurrency applications on
+Tendermint. It’s under active development and includes many working [example
+plugins](https://github.com/tendermint/basecoin-examples). 
+To build the Hub, we need Basecoin plugins for IBC that will manage
 validators and their stake, manage delegators and their stake, slash validators
 that misbehave, and manage governance. These are in various states of
-development.
+development.  
 
 The Bitcoin and Ethereum bridges will enable Cosmos to interoperate with the
 public Bitcoin and Ethereum networks through the mechanism of two-way pegs,
-familiar to many as “sidechains”. These will be sidechains of Bitcoin and
+familiar to many as [“sidechains”](https://blockstream.com/technology/). These will be sidechains of Bitcoin and
 Ethereum, which will enable users to move BTC and ETH to and from the Cosmos
 Network. Once in the Cosmos Network, they can be transferred through the Hub to
 other zones, including the decentralized exchange. ETH can also be transferred
@@ -70,12 +72,12 @@ on the Cosmos Network, and participating in governance.
 
 In summary, the foundational components of the project include:
 
- - **Tendermint**
- - **Basecoin Framework**
- - **Hub** (IBC, PoS/Delegation, Governance)
+ - [**Tendermint**](https://github.com/tendermint/tendermint)
+ - [**Basecoin Framework**](https://github.com/tendermint/basecoin)
+ - [**Hub** (IBC, PoS/Delegation, Governance)](https://github.com/tendermint/basecoin)
  - **Bitcoin and Ethereum bridges**
- - **DEX**
- - **Ethermint**
+ - [**DEX**](https://github.com/cosmos/cosmos/blob/master/DEX.md)
+ - [**Ethermint**](https://github.com/tendermint/ethermint)
 
 ## Auxiliary Software and Services
 
@@ -146,3 +148,10 @@ mind that results from the satisfaction of the Cosmos Network having reached
 maturity. Similar to the feeling one would experienced when sipping a cocktail
 on a beach and glancing at a coconut tree that has blossomed into its full
 beauty after a seed planted years before.
+
+# Conclusion
+
+Development on the Cosmos Essential Software and Services continues at quite a clip,
+and the road ahead is well defined and full of exciting technology. 
+We're looking forward to building this out with the community and 
+making the Internet of Blockchains a reality for everyone!
