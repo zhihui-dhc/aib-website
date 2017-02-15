@@ -1,4 +1,53 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Cosmos Blog]]></title><description><![CDATA[The Internet of Blockchains]]></description><link>http://cosmos.network</link><image><url>http://cosmos.network/static/favicon.png</url><title>Cosmos Blog</title><link>http://cosmos.network</link></image><generator>RSS for Node</generator><lastBuildDate>Fri, 10 Feb 2017 07:36:08 GMT</lastBuildDate><atom:link href="http://cosmos.network/static//rss.xml" rel="self" type="application/rss+xml"/><pubDate>Fri, 10 Feb 2017 07:36:08 GMT</pubDate><copyright><![CDATA[2016 Cosmos Foundation]]></copyright><language><![CDATA[en]]></language><managingEditor><![CDATA[Cosmos Foundation]]></managingEditor><webMaster><![CDATA[Cosmos Foundation]]></webMaster><ttl>60</ttl><item><title><![CDATA[Cosmos Roadmap]]></title><description><![CDATA[<p>In Cosmos land, we have been hard at work with getting everything ready for the
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Cosmos Blog]]></title><description><![CDATA[The Internet of Blockchains]]></description><link>http://cosmos.network</link><image><url>http://cosmos.network/static/favicon.png</url><title>Cosmos Blog</title><link>http://cosmos.network</link></image><generator>RSS for Node</generator><lastBuildDate>Wed, 15 Feb 2017 15:11:58 GMT</lastBuildDate><atom:link href="http://cosmos.network/static//rss.xml" rel="self" type="application/rss+xml"/><pubDate>Wed, 15 Feb 2017 15:11:58 GMT</pubDate><copyright><![CDATA[2016 Cosmos Foundation]]></copyright><language><![CDATA[en]]></language><managingEditor><![CDATA[Cosmos Foundation]]></managingEditor><webMaster><![CDATA[Cosmos Foundation]]></webMaster><ttl>60</ttl><item><title><![CDATA[Cosmos Whitepaper Bounty]]></title><description><![CDATA[<p>Out here in Cosmos land, we have been hard at work getting everything prepared
+for the big fundraiser. We could not be more pleased to see that the vision for
+the Internet of Blockchains has been slowly catching on in the community,  with
+our research and preparation solidifying nicely as well.</p>
+<p>Pertaining to the fundraiser, we have a sequence of announcements to make in
+the coming weeks. We would love both your feedback and your assistance to
+ensure that we make the fundraiser a success. Ultimately, the goal of
+connecting the disparate blockchains and enabling moving money seamlessly
+between them is substantial, with a number of moving parts, each of some
+complexity… Your questions and comments help us to hone our communications,
+hopefully  leading to simpler, clearer explanations of all aspects of this
+Cosmos that we will build together.</p>
+<p>In <a href="https://cosmos.network/blog/cosmos-roadmap">our last post</a>, we wrote about the different components of the Cosmos Network
+and our strategic roadmap. This week we are soliciting your input and
+announcing the first of two bounties!</p>
+<h2>Whitepaper Bounty</h2>
+<p>The Cosmos whitepaper was published last summer, and we received excellent
+questions, comments, and general feedback about it. But this was rather
+informal, and we did not in any way officially onboard the feedback we
+received. Today that changes: Before we launch the fundraiser, we want to
+invite a public review of the whitepaper, really an open line to question our
+premises and our proposed solutions. We know that many of you will have
+brilliant ideas that we haven’t yet heard, and we want to be certain that the
+Cosmos system is not only technically and conceptually bulletproof, but
+absolutely imbued with the best ideas, from the best minds!</p>
+<p>So of course, we are especially interested in exploring the overall Cosmos
+architecture; those technical or economic flaws that we might have overlooked.
+But fear not, the long hours you’ll spend wearing your well-trodden thinking
+cap, brooding over our oh-so-cosmic ideas shall not go unrewarded. For usable
+contributions, we will give out in aggregate 5 bitcoins. We might award that
+entirely to the best and most shattering contribution, or we may perhaps split
+it out over several different ones. In addition, depending on how your review
+affects your belief in the project, you may choose to receive your reward in
+either bitcoin or in atoms!</p>
+<p>Here are the rules and process:</p>
+<ol>
+<li>Though any platform for discussion may be initially used, all
+contributions must ultimately be filed formally as GitHub issues.</li>
+<li><strong>The repository for filing is <a href="https://github.com/cosmos/cosmos/issues">https://github.com/cosmos/cosmos/issues</a> and
+you should tag @jaekwon and @ebuchman.</strong></li>
+<li><strong>Please make your point as descriptive as it needs to be, but no more.  A
+summary of the concern, followed by a more broad description, is probably
+ideal.</strong></li>
+<li>The review begins today, Wednesday the 15th of February, and will run
+until Friday February 24th at midnight PST.</li>
+</ol>
+<p>As always, if you have any questions or comments, you can find us on Slack,
+and/or Twitter. We look forward to your contributions!</p>
+<p>The Cosmos Team</p>
+]]></description><link>http://cosmos.network/posts/cosmos-whitepaper-bounty</link><guid isPermaLink="true">http://cosmos.network/posts/cosmos-whitepaper-bounty</guid><dc:creator><![CDATA[The Cosmonauts]]></dc:creator></item><item><title><![CDATA[Cosmos Roadmap]]></title><description><![CDATA[<p>In Cosmos land, we have been hard at work with getting everything ready for the
 big fundraiser. The Internet of Blockchain meme has been slowly catching on in
 the blockchain community and the vision has solidified in our research and
 preparation as well.</p>
@@ -22,26 +71,28 @@ the usefulness, usability and connectivity of the network.</p>
 <p>CESS consists of all the software necessary to deploy a minimal network that is
 deserving of the phrase “Internet of Blockchains”. At its heart lies the Cosmos
 Hub, a complete, multi-asset, proof-of-stake blockchain with built-in
-governance and support for the InterBlockchain Communication (IBC) protocol.
+governance and support for the <a href="https://github.com/tendermint/basecoin/blob/develop/docs/guide/ibc.md">InterBlockchain Communication (IBC) protocol</a>.
 CESS also includes zones that serve as bridges to the public Bitcoin and
-Ethereum networks, as well as a decentralized exchange (the Cosmos DEX) and an
-Ethermint zone, which runs the full Ethereum state machine on Tendermint
+Ethereum networks, as well as a <a href="https://github.com/cosmos/cosmos/blob/master/DEX.md">decentralized exchange (the Cosmos DEX)</a> and an
+<a href="https://github.com/tendermint/ethermint/">Ethermint</a> zone, which runs the full Ethereum state machine on Tendermint
 consensus.</p>
 <p>There will be five blockchains that launch with the Cosmos Network: Hub, DEX,
 Bitcoin-Bridge, Ethereum-Bridge, and Ethermint.</p>
-<p>The Cosmos Hub itself is built using two key pieces: Tendermint and Basecoin.
+<p>The Cosmos Hub itself is built using two key pieces: <a href="https://github.com/tendermint/tendermint">Tendermint</a> and <a href="https://github.com/tendermint/basecoin">Basecoin</a>.
 Tendermint is the general purpose consensus engine that will be used, at least
 initially, for all blockchains in Cosmos; it is nearing a production-ready
-state, and is already in use by many different organizations. Basecoin is an
-extendable framework for building multi-asset cryptocurrency applications on
-Tendermint. It’s under active development and includes many working example
-plugins. To build the Hub, we need Basecoin plugins for IBC that will manage
+state, and is <a href="https://tendermint.com/ecosystem">already in use by many different organizations</a>. Basecoin is an
+<a href="https://cosmos.network/blog/cosmos-creating-interoperable-blockchains-part-1">extendable framework</a>
+for building multi-asset cryptocurrency applications on
+Tendermint. It’s under active development and includes many working <a href="https://github.com/tendermint/basecoin-examples">example
+plugins</a>.
+To build the Hub, we need Basecoin plugins for IBC that will manage
 validators and their stake, manage delegators and their stake, slash validators
 that misbehave, and manage governance. These are in various states of
 development.</p>
 <p>The Bitcoin and Ethereum bridges will enable Cosmos to interoperate with the
 public Bitcoin and Ethereum networks through the mechanism of two-way pegs,
-familiar to many as “sidechains”. These will be sidechains of Bitcoin and
+familiar to many as <a href="https://blockstream.com/technology/">“sidechains”</a>. These will be sidechains of Bitcoin and
 Ethereum, which will enable users to move BTC and ETH to and from the Cosmos
 Network. Once in the Cosmos Network, they can be transferred through the Hub to
 other zones, including the decentralized exchange. ETH can also be transferred
@@ -51,12 +102,12 @@ EVM, but running on a faster consensus algorithm such as Tendermint.</p>
 on the Cosmos Network, and participating in governance.</p>
 <p>In summary, the foundational components of the project include:</p>
 <ul>
-<li><strong>Tendermint</strong></li>
-<li><strong>Basecoin Framework</strong></li>
-<li><strong>Hub</strong> (IBC, PoS/Delegation, Governance)</li>
+<li><a href="https://github.com/tendermint/tendermint"><strong>Tendermint</strong></a></li>
+<li><a href="https://github.com/tendermint/basecoin"><strong>Basecoin Framework</strong></a></li>
+<li><a href="https://github.com/tendermint/basecoin"><strong>Hub</strong> (IBC, PoS/Delegation, Governance)</a></li>
 <li><strong>Bitcoin and Ethereum bridges</strong></li>
-<li><strong>DEX</strong></li>
-<li><strong>Ethermint</strong></li>
+<li><a href="https://github.com/cosmos/cosmos/blob/master/DEX.md"><strong>DEX</strong></a></li>
+<li><a href="https://github.com/tendermint/ethermint"><strong>Ethermint</strong></a></li>
 </ul>
 <h2>Auxiliary Software and Services</h2>
 <p>The auxiliary software and services includes tools which contribute greatly to
@@ -115,6 +166,11 @@ mind that results from the satisfaction of the Cosmos Network having reached
 maturity. Similar to the feeling one would experienced when sipping a cocktail
 on a beach and glancing at a coconut tree that has blossomed into its full
 beauty after a seed planted years before.</p>
+<h1>Conclusion</h1>
+<p>Development on the Cosmos Essential Software and Services continues at quite a clip,
+and the road ahead is well defined and full of exciting technology.
+We’re looking forward to building this out with the community and
+making the Internet of Blockchains a reality for everyone!</p>
 ]]></description><link>http://cosmos.network/posts/cosmos-roadmap</link><guid isPermaLink="true">http://cosmos.network/posts/cosmos-roadmap</guid><dc:creator><![CDATA[The Cosmonauts]]></dc:creator></item><item><title><![CDATA[Fundraiser delay announcement]]></title><description><![CDATA[<p>Dear backers and long term supporters,</p>
 <p>Although February 28th was the most recently cited launch date for our Cosmos
 fundraising event, after careful consideration we’ve decided to push this event
