@@ -57,7 +57,9 @@ Here are the rules and process:
   1. The review begins today, Wednesday the 15th of February, and will run
      until Friday February 24th at midnight PST.
 
-As always, if you have any questions or comments, you can find us on Slack,
-and/or Twitter. We look forward to your contributions!
+As always, if you have any questions or comments, you can find us on
+[Slack](http://forum.tendermint.com:3000),
+[Reddit](http://reddit.com/r/thecosmos), and/or
+[Twitter](http://twitter.com/cosmos_hq). We look forward to your contributions!
 
 The Cosmos Team
