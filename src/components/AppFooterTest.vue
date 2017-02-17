@@ -24,7 +24,7 @@
           <a href="https://www.linkedin.com/company/tendermint">
             <i class="fa fa-linkedout"></i>LinkedIn
           </a>
-          <a href="http://forum.tendermint.com:3000">
+          <a href="http://slack.cosmos.network">
             <i class="fa fa-slick"></i>Slack
           </a>
           <a href="https://twitter.com/tendermint_team">

@@ -5,7 +5,7 @@
         <i class="fa fa-reddit"></i>
         <span class="label">r/thecosmos</span>
       </a>
-      <a href="http://forum.tendermint.com:3000/" target="_blank">
+      <a href="http://slack.cosmos.network/" target="_blank">
         <i class="fa fa-slick"></i>
         <span class="label">Slack</span>
       </a>
