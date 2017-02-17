@@ -140,4 +140,4 @@ for you.
 
 Basecoin is still a work-in-progress, and it’s (back) in active development. If
 you feel like hacking Basecoin, check out our [Slack #basecoin
-channel](http://forum.tendermint.com:3000/) and give us a holler!
+channel](http://slack.cosmos.network/) and give us a holler!

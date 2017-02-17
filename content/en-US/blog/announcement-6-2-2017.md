@@ -43,7 +43,7 @@ really want to be absolutely sure everything is going to be as secure as
 possible, leading (hopefully) to a very awesome and successful fundraiser.
 
 We will announce the new date for the fundraiser two weeks before it goes live.
-You can check the [Tendermint Slack](http://forum.tendermint.com:3000) or
+You can check the [Cosmos Slack](http://slack.cosmos.network) or
 [subscribe to our newsletter](http://cosmos.network) to get updates.
 
 Thanks again to everyone who has followed and supported our work; this is going

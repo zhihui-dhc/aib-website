@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Cosmos Blog]]></title><description><![CDATA[The Internet of Blockchains]]></description><link>http://cosmos.network</link><image><url>http://cosmos.network/static/favicon.png</url><title>Cosmos Blog</title><link>http://cosmos.network</link></image><generator>RSS for Node</generator><lastBuildDate>Wed, 15 Feb 2017 15:11:58 GMT</lastBuildDate><atom:link href="http://cosmos.network/static//rss.xml" rel="self" type="application/rss+xml"/><pubDate>Wed, 15 Feb 2017 15:11:58 GMT</pubDate><copyright><![CDATA[2016 Cosmos Foundation]]></copyright><language><![CDATA[en]]></language><managingEditor><![CDATA[Cosmos Foundation]]></managingEditor><webMaster><![CDATA[Cosmos Foundation]]></webMaster><ttl>60</ttl><item><title><![CDATA[Cosmos Whitepaper Bounty]]></title><description><![CDATA[<p>Out here in Cosmos land, we have been hard at work getting everything prepared
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Cosmos Blog]]></title><description><![CDATA[The Internet of Blockchains]]></description><link>http://cosmos.network</link><image><url>http://cosmos.network/static/favicon.png</url><title>Cosmos Blog</title><link>http://cosmos.network</link></image><generator>RSS for Node</generator><lastBuildDate>Fri, 17 Feb 2017 13:21:51 GMT</lastBuildDate><atom:link href="http://cosmos.network/static//rss.xml" rel="self" type="application/rss+xml"/><pubDate>Fri, 17 Feb 2017 13:21:51 GMT</pubDate><copyright><![CDATA[2016 Cosmos Foundation]]></copyright><language><![CDATA[en]]></language><managingEditor><![CDATA[Cosmos Foundation]]></managingEditor><webMaster><![CDATA[Cosmos Foundation]]></webMaster><ttl>60</ttl><item><title><![CDATA[Cosmos Whitepaper Bounty]]></title><description><![CDATA[<p>Out here in Cosmos land, we have been hard at work getting everything prepared
 for the big fundraiser. We could not be more pleased to see that the vision for
 the Internet of Blockchains has been slowly catching on in the community,  with
 our research and preparation solidifying nicely as well.</p>
@@ -44,8 +44,10 @@ ideal.</strong></li>
 <li>The review begins today, Wednesday the 15th of February, and will run
 until Friday February 24th at midnight PST.</li>
 </ol>
-<p>As always, if you have any questions or comments, you can find us on Slack,
-and/or Twitter. We look forward to your contributions!</p>
+<p>As always, if you have any questions or comments, you can find us on
+<a href="http://slack.cosmos.network">Slack</a>,
+<a href="http://reddit.com/r/thecosmos">Reddit</a>, and/or
+<a href="http://twitter.com/cosmos_hq">Twitter</a>. We look forward to your contributions!</p>
 <p>The Cosmos Team</p>
 ]]></description><link>http://cosmos.network/posts/cosmos-whitepaper-bounty</link><guid isPermaLink="true">http://cosmos.network/posts/cosmos-whitepaper-bounty</guid><dc:creator><![CDATA[The Cosmonauts]]></dc:creator></item><item><title><![CDATA[Cosmos Roadmap]]></title><description><![CDATA[<p>In Cosmos land, we have been hard at work with getting everything ready for the
 big fundraiser. The Internet of Blockchain meme has been slowly catching on in
@@ -210,7 +212,7 @@ the details out. The decision to delay was made after careful consideration; we
 really want to be absolutely sure everything is going to be as secure as
 possible, leading (hopefully) to a very awesome and successful fundraiser.</p>
 <p>We will announce the new date for the fundraiser two weeks before it goes live.
-You can check the <a href="http://forum.tendermint.com:3000">Tendermint Slack</a> or
+You can check the <a href="http://slack.cosmos.network">Cosmos Slack</a> or
 <a href="http://cosmos.network">subscribe to our newsletter</a> to get updates.</p>
 <p>Thanks again to everyone who has followed and supported our work; this is going
 to be a great year!</p>
@@ -339,7 +341,7 @@ persisted to disk automatically. And of course you don’t need to worry about
 complicated networking and consensus logic because Tendermint takes care of that
 for you.</p>
 <p>Basecoin is still a work-in-progress, and it’s (back) in active development. If
-you feel like hacking Basecoin, check out our <a href="http://forum.tendermint.com:3000/">Slack #basecoin
+you feel like hacking Basecoin, check out our <a href="http://slack.cosmos.network/">Slack #basecoin
 channel</a> and give us a holler!</p>
 ]]></description><link>http://cosmos.network/posts/cosmos-creating-interoperable-blockchains-part-1</link><guid isPermaLink="true">http://cosmos.network/posts/cosmos-creating-interoperable-blockchains-part-1</guid><dc:creator><![CDATA[Jae Kwon]]></dc:creator></item><item><title><![CDATA[Why We Are Building the Internet of Blockchains]]></title><description><![CDATA[<p>One of the great tragedies of cryptocurrencies has been the failure to
 interoperate with one another.  Cryptocurrency platforms are competing for

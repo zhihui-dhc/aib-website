@@ -58,7 +58,7 @@ Here are the rules and process:
      until Friday February 24th at midnight PST.
 
 As always, if you have any questions or comments, you can find us on
-[Slack](http://forum.tendermint.com:3000),
+[Slack](http://slack.cosmos.network),
 [Reddit](http://reddit.com/r/thecosmos), and/or
 [Twitter](http://twitter.com/cosmos_hq). We look forward to your contributions!
 

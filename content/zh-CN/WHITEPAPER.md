@@ -5,7 +5,7 @@
 Jae Kwon [jae@tendermint.com](mailto:jae@tendermint.com)<br>
 Ethan Buchman [ethan@tendermint.com](mailto:ethan@tendermint.com)
 
-加入我们的 [Slack](http://forum.tendermint.com:3000/)一起讨论吧！
+加入我们的 [Slack](http://slack.cosmos.network/)一起讨论吧！
 
 _注意：我们会对内容进行定期更新，您可以随时进行查阅，谢谢！_
 

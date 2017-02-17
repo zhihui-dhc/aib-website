@@ -4,7 +4,7 @@ Uma Rede de Distribuição de Ledgers
 Jae Kwon jae@tendermint.com<br/>
 Ethan Buchman ethan@tendermint.com
 
-Para discussões, [entre no nosso Slack](http://forum.tendermint.com:3000/)!
+Para discussões, [entre no nosso Slack](http://slack.cosmos.network/)!
 
 _NOTA: Se você pode ler isso no GitHub, então ainda estamos desenvolvendo este documento ativamente. Por favor, cheque regularmente as atualizações!_
 
