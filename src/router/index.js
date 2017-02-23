@@ -1,6 +1,7 @@
 import VueRouter from 'vue-router'
 import { SignUp, SignIn, Reset, Settings } from '@nylira/vue-user-pages'
-function r (filename) { return require('../components/Page' + filename) }
+function r (page) { return require('../components/Page' + page) }
+
 
 const routes = [
   { path: '/', component: r('Index') },
