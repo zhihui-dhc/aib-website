@@ -1,24 +1,59 @@
 <template>
-  <footer class="app-footer" v-bind:class="{ 'toc-visible': tocVisible }">
+  <div class="app-bottom" v-bind:class="{ 'toc-visible': tocVisible }">
     <section-call-to-action v-if="!thisIsAFundPage"></section-call-to-action>
-    <section-social-media></section-social-media>
-    <div class="app-bottom">
-      <div class="copyright">
-        &copy; 2016 Cosmos Network Foundation
-      </div>
+    <footer class="app-footer">
+      <div class="sections">
+        <section>
+          <span>&copy; 2016 Cosmos Network Foundation</span>
+        </section>
+        <section>
+          <header>Cosmos</header>
+          <nav>
+            <router-link :to="'/blog'">Blog</router-link>
+            <router-link :to="'/plan'">Plan</router-link>
+            <router-link :to="'/faq'">FAQ</router-link>
+            <router-link :to="'/whitepaper'">Whitepaper</router-link>
+            <a href="https://github.com/cosmos/cosmos">GitHub</a>
+          </nav>
+        </section>
+        <section>
+          <header>Community</header>
+          <a href="https://bitcointalk.org/index.php?topic=1607111.0">
+            <i class="fa fa-btc"></i>BitcoinTalk
+          </a>
+          <a href="http://webchat.freenode.net/?channels=%23cosmos_network">
+            <i class="fa fa-commenting-o"></i>IRC
+          </a>
+          <a href="https://www.reddit.com/r/thecosmos">
+            <i class="fa fa-reddit"></i>Reddit
+          </a>
+          <a href="http://slack.cosmos.network">
+            <i class="fa fa-slick"></i>Slack
+          </a>
+          <a href="https://twitter.com/cosmos_hq">
+            <i class="fa fa-twatter"></i>Twitter
+          </a>
+        </section>
+        <section>
+          <header>Tendermint</header>
+          <a href="https://tendermint.com/blog">Blog</a>
+          <a href="https://tendermint.com/about">About</a>
+          <a href="https://tendermint.com/careers">Careers</a>
+          <a href="https://tendermint.com/press">Press</a>
+          <a href="https://tendermint.com/contact">Contact</a>
+        </section>
+      </section>
     </div>
-  </footer>
+  </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
 import SectionCallToAction from './SectionCallToAction'
-import SectionSocialMedia from './SectionSocialMedia'
 export default {
   name: 'app-footer',
   components: {
-    SectionCallToAction,
-    SectionSocialMedia
+    SectionCallToAction
   },
   computed: {
     ...mapGetters([
@@ -32,60 +67,85 @@ export default {
       if (name === 'whitepaper' && this.whitepaperTocVisible) { visible = true }
       return visible
     },
-    thisIsAFundPage () { this.$route.name === 'fund' },
-    thisIsWhitepaper () { return this.$route.name === 'whitepaper' }
+    thisIsAFundPage () { this.$route.name === 'fund' }
   }
 }
 </script>
 
 <style lang="stylus">
-@import '../styles/variables.styl'
+@require '../styles/variables.styl'
 
 .app-footer
-  position relative
+  .sections
+    padding x 0
+    color c-app-fg
+    margin 0 auto
 
-.app-bottom
-  background #fff
-  display flex
-  flex-flow column
-  justify-content space-between
-  padding x 0
-
-  .copyright, .langs
-    line-height 2.25*x
-
-  .copyright
-    padding 0 x
-    color light
-    text-align center
-
-  .langs
     display flex
-    align-items center
-    padding 0 0.25*x
-    justify-content center
-    a
-      padding 0 0.75*x
-      display block
-      cursor pointer
-      &.active
-        color txt
+    flex-flow row wrap
 
-@media screen and (min-width: 360px)
-  .app-bottom
-    .copyright, .langs
-      line-height 2.5*x
-
-@media screen and (min-width: 720px)
-  .app-bottom
-    flex-flow row
+  section
+    flex 0 0 50%
     padding x 0.5*x
 
+    header
+      padding 0.25*x 0.5*x
+
+      color light
+
+      font-size 0.75*x
+      font-weight bold
+      text-transform uppercase
+      letter-spacing 0.0625em
+
+    a, span
+      color txt
+      display block
+      padding 0.25*x 0.5*x
+      i.fa
+        display inine-block
+        text-align center
+        width 1.5*x
+        margin-right 0.5*x
+
+@media screen and (min-width: 360px)
+  .app-footer
+    .sections
+      padding x x*0.5
+    .section
+      padding x
+
+@media screen and (min-width: 400px)
+  .app-footer
+    .sections
+      padding x
+
+@media screen and (min-width: 720px)
+  .app-footer
+    .sections
+      padding 2*x
+    section
+      flex 0 0 25%
+      header
+        margin-bottom x
+
 @media screen and (min-width: 960px)
-  .app-footer.toc-visible
+  .app-bottom.toc-visible
     margin-left 20rem
 
+  .app-footer
+    .sections
+      max-width 960px
+    section
+      flex 0 0 25%
+
 @media screen and (min-width: 1200px)
-  .app-footer.toc-visible
+  .app-bottom.toc-visible
     margin-left 26rem
+
+  .app-footer
+    .sections
+      max-width 1200px
+    section
+      flex 0 0 25%
 </style>
