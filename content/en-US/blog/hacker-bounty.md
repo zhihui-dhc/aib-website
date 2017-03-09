@@ -8,14 +8,14 @@ excerpt: Keeping the fundraiser safe for all parties is critical and dealing wit
 
 Ladies and gentlemen, a small appeal to the most scrutinizing eyeballs of our industry.
 
-Cosmos hasn’t been called ‘tinder for blockchains’ for no reasons. Connecting different blockchains is at the core of our mission. When it come to choosing how to conduct our fundraiser, we naturally chose to accept both BTC and ETH. 
+Cosmos hasn’t been called ‘tinder for blockchains’ for no reasons. Connecting different blockchains is at the core of our mission. When it came to choosing how to conduct our fundraiser, we naturally chose to accept both BTC and ETH. 
 
-Keeping the fundraiser safe for all parties is critical and dealing with both tokens adds additional surface area for attacks and potential issues. That is why are extending, as of today, ample rewards for anyone with both the time and skills to really dig into our flows.
+Keeping the fundraiser safe for all parties is critical and dealing with both tokens adds additional surface area for attacks and potential issues. That is why we are extending, as of today, ample rewards for anyone with both the time and skills to really dig into our flows.
 
 Put plainly, we are offering:
 
-* *15 BTC* for major, show-stopping bugs found in our fundraiser flow.
-* Up to *5 BTC* for minor bugs that won't kill the fundraiser, but which will be an embarrassment or an inconvenience for either Cosmos or its funders.
+* Exactly **15 BTC** for major, show-stopping bugs found in our fundraiser flow.
+* Up to **5 BTC** for minor bugs that won't kill the fundraiser, but which will be an embarrassment or an inconvenience for either Cosmos or its funders.
 * You can also claim your reward in Atoms.
 
 The materials in question can be found here:
