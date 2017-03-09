@@ -122,7 +122,7 @@ export default {
     },
     watchWindowSize () {
       let w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0)
-      if (w >= 960) {
+      if (w >= 1024) {
         this.closeMenus()
         this.desktop = true
         return
@@ -216,7 +216,7 @@ export default {
         &:hover
           color link
 
-@media screen and (min-width:960px)
+@media screen and (min-width: 1024px)
   .menu-app
     display flex
     padding 0 1rem

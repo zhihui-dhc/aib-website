@@ -74,7 +74,7 @@ export default {
       p
         font-size 0.875rem
 
-@media screen and (min-width: 400px)
+@media screen and (min-width: 414px)
   .section-cover
     .section-container
       h1 img
@@ -82,7 +82,7 @@ export default {
       p
         font-size 1rem
 
-@media screen and (min-width: 720px)
+@media screen and (min-width: 768px)
   .section-cover
     .section-container
       h1 img
@@ -90,17 +90,16 @@ export default {
       p
         margin-top 0.75rem
         font-size 1.2rem
+        
+@media screen and (min-width: 1024px)
+  .section-cover
+    height 100vh
 
-@media screen and (min-width: 1200px)
+@media screen and (min-width: 1280px)
   .section-cover
     .section-container
       h1 img
         width 18rem
       p
         font-size 1.4rem
-
-
-@media screen and (min-width: 960px)
-  .section-cover
-    height 100vh
 </style>

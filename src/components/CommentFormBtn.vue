@@ -45,19 +45,19 @@ export default {
     span.form-input
       border-color link
 
-@media screen and (min-width: 400px)
+@media screen and (min-width: 414px)
   .pz-comment-form-btn
     padding 1rem
 
-@media screen and (min-width: 720px)
+@media screen and (min-width: 768px)
   .pz-comment-form-btn
     padding 1.25rem
 
-@media screen and (min-width: 960px)
+@media screen and (min-width: 1024px)
   .pz-comment-form-btn
     padding 1.5rem
 
-@media screen and (min-width: 1200px)
+@media screen and (min-width: 1280px)
   .pz-comment-form-btn
     padding 2.5rem
 </style>

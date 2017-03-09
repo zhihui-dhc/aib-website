@@ -1,12 +1,10 @@
 <template>
   <div class="page-index">
     <section-cover></section-cover>
-
-    <div class="section-home sh-video">
+    <section class="section-home sh-video">
       <h2>{{ $t('sectionHomeVideo.title') }}</h2>
-      <iframe src="https://player.vimeo.com/video/183530279?title=0&byline=0&portrait=0" width="960" height="540" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-    </div>
-
+      <iframe src="https://player.vimeo.com/video/183530279?title=0&byline=0&portrait=0" width="1024" height="576" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    </section>
     <section class="section-home sh-text" id="home-intro">
       <div class="section-container">
         <h2>{{ $t('sectionHomeIntro.title') }}</h2>
@@ -88,9 +86,9 @@ export default {
   head: {
     title () {
       return {
-        inner: 'Home',
+        inner: 'Cosmos',
         separator: '-',
-        complement: 'Cosmos: Internet of Blockchains'
+        complement: 'Internet of Blockchains'
       }
     }
   },
@@ -119,8 +117,8 @@ export default {
       width 100vw
       height 56.25vw
       display block
-      max-width 960px
-      max-height 540px
+      max-width 1024px
+      max-height 576px
       margin-left auto
       margin-right auto
 
@@ -154,7 +152,7 @@ export default {
   p
     margin 0 0 1.5rem
 
-@media screen and (min-width:720px)
+@media screen and (min-width: 768px)
   .section-home
     h2
       font-size 2rem
@@ -166,7 +164,7 @@ export default {
       iframe
         margin-top 1.5rem
 
-@media screen and (min-width: 960px)
+@media screen and (min-width: 1024px)
   .section-home
     .section-container
       max-width 56rem
@@ -222,7 +220,7 @@ export default {
             padding-right 2rem
             margin-right 50%
 
-@media screen and (min-width: 1200px)
+@media screen and (min-width: 1280px)
   .section-home
     .section-container
       max-width 64rem

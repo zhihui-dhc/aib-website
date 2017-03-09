@@ -21,14 +21,14 @@ function scrollIt (scrollSpeedMult = 1.0) {
   })
 }
 export default function () {
-  if (document.documentElement.clientWidth >= 960) {
+  if (document.documentElement.clientWidth >= 1024) {
     scrollIt(1)
   }
 
   // disable percentage scrolling on smaller displays
   window.addEventListener('resize', function () {
     console.log('disabling scrolling')
-    if (document.documentElement.clientWidth < 960) {
+    if (document.documentElement.clientWidth < 1024) {
       window.removeEventListener('scroll')
     }
   }, false)

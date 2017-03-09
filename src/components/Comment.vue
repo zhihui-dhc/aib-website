@@ -81,17 +81,17 @@ export default {
     padding-top 0.75em
     padding-bottom 0.75em
 
-@media screen and (min-width: 720px)
+@media screen and (min-width: 768px)
   .pz-comment
     padding-left 0.75em
     .pz-comment
       border-left-color lighten(bc, 50%)
 
-@media screen and (min-width: 960px)
+@media screen and (min-width: 1024px)
   .pz-comment
     padding-left 1em
 
-@media screen and (min-width: 1200px)
+@media screen and (min-width: 1280px)
   .pz-comment
     padding-left 2em
 </style>

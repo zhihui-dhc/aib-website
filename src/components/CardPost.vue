@@ -60,7 +60,7 @@ export default {
     .meta
       font-size 1rem
 
-@media screen and (min-width: 720px)
+@media screen and (min-width: 768px)
   .card-post
     font-size 1.125*x
     a

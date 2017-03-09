@@ -205,19 +205,19 @@ export default {
     .meta
       font-size 0.85rem
 
-@media screen and (min-width: 720px)
+@media screen and (min-width: 768px)
   .pz-comment-text
     padding-right 0.75rem
 
-@media screen and (min-width: 960px)
+@media screen and (min-width: 1024px)
   .pz-comment-text
     padding-right 1rem
 
-@media screen and (min-width: 1200px)
+@media screen and (min-width: 1280px)
   .pz-comment-text
     padding-right 1.5rem
 
-@media screen and (min-width: 1600px)
+@media screen and (min-width: 1440px)
   .pz-comment-text
     padding-right 2rem
 </style>

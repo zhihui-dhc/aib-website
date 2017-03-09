@@ -16,7 +16,7 @@ export default function (showToc) {
     }
 
     // if it's a small screen, hide the toc on click
-    if (document.documentElement.clientWidth < 960) {
+    if (document.documentElement.clientWidth < 1024) {
       showToc(false)
     }
 

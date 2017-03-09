@@ -40,7 +40,7 @@ export default {
   .pz-comments-container
     margin-bottom 1rem
 
-@media screen and (min-width: 400px)
+@media screen and (min-width: 414px)
   .pz-comments-container
     margin-bottom 2rem
 
@@ -48,7 +48,7 @@ export default {
     background #fff
     padding 0 0.5rem
 
-@media screen and (min-width: 720px)
+@media screen and (min-width: 768px)
   .pz-comments-container
     margin-bottom 3rem
 
@@ -58,11 +58,11 @@ export default {
   .pz-comments
     padding-bottom 0.75rem
 
-@media screen and (min-width: 960px)
+@media screen and (min-width: 1024)
   .pz-comments
     padding-bottom 1rem
 
-@media screen and (min-width: 1200px)
+@media screen and (min-width: 1280px)
   .pz-comments
     padding-bottom 2rem
 </style>

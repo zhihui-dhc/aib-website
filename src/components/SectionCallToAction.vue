@@ -1,5 +1,5 @@
 <template>
-  <section class="section-call-to-action">
+  <section class="section-cta">
     <div class="section-container">
       <h2>{{ $t('sectionCallToAction.title') }}</h2>
       <div class="description">
@@ -13,7 +13,7 @@
 <script>
 import FormEmailSignup from './FormEmailSignup'
 export default {
-  name: 'section-call-to-action',
+  name: 'section-cta',
   components: {
     FormEmailSignup
   }
@@ -23,7 +23,7 @@ export default {
 <style lang="stylus">
 @import '../styles/variables.styl'
 
-.section-call-to-action
+.section-cta
   background c-app-fg
 
   .section-container
@@ -33,15 +33,23 @@ export default {
     text-align center
     padding 2rem
 
+  h2
+    font-size 1.5rem
+    font-weight 500
+    margin-bottom 0.5rem
+
+  .description
+    margin-bottom 1.5rem
+    color light
+
+  form
+    margin-bottom 1rem
+
+@media screen and (min-width: 768px)
+  .section-cta
+    .section-container
+      padding-top 3rem
+      padding-bottom 3rem
     h2
-      font-size 1.5rem
-      font-weight 500
-      margin-bottom 0.5rem
-
-    .description
-      margin-bottom 1.5rem
-      color light
-
-    form
-      margin-bottom 1rem
+      font-size 2rem
 </style>
