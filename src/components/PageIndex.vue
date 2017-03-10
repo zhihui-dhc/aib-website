@@ -107,7 +107,7 @@ export default {
   &#home-intro
     .ni-btn-wrapper
       display block
-      max-width 14rem
+      width 17rem
       margin 2rem auto 0
 
   &.sh-video

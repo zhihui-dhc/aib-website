@@ -12,3 +12,4 @@ export const sessionUser = state => state.session.user
 export const sessionVotes = state => state.session.votes
 
 export const notifications = state => state.notifications
+export const config = state => state.config

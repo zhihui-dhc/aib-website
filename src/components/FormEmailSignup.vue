@@ -37,6 +37,7 @@ export default {
 
 .form-email-signup
   border none
+  max-width 24rem
   .input-group
     display flex
 </style>

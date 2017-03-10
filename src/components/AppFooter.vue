@@ -1,6 +1,6 @@
 <template>
   <div class="app-bottom" v-bind:class="{ 'toc-visible': tocVisible }">
-    <section-call-to-action v-if="!thisIsAFundPage"></section-call-to-action>
+    <section-call-to-action></section-call-to-action>
     <footer class="app-footer">
       <div class="sections">
         <section>
@@ -66,8 +66,7 @@ export default {
       if (name === 'faq' && this.faqTocVisible) { visible = true }
       if (name === 'whitepaper' && this.whitepaperTocVisible) { visible = true }
       return visible
-    },
-    thisIsAFundPage () { this.$route.name === 'fund' }
+    }
   }
 }
 </script>

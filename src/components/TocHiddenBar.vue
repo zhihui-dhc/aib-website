@@ -37,7 +37,7 @@ export default {
     i.fa
       color link
 
-@media screen and (max-width: 959px)
+@media screen and (max-width: 1023px)
   .toc-hidden-bar
     width 3*x
     height 3*x

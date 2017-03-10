@@ -12,20 +12,29 @@
 
   <menu class="menu-popup menu-app" v-if="activeMenuApp || desktop">
     <nav class="nav-app">
+      <a id="nav-fundraiser" class="live" v-if="FUNDRAISE_STARTED"
+        :href="config.SALE_URL">
+        Fundraiser <span>Live</span>
+      </a>
+      <a id="nav-fundraiser" class="soon" v-else>
+        Fundraiser <span class="soon">Coming Soon</span>
+      </a>
       <a @click="goto('/blog')">{{ $t('siteHeader.blog') }}</a>
       <a @click="goto('/plan')">{{ $t('siteHeader.plan') }}</a>
       <a @click="goto('/faq')">{{ $t('siteHeader.faq') }}</a>
       <a @click="goto('/whitepaper')">{{ $t('siteHeader.whitepaper') }}</a>
     </nav>
     <nav>
-      <a href="https://tendermint.com">
-        <img src="../assets/images/tendermint-logo-tiny.png">
-        <span class="label">Tendermint</span>
-      </a>
       <a href="https://github.com/cosmos/cosmos">
         <i class="fa fa-github"></i>
         <span class="label">GitHub</span>
       </a>
+      <!--
+      <a href="https://tendermint.com">
+        <img src="../assets/images/tendermint-logo-tiny.png">
+        <span class="label">Tendermint</span>
+      </a>
+      -->
     </nav>
   </menu>
 
@@ -56,12 +65,16 @@
 </template>
 
 <script>
-import firebase from 'firebase'
 import { mapGetters } from 'vuex'
 import disableScroll from 'disable-scroll'
+import firebase from 'firebase'
+import moment from 'moment'
 export default {
   name: 'app-header',
   computed: {
+    FUNDRAISE_STARTED () {
+      return Date.now() >= moment(this.config.START_DATETIME).valueOf()
+    },
     displayName () {
       if (this.sessionUser.displayName) {
         return this.sessionUser.displayName
@@ -72,7 +85,7 @@ export default {
     isTocPage () {
       return this.$route.name === 'whitepaper' || this.$route.name === 'whitepaper-localized' || this.$route.name === 'faq' || this.$route.name === 'faq-localized' || this.$route.name === 'plan' || this.$route.name === 'plan-localized'
     },
-    ...mapGetters(['sessionUser'])
+    ...mapGetters(['config', 'sessionUser'])
   },
   data () {
     return {
@@ -188,8 +201,29 @@ export default {
         img
           height 1rem
           margin-right 0.1rem
+        &#nav-fundraiser
+          position relative
+          span
+            padding 0 0.25rem
 
-@media screen and (max-width:959px)
+            border 1px solid bc
+            border-radius 0.125rem
+
+            font-size 0.666rem
+            height 1.25rem
+
+            display flex
+            align-items center
+            color txt
+          &.soon
+            color light
+            cursor not-allowed
+          &.live
+            span
+              color hsl(120,100%,35%)
+              border-color hsl(120,35%,65%)
+
+@media screen and (max-width:1023px)
   .menu-popup
     height 100vh
     position fixed
@@ -216,6 +250,16 @@ export default {
         &:hover
           color link
 
+        &#nav-fundraiser
+          position relative
+          span
+            display block
+            position absolute
+            top 50%
+            right 0
+
+            margin-top -0.625rem
+
 @media screen and (min-width: 1024px)
   .menu-app
     display flex
@@ -229,6 +273,10 @@ export default {
         color txt
         &:hover
           color link
+        &#nav-fundraiser
+          span
+            display inline-block
+            margin-left 0.375rem
 
   .menu-user
     position fixed
