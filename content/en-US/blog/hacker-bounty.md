@@ -6,6 +6,8 @@ author: The Cosmonauts
 excerpt: Keeping the fundraiser safe for all parties is critical and dealing with both tokens adds additional surface area for attacks and potential issues. That is why are extending, as of today, ample rewards for anyone with both the time and skills to really dig into our flows.
 ~~~
 
+_UPDATE: The ETH Solidity contract has been updated_
+
 Ladies and gentlemen, a small appeal to the most scrutinizing eyeballs of our industry.
 
 Cosmos hasn’t been called ‘tinder for blockchains’ for no reasons. Connecting different blockchains is at the core of our mission. When it came to choosing how to conduct our fundraiser, we naturally chose to accept both BTC and ETH. 
@@ -21,7 +23,7 @@ Put plainly, we are offering:
 The materials in question can be found here:
 
 * BTC: https://gist.github.com/mappum/428dc46afba73b2bf8c38f65272704d2
-* ETH: https://github.com/ethcore/contracts/blob/e340700342733b26acbe6949118986b60f2d274e/Receipter.sol#L90
+* ETH: https://github.com/cosmos/fundraiser-lib/blob/afdef65dabc4c058ac6fde73dc44dccfcafd428d/contracts/Receiptor.sol
 
 These repositories include both the Web-based fundraiser for Bitcoin, and the Solidity contracts for Ethereum. Both are relevant to this bounty. So this is your chance to put your hacker cap on, think like a deviant and strike it big in the crypto space.
 
