@@ -51,7 +51,7 @@ Ethan Buchman [ethan@tendermint.com](mailto:ethan@tendermint.com)
 
 * 프로토콜은 임의의 검증인들 세트가 안전성을 저해하는 데 성공하거나 또는 시도만 하더라도, 이들을 식별할 수 있다. 충돌하는 블록들에 찬성 투표 하거나 정당하지 않은 투표들을 전파하는 이들 모두가 포함된다.
 
-텐더민트는 강력한 보장들에 더해 성능면에서도 탁월하다. 5개 대륙 7개 데이터센터에 분산되어 있는 64개 노드의 대중품 클라우드(commodity cloud)를 기준으로, 텐더민트 합의는 약 1~2초의 커밋 지연속도(commit latencies)와 함께 초당 수천 개의 트랜잭션(transaction)를 처리한다. 특히, 검증인들이 실패하거나 악의적으로 조작된 투표를 전파하는 가혹한 공격 상황(adversarial conditions)에서도 초당 1,000번 수준의 트랜잭션 성능은 가볍게 능가한다. *아래 그림 참조
+텐더민트는 강력한 보장들에 더해 성능면에서도 탁월하다. 5개 대륙 7개 데이터센터에 분산되어 있는 64개 노드의 대중품 클라우드(commodity cloud)를 기준으로, 텐더민트 합의는 약 1~2초의 커밋 지연속도(commit latencies)와 함께 초당 수천 개의 트랜잭션(transaction)를 처리한다. 특히, 검증인들이 실패하거나 악의적으로 조작된 투표를 전파하는 가혹한 공격 상황(adversarial conditions)에서도 초당 1,000번 수준의 트랜잭션 성능은 가볍게 능가한다. *아래 그림 참조*
 
 ![Figure of Tendermint throughput performance](https://raw.githubusercontent.com/gnuclear/atom-whitepaper/master/images/tendermint_throughput_blocksize.png)
 

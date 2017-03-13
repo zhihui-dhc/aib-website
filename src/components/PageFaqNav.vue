@@ -3,7 +3,7 @@
     <toc-hidden-bar
       v-show="!faqTocVisible"
       @click.native="showToc(true)"
-      icon="bars">
+      icon="list-ol">
     </toc-hidden-bar>
     <toc-hidden-bar
       v-show="faqTocVisible"

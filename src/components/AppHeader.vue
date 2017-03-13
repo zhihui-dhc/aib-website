@@ -162,11 +162,12 @@ export default {
   width 100%
 
   background #fff
-  border-bottom 1px solid bc
 
   display flex
   flex-flow row wrap
   justify-content space-between
+
+  shadow()
 
   .header-item
     height 3*x

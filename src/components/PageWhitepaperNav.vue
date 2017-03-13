@@ -1,17 +1,15 @@
 <template>
   <div class="page-whitepaper-nav mobile-only">
-    <div
-      class="toc-hidden-bar"
+    <toc-hidden-bar
       v-show="!whitepaperTocVisible"
-      @click="showToc(true)">
-      <i class="fa fa-bars"></i>
-    </div>
-    <div
-      class="toc-hidden-bar"
+      @click.native="showToc(true)"
+      icon="list-ol">
+    </toc-hidden-bar>
+    <toc-hidden-bar
       v-show="whitepaperTocVisible"
-      @click="showToc(false)">
-      <i class="fa fa-times"></i>
-    </div>
+      @click.native="showToc(false)"
+      icon="times">
+    </toc-hidden-bar>
   </div>
 </template>
 
@@ -21,9 +19,13 @@ import watchTocClicks from '../scripts/watchTocClicks.js'
 import inViewport from '../scripts/inViewport.js'
 import visibleTocActivate from '../scripts/visibleTocActivate.js'
 import percentageScrolling from '../scripts/percentageScrolling.js'
+import TocHiddenBar from './TocHiddenBar'
 import { mapGetters } from 'vuex'
 export default {
   name: 'page-whitepaper-nav',
+  components: {
+    TocHiddenBar
+  },
   computed: {
     ...mapGetters([
       'whitepaperTocVisible',

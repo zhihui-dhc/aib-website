@@ -22,7 +22,6 @@ export default {
   bottom 0.5*x
   width 2*x
   max-height 100vh
-  border 1px solid bc
 
   background c-app-bg
 
@@ -30,8 +29,8 @@ export default {
   cursor pointer
 
   i.fa
-    font-size x
-    line-height 2*x
+    font-size 0.75rem
+    line-height 2rem
 
   &:hover
     i.fa
@@ -39,8 +38,8 @@ export default {
 
 @media screen and (max-width: 1023px)
   .toc-hidden-bar
-    width 3*x
-    height 3*x
+    width 3rem
+    height 3rem
     border-radius 1.5*x
 
     top auto
@@ -52,8 +51,9 @@ export default {
     align-items center
     justify-content center
     
-    background alpha(c-app-bg,85%)
+    background c-app-fg
+    shadow()
 
     i.fa
-      font-size 1.5*x
+      font-size 1rem
 </style>
