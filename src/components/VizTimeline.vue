@@ -83,7 +83,7 @@ export default {}
 
     .value
       flex 3
-      border-left 1px dotted bc
+      border-left 1px solid bc
       padding 0.75rem
 
 @media screen and (min-width: 768px)

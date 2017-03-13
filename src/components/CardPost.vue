@@ -29,7 +29,7 @@ export default {
 
 .card-post
   margin 0 auto
-  border-bottom 1px dotted bc
+  border-bottom 1px solid bc
   &:last-of-type
     border-bottom none
 

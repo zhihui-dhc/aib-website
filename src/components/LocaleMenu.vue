@@ -52,7 +52,7 @@ export default {
   justify-content flex-end
 
   height 1.5rem
-  border-bottom 1px dotted bc
+  border-bottom 1px solid bc
   a
     font-size 0.75rem
     padding 0 0.5rem
