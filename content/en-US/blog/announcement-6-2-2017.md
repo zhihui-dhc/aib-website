@@ -1,5 +1,5 @@
 ~~~
-title: "Fundraiser delay announcement"
+title: "Fundraiser Delay Announcement"
 slug: fundraiser-delay-announcement
 date: 2017-02-06
 author: Jae Kwon
