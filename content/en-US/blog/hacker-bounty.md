@@ -10,11 +10,11 @@ _UPDATE: The ETH Solidity contract has been updated_
 
 Ladies and gentlemen, a small appeal to the most scrutinizing eyeballs of our industry.
 
-Cosmos hasn’t been called ‘tinder for blockchains’ for no reasons. Connecting different blockchains is at the core of our mission. When it came to choosing how to conduct our fundraiser, we naturally chose to accept both BTC and ETH. 
+Cosmos hasn’t been called ‘Tinder for blockchains’ for no reason. Connecting different blockchains is at the core of our mission. When it came to choosing how to conduct our fundraiser, we naturally chose to accept both BTC and ETH.
 
 Keeping the fundraiser safe for all parties is critical and dealing with both tokens adds additional surface area for attacks and potential issues. That is why we are extending, as of today, ample rewards for anyone with both the time and skills to really dig into our flows.
 
-Put plainly, we are offering:
+We are offering:
 
 * Exactly **15 BTC** for major, show-stopping bugs found in our fundraiser flow.
 * Up to **5 BTC** for minor bugs that won't kill the fundraiser, but which will be an embarrassment or an inconvenience for either Cosmos or its funders.
@@ -29,6 +29,6 @@ These repositories include both the Web-based fundraiser for Bitcoin, and the So
 
 In the interest of being thorough, our friends at Zeppelin (Smart Contract Solutions) are simultaneously performing an audit for these same materials. Don’t worry, if you independently discover a bug that they also find but haven’t published yet, you may still claim the reward.
 
-Last but not least, we want to express our thanks to participants in the Cosmos Whitepaper Bounty, particularly GitHub user MartyMe, who took the 5 BTC bounty with his excellent contributions to both the DEX and the Hub Block Reward.
+Last but not least, we want to express our thanks to participants in the [Cosmos Whitepaper Bounty](https://cosmos.network/blog/cosmos-whitepaper-bounty), particularly GitHub user MartyMe, who took the 5 BTC bounty with his excellent contributions to both the DEX and the Hub Block Reward.
 
-Ladies and gentlemen, this show is nearly on the road, just a few more miles to go. We look forward to a successful fundraiser, and to building the Internet of Blockchains with you!
+This show is nearly on the road, with just a few more miles to go. We look forward to a successful fundraiser, and to building the Internet of Blockchains with you!
