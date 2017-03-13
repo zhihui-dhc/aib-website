@@ -123,8 +123,7 @@ segundos. Notavelmente, o desempenho muito além de mil transações por segundo
 é mantido mesmo em condições adversas, com validadores falhando ou
 combinando votos maliciosamente. Veja a figura abaixo para mais detalhes.
 
-![Figura do desempenho da Tendermint]
-(https://raw.githubusercontent.com/gnuclear/atom-whitepaper/master/images/tendermint_throughput_blocksize.png)
+![Figura do desempenho da Tendermint](https://raw.githubusercontent.com/gnuclear/atom-whitepaper/master/images/tendermint_throughput_blocksize.png)
 
 ### Clientes Light
 
@@ -350,7 +349,7 @@ blockchain envie de quantos pacotes de saída forem permitidos.
 ![Figura da Zona1, Zona2, e Hub IBC sem
 reconhecimento](https://raw.githubusercontent.com/gnuclear/atom-whitepaper/master/msc/ibc_without_ack.png)
 
-<CAPTION em uma figura> no exemplo acima, para atualizar o hash de blocos da
+No exemplo acima, para atualizar o hash de blocos da
 "Zona1" no "Hub" (ou do "Hub" para a "Zona2"), uma transação `IBCBlockCommitTx`
 precisa ser feita no "Hub" com o hash de bloco da "Zona1" (ou na
 "Zona2" com o hash de bloco do "Hub").
