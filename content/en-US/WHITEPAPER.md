@@ -126,8 +126,7 @@ seconds.  Notably, performance of well over a thousand transactions per second
 is maintained even in harsh adversarial conditions, with validators crashing or
 broadcasting maliciously crafted votes.  See the figure below for details.
 
-![Figure of Tendermint throughput performance]
-(https://raw.githubusercontent.com/gnuclear/atom-whitepaper/master/images/tendermint_throughput_blocksize.png)
+![Figure of Tendermint throughput performance](https://raw.githubusercontent.com/gnuclear/atom-whitepaper/master/images/tendermint_throughput_blocksize.png)
 
 ### Light Clients
 
@@ -353,7 +352,7 @@ sending chain as to how many outbound packets are allowed.
 ![Figure of Zone1, Zone2, and Hub IBC without
 acknowledgement](https://raw.githubusercontent.com/gnuclear/atom-whitepaper/master/msc/ibc_without_ack.png)
 
-<CAPTION on a figure> In the example above, in order to update the block-hash of
+In the example above, in order to update the block-hash of
 "Zone1" on "Hub" (or of "Hub" on "Zone2"), an `IBCBlockCommitTx`
 transaction must be posted on "Hub" with the block-hash of "Zone1" (or on
 "Zone2" with the block-hash of "Hub").
