@@ -1,16 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Cosmos Blog]]></title><description><![CDATA[The Internet of Blockchains]]></description><link>http://cosmos.network</link><image><url>http://cosmos.network/static/favicon.png</url><title>Cosmos Blog</title><link>http://cosmos.network</link></image><generator>RSS for Node</generator><lastBuildDate>Thu, 09 Mar 2017 15:22:12 GMT</lastBuildDate><atom:link href="http://cosmos.network/static//rss.xml" rel="self" type="application/rss+xml"/><pubDate>Thu, 09 Mar 2017 15:22:12 GMT</pubDate><copyright><![CDATA[2016 Cosmos Foundation]]></copyright><language><![CDATA[en]]></language><managingEditor><![CDATA[Cosmos Foundation]]></managingEditor><webMaster><![CDATA[Cosmos Foundation]]></webMaster><ttl>60</ttl><item><title><![CDATA[Think Like a Hacker. Make it Big]]></title><description><![CDATA[<p>Ladies and gentlemen, a small appeal to the most scrutinizing eyeballs of our industry.</p>
-<p>Cosmos hasn’t been called ‘tinder for blockchains’ for no reasons. Connecting different blockchains is at the core of our mission. When it come to choosing how to conduct our fundraiser, we naturally chose to accept both BTC and ETH.</p>
-<p>Keeping the fundraiser safe for all parties is critical and dealing with both tokens adds additional surface area for attacks and potential issues. That is why are extending, as of today, ample rewards for anyone with both the time and skills to really dig into our flows.</p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Cosmos Blog]]></title><description><![CDATA[The Internet of Blockchains]]></description><link>http://cosmos.network</link><image><url>http://cosmos.network/static/favicon.png</url><title>Cosmos Blog</title><link>http://cosmos.network</link></image><generator>RSS for Node</generator><lastBuildDate>Mon, 13 Mar 2017 04:14:48 GMT</lastBuildDate><atom:link href="http://cosmos.network/static//rss.xml" rel="self" type="application/rss+xml"/><pubDate>Mon, 13 Mar 2017 04:14:48 GMT</pubDate><copyright><![CDATA[2016 Cosmos Foundation]]></copyright><language><![CDATA[en]]></language><managingEditor><![CDATA[Cosmos Foundation]]></managingEditor><webMaster><![CDATA[Cosmos Foundation]]></webMaster><ttl>60</ttl><item><title><![CDATA[Think Like a Hacker. Make it Big]]></title><description><![CDATA[<p><em>UPDATE: The ETH Solidity contract has been updated</em></p>
+<p>Ladies and gentlemen, a small appeal to the most scrutinizing eyeballs of our industry.</p>
+<p>Cosmos hasn’t been called ‘tinder for blockchains’ for no reasons. Connecting different blockchains is at the core of our mission. When it came to choosing how to conduct our fundraiser, we naturally chose to accept both BTC and ETH.</p>
+<p>Keeping the fundraiser safe for all parties is critical and dealing with both tokens adds additional surface area for attacks and potential issues. That is why we are extending, as of today, ample rewards for anyone with both the time and skills to really dig into our flows.</p>
 <p>Put plainly, we are offering:</p>
 <ul>
-<li><em>15 BTC</em> for major, show-stopping bugs found in our fundraiser flow.</li>
-<li>Up to <em>5 BTC</em> for minor bugs that won’t kill the fundraiser, but which will be an embarrassment or an inconvenience for either Cosmos or its funders.</li>
+<li>Exactly <strong>15 BTC</strong> for major, show-stopping bugs found in our fundraiser flow.</li>
+<li>Up to <strong>5 BTC</strong> for minor bugs that won’t kill the fundraiser, but which will be an embarrassment or an inconvenience for either Cosmos or its funders.</li>
 <li>You can also claim your reward in Atoms.</li>
 </ul>
 <p>The materials in question can be found here:</p>
 <ul>
 <li>BTC: <a href="https://gist.github.com/mappum/428dc46afba73b2bf8c38f65272704d2">https://gist.github.com/mappum/428dc46afba73b2bf8c38f65272704d2</a></li>
-<li>ETH: <a href="https://github.com/ethcore/contracts/blob/e340700342733b26acbe6949118986b60f2d274e/Receipter.sol#L90">https://github.com/ethcore/contracts/blob/e340700342733b26acbe6949118986b60f2d274e/Receipter.sol#L90</a></li>
+<li>ETH: <a href="https://github.com/cosmos/fundraiser-lib/blob/afdef65dabc4c058ac6fde73dc44dccfcafd428d/contracts/Receiptor.sol">https://github.com/cosmos/fundraiser-lib/blob/afdef65dabc4c058ac6fde73dc44dccfcafd428d/contracts/Receiptor.sol</a></li>
 </ul>
 <p>These repositories include both the Web-based fundraiser for Bitcoin, and the Solidity contracts for Ethereum. Both are relevant to this bounty. So this is your chance to put your hacker cap on, think like a deviant and strike it big in the crypto space.</p>
 <p>In the interest of being thorough, our friends at Zeppelin (Smart Contract Solutions) are simultaneously performing an audit for these same materials. Don’t worry, if you independently discover a bug that they also find but haven’t published yet, you may still claim the reward.</p>
@@ -191,7 +192,7 @@ beauty after a seed planted years before.</p>
 and the road ahead is well defined and full of exciting technology.
 We’re looking forward to building this out with the community and
 making the Internet of Blockchains a reality for everyone!</p>
-]]></description><link>http://cosmos.network/posts/cosmos-roadmap</link><guid isPermaLink="true">http://cosmos.network/posts/cosmos-roadmap</guid><dc:creator><![CDATA[The Cosmonauts]]></dc:creator></item><item><title><![CDATA[Fundraiser delay announcement]]></title><description><![CDATA[<p>Dear backers and long term supporters,</p>
+]]></description><link>http://cosmos.network/posts/cosmos-roadmap</link><guid isPermaLink="true">http://cosmos.network/posts/cosmos-roadmap</guid><dc:creator><![CDATA[The Cosmonauts]]></dc:creator></item><item><title><![CDATA[Fundraiser Delay Announcement]]></title><description><![CDATA[<p>Dear backers and long term supporters,</p>
 <p>Although February 28th was the most recently cited launch date for our Cosmos
 fundraising event, after careful consideration we’ve decided to push this event
 back a bit further. For the time being, <em>no new date</em> has been set, but we are

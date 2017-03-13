@@ -76,7 +76,7 @@ export default {
 
 .app-footer
   .sections
-    padding x 0
+    padding 1rem 0
     color c-app-fg
     margin 0 auto
 
@@ -85,14 +85,14 @@ export default {
 
   section
     flex 0 0 50%
-    padding x 0.5*x
+    padding 1rem 0.5rem
 
     header
-      padding 0.25*x 0.5*x
+      padding 0.25rem 0.5rem
 
       color light
 
-      font-size 0.75*x
+      font-size 0.75rem
       font-weight bold
       text-transform uppercase
       letter-spacing 0.0625em
@@ -100,33 +100,33 @@ export default {
     a, span
       color txt
       display block
-      padding 0.25*x 0.5*x
+      padding 0.25rem 0.5rem
       i.fa
         display inine-block
         text-align center
-        width 1.5*x
-        margin-right 0.5*x
+        width 1.5rem
+        margin-right 0.5rem
 
 @media screen and (min-width: 360px)
   .app-footer
     .sections
-      padding x x*0.5
+      padding 1rem 0.5rem
     .section
-      padding x
+      padding 1rem
 
 @media screen and (min-width: 414px)
   .app-footer
     .sections
-      padding x
+      padding 1rem
 
 @media screen and (min-width: 768px)
   .app-footer
     .sections
-      padding 2*x
+      padding 2rem
     section
       flex 0 0 25%
       header
-        margin-bottom x
+        margin-bottom 1rem
 
 @media screen and (min-width: 1024px)
   .app-bottom.toc-visible
