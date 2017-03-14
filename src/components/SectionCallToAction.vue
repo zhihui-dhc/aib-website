@@ -28,11 +28,11 @@
         </template>
         <template v-else>
           <form-email-signup class="section-cta-form"></form-email-signup>
-          <div class="section-cta-description">Enter your email to get a notification when the fundraise begins.</div>
+          <div class="section-cta-description">Enter your email to get a notification when the fundraiser begins.</div>
         </template>
       </main>
     </div>
-  </div> 
+  </div>
 </template>
 
 <script>
