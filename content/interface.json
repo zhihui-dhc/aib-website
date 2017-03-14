@@ -17,6 +17,10 @@
     "title": "Blog",
     "subtitle": "<a href='/static/en.xml'>Subscribe</a> for the latest updates."
   },
+  "siteTeam": {
+    "title": "Team",
+    "subtitle": "The team behind Cosmos"
+  },
   "emailSignupForm": {
     "emailAddress": "Email Address",
     "notifyMe": "Subscribe"

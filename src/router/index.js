@@ -17,6 +17,9 @@ const routes = [
   { path: '/plan', name: 'plan', component: r('Plan') },
   { path: '/plan/:locale', name: 'plan-localized', component: r('Plan') },
 
+  { path: '/team', name: 'team', component: r('Team') },
+  { path: '/team/:locale', name: 'team-localized', component: r('Team') },
+
   { path: '/whitepaper', name: 'whitepaper', component: r('Whitepaper') },
   { path: '/whitepaper/en-US', redirect: '/whitepaper' },
   { path: '/whitepaper/:locale', name: 'whitepaper-localized', component: r('Whitepaper') },
