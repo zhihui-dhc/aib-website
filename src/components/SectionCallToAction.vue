@@ -27,8 +27,8 @@
           </btn>
         </template>
         <template v-else>
-          <div v-if="fundraiseAnnounced" class="section-cta-description">The Cosmos fundraiser will begin on March 31st, 2017 at 6AM PDT. Enter your email for to get a notification when it starts.</div>
-          <div v-else class="section-cta-description">The Cosmos fundraiser will begin shortly. Stay tuned! Enter your email for to get a notification when it starts.</div>
+          <div v-if="fundraiseAnnounced" class="section-cta-description">The Cosmos fundraiser will begin on March 31st, 2017 at 6AM PDT. Enter your email to receive live fundraiser notifications.</div>
+          <div v-else class="section-cta-description">The start date will be announced shortly. Stay tuned! Enter your email to receive live fundraiser notifications.</div>
           <form-email-signup class="section-cta-form"></form-email-signup>
         </template>
       </main>
@@ -65,24 +65,33 @@ export default {
         return this.startDate
       }
     },
-    fundraiseAnnounced () {
-      return Date.now() >= moment(this.announcedDate).valueOf()
-    },
-    fundraiseStarted () {
-      return Date.now() >= moment(this.startDate).valueOf()
-    },
-    fundraiseEnded () {
-      return Date.now() >= moment(this.endDate).valueOf()
-    },
     ...mapGetters(['config'])
   },
+  data: () => ({
+    fundraiseAnnounced: false,
+    fundraiseStarted: false,
+    fundraiseEnded: false
+  }),
   methods: {
     gotoFundraiser () {
       window.location.href = this.config.SALE_URL
+    },
+    refreshTimers () {
+      // console.log('refreshing timers...')
+      if (Date.now() >= moment(this.announcedDate).valueOf()) {
+        this.fundraiseAnnounced = true
+      }
+      if (Date.now() >= moment(this.startDate).valueOf()) {
+        this.fundraiseStarted = true
+      }
+      if (Date.now() >= moment(this.endDate).valueOf()) {
+        this.fundraiseEnded = true
+      }
     }
   },
   mounted () {
-    console.log(this.announcedDate)
+    this.refreshTimers()
+    setInterval(this.refreshTimers, 1000)
   }
 }
 </script>
