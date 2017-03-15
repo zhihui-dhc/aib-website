@@ -17,7 +17,7 @@
         Fundraiser <span>Live</span>
       </a>
       <a id="nav-fundraiser" class="soon" v-else>
-        Fundraiser <span class="soon">Coming Soon</span>
+        Fundraiser <span class="soon">March 31</span>
       </a>
       <a @click="goto('/blog')">{{ $t('siteHeader.blog') }}</a>
       <a @click="goto('/plan')">{{ $t('siteHeader.plan') }}</a>

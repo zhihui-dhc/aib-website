@@ -7,7 +7,7 @@
         name="EMAIL"
         type="email"
         size="lg"
-        placeholder="name@example.com">
+        placeholder="name@email.com">
       </field>
       <btn
         type="submit"
@@ -32,12 +32,3 @@ export default {
   }
 }
 </script>
-<style lang="stylus">
-@import '../styles/variables.styl'
-
-.form-email-signup
-  border none
-  max-width 24rem
-  .input-group
-    display flex
-</style>
