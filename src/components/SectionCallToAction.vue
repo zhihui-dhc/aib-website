@@ -30,7 +30,7 @@
           <div v-if="fundraiseAnnounced" class="section-cta-description">The Cosmos fundraiser will begin on March 31st, 2017 at 6AM PDT. Enter your email to receive live notifications:</div>
           <div v-else class="section-cta-description">The start date will be announced shortly. Stay tuned! Enter your email to receive live fundraiser notifications.</div>
           <form-email-signup class="section-cta-form"></form-email-signup>
-          <div class="section-cta-description">Chat with the Cosmos community about the fundraiser on <a href="//slack.cosmos.network"><i class="fa fa-slick"></i> Slack</a>.</div>
+          <div class="section-cta-description">Chat with the Cosmos community about the fundraiser on <a href="http://slack.cosmos.network"><i class="fa fa-slick"></i> Slack</a>.</div>
         </template>
       </main>
     </div>
@@ -122,7 +122,6 @@ export default {
 
 .section-cta-form
   border none
-  margin-bottom 1.5rem
 
 .section-cta-form .input-group
   margin 0
@@ -130,6 +129,7 @@ export default {
 .section-cta-form, .section-cta-btn.ni-btn-wrapper .ni-btn
   width 100%
   max-width 20rem
+  margin-bottom 1.5rem
 
 .section-cta-description
   margin-left auto
