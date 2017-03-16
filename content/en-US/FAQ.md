@@ -8,7 +8,7 @@ Frequently asked questions &amp; answers about Cosmos.
 
 ### Who is the team developing Cosmos?
 
-Cosmos is a full-time endeavor by by [All In Bits, Inc](https://tendermint.com/about). In the future, if there are any applications that might benefit from Cosmos (e.g. especially [Tendermint](https://tendermint.com)-powered blockchain applications focused on tokens) then All In Bits may pursue such projects as well since it supports the whole ecosystem.
+Cosmos is a full-time endeavor by by [All In Bits, Inc](https://tendermint.com/about), the team that created [Tendermint](https://tendermint.com). If there are future applications that might benefit from Cosmos (e.g. especially Tendermint-powered blockchain apps focused on tokens) then All In Bits may pursue such projects as well. Doing so supports the whole ecosystem.
 
 ### What's the difference between Tendermint, the Cosmos Network, the Cosmos Hub, and Atoms?
 
