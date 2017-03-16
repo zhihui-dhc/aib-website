@@ -22,7 +22,7 @@
         </div>
         <btn
           icon="file-text-o"
-          @click="go('/whitepaper')"
+          @click.native="go('/whitepaper')"
           :value="$t('sectionHomeIntro.readWhitepaper')"
           size="lg">
         </btn>
