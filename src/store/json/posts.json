@@ -1,6 +1,15 @@
 {
   "en": [
     {
+      "title": "Cosmos Fundraiser Date",
+      "slug": "cosmos-fundraiser-date",
+      "author": "The Cosmonauts",
+      "date": 1489536000000,
+      "body": "<p>We have very exciting news: We are launching the Cosmos fundraiser on <a href=\"https://www.worldtimebuddy.com/?qm=1&amp;lid=5391959,2657908,2643743,1835848&amp;h=5391959&amp;date=2017-3-31&amp;sln=6-7\">March 31st, at 6am PDT</a>. We’d like to thank everybody for being patient with us! We still have work to do before then, and are planning on releasing the following before the fundraiser starts:</p>\n<ul>\n<li>All fundraiser agreement terms</li>\n<li>Instructions for people who are interested in participating</li>\n<li>Information about early contributors</li>\n<li>Our procedure for completing (and shutting down) the fundraiser flow.</li>\n</ul>\n<p>This date is dependent on not finding any show-stopping bugs in the fundraiser flow, and we are still <a href=\"https://cosmos.network/blog/fundraiser-flow-bounty\">offering bounties</a> for anybody who helps us find issues!</p>\n<p><a href=\"https://cosmos.network/\">Sign up for our newsletter</a> to get all the latest updates and announcements.</p>\n",
+      "excerpt": "We are launching the Cosmos fundraiser on March 31st, at 6am PDT.",
+      "dateFriendly": "2017-03-15"
+    },
+    {
       "title": "Think Like a Hacker. Make it Big",
       "slug": "fundraiser-flow-bounty",
       "author": "The Cosmonauts",
