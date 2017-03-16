@@ -4,7 +4,7 @@
     <footer class="app-footer">
       <div class="sections">
         <section>
-          <span>&copy; 2016 Cosmos Network Foundation</span>
+          <span>&copy; 2016 Interchain Foundation</span>
         </section>
         <section>
           <header>Cosmos</header>
