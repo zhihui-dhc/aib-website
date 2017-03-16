@@ -122,7 +122,6 @@ export default {
 
 .section-cta-form
   border none
-  margin-bottom 1.5rem
 
 .section-cta-form .input-group
   margin 0
@@ -130,6 +129,7 @@ export default {
 .section-cta-form, .section-cta-btn.ni-btn-wrapper .ni-btn
   width 100%
   max-width 20rem
+  margin-bottom 1.5rem
 
 .section-cta-description
   margin-left auto

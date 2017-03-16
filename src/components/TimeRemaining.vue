@@ -56,7 +56,3 @@ export default {
   props: ['date', 'fuzzy', 'started']
 }
 </script>
-
-<style lang="stylus">
-@import '../styles/variables.styl'
-</style>
