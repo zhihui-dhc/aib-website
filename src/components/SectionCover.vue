@@ -1,11 +1,16 @@
 <template>
-  <div class="component">
+  <div class="section-cover-component component">
     <section class="section-cover">
       <div class="section-container" @click="scrollDown">
         <h1><img src="../assets/images/cosmos_logo_m.png" alt="Cosmos"></h1>
         <p>{{ $t('site.internetOfBlockchains') }}</p>
       </div>
     </section>
+    <div id="fundraiser-alert">
+      <div class="container" @click="gotoCta">
+        <span>Fundraiser launching on <strong>March 31</strong></span>
+      </div>
+    </div>
     <div class="home-text"></div>
   </div>
 </template>
@@ -20,6 +25,10 @@ export default {
     }
   },
   methods: {
+    gotoCta () {
+      let y = document.querySelector('#section-first-cta').offsetTop - 48 + 8
+      scrollTo(0, y, { duration: 666 })
+    },
     scrollDown () {
       let y = document.querySelector('.home-text').offsetTop - 48 + 8
       scrollTo(0, y, { duration: 666 })
@@ -30,6 +39,43 @@ export default {
 
 <style lang="stylus">
 @import '../styles/variables.styl'
+
+.section-cover-component
+  position relative
+
+#fundraiser-alert
+  position absolute
+  bottom 0
+  left 0
+  padding 0.5rem
+  display flex
+  width 100vw
+  justify-content center
+  .container
+    width 100%
+    padding 0.5rem 0.75rem
+    border 1px solid bc
+    background alpha(c-app-fg,50%)
+
+    display flex
+    justify-content center
+    align-items center
+
+    font-size 0.75rem
+    text-transform uppercase
+    strong
+      color #c00
+      font-weight bold
+
+@media screen and (min-width: 360px)
+  #fundraiser-alert .container
+    font-size 0.875rem
+    padding 0.75rem
+
+@media screen and (min-width: 414px)
+  #fundraiser-alert .container
+    font-size 1rem
+    padding 1rem
 
 .section-cover
   overflow hidden
@@ -52,6 +98,8 @@ export default {
     align-content center
     justify-content center
     align-items center
+
+
 
     h1
       margin-top 1.5rem
