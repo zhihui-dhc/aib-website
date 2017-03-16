@@ -6,18 +6,19 @@ Frequently asked questions &amp; answers about Cosmos.
 
 ## Overview
 
+### Who is the team developing Cosmos?
+
+Cosmos is a full-time endeavor by by [All In Bits, Inc](https://tendermint.com/about). In the future, if there are any applications that might benefit from Cosmos (e.g. especially [Tendermint](https://tendermint.com)-powered blockchain applications focused on tokens) then All In Bits may pursue such projects as well since it supports the whole ecosystem.
+
 ### What's the difference between Tendermint, the Cosmos Network, the Cosmos Hub, and Atoms?
 
-- [Tendermint](https://tendermint.com): a general purpose blockchain engine that uses a Byzantine-fault tolerant consensus protocol and 
-allows applications to be written in any programming language.
+- [Tendermint](https://tendermint.com): a general purpose blockchain engine that uses a Byzantine-fault tolerant consensus protocol and allows applications to be written in any programming language.
 
 - The Cosmos Network: a heterogenous network of Proof-of-Stake blockchains that can interoperate with one-another.
 
-- The Cosmos Hub: The first Proof-of-Stake blockchain to be launched by the Cosmos Network; it uses Tendermint consensus,
-contains a built in governance protocol, and serves as co-ordinater for interoperability between other blockchains.
+- The Cosmos Hub: The first Proof-of-Stake blockchain to be launched by the Cosmos Network; it uses Tendermint consensus, contains a built in governance protocol, and serves as co-ordinater for interoperability between other blockchains.
 
-- Atoms: The native cryptocurrency on the Cosmos Hub. Atoms are necessary for participating in the consensus protocol and
-transacting on the network.
+- Atoms: The native cryptocurrency on the Cosmos Hub. Atoms are necessary for participating in the consensus protocol and transacting on the network.
 
 ## Atoms
 
