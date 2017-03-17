@@ -12,12 +12,12 @@
 
   <menu class="menu-popup menu-app" v-if="activeMenuApp || desktop">
     <nav class="nav-app">
-      <a id="nav-fundraiser" class="live" v-if="FUNDRAISE_STARTED"
+      <a id="nav-fundraiser" class="live" v-if="fundraiseStarted"
         :href="config.SALE_URL">
         Fundraiser <span>Live</span>
       </a>
       <a id="nav-fundraiser" class="soon" v-else>
-        Fundraiser <span class="soon">March 31</span>
+        Fundraiser <span class="soon">{{ fundraiseStartDate }}</span>
       </a>
       <a @click="goto('/blog')">{{ $t('siteHeader.blog') }}</a>
       <a @click="goto('/plan')">{{ $t('siteHeader.plan') }}</a>
@@ -72,7 +72,11 @@ import moment from 'moment'
 export default {
   name: 'app-header',
   computed: {
-    FUNDRAISE_STARTED () {
+    fundraiseStartDate () {
+      let local = moment(moment.utc(this.config.START_DATETIME)).local()
+      return moment(local).format('MMMM DD')
+    },
+    fundraiseStarted () {
       return Date.now() >= moment(this.config.START_DATETIME).valueOf()
     },
     displayName () {

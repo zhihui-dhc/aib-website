@@ -8,7 +8,7 @@
     </section>
     <div id="fundraiser-alert">
       <div class="container" @click="gotoCta">
-        <span>Fundraiser launching on <strong>March 31</strong></span>
+        <span>Fundraiser starting on <strong>{{ fundraiseDate }}</strong></span>
       </div>
     </div>
     <div class="home-text"></div>
@@ -16,13 +16,22 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 import scrollTo from 'scroll-to'
-
+import moment from 'moment'
 export default {
   data () {
     return {
       coverImage: require('../assets/images/cover_image.png')
     }
+  },
+  computed: {
+    fundraiseDate () {
+      let utc = moment.utc(this.config.START_DATETIME)
+      let local = moment(utc).local()
+      return moment(local).format('LLL')
+    },
+    ...mapGetters(['config'])
   },
   methods: {
     gotoCta () {
@@ -62,7 +71,6 @@ export default {
     align-items center
 
     font-size 0.75rem
-    text-transform uppercase
     strong
       color link
       font-weight normal

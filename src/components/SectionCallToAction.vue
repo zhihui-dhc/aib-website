@@ -27,7 +27,7 @@
           </btn>
         </template>
         <template v-else>
-          <div v-if="fundraiseAnnounced" class="section-cta-description">The Cosmos fundraiser will begin on March 31st, 2017 at 6AM PDT. Enter your email to receive live notifications:</div>
+          <div v-if="fundraiseAnnounced" class="section-cta-description">The Cosmos fundraiser will begin on {{ friendlyStartDate }}. Enter your email to receive live notifications:</div>
           <div v-else class="section-cta-description">The start date will be announced shortly. Stay tuned! Enter your email to receive live fundraiser notifications.</div>
           <form-email-signup class="section-cta-form"></form-email-signup>
           <div class="section-cta-description">Chat with the Cosmos community about the fundraiser on <a href="http://slack.cosmos.network"><i class="fa fa-slick"></i> Slack</a>.</div>
@@ -51,6 +51,11 @@ export default {
     TimeRemaining
   },
   computed: {
+    friendlyStartDate () {
+      let utc = moment.utc(this.config.START_DATETIME)
+      let local = moment(utc).local()
+      return moment(local).format('MMMM DD, YYYY [at] h:mm A')
+    },
     announcedDate () {
       return moment(moment.utc(this.config.ANNOUNCE_DATETIME)).local()
     },
