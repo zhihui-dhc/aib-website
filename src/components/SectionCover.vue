@@ -45,7 +45,7 @@ export default {
 
 #fundraiser-alert
   position absolute
-  bottom 0
+  top 3rem
   left 0
   padding 0.5rem
   display flex
@@ -64,8 +64,8 @@ export default {
     font-size 0.75rem
     text-transform uppercase
     strong
-      color #c00
-      font-weight bold
+      color link
+      font-weight normal
 
 @media screen and (min-width: 360px)
   #fundraiser-alert .container
