@@ -39,7 +39,7 @@ and all other plans published prior.
   published.
 
 * The projected date of the Fundraiser for all other parties, notwithstanding
-  the initial donors and pre-Fundraiser donors, is Q1 of 2017.
+  the initial donors and pre-Fundraiser donors, is March 31, 2017 at 6AM PDT.
 
 * At most the Fundraiser will last for 6 weeks. Note that after the Fundraiser,
   no more atoms will be distributed by the ICF (unless approved by the on-chain

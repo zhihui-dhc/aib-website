@@ -50,11 +50,9 @@ The Interchain Foundation will suggest that 5% of the Atoms go to its initial do
 ### When is the Fundraiser?
 
 The Interchain Foundation has already raised some funds from private individuals, but is not accepting any more.
-It will host a public fundraising event soon, probably sometime in March.
-It prefers not to commit to a specific date until all the pieces are in place and finalized.
-In particular, the security of the fundraising process must be vetted extremely carefully.
+It will host a public fundraising event on March 31, 2017 at 6AM PDT.
 Both Ether and Bitcoin will be accepted in the fundraiser.
-The date of the fundraiser will be announced at least two weeks in advance.
+The security of the fundraising process has been vetted extremely carefully.
 
 ## Comparisons
 
