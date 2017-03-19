@@ -8,7 +8,7 @@
     </section>
     <div id="fundraiser-alert">
       <div class="container" @click="gotoCta">
-        <span>Fundraiser starting on <strong>{{ fundraiseDate }}</strong></span>
+        <span>Fundraiser starting on <strong>March 31st at 6AM PDT</strong></span>
       </div>
     </div>
     <div class="home-text"></div>
