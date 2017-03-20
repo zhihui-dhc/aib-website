@@ -165,12 +165,12 @@ export default {
   z-index 100
   width 100%
 
-  background #fff
-
   display flex
   flex-flow row wrap
   justify-content space-between
 
+  background alpha(#fff, 95%)
+  backdrop-filter blur(0.125rem)
   shadow()
 
   .header-item

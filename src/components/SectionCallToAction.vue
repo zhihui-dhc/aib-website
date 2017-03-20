@@ -31,7 +31,7 @@
             <a href="http://slack.cosmos.network">Chat about the fundraiser</a> on Slack with the Cosmos community.</div>
         </template>
         <template v-else>
-          <div v-if="fundraiseAnnounced" class="section-cta-description">The Cosmos fundraiser will begin on <strong>{{ pdtStartDate }}</strong>. Enter your email to receive live notifications:</div>
+          <div v-if="fundraiseAnnounced" class="section-cta-description">The Cosmos fundraiser will begin on <a href="https://www.worldtimebuddy.com/?qm=1&lid=5391959,2657908,2643743,1835848&h=5391959&date=2017-3-31&sln=6-7">{{ pdtStartDate }}</a>. Enter your email to receive live notifications:</div>
           <div v-else class="section-cta-description">The start date will be announced shortly. Stay tuned! Enter your email to receive live fundraiser notifications.</div>
           <form-email-signup class="section-cta-form"></form-email-signup>
           <div class="section-cta-description">
@@ -151,6 +151,11 @@ export default {
   margin-right auto
   max-width 28rem
   font-size 0.875rem
+  &:last-of-type
+    margin-bottom 0
+
+  a
+    font-weight 500
 
 @media screen and (min-width: 768px)
   .section-cta-container

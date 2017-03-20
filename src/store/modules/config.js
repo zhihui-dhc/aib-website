@@ -3,7 +3,7 @@ const state = {
   SALE_URL: 'https://fundraiser.cosmos.network',
   SELF_URL: 'https://cosmos.network/',
   TIMEZONE: 'America/Los_Angeles',
-  ANNOUNCE_DATETIME: '2017-03-15 14:00:00',
+  ANNOUNCE_DATETIME: '2017-03-15 07:10:00',
   START_DATETIME: '2017-03-31 13:00:00',
   PASSWORD_MIN: 8,
   PASSWORD_MAX: 512,
@@ -14,21 +14,21 @@ const state = {
   COINS: {
     BTC: {
       ADDRESS: '1EJyXYXPRRiPkTkU3xVPfgYxNRusGVijEi',
-      EXCHANGE_RATE: 2000,
+      EXCHANGE_RATE: 10000,
       MIN_DONATION: 0.006,
-      MAX_DONATION: 500,
+      MAX_DONATION: 100,
       NAME: 'Bitcoin',
       UNIT: 'BTC',
-      USD: '1200'
+      USD: 1000
     },
     ETH: {
       ADDRESS: '1EJyXYXPRRiPkTkU3xVPfgYxNRusGVijEi',
-      EXCHANGE_RATE: 20,
+      EXCHANGE_RATE: 400,
       MIN_DONATION: 1,
-      MAX_DONATION: 50000,
+      MAX_DONATION: 2500,
       NAME: 'Ethereum',
       UNIT: 'ETH',
-      USD: '19'
+      USD: 40
     }
   }
 }

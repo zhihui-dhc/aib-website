@@ -65,6 +65,9 @@ export default {
   display flex
   width 100vw
   justify-content center
+  cursor pointer
+  max-width 100%
+
   .container
     width 100%
     padding 0.5rem 0.75rem
