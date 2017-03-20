@@ -8,7 +8,7 @@
     </section>
     <div id="fundraiser-alert">
       <div class="container" @click="gotoCta">
-        <span>Fundraiser starting on <strong>March 31st at 6AM PDT</strong></span>
+        <span>Fundraiser starting on <strong>{{ pdtStartDate }}</strong></span>
       </div>
     </div>
     <div class="home-text"></div>
@@ -18,7 +18,7 @@
 <script>
 import { mapGetters } from 'vuex'
 import scrollTo from 'scroll-to'
-import moment from 'moment'
+import moment from 'moment-timezone'
 export default {
   data () {
     return {
@@ -26,10 +26,15 @@ export default {
     }
   },
   computed: {
-    fundraiseDate () {
+    pdtStartDate () {
+      let utc = moment.utc(this.config.START_DATETIME)
+      let pdt = moment(utc).tz(this.config.TIMEZONE)
+      return pdt.format('LLL z')
+    },
+    localStartDate () {
       let utc = moment.utc(this.config.START_DATETIME)
       let local = moment(utc).local()
-      return moment(local).format('LLL')
+      return moment(local).format('LLL z')
     },
     ...mapGetters(['config'])
   },
@@ -71,6 +76,7 @@ export default {
     align-items center
 
     font-size 0.75rem
+
     strong
       color link
       font-weight normal

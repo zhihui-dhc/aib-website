@@ -15,6 +15,8 @@
             icon="bar-chart"
             @click.native="gotoFundraiser">
           </btn>
+          <div class="section-cta-description">
+            <a href="http://slack.cosmos.network">Chat about the fundraiser</a> on Slack with the Cosmos community.</div>
         </template>
         <template v-else-if="fundraiseStarted">
           <div class="section-cta-description">Fundraise is live! Click to visit the donation page.</div>
@@ -25,12 +27,15 @@
             icon="bar-chart"
             @click.native="gotoFundraiser">
           </btn>
+          <div class="section-cta-description">
+            <a href="http://slack.cosmos.network">Chat about the fundraiser</a> on Slack with the Cosmos community.</div>
         </template>
         <template v-else>
-          <div v-if="fundraiseAnnounced" class="section-cta-description">The Cosmos fundraiser will begin on March 31st at 6AM PDT. Enter your email to receive live notifications:</div>
+          <div v-if="fundraiseAnnounced" class="section-cta-description">The Cosmos fundraiser will begin on <strong>{{ pdtStartDate }}</strong>. Enter your email to receive live notifications:</div>
           <div v-else class="section-cta-description">The start date will be announced shortly. Stay tuned! Enter your email to receive live fundraiser notifications.</div>
           <form-email-signup class="section-cta-form"></form-email-signup>
-          <div class="section-cta-description">Chat with the Cosmos community about the fundraiser on <a href="http://slack.cosmos.network"><i class="fa fa-slick"></i> Slack</a>.</div>
+          <div class="section-cta-description">
+            <a href="http://slack.cosmos.network">Chat about the fundraiser</a> on Slack with the Cosmos community.</div>
         </template>
       </main>
     </div>
@@ -51,10 +56,15 @@ export default {
     TimeRemaining
   },
   computed: {
-    friendlyStartDate () {
+    pdtStartDate () {
+      let utc = moment.utc(this.config.START_DATETIME)
+      let pdt = moment(utc).tz(this.config.TIMEZONE)
+      return pdt.format('LLL z')
+    },
+    localStartDate () {
       let utc = moment.utc(this.config.START_DATETIME)
       let local = moment(utc).local()
-      return moment(local).format('MMMM DD, YYYY [at] h:mm A')
+      return moment(local).format('LLL z')
     },
     announcedDate () {
       return moment(moment.utc(this.config.ANNOUNCE_DATETIME)).local()
@@ -139,7 +149,7 @@ export default {
 .section-cta-description
   margin-left auto
   margin-right auto
-  max-width 26rem
+  max-width 28rem
   font-size 0.875rem
 
 @media screen and (min-width: 768px)
@@ -156,7 +166,10 @@ export default {
   .section-cta-subtitle
     font-size 1.66rem
 
+  .section-cta-form, .section-cta-btn.ni-btn-wrapper .ni-btn,
+  .section-cta-description
+    margin-bottom 2.25rem
+
   .section-cta-description
     font-size 1rem
-    margin-bottom 2.25rem
 </style>
