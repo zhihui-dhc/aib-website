@@ -3,8 +3,12 @@
     <section-call-to-action></section-call-to-action>
     <footer class="app-footer">
       <div class="sections">
-        <section>
-          <span>&copy; 2016 Cosmos Network Foundation</span>
+        <section class="copyright">
+          <span>&copy; 2016 Interchain Foundation</span>
+          <span class="address">
+            <p>c/o Gubelstrasse 11</p>
+            <p>6300 Zug, Switzerland</p>
+          </span>
         </section>
         <section>
           <header>Cosmos</header>
@@ -106,6 +110,11 @@ export default {
         text-align center
         width 1.5rem
         margin-right 0.5rem
+    &.copyright
+      .address
+        margin-top 0.5rem
+        font-size 0.75rem
+        color light
 
 @media screen and (min-width: 360px)
   .app-footer
@@ -128,6 +137,10 @@ export default {
       header
         margin-bottom 1rem
 
+      &.copyright
+        .address
+          font-size 0.875rem
+
 @media screen and (min-width: 1024px)
   .app-bottom.toc-visible
     margin-left 20rem
@@ -137,6 +150,10 @@ export default {
       max-width 1024px
     section
       flex 0 0 25%
+
+      &.copyright
+        .address
+          font-size 1rem
 
 @media screen and (min-width: 1280px)
   .app-bottom.toc-visible

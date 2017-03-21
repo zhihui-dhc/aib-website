@@ -1,5 +1,5 @@
 <template>
-  <div class="ni-time-remaining" v-if="fuzzy">
+  <div class="ni-time-remaining" v-if="fuzzy === true">
     is starting soon
   </div>
   <div class="ni-time-remaining" :title="date" v-else-if="days > 1">
@@ -25,7 +25,7 @@ export default {
   computed: {
     label () {
       if (this.started) return 'is live for'
-      else return 'starts in'
+      else return 'will begin in'
     },
     usableDate () {
       return Math.trunc(Date.parse(this.date) / 1000)
@@ -56,7 +56,3 @@ export default {
   props: ['date', 'fuzzy', 'started']
 }
 </script>
-
-<style lang="stylus">
-@import '../styles/variables.styl'
-</style>

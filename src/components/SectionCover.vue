@@ -1,25 +1,48 @@
 <template>
-  <div class="component">
+  <div class="section-cover-component component">
     <section class="section-cover">
       <div class="section-container" @click="scrollDown">
         <h1><img src="../assets/images/cosmos_logo_m.png" alt="Cosmos"></h1>
         <p>{{ $t('site.internetOfBlockchains') }}</p>
       </div>
     </section>
+    <div id="fundraiser-alert">
+      <div class="container" @click="gotoCta">
+        <span>Fundraiser starting on <strong>{{ pdtStartDate }}</strong></span>
+      </div>
+    </div>
     <div class="home-text"></div>
   </div>
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 import scrollTo from 'scroll-to'
-
+import moment from 'moment-timezone'
 export default {
   data () {
     return {
       coverImage: require('../assets/images/cover_image.png')
     }
   },
+  computed: {
+    pdtStartDate () {
+      let utc = moment.utc(this.config.START_DATETIME)
+      let pdt = moment(utc).tz(this.config.TIMEZONE)
+      return pdt.format('LLL z')
+    },
+    localStartDate () {
+      let utc = moment.utc(this.config.START_DATETIME)
+      let local = moment(utc).local()
+      return moment(local).format('LLL z')
+    },
+    ...mapGetters(['config'])
+  },
   methods: {
+    gotoCta () {
+      let y = document.querySelector('#section-first-cta').offsetTop - 48 + 8
+      scrollTo(0, y, { duration: 666 })
+    },
     scrollDown () {
       let y = document.querySelector('.home-text').offsetTop - 48 + 8
       scrollTo(0, y, { duration: 666 })
@@ -30,6 +53,46 @@ export default {
 
 <style lang="stylus">
 @import '../styles/variables.styl'
+
+.section-cover-component
+  position relative
+
+#fundraiser-alert
+  position absolute
+  top 3rem
+  left 0
+  padding 0.5rem
+  display flex
+  width 100vw
+  justify-content center
+  cursor pointer
+  max-width 100%
+
+  .container
+    width 100%
+    padding 0.5rem 0.75rem
+    border 1px solid bc
+    background alpha(c-app-fg,50%)
+
+    display flex
+    justify-content center
+    align-items center
+
+    font-size 0.75rem
+
+    strong
+      color link
+      font-weight normal
+
+@media screen and (min-width: 360px)
+  #fundraiser-alert .container
+    font-size 0.875rem
+    padding 0.75rem
+
+@media screen and (min-width: 414px)
+  #fundraiser-alert .container
+    font-size 1rem
+    padding 1rem
 
 .section-cover
   overflow hidden
@@ -52,6 +115,8 @@ export default {
     align-content center
     justify-content center
     align-items center
+
+
 
     h1
       margin-top 1.5rem

@@ -22,13 +22,13 @@
         </div>
         <btn
           icon="file-text-o"
-          @click="go('/whitepaper')"
+          @click.native="go('/whitepaper')"
           :value="$t('sectionHomeIntro.readWhitepaper')"
           size="lg">
         </btn>
       </div>
     </section>
-    <section-call-to-action></section-call-to-action>
+    <section-call-to-action id="section-first-cta"></section-call-to-action>
     <section class="section-home">
       <div class="section-container">
         <div class="image"><img class="" src="../assets/images/ex_dist_exchange.png"></div>
