@@ -23,7 +23,7 @@
       <a @click="goto('/plan')">{{ $t('siteHeader.plan') }}</a>
       <a @click="goto('/faq')">{{ $t('siteHeader.faq') }}</a>
       <a @click="goto('/whitepaper')">{{ $t('siteHeader.whitepaper') }}</a>
-      <a @click="goto('/team')">{{ $t('siteHeader.team') }}</a>
+      <a @click="goto('/about')">{{ $t('siteHeader.about') }}</a>
     </nav>
     <nav>
       <a href="https://github.com/cosmos/cosmos">

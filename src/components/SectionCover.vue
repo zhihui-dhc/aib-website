@@ -116,8 +116,6 @@ export default {
     justify-content center
     align-items center
 
-
-
     h1
       margin-top 1.5rem
       img

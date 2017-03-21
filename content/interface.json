@@ -8,7 +8,7 @@
     "blog": "Blog",
     "plan": "Plan",
     "faq": "FAQ",
-    "team": "Team",
+    "about": "About",
     "whitepaper": "Whitepaper",
     "wp": "WP",
     "signin": "Sign In",
@@ -18,9 +18,9 @@
     "title": "Blog",
     "subtitle": "<a href='/static/en.xml'>Subscribe</a> for the latest updates."
   },
-  "siteTeam": {
-    "title": "Team",
-    "subtitle": "The team behind Cosmos"
+  "siteAbout": {
+    "title": "About",
+    "subtitle": "Cosmos is a project by the Interchain Foundation. Its development is being led primarily by <a href='https://tendermint.com/about'>All In Bits, Inc</a>"
   },
   "emailSignupForm": {
     "emailAddress": "Email Address",

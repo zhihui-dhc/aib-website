@@ -3,12 +3,11 @@
     <page-header
       :title="$t('siteBlog.title')"
       :subtitle="$t('siteBlog.subtitle')"
+      slot="header"
       type="split">
     </page-header>
-    <div class="page-content">
-      <card-post :title="post.title" :desc="post.description" :url="'/blog/' + post.slug" :meta="post.dateFriendly + ' · ' + post.author" v-for="post in posts">
-      </card-post>
-    </div>
+    <card-post :title="post.title" :desc="post.description" :url="'/blog/' + post.slug" :meta="post.dateFriendly + ' · ' + post.author" v-for="post in posts">
+    </card-post>
   </page-split>
 </template>
 
@@ -18,7 +17,6 @@ import CardPost from './CardPost'
 import PageHeader from '@nylira/vue-page-header'
 import PageSplit from '@nylira/vue-page-split'
 import Vue from 'vue'
-
 export default {
   name: 'page-blog-index',
   components: {

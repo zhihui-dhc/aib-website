@@ -9,7 +9,7 @@ Frequently asked questions &amp; answers about Cosmos.
 ### Who is the team developing Cosmos?
 
 The Cosmos Network is the first project by the Interchain Foundation.
-It's development is being led primarily by [All In Bits, Inc](https://tendermint.com/about), the team that created [Tendermint](https://tendermint.com). 
+Its development is being led primarily by [All In Bits, Inc](https://tendermint.com/about), the team that created [Tendermint](https://tendermint.com). 
 For greater insight into current development, see the [Tendermint](https://github.com/tendermint/tendermint) and [Basecoin](https://github.com/tendermint/basecoin) repositories on github.
 
 ### What's the difference between Tendermint, the Cosmos Network, the Cosmos Hub, and Atoms?

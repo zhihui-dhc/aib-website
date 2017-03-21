@@ -18,7 +18,6 @@
 
 .ni-section
   border-bottom 1px solid bc
-  background c-app-fg
 
   &:last-of-type
     border-bottom none

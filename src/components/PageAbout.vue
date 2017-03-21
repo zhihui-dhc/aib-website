@@ -1,8 +1,9 @@
 <template>
-  <page-split class="page-team">
+  <page-split>
     <page-header
-      :title="$t('siteTeam.title')"
-      :subtitle="$t('siteTeam.subtitle')"
+      :title="$t('siteAbout.title')"
+      :subtitle="$t('siteAbout.subtitle')"
+      slot="header"
       type="split">
     </page-header>
     <ni-section>
@@ -21,7 +22,7 @@ import NiSection from './NiSection'
 import PageHeader from '@nylira/vue-page-header'
 import PageSplit from '@nylira/vue-page-split'
 export default {
-  name: 'page-team',
+  name: 'page-about',
   components: {
     CardPerson,
     NiSection,
@@ -40,9 +41,9 @@ export default {
   data () {
     return {
       metadata: {
-        page: 'Team',
-        title: `Team - ${this.$t('site.title')}`,
-        desc: 'Information about the Cosmos Team.'
+        page: 'About',
+        title: `About - ${this.$t('site.title')}`,
+        desc: 'Information about the Cosmos team.'
       }
     }
   },
