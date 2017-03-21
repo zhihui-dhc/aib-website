@@ -18,7 +18,6 @@ const routes = [
   { path: '/plan/:locale', name: 'plan-localized', component: r('Plan') },
 
   { path: '/team', name: 'team', component: r('Team') },
-  { path: '/team/:locale', name: 'team-localized', component: r('Team') },
 
   { path: '/whitepaper', name: 'whitepaper', component: r('Whitepaper') },
   { path: '/whitepaper/en-US', redirect: '/whitepaper' },
@@ -28,8 +27,6 @@ const routes = [
   { path: '/signin', name: 'signin', component: SignIn },
   { path: '/reset', name: 'reset', component: Reset },
   { path: '/settings', name: 'settings', component: Settings },
-
-  // redirects
 
   // wildcards
   { path: '/404', component: r('404') },

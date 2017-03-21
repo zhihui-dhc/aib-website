@@ -5,57 +5,37 @@
       :subtitle="$t('siteTeam.subtitle')"
       type="split">
     </page-header>
-    <div class="page-content">
-      <locale-menu path="team" :langs="['en-US', 'ko']"></locale-menu>
-      <section class="section-default section-team-portraits">
-        <div class="section-container">
-          <div class="section-content">
-            <h1>Interchain Foundation</h1>
-            <card-person v-for="person in teamMembers" :person="person"></card-person>
-          </div>
-        </div>
-      </section>
-
-      <section class="section-default section-portraits">
-        <div class="section-container">
-          <div class="section-content">
-            <h1>Advisors</h1>
-            <card-person v-for="person in advisors" :person="person"></card-person>
-          </div>
-        </div>
-      </section>
-      </div>
-    </div>
+    <ni-section>
+      <card-person v-for="person in teamMembers" :person="person"></card-person>
+    </ni-section>
+    <ni-section>
+      <card-person v-for="person in advisors" :person="person"></card-person>
+    </ni-section>
   </page-split>
 </template>
 
 <script>
-import LocaleMenu from './LocaleMenu'
 import { mapGetters } from 'vuex'
-import ArticleBody from '@nylira/vue-article-body'
 import CardPerson from './CardPerson'
+import NiSection from './NiSection'
 import PageHeader from '@nylira/vue-page-header'
 import PageSplit from '@nylira/vue-page-split'
 export default {
   name: 'page-team',
   components: {
-    LocaleMenu,
-    ArticleBody,
     CardPerson,
+    NiSection,
     PageSplit,
     PageHeader
   },
   computed: {
     teamMembers () {
-      return this.people.filter(p => p.category === 'member')
+      return this.allPeople.filter(p => p.category === 'member')
     },
     advisors () {
-      return this.people.filter(p => p.category === 'advisor')
+      return this.allPeople.filter(p => p.category === 'advisor')
     },
-    ...mapGetters({
-      people: 'allPeople'
-    })
-
+    ...mapGetters(['allPeople'])
   },
   data () {
     return {
@@ -89,6 +69,5 @@ export default {
 
 <style lang="stylus">
 @import '../styles/variables.styl'
-.page-team
-  padding-top 1rem
+
 </style>

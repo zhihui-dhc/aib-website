@@ -132,7 +132,7 @@ export default {
 @media screen and (min-width:414px)
   .card-person-main
     font-size 0.875rem
-
+    
 @media screen and (min-width:1280px)
   .card-person
     display flex
