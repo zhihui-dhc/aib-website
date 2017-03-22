@@ -29,6 +29,7 @@
   <div class="header-item header-item-alert" @click="toggleMenuFundraiser">
     <i v-if="!activeMenuUser" class="fa fa-bell-o"></i>
     <i v-else class="fa fa-times"></i>
+    <span class="alert" v-if="!activeMenuUser">1</span>
     <div v-if="desktop">Fundraiser</div>
   </div>
 
@@ -46,7 +47,7 @@
         The Cosmos fundraiser will begin on <a href="https://www.worldtimebuddy.com/?qm=1&lid=5391959,2657908,2643743,1835848&h=5391959&date=2017-3-31&sln=6-7">{{ pdtStartDate }}</a>. Check back soon!
       </span>
       <a href="http://slack.cosmos.network">
-        <i class="fa fa-slack"></i> Discuss on Slack
+         Discuss on <i class="fa fa-slack"></i> Slack
       </a>
     </nav>
   </menu>
@@ -175,9 +176,7 @@ export default {
       text-align center
     i.fa + div
       margin-left 0.375rem
-    i.fa.fa-bell-o
-      color #c00
-    div
+    i.fa, div
       color txt
 
     img
@@ -185,8 +184,21 @@ export default {
       height 1.125rem
       width auto
     &.header-item-alert
-      i.fa, div
-        color link
+      .alert
+        content '1'
+        font-size 0.4rem
+        color #fff
+        display flex
+        align-items center
+        justify-content center
+
+        width 0.666rem
+        height 0.666rem
+        border-radius 0.333rem
+        background #f00
+        position absolute
+        bottom 0.7rem
+        right 0.7rem
 
   #nav-fundraiser
     display flex
