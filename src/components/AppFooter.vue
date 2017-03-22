@@ -17,7 +17,7 @@
             <router-link :to="'/plan'">Plan</router-link>
             <router-link :to="'/faq'">FAQ</router-link>
             <router-link :to="'/whitepaper'">Whitepaper</router-link>
-            <a href="https://github.com/cosmos/cosmos">GitHub</a>
+            <router-link :to="'/about'">About</router-link>
           </nav>
         </section>
         <section>
