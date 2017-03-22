@@ -11,19 +11,21 @@
   </a>
 
   <menu class="menu-popup menu-app" v-if="activeMenuApp || desktop">
-    <nav class="nav-app">
-      <a @click="goto('/blog')">{{ $t('siteHeader.blog') }}</a>
-      <a @click="goto('/plan')">{{ $t('siteHeader.plan') }}</a>
-      <a @click="goto('/faq')">{{ $t('siteHeader.faq') }}</a>
-      <a @click="goto('/whitepaper')">{{ $t('siteHeader.whitepaper') }}</a>
-      <a @click="goto('/about')">{{ $t('siteHeader.about') }}</a>
-    </nav>
-    <nav>
-      <a href="https://github.com/cosmos/cosmos">
-        <i class="fa fa-github"></i>
-        <span class="label">GitHub</span>
-      </a>
-    </nav>
+    <div class="container">
+      <nav class="nav-app">
+        <a @click="goto('/blog')">{{ $t('siteHeader.blog') }}</a>
+        <a @click="goto('/plan')">{{ $t('siteHeader.plan') }}</a>
+        <a @click="goto('/faq')">{{ $t('siteHeader.faq') }}</a>
+        <a @click="goto('/whitepaper')">{{ $t('siteHeader.whitepaper') }}</a>
+        <a @click="goto('/about')">{{ $t('siteHeader.about') }}</a>
+      </nav>
+      <nav>
+        <a href="https://github.com/cosmos/cosmos">
+          <i class="fa fa-github"></i>
+          <span class="label">GitHub</span>
+        </a>
+      </nav>
+    </div>
   </menu>
 
   <div class="header-item header-item-alert" @click="toggleMenuFundraiser">
@@ -31,26 +33,28 @@
       <span class="alert">1</span>
     </i>
     <i v-else class="fa fa-times"></i>
-    <div v-if="desktop">Fundraiser</div>
+    <span class="label" v-if="desktop">Fundraiser</span>
   </div>
 
-  <menu class="menu-popup menu-fundraiser" v-if="activeMenuUser">
-    <nav class="nav-user">
-      <a id="nav-fundraiser" class="live" v-if="fundraiseStarted"
-        :href="config.SALE_URL">
-        Fundraiser <span>Live</span>
-      </a>
-      <a id="nav-fundraiser" class="soon" v-else>
-        Fundraiser
-        <span class="soon"><time-left :date="startDate"></time-left></span>
-      </a>
-      <span class="desc">
-        The Cosmos fundraiser will begin on <a href="https://www.worldtimebuddy.com/?qm=1&lid=5391959,2657908,2643743,1835848&h=5391959&date=2017-3-31&sln=6-7">{{ pdtStartDate }}</a>. Check back soon!
-      </span>
-      <a href="http://slack.cosmos.network">
-         Discuss on <i class="fa fa-slack"></i> Slack
-      </a>
-    </nav>
+  <menu class="menu-popup menu-fundraiser" v-if="activeMenuUser" @click="toggleMenuFundraiser">
+    <div class="container">
+      <nav class="nav-user">
+        <a id="nav-fundraiser" class="live" v-if="fundraiseStarted"
+          :href="config.SALE_URL">
+          Fundraiser <span>Live</span>
+        </a>
+        <a id="nav-fundraiser" class="soon" v-else>
+          Fundraiser
+          <span class="soon"><time-left :date="startDate"></time-left></span>
+        </a>
+        <span class="desc">
+          The Cosmos fundraiser will begin on <a href="https://www.worldtimebuddy.com/?qm=1&lid=5391959,2657908,2643743,1835848&h=5391959&date=2017-3-31&sln=6-7">{{ pdtStartDate }}</a>. Check back soon!
+        </span>
+        <a href="http://slack.cosmos.network">
+           Discuss on <i class="fa fa-slack"></i> Slack
+        </a>
+      </nav>
+    </div>
   </menu>
 </header>
 </template>
@@ -175,18 +179,21 @@ export default {
     i.fa
       width 1rem
       text-align center
-    i.fa + div
+      position relative
+    i.fa + .label
       margin-left 0.5rem
-    i.fa, div
+    i.fa, .label
       color txt
+
+    .label
+      user-select none
 
     img
       display block
       height 1.125rem
       width auto
+
     &.header-item-alert
-      i.fa
-        position relative
       .alert
         df()
         font-size 0.5rem
@@ -204,6 +211,9 @@ export default {
         position absolute
         bottom -0.3rem
         right -0.3rem
+    &:hover
+      i.fa, .label
+        color link
 
   #nav-fundraiser
     display flex
@@ -234,11 +244,16 @@ export default {
         img
           height 1rem
           margin-right 0.1rem
+
   .menu-popup
+    z-index 100000
+    user-select none
     nav
       span.desc a
         font-weight 500
         color link
+        &:hover
+          text-decoration underline
 
 @media screen and (max-width:1023px)
   .menu-popup
@@ -248,7 +263,6 @@ export default {
     left 0
     bottom 0
     width 100vw
-    z-index 100000
 
     background c-app-fg
     user-select none
@@ -268,11 +282,12 @@ export default {
         &:hover
           color link
 
-
 @media screen and (min-width: 1024px)
   .menu-app
     display flex
     padding 0 1rem
+    .container
+      display flex
     nav
       display flex
       flex-flow row
@@ -285,31 +300,33 @@ export default {
 
   .menu-fundraiser
     position fixed
-    top 3rem
-    right 0
-    z-index 100000
-    background c-app-fg
-    user-select none
+    top 0
+    left 0
+    background transparent
+    width 100vw
+    height 100vh
 
-    border-left 1px solid bc
-    border-bottom 1px solid bc
-    width 20rem
+    .container
+      position fixed
+      top 3rem
+      right 0
+      background c-app-fg
+      width 20rem
+      shadow()
 
     nav
       display flex
       flex-flow column
       padding 1.5rem 3rem
 
-      span.desc
-        border-top 1px solid bc
-
       a, span.desc
         padding 0.75rem 0
         color txt
         border-bottom 1px solid bc
+
+      a
         &:last-of-type
           border-bottom none
-
-      a:hover
-        color link
+        &:hover
+          color link
 </style>
