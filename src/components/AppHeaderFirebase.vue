@@ -12,6 +12,13 @@
 
   <menu class="menu-popup menu-app" v-if="activeMenuApp || desktop">
     <nav class="nav-app">
+      <a id="nav-fundraiser" class="live" v-if="fundraiseStarted"
+        :href="config.SALE_URL">
+        Fundraiser <span>Live</span>
+      </a>
+      <a id="nav-fundraiser" class="soon" v-else>
+        Fundraiser <span class="soon">{{ fundraiseStartDate }}</span>
+      </a>
       <a @click="goto('/blog')">{{ $t('siteHeader.blog') }}</a>
       <a @click="goto('/plan')">{{ $t('siteHeader.plan') }}</a>
       <a @click="goto('/faq')">{{ $t('siteHeader.faq') }}</a>
@@ -23,31 +30,36 @@
         <i class="fa fa-github"></i>
         <span class="label">GitHub</span>
       </a>
+      <!--
+      <a href="https://tendermint.com">
+        <img src="../assets/images/tendermint-logo-tiny.png">
+        <span class="label">Tendermint</span>
+      </a>
+      -->
     </nav>
   </menu>
 
-  <div class="header-item header-item-alert" @click="toggleMenuFundraiser">
-    <i v-if="!activeMenuUser" class="fa fa-bell-o"></i>
+  <div class="header-item" @click="toggleMenuUser">
+    <i v-if="!activeMenuUser && !sessionUser.email" class="fa fa-user-o"></i>
+    <i v-else-if="!activeMenuUser &&  sessionUser.email" class="fa fa-user"></i>
     <i v-else class="fa fa-times"></i>
-    <div v-if="desktop">Fundraiser</div>
+
+    <template v-if="desktop">
+      <div v-if="sessionUser.email">{{ sessionUser.displayName }}</div>
+      <div v-else>Account</div>
+    </template>
   </div>
 
-  <menu class="menu-popup menu-fundraiser" v-if="activeMenuUser">
+  <menu class="menu-popup menu-user" v-if="activeMenuUser">
     <nav class="nav-user">
-      <a id="nav-fundraiser" class="live" v-if="fundraiseStarted"
-        :href="config.SALE_URL">
-        Fundraiser <span>Live</span>
-      </a>
-      <a id="nav-fundraiser" class="soon" v-else>
-        Fundraiser
-        <span class="soon"><time-left :date="startDate"></time-left></span>
-      </a>
-      <span class="desc">
-        The Cosmos fundraiser will begin on <a href="https://www.worldtimebuddy.com/?qm=1&lid=5391959,2657908,2643743,1835848&h=5391959&date=2017-3-31&sln=6-7">{{ pdtStartDate }}</a>. Check back soon!
-      </span>
-      <a href="http://slack.cosmos.network">
-        <i class="fa fa-slack"></i> Discuss on Slack
-      </a>
+      <template v-if="sessionUser.email">
+        <a @click="goto('/settings')">Settings</a>
+        <a @click="signOut">Sign Out</a>
+      </template>
+      <template v-else>
+        <a @click="signUp" exact>{{ $t('siteHeader.signup') }}</a>
+        <a @click="signIn">{{ $t('siteHeader.signin') }}</a>
+      </template>
     </nav>
   </menu>
 </header>
@@ -56,37 +68,23 @@
 <script>
 import { mapGetters } from 'vuex'
 import disableScroll from 'disable-scroll'
+import firebase from 'firebase'
 import moment from 'moment'
-import TimeLeft from './TimeLeft'
 export default {
   name: 'app-header',
-  components: {
-    TimeLeft
-  },
   computed: {
-    pdtStartDate () {
-      let utc = moment.utc(this.config.START_DATETIME)
-      let pdt = moment(utc).tz(this.config.TIMEZONE)
-      return pdt.format('LLL z')
+    fundraiseStartDate () {
+      let local = moment(moment.utc(this.config.START_DATETIME)).local()
+      return moment(local).format('MMMM DD')
     },
-    localStartDate () {
-      let utc = moment.utc(this.config.START_DATETIME)
-      let local = moment(utc).local()
-      return moment(local).format('LLL z')
+    fundraiseStarted () {
+      return Date.now() >= moment(this.config.START_DATETIME).valueOf()
     },
-    announcedDate () {
-      return moment(moment.utc(this.config.ANNOUNCE_DATETIME)).local()
-    },
-    startDate () {
-      return moment(moment.utc(this.config.START_DATETIME)).local()
-    },
-    endDate () {
-      if (this.fundraiseStarted) {
-        let utcEndDate = moment.utc(this.config.START_DATETIME)
-          .add(this.config.ENDS_AFTER, 'days').valueOf()
-        return moment(utcEndDate).local()
+    displayName () {
+      if (this.sessionUser.displayName) {
+        return this.sessionUser.displayName
       } else {
-        return this.startDate
+        return 'Loading...'
       }
     },
     isTocPage () {
@@ -118,10 +116,27 @@ export default {
       if (this.activeMenuApp) disableScroll.on()
       else disableScroll.off()
     },
-    toggleMenuFundraiser () {
+    toggleMenuUser () {
       this.activeMenuUser = !this.activeMenuUser
       if (this.activeMenuUser) disableScroll.on()
       else disableScroll.off()
+    },
+    signUp () {
+      this.closeMenus()
+      this.$store.commit('setSessionRequest', this.$route.path)
+      this.$router.push('/signup')
+    },
+    signIn () {
+      this.closeMenus()
+      this.$store.commit('setSessionRequest', this.$route.path)
+      this.$router.push('/signin')
+    },
+    signOut () {
+      this.closeMenus()
+      firebase.auth().signOut().then(function () {
+      }, function (error) {
+        console.error('Sign Out Error', error)
+      })
     },
     watchWindowSize () {
       let w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0)
@@ -174,41 +189,16 @@ export default {
       width 1rem
       text-align center
     i.fa + div
-      margin-left 0.375rem
-    i.fa.fa-bell-o
-      color #c00
-    div
-      color txt
+      margin-left 0.25rem
 
     img
       display block
       height 1.125rem
       width auto
-    &.header-item-alert
-      i.fa, div
-        color link
-
-  #nav-fundraiser
-    display flex
-    justify-content space-between
-    align-items center
-    span
-      padding 0 0.375rem
-      border 1px solid link
-      border-radius 0.125rem
-      font-size 0.875rem
-      height 1.5rem
-      display flex
-      align-items center
-      color link
-
-    &.soon
-      cursor not-allowed
-      color light
 
   .menu-app
     nav
-      a,
+      a
         display flex
         align-items center
         cursor pointer
@@ -217,11 +207,27 @@ export default {
         img
           height 1rem
           margin-right 0.1rem
-  .menu-popup
-    nav
-      span.desc a
-        font-weight 500
-        color link
+        &#nav-fundraiser
+          position relative
+          span
+            padding 0 0.25rem
+
+            border 1px solid bc
+            border-radius 0.125rem
+
+            font-size 0.666rem
+            height 1.25rem
+
+            display flex
+            align-items center
+            color txt
+          &.soon
+            color light
+            cursor not-allowed
+          &.live
+            span
+              color hsl(120,100%,35%)
+              border-color hsl(120,35%,65%)
 
 @media screen and (max-width:1023px)
   .menu-popup
@@ -241,16 +247,24 @@ export default {
       flex-flow column
       padding 1.5rem 3rem
 
-      a, span.desc
+      a
         padding 0.75rem 0
         color txt
         border-bottom 1px solid bc
-      a
         &:last-of-type
           border-bottom none
         &:hover
           color link
 
+        &#nav-fundraiser
+          position relative
+          span
+            display block
+            position absolute
+            top 50%
+            right 0
+
+            margin-top -0.625rem
 
 @media screen and (min-width: 1024px)
   .menu-app
@@ -265,8 +279,12 @@ export default {
         color txt
         &:hover
           color link
+        &#nav-fundraiser
+          span
+            display inline-block
+            margin-left 0.375rem
 
-  .menu-fundraiser
+  .menu-user
     position fixed
     top 3rem
     right 0
@@ -283,16 +301,13 @@ export default {
       flex-flow column
       padding 1.5rem 3rem
 
-      span.desc
-        border-top 1px solid bc
-
-      a, span.desc
+      a
         padding 0.75rem 0
         color txt
         border-bottom 1px solid bc
         &:last-of-type
           border-bottom none
+        &:hover
+          color link
 
-      a:hover
-        color link
 </style>

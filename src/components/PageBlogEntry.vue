@@ -7,17 +7,17 @@
     <article-body>
       <div v-html="entry.body"></div>
     </article-body>
-    <comments></comments>
+    <!--<comments></comments>-->
   </div>
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+import Vue from 'vue'
 import ArticleFooter from './ArticleFooter'
 import ArticleBody from '@nylira/vue-article-body'
-import PageHeader from '@nylira/vue-page-header'
 import Comments from './Comments'
-import Vue from 'vue'
-import { mapGetters } from 'vuex'
+import PageHeader from '@nylira/vue-page-header'
 export default {
   name: 'page-blog-entry',
   components: {
@@ -30,7 +30,8 @@ export default {
     entrySubtitle () {
       let value = this.entry.dateFriendly
       if (this.entry.author) {
-        value += ` by ${this.entry.author} - <a href="#comments">Comments</a>`
+        // value += ` by ${this.entry.author} - <a href="#comments">Comments</a>`
+        value += ` by ${this.entry.author}`
       }
       return value
     },
@@ -50,9 +51,7 @@ export default {
       else url += ` ${window.location.href}`
       return url
     },
-    ...mapGetters([
-      'allPosts'
-    ])
+    ...mapGetters(['allPosts'])
   },
   head: {
     title () {
@@ -72,6 +71,5 @@ export default {
       ]
     }
   }
-
 }
 </script>
