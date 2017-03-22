@@ -27,9 +27,10 @@
   </menu>
 
   <div class="header-item header-item-alert" @click="toggleMenuFundraiser">
-    <i v-if="!activeMenuUser" class="fa fa-bell-o"></i>
+    <i v-if="!activeMenuUser" class="fa fa-bell-o">
+      <span class="alert">1</span>
+    </i>
     <i v-else class="fa fa-times"></i>
-    <span class="alert" v-if="!activeMenuUser">1</span>
     <div v-if="desktop">Fundraiser</div>
   </div>
 
@@ -175,7 +176,7 @@ export default {
       width 1rem
       text-align center
     i.fa + div
-      margin-left 0.375rem
+      margin-left 0.5rem
     i.fa, div
       color txt
 
@@ -184,9 +185,13 @@ export default {
       height 1.125rem
       width auto
     &.header-item-alert
+      i.fa
+        position relative
       .alert
-        content '1'
-        font-size 0.4rem
+        df()
+        font-size 0.5rem
+        font-weight 600
+        line-height 1
         color #fff
         display flex
         align-items center
@@ -197,8 +202,8 @@ export default {
         border-radius 0.333rem
         background #f00
         position absolute
-        bottom 0.7rem
-        right 0.7rem
+        bottom -0.3rem
+        right -0.3rem
 
   #nav-fundraiser
     display flex
