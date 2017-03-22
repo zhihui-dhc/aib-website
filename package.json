@@ -20,7 +20,7 @@
     "@nylira/vue-button": "^2.0.5",
     "@nylira/vue-input": "^2.1.2",
     "@nylira/vue-notifications": "^1.0.3",
-    "@nylira/vue-page-header": "^2.1.2",
+    "@nylira/vue-page-header": "^2.1.5",
     "@nylira/vue-page-split": "^2.1.1",
     "@nylira/vue-user-pages": "^1.1.5",
     "babel-core": "6.22.1",

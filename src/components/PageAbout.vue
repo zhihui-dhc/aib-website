@@ -7,10 +7,16 @@
       type="split">
     </page-header>
     <ni-section>
-      <card-person v-for="person in teamMembers" :person="person"></card-person>
+      <div slot="title">Interchain Foundation Counsel</div>
+      <card-person v-for="person in ppl('interchain')" :person="person"></card-person>
     </ni-section>
     <ni-section>
-      <card-person v-for="person in advisors" :person="person"></card-person>
+      <div slot="title">All In Bits, Inc.</div>
+      <card-person v-for="person in ppl('aib')" :person="person"></card-person>
+    </ni-section>
+    <ni-section>
+      <div slot="title">Advisors</div>
+      <card-person v-for="person in ppl('advisors')" :person="person"></card-person>
     </ni-section>
   </page-split>
 </template>
@@ -30,12 +36,6 @@ export default {
     PageHeader
   },
   computed: {
-    teamMembers () {
-      return this.allPeople.filter(p => p.category === 'member')
-    },
-    advisors () {
-      return this.allPeople.filter(p => p.category === 'advisor')
-    },
     ...mapGetters(['allPeople'])
   },
   data () {
@@ -63,6 +63,11 @@ export default {
         { p: 'og:title', c: this.metadata.title },
         { p: 'og:description', c: this.metadata.desc }
       ]
+    }
+  },
+  methods: {
+    ppl (category) {
+      return this.allPeople.filter(p => p.category === category)
     }
   }
 }
