@@ -39,9 +39,6 @@ export default {
 @import '../styles/variables.styl'
 
 .locale-menu
-  position absolute
-  top 3rem
-  left 0
   z-index 10
 
   width 100vw

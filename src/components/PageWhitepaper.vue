@@ -1,38 +1,38 @@
 <template>
-  <div class="page-whitepaper">
-    <locale-menu path="whitepaper" :langs="['en-US', 'ko', 'pt', 'zh-CN']"></locale-menu>
-    <page-whitepaper-nav></page-whitepaper-nav>
-    <toc-padding v-bind:class="{ 'toc-visible': whitepaperTocVisible }">
-      <article-body>
-        <text-ko v-if="$route.params.locale === 'ko'"></text-ko>
-        <text-pt v-else-if="$route.params.locale === 'pt'"></text-pt>
-        <text-zh-cn v-else-if="$route.params.locale === 'zh-CN'"></text-zh-cn>
-        <text-en-us v-else></text-en-us>
-      </article-body>
-    </toc-padding>
-  </div>
+  <toc-page :toc-visible="whitepaperTocVisible">
+    <locale-menu
+      slot="locale"
+      path="whitepaper"
+      :langs="['en-US', 'ko', 'pt', 'zh-CN']">
+    </locale-menu>
+    <page-nav slot="nav"></page-nav>
+    <text-ko v-if="$route.params.locale === 'ko'"></text-ko>
+    <text-pt v-else-if="$route.params.locale === 'pt'"></text-pt>
+    <text-zh-cn v-else-if="$route.params.locale === 'zh-CN'"></text-zh-cn>
+    <text-en-us v-else></text-en-us>
+  </toc-page>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
-import PageWhitepaperNav from './PageWhitepaperNav'
-import LocaleMenu from './LocaleMenu'
-import TocPadding from './TocPadding'
 import ArticleBody from '@nylira/vue-article-body'
+import PageNav from './PageWhitepaperNav'
+import LocaleMenu from './LocaleMenu'
 import TextEnUs from '../../content/en-US/WHITEPAPER.md'
 import TextKo from '../../content/ko/WHITEPAPER.md'
 import TextPt from '../../content/pt/WHITEPAPER.md'
 import TextZhCn from '../../content/zh-CN/WHITEPAPER.md'
+import TocPage from './TocPage'
 export default {
   components: {
-    PageWhitepaperNav,
-    LocaleMenu,
-    TocPadding,
     ArticleBody,
+    LocaleMenu,
+    PageNav,
     TextEnUs,
     TextKo,
     TextPt,
-    TextZhCn
+    TextZhCn,
+    TocPage
   },
   computed: {
     ...mapGetters(['whitepaperTocVisible'])
@@ -74,6 +74,4 @@ export default {
 
 <style lang="stylus">
 @import '../styles/variables.styl'
-.page-whitepaper
-  padding-top 1rem
 </style>

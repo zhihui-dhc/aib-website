@@ -1,32 +1,24 @@
 <template>
-  <div class="page-faq">
-    <page-faq-nav></page-faq-nav>
-    <toc-padding v-bind:class="{ 'toc-visible': faqTocVisible }">
-      <article-body>
-        <text-content></text-content>
-      </article-body>
-    </toc-padding>
-  </div>
+  <toc-page :toc-visible="faqTocVisible">
+    <page-nav slot="nav"></page-nav>
+      <text-content></text-content>
+  </toc-page>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
-import PageFaqNav from './PageFaqNav'
-import TocPadding from './TocPadding'
-import ArticleBody from '@nylira/vue-article-body'
+import PageNav from './PageFaqNav'
 import TextContent from '../../content/en-US/FAQ.md'
+import TocPage from './TocPage'
 export default {
   name: 'page-faq',
   components: {
-    PageFaqNav,
-    TocPadding,
-    ArticleBody,
-    TextContent
+    PageNav,
+    TextContent,
+    TocPage
   },
   computed: {
-    ...mapGetters([
-      'faqTocVisible'
-    ])
+    ...mapGetters(['faqTocVisible'])
   },
   data () {
     return {

@@ -22,7 +22,7 @@ function scrollIt (scrollSpeedMult = 1.0) {
 }
 export default function () {
   if (document.documentElement.clientWidth >= 1024) {
-    scrollIt(1)
+    scrollIt(1.0)
   }
 
   // disable percentage scrolling on smaller displays
