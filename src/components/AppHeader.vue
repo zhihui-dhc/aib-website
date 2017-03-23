@@ -303,7 +303,7 @@ export default {
         &):hover
           color link
         &.router-link-active
-          background lighten(bc, 75%) linear-gradient(top, hsl(0,0,96%), hsl(0,0,98%))
+          background linear-gradient(top, hsl(0,0,96%), hsl(0,0,98%))
           cursor default
           &:hover
             color txt
