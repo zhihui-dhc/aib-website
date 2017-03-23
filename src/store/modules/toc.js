@@ -1,11 +1,11 @@
 const state = {
   faq: {
     elementsVisible: [],
-    tocVisible: true
+    tocVisible: false
   },
   whitepaper: {
     elementsVisible: [],
-    tocVisible: true
+    tocVisible: false
   }
 }
 
@@ -14,13 +14,14 @@ const mutations = {
     state.faq.elementsVisible = value
   },
   setFaqTocVisible (state, value) {
-    console.log('MUTATION: setFaqTocVisible', value)
+    // console.log('MUTATION: faqTocVisible', value)
     state.faq.tocVisible = value
   },
   setWhitepaperElementsVisible (state, value) {
     state.whitepaper.elementsVisible = value
   },
   setWhitepaperTocVisible (state, value) {
+    // console.log('MUTATION: whitepaperTocVisible', value)
     state.whitepaper.tocVisible = value
   }
 }

@@ -65,8 +65,8 @@ export default {
     }
   },
   mounted () {
-    if (document.documentElement.clientWidth < 1024) {
-      this.$store.commit('setWhitepaperTocVisible', false)
+    if (document.documentElement.clientWidth >= 1024) {
+      this.$store.commit('setWhitepaperTocVisible', true)
     }
   }
 }

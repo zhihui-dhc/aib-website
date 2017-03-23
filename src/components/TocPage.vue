@@ -32,6 +32,7 @@ export default {
   overflow hidden
   position fixed
   font-size 0.875rem
+  display none
 
   a
     text-decoration none !important
@@ -130,7 +131,7 @@ export default {
     bottom 0
     max-height 100vh
     width 20rem
-    padding 1.5rem 0 0
+    padding 0.5rem 0 0
     border-right 1px solid bc
 
 @media screen and (min-width: 1280px)

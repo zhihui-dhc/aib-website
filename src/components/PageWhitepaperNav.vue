@@ -2,12 +2,12 @@
   <div class="page-whitepaper-nav mobile-only">
     <toc-hidden-bar
       v-show="!whitepaperTocVisible"
-      @click.native="showToc(true)"
+      @click.native="tocVisible(true)"
       icon="list-ol">
     </toc-hidden-bar>
     <toc-hidden-bar
       v-show="whitepaperTocVisible"
-      @click.native="showToc(false)"
+      @click.native="tocVisible(false)"
       icon="times">
     </toc-hidden-bar>
   </div>
@@ -27,47 +27,49 @@ export default {
     TocHiddenBar
   },
   computed: {
-    ...mapGetters([
-      'whitepaperTocVisible',
-      'whitepaperElementsVisible'
-    ])
+    ...mapGetters(['whitepaperTocVisible', 'whitepaperElementsVisible'])
   },
   methods: {
-    showToc (value) {
-      if (value) {
-        Ps.initialize(document.querySelector('.minimal-toc'))
-        this.$store.commit('setWhitepaperTocVisible', true)
+    setTocVisOnWidth () {
+      let width = document.documentElement.clientWidth
+      if (width >= 1024) {
+        this.tocVisible(true)
       } else {
-        Ps.destroy(document.querySelector('.minimal-toc'))
-        this.$store.commit('setWhitepaperTocVisible', false)
+        this.tocVisible(false)
+      }
+    },
+    tocVisible (value) {
+      if (value) {
+        document.querySelector('.minimal-toc').style.display = 'block'
+        this.initToc()
+      } else {
+        document.querySelector('.minimal-toc').style.display = 'none'
+        this.destroyToc()
       }
     },
     initToc () {
-      if (!this.whitepaperTocVisible) {
-        document.querySelector('.minimal-toc').style.display = 'none'
-      }
       Ps.initialize(document.querySelector('.minimal-toc'))
-      watchTocClicks(this.showToc)
+      this.$store.commit('setWhitepaperTocVisible', true)
+
+      watchTocClicks(this.tocVisible)
       this.$store.commit('setWhitepaperElementsVisible',
         inViewport(document.querySelectorAll('h2, h3, h4, h5')))
       percentageScrolling()
+    },
+    destroyToc () {
+      Ps.destroy(document.querySelector('.minimal-toc'))
+      this.$store.commit('setWhitepaperTocVisible', false)
     }
   },
   mounted () {
-    this.initToc()
+    this.setTocVisOnWidth()
   },
-  props: ['toc-visible'],
   watch: {
     whitepaperElementsVisible () {
       visibleTocActivate(this.whitepaperElementsVisible)
     },
-    whitepaperTocVisible (newVal, oldVal) {
-      if (newVal === false) {
-        document.querySelector('.minimal-toc').style.display = 'none'
-      }
-      if (newVal === true) {
-        document.querySelector('.minimal-toc').style.display = 'block'
-      }
+    '$route.params.locale' () {
+      setTimeout(() => this.setTocVisOnWidth(), 100)
     }
   }
 }

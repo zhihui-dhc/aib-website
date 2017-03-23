@@ -1,6 +1,6 @@
 import scrollTo from 'scroll-to'
 
-export default function (showToc) {
+export default function (tocVisibility) {
   function scrollToIt (e) {
     console.log('scrolling to it!')
     e.preventDefault()
@@ -17,7 +17,7 @@ export default function (showToc) {
 
     // if it's a small screen, hide the toc on click
     if (document.documentElement.clientWidth < 1024) {
-      showToc(false)
+      tocVisibility(false)
     }
 
     // scroll to the element
