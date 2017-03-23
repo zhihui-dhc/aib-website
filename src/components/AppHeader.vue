@@ -300,7 +300,7 @@ export default {
         padding 0 1rem
         color txt
         line-height 3rem
-        &):hover
+        &:hover
           color link
         &.router-link-active
           background linear-gradient(top, hsl(0,0,96%), hsl(0,0,98%))
