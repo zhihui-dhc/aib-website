@@ -1,31 +1,30 @@
 <template>
 <header class="app-header">
+  <div class="container">
 
   <div class="header-item" @click="toggleMenuApp" v-if="!desktop">
     <i v-if="!activeMenuApp" class="fa fa-bars"></i>
     <i v-else class="fa fa-times"></i>
   </div>
 
-  <a @click="goto('/')" class="header-item">
+  <router-link to="/" class="header-item">
     <img src="../assets/images/cosmos_logo_m.png" alt="Cosmos Logo">
-  </a>
+  </router-link>
 
   <menu class="menu-popup menu-app" v-if="activeMenuApp || desktop">
-    <div class="container">
-      <nav class="nav-app">
-        <a @click="goto('/blog')">{{ $t('siteHeader.blog') }}</a>
-        <a @click="goto('/plan')">{{ $t('siteHeader.plan') }}</a>
-        <a @click="goto('/faq')">{{ $t('siteHeader.faq') }}</a>
-        <a @click="goto('/whitepaper')">{{ $t('siteHeader.whitepaper') }}</a>
-        <a @click="goto('/about')">{{ $t('siteHeader.about') }}</a>
-      </nav>
-      <nav>
-        <a href="https://github.com/cosmos/cosmos">
-          <i class="fa fa-github"></i>
-          <span class="label">GitHub</span>
-        </a>
-      </nav>
-    </div>
+    <nav class="nav-app">
+      <router-link to="/blog" @click.native="closeMenus" exact>{{ $t('siteHeader.blog') }}</router-link>
+      <router-link to="/plan" @click.native="closeMenus" exact>{{ $t('siteHeader.plan') }}</router-link>
+      <router-link to="/faq" @click.native="closeMenus" exact>{{ $t('siteHeader.faq') }}</router-link>
+      <router-link to="/whitepaper" @click.native="closeMenus" exact>{{ $t('siteHeader.whitepaper') }}</router-link>
+      <router-link to="/about" @click.native="closeMenus" exact>{{ $t('siteHeader.about') }}</router-link>
+    </nav>
+    <nav>
+      <a href="https://github.com/cosmos/cosmos">
+        <i class="fa fa-github"></i>
+        <span class="label">GitHub</span>
+      </a>
+    </nav>
   </menu>
 
   <div class="header-item header-item-alert" @click="toggleMenuFundraiser">
@@ -56,6 +55,7 @@
       </nav>
     </div>
   </menu>
+  </div>
 </header>
 </template>
 
@@ -157,13 +157,17 @@ export default {
   z-index 100
   width 100%
 
-  display flex
-  flex-flow row wrap
-  justify-content space-between
 
   background alpha(#fff, 95%)
   backdrop-filter blur(0.125rem)
   shadow()
+
+  .container
+    max-width 1024px
+    margin 0 auto
+    display flex
+    flex-flow row wrap
+    justify-content space-between
 
   .header-item
     height 3*x
@@ -295,8 +299,14 @@ export default {
       a
         padding 0 1rem
         color txt
-        &:hover
+        line-height 3rem
+        &):hover
           color link
+        &.router-link-active
+          background lighten(bc, 75%) linear-gradient(top, hsl(0,0,96%), hsl(0,0,98%))
+          cursor default
+          &:hover
+            color txt
 
   .menu-fundraiser
     position fixed
