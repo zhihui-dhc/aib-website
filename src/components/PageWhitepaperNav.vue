@@ -50,7 +50,6 @@ export default {
     initToc () {
       Ps.initialize(document.querySelector('.minimal-toc'))
       this.$store.commit('setWhitepaperTocVisible', true)
-
       watchTocClicks(this.tocVisible)
       this.$store.commit('setWhitepaperElementsVisible',
         inViewport(document.querySelectorAll('h2, h3, h4, h5')))
