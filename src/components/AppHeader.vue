@@ -44,11 +44,15 @@
         </a>
         <a id="nav-fundraiser" class="soon" v-else>
           Fundraiser
-          <span class="soon"><time-left :date="startDate"></time-left></span>
+          <span class="soon"><time-left :date="localStartDate"></time-left></span>
         </a>
-        <span class="desc">
-          The Cosmos fundraiser will begin on <a href="https://www.worldtimebuddy.com/?qm=1&lid=5391959,2657908,2643743,1835848&h=5391959&date=2017-3-31&sln=6-7">{{ pdtStartDate }}</a>. Check back soon!
+        <span class="desc" v-if="fundraiseStarted">
+          The Cosmos fundraiser will begin on <a href="https://www.worldtimebuddy.com/?qm=1&lid=5391959,2657908,2643743,1835848&h=5391959&date=2017-3-31&sln=6-7">{{ pdtStartDateFmt }}</a>. Check back soon!
         </span>
+        <span class="desc" v-if="fundraiseStarted">
+          The Cosmos fundraiser will be live until <a href="https://www.worldtimebuddy.com/?qm=1&lid=5391959,2657908,2643743,1835848&h=5391959&date=2017-3-31&sln=6-7">{{ pdtEndDate }}</a>. Check back soon!
+        </span>
+
         <a href="http://slack.cosmos.network">
            Discuss on <i class="fa fa-slack"></i> Slack
         </a>
@@ -70,29 +74,30 @@ export default {
     TimeLeft
   },
   computed: {
-    pdtStartDate () {
+    pdtStartDateFmt () {
       let utc = moment.utc(this.config.START_DATETIME)
       let pdt = moment(utc).tz(this.config.TIMEZONE)
       return pdt.format('LLL z')
     },
-    localStartDate () {
+    localStartDateFmt () {
       let utc = moment.utc(this.config.START_DATETIME)
       let local = moment(utc).local()
       return moment(local).format('LLL z')
     },
-    announcedDate () {
+    localAnnounceDate () {
       return moment(moment.utc(this.config.ANNOUNCE_DATETIME)).local()
     },
-    startDate () {
+    localStartDate () {
       return moment(moment.utc(this.config.START_DATETIME)).local()
     },
-    endDate () {
+    utcEndDate () {
+      let startDate = moment.utc(this.config.START_DATETIME)
       if (this.fundraiseStarted) {
-        let utcEndDate = moment.utc(this.config.START_DATETIME)
-          .add(this.config.ENDS_AFTER, 'days').valueOf()
-        return moment(utcEndDate).local()
+        let endDate =
+          moment(startDate).add(this.config.ENDS_AFTER, 'days').valueOf()
+        return moment(endDate)
       } else {
-        return this.startDate
+        return moment(startDate)
       }
     },
     isTocPage () {
