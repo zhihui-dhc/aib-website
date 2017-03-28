@@ -35,30 +35,11 @@
     <span class="label" v-if="desktop">Fundraiser</span>
   </div>
 
-  <menu class="menu-popup menu-fundraiser" v-if="activeMenuUser" @click="toggleMenuFundraiser">
-    <div class="container">
-      <nav class="nav-user">
-        <a id="nav-fundraiser" class="live" v-if="fundraiseStarted"
-          :href="config.SALE_URL">
-          Fundraiser <span>Live</span>
-        </a>
-        <a id="nav-fundraiser" class="soon" v-else>
-          Fundraiser
-          <span class="soon"><time-left :date="localStartDate"></time-left></span>
-        </a>
-        <span class="desc" v-if="fundraiseStarted">
-          The Cosmos fundraiser will begin on <a href="https://www.worldtimebuddy.com/?qm=1&lid=5391959,2657908,2643743,1835848&h=5391959&date=2017-3-31&sln=6-7">{{ pdtStartDateFmt }}</a>. Check back soon!
-        </span>
-        <span class="desc" v-if="fundraiseStarted">
-          The Cosmos fundraiser will be live until <a href="https://www.worldtimebuddy.com/?qm=1&lid=5391959,2657908,2643743,1835848&h=5391959&date=2017-3-31&sln=6-7">{{ pdtEndDate }}</a>. Check back soon!
-        </span>
+  <menu-fundraiser
+    v-if="activeMenuUser"
+    @click="toggleMenuFundraiser">
+  </menu-fundraiser>
 
-        <a href="http://slack.cosmos.network">
-           Discuss on <i class="fa fa-slack"></i> Slack
-        </a>
-      </nav>
-    </div>
-  </menu>
   </div>
 </header>
 </template>
@@ -67,39 +48,13 @@
 import { mapGetters } from 'vuex'
 import disableScroll from 'disable-scroll'
 import moment from 'moment'
-import TimeLeft from './TimeLeft'
+import MenuFundraiser from './MenuFundraiser'
 export default {
   name: 'app-header',
   components: {
-    TimeLeft
+    MenuFundraiser
   },
   computed: {
-    pdtStartDateFmt () {
-      let utc = moment.utc(this.config.START_DATETIME)
-      let pdt = moment(utc).tz(this.config.TIMEZONE)
-      return pdt.format('LLL z')
-    },
-    localStartDateFmt () {
-      let utc = moment.utc(this.config.START_DATETIME)
-      let local = moment(utc).local()
-      return moment(local).format('LLL z')
-    },
-    localAnnounceDate () {
-      return moment(moment.utc(this.config.ANNOUNCE_DATETIME)).local()
-    },
-    localStartDate () {
-      return moment(moment.utc(this.config.START_DATETIME)).local()
-    },
-    utcEndDate () {
-      let startDate = moment.utc(this.config.START_DATETIME)
-      if (this.fundraiseStarted) {
-        let endDate =
-          moment(startDate).add(this.config.ENDS_AFTER, 'days').valueOf()
-        return moment(endDate)
-      } else {
-        return moment(startDate)
-      }
-    },
     isTocPage () {
       return this.$route.name === 'whitepaper' || this.$route.name === 'whitepaper-localized' || this.$route.name === 'faq' || this.$route.name === 'faq-localized' || this.$route.name === 'plan' || this.$route.name === 'plan-localized'
     },
@@ -161,7 +116,6 @@ export default {
   left 0
   z-index 100
   width 100%
-
 
   background alpha(#fff, 95%)
   backdrop-filter blur(0.125rem)
