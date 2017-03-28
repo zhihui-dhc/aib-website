@@ -139,6 +139,10 @@ export default {
         display flex
         align-items center
         justify-content space-between
+        user-select none
+        &.disabled
+          color light
+          cursor not-allowed
         &:hover
           color link
         .alert

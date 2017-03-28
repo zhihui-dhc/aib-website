@@ -128,7 +128,7 @@ export default {
     justify-content space-between
 
   .header-item
-    height 3*x
+    height 3rem
     display flex
     align-items center
     padding 0 1rem
@@ -235,6 +235,7 @@ export default {
         display flex
         align-items center
         justify-content space-between
+        user-select none
         &.disabled
           color light
           cursor not-allowed
