@@ -28,7 +28,7 @@
   </menu>
 
   <div class="header-item header-item-alert" @click="toggleMenuFundraiser">
-    <i v-if="!activeMenuUser" class="fa fa-bell-o">
+    <i v-if="!activeMenuFundraiser" class="fa fa-bell-o">
       <span class="alert">1</span>
     </i>
     <i v-else class="fa fa-times"></i>
@@ -36,8 +36,8 @@
   </div>
 
   <menu-fundraiser
-    v-if="activeMenuUser"
-    @click="toggleMenuFundraiser">
+    v-if="activeMenuFundraiser"
+    @click.native="toggleMenuFundraiser">
   </menu-fundraiser>
 
   </div>
@@ -47,7 +47,6 @@
 <script>
 import { mapGetters } from 'vuex'
 import disableScroll from 'disable-scroll'
-import moment from 'moment'
 import MenuFundraiser from './MenuFundraiser'
 export default {
   name: 'app-header',
@@ -63,14 +62,14 @@ export default {
   data () {
     return {
       activeMenuApp: false,
-      activeMenuUser: false,
+      activeMenuFundraiser: false,
       desktop: false
     }
   },
   methods: {
     closeMenus () {
       this.activeMenuApp = false
-      this.activeMenuUser = false
+      this.activeMenuFundraiser = false
       disableScroll.off()
     },
     goto (route) {
@@ -85,8 +84,8 @@ export default {
       else disableScroll.off()
     },
     toggleMenuFundraiser () {
-      this.activeMenuUser = !this.activeMenuUser
-      if (this.activeMenuUser) disableScroll.on()
+      this.activeMenuFundraiser = !this.activeMenuFundraiser
+      if (this.activeMenuFundraiser) disableScroll.on()
       else disableScroll.off()
     },
     watchWindowSize () {
@@ -209,14 +208,8 @@ export default {
           margin-right 0.1rem
 
   .menu-popup
-    z-index 100000
+    z-index 101
     user-select none
-    nav
-      span.desc a
-        font-weight 500
-        color link
-        &:hover
-          text-decoration underline
 
 @media screen and (max-width:1023px)
   .menu-popup
@@ -234,19 +227,43 @@ export default {
       display flex
       flex-flow column
       padding 1.5rem 3rem
-
-      a, span.desc
+      > a, > p
         padding 0.75rem 0
+      > a
         color txt
         border-bottom 1px solid bc
-      a
-        &:last-of-type
-          border-bottom none
+        display flex
+        align-items center
+        justify-content space-between
+        &.disabled
+          color light
+          cursor not-allowed
         &:hover
           color link
+        .alert
+          display flex
+          align-items center
+          background link
+          color c-app-fg
+          font-size 0.75rem
+          padding 0 0.5rem
+          border-radius 0.25rem
+          height 1.5rem
+          i.fa
+            color c-app-fg
+          i.fa + .ni-time-left
+            margin-left 0.25rem
+      > p
+        .ni-time-left
+          display inline
+          font-weight bold
+        a
+          color link
+          &:hover
+            text-decoration underline
 
 @media screen and (min-width: 1024px)
-  .menu-app
+  .menu-popup.menu-app
     display flex
     padding 0 1rem
     .container
@@ -255,7 +272,7 @@ export default {
       display flex
       flex-flow row
       align-items center
-      a
+      > a
         padding 0 1rem
         color txt
         line-height 3rem
@@ -266,36 +283,4 @@ export default {
           cursor default
           &:hover
             color txt
-
-  .menu-fundraiser
-    position fixed
-    top 0
-    left 0
-    background transparent
-    width 100vw
-    height 100vh
-
-    .container
-      position fixed
-      top 3rem
-      right 0
-      background c-app-fg
-      width 20rem
-      shadow()
-
-    nav
-      display flex
-      flex-flow column
-      padding 1.5rem 3rem
-
-      a, span.desc
-        padding 0.75rem 0
-        color txt
-        border-bottom 1px solid bc
-
-      a
-        &:last-of-type
-          border-bottom none
-        &:hover
-          color link
 </style>

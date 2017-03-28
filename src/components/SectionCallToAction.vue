@@ -8,7 +8,7 @@
       <main class="section-cta-main">
 
         <template v-if="fundraiseEnded">
-          <div class="section-cta-description">Fundraise has ended.</div>
+          <div class="section-cta-description">Fundraiser has ended.</div>
           <btn
             class="section-cta-btn"
             size="lg"
@@ -21,7 +21,7 @@
         </template>
 
         <template v-else-if="fundraiseStarted">
-          <div class="section-cta-description">Fundraise is live! Click to visit the donation page.</div>
+          <div class="section-cta-description">Fundraiser is live! Click to visit the donation page.</div>
           <btn
             class="section-cta-btn"
             size="lg"
@@ -34,7 +34,7 @@
         </template>
 
         <template v-else>
-          <div v-if="fundraiseAnnounced" class="section-cta-description">The Cosmos fundraiser will begin on <a href="https://www.worldtimebuddy.com/?qm=1&lid=5391959,2657908,2643743,1835848&h=5391959&date=2017-3-31&sln=6-7">{{ pdtStartDate }}</a>. Enter your email to receive live notifications:</div>
+          <div v-if="fundraiseAnnounced" class="section-cta-description">The Cosmos fundraiser will begin on <a href="https://www.worldtimebuddy.com/?qm=1&lid=8,100,2643743&h=8&date=2017-4-6&sln=6-7">{{ pdtStartDate }}</a>. Enter your email to receive live notifications:</div>
           <div v-else class="section-cta-description">The start date will be announced shortly. Stay tuned! Enter your email to receive live fundraiser notifications.</div>
           <form-email-signup class="section-cta-form"></form-email-signup>
           <div class="section-cta-description">
