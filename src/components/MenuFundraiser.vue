@@ -10,7 +10,7 @@
               <time-left :date="startDate"></time-left>
             </span>
           </a>
-          <a href="../assets/cosmos-contrib-terms.pdf">Fundraiser Terms</a>
+          <a :href="pdf">Fundraiser Terms</a>
           <a href="http://slack.cosmos.network">Discuss on Slack</a>
           <p>The Cosmos fundraiser will begin in <time-left :date="startDate"></time-left> on <a href="">{{ pdtStartDate }}</a></p>
         </nav>
@@ -22,7 +22,7 @@
               <time-left :date="endDate"></time-left>
             </span>
           </a>
-          <a href="../assets/cosmos-contrib-terms.pdf">Fundraiser Terms</a>
+          <a :href="pdf">Fundraiser Terms</a>
           <a href="http://slack.cosmos.network">Discuss on Slack</a>
           <p>The Cosmos fundraiser will be live for <time-left :date="endDate"></time-left> until <a href="">{{ pdtEndDate }}</a>.</p>
         </nav>
@@ -33,7 +33,7 @@
               <i class="fa fa-hourglass-end"></i>
             </span>
           </a>
-          <a href="../assets/cosmos-contrib-terms.pdf">Fundraiser Terms</a>
+          <a :href="pdf">Fundraiser Terms</a>
           <a href="http://slack.cosmos.network">Discuss on Slack</a>
           <p>The Cosmos fundraiser finished on <a href="">{{ pdtEndDate }}</a>.</p>
         </nav>
@@ -78,7 +78,8 @@ export default {
     ...mapGetters(['config'])
   },
   data: () => ({
-    fundraiserStatus: ''
+    fundraiserStatus: '',
+    pdf: require('../assets/cosmos-contrib-terms.pdf')
   }),
   methods: {
     gotoCta () {
