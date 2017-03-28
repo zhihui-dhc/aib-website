@@ -7,7 +7,7 @@
       </header>
       <main class="section-cta-main">
         <template v-if="fundraiseEnded">
-          <div class="section-cta-description">Fundraise has ended.</div>
+          <div class="section-cta-description">Fundraiser has ended.</div>
           <btn
             class="section-cta-btn"
             size="lg"
@@ -19,7 +19,7 @@
             <a href="http://slack.cosmos.network">Chat about the fundraiser</a> on Slack with the Cosmos community.</div>
         </template>
         <template v-else-if="fundraiseStarted">
-          <div class="section-cta-description">Fundraise is live! Click to visit the donation page.</div>
+          <div class="section-cta-description">Fundraiser is live! Click to visit the donation page.</div>
           <btn
             class="section-cta-btn"
             size="lg"
