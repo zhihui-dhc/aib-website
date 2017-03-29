@@ -5,7 +5,9 @@
       <div class="sc-logo">
         <img src="../assets/images/cosmos_logo_m.png">
         <div class="subtitle">Internet of Blockchains</div>
-        <p class="sc-desc">The fundraiser for Cosmos will begin in <time-left :date="startDate"></time-left> on {{ pdtStartDate }}. Get notified &rarr;</p>
+        <p class="sc-desc" v-if="fundraiserStatus === 'announced'">The fundraiser for Cosmos will begin in <time-left :date="startDate"></time-left> on <router-link to="/blog/fundraiser-delay-announcement-ii">{{ pdtStartDate }}</router-link>. Get notified &rarr;</p>
+        <p class="sc-desc" v-if="fundraiserStatus === 'started'">The Cosmos fundraiser is live! It will continue for <time-left :date="endDate"></time-left> until {{ pdtEndDate }}.</p>
+        <p class="sc-desc" v-if="fundraiserStatus === 'ended'">Welcome to Cosmos. The fundraiser for Cosmos finished on {{ pdtEndDate }}.</p></p>
       </div>
 
       <div class="sc-fundraiser" v-if="fundraiserStatus === 'announced'">
@@ -21,7 +23,7 @@
       </div>
 
       <div class="sc-fundraiser" v-if="fundraiserStatus === 'started'">
-        <p>The Cosmos fundraiser will be live for <time-left :date="endDate"></time-left> until {{ pdtEndDate }}.</p>
+        <p class="sc-desc">The fundraiser for Cosmos is live! It will continue for <time-left :date="endDate"></time-left> until {{ pdtEndDate }}.</p>
         <a :href="config.FUNDRAISER_URL">
           View Fundraiser
         </a>
@@ -35,7 +37,7 @@
       </div>
 
       <div class="sc-fundraiser" v-if="fundraiserStatus === 'ended'">
-        <p>The Cosmos fundraiser finished on {{ pdtEndDate }}.</p>
+        <p class="sc-desc">Welcome to Cosmos. The fundraiser for Cosmos finished on {{ pdtEndDate }}.</p>
         <btn @click.native="gotoFundraiser">
           View Fundraiser
         </btn>
