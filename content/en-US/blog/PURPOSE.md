@@ -110,4 +110,3 @@ companies and individuals can utilize the services of one chain, without
 abandoning their existing investments in another. This creates a world that is
 fairer, more functional and better secured. This is a call for an end to echo
 chambers, and the beginning of bridge-building.
-

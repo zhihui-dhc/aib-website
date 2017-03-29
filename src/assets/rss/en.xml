@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Cosmos Blog]]></title><description><![CDATA[The Internet of Blockchains]]></description><link>http://cosmos.network</link><image><url>http://cosmos.network/static/favicon.png</url><title>Cosmos Blog</title><link>http://cosmos.network</link></image><generator>RSS for Node</generator><lastBuildDate>Wed, 29 Mar 2017 02:43:12 GMT</lastBuildDate><atom:link href="http://cosmos.network/static//rss.xml" rel="self" type="application/rss+xml"/><pubDate>Wed, 29 Mar 2017 02:43:12 GMT</pubDate><copyright><![CDATA[2016 Cosmos Foundation]]></copyright><language><![CDATA[en]]></language><managingEditor><![CDATA[Cosmos Foundation]]></managingEditor><webMaster><![CDATA[Cosmos Foundation]]></webMaster><ttl>60</ttl><item><title><![CDATA[New Date: Fundraiser date moved to April 6]]></title><description><![CDATA[<h3>Fundraiser date moved to April 6, 6am PDT</h3>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Cosmos Blog]]></title><description><![CDATA[The Internet of Blockchains]]></description><link>http://cosmos.network</link><image><url>http://cosmos.network/static/favicon.png</url><title>Cosmos Blog</title><link>http://cosmos.network</link></image><generator>RSS for Node</generator><lastBuildDate>Wed, 29 Mar 2017 02:48:10 GMT</lastBuildDate><atom:link href="http://cosmos.network/static//rss.xml" rel="self" type="application/rss+xml"/><pubDate>Wed, 29 Mar 2017 02:48:10 GMT</pubDate><copyright><![CDATA[2016 Cosmos Foundation]]></copyright><language><![CDATA[en]]></language><managingEditor><![CDATA[Cosmos Foundation]]></managingEditor><webMaster><![CDATA[Cosmos Foundation]]></webMaster><ttl>60</ttl><item><title><![CDATA[New Date: Fundraiser date moved to April 6]]></title><description><![CDATA[<h3>Fundraiser date moved to April 6, 6am PDT</h3>
 <p>Many of you have been asking us for more information and updates. The date we
 announced for our fundraiser is almost here and everybody wants to inspect the
 terms and conditions and look under the hood before embarking on this adventure
@@ -114,7 +114,7 @@ start an even longer cosmos journey.</p>
 <li>Information about early contributors</li>
 <li>Our procedure for completing (and shutting down) the fundraiser flow.</li>
 </ul>
-<p>This date is dependent on not finding any show-stopping bugs in the fundraiser flow, and we are still <a href="https://cosmos.network/blog/fundraiser-flow-bounty">offering bounties</a> for anybody who helps us find issues!</p>
+<p>This date is dependent on not finding any show-stopping bugs in the fundraiser flow, and we are still <a href="./fundraiser-flow-bounty">offering bounties</a> for anybody who helps us find issues!</p>
 <p><a href="https://cosmos.network/">Sign up for our newsletter</a> to get all the latest updates and announcements.</p>
 ]]></description><link>http://cosmos.network/posts/cosmos-fundraiser-date</link><guid isPermaLink="true">http://cosmos.network/posts/cosmos-fundraiser-date</guid><dc:creator><![CDATA[The Cosmonauts]]></dc:creator></item><item><title><![CDATA[Think Like a Hacker. Make it Big]]></title><description><![CDATA[<p><em>UPDATE: The ETH Solidity contract has been updated</em></p>
 <p>Ladies and gentlemen, a small appeal to the most scrutinizing eyeballs of our industry.</p>
@@ -147,7 +147,7 @@ between them is substantial, with a number of moving parts, each of some
 complexity… Your questions and comments help us to hone our communications,
 hopefully  leading to simpler, clearer explanations of all aspects of this
 Cosmos that we will build together.</p>
-<p>In <a href="https://cosmos.network/blog/cosmos-roadmap">our last post</a>, we wrote about the different components of the Cosmos Network
+<p>In <a href="./cosmos-roadmap">our last post</a>, we wrote about the different components of the Cosmos Network
 and our strategic roadmap. This week we are soliciting your input and
 announcing the first of two bounties!</p>
 <h2>Whitepaper Bounty</h2>
@@ -407,7 +407,7 @@ compared to taking all of the fees, and letting the user calculate the expected
 <em>gas_limit</em> themselves.</p>
 <p>Transaction <em>gas</em> is a powerful concept, and can be applied more generally to
 blockchain applications that don’t support an interpreted virtual-machine. For
-example, the <a href="https://cosmos.network/whitepaper#the-hub">Cosmos Hub</a> can support
+example, the <a href="/whitepaper#the-hub">Cosmos Hub</a> can support
 inter-blockchain (IBC) token-transfer transactions from any Tendermint-powered
 sidechain (aka zone), regardless of the number of validators. (Validators are
 nodes that participate in consensus to commit blocks). And yet, the more

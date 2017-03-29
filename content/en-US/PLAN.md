@@ -207,7 +207,7 @@ the sanctioned protocol, or otherwise collude to disrupt the network.
 
 ### Cosmos Roadmap
 
-_See the [Cosmos Roadmap](https://cosmos.network/blog/cosmos-roadmap) for more info._
+_See the [Cosmos Roadmap](/blog/cosmos-roadmap) for more info._
 
 #### Cosmos Essential Software and Services
 

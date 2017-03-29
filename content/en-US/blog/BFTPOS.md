@@ -127,4 +127,3 @@ enduring, energy efficient solution that works well in asynchronous
 environments. And best of all, because BFT was developed by the best and the
 brightest in the computer science industry, it’s provably secure. You can’t do
 any better than that.
-

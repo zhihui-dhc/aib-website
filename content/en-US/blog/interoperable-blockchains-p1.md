@@ -63,7 +63,7 @@ compared to taking all of the fees, and letting the user calculate the expected
 
 Transaction *gas* is a powerful concept, and can be applied more generally to
 blockchain applications that don’t support an interpreted virtual-machine. For
-example, the [Cosmos Hub](https://cosmos.network/whitepaper#the-hub) can support
+example, the [Cosmos Hub](/whitepaper#the-hub) can support
 inter-blockchain (IBC) token-transfer transactions from any Tendermint-powered
 sidechain (aka zone), regardless of the number of validators. (Validators are
 nodes that participate in consensus to commit blocks). And yet, the more

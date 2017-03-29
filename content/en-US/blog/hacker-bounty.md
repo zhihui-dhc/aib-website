@@ -29,6 +29,6 @@ These repositories include both the Web-based fundraiser for Bitcoin, and the So
 
 In the interest of being thorough, our friends at Zeppelin (Smart Contract Solutions) are simultaneously performing an audit for these same materials. Don’t worry, if you independently discover a bug that they also find but haven’t published yet, you may still claim the reward.
 
-Last but not least, we want to express our thanks to participants in the [Cosmos Whitepaper Bounty](https://cosmos.network/blog/cosmos-whitepaper-bounty), particularly GitHub user MartyMe, who took the 5 BTC bounty with his excellent contributions to both the DEX and the Hub Block Reward.
+Last but not least, we want to express our thanks to participants in the [Cosmos Whitepaper Bounty](./cosmos-whitepaper-bounty), particularly GitHub user MartyMe, who took the 5 BTC bounty with his excellent contributions to both the DEX and the Hub Block Reward.
 
 This show is nearly on the road, with just a few more miles to go. We look forward to a successful fundraiser, and to building the Internet of Blockchains with you!

@@ -49,7 +49,7 @@ The Cosmos Hub itself is built using two key pieces: [Tendermint](https://github
 Tendermint is the general purpose consensus engine that will be used, at least
 initially, for all blockchains in Cosmos; it is nearing a production-ready
 state, and is [already in use by many different organizations](https://tendermint.com/ecosystem). Basecoin is an
-[extendable framework](https://cosmos.network/blog/cosmos-creating-interoperable-blockchains-part-1) 
+[extendable framework](./cosmos-creating-interoperable-blockchains-part-1) 
 for building multi-asset cryptocurrency applications on
 Tendermint. It’s under active development and includes many working [example
 plugins](https://github.com/tendermint/basecoin-examples). 

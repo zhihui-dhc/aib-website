@@ -19,7 +19,7 @@ complexity.. Your questions and comments help us to hone our communications,
 hopefully  leading to simpler, clearer explanations of all aspects of this
 Cosmos that we will build together.
 
-In [our last post](https://cosmos.network/blog/cosmos-roadmap), we wrote about the different components of the Cosmos Network
+In [our last post](./cosmos-roadmap), we wrote about the different components of the Cosmos Network
 and our strategic roadmap. This week we are soliciting your input and
 announcing the first of two bounties!
 
