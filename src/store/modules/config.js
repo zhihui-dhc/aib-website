@@ -11,11 +11,7 @@ const state = {
   SELF_URL: 'https://cosmos.network/',
   TIMEZONE: 'America/Los_Angeles',
   ANNOUNCE_DATETIME: '2017-03-15 07:10:00',
-<<<<<<< HEAD
-  START_DATETIME: startDatetime(),
-=======
   START_DATETIME: '2017-04-06 13:00:00',
->>>>>>> 9e438da... Add second delay announcement
   PASSWORD_MIN: 8,
   PASSWORD_MAX: 512,
   CAP_START: 6,              // when cap starts being enforced, after START_DATETIME (in hours)
