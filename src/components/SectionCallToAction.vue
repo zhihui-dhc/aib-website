@@ -141,6 +141,8 @@ export default {
 
 .section-cta-form
   margin-bottom 1.5rem
+  margin-left auto
+  margin-right auto
 
 .section-cta-description
   margin-left auto
