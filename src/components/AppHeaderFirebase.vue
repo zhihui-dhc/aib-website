@@ -13,7 +13,7 @@
   <menu class="menu-popup menu-app" v-if="activeMenuApp || desktop">
     <nav class="nav-app">
       <a id="nav-fundraiser" class="live" v-if="fundraiseStarted"
-        :href="config.SALE_URL">
+        :href="config.FUNDRAISER_URL">
         Fundraiser <span>Live</span>
       </a>
       <a id="nav-fundraiser" class="soon" v-else>

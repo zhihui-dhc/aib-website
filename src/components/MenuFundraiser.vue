@@ -15,7 +15,7 @@
           <p>The Cosmos fundraiser will begin in <time-left :date="startDate"></time-left> on <a href="">{{ pdtStartDate }}</a></p>
         </nav>
         <nav v-if="fundraiserStatus === 'started'">
-          <a :href="config.SALE_URL">
+          <a :href="config.FUNDRAISER_URL">
             View Fundraiser
             <span class="alert">
               <i class="fa fa-clock-o"></i>
@@ -27,7 +27,7 @@
           <p>The Cosmos fundraiser will be live for <time-left :date="endDate"></time-left> until <a href="">{{ pdtEndDate }}</a>.</p>
         </nav>
         <nav v-if="fundraiserStatus === 'ended'">
-          <a :href="config.SALE_URL">
+          <a :href="config.FUNDRAISER_URL">
             View Fundraiser
             <span class="alert">
               <i class="fa fa-hourglass-end"></i>
@@ -44,7 +44,7 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import moment from 'moment'
+import moment from 'moment-timezone'
 import scrollTo from 'scroll-to'
 import TimeLeft from './TimeLeft'
 export default {
@@ -87,7 +87,7 @@ export default {
       scrollTo(0, y, { duration: 666 })
     },
     gotoFundraiser () {
-      window.location.href = this.config.SALE_URL
+      window.location.href = this.config.FUNDRAISER_URL
     },
     refreshTimers () {
       if (Date.now() >= moment(this.endDate).valueOf()) {

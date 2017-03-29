@@ -1,13 +1,13 @@
 function startDatetime () {
   let date = ''
-  if (process.env.NODE_ENV === 'development') date = '2017-03-25 03:00:00'
+  if (process.env.NODE_ENV === 'development') date = '2017-04-06 13:00:00'
   if (process.env.NODE_ENV === 'production') date = '2017-04-06 13:00:00'
   return date
 }
 
 const state = {
   ENDS_AFTER: 14,
-  SALE_URL: 'https://fundraiser.cosmos.network',
+  FUNDRAISER_URL: 'https://fundraiser.cosmos.network',
   SELF_URL: 'https://cosmos.network/',
   TIMEZONE: 'America/Los_Angeles',
   ANNOUNCE_DATETIME: '2017-03-15 07:10:00',

@@ -94,7 +94,7 @@ export default {
   }),
   methods: {
     gotoFundraiser () {
-      window.location.href = this.config.SALE_URL
+      window.location.href = this.config.FUNDRAISER_URL
     },
     refreshTimers () {
       // console.log('refreshing timers...')
@@ -140,14 +140,6 @@ export default {
   font-size 1.375rem
 
 .section-cta-form
-  border none
-
-.section-cta-form .input-group
-  margin 0
-
-.section-cta-form, .section-cta-btn.ni-btn-wrapper .ni-btn
-  width 100%
-  max-width 20rem
   margin-bottom 1.5rem
 
 .section-cta-description

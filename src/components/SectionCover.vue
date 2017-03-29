@@ -1,111 +1,265 @@
 <template>
-  <div class="section-cover-component component">
-    <section class="section-cover">
-      <div class="section-container" @click="scrollDown">
-        <h1><img src="../assets/images/cosmos_logo_m.png" alt="Cosmos"></h1>
-        <p>{{ $t('site.internetOfBlockchains') }}</p>
+  <section class="section-cover">
+    <div class="sc-backdrop">
+    <div class="sc-container">
+      <div class="sc-logo">
+        <img src="../assets/images/cosmos_logo_m.png">
+        <div class="subtitle">Internet of Blockchains</div>
+        <p class="sc-desc">The fundraiser for Cosmos will begin in <time-left :date="startDate"></time-left> on {{ pdtStartDate }}. Get notified &rarr;</p>
       </div>
-    </section>
-    <fundraiser-alert></fundraiser-alert>
-    <div class="home-text"></div>
-  </div>
+
+      <div class="sc-fundraiser" v-if="fundraiserStatus === 'announced'">
+        <p class="sc-desc">The fundraiser for Cosmos will begin in <time-left :date="startDate"></time-left> on {{ pdtStartDate }}. Get notified &darr;</p>
+        <form-email-signup></form-email-signup>
+        <a class="link" :href="pdf">Fundraiser Terms (PDF)</a>
+        <a class="link" href="http://slack.cosmos.network"><i class="fa fa-slick"></i> Discuss on Slack</a>
+
+        <div class="sc-countdown">
+          <i class="fa fa-clock-o"></i>
+          <time-left :date="startDate"></time-left>
+        </div>
+      </div>
+
+      <div class="sc-fundraiser" v-if="fundraiserStatus === 'started'">
+        <p>The Cosmos fundraiser will be live for <time-left :date="endDate"></time-left> until {{ pdtEndDate }}.</p>
+        <a :href="config.FUNDRAISER_URL">
+          View Fundraiser
+        </a>
+        <a class="link" :href="pdf">Terms of Agreement</a>
+        <a class="link" href="http://slack.cosmos.network">Discuss on Slack</a>
+
+        <div class="sc-countdown">
+          <i class="fa fa-clock-o"></i>
+          <time-left :date="endDate"></time-left>
+        </div>
+      </div>
+
+      <div class="sc-fundraiser" v-if="fundraiserStatus === 'ended'">
+        <p>The Cosmos fundraiser finished on {{ pdtEndDate }}.</p>
+        <btn @click.native="gotoFundraiser">
+          View Fundraiser
+        </btn>
+        <a class="link" :href="pdf">Terms of Agreement</a>
+        <a class="link" href="http://slack.cosmos.network">Discuss on Slack</a>
+
+        <div class="sc-countdown">
+          <i class="fa fa-hourglass-end"></i>
+        </div>
+      </div>
+
+    </div>
+    </div>
+  </section>
 </template>
 
 <script>
-import scrollTo from 'scroll-to'
-import FundraiserAlert from './FundraiserAlert'
+import { mapGetters } from 'vuex'
+import moment from 'moment-timezone'
+import TimeLeft from './TimeLeft'
+import FormEmailSignup from './FormEmailSignup'
 export default {
-  name: 'section-cover',
+  name: 'menu-fundraiser',
   components: {
-    FundraiserAlert
+    FormEmailSignup,
+    TimeLeft
+  },
+  computed: {
+    announceDate () {
+      return moment(moment.utc(this.config.ANNOUNCE_DATETIME)).local()
+    },
+    startDate () {
+      return moment(moment.utc(this.config.START_DATETIME)).local()
+    },
+    endDate () {
+      let utcEndDate = moment.utc(this.config.START_DATETIME)
+        .add(this.config.ENDS_AFTER, 'days').valueOf()
+      return moment(utcEndDate).local()
+    },
+    pdtStartDate () {
+      let utc = moment.utc(this.config.START_DATETIME)
+      let pdt = moment(utc).tz(this.config.TIMEZONE)
+      return pdt.format('LLL z')
+    },
+    pdtEndDate () {
+      let utcEndDate = moment.utc(this.config.START_DATETIME)
+        .add(this.config.ENDS_AFTER, 'days').valueOf()
+      let pdt = moment(utcEndDate).tz(this.config.TIMEZONE)
+      return pdt.format('LLL z')
+    },
+    ...mapGetters(['config'])
   },
   data: () => ({
-    coverImage: require('../assets/images/cover_image.png')
+    fundraiserStatus: '',
+    pdf: require('../assets/cosmos-contrib-terms.pdf')
   }),
   methods: {
-    scrollDown () {
-      let y = document.querySelector('.home-text').offsetTop - 48 + 8
-      scrollTo(0, y, { duration: 666 })
+    gotoFundraiser () {
+      window.location.href = this.config.FUNDRAISER_URL
+    },
+    refreshTimers () {
+      if (Date.now() >= moment(this.endDate).valueOf()) {
+        this.fundraiserStatus = 'ended'
+        return
+      }
+      if (Date.now() >= moment(this.startDate).valueOf()) {
+        this.fundraiserStatus = 'started'
+        return
+      }
+      if (Date.now() >= moment(this.announceDate).valueOf()) {
+        this.fundraiserStatus = 'announced'
+        return
+      }
     }
+  },
+  mounted () {
+    this.refreshTimers()
+    setInterval(this.refreshTimers, 1000)
   }
 }
 </script>
 
 <style lang="stylus">
-@import '../styles/variables.styl'
-
-.section-cover-component
-  position relative
+@require '../styles/variables.styl'
 
 .section-cover
-  overflow hidden
+  background url('../assets/images/cover_image.png') center center
+
+.sc-backdrop
+  background hsla(0,0,100%,0.5)
+  margin 0.5rem
+
+.sc-container
+  max-width 1024px
+  margin 0 auto
+
+.sc-logo
   display flex
+  flex-flow column nowrap
   align-items center
   justify-content center
-  background #eaeaea
-  margin-top -3rem
-  height 85vh
+  padding 3rem
+  img
+    height 2rem
+    margin-bottom 0.5rem
+  .subtitle
+    text-transform uppercase
+    color dim
+    font-size 0.75rem
+    letter-spacing 0.05em
+    font-weight 500
+  .sc-desc
+    display none
 
-  .section-container
-    background url('../assets/images/cover_image.png') center center
-    width 100vw
-    height 100vh
-    background-size cover
-    cursor pointer
+.sc-desc
+  max-width 29rem
+  text-align center
+  line-height 2
+  .ni-time-left
+    display inline
+    font-weight bold
+    white-space nowrap
 
+.sc-fundraiser
+  padding 0 1.5rem 3rem
+  display flex
+  justify-content center
+  flex-flow column nowrap
+  align-items center
+
+  p, .form-email-signup
+    margin-bottom 1.5rem
+
+  .link
+    text-align center
+    height 2rem
+    width 100%
+    max-width 20rem
     display flex
-    flex-flow column nowrap
-    align-content center
-    justify-content center
     align-items center
+    justify-content center
+    i.fa
+      margin-right 0.375rem
 
-    h1
-      margin-top 1.5rem
-      img
-        width 10rem
-        vertical-align top
+.sc-countdown
+  display none
 
-    p
-      margin-top 0.5rem
-      color dim
-      font-size 0.75rem
-      line-height 1
-      text-transform uppercase
-    
 @media screen and (min-width: 360px)
-  .section-cover
-    .section-container
-      h1 img
-        width 12rem
-      p
-        font-size 0.875rem
+  .sc-logo
+    padding-top 4rem
+    img
+      height 2.4rem
+    .subtitle
+      font-size 0.9rem
+
+  .sc-fundraiser
+    padding-left 2rem
+    padding-right 2rem
+    padding-bottom 4rem
+
+    .form-email-signup
+      margin-bottom 2rem
+
+    .link
+      color txt
+      border 1px solid lighten(ibc, 25%)
+      margin-bottom 0.5rem
+      background hsla(0,0,100%,0.25)
+      &:last-of-type
+        margin-bottom 0
 
 @media screen and (min-width: 414px)
-  .section-cover
-    .section-container
-      h1 img
-        width 13rem
-      p
-        font-size 1rem
+  .sc-logo
+    img
+      height 2.6rem
+    .subtitle
+      font-size 0.975rem
+
+  .sc-fundraiser
+    padding-left 3rem
+    padding-right 3rem
+
+    .form-email-signup
+      margin-bottom 2rem
+    .link
+      height 3rem
+      font-weight 400
 
 @media screen and (min-width: 768px)
-  .section-cover
-    .section-container
-      h1 img
-        width 16rem
-      p
-        margin-top 0.75rem
-        font-size 1.2rem
-        
-@media screen and (min-width: 1024px)
-  .section-cover
-    height 100vh
+  .sc-logo
+    img
+      height 3rem
+    .subtitle
+      font-size 1.125rem
+  .sc-desc
+    font-size 1.33rem
+    font-weight 400
+  .sc-fundraiser
+    .sc-desc
+      margin-bottom 3rem
 
-@media screen and (min-width: 1280px)
-  .section-cover
-    .section-container
-      h1 img
-        width 18rem
-      p
-        font-size 1.4rem
+@media screen and (min-width: 1024px)
+  .sc-container
+    display flex
+    min-height 75vh
+    padding 3rem 0
+
+  .sc-logo, .sc-fundraiser
+    padding 3rem
+
+  .sc-logo
+    flex 1
+
+  .sc-logo
+    align-items flex-start
+    .subtitle
+      margin-bottom 2rem
+    .sc-desc
+      text-align left
+      display block
+
+  .sc-fundraiser
+    .sc-desc
+      display none
+    .form-email-signup
+      shadow()
 </style>
