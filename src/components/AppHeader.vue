@@ -21,8 +21,8 @@
     </nav>
     <nav>
       <a href="https://github.com/cosmos/cosmos">
-        <i class="fa fa-github"></i>
         <span class="label">GitHub</span>
+        <i class="fa fa-github"></i>
       </a>
     </nav>
   </menu>

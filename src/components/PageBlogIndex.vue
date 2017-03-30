@@ -28,9 +28,7 @@ export default {
     posts () {
       return this.allPosts[Vue.config.lang]
     },
-    ...mapGetters([
-      'allPosts'
-    ])
+    ...mapGetters(['allPosts'])
   },
   data () {
     return {
