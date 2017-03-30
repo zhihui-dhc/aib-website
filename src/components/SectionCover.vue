@@ -13,9 +13,22 @@
       <div class="sc-fundraiser" v-if="fundraiserStatus === 'announced'">
         <p class="sc-desc">The fundraiser for Cosmos will begin in <time-left :date="startDate"></time-left> on {{ pdtStartDate }}. Get notified &darr;</p>
         <form-email-signup></form-email-signup>
-        <a class="link" :href="docs.terms">Fundraiser Terms (PDF)</a>
-        <a class="link" href="http://slack.cosmos.network"><i class="fa fa-slick"></i> Discuss on Slack</a>
-
+        <a class="link" :href="docs.btc">
+          <i class="fa fa-file-pdf-o"></i>
+          BTC Contribution Flow
+        </a>
+        <a class="link" :href="docs.eth">
+          <i class="fa fa-file-pdf-o"></i>
+          ETH Contribution Flow
+        </a>
+        <a class="link" :href="docs.terms">
+          <i class="fa fa-file-pdf-o"></i>
+          Contribution Terms
+        </a>
+        <a class="link" href="http://slack.cosmos.network">
+          <i class="fa fa-slick"></i>
+          Discuss on Slack
+        </a>
         <div class="sc-countdown">
           <i class="fa fa-clock-o"></i>
           <time-left :date="startDate"></time-left>
@@ -26,12 +39,27 @@
         <p class="sc-desc">The fundraiser for Cosmos is live! It will continue for <time-left :date="endDate"></time-left> until {{ pdtEndDate }}.</p>
         <btn
           id="fundraiser-btn"
+          icon="power-off"
           size="lg"
           @click.native="gotoFundraiser"
-          value="View Fundraiser">
+          value="Launch Fundraiser">
         </btn>
-        <a class="link" :href="docs.terms">Terms of Agreement</a>
-        <a class="link" href="http://slack.cosmos.network">Discuss on Slack</a>
+        <a class="link" :href="docs.btc">
+          <i class="fa fa-file-pdf-o"></i>
+          BTC Contribution Flow
+        </a>
+        <a class="link" :href="docs.eth">
+          <i class="fa fa-file-pdf-o"></i>
+          ETH Contribution Flow
+        </a>
+        <a class="link" :href="docs.terms">
+          <i class="fa fa-file-pdf-o"></i>
+          Contribution Terms
+        </a>
+        <a class="link" href="http://slack.cosmos.network">
+          <i class="fa fa-slick"></i>
+          Discuss on Slack
+        </a>
 
         <div class="sc-countdown">
           <i class="fa fa-clock-o"></i>
@@ -43,12 +71,27 @@
         <p class="sc-desc">Welcome to Cosmos. The fundraiser for Cosmos finished on {{ pdtEndDate }}.</p>
         <btn
           id="fundraiser-btn"
+          icon="power-off"
           size="lg"
           @click.native="gotoFundraiser"
-          value="View Fundraiser">
+          value="Launch Fundraiser">
         </btn>
-        <a class="link" :href="docs.terms">Terms of Agreement</a>
-        <a class="link" href="http://slack.cosmos.network">Discuss on Slack</a>
+        <a class="link" :href="docs.btc">
+          <i class="fa fa-file-pdf-o"></i>
+          BTC Contribution Flow
+        </a>
+        <a class="link" :href="docs.eth">
+          <i class="fa fa-file-pdf-o"></i>
+          ETH Contribution Flow
+        </a>
+        <a class="link" :href="docs.terms">
+          <i class="fa fa-file-pdf-o"></i>
+          Contribution Terms
+        </a>
+        <a class="link" href="http://slack.cosmos.network">
+          <i class="fa fa-slick"></i>
+          Discuss on Slack
+        </a>
 
         <div class="sc-countdown">
           <i class="fa fa-hourglass-end"></i>
@@ -163,7 +206,7 @@ export default {
     display none
 
 .sc-desc
-  max-width 29rem
+  max-width 22rem
   text-align center
   line-height 2
 
@@ -217,12 +260,7 @@ export default {
       margin-bottom 2rem
 
     .link
-      color txt
-      border 1px solid lighten(ibc, 25%)
-      margin-bottom 0.5rem
-      background hsla(0,0,100%,0.25)
-      &:last-of-type
-        margin-bottom 0
+      height 2.5rem
 
 @media screen and (min-width: 414px)
   .sc-logo
@@ -239,8 +277,14 @@ export default {
       margin-bottom 2rem
 
     .link
-      height 3rem
+      height 2.5rem
       font-weight 400
+      color txt
+      border 1px solid lighten(ibc, 33.333%)
+      margin-bottom 0.5rem
+      background hsla(0,0,100%,0.25)
+      &:last-of-type
+        margin-bottom 0
 
 @media screen and (min-width: 768px)
   .sc-logo
@@ -258,7 +302,8 @@ export default {
 @media screen and (min-width: 1024px)
   .sc-container
     display flex
-    min-height 75vh
+    height 75vh
+    max-height 56.25vw
     padding 3rem 0
 
   .sc-logo, .sc-fundraiser
@@ -266,11 +311,12 @@ export default {
 
   .sc-logo
     flex 1
+    padding-bottom 4rem
 
   .sc-logo
     align-items flex-start
     .subtitle
-      margin-bottom 2rem
+      margin-bottom 3rem
     .sc-desc
       text-align left
       display block

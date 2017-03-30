@@ -3,14 +3,16 @@
     <div class="container">
       <div class="bounds">
         <nav v-if="fundraiserStatus === 'announced'">
-          <a @click="gotoCta">
+          <a class="disabled">
             View Fundraiser
             <span class="alert">
               <i class="fa fa-clock-o"></i>
               <time-left :date="startDate"></time-left>
             </span>
           </a>
-          <a :href="docs.terms">Fundraiser Terms</a>
+          <a :href="docs.btc">BTC Contribution Flow</a>
+          <a :href="docs.eth">ETH Contribution Flow</a>
+          <a :href="docs.terms">Contribution Terms</a>
           <a href="http://slack.cosmos.network">Discuss on Slack</a>
           <p>The Cosmos fundraiser will begin in <time-left :date="startDate"></time-left> on <a href="">{{ pdtStartDate }}</a></p>
         </nav>
@@ -151,6 +153,8 @@ export default {
         &.disabled
           color light
           cursor not-allowed
+          &:hover
+            color light
         &:hover
           color link
         .alert
