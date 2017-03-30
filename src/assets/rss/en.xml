@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Cosmos Blog]]></title><description><![CDATA[The Internet of Blockchains]]></description><link>http://cosmos.network</link><image><url>http://cosmos.network/static/favicon.png</url><title>Cosmos Blog</title><link>http://cosmos.network</link></image><generator>RSS for Node</generator><lastBuildDate>Thu, 30 Mar 2017 04:48:01 GMT</lastBuildDate><atom:link href="http://cosmos.network/static//rss.xml" rel="self" type="application/rss+xml"/><pubDate>Thu, 30 Mar 2017 04:48:01 GMT</pubDate><copyright><![CDATA[2016 Cosmos Foundation]]></copyright><language><![CDATA[en]]></language><managingEditor><![CDATA[Cosmos Foundation]]></managingEditor><webMaster><![CDATA[Cosmos Foundation]]></webMaster><ttl>60</ttl><item><title><![CDATA[Atom Supply and Distribution]]></title><description><![CDATA[<p>A lot of people have been asking us how many atoms will be created and how they
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Cosmos Blog]]></title><description><![CDATA[The Internet of Blockchains]]></description><link>http://cosmos.network</link><image><url>http://cosmos.network/static/favicon.png</url><title>Cosmos Blog</title><link>http://cosmos.network</link></image><generator>RSS for Node</generator><lastBuildDate>Thu, 30 Mar 2017 21:06:26 GMT</lastBuildDate><atom:link href="http://cosmos.network/static//rss.xml" rel="self" type="application/rss+xml"/><pubDate>Thu, 30 Mar 2017 21:06:26 GMT</pubDate><copyright><![CDATA[2016 Cosmos Foundation]]></copyright><language><![CDATA[en]]></language><managingEditor><![CDATA[Cosmos Foundation]]></managingEditor><webMaster><![CDATA[Cosmos Foundation]]></webMaster><ttl>60</ttl><item><title><![CDATA[Atom Supply and Distribution]]></title><description><![CDATA[<p>A lot of people have been asking us how many atoms will be created and how they
 will be distributed. So we thought it would be useful to give an overview and
 run through a few different scenarios that show what happens at different
 levels of funding.</p>
@@ -149,12 +149,14 @@ scenario like that:</p>
 </table>
 <p>We hope that will answer some of your questions and give you a better idea of
 how many atoms will be created under different scenarios. The atom rate that we
-will recommend for the allocation of fundraiser participants will always be 0.1
-atom per USD $1 contributed. The more we raise the smaller the percentage of
-the total atom supply that 0.1 atom will represent. But then again, the more
-resources we have to build out the Cosmos Network and make sure it is capable
-of great cosmic adventures.</p>
-]]></description><link>http://cosmos.network/posts/atom-supply-distribution</link><guid isPermaLink="true">http://cosmos.network/posts/atom-supply-distribution</guid><dc:creator><![CDATA[Brian Fabian Crain]]></dc:creator></item><item><title><![CDATA[New Date: Fundraiser date moved to April 6]]></title><description><![CDATA[<h3>Fundraiser date moved to April 6, 6am PDT</h3>
+will recommend for the allocation of fundraiser participants will always be 1
+atom per USD $0.1 worth of bitcoins contributed<sup>*</sup>. The more we raise
+the smaller the percentage of the total atom supply that 1 atom will represent.
+But then again, the more resources we have to build out the Cosmos Network and
+make sure it is capable of great cosmic adventures.</p>
+<p><sup>*</sup> <em>The USD/BTC exchange rate will be determined and fixed just prior
+to the fundraiser.</em></p>
+]]></description><link>http://cosmos.network/posts/atom-supply-distribution</link><guid isPermaLink="true">http://cosmos.network/posts/atom-supply-distribution</guid><dc:creator><![CDATA[The Cosmonauts]]></dc:creator></item><item><title><![CDATA[New Date: Fundraiser date moved to April 6]]></title><description><![CDATA[<h3>Fundraiser date moved to April 6, 6am PDT</h3>
 <p>Many of you have been asking us for more information and updates. The date we
 announced for our fundraiser is almost here and everybody wants to inspect the
 terms and conditions and look under the hood before embarking on this adventure

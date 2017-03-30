@@ -68,8 +68,11 @@ scenario like that:
 
 We hope that will answer some of your questions and give you a better idea of
 how many atoms will be created under different scenarios. The atom rate that we
-will recommend for the allocation of fundraiser participants will always be 0.1
-atom per USD $1 contributed. The more we raise the smaller the percentage of
-the total atom supply that 0.1 atom will represent. But then again, the more
-resources we have to build out the Cosmos Network and make sure it is capable
-of great cosmic adventures.
+will recommend for the allocation of fundraiser participants will always be 1
+atom per USD $0.1 worth of bitcoins contributed<sup>*</sup>. The more we raise
+the smaller the percentage of the total atom supply that 1 atom will represent.
+But then again, the more resources we have to build out the Cosmos Network and
+make sure it is capable of great cosmic adventures.
+
+<sup>*</sup> _The USD/BTC exchange rate will be determined and fixed just prior
+to the fundraiser._
