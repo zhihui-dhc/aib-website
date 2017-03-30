@@ -1,4 +1,160 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Cosmos Blog]]></title><description><![CDATA[The Internet of Blockchains]]></description><link>http://cosmos.network</link><image><url>http://cosmos.network/static/favicon.png</url><title>Cosmos Blog</title><link>http://cosmos.network</link></image><generator>RSS for Node</generator><lastBuildDate>Thu, 30 Mar 2017 02:39:30 GMT</lastBuildDate><atom:link href="http://cosmos.network/static//rss.xml" rel="self" type="application/rss+xml"/><pubDate>Thu, 30 Mar 2017 02:39:30 GMT</pubDate><copyright><![CDATA[2016 Cosmos Foundation]]></copyright><language><![CDATA[en]]></language><managingEditor><![CDATA[Cosmos Foundation]]></managingEditor><webMaster><![CDATA[Cosmos Foundation]]></webMaster><ttl>60</ttl><item><title><![CDATA[New Date: Fundraiser date moved to April 6]]></title><description><![CDATA[<h3>Fundraiser date moved to April 6, 6am PDT</h3>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Cosmos Blog]]></title><description><![CDATA[The Internet of Blockchains]]></description><link>http://cosmos.network</link><image><url>http://cosmos.network/static/favicon.png</url><title>Cosmos Blog</title><link>http://cosmos.network</link></image><generator>RSS for Node</generator><lastBuildDate>Thu, 30 Mar 2017 03:05:01 GMT</lastBuildDate><atom:link href="http://cosmos.network/static//rss.xml" rel="self" type="application/rss+xml"/><pubDate>Thu, 30 Mar 2017 03:05:01 GMT</pubDate><copyright><![CDATA[2016 Cosmos Foundation]]></copyright><language><![CDATA[en]]></language><managingEditor><![CDATA[Cosmos Foundation]]></managingEditor><webMaster><![CDATA[Cosmos Foundation]]></webMaster><ttl>60</ttl><item><title><![CDATA[Atom Supply and Distribution]]></title><description><![CDATA[<p>A lot of people have been asking us how many atoms will be created and how they
+will be distributed. So we thought it would be useful to give an overview and
+run through a few different scenarios that show what happens at different
+levels of funding.</p>
+<h4>Scenario 1: USD $10.2m Raised in 3 Days</h4>
+<p>If we stay below the USD $10m mark in the first 6 hours, the fundraiser will
+continue. In that case, we might hit the cap after a few days and then end the
+fundraiser process. Ending the fundraising process won’t be immediate. Some
+people will be the middle of the contribution process and they will still be
+able to get their contribution in. So we will overshoot the cap somewhat.</p>
+<p>Here is what the total atom supply and distribution could look like in that
+scenario:</p>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Amount Raised</th>
+<th>Atoms Allocated</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Early Donors</td>
+<td>USD $300,000</td>
+<td>6,837,467</td>
+</tr>
+<tr>
+<td>Strategic Partners &amp; Pre-Contributors</td>
+<td>USD $1,329,472</td>
+<td>16,856,718</td>
+</tr>
+<tr>
+<td>Fundraiser Participants</td>
+<td>USD $8,570,528</td>
+<td>85,705,280</td>
+</tr>
+<tr>
+<td>Interchain Foundation</td>
+<td></td>
+<td>13,674,933</td>
+</tr>
+<tr>
+<td>All in Bits</td>
+<td></td>
+<td>13,674,933</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>USD $10,200,000</strong></td>
+<td><strong>136,749,331</strong></td>
+</tr>
+</tbody>
+</table>
+<h4>Scenario 2: USD $12.5m Raised in 6 Hours</h4>
+<p>If a lot of people want to participate in the fundraiser, we could go above the
+USD $10m mark in the first six hours. In case it went very high, we would end
+the fundraiser early, even before the six hours are up. But if the amount
+raised exceeds the USD $10m cap by a few million, then we will let it run until
+the six hours are up and end it then.</p>
+<p>Here is what the total supply and distribution of tokens could look like in
+that scenario:</p>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Amount Raised</th>
+<th>Atoms Allocated</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Early Donors</td>
+<td>USD $300,000</td>
+<td>8,370,800</td>
+</tr>
+<tr>
+<td>Strategic Partners &amp; Pre-Contributors</td>
+<td>USD $1,329,472</td>
+<td>16,856,718</td>
+</tr>
+<tr>
+<td>Fundraiser Participants</td>
+<td>USD $10,870,528</td>
+<td>108,705,280</td>
+</tr>
+<tr>
+<td>Interchain Foundation</td>
+<td></td>
+<td>16,741,600</td>
+</tr>
+<tr>
+<td>All in Bits</td>
+<td></td>
+<td>16,741,600</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>USD $12,500,000</strong></td>
+<td><strong>167,415,997</strong></td>
+</tr>
+</tbody>
+</table>
+<h4>Scenario 3: USD $7.2m Raised in 2 Weeks</h4>
+<p>It’s also perfectly possible that fewer people want to become cosmonauts and
+that we won’t reach the USD $10m cap at all. In that case, we will let the
+fundraiser run for two weeks before it ends.</p>
+<p>Here is what the total supply and distribution of tokens could look like in a
+scenario like that:</p>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Amount Raised</th>
+<th>Atoms Allocated</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Early Donors</td>
+<td>USD $300,000</td>
+<td>4,837,467</td>
+</tr>
+<tr>
+<td>Strategic Partners &amp; Pre-Contributors</td>
+<td>USD $1,329,472</td>
+<td>16,856,718</td>
+</tr>
+<tr>
+<td>Fundraiser Participants</td>
+<td>USD $5,570,528</td>
+<td>55,705,280</td>
+</tr>
+<tr>
+<td>Interchain Foundation</td>
+<td></td>
+<td>9,674,933</td>
+</tr>
+<tr>
+<td>All in Bits</td>
+<td></td>
+<td>9,674,933</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>USD $7,200,000</strong></td>
+<td><strong>96,749,331</strong></td>
+</tr>
+</tbody>
+</table>
+<p>We hope that will answer some of your questions and give you a better idea of
+how many atoms will be created under different scenarios. The atom rate that we
+will recommend for the allocation of fundraiser participants will always be 0.1
+atom per USD $1 contributed. The more we raise the smaller the percentage of
+the total atom supply that 0.1 atom will represent. But then again, the more
+resources we have to build out the Cosmos Network and make sure it is capable
+of great cosmic adventures.</p>
+]]></description><link>http://cosmos.network/posts/atom-supply-distribution</link><guid isPermaLink="true">http://cosmos.network/posts/atom-supply-distribution</guid><dc:creator><![CDATA[Brian Fabian Crain]]></dc:creator></item><item><title><![CDATA[New Date: Fundraiser date moved to April 6]]></title><description><![CDATA[<h3>Fundraiser date moved to April 6, 6am PDT</h3>
 <p>Many of you have been asking us for more information and updates. The date we
 announced for our fundraiser is almost here and everybody wants to inspect the
 terms and conditions and look under the hood before embarking on this adventure
