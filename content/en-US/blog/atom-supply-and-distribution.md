@@ -3,7 +3,7 @@ title: "Atom Supply and Distribution"
 slug: atom-supply-distribution
 date: 2017-03-29
 author: Brian Fabian Crain
-excerpt: A lot of people have been asking us how many atoms will be created and how they will be distributed. So we thought it would be useful to give an overview and run through a few different scenarios that show what happens at different levels of funding.
+excerpt: A lot of people have been asking us how many atoms will be created and how they will be distributed.
 ~~~
 
 A lot of people have been asking us how many atoms will be created and how they
