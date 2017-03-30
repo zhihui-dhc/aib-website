@@ -22,12 +22,7 @@ rm('-rf', assetsTmpPath)
 mkdir('-p', assetsTmpPath)
 cp('-R', 'static/', assetsTmpPath)
 
-// var fs = require('fs')
-
 webpack(webpackConfig, function (err, stats) {
-  // profile the built js
-  // fs.writeFileSync('./stats.json', JSON.stringify(stats.toJson()), null, 2)
- 
   var assetsPath = path.join(config.build.assetsRoot, config.build.assetsSubDirectory)
   cp('-R', assetsTmpPath, assetsPath)
 
