@@ -24,7 +24,12 @@
 
       <div class="sc-fundraiser" v-if="fundraiserStatus === 'started'">
         <p class="sc-desc">The fundraiser for Cosmos is live! It will continue for <time-left :date="endDate"></time-left> until {{ pdtEndDate }}.</p>
-        <btn size="lg" @click.native="gotoFundraiser" value="View Fundraiser"></btn>
+        <btn
+          id="fundraiser-btn"
+          size="lg"
+          @click.native="gotoFundraiser"
+          value="View Fundraiser">
+        </btn>
         <a class="link" :href="docs.terms">Terms of Agreement</a>
         <a class="link" href="http://slack.cosmos.network">Discuss on Slack</a>
 
@@ -36,7 +41,12 @@
 
       <div class="sc-fundraiser" v-if="fundraiserStatus === 'ended'">
         <p class="sc-desc">Welcome to Cosmos. The fundraiser for Cosmos finished on {{ pdtEndDate }}.</p>
-        <btn size="lg" @click.native="gotoFundraiser" value="View Fundraiser"></btn>
+        <btn
+          id="fundraiser-btn"
+          size="lg"
+          @click.native="gotoFundraiser"
+          value="View Fundraiser">
+        </btn>
         <a class="link" :href="docs.terms">Terms of Agreement</a>
         <a class="link" href="http://slack.cosmos.network">Discuss on Slack</a>
 
@@ -169,10 +179,10 @@ export default {
   flex-flow column nowrap
   align-items center
 
-  p, .form-email-signup, .ni-btn-wrapper
+  p, .form-email-signup, #fundraiser-btn
     margin-bottom 1.5rem
 
-  .ni-btn-wrapper
+  #fundraiser-btn
     width 100%
     max-width 20rem
 
@@ -203,7 +213,7 @@ export default {
     padding-right 2rem
     padding-bottom 4rem
 
-    .form-email-signup, .ni-btn-wrapper
+    .form-email-signup, #fundraiser-btn
       margin-bottom 2rem
 
     .link
@@ -225,7 +235,7 @@ export default {
     padding-left 3rem
     padding-right 3rem
 
-    .form-email-signup, .ni-btn-wrapper
+    .form-email-signup, #fundraiser-btn
       margin-bottom 2rem
 
     .link
@@ -268,7 +278,7 @@ export default {
   .sc-fundraiser
     .sc-desc
       display none
-    .form-email-signup, .ni-btn-wrapper
+    .form-email-signup, #fundraiser-btn
       shadow()
       width 20rem
 </style>
