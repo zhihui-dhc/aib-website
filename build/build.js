@@ -17,16 +17,20 @@ console.log(
 var spinner = ora('building for production...')
 spinner.start()
 
-var assetsPath = path.join(config.build.assetsRoot, config.build.assetsSubDirectory)
-rm('-rf', assetsPath)
-mkdir('-p', assetsPath)
-cp('-R', 'static/', assetsPath)
+var assetsTmpPath = path.join(config.build.assetsRoot, config.build.assetsTmpDirectory)
+rm('-rf', assetsTmpPath)
+mkdir('-p', assetsTmpPath)
+cp('-R', 'static/', assetsTmpPath)
 
 // var fs = require('fs')
 
 webpack(webpackConfig, function (err, stats) {
   // profile the built js
   // fs.writeFileSync('./stats.json', JSON.stringify(stats.toJson()), null, 2)
+ 
+  var assetsPath = path.join(config.build.assetsRoot, config.build.assetsSubDirectory)
+  cp('-R', assetsTmpPath, assetsPath)
+
   spinner.stop()
   if (err) throw err
   process.stdout.write(stats.toString({
