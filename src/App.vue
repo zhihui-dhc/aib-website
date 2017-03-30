@@ -28,9 +28,7 @@ export default {
     AppFooter,
     Notifications,
     enRss: require('./assets/rss/en.xml'),
-    jaRss: require('./assets/rss/ja.xml'),
-    koRss: require('./assets/rss/ko.xml'),
-    zhRss: require('./assets/rss/zh.xml')
+    koRss: require('./assets/rss/ko.xml')
   },
   computed: {
     ...mapGetters(['notifications'])

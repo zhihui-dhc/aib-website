@@ -14,3 +14,5 @@ export const sessionVotes = state => state.session.votes
 
 export const notifications = state => state.notifications
 export const config = state => state.config
+
+export const docs = state => state.docs

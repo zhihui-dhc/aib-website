@@ -13,7 +13,7 @@
       <div class="sc-fundraiser" v-if="fundraiserStatus === 'announced'">
         <p class="sc-desc">The fundraiser for Cosmos will begin in <time-left :date="startDate"></time-left> on {{ pdtStartDate }}. Get notified &darr;</p>
         <form-email-signup></form-email-signup>
-        <a class="link" :href="pdf">Fundraiser Terms (PDF)</a>
+        <a class="link" :href="docs.terms">Fundraiser Terms (PDF)</a>
         <a class="link" href="http://slack.cosmos.network"><i class="fa fa-slick"></i> Discuss on Slack</a>
 
         <div class="sc-countdown">
@@ -24,10 +24,8 @@
 
       <div class="sc-fundraiser" v-if="fundraiserStatus === 'started'">
         <p class="sc-desc">The fundraiser for Cosmos is live! It will continue for <time-left :date="endDate"></time-left> until {{ pdtEndDate }}.</p>
-        <a :href="config.FUNDRAISER_URL">
-          View Fundraiser
-        </a>
-        <a class="link" :href="pdf">Terms of Agreement</a>
+        <btn size="lg" @click.native="gotoFundraiser" value="View Fundraiser"></btn>
+        <a class="link" :href="docs.terms">Terms of Agreement</a>
         <a class="link" href="http://slack.cosmos.network">Discuss on Slack</a>
 
         <div class="sc-countdown">
@@ -38,10 +36,8 @@
 
       <div class="sc-fundraiser" v-if="fundraiserStatus === 'ended'">
         <p class="sc-desc">Welcome to Cosmos. The fundraiser for Cosmos finished on {{ pdtEndDate }}.</p>
-        <btn @click.native="gotoFundraiser">
-          View Fundraiser
-        </btn>
-        <a class="link" :href="pdf">Terms of Agreement</a>
+        <btn size="lg" @click.native="gotoFundraiser" value="View Fundraiser"></btn>
+        <a class="link" :href="docs.terms">Terms of Agreement</a>
         <a class="link" href="http://slack.cosmos.network">Discuss on Slack</a>
 
         <div class="sc-countdown">
@@ -59,9 +55,11 @@ import { mapGetters } from 'vuex'
 import moment from 'moment-timezone'
 import TimeLeft from './TimeLeft'
 import FormEmailSignup from './FormEmailSignup'
+import Btn from '@nylira/vue-button'
 export default {
   name: 'menu-fundraiser',
   components: {
+    Btn,
     FormEmailSignup,
     TimeLeft
   },
@@ -88,11 +86,10 @@ export default {
       let pdt = moment(utcEndDate).tz(this.config.TIMEZONE)
       return pdt.format('LLL z')
     },
-    ...mapGetters(['config'])
+    ...mapGetters(['config', 'docs'])
   },
   data: () => ({
-    fundraiserStatus: '',
-    pdf: require('../assets/cosmos-contrib-terms.pdf')
+    fundraiserStatus: ''
   }),
   methods: {
     gotoFundraiser () {
@@ -140,15 +137,18 @@ export default {
   align-items center
   justify-content center
   padding 3rem
+
   img
     height 2rem
     margin-bottom 0.5rem
+
   .subtitle
     text-transform uppercase
     color dim
     font-size 0.75rem
     letter-spacing 0.05em
     font-weight 500
+
   .sc-desc
     display none
 
@@ -156,6 +156,7 @@ export default {
   max-width 29rem
   text-align center
   line-height 2
+
   .ni-time-left
     display inline
     font-weight bold
@@ -168,8 +169,12 @@ export default {
   flex-flow column nowrap
   align-items center
 
-  p, .form-email-signup
+  p, .form-email-signup, .ni-btn-wrapper
     margin-bottom 1.5rem
+
+  .ni-btn-wrapper
+    width 100%
+    max-width 20rem
 
   .link
     text-align center
@@ -198,7 +203,7 @@ export default {
     padding-right 2rem
     padding-bottom 4rem
 
-    .form-email-signup
+    .form-email-signup, .ni-btn-wrapper
       margin-bottom 2rem
 
     .link
@@ -220,8 +225,9 @@ export default {
     padding-left 3rem
     padding-right 3rem
 
-    .form-email-signup
+    .form-email-signup, .ni-btn-wrapper
       margin-bottom 2rem
+
     .link
       height 3rem
       font-weight 400
@@ -262,6 +268,7 @@ export default {
   .sc-fundraiser
     .sc-desc
       display none
-    .form-email-signup
+    .form-email-signup, .ni-btn-wrapper
       shadow()
+      width 20rem
 </style>

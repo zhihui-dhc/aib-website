@@ -10,7 +10,7 @@
               <time-left :date="startDate"></time-left>
             </span>
           </a>
-          <a :href="termsPdf">Fundraiser Terms</a>
+          <a :href="docs.terms">Fundraiser Terms</a>
           <a href="http://slack.cosmos.network">Discuss on Slack</a>
           <p>The Cosmos fundraiser will begin in <time-left :date="startDate"></time-left> on <a href="">{{ pdtStartDate }}</a></p>
         </nav>
@@ -22,7 +22,7 @@
               <time-left :date="endDate"></time-left>
             </span>
           </a>
-          <a :href="termsPdf">Fundraiser Terms</a>
+          <a :href="docs.terms">Fundraiser Terms</a>
           <a href="http://slack.cosmos.network">Discuss on Slack</a>
           <p>The Cosmos fundraiser will be live for <time-left :date="endDate"></time-left> until <a href="">{{ pdtEndDate }}</a>.</p>
         </nav>
@@ -33,7 +33,7 @@
               <i class="fa fa-hourglass-end"></i>
             </span>
           </a>
-          <a :href="termsPdf">Fundraiser Terms</a>
+          <a :href="docs.terms">Fundraiser Terms</a>
           <a href="http://slack.cosmos.network">Discuss on Slack</a>
           <p>The Cosmos fundraiser finished on <a href="">{{ pdtEndDate }}</a>.</p>
         </nav>
@@ -75,11 +75,10 @@ export default {
       let pdt = moment(utcEndDate).tz(this.config.TIMEZONE)
       return pdt.format('LLL z')
     },
-    ...mapGetters(['config'])
+    ...mapGetters(['config', 'docs'])
   },
   data: () => ({
-    fundraiserStatus: '',
-    termsPdf: 'https://github.com/cosmos/cosmos/raw/master/fundraiser/Interchain%20Cosmos%20Contribution%20Terms%20-%20Penultimate%20Draft.pdf'
+    fundraiserStatus: ''
   }),
   methods: {
     gotoCta () {
