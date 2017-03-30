@@ -10,9 +10,7 @@
     "faq": "FAQ",
     "about": "About",
     "whitepaper": "Whitepaper",
-    "wp": "WP",
-    "signin": "Sign In",
-    "signup": "Sign Up"
+    "wp": "WP"
   },
   "siteBlog": {
     "title": "Blog",

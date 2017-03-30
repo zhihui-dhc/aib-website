@@ -13,7 +13,6 @@
 </template>
 
 <script>
-import firebase from './scripts/firebase.js'
 import AppHeader from './components/AppHeader.vue'
 import AppFooter from './components/AppFooter.vue'
 import Notifications from '@nylira/vue-notifications'
@@ -78,20 +77,6 @@ export default {
   },
   mounted () {
     // Vue.config.lang = getLang()
-
-    let self = this
-    firebase.auth().onAuthStateChanged(function (user) {
-      if (user) {
-        self.$store.commit('setSessionUserDisplayName', user.displayName)
-        self.$store.commit('setSessionUserEmail', user.email)
-        self.$store.commit('setSessionUserPhotoUrl', user.photoUrl)
-        self.$store.commit('setSessionUserUid', user.uid)
-        console.log('signed in:', user.email)
-      } else {
-        self.$store.commit('clearSessionUser')
-        // console.log('signed out')
-      }
-    })
   },
   store
 }
