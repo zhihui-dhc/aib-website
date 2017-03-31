@@ -36,6 +36,7 @@
   </div>
 
   <menu-fundraiser
+    :status="fundraiserStatus"
     v-if="activeMenuFundraiser"
     @click.native="toggleMenuFundraiser">
   </menu-fundraiser>
@@ -46,6 +47,7 @@
 
 <script>
 import { mapGetters } from 'vuex'
+import moment from 'moment-timezone'
 import disableScroll from 'disable-scroll'
 import MenuFundraiser from './MenuFundraiser'
 export default {
@@ -54,6 +56,17 @@ export default {
     MenuFundraiser
   },
   computed: {
+    announceDate () {
+      return moment(moment.utc(this.config.ANNOUNCE_DATETIME)).local()
+    },
+    startDate () {
+      return moment(moment.utc(this.config.START_DATETIME)).local()
+    },
+    endDate () {
+      let utcEndDate = moment.utc(this.config.START_DATETIME)
+        .add(this.config.ENDS_AFTER, 'days').valueOf()
+      return moment(utcEndDate).local()
+    },
     isTocPage () {
       return this.$route.name === 'whitepaper' || this.$route.name === 'whitepaper-localized' || this.$route.name === 'faq' || this.$route.name === 'faq-localized' || this.$route.name === 'plan' || this.$route.name === 'plan-localized'
     },
@@ -63,7 +76,9 @@ export default {
     return {
       activeMenuApp: false,
       activeMenuFundraiser: false,
-      desktop: false
+      desktop: false,
+      fundraiserStatus: '',
+      fundraiserAlertPushed: false
     }
   },
   methods: {
@@ -97,11 +112,36 @@ export default {
       }
       this.desktop = false
       return
+    },
+    refreshTimers () {
+      if (Date.now() >= moment(this.endDate).valueOf()) {
+        this.fundraiserStatus = 'ended'
+        return
+      }
+      if (Date.now() >= moment(this.startDate).valueOf()) {
+        this.fundraiserStatus = 'started'
+        if (Date.now() < (moment(this.startDate).valueOf() * 1000 * 60 * 60 * 6) &&
+           !this.fundraiserAlertPushed) {
+          this.fundraiserAlertPushed = true
+          this.$store.commit('notifyCustom', {
+            title: 'Fundraiser has started!',
+            body: 'The Cosmos Fundraiser has just begun. Join us!'
+          })
+        }
+        return
+      }
+      if (Date.now() >= moment(this.announceDate).valueOf()) {
+        this.fundraiserStatus = 'announced'
+        return
+      }
     }
   },
   mounted () {
     this.watchWindowSize()
     window.onresize = this.watchWindowSize
+
+    this.refreshTimers()
+    setInterval(this.refreshTimers, 1000)
   }
 }
 </script>

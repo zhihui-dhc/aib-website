@@ -2,7 +2,7 @@
   <menu class="menu-popup menu-fundraiser">
     <div class="container">
       <div class="bounds">
-        <nav v-if="fundraiserStatus === 'announced'">
+        <nav v-if="status === 'announced'">
           <a class="disabled">
             View Fundraiser
             <span class="alert">
@@ -16,7 +16,7 @@
           <a href="http://slack.cosmos.network">Discuss on Slack</a>
           <p>The Cosmos fundraiser will begin in <time-left :date="startDate"></time-left> on <a href="">{{ pdtStartDate }}</a></p>
         </nav>
-        <nav v-if="fundraiserStatus === 'started'">
+        <nav v-if="status === 'started'">
           <a :href="config.FUNDRAISER_URL">
             View Fundraiser
             <span class="alert">
@@ -28,7 +28,7 @@
           <a href="http://slack.cosmos.network">Discuss on Slack</a>
           <p>The Cosmos fundraiser will be live for <time-left :date="endDate"></time-left> until <a href="">{{ pdtEndDate }}</a>.</p>
         </nav>
-        <nav v-if="fundraiserStatus === 'ended'">
+        <nav v-if="status === 'ended'">
           <a :href="config.FUNDRAISER_URL">
             View Fundraiser
             <span class="alert">
@@ -79,9 +79,6 @@ export default {
     },
     ...mapGetters(['config', 'docs'])
   },
-  data: () => ({
-    fundraiserStatus: ''
-  }),
   methods: {
     gotoCta () {
       let y = document.querySelector('#section-first-cta').offsetTop - 48 + 8
@@ -89,26 +86,9 @@ export default {
     },
     gotoFundraiser () {
       window.location.href = this.config.FUNDRAISER_URL
-    },
-    refreshTimers () {
-      if (Date.now() >= moment(this.endDate).valueOf()) {
-        this.fundraiserStatus = 'ended'
-        return
-      }
-      if (Date.now() >= moment(this.startDate).valueOf()) {
-        this.fundraiserStatus = 'started'
-        return
-      }
-      if (Date.now() >= moment(this.announceDate).valueOf()) {
-        this.fundraiserStatus = 'announced'
-        return
-      }
     }
   },
-  mounted () {
-    this.refreshTimers()
-    setInterval(this.refreshTimers, 1000)
-  }
+  props: ['status']
 }
 </script>
 

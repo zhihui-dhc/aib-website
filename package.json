@@ -80,6 +80,7 @@
     "nib": "1.1.2",
     "nightwatch": "0.9.12",
     "node-zopfli": "2.0.2",
+    "notifyjs": "^3.0.0",
     "ora": "1.1.0",
     "perfect-scrollbar": "0.6.16",
     "phantomjs-prebuilt": "2.1.14",

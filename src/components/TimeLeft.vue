@@ -1,15 +1,15 @@
 <template>
-  <div class="ni-time-left" :title="date" v-if="days > 1">
-    {{ days }} days
+  <div class="ni-time-left" :title="date" v-if="days > 0">
+    {{ days }} day<template v-if="days > 1">s</template></div>
   </div>
-  <div class="ni-time-left" :title="date" v-else-if="hours > 1">
-    {{ hours }} hours
+  <div class="ni-time-left" :title="date" v-else-if="hours > 0">
+    {{ hours }} hour<template v-if="hours > 1">s</template></div>
   </div>
-  <div class="ni-time-left" :title="date" v-else-if="minutes > 1">
-    {{ minutes }} minutes
+  <div class="ni-time-left" :title="date" v-else-if="minutes > 0">
+    {{ minutes }} minute<template v-if="minutes > 1">s</template></div>
   </div>
-  <div class="ni-time-left" :title="date" v-else-if="seconds > 1">
-    {{ seconds }} seconds
+  <div class="ni-time-left" :title="date" v-else-if="seconds > 0">
+    {{ seconds }} second<template v-if="minutes > 1">s</template></div>
   </div>
   <div class="ni-time-left" :title="date" v-else>
     has ended
