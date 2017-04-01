@@ -50,11 +50,12 @@ override any information in this plan in case of any conflicts.
 
 * In the first day of the Fundraiser, suggested donations per atom will be
   $0.10. A discount of 25% for strategic funders implies an atom price of
-  $0.075. A discount of 12% for Pre-Fundraisers implies an atom price of
-  $0.088.
+  $0.075. A discount of 15% for Pre-Fundraisers implies an atom price of
+  $0.085.
 
-* The ICF’s fundraising goal may be capped. More details will be
-  released soon.
+* The ICF’s fundraising goal will be soft-capped at USD $10,000,000 with a
+  greater hidden cap during the first 6 hours.  For more details, see our
+  blog post on the [atom supply and distribution](https://cosmos.network/blog/atom-supply-distribution).
 
 * After the Fundraiser, the total number of atoms distributed multiplied by 1/3
   is inflated and allocated for the ICF, AIB, and the Initial Donors.
