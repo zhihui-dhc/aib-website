@@ -12,14 +12,14 @@
 import LocaleMenu from './LocaleMenu'
 import ArticleBody from '@nylira/vue-article-body'
 import TextEnUs from '../../content/en-US/PLAN.md'
-import TextKo from '../../content/ko/PLAN.md'
+// import TextKo from '../../content/ko/PLAN.md'
 export default {
   name: 'page-plan',
   components: {
     LocaleMenu,
     ArticleBody,
-    TextEnUs,
-    TextKo
+    TextEnUs
+    // TextKo
   },
   data () {
     return {
