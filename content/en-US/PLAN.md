@@ -164,10 +164,9 @@ Delegators in proportion to their bonded atoms, and afterwards account for any
 commissions that delegators pay to the delegated validators. The reward will
 consist of two types -- transaction fees, and inflationary atoms. The
 transaction fees will be any fee collected by a validator. In addition, there
-will be inflationary atoms at a rate of 1/5 of the total number of atoms per
-year. Cosmos holders who do not put their atoms at stake by being a validator
-or delegating to a validator will not receive any of the Cosmos Hub Block
-Rewards.
+will be inflationary atoms at a self-adjusting rate, initially at 7% per year.
+Cosmos holders who do not put their atoms at stake by being a validator or
+delegating to a validator will not receive any of the Cosmos Hub Block Rewards.
 
 **Cosmos Network**: Includes the Cosmos Hub, Dex, and all other connected
 zones.
