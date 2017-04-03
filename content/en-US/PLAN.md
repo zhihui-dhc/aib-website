@@ -1,8 +1,9 @@
 # Cosmos Plan
 
-Last updated on March 28, 2017<br/>
+LAST UPDATED: Mar 31st, 2017<br/>
 The details in this plan override what is currently in the whitepaper,
-and all other plans published prior.
+and all other plans published prior. The Cosmos Fundraiser Contribution Terms
+override any information in this plan in case of any conflicts.
 
 ----------
 
@@ -17,21 +18,15 @@ and all other plans published prior.
   develop the CESS.
 
 * All in Bits, Inc. (AIB) is a for-profit Delaware C-Corp behind Tendermint.
-  The ICF has contracted with AIB to develop the CESS.
+  The ICF has contracted with AIB to develop the initial portion of the CESS,
+  including Tendermint v1.
 
 * The ICF has received several commitments for donations from various
   individuals that will be tied to a portion of future atoms.  The ICF’s initial
   donors committed an amount equal to 5% of ICF’s initial donation goal. Further,
   the ICF has entered into a number of strategic partnerships and received
   commitments for donations from interested individuals pre-Fundraiser for an
-  amount equal to [ XX %] of the ICF fundraising goal. 
-
-* THE PREFUND IS CLOSED FOR THE GENERAL PUBLIC. If you have to ask about the
-  prefund now, you don't qualify. The only exception is for strategic partners,
-  such as crypto exchanges, who would make ideal validators.
-
-* The ICF reserves the right to receive further donations in the future from
-  strategic partners at a discount rate of up to 25%.
+  amount equal to $1,329,472 of the ICF fundraising goal. 
 
 * Before the first day the Fundraiser is opened, the total number of atoms
   granted, the total amount of donations received, and a pseudonymous list of
@@ -41,16 +36,14 @@ and all other plans published prior.
 * The projected date of the Fundraiser for all other parties, notwithstanding
   the initial donors and pre-Fundraiser donors, is April 6, 2017 at 6AM PDT.
 
-* At most the Fundraiser will last for 6 weeks. Note that after the Fundraiser,
-  no more atoms will be distributed by the ICF (unless approved by the on-chain
-  governance mechanism).
+* The Fundraiser will last for 2 weeks.
 
 * Governance can approve proposals for the creation of new atoms. For further
   information concerning the proposed on-chain governance mechanism for the
   creation of more atoms, please see the whitepaper for details.
 
-* The atoms will not be available for use until after genesis day. At the
-  earliest, genesis day is estimated to be sometime in Q3 2017.
+* The atoms will not be available for use until after genesis day. Genesis
+  day is estimated to be sometime in early Q4 2017.
 
 * AIB's atoms will vest over a priod of two years after Genesis.  None of the
   funders' atoms will need to vest.
@@ -72,23 +65,22 @@ and all other plans published prior.
   * Initial Donors (5%)
   * Pre-Fundraiser Donors + Fundraiser Donors (75%)
 
-* The genesis distribution is subject to change based on any partnership
-  negotiations.  The final distribution will be announced 2 weeks prior to the
-  fundraiser.
-
 * Upon completion of the Fundraiser, all atom holders, including the ICF and
   AIB play the Delegation Game. The top 100 validators after delegation will be
-  chosen as validators on Genesis. For more information on the Delegation Game
-  please refer to the white paper for details.
+  chosen as validators on Genesis. More information will be released about the
+  delegation game after the Fundraiser.
 
 * Every validator must participate in governance, or else run the risk that
   they will become inactivated and eventually unbonded.  Delegators who
   delegate atoms to such validators will also likewise get their delegated
   atoms inactivated and eventually unbonded. 
 
-* 1/5 of the total number of atoms will be inflated every year and distributed
+* Initially, 7% of atoms will be inflated every year and distributed
   back to the bonded and active atom holders (validators and delegators) for
-  their work validating and securing the ledger.
+  their work validating and securing the ledger.  This value will adjust
+  over time to incentivize at least 2/3 of the atoms to be bonded.
+
+* Atoms are not designed to be a medium of exchange nor a store of value.
 
 * The Unbonding Period is 1 month long.
 
@@ -97,7 +89,7 @@ and all other plans published prior.
   value. Instead, atoms are a tool, like Bitcoin miners are a tool. 
 
 * Bonding atoms and staking them put the atoms at risk of slashing. Validators
-  must run the sanctioned consensus protocol without deviation, or risk losing
+  must run the sanctioned consensus protocol without modification, or risk losing
   some or all of their atoms. Running the Cosmos sanctioned consensus protocol
   requires expert ability to run secure servers that must take extraordinary
   measures to prevent hacking. Delegators must choose who to validate to
@@ -181,7 +173,7 @@ zones.
 
 **Cosmos Network Participant**: any party, individual, enterprise, blockchain
 or network that uses, develops, creates or interacts with any aspect of the
-Cosmos Network or any component that constitutes the CESS.  
+Cosmos Network or any component that constitutes the CESS.
 
 **Delegator**: An atom holder who puts their atoms at stake by delegating its
 validating power and voting power to a validator.  Delegators risk losing their
