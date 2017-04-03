@@ -8,37 +8,34 @@
       <main class="section-cta-main">
 
         <template v-if="fundraiseEnded">
-          <div class="section-cta-description">Fundraiser has ended.</div>
+          <div class="section-cta-description">The Cosmos fundraiser has ended.</div>
           <btn
             class="section-cta-btn"
             size="lg"
-            value="View Fundraiser"
-            icon="bar-chart"
+            value="Launch Fundraiser"
+            icon="power-off"
             @click.native="gotoFundraiser">
           </btn>
-          <div class="section-cta-description">
-            <a href="http://slack.cosmos.network">Chat about the fundraiser</a> on Slack with the Cosmos community.</div>
+          <div class="section-cta-description">Join <a href="http://slack.cosmos.network">#cosmos</a> on Slack to talk about the fundraiser with the community.</div>
         </template>
 
         <template v-else-if="fundraiseStarted">
-          <div class="section-cta-description">Fundraiser is live! Click to visit the donation page.</div>
+          <div class="section-cta-description">Fundraiser has started! Click on the button below to visit the contribution page.</div>
           <btn
             class="section-cta-btn"
             size="lg"
-            value="View Fundraiser"
-            icon="bar-chart"
+            value="Launch Fundraiser"
+            icon="power-off"
             @click.native="gotoFundraiser">
           </btn>
-          <div class="section-cta-description">
-            <a href="http://slack.cosmos.network">Chat about the fundraiser</a> on Slack with the Cosmos community.</div>
+          <div class="section-cta-description">Join <a href="http://slack.cosmos.network">#cosmos</a> on Slack to talk about the fundraiser with the community.</div>
         </template>
 
         <template v-else>
           <div v-if="fundraiseAnnounced" class="section-cta-description">The Cosmos fundraiser will begin on <a href="https://www.worldtimebuddy.com/?qm=1&lid=8,100,2643743&h=8&date=2017-4-6&sln=6-7">{{ pdtStartDate }}</a>. Enter your email to receive live notifications:</div>
           <div v-else class="section-cta-description">The start date will be announced shortly. Stay tuned! Enter your email to receive live fundraiser notifications.</div>
           <form-email-signup class="section-cta-form"></form-email-signup>
-          <div class="section-cta-description">
-            <a href="http://slack.cosmos.network">Chat about the fundraiser</a> on Slack with the Cosmos community.</div>
+          <div class="section-cta-description">Join <a href="http://slack.cosmos.network">#cosmos</a> on Slack to talk about the fundraiser with the community.</div>
         </template>
 
       </main>
@@ -147,13 +144,18 @@ export default {
 .section-cta-description
   margin-left auto
   margin-right auto
-  max-width 28rem
+  max-width 24rem
   font-size 0.875rem
   &:last-of-type
     margin-bottom 0
 
   a
-    font-weight 500
+    color txt
+    text-decoration underline
+
+.section-cta-btn.ni-btn-wrapper
+  max-width 20rem
+  width 100%
 
 @media screen and (min-width: 768px)
   .section-cta-container

@@ -10,11 +10,11 @@
               <time-left :date="startDate"></time-left>
             </span>
           </a>
-          <a :href="docs.btc">BTC Contribution Flow</a>
-          <a :href="docs.eth">ETH Contribution Flow</a>
+          <a :href="docs.btc">BTC Tutorial</a>
+          <a :href="docs.eth">ETH Tutorial</a>
           <a :href="docs.terms">Contribution Terms</a>
-          <a href="http://slack.cosmos.network">Discuss on Slack</a>
-          <p>The Cosmos fundraiser will begin in <time-left :date="startDate"></time-left> on <a href="">{{ pdtStartDate }}</a></p>
+          <a href="http://slack.cosmos.network">Join #cosmos on Slack</a>
+          <p>The Cosmos fundraiser will begin in <time-left :date="startDate"></time-left> on {{ pdtStartDate }}</p>
         </nav>
         <nav v-if="status === 'started'">
           <a :href="config.FUNDRAISER_URL">
@@ -24,9 +24,11 @@
               <time-left :date="endDate"></time-left>
             </span>
           </a>
+          <a :href="docs.btc">BTC Tutorial</a>
+          <a :href="docs.eth">ETH Tutorial</a>
           <a :href="docs.terms">Fundraiser Terms</a>
-          <a href="http://slack.cosmos.network">Discuss on Slack</a>
-          <p>The Cosmos fundraiser will be live for <time-left :date="endDate"></time-left> until <a href="">{{ pdtEndDate }}</a>.</p>
+          <a href="http://slack.cosmos.network">Join #cosmos on Slack</a>
+          <p>The Cosmos fundraiser will be live for <time-left :date="endDate"></time-left> until {{ pdtEndDate }}.</p>
         </nav>
         <nav v-if="status === 'ended'">
           <a :href="config.FUNDRAISER_URL">
@@ -35,9 +37,11 @@
               <i class="fa fa-hourglass-end"></i>
             </span>
           </a>
+          <a :href="docs.btc">BTC Tutorial</a>
+          <a :href="docs.eth">ETH Tutorial</a>
           <a :href="docs.terms">Fundraiser Terms</a>
-          <a href="http://slack.cosmos.network">Discuss on Slack</a>
-          <p>The Cosmos fundraiser finished on <a href="">{{ pdtEndDate }}</a>.</p>
+          <a href="http://slack.cosmos.network">Join #cosmos on Slack</a>
+          <p>The Cosmos fundraiser finished on {{ pdtEndDate }}.</p>
         </nav>
       </div>
     </div>
@@ -155,8 +159,4 @@ export default {
         .ni-time-left
           display inline
           font-weight bold
-        a
-          color link
-          &:hover
-            text-decoration underline
 </style>

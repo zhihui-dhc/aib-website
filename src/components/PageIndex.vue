@@ -113,7 +113,8 @@ export default {
   &#home-intro
     .ni-btn-wrapper
       display block
-      width 17rem
+      max-width 20rem
+      width 100%
       margin 2rem auto 0
 
   &.sh-video
@@ -157,6 +158,11 @@ export default {
 
   p
     margin 0 0 1.5rem
+    a
+      color txt
+      text-decoration underline
+      &:hover
+        color link
 
 @media screen and (min-width: 768px)
   .section-home
@@ -165,6 +171,8 @@ export default {
 
     h3
       font-size 1.5rem
+      font-weight 400
+      margin-bottom 1rem
 
     &.sh-video
       iframe
