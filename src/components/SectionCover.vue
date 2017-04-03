@@ -15,11 +15,11 @@
         <form-email-signup></form-email-signup>
         <a class="link" :href="docs.btc">
           <i class="fa fa-file-pdf-o"></i>
-          BTC Contribution Flow
+          BTC Tutorial
         </a>
         <a class="link" :href="docs.eth">
           <i class="fa fa-file-pdf-o"></i>
-          ETH Contribution Flow
+          ETH Tutorial
         </a>
         <a class="link" :href="docs.terms">
           <i class="fa fa-file-pdf-o"></i>
@@ -46,11 +46,11 @@
         </btn>
         <a class="link" :href="docs.btc">
           <i class="fa fa-file-pdf-o"></i>
-          BTC Contribution Flow
+          BTC Tutorial
         </a>
         <a class="link" :href="docs.eth">
           <i class="fa fa-file-pdf-o"></i>
-          ETH Contribution Flow
+          ETH Tutorial
         </a>
         <a class="link" :href="docs.terms">
           <i class="fa fa-file-pdf-o"></i>
@@ -78,11 +78,11 @@
         </btn>
         <a class="link" :href="docs.btc">
           <i class="fa fa-file-pdf-o"></i>
-          BTC Contribution Flow
+          BTC Tutorial
         </a>
         <a class="link" :href="docs.eth">
           <i class="fa fa-file-pdf-o"></i>
-          ETH Contribution Flow
+          ETH Tutorial
         </a>
         <a class="link" :href="docs.terms">
           <i class="fa fa-file-pdf-o"></i>
@@ -302,7 +302,7 @@ export default {
 @media screen and (min-width: 1024px)
   .sc-container
     display flex
-    height 75vh
+    height 66.66vh
     max-height 56.25vw
     padding 3rem 0
 
