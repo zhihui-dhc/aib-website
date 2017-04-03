@@ -9,7 +9,7 @@
     {{ minutes }} minute<template v-if="minutes > 1">s</template></div>
   </div>
   <div class="ni-time-left" :title="date" v-else-if="seconds > 0">
-    {{ seconds }} second<template v-if="minutes > 1">s</template></div>
+    {{ seconds }} second<template v-if="seconds > 1">s</template></div>
   </div>
   <div class="ni-time-left" :title="date" v-else>
     has ended
