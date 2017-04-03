@@ -1,6 +1,7 @@
 <template>
   <div class="page-index">
     <section-cover></section-cover>
+    <section-media></section-media>
     <section-recent-posts></section-recent-posts>
     <section class="section-home sh-video">
       <h2>{{ $t('sectionHomeVideo.title') }}</h2>
@@ -76,14 +77,16 @@
 <script>
 import SectionCover from './SectionCover'
 import SectionRecentPosts from './SectionRecentPosts'
+import SectionMedia from './SectionMedia'
 import SectionCallToAction from './SectionCallToAction'
 import Btn from '@nylira/vue-button'
 export default {
   name: 'page-index',
   components: {
     SectionCover,
-    SectionRecentPosts,
     SectionCallToAction,
+    SectionMedia,
+    SectionRecentPosts,
     Btn
   },
   head: {
