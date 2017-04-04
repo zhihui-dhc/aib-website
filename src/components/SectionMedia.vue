@@ -65,7 +65,6 @@ export default {
   padding 2rem 0
 
 .sm-container
-  max-width 1024px
   margin 0 auto
   padding 0 1rem
 
@@ -74,7 +73,6 @@ export default {
   flex-flow row wrap
   justify-content center
   img
-    flex 0 0
     margin 0.5rem 0.25rem
     height 1.5rem
     width auto
