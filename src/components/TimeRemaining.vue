@@ -3,16 +3,19 @@
     is starting soon
   </div>
   <div class="ni-time-remaining" :title="date" v-else-if="days > 0">
-    {{ label }} {{ days }} day<template v-if="days > 1">s</template></div>
+    {{ label }} {{ days }} day<template v-if="days > 1">s</template>
+    {{ label }} {{ hours }} hr<template v-if="hours > 1">s</template>
   </div>
   <div class="ni-time-remaining" :title="date" v-else-if="hours > 0">
-    {{ label }} {{ hours }} hour<template v-if="hours > 1">s</template></div>
+    {{ label }} {{ hours }} hr<template v-if="hours > 1">s</template>
+    {{ label }} {{ minutes }} min<template v-if="minutes > 1">s</template>
   </div>
   <div class="ni-time-remaining" :title="date" v-else-if="minutes > 0">
-    {{ label }} {{ minutes }} minute<template v-if="minutes > 1">s</template></div>
+    {{ label }} {{ minutes }} min<template v-if="minutes > 1">s</template>
+    {{ label }} {{ seconds }} sec<template v-if="seconds > 1">s</template>
   </div>
   <div class="ni-time-remaining" :title="date" v-else-if="seconds > 0">
-    {{ label }} {{ seconds }} second<template v-if="seconds > 1">s</template></div>
+    {{ label }} {{ seconds }} second<template v-if="seconds > 1">s</template>
   </div>
   <div class="ni-time-remaining" :title="date" v-else>
     has ended
