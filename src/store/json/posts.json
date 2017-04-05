@@ -1,6 +1,15 @@
 {
   "en": [
     {
+      "title": "Final Cosmos Contribution Terms",
+      "slug": "final-cosmos-contribution-terms",
+      "author": "The Cosmonauts",
+      "date": 1491264000000,
+      "body": "<p>Last week, we said that if we make any further modifications\nto the Penultimate Draft Cosmos Contribution Terms, we would\npost a separate blog about the update.  Here is that update.</p>\n<ul>\n<li><a href=\"https://github.com/cosmos/cosmos/blob/master/fundraiser/Interchain%20Cosmos%20Contribution%20Terms%20-%20FINAL%20-%20REDLINE.docx\">Cosmos Contribution Terms FINAL</a></li>\n<li><a href=\"https://github.com/cosmos/cosmos/blob/master/fundraiser/Interchain%20Cosmos%20Contribution%20Terms%20-%20FINAL%20-%20REDLINE.docx\">Cosmos Contribution Terms FINAL - REDLINE</a></li>\n</ul>\n<p>No significant changes have been made.  We explicitly block the state of Washington and New Hampshire from the United States.  Also, we make note of expected administrative fees for tax purposes.</p>\n",
+      "excerpt": "A lot of people have been asking us how many atoms will be created and how they will be distributed.",
+      "dateFriendly": "2017-04-03"
+    },
+    {
       "title": "Atom Supply and Distribution",
       "slug": "atom-supply-distribution",
       "author": "Brian Fabian Crain",
