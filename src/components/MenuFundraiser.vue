@@ -11,7 +11,8 @@
             </span>
           </a>
           <a :href="docs.btc">BTC Tutorial</a>
-          <a :href="docs.eth">ETH Tutorial</a>
+          <a :href="docs.ethWeb">ETH Web Tutorial</a>
+          <a :href="docs.ethMist">ETH Mist Tutorial</a>
           <a :href="docs.terms">Contribution Terms</a>
           <a href="http://slack.cosmos.network">Join #cosmos on Slack</a>
           <p>The Cosmos fundraiser will begin in <time-left :date="startDate"></time-left> on {{ pdtStartDate }}</p>
@@ -25,7 +26,8 @@
             </span>
           </a>
           <a :href="docs.btc">BTC Tutorial</a>
-          <a :href="docs.eth">ETH Tutorial</a>
+          <a :href="docs.ethWeb">ETH Web Tutorial</a>
+          <a :href="docs.ethMist">ETH Mist Tutorial</a>
           <a :href="docs.terms">Fundraiser Terms</a>
           <a href="http://slack.cosmos.network">Join #cosmos on Slack</a>
           <p>The Cosmos fundraiser will be live for <time-left :date="endDate"></time-left> until {{ pdtEndDate }}.</p>
@@ -38,7 +40,8 @@
             </span>
           </a>
           <a :href="docs.btc">BTC Tutorial</a>
-          <a :href="docs.eth">ETH Tutorial</a>
+          <a :href="docs.ethWeb">ETH Web Tutorial</a>
+          <a :href="docs.ethMist">ETH Mist Tutorial</a>
           <a :href="docs.terms">Fundraiser Terms</a>
           <a href="http://slack.cosmos.network">Join #cosmos on Slack</a>
           <p>The Cosmos fundraiser finished on {{ pdtEndDate }}.</p>
