@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Cosmos Blog]]></title><description><![CDATA[The Internet of Blockchains]]></description><link>http://cosmos.network</link><image><url>http://cosmos.network/static/favicon.png</url><title>Cosmos Blog</title><link>http://cosmos.network</link></image><generator>RSS for Node</generator><lastBuildDate>Wed, 05 Apr 2017 01:30:11 GMT</lastBuildDate><atom:link href="http://cosmos.network/static//rss.xml" rel="self" type="application/rss+xml"/><pubDate>Wed, 05 Apr 2017 01:30:11 GMT</pubDate><copyright><![CDATA[2016 Cosmos Foundation]]></copyright><language><![CDATA[en]]></language><managingEditor><![CDATA[Cosmos Foundation]]></managingEditor><webMaster><![CDATA[Cosmos Foundation]]></webMaster><ttl>60</ttl><item><title><![CDATA[Final Cosmos Contribution Terms]]></title><description><![CDATA[<p>Last week, we said that if we make any further modifications
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Cosmos Blog]]></title><description><![CDATA[The Internet of Blockchains]]></description><link>http://cosmos.network</link><image><url>http://cosmos.network/static/favicon.png</url><title>Cosmos Blog</title><link>http://cosmos.network</link></image><generator>RSS for Node</generator><lastBuildDate>Wed, 05 Apr 2017 04:18:43 GMT</lastBuildDate><atom:link href="http://cosmos.network/static//rss.xml" rel="self" type="application/rss+xml"/><pubDate>Wed, 05 Apr 2017 04:18:43 GMT</pubDate><copyright><![CDATA[2016 Cosmos Foundation]]></copyright><language><![CDATA[en]]></language><managingEditor><![CDATA[Cosmos Foundation]]></managingEditor><webMaster><![CDATA[Cosmos Foundation]]></webMaster><ttl>60</ttl><item><title><![CDATA[Final Cosmos Contribution Terms]]></title><description><![CDATA[<p>Last week, we said that if we make any further modifications
 to the Penultimate Draft Cosmos Contribution Terms, we would
 post a separate blog about the update.  Here is that update.</p>
 <ul>
@@ -6,7 +6,74 @@ post a separate blog about the update.  Here is that update.</p>
 <li><a href="https://github.com/cosmos/cosmos/blob/master/fundraiser/Interchain%20Cosmos%20Contribution%20Terms%20-%20FINAL%20-%20REDLINE.docx">Cosmos Contribution Terms FINAL - REDLINE</a></li>
 </ul>
 <p>No significant changes have been made.  We explicitly block the state of Washington and New Hampshire from the United States.  Also, we make note of expected administrative fees for tax purposes.</p>
-]]></description><link>http://cosmos.network/posts/final-cosmos-contribution-terms</link><guid isPermaLink="true">http://cosmos.network/posts/final-cosmos-contribution-terms</guid><dc:creator><![CDATA[The Cosmonauts]]></dc:creator></item><item><title><![CDATA[Atom Supply and Distribution]]></title><description><![CDATA[<p>A lot of people have been asking us how many atoms will be created and how they
+]]></description><link>http://cosmos.network/posts/final-cosmos-contribution-terms</link><guid isPermaLink="true">http://cosmos.network/posts/final-cosmos-contribution-terms</guid><dc:creator><![CDATA[The Cosmonauts]]></dc:creator></item><item><title><![CDATA[Understanding Inflation in Cosmos]]></title><description><![CDATA[<p>Many people have asked us how the Cosmos inflation rate works. Inflation is a
+loaded term. It evokes a process outside our control. Something that devalues
+what we own. That threatens us. Fortunately, inflation in Cosmos is a much more
+friendly force.</p>
+<p>Let’s look at a comparison to Bitcoin first. Bitcoin has often been promoted
+as a hedge against inflation. The monetary supply of fiat currencies is
+exploding. For one measure, M3, the USD monetary supply grew by <a href="https://data.oecd.org/money/broad-money-m3.htm">55% since
+2010</a>. Bitcoin still has
+inflation, currently at almost 4%, but that is going to zero and is
+predictable.</p>
+<p>Like in Bitcoin, in Cosmos the inflation rate plays an important role in
+securing the network. In Bitcoin, the block reward compensates miners for their
+service. In Cosmos also, inflation goes to the validators for their service in
+securing the network.</p>
+<p>But, there is a fundamental difference. As a Bitcoin holder, inflation is bad
+for the holder. The miners are a separate group and every block reduces the
+holder’s relative ownership of the Bitcoin supply. In Cosmos, atom holders
+themselves provide the security services, and it is they who receive the newly
+issued atoms. The atoms I own may get diluted, but I get a portion of what
+dilutes them.</p>
+<p>You might be asking yourself, ‘is inflation good or bad for the atom holder’?</p>
+<h4>An Example Scenario</h4>
+<p>Let’s run through an example to see the effects of the inflation rate. We’ll
+assume that 60% of the atoms are bonded. That means the owner is either
+validating herself or delegating them to another validator. If the inflation
+rate is 10% per year, the total amount of atoms is increasing by 10% annually
+(regardless of the amount bonded).</p>
+<p>So if Alice had 1% of all the atoms in the beginning and stayed unbonded for a
+full year, after a year she will have 1% / (1 + 0.1) = 0.91% of the atom
+supply.  Cosmonaut Bob on the other hand started with 0.5% and validated the
+whole year.  His share will increase to 0.5% x (1 + 0.1/0.6) = 0.58%. In a
+steady state equilibrium, that extra 0.08% needs to be enough to pay for the
+cost of running a validator, assuming Bob runs his own validator node. If Bob
+is delegating, the inflationary atoms and transaction fees earned would have to
+cover the validator’s fees. The rewards also need to compensate for the added
+risk that Bob is taking, since those atoms could get slashed.</p>
+<h4>Staking Token vs Currency Token</h4>
+<p>While the bitcoin token is a currency token intended to be used as a means of
+payment and medium of exchange, the atom is a staking token that is intended to
+be used as a means of consensus.  They’re more like virtual Bitcoin miners,
+than the virtual Bitcoin coins themselves.</p>
+<p>In a staking token, we want a significant portion of the staking token holder
+to be “at stake”.  This has security benefits.  If instead, the staking token
+were also being used as a medium of exchange, then it would be easier to
+acquire a significant share of these tokens relative to the total amount of
+bonded staking tokens.  If on the other hand, the staking token were not as
+liquid as a medium of exchange, an attacker has to incur much steeper costs in
+order to acquire these tokens for an attack.  It may not even be possible.</p>
+<h4>Dynamically Adjustable Inflation Rate</h4>
+<p>In order to keep the atom a secure staking token, the Cosmos Hub will automatically
+adjust the inflation rate to incentivize a proper amount of staking.</p>
+<p>We don’t know what the optimal formula is for dynamically adjusting parameters like
+inflation, so we will need to figure it out over time.</p>
+<p>For now, we propose a simple formula for dynamically adjusting the inflation rate.</p>
+<ul>
+<li>The minimum inflation rate is 7%.</li>
+<li>The maximum inflation rate is 21%.</li>
+<li>In the beginning, the inflation rate will be 7%.</li>
+<li>If in the past 4 months more than 2/3 of atoms were bonded more than 1/2 of the time, then decrease the inflation rate.</li>
+<li>Otherwise, increase the inflation rate.</li>
+</ul>
+<h4>Governance and the Community</h4>
+<p>Finding the right solution will take the whole community to be actively engaged
+in dialog. If you have thoughts on how to design this crypto-economic system,
+reach out to us.  Once the Cosmos Network launches, atom holders can make
+proposals to change how inflation works. On-chain governance means that changes
+are always possible, and that Cosmonauts decide for themselves where to go.</p>
+]]></description><link>http://cosmos.network/posts/inflation-cosmos</link><guid isPermaLink="true">http://cosmos.network/posts/inflation-cosmos</guid><dc:creator><![CDATA[The Cosmonauts]]></dc:creator></item><item><title><![CDATA[Atom Supply and Distribution]]></title><description><![CDATA[<p>A lot of people have been asking us how many atoms will be created and how they
 will be distributed. So we thought it would be useful to give an overview and
 run through a few different scenarios that show what happens at different
 levels of funding.</p>
