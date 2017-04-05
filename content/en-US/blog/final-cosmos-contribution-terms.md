@@ -10,8 +10,8 @@ Last week, we said that if we make any further modifications
 to the Penultimate Draft Cosmos Contribution Terms, we would
 post a separate blog about the update.  Here is that update.
 
-* [Cosmos Contribution Terms FINAL](https://github.com/cosmos/cosmos/blob/master/fundraiser/Interchain%20Cosmos%20Contribution%20Terms%20-%20FINAL%20-%20REDLINE.docx)
-* [Cosmos Contribution Terms FINAL - REDLINE](https://github.com/cosmos/cosmos/blob/master/fundraiser/Interchain%20Cosmos%20Contribution%20Terms%20-%20FINAL%20-%20REDLINE.docx)
+* [Cosmos Contribution Terms FINAL](https://github.com/cosmos/cosmos/raw/master/fundraiser/Interchain%20Cosmos%20Contribution%20Terms%20-%20FINAL%20-%20REDLINE.docx)
+* [Cosmos Contribution Terms FINAL - REDLINE](https://github.com/cosmos/cosmos/raw/master/fundraiser/Interchain%20Cosmos%20Contribution%20Terms%20-%20FINAL%20-%20REDLINE.docx)
 
 No significant changes have been made.
 
