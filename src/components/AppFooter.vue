@@ -4,7 +4,7 @@
     <footer class="app-footer">
       <div class="sections">
         <section class="copyright">
-          <span>&copy; 2016 Interchain Foundation</span>
+          <span>&copy; {{ new Date().getFullYear() }} Interchain Foundation</span>
           <span class="address">
             <p>c/o Gubelstrasse 11</p>
             <p>6300 Zug, Switzerland</p>

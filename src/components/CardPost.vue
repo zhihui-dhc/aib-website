@@ -19,6 +19,7 @@
 
 <script>
 export default {
+  name: 'card-post',
   props: ['title', 'desc', 'meta', 'url']
 }
 </script>
@@ -28,41 +29,45 @@ export default {
 @require '../styles/variables.styl'
 
 .card-post
-  margin 0 auto
-  border-bottom 1px solid bc
-  &:last-of-type
-    border-bottom none
+  margin-bottom 1rem
 
   a
-    padding 1em
+    border 1px solid bc
+    padding 1rem
     display block
     color txt
     &:hover .title
       color link
 
+  &:last-of-type
+    margin-bottom 0
+
   .title
+    font-weight bold
     line-height 1.25
     color txt
-    font-weight 400
+
+  .title, .meta
+    margin-bottom 0.25rem
 
   .meta
+    font-weight 500
+    line-height 2
     color light
-    font-size 0.875rem
-    margin-top 0.5rem
 
   .desc
     max-width 40em
+    color dim
 
 @media screen and (min-width: 360px)
   .card-post
     .title
-      font-size 1.25rem
-    .meta
-      font-size 1rem
+      font-size 1.125em
 
 @media screen and (min-width: 768px)
   .card-post
-    font-size 1.125*x
+    .title
+      font-size 1.25*x
     a
       padding 1.5rem
 </style>

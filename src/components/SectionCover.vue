@@ -13,22 +13,7 @@
       <div class="sc-fundraiser" v-if="fundraiserStatus === 'announced'">
         <p class="sc-desc">The fundraiser for Cosmos will begin in <time-left :date="startDate"></time-left> on {{ pdtStartDate }}. Get notified &darr;</p>
         <form-email-signup></form-email-signup>
-        <a class="link" :href="docs.btc">
-          <i class="fa fa-file-pdf-o"></i>
-          BTC Contribution Flow
-        </a>
-        <a class="link" :href="docs.eth">
-          <i class="fa fa-file-pdf-o"></i>
-          ETH Contribution Flow
-        </a>
-        <a class="link" :href="docs.terms">
-          <i class="fa fa-file-pdf-o"></i>
-          Contribution Terms
-        </a>
-        <a class="link" href="http://slack.cosmos.network">
-          <i class="fa fa-slick"></i>
-          Discuss on Slack
-        </a>
+        <section-cover-links></section-cover-links>
         <div class="sc-countdown">
           <i class="fa fa-clock-o"></i>
           <time-left :date="startDate"></time-left>
@@ -44,23 +29,7 @@
           @click.native="gotoFundraiser"
           value="Launch Fundraiser">
         </btn>
-        <a class="link" :href="docs.btc">
-          <i class="fa fa-file-pdf-o"></i>
-          BTC Contribution Flow
-        </a>
-        <a class="link" :href="docs.eth">
-          <i class="fa fa-file-pdf-o"></i>
-          ETH Contribution Flow
-        </a>
-        <a class="link" :href="docs.terms">
-          <i class="fa fa-file-pdf-o"></i>
-          Contribution Terms
-        </a>
-        <a class="link" href="http://slack.cosmos.network">
-          <i class="fa fa-slick"></i>
-          Discuss on Slack
-        </a>
-
+        <section-cover-links></section-cover-links>
         <div class="sc-countdown">
           <i class="fa fa-clock-o"></i>
           <time-left :date="endDate"></time-left>
@@ -76,28 +45,11 @@
           @click.native="gotoFundraiser"
           value="Launch Fundraiser">
         </btn>
-        <a class="link" :href="docs.btc">
-          <i class="fa fa-file-pdf-o"></i>
-          BTC Contribution Flow
-        </a>
-        <a class="link" :href="docs.eth">
-          <i class="fa fa-file-pdf-o"></i>
-          ETH Contribution Flow
-        </a>
-        <a class="link" :href="docs.terms">
-          <i class="fa fa-file-pdf-o"></i>
-          Contribution Terms
-        </a>
-        <a class="link" href="http://slack.cosmos.network">
-          <i class="fa fa-slick"></i>
-          Discuss on Slack
-        </a>
-
+        <section-cover-links></section-cover-links>
         <div class="sc-countdown">
           <i class="fa fa-hourglass-end"></i>
         </div>
       </div>
-
     </div>
     </div>
   </section>
@@ -106,14 +58,16 @@
 <script>
 import { mapGetters } from 'vuex'
 import moment from 'moment-timezone'
-import TimeLeft from './TimeLeft'
-import FormEmailSignup from './FormEmailSignup'
 import Btn from '@nylira/vue-button'
+import FormEmailSignup from './FormEmailSignup'
+import SectionCoverLinks from './SectionCoverLinks'
+import TimeLeft from './TimeLeft'
 export default {
   name: 'menu-fundraiser',
   components: {
     Btn,
     FormEmailSignup,
+    SectionCoverLinks,
     TimeLeft
   },
   computed: {
@@ -139,7 +93,7 @@ export default {
       let pdt = moment(utcEndDate).tz(this.config.TIMEZONE)
       return pdt.format('LLL z')
     },
-    ...mapGetters(['config', 'docs'])
+    ...mapGetters(['config'])
   },
   data: () => ({
     fundraiserStatus: ''
@@ -229,17 +183,6 @@ export default {
     width 100%
     max-width 20rem
 
-  .link
-    text-align center
-    height 2rem
-    width 100%
-    max-width 20rem
-    display flex
-    align-items center
-    justify-content center
-    i.fa
-      margin-right 0.375rem
-
 .sc-countdown
   display none
 
@@ -259,9 +202,6 @@ export default {
     .form-email-signup, #fundraiser-btn
       margin-bottom 2rem
 
-    .link
-      height 2.5rem
-
 @media screen and (min-width: 414px)
   .sc-logo
     img
@@ -276,16 +216,6 @@ export default {
     .form-email-signup, #fundraiser-btn
       margin-bottom 2rem
 
-    .link
-      height 2.5rem
-      font-weight 400
-      color txt
-      border 1px solid lighten(ibc, 33.333%)
-      margin-bottom 0.5rem
-      background hsla(0,0,100%,0.25)
-      &:last-of-type
-        margin-bottom 0
-
 @media screen and (min-width: 768px)
   .sc-logo
     img
@@ -298,11 +228,15 @@ export default {
   .sc-fundraiser
     .sc-desc
       margin-bottom 3rem
+    .form-email-signup, #fundraiser-btn
+      shadow()
+      width 30rem
+      max-width 30rem
 
 @media screen and (min-width: 1024px)
   .sc-container
     display flex
-    height 75vh
+    height 66.66vh
     max-height 56.25vw
     padding 3rem 0
 
@@ -324,7 +258,8 @@ export default {
   .sc-fundraiser
     .sc-desc
       display none
-    .form-email-signup, #fundraiser-btn
-      shadow()
-      width 20rem
+
+    .ni-links
+      border-top 4px solid bc
+      padding-top 2rem - 0.25rem
 </style>

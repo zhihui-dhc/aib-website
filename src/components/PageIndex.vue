@@ -1,6 +1,7 @@
 <template>
   <div class="page-index">
     <section-cover></section-cover>
+    <section-media></section-media>
     <section-recent-posts></section-recent-posts>
     <section class="section-home sh-video">
       <h2>{{ $t('sectionHomeVideo.title') }}</h2>
@@ -76,14 +77,16 @@
 <script>
 import SectionCover from './SectionCover'
 import SectionRecentPosts from './SectionRecentPosts'
+import SectionMedia from './SectionMedia'
 import SectionCallToAction from './SectionCallToAction'
 import Btn from '@nylira/vue-button'
 export default {
   name: 'page-index',
   components: {
     SectionCover,
-    SectionRecentPosts,
     SectionCallToAction,
+    SectionMedia,
+    SectionRecentPosts,
     Btn
   },
   head: {
@@ -110,7 +113,8 @@ export default {
   &#home-intro
     .ni-btn-wrapper
       display block
-      width 17rem
+      max-width 20rem
+      width 100%
       margin 2rem auto 0
 
   &.sh-video
@@ -154,6 +158,11 @@ export default {
 
   p
     margin 0 0 1.5rem
+    a
+      color txt
+      text-decoration underline
+      &:hover
+        color link
 
 @media screen and (min-width: 768px)
   .section-home
@@ -162,6 +171,8 @@ export default {
 
     h3
       font-size 1.5rem
+      font-weight 400
+      margin-bottom 1rem
 
     &.sh-video
       iframe

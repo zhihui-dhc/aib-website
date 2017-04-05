@@ -1,15 +1,18 @@
 <template>
   <div class="ni-time-left" :title="date" v-if="days > 0">
-    {{ days }} day<template v-if="days > 1">s</template></div>
+    {{ days }} day<template v-if="days > 1">s</template>
+    {{ hours }} hr<template v-if="hours > 1">s</template>
   </div>
   <div class="ni-time-left" :title="date" v-else-if="hours > 0">
-    {{ hours }} hour<template v-if="hours > 1">s</template></div>
+    {{ hours }} hr<template v-if="hours > 1">s</template>
+    {{ minutes }} min<template v-if="minutes > 1">s</template>
   </div>
   <div class="ni-time-left" :title="date" v-else-if="minutes > 0">
-    {{ minutes }} minute<template v-if="minutes > 1">s</template></div>
+    {{ minutes }} min<template v-if="minutes > 1">s</template>
+    {{ seconds }} sec<template v-if="seconds > 1">s</template>
   </div>
   <div class="ni-time-left" :title="date" v-else-if="seconds > 0">
-    {{ seconds }} second<template v-if="minutes > 1">s</template></div>
+    {{ seconds }} second<template v-if="seconds > 1">s</template>
   </div>
   <div class="ni-time-left" :title="date" v-else>
     has ended
