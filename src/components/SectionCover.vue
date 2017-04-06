@@ -89,14 +89,15 @@ export default {
     },
     pdtEndDate () {
       let utcEndDate = moment.utc(this.config.START_DATETIME)
-        .add(this.config.ENDS_AFTER, 'days').valueOf()
+        .add(28, 'minutes').valueOf()
+        // .add(this.config.ENDS_AFTER, 'days').valueOf()
       let pdt = moment(utcEndDate).tz(this.config.TIMEZONE)
       return pdt.format('LLL z')
     },
     ...mapGetters(['config'])
   },
   data: () => ({
-    fundraiserStatus: ''
+    fundraiserStatus: 'ended'
   }),
   methods: {
     gotoFundraiser () {
@@ -118,8 +119,8 @@ export default {
     }
   },
   mounted () {
-    this.refreshTimers()
-    setInterval(this.refreshTimers, 1000)
+    // this.refreshTimers()
+    // setInterval(this.refreshTimers, 1000)
   }
 }
 </script>
