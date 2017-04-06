@@ -4,12 +4,12 @@
       <header class="section-cta-header">
         <h2 class="section-cta-title">Fundraiser Event</h2>
         <!--<time-remaining class="section-cta-subtitle" :date="endDate" :started="fundraiseStarted" :fuzzy="!fundraiseAnnounced"></time-remaining>-->
-        <div class="section-cosmos-subtitle">raised $16.8 million USD in 28 minutes.</div>
+        <div class="section-cta-subtitle">raised $16.8 million USD in 28 minutes.</div>
       </header>
       <main class="section-cta-main">
 
         <template v-if="fundraiseEnded">
-          <div class="section-cosmos-description">Fundraiser has ended on April 6th, 6:28AM PDT. Thank you for the contributions!</div>
+          <div class="section-cta-description">Fundraiser has ended on April 6th, 6:28AM PDT. Thank you for the contributions!</div>
           <btn
             class="section-cta-btn"
             size="lg"
