@@ -1,4 +1,58 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Cosmos Blog]]></title><description><![CDATA[The Internet of Blockchains]]></description><link>http://cosmos.network</link><image><url>http://cosmos.network/static/favicon.png</url><title>Cosmos Blog</title><link>http://cosmos.network</link></image><generator>RSS for Node</generator><lastBuildDate>Wed, 05 Apr 2017 05:10:02 GMT</lastBuildDate><atom:link href="http://cosmos.network/static//rss.xml" rel="self" type="application/rss+xml"/><pubDate>Wed, 05 Apr 2017 05:10:02 GMT</pubDate><copyright><![CDATA[2016 Cosmos Foundation]]></copyright><language><![CDATA[en]]></language><managingEditor><![CDATA[Cosmos Foundation]]></managingEditor><webMaster><![CDATA[Cosmos Foundation]]></webMaster><ttl>60</ttl><item><title><![CDATA[Final Cosmos Contribution Terms]]></title><description><![CDATA[<p>Last week, we said that if we make any further modifications
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Cosmos Blog]]></title><description><![CDATA[The Internet of Blockchains]]></description><link>http://cosmos.network</link><image><url>http://cosmos.network/static/favicon.png</url><title>Cosmos Blog</title><link>http://cosmos.network</link></image><generator>RSS for Node</generator><lastBuildDate>Thu, 06 Apr 2017 16:27:08 GMT</lastBuildDate><atom:link href="http://cosmos.network/static//rss.xml" rel="self" type="application/rss+xml"/><pubDate>Thu, 06 Apr 2017 16:27:08 GMT</pubDate><copyright><![CDATA[2016 Cosmos Foundation]]></copyright><language><![CDATA[en]]></language><managingEditor><![CDATA[Cosmos Foundation]]></managingEditor><webMaster><![CDATA[Cosmos Foundation]]></webMaster><ttl>60</ttl><item><title><![CDATA[Fundraiser Results]]></title><description><![CDATA[<h3>Fundraiser was a resounding success</h3>
+<p>Wow. That was remarkable. Within seconds of opening the fundraiser at 6am PDT this morning,
+well over a million dollars worth of BTC and ETH poured in. Obviously, many of you were very
+well prepared. Over the following roughly 30 minutes, we raised over 16M USD worth of BTC and ETH,
+smashing through our hidden cap of 17M.</p>
+<p>Thank you everyone for your amazing support!</p>
+<p>The fundraiser is now closed. It’s time for us to get back to work on building out the Internet of Blockchains!</p>
+<h3>Proof of the Hidden Cap</h3>
+<p>Our goal for this fundraiser was to raise 10M USD. However, seeing as how quickly
+certain other fundraisers have hit their cap, we decided to allow more than 10M to be
+raised within the first 6 hours. That said, we did not want to be in a position where we
+raised too much money, so we set an additional hard-cap, such that if we hit that, we would halt
+the fundraiser.</p>
+<p>We decided to keep this hard cap hidden, because we felt doing so would discourage whales
+from buying too much. Indeed, we got a lot of feed back on slack that many people were discouraged
+from donating too much because of this hidden cap - exactly the effect we hoped for!</p>
+<p>On March 26, 2017, Jae published a commit to the hidden cap on twitter: <a href="https://twitter.com/jaekwon/status/846055257675218944">https://twitter.com/jaekwon/status/846055257675218944</a>.
+The commitment is <code>5faa9a8d3faa019b836f63779c454aa2cefa310ba1e04b251dcbfcd3db5471ec</code>.
+The pre-image for this is the following text:</p>
+<pre><code>SALT: 26ed7ab241901f7e0a7d
+MSG: The cap for the first 6 hours is $17M USD
+</code></pre>
+<p>If you save that text in a file, say <code>cap.txt</code>, and run <code>shasum -a 256 cap.txt</code>, you can confirm the commitment.</p>
+<h3>Suggested Atom Allocations</h3>
+<p>For each donation, the Interchain Foundation suggests a certain number of Atoms be allocated
+to the relevant Cosmos address in the genesis block of the Cosmos Network.
+The Cosmos Network is expected to launch in Q4 2017, and Atoms will not be accessible until then.
+That said, the suggested Atom allocations for a given donation can be easily computed.</p>
+<p>First, you need your Cosmos address. If you did not write it down during the fundraiser, no worries.
+You can use the <code>cosmos-fundraiser</code> tool to figure it out, so long as you wrote down your 12-words.
+If you lost the 12-words, your Atoms are gone forever.</p>
+<p>To install the tool, you must have <code>node.js</code> installed. Then simply run:</p>
+<pre><code>npm install -g cosmos-fundraiser-cli@2.11.0
+</code></pre>
+<p>Now you can check your Cosmos address by running:</p>
+<pre><code>cosmos-fundraiser cosmosaddress
+</code></pre>
+<p>It will prompt you for your twelve words, and will spit out your address.
+Please make sure you enter the words correctly.</p>
+<p>If you donated in ETH, your suggested Atom balance is stored directly in the smart contract.
+To query it, enter your Cosmos address in the <code>record</code> field here: <a href="https://etherscan.io/address/0xcf965cfe7c30323e9c9e41d4e398e2167506f764#read">https://etherscan.io/address/0xcf965cfe7c30323e9c9e41d4e398e2167506f764#read</a></p>
+<p>If you donated in BTC, your Cosmos address was recorded in an OP_RETURN output.
+There is no easy way to query for your suggested Atom balance yet, but if you lookup
+your transaction on <a href="http://blockchain.info">blockchain.info</a>, you should see your Cosmos address recorded in the second output,
+next to OP_RETURN. Note that <a href="http://blockchain.info">blockchain.info</a> doesn’t handle OP_RETURN, so it will say “Unable to decode output address” -
+that is fine and totally expected. To get your suggested Atom balance, just multiply the amount of BTC in the first output
+by 11635. Also note, your transaction MUST be included between block 460654 and 460660, inclusive.
+If your transaction is included in a block outside this range, your suggested Atom balance is 0.</p>
+<p>We will put up a service in the next couple days to make it super easy to query for your suggested Atom balance directly,
+whether you donated in BTC or ETH.</p>
+<h3>Issues</h3>
+<p>If you had any issues with the fundraiser, please contact us at fundraiser@cosmos.network.</p>
+<h3>Conclusion</h3>
+<p>Thanks again for making this fundraiser an epic success! We look forward to building the Internet of Blockchains with you.</p>
+]]></description><link>http://cosmos.network/posts/fundraiser-results</link><guid isPermaLink="true">http://cosmos.network/posts/fundraiser-results</guid><dc:creator><![CDATA[The Cosmonauts]]></dc:creator></item><item><title><![CDATA[Final Cosmos Contribution Terms]]></title><description><![CDATA[<p>Last week, we said that if we make any further modifications
 to the Penultimate Draft Cosmos Contribution Terms, we would
 post a separate blog about the update.  Here is that update.</p>
 <ul>
