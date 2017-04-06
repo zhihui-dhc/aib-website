@@ -77,7 +77,7 @@ export default {
       activeMenuApp: false,
       activeMenuFundraiser: false,
       desktop: false,
-      fundraiserStatus: '',
+      fundraiserStatus: 'ended',
       fundraiserAlertPushed: false
     }
   },
@@ -140,8 +140,8 @@ export default {
     this.watchWindowSize()
     window.onresize = this.watchWindowSize
 
-    this.refreshTimers()
-    setInterval(this.refreshTimers, 1000)
+    // this.refreshTimers()
+    // setInterval(this.refreshTimers, 1000)
   }
 }
 </script>
