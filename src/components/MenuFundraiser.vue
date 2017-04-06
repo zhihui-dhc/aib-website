@@ -3,47 +3,15 @@
     <div class="container">
       <div class="bounds">
         <nav v-if="status === 'announced'">
-          <a class="disabled">
-            View Fundraiser
-            <span class="alert">
-              <i class="fa fa-clock-o"></i>
-              <time-left :date="startDate"></time-left>
-            </span>
-          </a>
-          <a :href="docs.btc">BTC Tutorial</a>
-          <a :href="docs.ethWeb">ETH Web Tutorial</a>
-          <a :href="docs.ethMist">ETH Mist Tutorial</a>
-          <a :href="docs.terms">Contribution Terms</a>
-          <a href="http://slack.cosmos.network">Join #cosmos on Slack</a>
+          <menu-fundraiser-links :status="status"></menu-fundraiser-links>
           <p>The Cosmos fundraiser will begin in <time-left :date="startDate"></time-left> on {{ pdtStartDate }}</p>
         </nav>
         <nav v-if="status === 'started'">
-          <a :href="config.FUNDRAISER_URL">
-            View Fundraiser
-            <span class="alert">
-              <i class="fa fa-clock-o"></i>
-              <time-left :date="endDate"></time-left>
-            </span>
-          </a>
-          <a :href="docs.btc">BTC Tutorial</a>
-          <a :href="docs.ethWeb">ETH Web Tutorial</a>
-          <a :href="docs.ethMist">ETH Mist Tutorial</a>
-          <a :href="docs.terms">Contribution Terms</a>
-          <a href="http://slack.cosmos.network">Join #cosmos on Slack</a>
+          <menu-fundraiser-links :status="status"></menu-fundraiser-links>
           <p>The Cosmos fundraiser will be live for <time-left :date="endDate"></time-left> until {{ pdtEndDate }}.</p>
         </nav>
         <nav v-if="status === 'ended'">
-          <a :href="config.FUNDRAISER_URL">
-            View Fundraiser
-            <span class="alert">
-              <i class="fa fa-hourglass-end"></i>
-            </span>
-          </a>
-          <a :href="docs.btc">BTC Tutorial</a>
-          <a :href="docs.ethWeb">ETH Web Tutorial</a>
-          <a :href="docs.ethMist">ETH Mist Tutorial</a>
-          <a :href="docs.terms">Contribution Terms</a>
-          <a href="http://slack.cosmos.network">Join #cosmos on Slack</a>
+          <menu-fundraiser-links :status="status"></menu-fundraiser-links>
           <p>The Cosmos fundraiser finished on {{ pdtEndDate }}.</p>
         </nav>
       </div>
@@ -54,12 +22,13 @@
 <script>
 import { mapGetters } from 'vuex'
 import moment from 'moment-timezone'
-import scrollTo from 'scroll-to'
+import MenuFundraiserLinks from './MenuFundraiserLinks'
 import TimeLeft from './TimeLeft'
 export default {
   name: 'menu-fundraiser',
   components: {
-    TimeLeft
+    TimeLeft,
+    MenuFundraiserLinks
   },
   computed: {
     announceDate () {
@@ -84,13 +53,9 @@ export default {
       let pdt = moment(utcEndDate).tz(this.config.TIMEZONE)
       return pdt.format('LLL z')
     },
-    ...mapGetters(['config', 'docs'])
+    ...mapGetters(['config'])
   },
   methods: {
-    gotoCta () {
-      let y = document.querySelector('#section-first-cta').offsetTop - 48 + 8
-      scrollTo(0, y, { duration: 666 })
-    },
     gotoFundraiser () {
       window.location.href = this.config.FUNDRAISER_URL
     }
@@ -128,36 +93,8 @@ export default {
       display flex
       flex-flow column
       padding 1.5rem 3rem
-      > a, > p
-        padding 0.75rem 0
-      > a
-        color txt
-        border-bottom 1px solid bc
-        display flex
-        align-items center
-        justify-content space-between
-        user-select none
-        &.disabled
-          color light
-          cursor not-allowed
-          &:hover
-            color light
-        &:hover
-          color link
-        .alert
-          display flex
-          align-items center
-          background link
-          color c-app-fg
-          font-size 0.75rem
-          padding 0 0.5rem
-          border-radius 0.25rem
-          height 1.5rem
-          i.fa
-            color c-app-fg
-          i.fa + .ni-time-left
-            margin-left 0.25rem
       > p
+        padding 0.75rem 0
         color txt
         .ni-time-left
           display inline
