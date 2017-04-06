@@ -7,7 +7,7 @@
         <div class="subtitle">Internet of Blockchains</div>
         <p class="sc-desc" v-if="fundraiserStatus === 'announced'">The fundraiser for Cosmos will begin in <time-left :date="startDate"></time-left> on <router-link to="/blog/fundraiser-delay-announcement-ii">{{ pdtStartDate }}</router-link>. Get notified &rarr;</p>
         <p class="sc-desc" v-if="fundraiserStatus === 'started'">The Cosmos fundraiser is live! It will continue for <time-left :date="endDate"></time-left> until {{ pdtEndDate }}.</p>
-        <p class="sc-desc" v-if="fundraiserStatus === 'ended'">Welcome to Cosmos. The fundraiser for Cosmos finished on {{ pdtEndDate }}.</p></p>
+        <p class="sc-desc" v-if="fundraiserStatus === 'ended'">Welcome to Cosmos. The fundraiser raised <strong>$16.8MM USD</strong> and finished on {{ pdtEndDate }}.</p></p>
       </div>
 
       <div class="sc-fundraiser" v-if="fundraiserStatus === 'announced'">
@@ -37,7 +37,7 @@
       </div>
 
       <div class="sc-fundraiser" v-if="fundraiserStatus === 'ended'">
-        <p class="sc-desc">Welcome to Cosmos. The fundraiser for Cosmos finished on {{ pdtEndDate }}.</p>
+        <p class="sc-desc">Welcome to Cosmos. The fundraiser raised <strong>$16.8MM USD</strong> and finished on {{ pdtEndDate }}.</p></p>
         <btn
           id="fundraiser-btn"
           icon="power-off"
