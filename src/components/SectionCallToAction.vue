@@ -4,40 +4,19 @@
       <header class="section-cta-header">
         <h2 class="section-cta-title">Fundraiser Event</h2>
         <!--<time-remaining class="section-cta-subtitle" :date="endDate" :started="fundraiseStarted" :fuzzy="!fundraiseAnnounced"></time-remaining>-->
-        <div class="section-cta-subtitle">raised $16.8 million USD in 28 minutes.</div>
+        <div class="section-cta-subtitle">raised {{ amountRaised }} in 28 minutes.</div>
       </header>
       <main class="section-cta-main">
 
-        <template v-if="fundraiseEnded">
-          <div class="section-cta-description">Fundraiser has ended on April 6th, 6:28AM PDT. Thank you for the contributions!</div>
-          <btn
-            class="section-cta-btn"
-            size="lg"
-            value="Launch Fundraiser"
-            icon="power-off"
-            @click.native="gotoFundraiser">
-          </btn>
-          <div class="section-cta-description">Join <a href="http://slack.cosmos.network">#cosmos</a> on Slack to talk about the fundraiser with the community.</div>
-        </template>
-
-        <template v-else-if="fundraiseStarted">
-          <div class="section-cta-description">Fundraiser has started! Click on the button below to visit the contribution page.</div>
-          <btn
-            class="section-cta-btn"
-            size="lg"
-            value="Launch Fundraiser"
-            icon="power-off"
-            @click.native="gotoFundraiser">
-          </btn>
-          <div class="section-cta-description">Join <a href="http://slack.cosmos.network">#cosmos</a> on Slack to talk about the fundraiser with the community.</div>
-        </template>
-
-        <template v-else>
-          <div v-if="fundraiseAnnounced" class="section-cta-description">The Cosmos fundraiser will begin on <a href="https://www.worldtimebuddy.com/?qm=1&lid=8,100,2643743&h=8&date=2017-4-6&sln=6-7">{{ pdtStartDate }}</a>. Enter your email to receive live notifications:</div>
-          <div v-else class="section-cta-description">The start date will be announced shortly. Stay tuned! Enter your email to receive live fundraiser notifications.</div>
-          <form-email-signup class="section-cta-form"></form-email-signup>
-          <div class="section-cta-description">Join <a href="http://slack.cosmos.network">#cosmos</a> on Slack to talk about the fundraiser with the community.</div>
-        </template>
+        <div class="section-cta-description">Fundraiser has ended on {{ pdtEndDate }}. Thank you for your contributions!</div>
+        <btn
+          class="section-cta-btn"
+          size="lg"
+          value="Open Fundraiser"
+          icon="external-link"
+          @click.native="gotoFundraiser">
+        </btn>
+        <div class="section-cta-description">Join <a href="http://slack.cosmos.network">#cosmos</a> on Slack to talk about the fundraiser with the community.</div>
 
       </main>
     </div>
@@ -49,7 +28,6 @@ import { mapGetters } from 'vuex'
 import Btn from '@nylira/vue-button'
 import FormEmailSignup from './FormEmailSignup'
 import TimeRemaining from './TimeRemaining'
-import moment from 'moment'
 export default {
   name: 'section-cta',
   components: {
@@ -58,58 +36,16 @@ export default {
     TimeRemaining
   },
   computed: {
-    pdtStartDate () {
-      let utc = moment.utc(this.config.START_DATETIME)
-      let pdt = moment(utc).tz(this.config.TIMEZONE)
-      return pdt.format('LLL z')
-    },
-    localStartDate () {
-      let utc = moment.utc(this.config.START_DATETIME)
-      let local = moment(utc).local()
-      return moment(local).format('LLL z')
-    },
-    announcedDate () {
-      return moment(moment.utc(this.config.ANNOUNCE_DATETIME)).local()
-    },
-    startDate () {
-      return moment(moment.utc(this.config.START_DATETIME)).local()
-    },
-    endDate () {
-      if (this.fundraiseStarted) {
-        let utcEndDate = moment.utc(this.config.START_DATETIME)
-          .add(this.config.ENDS_AFTER, 'days').valueOf()
-        return moment(utcEndDate).local()
-      } else {
-        return this.startDate
-      }
-    },
     ...mapGetters(['config'])
   },
   data: () => ({
-    fundraiseAnnounced: false,
-    fundraiseStarted: false,
-    fundraiseEnded: true
+    amountRaised: '$16.8 million USD',
+    pdtEndDate: 'April 6, 2017 6:28AM PDT'
   }),
   methods: {
     gotoFundraiser () {
       window.location.href = this.config.FUNDRAISER_URL
-    },
-    refreshTimers () {
-      // console.log('refreshing timers...')
-      if (Date.now() >= moment(this.announcedDate).valueOf()) {
-        this.fundraiseAnnounced = true
-      }
-      if (Date.now() >= moment(this.startDate).valueOf()) {
-        this.fundraiseStarted = true
-      }
-      if (Date.now() >= moment(this.endDate).valueOf()) {
-        this.fundraiseEnded = true
-      }
     }
-  },
-  mounted () {
-    // this.refreshTimers()
-    // setInterval(this.refreshTimers, 1000)
   }
 }
 </script>

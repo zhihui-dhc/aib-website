@@ -2,16 +2,8 @@
   <menu class="menu-popup menu-fundraiser">
     <div class="container">
       <div class="bounds">
-        <nav v-if="status === 'announced'">
-          <menu-fundraiser-links :status="status"></menu-fundraiser-links>
-          <p>The Cosmos fundraiser will begin in <time-left :date="startDate"></time-left> on {{ pdtStartDate }}</p>
-        </nav>
-        <nav v-if="status === 'started'">
-          <menu-fundraiser-links :status="status"></menu-fundraiser-links>
-          <p>The Cosmos fundraiser will be live for <time-left :date="endDate"></time-left> until {{ pdtEndDate }}.</p>
-        </nav>
-        <nav v-if="status === 'ended'">
-          <menu-fundraiser-links :status="status"></menu-fundraiser-links>
+        <nav>
+          <menu-fundraiser-links></menu-fundraiser-links>
           <p>The Cosmos fundraiser finished on {{ pdtEndDate }}.</p>
         </nav>
       </div>
@@ -21,7 +13,6 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import moment from 'moment-timezone'
 import MenuFundraiserLinks from './MenuFundraiserLinks'
 import TimeLeft from './TimeLeft'
 export default {
@@ -31,31 +22,11 @@ export default {
     MenuFundraiserLinks
   },
   computed: {
-    announceDate () {
-      return moment(moment.utc(this.config.ANNOUNCE_DATETIME)).local()
-    },
-    startDate () {
-      return moment(moment.utc(this.config.START_DATETIME)).local()
-    },
-    endDate () {
-      let utcEndDate = moment.utc(this.config.START_DATETIME)
-        .add(this.config.ENDS_AFTER, 'days').valueOf()
-      return moment(utcEndDate).local()
-    },
-    pdtStartDate () {
-      let utc = moment.utc(this.config.START_DATETIME)
-      let pdt = moment(utc).tz(this.config.TIMEZONE)
-      return pdt.format('LLL z')
-    },
-    pdtEndDate () {
-      let utcEndDate = moment.utc(this.config.START_DATETIME)
-        .add(28, 'minutes').valueOf()
-        // .add(this.config.ENDS_AFTER, 'days').valueOf()
-      let pdt = moment(utcEndDate).tz(this.config.TIMEZONE)
-      return pdt.format('LLL z')
-    },
     ...mapGetters(['config'])
   },
+  data: () => ({
+    pdtEndDate: 'April 6, 2017 6:28AM PDT'
+  }),
   methods: {
     gotoFundraiser () {
       window.location.href = this.config.FUNDRAISER_URL
