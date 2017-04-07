@@ -28,7 +28,7 @@
   </menu>
 
   <div class="header-item header-item-alert" @click="toggleMenuFundraiser">
-    <i v-if="!activeMenuFundraiser" class="fa fa-bell-o">
+    <i v-if="!activeMenuFundraiser" class="fa fa-hourglass-end">
       <!--<span class="alert">1</span>-->
     </i>
     <i v-else class="fa fa-times"></i>

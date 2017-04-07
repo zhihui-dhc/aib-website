@@ -1,21 +1,14 @@
 <template>
   <div class="ni-links">
-    <a class="ni-link" :href="docs.btc"><div class="ni-link-container">
-      <i class="fa fa-file-pdf-o"></i>
-      BTC Tutorial
+    <a class="ni-link" :href="config.FUNDRAISER_URL"><div class="ni-link-container">
+      <i class="fa fa-external-link"></i> Open Fundraiser
     </div></a>
-    <a class="ni-link" :href="docs.ethWeb"><div class="ni-link-container">
-      <i class="fa fa-file-pdf-o"></i>
-      ETH Web Tutorial
-    </div></a>
-    <a class="ni-link" :href="docs.ethMist"><div class="ni-link-container">
-      <i class="fa fa-file-pdf-o"></i>
-      ETH Mist Tutorial
-    </div></a>
-    <a class="ni-link" :href="docs.cli"><div class="ni-link-container">
-      <i class="fa fa-file-pdf-o"></i>
-      CLI Tutorial
-    </div></a>
+    <router-link class="ni-link" to="/blog/fundraiser-results">
+      <div class="ni-link-container">
+        <i class="fa fa-hourglass-end"></i>
+        Fundraiser Results
+      </div>
+    </router-link>
     <a class="ni-link" :href="docs.terms"><div class="ni-link-container">
       <i class="fa fa-file-pdf-o"></i>
       Contribution Terms
@@ -31,7 +24,7 @@
 import { mapGetters } from 'vuex'
 export default {
   computed: {
-    ...mapGetters(['docs'])
+    ...mapGetters(['docs', 'config'])
   }
 }
 </script>
@@ -40,6 +33,7 @@ export default {
 
 .ni-link
   display block
+  cursor pointer
 
 .ni-link-container
   text-align center
@@ -53,6 +47,10 @@ export default {
   i.fa
     margin-right 0.375rem
     color dim
+  &:hover
+    color link
+    i.fa
+      color link
 
 @media screen and (min-width: 360px)
   .ni-link-container

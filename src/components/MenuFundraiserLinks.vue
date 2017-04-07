@@ -1,11 +1,13 @@
 <template>
   <div class="mf-links">
-    <a class="mf-link disabled" v-if="status === 'announced'">
-      <i class="fa fa-power-off"></i> Launch Fundraiser
+    <a class="mf-link" :href="config.FUNDRAISER_URL">
+      <i class="fa fa-external-link"></i> <strong>Open Fundraiser</strong>
     </a>
-    <a class="mf-link" :href="config.FUNDRAISER_URL" v-else>
-      <i class="fa fa-power-off"></i> <strong>Launch Fundraiser</strong>
-    </a>
+    <router-link class="mf-link" to="/blog/fundraiser-results">
+      <i class="fa fa-hourglass-end"></i>
+      Fundraiser Results
+    </router-link>
+    <!--
     <a class="mf-link" :href="docs.btc">
       <i class="fa fa-file-pdf-o"></i> BTC Tutorial
     </a>
@@ -15,11 +17,13 @@
     <a class="mf-link" :href="docs.ethMist">
       <i class="fa fa-file-pdf-o"></i> ETH Mist Tutorial
     </a>
+    -->
     <a class="mf-link" :href="docs.terms">
       <i class="fa fa-file-pdf-o"></i> Contribution Terms
     </a>
     <a class="mf-link" href="http://slack.cosmos.network">
-      Join #cosmos on Slack
+      <i class="fa fa-slick"></i>
+      Discuss on Slack
     </a>
   </div>
 </template>
@@ -30,8 +34,7 @@ export default {
   name: 'menu-fundraiser-links',
   computed: {
     ...mapGetters(['config', 'docs'])
-  },
-  props: ['status']
+  }
 }
 </script>
 
@@ -56,6 +59,7 @@ export default {
     color link
   i.fa
     margin-right 0.5rem
+    color dim
   .alert
     display flex
     align-items center

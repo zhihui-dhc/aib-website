@@ -10,7 +10,7 @@
     </field>
     <btn
       type="submit"
-      value="Alert"
+      value="Subscribe"
       size="lg"
       id="mc-embedded-subscribe">
     </btn>
@@ -35,9 +35,12 @@ export default {
 @require '../styles/variables.styl'
 .form-email-signup
   display flex
-  max-width 320px
+  max-width 20rem
   width 100%
+  .ni-btn-wrapper
+    width 10rem
   .ni-btn-wrapper .ni-btn
     border-left none
+
 </style>
 

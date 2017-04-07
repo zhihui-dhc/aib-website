@@ -5,46 +5,12 @@
       <div class="sc-logo">
         <img src="../assets/images/cosmos_logo_m.png">
         <div class="subtitle">Internet of Blockchains</div>
-        <p class="sc-desc" v-if="fundraiserStatus === 'announced'">The fundraiser for Cosmos will begin in <time-left :date="startDate"></time-left> on <router-link to="/blog/fundraiser-delay-announcement-ii">{{ pdtStartDate }}</router-link>. Get notified &rarr;</p>
-        <p class="sc-desc" v-if="fundraiserStatus === 'started'">The Cosmos fundraiser is live! It will continue for <time-left :date="endDate"></time-left> until {{ pdtEndDate }}.</p>
-        <p class="sc-desc" v-if="fundraiserStatus === 'ended'">Welcome to Cosmos. The fundraiser raised <strong>$16.8MM USD</strong> and finished on {{ pdtEndDate }}.</p></p>
+        <p class="sc-desc">The Cosmos fundraiser raised <strong>{{ amountRaised }}</strong> and finished on {{ pdtEndDate }}.</p></p>
       </div>
 
-      <div class="sc-fundraiser" v-if="fundraiserStatus === 'announced'">
-        <p class="sc-desc">The fundraiser for Cosmos will begin in <time-left :date="startDate"></time-left> on {{ pdtStartDate }}. Get notified &darr;</p>
+      <div class="sc-fundraiser">
+        <p class="sc-desc">The Cosmos fundraiser raised <strong>{{ amountRaised }}</strong> and finished on {{ pdtEndDate }}.</p></p>
         <form-email-signup></form-email-signup>
-        <section-cover-links></section-cover-links>
-        <div class="sc-countdown">
-          <i class="fa fa-clock-o"></i>
-          <time-left :date="startDate"></time-left>
-        </div>
-      </div>
-
-      <div class="sc-fundraiser" v-if="fundraiserStatus === 'started'">
-        <p class="sc-desc">The fundraiser for Cosmos is live! It will continue for <time-left :date="endDate"></time-left> until {{ pdtEndDate }}.</p>
-        <btn
-          id="fundraiser-btn"
-          icon="power-off"
-          size="lg"
-          @click.native="gotoFundraiser"
-          value="Launch Fundraiser">
-        </btn>
-        <section-cover-links></section-cover-links>
-        <div class="sc-countdown">
-          <i class="fa fa-clock-o"></i>
-          <time-left :date="endDate"></time-left>
-        </div>
-      </div>
-
-      <div class="sc-fundraiser" v-if="fundraiserStatus === 'ended'">
-        <p class="sc-desc">Welcome to Cosmos. The fundraiser raised <strong>$16.8MM USD</strong> and finished on {{ pdtEndDate }}.</p></p>
-        <btn
-          id="fundraiser-btn"
-          icon="power-off"
-          size="lg"
-          @click.native="gotoFundraiser"
-          value="Launch Fundraiser">
-        </btn>
         <section-cover-links></section-cover-links>
         <div class="sc-countdown">
           <i class="fa fa-hourglass-end"></i>
@@ -57,71 +23,21 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import moment from 'moment-timezone'
-import Btn from '@nylira/vue-button'
 import FormEmailSignup from './FormEmailSignup'
 import SectionCoverLinks from './SectionCoverLinks'
-import TimeLeft from './TimeLeft'
 export default {
   name: 'menu-fundraiser',
   components: {
-    Btn,
     FormEmailSignup,
-    SectionCoverLinks,
-    TimeLeft
+    SectionCoverLinks
   },
   computed: {
-    announceDate () {
-      return moment(moment.utc(this.config.ANNOUNCE_DATETIME)).local()
-    },
-    startDate () {
-      return moment(moment.utc(this.config.START_DATETIME)).local()
-    },
-    endDate () {
-      let utcEndDate = moment.utc(this.config.START_DATETIME)
-        .add(this.config.ENDS_AFTER, 'days').valueOf()
-      return moment(utcEndDate).local()
-    },
-    pdtStartDate () {
-      let utc = moment.utc(this.config.START_DATETIME)
-      let pdt = moment(utc).tz(this.config.TIMEZONE)
-      return pdt.format('LLL z')
-    },
-    pdtEndDate () {
-      let utcEndDate = moment.utc(this.config.START_DATETIME)
-        .add(28, 'minutes').valueOf()
-        // .add(this.config.ENDS_AFTER, 'days').valueOf()
-      let pdt = moment(utcEndDate).tz(this.config.TIMEZONE)
-      return pdt.format('LLL z')
-    },
     ...mapGetters(['config'])
   },
   data: () => ({
-    fundraiserStatus: 'ended'
-  }),
-  methods: {
-    gotoFundraiser () {
-      window.location.href = this.config.FUNDRAISER_URL
-    },
-    refreshTimers () {
-      if (Date.now() >= moment(this.endDate).valueOf()) {
-        this.fundraiserStatus = 'ended'
-        return
-      }
-      if (Date.now() >= moment(this.startDate).valueOf()) {
-        this.fundraiserStatus = 'started'
-        return
-      }
-      if (Date.now() >= moment(this.announceDate).valueOf()) {
-        this.fundraiserStatus = 'announced'
-        return
-      }
-    }
-  },
-  mounted () {
-    // this.refreshTimers()
-    // setInterval(this.refreshTimers, 1000)
-  }
+    amountRaised: '$16.8 million USD',
+    pdtEndDate: 'April 6, 2017 6:28AM PDT'
+  })
 }
 </script>
 
@@ -177,12 +93,8 @@ export default {
   flex-flow column nowrap
   align-items center
 
-  p, .form-email-signup, #fundraiser-btn
+  p, .form-email-signup
     margin-bottom 1.5rem
-
-  #fundraiser-btn
-    width 100%
-    max-width 20rem
 
 .sc-countdown
   display none
