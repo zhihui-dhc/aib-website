@@ -17,12 +17,6 @@
   </div>
 </div>
 
-<script>
-if (!Object.defineProperty) {
-  window.alert('The Cosmos website does not support Internet Explorer 8 and below. Please update your browser to a modern version of Chrome, Firefox, or Safari.')
-}
-</script>
-
 <style>
 body { margin: 0; }
 #load {
@@ -71,3 +65,12 @@ body { margin: 0; }
   text-decoration: none;
 }
 </style>
+
+<script>
+if (!Object.defineProperty) {
+  window.alert('The Cosmos website does not support Internet Explorer 8 and below. Please update your browser to a modern version of Chrome, Firefox, or Safari.')
+}
+if (window.location.hostname== "cosmos.github.io") {
+   window.location.href = 'https://cosmos.network'
+}
+</script>
