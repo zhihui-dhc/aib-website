@@ -68,7 +68,7 @@ Please make sure you enter the words correctly.
 
 
 If you donated in ETH, your suggested Atom balance is stored directly in the smart contract.
-To query it, enter your Cosmos address in the `record` field here: https://etherscan.io/address/0xcf965cfe7c30323e9c9e41d4e398e2167506f764#read 
+To query it, enter your Cosmos address in the `record` field here: https://etherscan.io/address/0xcf965cfe7c30323e9c9e41d4e398e2167506f764#readContract
 
 If you donated in BTC, your Cosmos address was recorded in an OP_RETURN output.
 There is no easy way to query for your suggested Atom balance yet, but if you lookup
