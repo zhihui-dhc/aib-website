@@ -21,6 +21,10 @@ Its development is being led primarily by All In Bits, Inc., the team that creat
 
 - Atoms: The native cryptocurrency on the Cosmos Hub. Atoms are necessary for participating in the consensus protocol and transacting on the network.
 
+### When will the Cosmos Network launch?
+
+We are targetting Q4 2017. Atoms will not be tradeable until then.
+
 ## Atoms
 
 ### Why are Atoms necessary?
@@ -54,6 +58,15 @@ The Interchain Foundation has already raised some funds from private individuals
 It will host a public fundraising event beginning on April 6, 2017 at 6AM PDT.
 Both Ether and Bitcoin will be accepted in the fundraiser.
 The security of the fundraising process has been vetted extremely carefully.
+
+### How do I get Atoms?
+
+If you participated in the fundraiser, you can check your suggested atom balance at https://fundraiser.cosmos.network.
+If not, you must wait until the Cosmos Network launches (expected Q4 2017) and Atoms are traded on exchanges.
+
+### Which exchanges will Atoms trade on?
+
+We do not know yet. That is up to the individual exchanges. Exchanges are typically quick to respond to demand.
 
 ## Comparisons
 
