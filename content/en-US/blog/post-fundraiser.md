@@ -75,7 +75,7 @@ There is no easy way to query for your suggested Atom balance yet, but if you lo
 your transaction on blockchain.info, you should see your Cosmos address recorded in the second output, 
 next to OP_RETURN. Note that blockchain.info doesn't handle OP_RETURN, so it will say "Unable to decode output address" -
 that is fine and totally expected. To get your suggested Atom balance, just multiply the amount of BTC in the first output
-by 11635. Also note, your transaction MUST be included between block 460654 and 460660, inclusive.
+by 11635. Also note, your transaction MUST be included between block 460654 and 460661, inclusive.
 If your transaction is included in a block outside this range, your suggested Atom balance is 0.
 
 We will put up a service in the next couple days to make it super easy to query for your suggested Atom balance directly,
