@@ -3,21 +3,39 @@
     <header class="ha-header">
       <div class="ha-container">
         <h1><strong>HackAtom</strong> NYC</h1>
-        <p><i class="fa fa-calendar-o"></i> May 15-19, 2017</p>
+        <p><i class="fa fa-calendar-o"></i> May $DATES, 2017</p>
       </div>
     </header>
     <section class="ha-section contact">
       <div class="ha-container">
-        <header>What is HackAtom?</header>
+        <header>About HackAtom</header>
         <main>
-          <p>HackAtom NYC is a $DURATION Cosmos hackathon from May 15th to 19th, 2017. This event is aimed for hackers interested in developing applications on the Internet of Blockchains. The Cosmos team will be there to help you realize your visions.</p>
-          <p>The hackathon will be located in $LOCATION in NYC from May 15th to 19th. We'd love to see what you can create. Come join us!</p>
+          <p>HackAtom NYC is a $DURATION Cosmos hackathon on May $DATES, 2017. This event is aimed for hackers interested in developing applications on the Internet of Blockchains. The Cosmos team will be there to help you realize your visions.</p>
+          <p>The hackathon will be located in $LOCATION in NYC from May $DATES. We'd love to see what you can create. Come join us!</p>
         </main>
       </div>
     </section>
     <section class="ha-section">
       <div class="ha-container">
-        <header>Organizers</header>
+        <header>Agenda</header>
+        <main>
+          <p>$TUESDAY</p>
+          <p>$WEDNESDAY</p>
+        </main>
+      </div>
+    </section>
+    <section class="ha-section">
+      <div class="ha-container">
+        <header>Challenges</header>
+        <main>
+          <p>$CHALLENGE</p>
+          <p>$CHALLENGE</p>
+        </main>
+      </div>
+    </section>
+    <section class="ha-section">
+      <div class="ha-container">
+        <header>Judges</header>
         <main>
           <card-person v-for="person in ppl('hackatom')" :person="person"></card-person>
         </main>
@@ -99,7 +117,7 @@ export default {
   padding 1.5em
 
 .ha-header
-  background url('../assets/images/manhattan.jpg') center center no-repeat
+  background url('../assets/images/city-bokeh.jpg') center center no-repeat
   background-size cover
   .ha-container
     padding-top 3em
@@ -162,9 +180,15 @@ export default {
   .ha-container
     padding 3em
   .ha-header
+    text-align center
     .ha-container
       padding-top 6em
       padding-bottom 6em
+    h1
+      strong
+        display inline
+    p
+      font-size 1.75em
   .ha-section
     header
       text-align center
@@ -178,4 +202,8 @@ export default {
         margin-left auto
         margin-right auto
         font-size 1.25em
+    &.ha-section-location
+      .ha-container
+        main, iframe
+          height 360px
 </style>

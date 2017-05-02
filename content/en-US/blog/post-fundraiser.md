@@ -81,6 +81,7 @@ If your transaction is included in a block outside this range, your suggested At
 We will put up a service in the next couple days to make it super easy to query for your suggested Atom balance directly,
 whether you donated in BTC or ETH.
 
+**Update:** The Atom balance viewer is now available on [the fundraiser page](https://fundraiser.cosmos.network).
 
 ### Issues
 
