@@ -92,6 +92,7 @@ export default {
 .section-cta-btn.ni-btn-wrapper
   max-width 20rem
   width 100%
+  margin-bottom 1.5rem
 
 @media screen and (min-width: 768px)
   .section-cta-container

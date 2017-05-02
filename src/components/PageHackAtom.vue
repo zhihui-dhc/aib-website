@@ -3,15 +3,15 @@
     <header class="ha-header">
       <div class="ha-container">
         <h1><strong>HackAtom</strong> NYC</h1>
-        <p><i class="fa fa-calendar-o"></i> May $DATES, 2017</p>
+        <p><i class="fa fa-calendar-o"></i> May $DATETIME, 2017</p>
       </div>
     </header>
     <section class="ha-section contact">
       <div class="ha-container">
         <header>About HackAtom</header>
         <main>
-          <p>HackAtom NYC is a $DURATION Cosmos hackathon on May $DATES, 2017. This event is aimed for hackers interested in developing applications on the Internet of Blockchains. The Cosmos team will be there to help you realize your visions.</p>
-          <p>The hackathon will be located in $LOCATION in NYC from May $DATES. We'd love to see what you can create. Come join us!</p>
+          <p>HackAtom NYC is a $DURATION Cosmos hackathon on May $DATETIME, 2017. This event is aimed for hackers interested in developing applications on the Internet of Blockchains. The Cosmos team will be there to help you realize your visions.</p>
+          <p>The hackathon will be located in $VENUE in NYC during May $DATETIME. We'd love to see what you can create. Come join us!</p>
         </main>
       </div>
     </section>
@@ -26,7 +26,7 @@
     </section>
     <section class="ha-section">
       <div class="ha-container">
-        <header>Challenges</header>
+        <header>Challenges &amp; Awards</header>
         <main>
           <p>$CHALLENGE</p>
           <p>$CHALLENGE</p>
