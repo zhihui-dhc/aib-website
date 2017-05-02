@@ -4,11 +4,11 @@
       <div class="sc-logo">
         <img src="../assets/images/cosmos_logo_m.png">
         <div class="subtitle">Internet of Blockchains</div>
-        <p class="sc-desc">Cosmos will be hosting HackAtom NYC in May 2017. Stay tuned!</p>
+        <p class="sc-desc">We will be hosting <strong>HackAtom NYC</strong> in May 2017. Stay tuned.</p>
       </div>
 
       <div class="sc-fundraiser">
-        <p class="sc-desc">Cosmos will be hosting HackAtom NYC in May 2017. Stay tuned!</p>
+        <p class="sc-desc">We will be hosting <strong>HackAtom NYC</strong> in May 2017. Stay tuned.</p>
         <form-email-signup></form-email-signup>
         <section-cover-links></section-cover-links>
         <div class="sc-countdown">
@@ -151,11 +151,8 @@ export default {
     padding 3rem 0
 
   .sc-logo, .sc-fundraiser
-    flex 0 0 512px
-    padding 3rem
-
-  .sc-logo
-    padding-bottom 4rem
+    flex 1
+    padding 0 3rem
 
   .sc-logo
     align-items flex-start

@@ -41,8 +41,7 @@ export default {
   height 2.5rem
   font-weight 400
   color txt
-  border 1px solid lighten(ibc, 75%)
-  background hsla(0,0,100%,0.25)
+  background hsla(0,0,100%,0.5)
   i.fa
     margin-right 0.375rem
     color dim
