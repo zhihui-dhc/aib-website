@@ -117,7 +117,7 @@ export default {
   padding 1.5em
 
 .ha-header
-  background url('../assets/images/city-bokeh.jpg') center center no-repeat
+  background #3c405e url('../assets/images/city-bokeh.jpg') center center no-repeat
   background-size cover
   .ha-container
     padding-top 3em
@@ -129,7 +129,7 @@ export default {
     letter-spacing -0.03em
     color c-app-fg
     margin-bottom 2rem
-    text-shadow hsla(0,0,0,0.75) 0 0.25rem 0.5rem
+    text-shadow hsla(0,0,0,0.5) 0 0.25rem 0.375rem
     strong
       display block
       font-weight 700
@@ -137,7 +137,7 @@ export default {
   p
     font-size 1.25em
     color c-app-fg
-    text-shadow hsla(0,0,0,0.75) 0 0.125rem 0.25rem
+    text-shadow hsla(0,0,0,0.5) 0 0.125rem 0.25rem
     i.fa
       margin-right 0.25rem
 
