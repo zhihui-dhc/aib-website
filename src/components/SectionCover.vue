@@ -1,22 +1,20 @@
 <template>
   <section class="section-cover">
-    <div class="sc-backdrop">
     <div class="sc-container">
       <div class="sc-logo">
         <img src="../assets/images/cosmos_logo_m.png">
         <div class="subtitle">Internet of Blockchains</div>
-        <p class="sc-desc">The Cosmos fundraiser raised <strong>{{ amountRaised }}</strong> and finished on {{ pdtEndDate }}.</p></p>
+        <p class="sc-desc">Cosmos will be hosting HackAtom NYC in May 2017. Stay tuned!</p>
       </div>
 
       <div class="sc-fundraiser">
-        <p class="sc-desc">The Cosmos fundraiser raised <strong>{{ amountRaised }}</strong> and finished on {{ pdtEndDate }}.</p></p>
+        <p class="sc-desc">Cosmos will be hosting HackAtom NYC in May 2017. Stay tuned!</p>
         <form-email-signup></form-email-signup>
         <section-cover-links></section-cover-links>
         <div class="sc-countdown">
           <i class="fa fa-hourglass-end"></i>
         </div>
       </div>
-    </div>
     </div>
   </section>
 </template>
@@ -47,13 +45,10 @@ export default {
 .section-cover
   background url('../assets/images/cover_image.png') center center
 
-.sc-backdrop
-  background hsla(0,0,100%,0.5)
-  margin 0.5rem
-
 .sc-container
   max-width 1024px
   margin 0 auto
+  padding 1.5rem 0
 
 .sc-logo
   display flex
@@ -63,13 +58,13 @@ export default {
   padding 3rem
 
   img
-    height 2rem
+    height 2.5rem
     margin-bottom 0.5rem
 
   .subtitle
     text-transform uppercase
     color dim
-    font-size 0.75rem
+    font-size 0.9rem
     letter-spacing 0.05em
     font-weight 500
 
@@ -80,6 +75,7 @@ export default {
   max-width 22rem
   text-align center
   line-height 2
+  font-weight 400
 
   .ni-time-left
     display inline
@@ -91,7 +87,6 @@ export default {
   display flex
   justify-content center
   flex-flow column nowrap
-  align-items center
 
   p, .form-email-signup
     margin-bottom 1.5rem
@@ -100,12 +95,13 @@ export default {
   display none
 
 @media screen and (min-width: 360px)
+  .sc-container
+    padding 2rem 0
   .sc-logo
-    padding-top 4rem
     img
-      height 2.4rem
+      height 2.75rem
     .subtitle
-      font-size 0.9rem
+      font-size 1rem
 
   .sc-fundraiser
     padding-left 2rem
@@ -135,29 +131,30 @@ export default {
       height 3rem
     .subtitle
       font-size 1.125rem
+
   .sc-desc
     font-size 1.33rem
     font-weight 400
+
   .sc-fundraiser
     .sc-desc
       margin-bottom 3rem
     .form-email-signup, #fundraiser-btn
       shadow()
-      width 30rem
-      max-width 30rem
+      width 100%
 
 @media screen and (min-width: 1024px)
   .sc-container
     display flex
-    height 66.66vh
+    height 75vh
     max-height 56.25vw
     padding 3rem 0
 
   .sc-logo, .sc-fundraiser
+    flex 0 0 512px
     padding 3rem
 
   .sc-logo
-    flex 1
     padding-bottom 4rem
 
   .sc-logo
@@ -171,8 +168,4 @@ export default {
   .sc-fundraiser
     .sc-desc
       display none
-
-    .ni-links
-      border-top 4px solid bc
-      padding-top 2rem - 0.25rem
 </style>

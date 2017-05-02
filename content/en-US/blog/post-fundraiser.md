@@ -8,14 +8,14 @@ excerpt: What a fantasitc fundraiser! Thanks to everyone!
 
 ### Fundraiser was a resounding success
 
-Wow. That was remarkable. Within seconds of opening the fundraiser at 6am PDT this morning, 
+Wow. That was remarkable. Within seconds of opening [the fundraiser](https://fundraiser.cosmos.network) at 6am PDT this morning, 
 well over a million dollars worth of BTC and ETH poured in. Obviously, many of you were very 
 well prepared. Over the following roughly 30 minutes, we raised over 16M USD worth of BTC and ETH,
 smashing through our hidden cap of 17M.
 
 Thank you everyone for your amazing support!
 
-The fundraiser is now closed. It's time for us to get back to work on building out the Internet of Blockchains!
+[The fundraiser is now closed.](https://fundraiser.cosmos.network) It's time for us to get back to work on building out the Internet of Blockchains!
 
 ### Proof of the Hidden Cap
 
@@ -88,6 +88,6 @@ If you had any issues with the fundraiser, please contact us at fundraiser@cosmo
 
 ### Conclusion
 
-Thanks again for making this fundraiser an epic success! We look forward to building the Internet of Blockchains with you.
+Thanks again for making [this fundraiser](https://fundraiser.cosmos.network) an epic success! We look forward to building the Internet of Blockchains with you.
 
 

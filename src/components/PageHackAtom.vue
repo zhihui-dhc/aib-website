@@ -48,7 +48,7 @@
     </section>
     <section class="ha-section hashtag">
       <div class="ha-container">
-        <header><i class="fa fa-twatter"></i> #hackatom2017</header>
+        <header><a href="https://twitter.com/intent/tweet?text=I'm%20going%20to%20%23hackatom2017"><i class="fa fa-twatter"></i> #hackatom2017</a></header>
       </div>
     </section>
   </div>

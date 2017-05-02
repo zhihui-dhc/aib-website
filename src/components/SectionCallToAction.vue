@@ -2,22 +2,21 @@
   <div class="section-cta">
     <div class="section-cta-container">
       <header class="section-cta-header">
-        <h2 class="section-cta-title">Fundraiser Event</h2>
+        <h2 class="section-cta-title">Cosmos Fundraiser</h2>
         <!--<time-remaining class="section-cta-subtitle" :date="endDate" :started="fundraiseStarted" :fuzzy="!fundraiseAnnounced"></time-remaining>-->
-        <div class="section-cta-subtitle">raised {{ amountRaised }} in 28 minutes.</div>
+        <div class="section-cta-subtitle">raised {{ amountRaised }} in half an hour</div>
       </header>
       <main class="section-cta-main">
 
-        <div class="section-cta-description">Fundraiser has ended on {{ pdtEndDate }}. Thank you for your contributions!</div>
+        <div class="section-cta-description">It ended on {{ pdtEndDate }}. Thank you for your contributions!</div>
         <btn
           class="section-cta-btn"
           size="lg"
-          value="Open Fundraiser"
+          value="Fundraiser Ended"
           icon="external-link"
           @click.native="gotoFundraiser">
         </btn>
-        <div class="section-cta-description">Join <a href="http://slack.cosmos.network">#cosmos</a> on Slack to talk about the fundraiser with the community.</div>
-
+        <div class="section-cta-description">Join <a href="http://slack.cosmos.network">#cosmos</a> on Slack to chat.</div>
       </main>
     </div>
   </div>
@@ -39,7 +38,7 @@ export default {
     ...mapGetters(['config'])
   },
   data: () => ({
-    amountRaised: '$16.8 million USD',
+    amountRaised: '$17 million',
     pdtEndDate: 'April 6, 2017 6:28AM PDT'
   }),
   methods: {
