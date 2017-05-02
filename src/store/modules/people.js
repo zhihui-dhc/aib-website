@@ -12,7 +12,7 @@ const state = {
         linkedin: 'yjkwon',
         twitter: 'jaekwon'
       },
-      category: 'interchain'
+      tags: ['interchain', 'hackatom']
     },
     {
       slug: 'ethan-buchman',
@@ -26,7 +26,7 @@ const state = {
         linkedin: 'ethan-buchman-10b34944',
         twitter: 'buchmanster'
       },
-      category: 'interchain'
+      tags: ['interchain', 'hackatom']
     },
     {
       slug: 'guido-schmitz-krummacher',
@@ -36,7 +36,7 @@ const state = {
       ids: {
         email: 'guido'
       },
-      category: 'interchain'
+      tags: ['interchain']
     },
     {
       slug: 'peng-zhong',
@@ -50,7 +50,7 @@ const state = {
         linkedin: 'nylira',
         twitter: 'zcpeng'
       },
-      category: 'aib'
+      tags: ['aib']
     },
     {
       slug: 'brian-crain',
@@ -64,7 +64,7 @@ const state = {
         linkedin: 'bfcrain',
         twitter: 'crainbf'
       },
-      category: 'aib'
+      tags: ['aib']
     },
     {
       slug: 'anton-kaliaev',
@@ -78,7 +78,7 @@ const state = {
         linkedin: 'melekes',
         twitter: 'akaliaev'
       },
-      category: 'aib'
+      tags: ['aib']
     },
     {
       slug: 'ethan-frey',
@@ -91,7 +91,7 @@ const state = {
         keybase: 'ethanfrey',
         linkedin: 'ethanfrey'
       },
-      category: 'aib'
+      tags: ['aib']
     },
     {
       slug: 'hannah-copperman',
@@ -103,7 +103,7 @@ const state = {
         github: 'hcopperm',
         linkedin: 'hannah-copperman-b47b4614'
       },
-      category: 'aib'
+      tags: ['aib']
     },
     {
       slug: 'matt-bell',
@@ -117,7 +117,7 @@ const state = {
         linkedin: 'matt-bell-941aa146',
         twitter: 'mappum'
       },
-      category: 'aib'
+      tags: ['aib']
     },
     {
       slug: 'rigel-rozanski',
@@ -130,7 +130,7 @@ const state = {
         keybase: 'rigel',
         linkedin: 'rigel-rozanski-28340559'
       },
-      category: 'aib'
+      tags: ['aib']
     },
     {
       slug: 'paul-homer',
@@ -142,7 +142,7 @@ const state = {
         github: 'phomer',
         linkedin: 'paulhomer'
       },
-      category: 'aib'
+      tags: ['aib']
     },
     {
       slug: 'henny-han',
@@ -154,7 +154,7 @@ const state = {
         linkedin: 'ashhan',
         website: 'seunghwanhan.com'
       },
-      category: 'advisors'
+      tags: ['advisors']
     },
     {
       slug: 'franck-mikulecz',
@@ -164,7 +164,7 @@ const state = {
       ids: {
         linkedin: 'franckmikulecz'
       },
-      category: 'advisors'
+      tags: ['advisors']
     },
     {
       slug: 'thomas-greco',
@@ -174,7 +174,7 @@ const state = {
       ids: {
         website: 'omise.co'
       },
-      category: 'advisors'
+      tags: ['advisors']
     },
     {
       slug: 'jim-yang',
@@ -184,7 +184,7 @@ const state = {
       ids: {
         linkedin: 'jimyang'
       },
-      category: 'advisors'
+      tags: ['advisors', 'hackatom']
     }
   ]
 }

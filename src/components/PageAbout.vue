@@ -66,9 +66,7 @@ export default {
     }
   },
   methods: {
-    ppl (category) {
-      return this.allPeople.filter(p => p.category === category)
-    }
+    ppl (tag) { return this.allPeople.filter(p => p.tags.includes(tag)) }
   }
 }
 </script>

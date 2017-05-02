@@ -18,6 +18,8 @@ const routes = [
   { path: '/whitepaper/en-US', redirect: '/whitepaper' },
   { path: '/whitepaper/:locale', name: 'whitepaper-localized', component: r('Whitepaper') },
 
+  { path: '/hackatom', name: 'hackatom', component: r('HackAtom') },
+
   // wildcards
   { path: '/404', component: r('404') },
   { path: '*', component: r('404') }

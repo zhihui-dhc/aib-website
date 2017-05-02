@@ -69,7 +69,6 @@
     margin-left 1.5rem
     margin-right 1.5rem
     padding 1rem
-    border 1px solid bc
     border-top none
 
   .ni-section-dark
