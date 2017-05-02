@@ -129,7 +129,7 @@ export default {
     letter-spacing -0.03em
     color c-app-fg
     margin-bottom 2rem
-    text-shadow hsla(0,0,0,0.5) 0 0.25rem 0.375rem
+    text-shadow hsla(0,0,0,0.5) 0 0.125rem 0.5rem
     strong
       display block
       font-weight 700
