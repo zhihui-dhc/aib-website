@@ -18,8 +18,7 @@ export default {
   data () {
     return {
       metadata: {
-        page: 'Plan',
-        title: `Plan - ${this.$t('site.title')}`,
+        title: 'Plan',
         desc: 'Information about the Cosmos fundraising plan. The details in this plan override what is currently in the whitepaper, and all other plans published prior.'
       }
     }
@@ -27,9 +26,9 @@ export default {
   head: {
     title () {
       return {
-        inner: this.metadata.page,
+        inner: this.metadata.title,
         separator: '-',
-        complement: this.$t('site.title')
+        complement: 'Cosmos - Internet of Blockchains'
       }
     },
     meta () {

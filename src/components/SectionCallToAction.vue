@@ -3,12 +3,9 @@
     <div class="section-cta-container">
       <header class="section-cta-header">
         <h2 class="section-cta-title">Cosmos Fundraiser</h2>
-        <!--<time-remaining class="section-cta-subtitle" :date="endDate" :started="fundraiseStarted" :fuzzy="!fundraiseAnnounced"></time-remaining>-->
         <div class="section-cta-subtitle">raised {{ amountRaised }} in half an hour</div>
       </header>
       <main class="section-cta-main">
-
-        <div class="section-cta-description">It ended on {{ pdtEndDate }}. Thank you for your contributions!</div>
         <btn
           class="section-cta-btn"
           size="lg"
@@ -108,7 +105,7 @@ export default {
   .section-cta-subtitle
     font-size 1.66rem
 
-  .section-cta-form, .section-cta-btn.ni-btn-wrapper .ni-btn,
+  .section-cta-form, .section-cta-btn.ni-btn-wrapper,
   .section-cta-description
     margin-bottom 2.25rem
 

@@ -40,8 +40,7 @@ export default {
   data () {
     return {
       metadata: {
-        page: 'Whitepaper',
-        title: `Whitepaper - ${this.$t('site.title')}`,
+        title: 'Whitepaper',
         desc: 'Read the whitepaper to learn everything about Cosmos: The Internet of Blockchains.'
       }
     }
@@ -49,9 +48,9 @@ export default {
   head: {
     title () {
       return {
-        inner: this.metadata.page,
+        inner: this.metadata.title,
         separator: '-',
-        complement: this.$t('site.title')
+        complement: 'Cosmos - Internet of Blockchains'
       }
     },
     meta () {

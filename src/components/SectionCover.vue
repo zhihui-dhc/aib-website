@@ -74,6 +74,7 @@ export default {
 .sc-desc
   max-width 22rem
   text-align center
+  margin 0 auto
   line-height 2
   font-weight 400
 
@@ -84,6 +85,8 @@ export default {
 
 .sc-fundraiser
   padding 0 1.5rem 3rem
+  max-width 40rem
+  margin 0 auto
   display flex
   justify-content center
   flex-flow column nowrap

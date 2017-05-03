@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Cosmos Blog]]></title><description><![CDATA[The Internet of Blockchains]]></description><link>http://cosmos.network</link><image><url>http://cosmos.network/static/favicon.png</url><title>Cosmos Blog</title><link>http://cosmos.network</link></image><generator>RSS for Node</generator><lastBuildDate>Thu, 06 Apr 2017 16:27:08 GMT</lastBuildDate><atom:link href="http://cosmos.network/static//rss.xml" rel="self" type="application/rss+xml"/><pubDate>Thu, 06 Apr 2017 16:27:08 GMT</pubDate><copyright><![CDATA[2016 Cosmos Foundation]]></copyright><language><![CDATA[en]]></language><managingEditor><![CDATA[Cosmos Foundation]]></managingEditor><webMaster><![CDATA[Cosmos Foundation]]></webMaster><ttl>60</ttl><item><title><![CDATA[Fundraiser Results]]></title><description><![CDATA[<h3>Fundraiser was a resounding success</h3>
-<p>Wow. That was remarkable. Within seconds of opening the fundraiser at 6am PDT this morning,
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Cosmos Blog]]></title><description><![CDATA[The Internet of Blockchains]]></description><link>http://cosmos.network</link><image><url>http://cosmos.network/static/favicon.png</url><title>Cosmos Blog</title><link>http://cosmos.network</link></image><generator>RSS for Node</generator><lastBuildDate>Wed, 03 May 2017 04:27:38 GMT</lastBuildDate><atom:link href="http://cosmos.network/static//rss.xml" rel="self" type="application/rss+xml"/><pubDate>Wed, 03 May 2017 04:27:38 GMT</pubDate><copyright><![CDATA[2016 Cosmos Foundation]]></copyright><language><![CDATA[en]]></language><managingEditor><![CDATA[Cosmos Foundation]]></managingEditor><webMaster><![CDATA[Cosmos Foundation]]></webMaster><ttl>60</ttl><item><title><![CDATA[Fundraiser Results]]></title><description><![CDATA[<h3>Fundraiser was a resounding success</h3>
+<p>Wow. That was remarkable. Within seconds of opening <a href="https://fundraiser.cosmos.network">the fundraiser</a> at 6am PDT this morning,
 well over a million dollars worth of BTC and ETH poured in. Obviously, many of you were very
 well prepared. Over the following roughly 30 minutes, we raised over 16M USD worth of BTC and ETH,
 smashing through our hidden cap of 17M.</p>
 <p>Thank you everyone for your amazing support!</p>
-<p>The fundraiser is now closed. It’s time for us to get back to work on building out the Internet of Blockchains!</p>
+<p><a href="https://fundraiser.cosmos.network">The fundraiser is now closed.</a> It’s time for us to get back to work on building out the Internet of Blockchains!</p>
 <h3>Proof of the Hidden Cap</h3>
 <p>Our goal for this fundraiser was to raise 10M USD. However, seeing as how quickly
 certain other fundraisers have hit their cap, we decided to allow more than 10M to be
@@ -38,20 +38,21 @@ If you lost the 12-words, your Atoms are gone forever.</p>
 <p>It will prompt you for your twelve words, and will spit out your address.
 Please make sure you enter the words correctly.</p>
 <p>If you donated in ETH, your suggested Atom balance is stored directly in the smart contract.
-To query it, enter your Cosmos address in the <code>record</code> field here: <a href="https://etherscan.io/address/0xcf965cfe7c30323e9c9e41d4e398e2167506f764#read">https://etherscan.io/address/0xcf965cfe7c30323e9c9e41d4e398e2167506f764#read</a></p>
+To query it, enter your Cosmos address in the <code>record</code> field here: <a href="https://etherscan.io/address/0xcf965cfe7c30323e9c9e41d4e398e2167506f764#readContract">https://etherscan.io/address/0xcf965cfe7c30323e9c9e41d4e398e2167506f764#readContract</a></p>
 <p>If you donated in BTC, your Cosmos address was recorded in an OP_RETURN output.
 There is no easy way to query for your suggested Atom balance yet, but if you lookup
 your transaction on <a href="http://blockchain.info">blockchain.info</a>, you should see your Cosmos address recorded in the second output,
 next to OP_RETURN. Note that <a href="http://blockchain.info">blockchain.info</a> doesn’t handle OP_RETURN, so it will say “Unable to decode output address” -
 that is fine and totally expected. To get your suggested Atom balance, just multiply the amount of BTC in the first output
-by 11635. Also note, your transaction MUST be included between block 460654 and 460660, inclusive.
+by 11635. Also note, your transaction MUST be included between block 460654 and 460661, inclusive.
 If your transaction is included in a block outside this range, your suggested Atom balance is 0.</p>
 <p>We will put up a service in the next couple days to make it super easy to query for your suggested Atom balance directly,
 whether you donated in BTC or ETH.</p>
+<p><strong>Update:</strong> The Atom balance viewer is now available on <a href="https://fundraiser.cosmos.network">the fundraiser page</a>.</p>
 <h3>Issues</h3>
 <p>If you had any issues with the fundraiser, please contact us at fundraiser@cosmos.network.</p>
 <h3>Conclusion</h3>
-<p>Thanks again for making this fundraiser an epic success! We look forward to building the Internet of Blockchains with you.</p>
+<p>Thanks again for making <a href="https://fundraiser.cosmos.network">this fundraiser</a> an epic success! We look forward to building the Internet of Blockchains with you.</p>
 ]]></description><link>http://cosmos.network/posts/fundraiser-results</link><guid isPermaLink="true">http://cosmos.network/posts/fundraiser-results</guid><dc:creator><![CDATA[The Cosmonauts]]></dc:creator></item><item><title><![CDATA[Final Cosmos Contribution Terms]]></title><description><![CDATA[<p>Last week, we said that if we make any further modifications
 to the Penultimate Draft Cosmos Contribution Terms, we would
 post a separate blog about the update.  Here is that update.</p>

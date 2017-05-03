@@ -17,8 +17,6 @@ import AppHeader from './components/AppHeader.vue'
 import AppFooter from './components/AppFooter.vue'
 import Notifications from '@nylira/vue-notifications'
 import store from './store/index.js'
-// import getLang from './scripts/getLang.js'
-// import Vue from 'vue'
 import { mapGetters } from 'vuex'
 
 export default {
@@ -35,21 +33,21 @@ export default {
   head: {
     meta () {
       return [
-        { n: 'description', c: this.$t('site.desc') },
+        { n: 'description', c: 'Cosmos is a project with an ambitious mission: To create a network of distributed ledgers that will solve long-standing problems in the cryptocurrency community.' },
 
         { n: 'twitter:card', c: 'summary' },
         { n: 'twitter:site', c: '@cosmos_hq' },
-        { n: 'twitter:title', c: this.$t('site.title') },
-        { n: 'twitter:description', c: this.$t('site.desc') },
+        { n: 'twitter:title', c: 'Cosmos - Internet of Blockchains' },
+        { n: 'twitter:description', c: 'Cosmos is a project with an ambitious mission: To create a network of distributed ledgers that will solve long-standing problems in the cryptocurrency community.' },
         { n: 'twitter:creator', c: '@cosmos_hq' },
         { p: 'twitter:image', c: require('./assets/favicon/apple-icon-180x180.png') },
 
-        { p: 'og:title', c: this.$t('site.title') },
+        { p: 'og:title', c: 'Cosmos - Internet of Blockchains' },
         { p: 'og:type', c: 'website' },
         { p: 'og:url', c: window.location.href },
         { p: 'og:image', c: require('./assets/favicon/apple-icon-180x180.png') },
-        { p: 'og:description', c: this.$t('site.desc') },
-        { p: 'og:site_name', c: this.$t('site.title') },
+        { p: 'og:description', c: 'Cosmos is a project with an ambitious mission: To create a network of distributed ledgers that will solve long-standing problems in the cryptocurrency community.' },
+        { p: 'og:site_name', c: 'Cosmos - Internet of Blockchains' },
         { p: 'fb:admins', c: '' },
 
         { n: 'msapplication-TileColor', c: '#ffffff' },
@@ -74,9 +72,6 @@ export default {
       { r: 'icon', t: 'image/png', sz: '16x16', h: require('./assets/favicon/favicon-16x16.png') },
       { r: 'manifest', h: require('./assets/favicon/manifest.json') }
     ]
-  },
-  mounted () {
-    // Vue.config.lang = getLang()
   },
   store
 }

@@ -13,11 +13,11 @@
 
   <menu class="menu-popup menu-app" v-if="activeMenuApp || desktop">
     <nav class="nav-app">
-      <router-link to="/blog" @click.native="closeMenus" exact>{{ $t('siteHeader.blog') }}</router-link>
-      <router-link to="/plan" @click.native="closeMenus" exact>{{ $t('siteHeader.plan') }}</router-link>
-      <router-link to="/faq" @click.native="closeMenus" exact>{{ $t('siteHeader.faq') }}</router-link>
-      <router-link to="/whitepaper" @click.native="closeMenus" exact>{{ $t('siteHeader.whitepaper') }}</router-link>
-      <router-link to="/about" @click.native="closeMenus" exact>{{ $t('siteHeader.about') }}</router-link>
+      <router-link to="/blog" @click.native="close" exact>Blog</router-link>
+      <router-link to="/plan" @click.native="close" exact>Plan</router-link>
+      <router-link to="/faq" @click.native="close" exact>FAQ</router-link>
+      <router-link to="/whitepaper" @click.native="close" exact>Whitepaper</router-link>
+      <router-link to="/about" @click.native="close" exact>About</router-link>
     </nav>
     <nav>
       <a href="https://github.com/cosmos/cosmos">
@@ -68,13 +68,13 @@ export default {
     }
   },
   methods: {
-    closeMenus () {
+    close () {
       this.activeMenuApp = false
       this.activeMenuFundraiser = false
       disableScroll.off()
     },
     goto (route) {
-      this.closeMenus()
+      this.close()
       // console.log('going to', route)
       this.$router.push(route)
       return
@@ -92,7 +92,7 @@ export default {
     watchWindowSize () {
       let w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0)
       if (w >= 1024) {
-        this.closeMenus()
+        this.close()
         this.desktop = true
         return
       }

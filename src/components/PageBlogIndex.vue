@@ -1,13 +1,19 @@
 <template>
   <page-split class="page-blog-index">
     <page-header
-      :title="$t('siteBlog.title')"
-      :subtitle="$t('siteBlog.subtitle')"
+      title="Blog"
+      subtitle="<a href='/static/en.xml'>Subscribe</a> for the latest updates."
       slot="header"
       type="split">
     </page-header>
     <ni-section>
-      <card-post :title="post.title" :desc="post.description" :url="'/blog/' + post.slug" :meta="post.dateFriendly + ' · ' + post.author" v-for="post in posts">
+      <card-post
+        v-for="post in posts"
+        :key="post.slug"
+        :title="post.title"
+        :desc="post.description"
+        :url="'/blog/' + post.slug"
+        :meta="post.dateFriendly + ' · ' + post.author">
       </card-post>
     </ni-section>
   </page-split>
@@ -19,7 +25,6 @@ import NiSection from './NiSection'
 import CardPost from './CardPost'
 import PageHeader from '@nylira/vue-page-header'
 import PageSplit from '@nylira/vue-page-split'
-import Vue from 'vue'
 export default {
   name: 'page-blog-index',
   components: {
@@ -30,25 +35,22 @@ export default {
   },
   computed: {
     posts () {
-      return this.allPosts[Vue.config.lang]
+      return this.allPosts
     },
     ...mapGetters(['allPosts'])
   },
-  data () {
-    return {
-      metadata: {
-        page: 'Blog',
-        title: `Blog - ${this.$t('site.title')}`,
-        desc: 'Articles written about Cosmos: The Internet of Blockchains.'
-      }
+  data: () => ({
+    metadata: {
+      title: 'Blog',
+      desc: 'Articles written about Cosmos - Internet of Blockchains.'
     }
-  },
+  }),
   head: {
     title () {
       return {
-        inner: this.metadata.page,
+        inner: this.metadata.title,
         separator: '-',
-        complement: this.$t('site.title')
+        complement: 'Cosmos - Internet of Blockchains'
       }
     },
     meta () {

@@ -46,8 +46,8 @@
           <a href="https://tendermint.com/press">Press</a>
           <a href="https://tendermint.com/contact">Contact</a>
         </section>
-      </section>
-    </div>
+      </div>
+    </footer>
   </div>
 </template>
 
