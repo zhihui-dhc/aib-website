@@ -3,7 +3,6 @@
 import Vue from 'vue'
 import VueAnalytics from 'vue-analytics'
 import VueHead from 'vue-head'
-import VueI18n from 'vue-i18n'
 import VueRouter from 'vue-router'
 
 import App from './App'
@@ -16,19 +15,13 @@ sync(store, router)
 
 Vue.use(VueAnalytics, {id: 'UA-51029217-2', router: router})
 Vue.use(VueHead)
-Vue.use(VueI18n)
 Vue.use(VueRouter)
 
-// i18n settings
-Vue.config.lang = 'en'
-Vue.config.fallbackLang = 'en'
-Vue.locale('en', require('../content/interface.json'))
+Vue.config.productionTip = false
 
-/* eslint no-unused-vars: 0 */
-const app = new Vue({
+/* eslint-disable no-new */
+new Vue({
+  el: '#app',
   router,
-  render (h) {
-    return h(App)
-  },
-  store
-}).$mount('#app')
+  render: h => h(App)
+})

@@ -1,22 +1,34 @@
 <template>
   <page-split>
     <page-header
-      :title="$t('siteAbout.title')"
-      :subtitle="$t('siteAbout.subtitle')"
+      :title="metadata.title"
+      :subtitle="metadata.desc"
       slot="header"
       type="split">
     </page-header>
     <ni-section>
       <div slot="title">Interchain Foundation Counsel</div>
-      <card-person v-for="person in ppl('interchain')" :person="person"></card-person>
+      <card-person
+        v-for="person in ppl('interchain')"
+        :key="person.slug"
+        :person="person">
+      </card-person>
     </ni-section>
     <ni-section>
       <div slot="title">All In Bits, Inc.</div>
-      <card-person v-for="person in ppl('aib')" :person="person"></card-person>
+      <card-person
+        v-for="person in ppl('aib')"
+        :key="person.slug"
+        :person="person">
+      </card-person>
     </ni-section>
     <ni-section>
       <div slot="title">Advisors</div>
-      <card-person v-for="person in ppl('advisors')" :person="person"></card-person>
+      <card-person
+        v-for="person in ppl('advisors')"
+        :key="person.slug"
+        :person="person">
+      </card-person>
     </ni-section>
   </page-split>
 </template>
@@ -41,8 +53,7 @@ export default {
   data () {
     return {
       metadata: {
-        page: 'About',
-        title: `About - ${this.$t('site.title')}`,
+        title: 'About',
         desc: 'Information about the Cosmos team.'
       }
     }
@@ -50,9 +61,9 @@ export default {
   head: {
     title () {
       return {
-        inner: this.metadata.page,
+        inner: this.metadata.title,
         separator: '-',
-        complement: this.$t('site.title')
+        complement: 'Cosmos - Internet of Blockchains'
       }
     },
     meta () {

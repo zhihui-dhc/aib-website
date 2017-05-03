@@ -3,7 +3,11 @@
     <div class="section-container">
       <h2>Latest Updates</h2>
       <div class="section-content">
-        <router-link class="post-summary" :to="'/blog/' + post.slug" v-for="post in posts">
+        <router-link
+          class="post-summary"
+          :to="'/blog/' + post.slug"
+          v-for="post in posts"
+          :key="post.slug">
           <div class="title">{{ post.title }}</div>
           <div class="date">{{ post.dateFriendly }}</div>
         </router-link>
@@ -14,19 +18,19 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import Vue from 'vue'
 export default {
   name: 'section-recent-posts',
   components: {
   },
   computed: {
     posts () {
-      return this.allPosts[Vue.config.lang].slice(0, 2)
+      if (this.allPosts) {
+        return this.allPosts.slice(0, 2)
+      }
+      return []
     },
     ...mapGetters(['allPosts'])
-  },
-  data: () => ({
-  })
+  }
 }
 </script>
 

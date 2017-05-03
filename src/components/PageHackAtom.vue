@@ -37,7 +37,11 @@
       <div class="ha-container">
         <header>Judges</header>
         <main>
-          <card-person v-for="person in ppl('hackatom')" :person="person"></card-person>
+          <card-person
+            v-for="person in ppl('hackatom')"
+            :key="person.slug"
+            :person="person">
+          </card-person>
         </main>
       </div>
     </section>
@@ -98,7 +102,7 @@ export default {
       return {
         inner: 'HackAtom NYC',
         separator: '-',
-        complement: this.$t('site.title')
+        complement: 'Cosmos - Internet of Blockchains'
       }
     }
   },

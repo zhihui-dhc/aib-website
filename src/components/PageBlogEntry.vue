@@ -12,7 +12,6 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import Vue from 'vue'
 import ArticleFooter from './ArticleFooter'
 import ArticleBody from '@nylira/vue-article-body'
 import PageHeader from '@nylira/vue-page-header'
@@ -33,7 +32,7 @@ export default {
     },
     entry () {
       let slug = this.$route.params.entry
-      return this.allPosts[Vue.config.lang].find(p => p.slug === slug)
+      return this.allPosts.find(p => p.slug === slug)
     },
     facebookUrl () {
       let url = 'https://www.facebook.com/sharer/sharer.php?u='
@@ -54,7 +53,7 @@ export default {
       return {
         inner: this.entry.title,
         separator: '-',
-        complement: this.$t('site.title')
+        complement: 'Cosmos - Internet of Blockchains'
       }
     },
     meta () {

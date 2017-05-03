@@ -23,8 +23,7 @@ export default {
   data () {
     return {
       metadata: {
-        page: 'FAQ',
-        title: `FAQ - ${this.$t('site.title')}`,
+        title: 'FAQ',
         desc: 'Read the answers to frequently asked questions about Cosmos: The Internet of Blockchains.'
       }
     }
@@ -32,9 +31,9 @@ export default {
   head: {
     title () {
       return {
-        inner: this.metadata.page,
+        inner: this.metadata.title,
         separator: '-',
-        complement: this.$t('site.title')
+        complement: 'Cosmos - Internet of Blockchains'
       }
     },
     meta () {
