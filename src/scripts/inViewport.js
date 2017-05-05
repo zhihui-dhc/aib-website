@@ -25,7 +25,7 @@ function onChange (entries) {
       }
     } else {
       el.classList.add('active')
-      visibleElements.push(el)
+      // visibleElements.push(el)
     }
   })
   // console.log('visibleElements:', visibleElements)

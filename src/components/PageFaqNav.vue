@@ -1,15 +1,17 @@
 <template>
   <div class="page-faq-nav mobile-only">
-    <toc-hidden-bar
-      v-show="!faqTocVisible"
-      @click.native="tocVisible(true)"
-      icon="list-ol">
-    </toc-hidden-bar>
-    <toc-hidden-bar
-      v-show="faqTocVisible"
-      @click.native="tocVisible(false)"
-      icon="times">
-    </toc-hidden-bar>
+    <overlay-btns>
+      <overlay-btn
+        v-show="!faqTocVisible"
+        @click.native="tocVisible(true)"
+        icon="list-ol">
+      </overlay-btn>
+      <overlay-btn
+        v-show="faqTocVisible"
+        @click.native="tocVisible(false)"
+        icon="times">
+      </overlay-btn>
+    </overlay-btns>
   </div>
 </template>
 
@@ -19,12 +21,14 @@ import watchTocClicks from '../scripts/watchTocClicks.js'
 import inViewport from '../scripts/inViewport.js'
 import visibleTocActivate from '../scripts/visibleTocActivate.js'
 import percentageScrolling from '../scripts/percentageScrolling.js'
-import TocHiddenBar from './TocHiddenBar'
+import OverlayBtns from './OverlayBtns'
+import OverlayBtn from './OverlayBtn'
 import { mapGetters } from 'vuex'
 export default {
   name: 'page-faq-nav',
   components: {
-    TocHiddenBar
+    OverlayBtns,
+    OverlayBtn
   },
   computed: {
     ...mapGetters(['faqTocVisible', 'faqElementsVisible'])

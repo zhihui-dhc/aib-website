@@ -43,17 +43,15 @@ export default {
     margin-bottom 0
 
   .title
-    font-weight bold
+    font-weight 600
     line-height 1.25
     color txt
 
-  .title, .meta
+  .title
     margin-bottom 0.25rem
 
   .meta
-    font-weight 500
     line-height 2
-    color light
 
   .desc
     max-width 40em

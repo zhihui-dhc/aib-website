@@ -1,9 +1,7 @@
 <template>
   <div class="locale-menu-container">
-    <div class="locale-menu-btn" @click="toggle(true)">
-      <i class="fa fa-times" v-if="maximized"></i>
-      <i class="fa fa-globe" v-else></i>
-    </div>
+    <overlay-btn @click.native="toggle(true)" icon="times" v-if="maximized"></overlay-btn>
+    <overlay-btn @click.native="toggle(true)" icon="globe" v-else></overlay-btn>
     <menu class="locale-menu" v-show="maximized">
       <template v-for="lang in languages">
         <router-link
@@ -25,8 +23,12 @@
 </template>
 
 <script>
+import OverlayBtn from './OverlayBtn'
 export default {
   name: 'locale-menu',
+  components: {
+    OverlayBtn
+  },
   computed: {
     dir () {
       return '/' + this.path + '/'
@@ -64,32 +66,17 @@ export default {
 @import '../styles/variables.styl'
 
 .locale-menu-container
-  position fixed
-  bottom 4rem
-  right 0
-  z-index 99
+  position relative
 
-.locale-menu-btn, .locale-menu
+.locale-menu
   background alpha(#fff, 95%)
   backdrop-filter blur(0.125rem)
   shadow()
 
-.locale-menu-btn
-  position absolute
-  bottom 0
-  right 0.5rem
-
-  width 3rem
-  height 3rem
-  border-radius 1.5rem
-  display flex
-  align-items center
-  justify-content center
-
 .locale-menu
   position absolute
-  bottom 3.5rem
-  right 0
+  bottom 3em
+  right -0.5em
   width 100vw
   max-width 20rem
   z-index 100
