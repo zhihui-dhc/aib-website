@@ -1,12 +1,15 @@
 <template>
   <div class="overlay-btn">
-    <i :class="'fa fa-' + icon"></i>
+    <i :class="cssClass"></i>
   </div>
 </template>
 
 <script>
 export default {
   name: 'overlay-btn',
+  computed: {
+    cssClass () { return 'fa fa-' + this.icon }
+  },
   props: ['icon']
 }
 </script>
@@ -29,4 +32,11 @@ export default {
 
     i.fa
       font-size 1rem
+
+@media screen and (min-width: 360px)
+  .overlay-btn
+    width 3em
+    line-height 3em
+    border-radius 1.5em
+
 </style>

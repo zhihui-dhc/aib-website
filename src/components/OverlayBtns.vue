@@ -18,7 +18,6 @@ export default {
 
 @media screen and (max-width: 1023px)
   .overlay-btns
-    width 2.5rem
     height auto
 
     position fixed
