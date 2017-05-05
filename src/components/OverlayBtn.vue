@@ -38,5 +38,4 @@ export default {
     width 3em
     line-height 3em
     border-radius 1.5em
-
 </style>
