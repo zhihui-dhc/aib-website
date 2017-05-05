@@ -10,6 +10,7 @@
     </field>
     <btn
       type="submit"
+      icon="newspaper-o"
       value="Subscribe"
       size="lg"
       id="mc-embedded-subscribe">
@@ -33,13 +34,25 @@ export default {
 
 <style lang="stylus">
 @require '../styles/variables.styl'
+
 .form-email-signup
   display flex
   width 100%
-  .ni-btn-wrapper
-    width 10rem
-  .ni-btn-wrapper .ni-btn
+
+.ni-btn-wrapper#mc-embedded-subscribe
+  content 'Subscribe'
+  width 10rem
+
+  .ni-btn
     border-left none
 
+    .ni-btn-value
+      display none
+
+@media screen and (min-width: 768px)
+  .ni-btn-wrapper#mc-embedded-subscribe
+    .ni-btn
+      .ni-btn-value
+        display inline
 </style>
 
