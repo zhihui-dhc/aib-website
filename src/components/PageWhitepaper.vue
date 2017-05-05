@@ -1,10 +1,5 @@
 <template>
   <toc-page :toc-visible="whitepaperTocVisible">
-    <locale-menu
-      slot="locale"
-      path="whitepaper"
-      :langs="['en-US', 'ko', 'pt', 'zh-CN']">
-    </locale-menu>
     <page-nav slot="nav"></page-nav>
     <text-ko v-if="$route.params.locale === 'ko'"></text-ko>
     <text-pt v-else-if="$route.params.locale === 'pt'"></text-pt>
@@ -17,7 +12,6 @@
 import { mapGetters } from 'vuex'
 import ArticleBody from '@nylira/vue-article-body'
 import PageNav from './PageWhitepaperNav'
-import LocaleMenu from './LocaleMenu'
 import TextEnUs from '../../content/en-US/WHITEPAPER.md'
 import TextKo from '../../content/ko/WHITEPAPER.md'
 import TextPt from '../../content/pt/WHITEPAPER.md'
@@ -26,7 +20,6 @@ import TocPage from './TocPage'
 export default {
   components: {
     ArticleBody,
-    LocaleMenu,
     PageNav,
     TextEnUs,
     TextKo,

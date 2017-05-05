@@ -7,6 +7,9 @@
     <article-body>
       <div v-html="entry.body"></div>
     </article-body>
+    <overlay-btns>
+      <overlay-btn icon="chevron-left" @click.native="gotoBlog"></overlay-btn>
+    </overlay-btns>
   </div>
 </template>
 
@@ -14,12 +17,16 @@
 import { mapGetters } from 'vuex'
 import ArticleFooter from './ArticleFooter'
 import ArticleBody from '@nylira/vue-article-body'
+import OverlayBtns from './OverlayBtns'
+import OverlayBtn from './OverlayBtn'
 import PageHeader from '@nylira/vue-page-header'
 export default {
   name: 'page-blog-entry',
   components: {
     ArticleFooter,
     ArticleBody,
+    OverlayBtns,
+    OverlayBtn,
     PageHeader
   },
   computed: {
@@ -64,6 +71,11 @@ export default {
         { p: 'og:title', c: this.entry.title },
         { p: 'og:description', c: this.entry.excerpt }
       ]
+    }
+  },
+  methods: {
+    gotoBlog () {
+      this.$router.push('/blog')
     }
   }
 }

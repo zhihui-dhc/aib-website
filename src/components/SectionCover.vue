@@ -164,6 +164,7 @@ export default {
     .sc-desc
       text-align left
       display block
+      margin 0
 
   .sc-fundraiser
     .sc-desc

@@ -55,18 +55,13 @@ export default {
     MenuFundraiser
   },
   computed: {
-    isTocPage () {
-      return this.$route.name === 'whitepaper' || this.$route.name === 'whitepaper-localized' || this.$route.name === 'faq' || this.$route.name === 'faq-localized' || this.$route.name === 'plan' || this.$route.name === 'plan-localized'
-    },
-    ...mapGetters(['config', 'sessionUser'])
+    ...mapGetters(['config'])
   },
-  data () {
-    return {
-      activeMenuApp: false,
-      activeMenuFundraiser: false,
-      desktop: false
-    }
-  },
+  data: () => ({
+    activeMenuApp: false,
+    activeMenuFundraiser: false,
+    desktop: false
+  }),
   methods: {
     close () {
       this.activeMenuApp = false
@@ -156,7 +151,11 @@ export default {
       height 1.125rem
       width auto
 
+    &.header-item-flush
+      padding 0
+
     &.header-item-alert
+      justify-content flex-end
       .alert
         df()
         font-size 0.5rem
@@ -265,6 +264,11 @@ export default {
             text-decoration underline
 
 @media screen and (min-width: 1024px)
+  .app-header
+    .container
+      .header-item
+        width 8rem
+
   .menu-popup.menu-app
     display flex
     padding 0 1rem
