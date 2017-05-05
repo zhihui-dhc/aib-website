@@ -31,7 +31,7 @@ export default function () {
 
   // disable percentage scrolling on smaller displays
   window.addEventListener('resize', function () {
-    console.log('disabling scrolling')
+    // console.log('disabling scrolling')
     if (document.documentElement.clientWidth < 1024) {
       window.removeEventListener('scroll', scrollListener)
     }
