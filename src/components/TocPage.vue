@@ -27,7 +27,7 @@ export default {
 @import '../styles/variables.styl'
 
 .minimal-toc
-  z-index 100
+  z-index 98
   font-family sans
   overflow hidden
   position fixed

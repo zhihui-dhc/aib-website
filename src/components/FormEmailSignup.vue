@@ -40,16 +40,13 @@ export default {
   width 100%
 
 .ni-btn-wrapper#mc-embedded-subscribe
-  content 'Subscribe'
-  width 10rem
-
   .ni-btn
     border-left none
 
     .ni-btn-value
       display none
 
-@media screen and (min-width: 768px)
+@media screen and (min-width: 640px)
   .ni-btn-wrapper#mc-embedded-subscribe
     .ni-btn
       .ni-btn-value
