@@ -4,7 +4,7 @@
       <div class="sc-logo">
         <img src="../assets/images/cosmos_logo_m.png">
         <div class="subtitle">Internet of Blockchains</div>
-        <p class="sc-desc">We will be hosting <strong>HackAtom NYC</strong> in May 2017. Stay tuned.</p>
+        <p class="sc-desc">We will be hosting <strong>HackAtom NYC</strong> after Consensus 2017. Stay tuned for details.</p>
       </div>
 
       <div class="sc-fundraiser">
@@ -31,11 +31,7 @@ export default {
   },
   computed: {
     ...mapGetters(['config'])
-  },
-  data: () => ({
-    amountRaised: '$16.8 million USD',
-    pdtEndDate: 'April 6, 2017 6:28AM PDT'
-  })
+  }
 }
 </script>
 
