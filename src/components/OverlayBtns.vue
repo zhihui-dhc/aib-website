@@ -14,20 +14,16 @@ export default {
 @import '../styles/variables.styl'
 
 .overlay-btns
-  display none
+  height auto
 
-@media screen and (max-width: 1023px)
-  .overlay-btns
-    height auto
+  position fixed
+  bottom 0.5em
+  right 0.5em
+  z-index 99
 
-    position fixed
-    bottom 0.5em
-    right 0.5em
-    z-index 99
+  display flex
+  flex-flow column nowrap
 
-    display flex
-    flex-flow column nowrap
-
-    > div
-      margin-top 0.5em
+  > div
+    margin-top 0.5em
 </style>
