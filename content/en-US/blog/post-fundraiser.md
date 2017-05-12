@@ -1,12 +1,10 @@
 ~~~
-title: "Fundraiser Results"
+title: "Fundraiser was a resounding success"
 slug: fundraiser-results
 date: 2017-04-06
 author: The Cosmonauts
 excerpt: What a fantasitc fundraiser! Thanks to everyone!
 ~~~
-
-### Fundraiser was a resounding success
 
 Wow. That was remarkable. Within seconds of opening [the fundraiser](https://fundraiser.cosmos.network) at 6am PDT this morning, 
 well over a million dollars worth of BTC and ETH poured in. Obviously, many of you were very 
