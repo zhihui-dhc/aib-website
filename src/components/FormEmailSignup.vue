@@ -38,17 +38,19 @@ export default {
 .form-email-signup
   display flex
   width 100%
+  max-width 24rem
+  margin 0 auto
 
-.ni-btn-wrapper#mc-embedded-subscribe
-  .ni-btn
+.ni-btn#mc-embedded-subscribe
+  .ni-btn-container
     border-left none
 
     .ni-btn-value
       display none
 
 @media screen and (min-width: 640px)
-  .ni-btn-wrapper#mc-embedded-subscribe
-    .ni-btn
+  .ni-btn#mc-embedded-subscribe
+    .ni-btn-container
       .ni-btn-value
         display inline
 </style>

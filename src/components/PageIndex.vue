@@ -23,8 +23,9 @@
           </div>
         </div>
         <btn
+          type="link"
           icon="file-text-o"
-          @click.native="go('/whitepaper')"
+          to="/whitepaper"
           value="Read Whitepaper"
           size="lg">
         </btn>
@@ -110,11 +111,13 @@ export default {
 
 .section-home
   &#home-intro
-    .ni-btn-wrapper
+    .ni-btn
       display block
       max-width 20rem
       width 100%
       margin 2rem auto 0
+  &:nth-of-type(2n)
+    background c-app-fg
 
   &.sh-video
     padding 3rem 0

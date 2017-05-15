@@ -24,13 +24,13 @@ Make sure you're running Node 6 LTS or higher.
 
 ``` bash
 # install dependencies
-npm install
+yarn install
 
 # write some required files
-npm run build
+yarn run build
 
 # serve with hot reload at localhost:8700
-npm run dev
+yarn run dev
 ```
 
 ## Edit Content
@@ -42,7 +42,7 @@ npm run dev
 
 # Edit FAQ, Plan, or Whitepaper 
 ./content/en-US/
-npm run build
+yarn run build
 
 ```
 ## Edit Blog Posts
@@ -67,4 +67,4 @@ Edit blog posts in the `./content/en-US/blog/` directory. Include YAML metadata 
     2. Ground beef
     3. Chili sauce
 
-After you're done editing the post, rebuild the blog files with `npm run blog`. Build the entire site with with `npm run build`.
+After you're done editing the post, rebuild the blog files with `yarn run blog`. Build the entire site with with `yarn run build`.

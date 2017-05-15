@@ -7,11 +7,12 @@
       </header>
       <main class="section-cta-main">
         <btn
+          type="anchor"
           class="section-cta-btn"
           size="lg"
           value="Fundraiser Ended"
           icon="external-link"
-          @click.native="gotoFundraiser">
+          :href="config.FUNDRAISER_URL">
         </btn>
         <div class="section-cta-description">Join <a href="http://slack.cosmos.network">#cosmos</a> on Slack to chat.</div>
       </main>
@@ -37,12 +38,7 @@ export default {
   data: () => ({
     amountRaised: '$17 million',
     pdtEndDate: 'April 6, 2017 6:28AM PDT'
-  }),
-  methods: {
-    gotoFundraiser () {
-      window.location.href = this.config.FUNDRAISER_URL
-    }
-  }
+  })
 }
 </script>
 
@@ -86,7 +82,7 @@ export default {
     color txt
     text-decoration underline
 
-.section-cta-btn.ni-btn-wrapper
+.section-cta-btn.ni-btn
   max-width 20rem
   width 100%
   margin-bottom 1.5rem
@@ -105,7 +101,7 @@ export default {
   .section-cta-subtitle
     font-size 1.66rem
 
-  .section-cta-form, .section-cta-btn.ni-btn-wrapper,
+  .section-cta-form, .section-cta-btn.ni-btn,
   .section-cta-description
     margin-bottom 2.25rem
 

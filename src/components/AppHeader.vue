@@ -20,10 +20,7 @@
       <router-link to="/about" @click.native="close" exact>About</router-link>
     </nav>
     <nav>
-      <a href="https://github.com/cosmos/cosmos">
-        <span class="label">GitHub</span>
-        <i class="fa fa-github"></i>
-      </a>
+      <a href="https://github.com/cosmos/cosmos">GitHub</a>
     </nav>
   </menu>
 
