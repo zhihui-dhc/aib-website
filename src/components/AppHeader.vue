@@ -8,7 +8,7 @@
   </div>
 
   <router-link to="/" class="header-item">
-    <img src="../assets/images/cosmos_logo_m.png" alt="Cosmos Logo">
+    <img src="../assets/images/cosmos_logo.png" alt="Cosmos Logo">
   </router-link>
 
   <menu class="menu-popup menu-app" v-if="activeMenuApp || desktop">
