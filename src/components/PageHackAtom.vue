@@ -6,7 +6,7 @@
         <p>Shanghai, NYC, SF &middot; 4 weeks &middot; $50,000</p>
         <btn
           type="anchor"
-          href="https://docs.google.com/forms/d/1WWaxvQTA6zIxf4Nbdqfj1CCq7IxlMnO3Ycpjx9D6YT8"
+          :href="formLink"
           size="lg"
           icon="clock-o"
           value="Register Now">
@@ -43,7 +43,7 @@
         <main>
           <btn
             type="anchor"
-            href="https://docs.google.com/forms/d/1WWaxvQTA6zIxf4Nbdqfj1CCq7IxlMnO3Ycpjx9D6YT8"
+            :href="formLink"
             size="lg"
             icon="clock-o"
             value="Register for HackAtom">
@@ -78,6 +78,7 @@ export default {
     ...mapGetters(['allPeople'])
   },
   data: () => ({
+    formLink: 'https://docs.google.com/forms/d/e/1FAIpQLSfLjR9_0W6AatYgbxYSVcsOx3Pw16GdV9kZDP_NgplOFHa-bA/viewform?usp=sf_link',
     mapKey: 'AIzaSyCw3IcF-q9yY_33PAFDPP4gJGfJQphN8M0'
   }),
   head: {
