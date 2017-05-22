@@ -153,7 +153,7 @@ export default {
         height 240px
   &.ha-section-join
     .ni-btn
-      display block
+      display inline-block
       margin-bottom 1.5rem
 
 @media screen and (min-width: 360px)
