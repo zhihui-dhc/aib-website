@@ -2,45 +2,73 @@
   <div class="page">
     <header class="ha-header">
       <div class="ha-container">
-        <h1>Cosmos // <strong>HackAtom</strong> 2017</h1>
-        <p>Shanghai, NYC, SF &middot; 4 weeks &middot; $50,000</p>
-        <btn size="lg" icon="clock-o" value="Register Now"></btn>
+        <h1><strong>HackAtom</strong> NYC</h1>
+        <p><i class="fa fa-calendar-o"></i> May $DATETIME, 2017</p>
       </div>
     </header>
-    <section class="ha-section about">
+    <section class="ha-section contact">
       <div class="ha-container">
-        <header>About</header>
+        <header>About HackAtom</header>
         <main>
-          <p><strong>HackAtom</strong> is searching for applicants for a $50,000 dollar hackathon. Participants will turn innovative ideas into working applications, with rewards from the Cosmos community.</p>
+          <p>HackAtom NYC is a $DURATION Cosmos hackathon on May $DATETIME, 2017. This event is aimed for hackers interested in developing applications on the Internet of Blockchains. The Cosmos team will be there to help you realize your visions.</p>
+          <p>The hackathon will be located in $VENUE in NYC during May $DATETIME. We'd love to see what you can create. Come join us!</p>
         </main>
       </div>
     </section>
-    <section class="ha-section ha-section-event">
+    <section class="ha-section">
       <div class="ha-container">
-        <header>Event</header>
+        <header>Agenda</header>
         <main>
-          <p>The HackAtom event is 4 weeks long. You’ll be part of a team, building a real product while the crypto and blockchain community watches and casts their vote on what captures their imagination. Tell the story behind your innovative idea, turn it into a working product, get other members to join and build something cool!</p>
+          <p>$TUESDAY</p>
+          <p>$WEDNESDAY</p>
         </main>
       </div>
     </section>
-    <section class="ha-section judging">
+    <section class="ha-section">
       <div class="ha-container">
-        <header>Judging</header>
+        <header>Challenges &amp; Awards</header>
         <main>
-          <p>We’re looking for a high level of professionalism and quality, and have invited experienced hackers and entrepreneurs to influence the competition right from the start. You’ll be rewarded by the judges and the community, with first prize being $50,000!</p>
+          <p>$CHALLENGE</p>
+          <p>$CHALLENGE</p>
         </main>
       </div>
     </section>
-    <section class="ha-section ha-section-join">
+    <section class="ha-section">
       <div class="ha-container">
-        <header>Join</header>
+        <header>Judges</header>
         <main>
-          <btn size="lg" icon="clock-o" value="Register for HackAtom"></btn>
+          <card-person
+            v-for="person in ppl('hackatom')"
+            :key="person.slug"
+            :person="person">
+          </card-person>
+        </main>
+      </div>
+    </section>
+    <section class="ha-section ha-section-location">
+      <div class="ha-container">
+        <header>Location</header>
+        <main>
+          <iframe
+            width="100%"
+            height="240"
+            frameborder="0"
+            style="border:0"
+            :src="locationUrl"
+            allowfullscreen>
+          </iframe>
+        </main>
+      </div>
+    </section>
+    <section class="ha-section contact">
+      <div class="ha-container">
+        <header>Questions?</header>
+        <main>
           <p>For any inquiries about sponsoring or attending the hackathon, please contact <a href="mailto:hello@tendermint.com">hello@tendermint.com</a>.</p>
         </main>
       </div>
     </section>
-    <section class="ha-section ha-section-hashtag">
+    <section class="ha-section hashtag">
       <div class="ha-container">
         <header><a href="https://twitter.com/intent/tweet?text=I'm%20going%20to%20%23hackatom2017"><i class="fa fa-twatter"></i> #hackatom2017</a></header>
       </div>
@@ -53,17 +81,18 @@ import { mapGetters } from 'vuex'
 import CardPerson from './CardPerson'
 import NiSection from './NiSection'
 import PageHeader from '@nylira/vue-page-header'
-import Btn from '@nylira/vue-button'
 export default {
   name: 'page-hackatom',
   components: {
-    Btn,
     CardPerson,
     NiSection,
     PageHeader
   },
   computed: {
-    ...mapGetters(['allPeople'])
+    ...mapGetters(['allPeople']),
+    locationUrl () {
+      return `https://www.google.com/maps/embed/v1/place?key=${this.mapKey}&q=Manhattan,+New+York,+NY`
+    }
   },
   data: () => ({
     mapKey: 'AIzaSyCw3IcF-q9yY_33PAFDPP4gJGfJQphN8M0'
@@ -113,7 +142,6 @@ export default {
     font-size 1.25em
     color c-app-fg
     text-shadow hsla(0,0,0,0.5) 0 0.125rem 0.25rem
-    margin-bottom 1.5em
     i.fa
       margin-right 0.25rem
 
@@ -139,10 +167,6 @@ export default {
       padding-bottom 0
       main
         height 240px
-  &.ha-section-join
-    .ni-btn
-      display block
-      margin-bottom 1.5rem
 
 @media screen and (min-width: 360px)
   .ha-header
@@ -186,10 +210,4 @@ export default {
       .ha-container
         main, iframe
           height 360px
-
-    &.ha-section-join
-      main
-        text-align center
-      .ni-btn
-        margin 0 auto 1.5rem
 </style>

@@ -2,6 +2,12 @@
   <div class="section-cover-links">
     <btn
       type="link"
+      to="/hackatom"
+      icon="clock-o"
+      value="HackAtom 2017 Information">
+    </btn>
+    <btn
+      type="link"
       to="/blog/fundraiser-results"
       icon="hourglass-end"
       value="Fundraiser Results">
