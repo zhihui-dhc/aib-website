@@ -2,12 +2,12 @@
   <section class="section-cover">
     <div class="sc-container">
       <div class="sc-logo">
-        <img src="../assets/images/cosmos_logo_m.png">
+        <img src="../assets/images/cosmos_logo.png">
         <div class="subtitle">Internet of Blockchains</div>
         <p class="sc-desc">We will be hosting <strong><router-link to="/hackatom">HackAtom</router-link></strong>, a $50,000 Cosmos hackathon, after Consensus 2017.</p>
       </div>
       <div class="sc-fundraiser">
-        <p class="sc-desc">We will be hosting <strong>HackAtom NYC</strong> in May 2017. Stay tuned.</p>
+        <p class="sc-desc">We will be hosting <strong><router-link to="/hackatom">HackAtom</router-link></strong>, a $50,000 Cosmos hackathon, after Consensus 2017.</p>
         <form-email-signup></form-email-signup>
         <section-cover-links></section-cover-links>
         <div class="sc-countdown">

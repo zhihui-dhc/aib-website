@@ -2,7 +2,7 @@
   <div class="page">
     <header class="ha-header">
       <div class="ha-container">
-        <h1>Cosmos // <strong>HackAtom</strong> 2017</h1>
+        <h1><strong>Hack</strong>Atom 2017</h1>
         <p>Shanghai, NYC, SF &middot; 4 weeks &middot; $50,000</p>
         <btn
           type="anchor"
@@ -104,7 +104,7 @@ export default {
   padding 1.5em
 
 .ha-header
-  background #3c405e url('../assets/images/city-bokeh.jpg') center center no-repeat
+  background #3c405e url('../assets/images/background-city.jpg') center center no-repeat
   background-size cover
   .ha-container
     padding-top 3em
@@ -115,17 +115,18 @@ export default {
     line-height 1
     letter-spacing -0.03em
     color c-app-fg
-    margin-bottom 2rem
-    text-shadow hsla(0,0,0,0.5) 0 0.125rem 0.5rem
+    margin-bottom 1rem
+    text-shadow hsla(0,0,0,0.75) 0 0.25rem 0.375rem
+    text-transform uppercase
     strong
       display block
-      font-weight 700
+      font-weight 600
       color #fff
   p
     font-size 1.25em
     color c-app-fg
-    text-shadow hsla(0,0,0,0.5) 0 0.125rem 0.25rem
-    margin-bottom 1.5em
+    text-shadow hsl(0,0,0) 0 0.125rem 0.25rem
+    margin-bottom 1.5rem
     i.fa
       margin-right 0.25rem
 
@@ -172,7 +173,6 @@ export default {
   .ha-container
     padding 3em
   .ha-header
-    text-align center
     .ha-container
       padding-top 6em
       padding-bottom 6em
@@ -181,6 +181,7 @@ export default {
         display inline
     p
       font-size 1.75em
+
   .ha-section
     header
       text-align center
