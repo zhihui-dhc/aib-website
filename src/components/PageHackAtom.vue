@@ -4,7 +4,13 @@
       <div class="ha-container">
         <h1>Cosmos // <strong>HackAtom</strong> 2017</h1>
         <p>Shanghai, NYC, SF &middot; 4 weeks &middot; $50,000</p>
-        <btn size="lg" icon="clock-o" value="Register Now"></btn>
+        <btn
+          type="link"
+          href="https://docs.google.com/forms/d/1WWaxvQTA6zIxf4Nbdqfj1CCq7IxlMnO3Ycpjx9D6YT8"
+          size="lg"
+          icon="clock-o"
+          value="Register Now">
+        </btn>
       </div>
     </header>
     <section class="ha-section about">
@@ -35,7 +41,13 @@
       <div class="ha-container">
         <header>Join</header>
         <main>
-          <btn size="lg" icon="clock-o" value="Register for HackAtom"></btn>
+          <btn
+            type="link"
+            href="https://docs.google.com/forms/d/1WWaxvQTA6zIxf4Nbdqfj1CCq7IxlMnO3Ycpjx9D6YT8"
+            size="lg"
+            icon="clock-o"
+            value="Register for HackAtom">
+          </btn>
           <p>For any inquiries about sponsoring or attending the hackathon, please contact <a href="mailto:hello@tendermint.com">hello@tendermint.com</a>.</p>
         </main>
       </div>
