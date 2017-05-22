@@ -5,7 +5,7 @@
         <h1>Cosmos // <strong>HackAtom</strong> 2017</h1>
         <p>Shanghai, NYC, SF &middot; 4 weeks &middot; $50,000</p>
         <btn
-          type="link"
+          type="anchor"
           href="https://docs.google.com/forms/d/1WWaxvQTA6zIxf4Nbdqfj1CCq7IxlMnO3Ycpjx9D6YT8"
           size="lg"
           icon="clock-o"
@@ -42,7 +42,7 @@
         <header>Join</header>
         <main>
           <btn
-            type="link"
+            type="anchor"
             href="https://docs.google.com/forms/d/1WWaxvQTA6zIxf4Nbdqfj1CCq7IxlMnO3Ycpjx9D6YT8"
             size="lg"
             icon="clock-o"
