@@ -1,54 +1,87 @@
 <template>
-  <div class="page">
+  <div class="page-hackatom">
     <header class="ha-header">
+      <div class="image"></div>
       <div class="ha-container">
-        <h1><strong>Hack</strong>Atom 2017</h1>
-        <p>Shanghai, NYC, SF &middot; 4 weeks &middot; $50,000</p>
-        <btn
-          type="anchor"
-          :href="formLink"
-          size="lg"
-          icon="clock-o"
-          value="Register Now">
-        </btn>
+        <main>
+          <h1><strong>Hack</strong>Atom 2017</h1>
+          <ul>
+            <li>June 9 &ndash; July 9</li>
+            <li>$50k to be won</li>
+            <li>Participate from anywhere</li>
+          </ul>
+          <p><strong>HackAtom</strong> is searching for individuals and teams worldwide for a $50k hackathon from June 9 &ndash; July 9, 2017. Participants will turn innovative ideas into working applications, with rewards from the Cosmos community.</p>
+          <p>HackAtom is four weeks long. You’ll build a real product while the crypto and blockchain community watches and casts their vote on what captures their imagination. Tell the story behind your innovative idea, turn it into a working product, get other members to join and build something cool!</p>
+        </main>
       </div>
     </header>
-    <section class="ha-section about">
+
+    <section class="ha-section judging">
       <div class="ha-container">
-        <header>About</header>
+        <header>Prizes</header>
         <main>
-          <p><strong>HackAtom</strong> is searching for applicants for a $50,000 dollar hackathon. Participants will turn innovative ideas into working applications, with rewards from the Cosmos community.</p>
+          <p>There is $50,000 worth of ETH to be won. The prizes for the best apps are as follows:</p>
+          <ul class="prizes">
+            <li>
+              <i class="fa fa-trophy"></i>
+              <div class="key">Grand Prize</div>
+              <div class="value">$20k worth of ETH</div>
+            </li>
+            <li>
+              <i class="fa fa-trophy"></i>
+              <div class="key">2nd Place</div>
+              <div class="value">$10k worth of ETH</div>
+            </li>
+            <li>
+              <i class="fa fa-trophy"></i>
+              <div class="key">3rd Place</div>
+              <div class="value">$6k worth of ETH</div>
+            </li>
+            <li>
+              <i class="fa fa-trophy"></i>
+              <div class="key">4th Place</div>
+              <div class="value">$40k worth of ETH</div>
+            </li>
+          </ul>
         </main>
       </div>
     </section>
-    <section class="ha-section ha-section-event">
+
+    <section class="ha-section judging">
       <div class="ha-container">
-        <header>Event</header>
+        <header>Participate from Anywhere</header>
         <main>
-          <p>The HackAtom event is 4 weeks long. You’ll be part of a team, building a real product while the crypto and blockchain community watches and casts their vote on what captures their imagination. Tell the story behind your innovative idea, turn it into a working product, get other members to join and build something cool!</p>
+          <p>To participate in the hackathon, all you need to do is:</p>
+          <ol>
+            <li>Sign up</li>
+            <li>Build your app</li>
+            <li>Submit by July 9, 2017 at 10:00 AM PDT </li>
+          </ol>
         </main>
       </div>
     </section>
+
     <section class="ha-section judging">
       <div class="ha-container">
         <header>Judging</header>
         <main>
-          <p>We’re looking for a high level of professionalism and quality, and have invited experienced hackers and entrepreneurs to influence the competition right from the start. You’ll be rewarded by the judges and the community, with first prize being $50,000!</p>
+          <p>We’re looking for a high level of professionalism and quality, and have invited experienced hackers and entrepreneurs to influence the competition right from the start. You’ll be rewarded by the judges and the community.</p>
         </main>
       </div>
     </section>
     <section class="ha-section ha-section-join">
       <div class="ha-container">
-        <header>Join</header>
+        <header>Sign Up to Particpate</header>
         <main>
+          <p>Enter your details in the form to participate in the Token Hackathon. You’ll receive further instructions on how to compete.</p>
           <btn
             type="anchor"
             :href="formLink"
             size="lg"
             icon="clock-o"
-            value="Register for HackAtom">
+            value="Sign Up for HackAtom">
           </btn>
-          <p>For any inquiries about sponsoring or attending the hackathon, please contact <a href="mailto:hello@tendermint.com">hello@tendermint.com</a>.</p>
+          <p>For inquiries about hackathon, please contact us at <a href="mailto:hello@tendermint.com">hello@tendermint.com</a>.</p>
         </main>
       </div>
     </section>
@@ -84,7 +117,7 @@ export default {
   head: {
     title () {
       return {
-        inner: 'HackAtom NYC',
+        inner: 'HackAtom 2017',
         separator: '-',
         complement: 'Cosmos - Internet of Blockchains'
       }
@@ -105,36 +138,32 @@ export default {
   padding 1.5em
 
 .ha-header
-  background #3c405e url('../assets/images/background-city.jpg') center center no-repeat
-  background-size cover
-  .ha-container
-    padding-top 3em
-    padding-bottom 3em
+  display flex
   h1
     font-size 3em
     font-weight 200
     line-height 1
     letter-spacing -0.03em
-    color c-app-fg
+    color txt
     margin-bottom 1rem
-    text-shadow hsla(0,0,0,0.75) 0 0.25rem 0.375rem
     text-transform uppercase
     strong
       display block
       font-weight 600
-      color #fff
-  p
-    font-size 1.25em
-    color c-app-fg
-    text-shadow hsl(0,0,0) 0 0.125rem 0.25rem
+  ul
     margin-bottom 1.5rem
-    i.fa
-      margin-right 0.25rem
+    li
+      font-size 1.125rem
+  p
+    font-size 1em
+    margin-bottom 1.5rem
+    &:last-child
+      margin-bottom 0
 
 .ha-section
   border-top 1px solid bc
   header
-    font-weight 500
+    font-weight 600
     font-size 1.25em
   header + main
     margin-top 0.75rem
@@ -145,57 +174,105 @@ export default {
       width 100%
     p
       margin-bottom 1.5em
-      &:last-of-type
+      &:last-child
         margin-bottom 0
+
+    .prizes
+      display flex
+      flex-flow row wrap
+      align-items center
+      justify-content center
+      padding 0.5rem
+      margin -0.5rem
+      li
+        border 1px solid bc
+        padding 1rem
+        background c-app-fg
+        margin 0.5rem
+
+        display flex
+        flex-flow column nowrap
+        align-items center
+        i.fa
+          margin-bottom 0.5rem
+          border 1px solid bc
+          width 4rem
+          height 4rem
+          border-radius 2rem
+          display flex
+          align-items center
+          justify-content center
+
+          color light
+          font-size 2rem
+        .key
+          font-weight bold
+        .value
+          color light
+    ol
+      max-width 24rem
+      margin 0 auto
+      text-align left
+      li
+        border 1px solid bc
+        font-weight bold
+        padding 1rem
+        background c-app-fg
+      li + li
+        border-top none
         
   &.ha-section-location
     .ha-container
       padding-bottom 0
       main
         height 240px
+
   &.ha-section-join
     .ni-btn
       display inline-block
       margin-bottom 1.5rem
 
-@media screen and (min-width: 360px)
-  .ha-header
-    h1
-      font-size 3.5em
-    p
-      font-size 1.5em
-  .ha-section
-    header
-      font-size 1.375em
-    header + main
-      margin-top 1rem
-
 @media screen and (min-width: 768px)
   .ha-container
     padding 3em
+
   .ha-header
+    display flex
+    flex-flow row nowrap
+    align-items stretch
+    align-content stretch
+    .image
+      background #fff url('../assets/images/hackatom-header.jpg') center center no-repeat
+      background-size cover
+      width 192px
+      height 512px
     .ha-container
-      padding-top 6em
-      padding-bottom 6em
+      flex 1
+      padding-top 3em
+      padding-bottom 3em
     h1
       strong
         display inline
-    p
-      font-size 1.75em
 
   .ha-section
     header
       text-align center
       font-size 1.75em
       font-weight bold
+
     header + main
       margin-top 1.5em
+
     main
+      text-align center
       p
-        max-width 36rem
+        max-width 40rem
         margin-left auto
         margin-right auto
-        font-size 1.25em
+      .prizes
+        li
+          padding 1.5rem
+
     &.ha-section-location
       .ha-container
         main, iframe
@@ -206,4 +283,14 @@ export default {
         text-align center
       .ni-btn
         margin 0 auto 1.5rem
+
+@media screen and (min-width: 1024px)
+  .ha-header
+    .image
+      width 384px
+
+@media screen and (min-width: 1200px)
+  .ha-header
+    .image
+      width 512px
 </style>
