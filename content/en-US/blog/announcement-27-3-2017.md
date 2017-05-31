@@ -1,5 +1,5 @@
 ~~~
-title: "New Date: Fundraiser date moved to April 6"
+title: "New Date: Fundraiser Date Moved to April 6"
 slug: fundraiser-delay-announcement-ii
 date: 2017-03-27
 author: The Cosmonauts

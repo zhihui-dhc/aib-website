@@ -1,20 +1,26 @@
 let _ = require('lodash')
 let fs = require('fs')
 let glob = require('glob')
+let hljs = require('highlight.js')
 let moment = require('moment')
-
 let toPascalCase = require('to-pascal-case')
 let yaml = require('js-yaml')
 
-let postsJsonFile = './src/store/json/posts.json'
-let rssTemplate = require('./blog-rss.js')
-
 let md = require('markdown-it')({
-  preset: 'default',
   html: true,
   linkify: true,
-  typographer: true
-})
+  typographer: true,
+  highlight (str, lang) {
+    if (lang && hljs.getLanguage(lang)) {
+      try { return hljs.highlight(lang, str).value }
+      catch (__) {}
+    }
+    return ''
+  }
+}).use(require('markdown-it-anchor'))
+
+const postsJsonFile = './src/store/json/posts.json'
+const rssTemplate = require('./blog-rss.js')
 
 function postsToObjs (files) {
   let posts = []

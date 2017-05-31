@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Cosmos Blog]]></title><description><![CDATA[The Internet of Blockchains]]></description><link>http://cosmos.network</link><image><url>http://cosmos.network/static/favicon.png</url><title>Cosmos Blog</title><link>http://cosmos.network</link></image><generator>RSS for Node</generator><lastBuildDate>Mon, 15 May 2017 13:16:15 GMT</lastBuildDate><atom:link href="http://cosmos.network/static//rss.xml" rel="self" type="application/rss+xml"/><pubDate>Mon, 15 May 2017 13:16:15 GMT</pubDate><copyright><![CDATA[2016 Cosmos Foundation]]></copyright><language><![CDATA[en]]></language><managingEditor><![CDATA[Cosmos Foundation]]></managingEditor><webMaster><![CDATA[Cosmos Foundation]]></webMaster><ttl>60</ttl><item><title><![CDATA[Fundraiser was a resounding success]]></title><description><![CDATA[<p>Wow. That was remarkable. Within seconds of opening <a href="https://fundraiser.cosmos.network">the fundraiser</a> at 6am PDT this morning,
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Cosmos Blog]]></title><description><![CDATA[The Internet of Blockchains]]></description><link>http://cosmos.network</link><image><url>http://cosmos.network/static/favicon.png</url><title>Cosmos Blog</title><link>http://cosmos.network</link></image><generator>RSS for Node</generator><lastBuildDate>Wed, 31 May 2017 05:14:54 GMT</lastBuildDate><atom:link href="http://cosmos.network/static//rss.xml" rel="self" type="application/rss+xml"/><pubDate>Wed, 31 May 2017 05:14:54 GMT</pubDate><copyright><![CDATA[2016 Cosmos Foundation]]></copyright><language><![CDATA[en]]></language><managingEditor><![CDATA[Cosmos Foundation]]></managingEditor><webMaster><![CDATA[Cosmos Foundation]]></webMaster><ttl>60</ttl><item><title><![CDATA[Fundraiser was a resounding success]]></title><description><![CDATA[<p>Wow. That was remarkable. Within seconds of opening <a href="https://fundraiser.cosmos.network">the fundraiser</a> at 6am PDT this morning,
 well over a million dollars worth of BTC and ETH poured in. Obviously, many of you were very
 well prepared. Over the following roughly 30 minutes, we raised over 16M USD worth of BTC and ETH,
 smashing through our hidden cap of 17M.</p>
 <p>Thank you everyone for your amazing support!</p>
 <p><a href="https://fundraiser.cosmos.network">The fundraiser is now closed.</a> It’s time for us to get back to work on building out the Internet of Blockchains!</p>
-<h3>Proof of the Hidden Cap</h3>
+<h3 id="proof-of-the-hidden-cap">Proof of the Hidden Cap</h3>
 <p>Our goal for this fundraiser was to raise 10M USD. However, seeing as how quickly
 certain other fundraisers have hit their cap, we decided to allow more than 10M to be
 raised within the first 6 hours. That said, we did not want to be in a position where we
@@ -20,7 +20,7 @@ The pre-image for this is the following text:</p>
 MSG: The cap for the first 6 hours is $17M USD
 </code></pre>
 <p>If you save that text in a file, say <code>cap.txt</code>, and run <code>shasum -a 256 cap.txt</code>, you can confirm the commitment.</p>
-<h3>Suggested Atom Allocations</h3>
+<h3 id="suggested-atom-allocations">Suggested Atom Allocations</h3>
 <p>For each donation, the Interchain Foundation suggests a certain number of Atoms be allocated
 to the relevant Cosmos address in the genesis block of the Cosmos Network.
 The Cosmos Network is expected to launch in Q4 2017, and Atoms will not be accessible until then.
@@ -48,9 +48,9 @@ If your transaction is included in a block outside this range, your suggested At
 <p>We will put up a service in the next couple days to make it super easy to query for your suggested Atom balance directly,
 whether you donated in BTC or ETH.</p>
 <p><strong>Update:</strong> The Atom balance viewer is now available on <a href="https://fundraiser.cosmos.network">the fundraiser page</a>.</p>
-<h3>Issues</h3>
+<h3 id="issues">Issues</h3>
 <p>If you had any issues with the fundraiser, please contact us at fundraiser@cosmos.network.</p>
-<h3>Conclusion</h3>
+<h3 id="conclusion">Conclusion</h3>
 <p>Thanks again for making <a href="https://fundraiser.cosmos.network">this fundraiser</a> an epic success! We look forward to building the Internet of Blockchains with you.</p>
 ]]></description><link>http://cosmos.network/posts/fundraiser-results</link><guid isPermaLink="true">http://cosmos.network/posts/fundraiser-results</guid><dc:creator><![CDATA[The Cosmonauts]]></dc:creator></item><item><title><![CDATA[Final Cosmos Contribution Terms]]></title><description><![CDATA[<p>Last week, we said that if we make any further modifications
 to the Penultimate Draft Cosmos Contribution Terms, we would
@@ -87,7 +87,7 @@ themselves provide the security services, and it is they who receive the newly
 issued atoms. The atoms I own may get diluted, but I get a portion of what
 dilutes them.</p>
 <p>You might be asking yourself, ‘is inflation good or bad for the atom holder’?</p>
-<h4>An Example Scenario</h4>
+<h4 id="an-example-scenario">An Example Scenario</h4>
 <p>Let’s run through an example to see the effects of the inflation rate. We’ll
 assume that 60% of the atoms are bonded. That means the owner is either
 validating herself or delegating them to another validator. If the inflation
@@ -102,7 +102,7 @@ cost of running a validator, assuming Bob runs his own validator node. If Bob
 is delegating, the inflationary atoms and transaction fees earned would have to
 cover the validator’s fees. The rewards also need to compensate for the added
 risk that Bob is taking, since those atoms could get slashed.</p>
-<h4>Staking Token vs Currency Token</h4>
+<h4 id="staking-token-vs-currency-token">Staking Token vs Currency Token</h4>
 <p>While the bitcoin token is a currency token intended to be used as a means of
 payment and medium of exchange, the atom is a staking token that is intended to
 be used as a means of consensus.  They’re more like virtual Bitcoin miners,
@@ -114,7 +114,7 @@ acquire a significant share of these tokens relative to the total amount of
 bonded staking tokens.  If on the other hand, the staking token were not as
 liquid as a medium of exchange, an attacker has to incur much steeper costs in
 order to acquire these tokens for an attack.  It may not even be possible.</p>
-<h4>Dynamically Adjustable Inflation Rate</h4>
+<h4 id="dynamically-adjustable-inflation-rate">Dynamically Adjustable Inflation Rate</h4>
 <p>In order to keep the atom a secure staking token, the Cosmos Hub will automatically
 adjust the inflation rate to incentivize a proper amount of staking.</p>
 <p>We don’t know what the optimal formula is for dynamically adjusting parameters like
@@ -127,7 +127,7 @@ inflation, so we will need to figure it out over time.</p>
 <li>If in the past 4 months more than 2/3 of atoms were bonded more than 1/2 of the time, then decrease the inflation rate.</li>
 <li>Otherwise, increase the inflation rate.</li>
 </ul>
-<h4>Governance and the Community</h4>
+<h4 id="governance-and-the-community">Governance and the Community</h4>
 <p>Finding the right solution will take the whole community to be actively engaged
 in dialog. If you have thoughts on how to design this crypto-economic system,
 reach out to us.  Once the Cosmos Network launches, atom holders can make
@@ -137,7 +137,7 @@ are always possible, and that Cosmonauts decide for themselves where to go.</p>
 will be distributed. So we thought it would be useful to give an overview and
 run through a few different scenarios that show what happens at different
 levels of funding.</p>
-<h4>Scenario 1: USD $10.2m Raised in 3 Days</h4>
+<h4 id="scenario-1-usd-102m-raised-in-3-days">Scenario 1: USD $10.2m Raised in 3 Days</h4>
 <p>If we stay below the USD $10m mark in the first 6 hours, the fundraiser will
 continue. In that case, we might hit the cap after a few days and then end the
 fundraiser process. Ending the fundraising process won’t be immediate. Some
@@ -186,7 +186,7 @@ scenario:</p>
 </tr>
 </tbody>
 </table>
-<h4>Scenario 2: USD $12.5m Raised in 6 Hours</h4>
+<h4 id="scenario-2-usd-125m-raised-in-6-hours">Scenario 2: USD $12.5m Raised in 6 Hours</h4>
 <p>If a lot of people want to participate in the fundraiser, we could go above the
 USD $10m mark in the first six hours. In case it went very high, we would end
 the fundraiser early, even before the six hours are up. But if the amount
@@ -235,7 +235,7 @@ that scenario:</p>
 </tr>
 </tbody>
 </table>
-<h4>Scenario 3: USD $7.2m Raised in 2 Weeks</h4>
+<h4 id="scenario-3-usd-72m-raised-in-2-weeks">Scenario 3: USD $7.2m Raised in 2 Weeks</h4>
 <p>It’s also perfectly possible that fewer people want to become cosmonauts and
 that we won’t reach the USD $10m cap at all. In that case, we will let the
 fundraiser run for two weeks before it ends.</p>
@@ -291,13 +291,13 @@ But then again, the more resources we have to build out the Cosmos Network and
 make sure it is capable of great cosmic adventures.</p>
 <p><sup>*</sup> <em>The USD/BTC exchange rate will be determined and fixed just prior
 to the fundraiser.</em></p>
-]]></description><link>http://cosmos.network/posts/atom-supply-distribution</link><guid isPermaLink="true">http://cosmos.network/posts/atom-supply-distribution</guid><dc:creator><![CDATA[Brian Fabian Crain]]></dc:creator></item><item><title><![CDATA[New Date: Fundraiser date moved to April 6]]></title><description><![CDATA[<h3>Fundraiser date moved to April 6, 6am PDT</h3>
+]]></description><link>http://cosmos.network/posts/atom-supply-distribution</link><guid isPermaLink="true">http://cosmos.network/posts/atom-supply-distribution</guid><dc:creator><![CDATA[Brian Fabian Crain]]></dc:creator></item><item><title><![CDATA[New Date: Fundraiser date moved to April 6]]></title><description><![CDATA[<h3 id="fundraiser-date-moved-to-april-6-6am-pdt">Fundraiser date moved to April 6, 6am PDT</h3>
 <p>Many of you have been asking us for more information and updates. The date we
 announced for our fundraiser is almost here and everybody wants to inspect the
 terms and conditions and look under the hood before embarking on this adventure
 of cosmic proportions.</p>
 <p>Well today, we finally answer your calling with several critical updates:</p>
-<h3>Limitations on US Funders and Elsewhere</h3>
+<h3 id="limitations-on-us-funders-and-elsewhere">Limitations on US Funders and Elsewhere</h3>
 <p>One of the most frequent questions we have received was whether US persons can
 participate in the fundraiser. After all, there is no reason to think that the
 proportion of potential Cosmonauts in the land of the free would be any lower
@@ -313,7 +313,7 @@ US as we discover more about state-level regulations.  The state of Washington
 finalize any such decisions by Wednesday the 29th.</p>
 <p>We will still take care to block certain countries on the OFAC sanctions list.
 The full list is <a href="https://www.treasury.gov/resource-center/sanctions/Programs/Pages/Programs.aspx">here</a>.</p>
-<h3>Fundraiser Instructions</h3>
+<h3 id="fundraiser-instructions">Fundraiser Instructions</h3>
 <p>The flow of our fundraiser has also been finished and is with our security
 auditors, Smart Contract Solutions, for a final review.  They are among the
 most experienced companies when it comes to the security of cryptocurrency
@@ -329,7 +329,7 @@ need to do is write down and remember 12 words – and you can even generate
 these words on an offline computer.</p>
 <p>We’re very happy with this new flow and believe that it’s worth the wait, so
 please bear with us while we do a final round of audits.</p>
-<h3>Fundraiser Contributor Terms</h3>
+<h3 id="fundraiser-contributor-terms">Fundraiser Contributor Terms</h3>
 <p>We are also releasing the Cosmos Contribution Terms for the fundraiser. This is
 a comprehensive document that outlines the risks, rights and obligations of the
 fundraiser. Anybody planning to participate in the fundraiser needs to
@@ -339,7 +339,7 @@ or comments.</p>
 blog post about the updates, so be sure to check our website prior to the
 fundraiser.</p>
 <p><a href="https://github.com/cosmos/cosmos/raw/master/fundraiser/Interchain%20Cosmos%20Contribution%20Terms%20-%20Penultimate%20Draft.pdf">Cosmos Contribution Terms Penultimate Draft</a></p>
-<h3>Pre-Fund Amounts</h3>
+<h3 id="pre-fund-amounts">Pre-Fund Amounts</h3>
 <p>This journey started quite a long time ago, and without the support of some
 early, irreverent Cosmonauts, we wouldn’t be here today. Thus, the foundation
 will recommend allocating a corresponding amount of atoms to those funders.</p>
@@ -353,7 +353,7 @@ substantially earlier and/or are providing crucial support in other areas. We
 raised a total of USD $1,329,472 from these 13 individuals and entities. We did
 give discounts between 15% and 25% on these contributions. The total amount of
 atoms allocated to pre-contributors and strategic partners is 16,856,718.</p>
-<h3>Bug Bounty Program Winners!</h3>
+<h3 id="bug-bounty-program-winners">Bug Bounty Program Winners!</h3>
 <p>We are happy to announce the three winners of our bug bounty program. They are
 the ones who dug into the code to find the weaknesses in our fundraiser flows.
 The winners are:</p>
@@ -378,7 +378,7 @@ Christopher with 3 bitcoins.</p>
 </ul>
 <p>When we release the new fundraiser flow on Wednesday, we look forward to
 another round of public review from the community.  Thank you for your support!</p>
-<h3>Fundraiser Date</h3>
+<h3 id="fundraiser-date">Fundraiser Date</h3>
 <p>The date we had announced for our fundraiser was this Friday, March 31. We
 would be able to go ahead with this date, but we don’t feel we have given all
 of you enough time to review the terms, familiarize yourselves with the
@@ -443,7 +443,7 @@ Cosmos that we will build together.</p>
 <p>In <a href="./cosmos-roadmap">our last post</a>, we wrote about the different components of the Cosmos Network
 and our strategic roadmap. This week we are soliciting your input and
 announcing the first of two bounties!</p>
-<h2>Whitepaper Bounty</h2>
+<h2 id="whitepaper-bounty">Whitepaper Bounty</h2>
 <p>The Cosmos whitepaper was published last summer, and we received excellent
 questions, comments, and general feedback about it. But this was rather
 informal, and we did not in any way officially onboard the feedback we
@@ -490,7 +490,7 @@ blockchains and enabling moving money seamlessly between chains.</p>
 <p>In this post, we want to share some information about the components of the
 Cosmos network and in what sequence we want to release and prioritize those
 components.</p>
-<h1>Two Funding Milestones</h1>
+<h1 id="two-funding-milestones">Two Funding Milestones</h1>
 <p>We are dividing the different components of the Cosmos Network into two
 different parts. The first part is the Cosmos Essential Software and Services.
 It contains the minimum components needed to make sure that Cosmos works and is
@@ -499,7 +499,7 @@ functional.</p>
 to realize the full vision of Cosmos. Once the basic components have been
 built, we will have another set of projects and components to build to enhance
 the usefulness, usability and connectivity of the network.</p>
-<h2>Cosmos Essential Software and Services (CESS)</h2>
+<h2 id="cosmos-essential-software-and-services-cess">Cosmos Essential Software and Services (CESS)</h2>
 <p>CESS consists of all the software necessary to deploy a minimal network that is
 deserving of the phrase “Internet of Blockchains”. At its heart lies the Cosmos
 Hub, a complete, multi-asset, proof-of-stake blockchain with built-in
@@ -541,7 +541,7 @@ on the Cosmos Network, and participating in governance.</p>
 <li><a href="https://github.com/cosmos/cosmos/blob/master/DEX.md"><strong>DEX</strong></a></li>
 <li><a href="https://github.com/tendermint/ethermint"><strong>Ethermint</strong></a></li>
 </ul>
-<h2>Auxiliary Software and Services</h2>
+<h2 id="auxiliary-software-and-services">Auxiliary Software and Services</h2>
 <p>The auxiliary software and services includes tools which contribute greatly to
 the usability, functionality, and adoption of the Cosmos Network. In
 particular, we have identified the following elements:</p>
@@ -563,15 +563,15 @@ others. Community opinion will inform which zones we build.</li>
 <li><strong>Cosmic Grants</strong>: A program, which awards grants for projects and research
 efforts for advancing the internet of blockchain vision.</li>
 </ul>
-<h1>Development Timeline</h1>
+<h1 id="development-timeline">Development Timeline</h1>
 <p>The development timeline for Cosmos is split across five eras: Synthesis,
 Atomic Era, Galactic Era, Planetary Era, and Lunar Era.</p>
-<h2>Synthesis</h2>
+<h2 id="synthesis">Synthesis</h2>
 <p>Synthesis is the period in which the Hub is built. It began over two years ago
 with the birth of the Tendermint project and continues today with the
 development of the Basecoin framework and the various plugins necessary to
 compose the Cosmos Hub.</p>
-<h2>Atomic Era</h2>
+<h2 id="atomic-era">Atomic Era</h2>
 <p>The Atomic Era starts roughly 4 months after the completion of the fundraiser.
 It is marked by the release of an Alpha version of the Cosmos Hub and a
 corresponding testnet. This includes a working form of the governance,
@@ -579,26 +579,26 @@ proof-of-stake, delegation, and IBC modules, as well as a working wallet for
 making transactions on the Cosmos Hub. The testnet will include a genesis state
 derived from the results of the fundraiser, enabling all who participated to
 test the network.</p>
-<h2>Galactic Era</h2>
+<h2 id="galactic-era">Galactic Era</h2>
 <p>The Galactic Era starts roughly 8 months after the completion of the fundraiser
 and is marked by the release of the first production version of the Cosmos Hub
 and the first blockchain to be launched in the Cosmos Network. It also marks
 the beginning of work on the Bitcoin and Ethereum bridges, as well as the DEX.
 These zones will be iterated on as newer versions are connected to the hub.</p>
-<h2>Planetary Era</h2>
+<h2 id="planetary-era">Planetary Era</h2>
 <p>The Planetary Era starts roughly 12 months after the completion of the
 fundraiser and marks the first period of stability for the Cosmos Network,
 including working Bitcoin and Ethereum bridges, and a working decentralized
 exchange. At this point, the focus will shift to usability and extensive
 documentation to in order to help new users and developers integrating with the
 Cosmos Network. Further details will be announced based on changing conditions.</p>
-<h2>Lunar Era</h2>
+<h2 id="lunar-era">Lunar Era</h2>
 <p>It is unclear when the Lunar Era starts, but it is marked by a sublime state of
 mind that results from the satisfaction of the Cosmos Network having reached
 maturity. Similar to the feeling one would experienced when sipping a cocktail
 on a beach and glancing at a coconut tree that has blossomed into its full
 beauty after a seed planted years before.</p>
-<h1>Conclusion</h1>
+<h1 id="conclusion">Conclusion</h1>
 <p>Development on the Cosmos Essential Software and Services continues at quite a clip,
 and the road ahead is well defined and full of exciting technology.
 We’re looking forward to building this out with the community and

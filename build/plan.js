@@ -1,12 +1,12 @@
+let _ = require('lodash')
 let fs = require('fs')
 let glob = require('glob')
-let md = require('markdown-it')({linkify:true})
+let md = require('markdown-it')({ linkify:true })
 let mda = require('markdown-it-anchor')
 let mdtoc = require('markdown-it-table-of-contents')
-let _ = require('lodash')
+let plan = glob.sync('../cosmos/PLAN.md')
 
-let whitepaper = glob.sync('../cosmos/PLAN.md')
-let filepath = 'src/components/content/test_plan.vue'
+const filepath = 'src/components/content/test_plan.vue'
 
 function markdownToVueData (files) {
   let posts = []
@@ -45,5 +45,5 @@ function writeVueBlogPosts (data) {
 }
 
 
-let postData = markdownToVueData(whitepaper)
+let postData = markdownToVueData(plan)
 writeVueBlogPosts(postData)

@@ -2,17 +2,17 @@
 # yarn lockfile v1
 
 
-"@nylira/vue-article-body@2.1.8":
-  version "2.1.8"
-  resolved "https://registry.yarnpkg.com/@nylira/vue-article-body/-/vue-article-body-2.1.8.tgz#28b37122ffd21f36ad1662959e9a03eed2af7389"
+"@nylira/vue-article-body@^2.2.12":
+  version "2.2.12"
+  resolved "https://registry.yarnpkg.com/@nylira/vue-article-body/-/vue-article-body-2.2.12.tgz#1a6d9a17df5794cdd9e2cbf92dd36065817374bb"
 
-"@nylira/vue-button@^3.0.15":
-  version "3.0.15"
-  resolved "https://registry.yarnpkg.com/@nylira/vue-button/-/vue-button-3.0.15.tgz#ad3126df09d43e553d61b9ef662c9af282dfafc1"
+"@nylira/vue-button@^3.1.1":
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/@nylira/vue-button/-/vue-button-3.1.1.tgz#9d3badbba6919819d5f2515164f2f2e71223f4c6"
 
-"@nylira/vue-input@2.1.2":
-  version "2.1.2"
-  resolved "https://registry.yarnpkg.com/@nylira/vue-input/-/vue-input-2.1.2.tgz#b2408dba7588e3670c7c3f066077716e9e13a3d5"
+"@nylira/vue-input@^3.0.4":
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/@nylira/vue-input/-/vue-input-3.0.4.tgz#081e2e3ad07b927f73ec0564ee667c7cdfd7ddb9"
 
 "@nylira/vue-notifications@1.0.4":
   version "1.0.4"
@@ -2364,9 +2364,9 @@ he@1.1.x, he@^1.1.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/he/-/he-1.1.1.tgz#93410fd21b009735151f8868c2f271f3427e23fd"
 
-highlight.js@^9.4.0:
-  version "9.11.0"
-  resolved "https://registry.yarnpkg.com/highlight.js/-/highlight.js-9.11.0.tgz#47f98c7399918700db2caf230ded12cec41a84ae"
+highlight.js@^9.12.0, highlight.js@^9.4.0:
+  version "9.12.0"
+  resolved "https://registry.yarnpkg.com/highlight.js/-/highlight.js-9.12.0.tgz#e6d9dbe57cbefe60751f02af336195870c90c01e"
 
 hmac-drbg@^1.0.0:
   version "1.0.1"

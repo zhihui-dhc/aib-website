@@ -36,6 +36,7 @@ export default {
 
   a
     text-decoration none !important
+    color txt
 
   ul
     padding 0 !important

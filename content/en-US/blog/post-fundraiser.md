@@ -1,5 +1,5 @@
 ~~~
-title: "Fundraiser was a resounding success"
+title: "Fundraiser Was a Resounding Success"
 slug: fundraiser-results
 date: 2017-04-06
 author: The Cosmonauts

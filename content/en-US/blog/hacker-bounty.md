@@ -1,5 +1,5 @@
 ~~~
-title: "Think Like a Hacker. Make it Big"
+title: "Think Like a Hacker. Make It Big."
 slug: fundraiser-flow-bounty
 date: 2017-03-09
 author: The Cosmonauts
