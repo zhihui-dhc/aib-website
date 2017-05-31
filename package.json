@@ -18,7 +18,7 @@
     "vue-router": "2.3.1"
   },
   "devDependencies": {
-    "@nylira/vue-article-body": "^2.2.12",
+    "@nylira/vue-article-body": "^2.2.13",
     "@nylira/vue-button": "^3.1.1",
     "@nylira/vue-input": "^3.0.4",
     "@nylira/vue-notifications": "1.0.4",
