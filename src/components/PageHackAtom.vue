@@ -40,7 +40,7 @@
             <li>
               <i class="fa fa-trophy"></i>
               <div class="key">4th Place</div>
-              <div class="value">$40k worth of ETH</div>
+              <div class="value">$4k worth of ETH</div>
             </li>
           </ul>
         </main>
