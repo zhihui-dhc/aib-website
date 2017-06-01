@@ -10,8 +10,8 @@
             <li>$50k to be won</li>
             <li>Participate from anywhere</li>
           </ul>
-          <p><strong>HackAtom</strong> is searching for individuals and teams worldwide for a $50k hackathon from June 9 &ndash; July 9, 2017. Participants will turn innovative ideas into working applications, with rewards from the Cosmos community.</p>
-          <p>HackAtom is four weeks long. You’ll build a real product while the crypto and blockchain community watches and casts their vote on what captures their imagination. Tell the story behind your innovative idea, turn it into a working product, get other members to join and build something cool!</p>
+          <p><strong>HackAtom</strong> is seeking individuals and teams worldwide for a $50k hackathon from June 9 &ndash; July 9, 2017. Participants will turn innovative ideas into working applications, with rewards from the Cosmos community.</p>
+          <p>HackAtom is four weeks long. You'll build a real product while the crypto and blockchain communities watch and cast their vote on the project that captures their imagination. Tell the story behind your innovative idea, turn it into a working product, get other members to join, and build something cool!</p>
         </main>
       </div>
     </header>
@@ -66,6 +66,8 @@
         <header>Judging</header>
         <main>
           <p>We’re looking for a high level of professionalism and quality, and have invited experienced hackers and entrepreneurs to influence the competition right from the start. You’ll be rewarded by the judges and the community.</p>
+          <card-person v-for="p in ppl" :person="p" :key="p.id">
+          </card-person>
         </main>
       </div>
     </section>
@@ -73,7 +75,7 @@
       <div class="ha-container">
         <header>Sign Up to Particpate</header>
         <main>
-          <p>Enter your details in the form to participate in the Token Hackathon. You’ll receive further instructions on how to compete.</p>
+          <p>Enter your details in the form to participate in Cosmos HackAtom. You’ll receive further instructions on how to compete.</p>
           <btn
             type="anchor"
             :href="formLink"
