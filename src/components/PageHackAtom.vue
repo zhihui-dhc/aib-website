@@ -53,10 +53,50 @@
         <main>
           <p>To participate in the hackathon, all you need to do is:</p>
           <ol>
-            <li>Sign up</li>
-            <li>Build your app</li>
-            <li>Submit by July 9, 2017 at 10:00 AM PDT </li>
+            <li>1. Sign up</li>
+            <li>2. Build your app</li>
+            <li>3. Submit by July 9, 2017 at 10:00 AM PDT </li>
           </ol>
+        </main>
+      </div>
+    </section>
+
+    <section class="ha-section meetup">
+      <div class="ha-container">
+        <header>Meetup with Cosmonauts</header>
+        <main>
+          <p>
+          <p>We're having HackAtom meetups around the world on June 9th, 7:00 PM local. If you're located near Berlin, NYC, Toronto, and San Francisco&mdash;come join us! Meet us to get free tips and support while building your app.</p>
+          <ul class="locations">
+            <li><a href="https://www.meetup.com/Cosmos-Meetup/events/240469096/" target="_blank">
+              <img src="../assets/images/hackatom/loc-berlin.jpg">
+              <div class="kv">
+                <div class="key">HackAtom Meetup</div>
+                <div class="value">Berlin</div>
+              </div>
+            </a></li>
+            <li><a href="https://www.meetup.com/Cosmos-Meetup/events/240468964/" target="_blank">
+              <img src="../assets/images/hackatom/loc-nyc.jpg">
+              <div class="kv">
+                <div class="key">HackAtom Meetup</div>
+                <div class="value">New York City</div>
+              </div>
+            </a></li>
+            <li><a href="https://www.meetup.com/Cosmos-Meetup/events/240469434/" target="_blank">
+              <img src="../assets/images/hackatom/loc-toronto.jpg">
+              <div class="kv">
+                <div class="key">HackAtom Meetup</div>
+                <div class="value">Toronto</div>
+              </div>
+            </a></li>
+            <li><a href="https://www.meetup.com/Cosmos-Meetup/events/240469301/" target="_blank">
+              <img src="../assets/images/hackatom/loc-san-francisco.jpg">
+              <div class="kv">
+                <div class="key">HackAtom Meetup</div>
+                <div class="value">San Francisco</div>
+              </div>
+            </a></li>
+          </ul>
         </main>
       </div>
     </section>
@@ -66,8 +106,8 @@
         <header>Judging</header>
         <main>
           <p>We’re looking for a high level of professionalism and quality, and have invited experienced hackers and entrepreneurs to influence the competition right from the start. You’ll be rewarded by the judges and the community.</p>
-          <card-person v-for="p in ppl" :person="p" :key="p.id">
-          </card-person>
+          <card-person-mini v-for="p in ppl('hackatom')" :person="p" :key="p.id">
+          </card-person-mini>
         </main>
       </div>
     </section>
@@ -97,7 +137,7 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import CardPerson from './CardPerson'
+import CardPersonMini from './CardPersonMini'
 import NiSection from './NiSection'
 import PageHeader from '@nylira/vue-page-header'
 import Btn from '@nylira/vue-button'
@@ -105,7 +145,7 @@ export default {
   name: 'page-hackatom',
   components: {
     Btn,
-    CardPerson,
+    CardPersonMini,
     NiSection,
     PageHeader
   },
@@ -179,6 +219,50 @@ export default {
       &:last-child
         margin-bottom 0
 
+    .locations
+      display flex
+      flex-flow column nowrap
+
+    .locations li
+      margin-bottom 0.5rem
+      display flex
+      a
+        position relative
+        flex 1
+        min-width 0
+        margin 0
+        &:before
+          content ''
+          position absolute
+          top 0
+          left 0
+          right 0
+          bottom 0
+          border 2px solid hsla(0,0,0,0.25)
+        &:hover:before
+          border-color #000
+
+        img
+          width 100%
+          display block
+
+        .kv
+          position absolute
+          bottom 0
+          left 0
+          padding 0.5rem
+          background hsla(0,0,0,0.666)
+          .key, .value
+            line-height 1
+          .key
+            font-size 0.66rem
+            color #ccc
+            margin-bottom 0.375rem
+          .value
+            font-size 1.25rem
+            color #fff
+            text-transform uppercase
+            letter-spacing 0.05em
     .prizes
       display flex
       flex-flow row wrap
@@ -244,7 +328,7 @@ export default {
     align-items stretch
     align-content stretch
     .image
-      background #fff url('../assets/images/hackatom-header.jpg') center center no-repeat
+      background #fff url('../assets/images/hackatom/header.jpg') center center no-repeat
       background-size cover
       width 192px
       height 512px
@@ -285,6 +369,18 @@ export default {
         text-align center
       .ni-btn
         margin 0 auto 1.5rem
+
+@media screen and (min-width: 768px)
+
+  .ha-section main .locations
+    flex-flow row wrap
+    align-items center
+    justify-content center
+
+  .ha-section main .locations li
+    flex 0 0 47%
+    margin 0.5rem
+    text-align left
 
 @media screen and (min-width: 1024px)
   .ha-header
