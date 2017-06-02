@@ -56,6 +56,7 @@ function writePostsJson (data) {
 }
 
 function writeRssFile (directory, data) {
+  if (directory === 'en') directory = 'feed'
   let blogRssFile = './src/assets/rss/' + directory + '.xml'
   let rss = rssTemplate(data)
   fs.writeFileSync(blogRssFile, rss, 'utf8')

@@ -7,6 +7,12 @@
     <article-body>
       <div v-html="entry.body"></div>
     </article-body>
+    <article-footer
+      :email="email"
+      :facebook="facebook"
+      :reddit="reddit"
+      :twitter="twitter">
+    </article-footer>
     <overlay-btns>
       <overlay-btn icon="chevron-left" @click.native="gotoBlog"></overlay-btn>
     </overlay-btns>
