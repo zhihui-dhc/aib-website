@@ -58,6 +58,7 @@ export default {
 .card-person-mini
   border 1px solid bc
   margin 0 0 1rem
+  text-align left
 
   &:last-of-type
     margin-bottom 0
@@ -136,29 +137,4 @@ export default {
   .card-person-mini-header .avatar
     flex 0 0 4rem
     height 4rem
-    
-@media screen and (min-width:1280px)
-  .card-person-mini
-    display flex
-    flex-flow row wrap
-
-  .card-person-mini-header
-    flex 1
-    .avatar
-      flex 0 0 5rem
-      height 5rem
-      margin-right 1rem
-    .text
-      height 5rem
-      .name
-        font-size 1.25rem
-      .title
-        font-size 1rem
-
-  .card-person-mini-main
-    flex 2
-    font-size 1rem
-    padding 1rem
-  .card-person-mini-footer
-    flex 0 0 100%
 </style>

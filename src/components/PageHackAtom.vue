@@ -106,8 +106,10 @@
         <header>Judging</header>
         <main>
           <p>We’re looking for a high level of professionalism and quality, and have invited experienced hackers and entrepreneurs to influence the competition right from the start. You’ll be rewarded by the judges and the community.</p>
-          <card-person-mini v-for="p in ppl('hackatom')" :person="p" :key="p.id">
-          </card-person-mini>
+          <div class="judges">
+            <card-person-mini v-for="p in ppl('hackatom')" :person="p" :key="p.id">
+            </card-person-mini>
+          </div>
         </main>
       </div>
     </section>
@@ -391,4 +393,10 @@ export default {
   .ha-header
     .image
       width 512px
+  .ha-section main .judges
+    display flex
+    margin 0 -0.5rem
+    .card-person-mini
+      flex 1
+      margin 0.5rem
 </style>
