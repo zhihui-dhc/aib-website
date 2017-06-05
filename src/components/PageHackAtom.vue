@@ -66,7 +66,7 @@
         <header>Meetup with Cosmonauts</header>
         <main>
           <p>
-          <p>We're having HackAtom meetups around the world on June 9th, 7:00 PM local. If you're located near Berlin, NYC, Toronto, and San Francisco&mdash;come join us! Meet us to get free tips and support while building your app.</p>
+          <p>We're having HackAtom meetups around the world on June 9th 2017, at 7:00 PM local time. If you're located nearby&mdash;please do come join us! Meet us to get free tips and support while building your app.</p>
           <ul class="locations">
             <li><a href="https://www.meetup.com/Cosmos-Berlin/" target="_blank">
               <img src="../assets/images/hackatom/loc-berlin.jpg">
