@@ -10,7 +10,7 @@
             <li>$50k to be won</li>
             <li>Participate from anywhere</li>
           </ul>
-          <p><strong>HackAtom</strong> is seeking individuals and teams worldwide for a $50k hackathon from June 9 &ndash; July 9, 2017. Participants will turn innovative ideas into working applications, with rewards from the Cosmos community.</p>
+          <p><strong>HackAtom</strong> is seeking individuals and teams worldwide for a $50k hackathon from June 9 – July 9, 2017. Participants will turn innovative ideas into working applications, with rewards from the Cosmos community.</p>
           <p>HackAtom is four weeks long. You'll build a real product while the crypto and blockchain communities watch and cast their vote on the project that captures their imagination. Tell the story behind your innovative idea, turn it into a working product, get other members to join, and build something cool!</p>
         </main>
       </div>
@@ -53,9 +53,9 @@
         <main>
           <p>To participate in the hackathon, all you need to do is:</p>
           <ol>
-            <li>1. Sign up</li>
+            <li>1. Sign up by June 24</li>
             <li>2. Build your app</li>
-            <li>3. Submit by July 9, 2017 at 10:00 AM PDT </li>
+            <li>3. Submit by July 9  at 10:00 AM PDT </li>
           </ol>
         </main>
       </div>
@@ -66,7 +66,7 @@
         <header>Meetup with Cosmonauts</header>
         <main>
           <p>
-          <p>We're having HackAtom meetups around the world on June 9th 2017, at 7:00 PM local time. If you're located nearby&mdash;please do come join us! Meet us to get free tips and support while building your app.</p>
+          <p>We're having HackAtom meetups around the world on June 9 2017, at 7:00 PM local time. If you're located nearby&mdash;please do come join us! Meet us to get free tips and support while building your app.</p>
           <ul class="locations">
             <li><a href="https://www.meetup.com/Cosmos-Berlin/" target="_blank">
               <img src="../assets/images/hackatom/loc-berlin.jpg">
@@ -139,7 +139,7 @@
             icon="clock-o"
             value="Sign Up for HackAtom">
           </btn>
-          <p>For inquiries about hackathon, please contact us at <a href="mailto:hello@tendermint.com">hello@tendermint.com</a>.</p>
+          <p><strong>The latest date to submit your plan is June 24. Start early so you'll have more time!</strong> For inquiries about hackathon, please contact us at <a href="mailto:hello@tendermint.com">hello@tendermint.com</a>.</p>
         </main>
       </div>
     </section>
@@ -210,8 +210,6 @@ export default {
       font-weight 600
   ul
     margin-bottom 1.5rem
-    li
-      font-size 1.125rem
   p
     font-size 1em
     margin-bottom 1.5rem
@@ -336,7 +334,7 @@ export default {
 
 @media screen and (min-width: 768px)
   .ha-container
-    padding 3em
+    padding 3rem
 
   .ha-header
     display flex
@@ -351,7 +349,7 @@ export default {
     .ha-container
       flex 1
       padding-top 3em
-      padding-bottom 3em
+      padding-bottom 2em
     h1
       strong
         display inline
@@ -383,6 +381,9 @@ export default {
     &.ha-section-join
       main
         text-align center
+        max-width 32rem
+        margin-left auto
+        margin-right auto
       .ni-btn
         margin 0 auto 1.5rem
 
@@ -400,6 +401,7 @@ export default {
 
 @media screen and (min-width: 1024px)
   .ha-header
+    align-items center
     .image
       width 384px
 
