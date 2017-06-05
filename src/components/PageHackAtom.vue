@@ -68,32 +68,46 @@
           <p>
           <p>We're having HackAtom meetups around the world on June 9th, 7:00 PM local. If you're located near Berlin, NYC, Toronto, and San Francisco&mdash;come join us! Meet us to get free tips and support while building your app.</p>
           <ul class="locations">
-            <li><a href="https://www.meetup.com/Cosmos-Meetup/events/240469096/" target="_blank">
+            <li><a href="https://www.meetup.com/Cosmos-Berlin/" target="_blank">
               <img src="../assets/images/hackatom/loc-berlin.jpg">
               <div class="kv">
                 <div class="key">HackAtom Meetup</div>
                 <div class="value">Berlin</div>
               </div>
             </a></li>
-            <li><a href="https://www.meetup.com/Cosmos-Meetup/events/240468964/" target="_blank">
+            <li><a href="https://www.meetup.com/Cosmos-NYC/" target="_blank">
               <img src="../assets/images/hackatom/loc-nyc.jpg">
               <div class="kv">
                 <div class="key">HackAtom Meetup</div>
                 <div class="value">New York City</div>
               </div>
             </a></li>
-            <li><a href="https://www.meetup.com/Cosmos-Meetup/events/240469434/" target="_blank">
+            <li><a href="https://www.meetup.com/Cosmos-Toronto/" target="_blank">
               <img src="../assets/images/hackatom/loc-toronto.jpg">
               <div class="kv">
                 <div class="key">HackAtom Meetup</div>
                 <div class="value">Toronto</div>
               </div>
             </a></li>
-            <li><a href="https://www.meetup.com/Cosmos-Meetup/events/240469301/" target="_blank">
+            <li><a href="https://www.meetup.com/Cosmos-SanFrancisco/" target="_blank">
               <img src="../assets/images/hackatom/loc-san-francisco.jpg">
               <div class="kv">
                 <div class="key">HackAtom Meetup</div>
                 <div class="value">San Francisco</div>
+              </div>
+            </a></li>
+            <li><a href="https://www.meetup.com/Cosmos-Seoul/events/240518515/" target="_blank">
+              <img src="../assets/images/hackatom/loc-seoul.jpg">
+              <div class="kv">
+                <div class="key">HackAtom Meetup</div>
+                <div class="value">Seoul</div>
+              </div>
+            </a></li>
+            <li><a href="https://www.meetup.com/Cosmos-Shanghai/events/240518574/" target="_blank">
+              <img src="../assets/images/hackatom/loc-shanghai.jpg">
+              <div class="kv">
+                <div class="key">HackAtom Meetup</div>
+                <div class="value">Shanghai</div>
               </div>
             </a></li>
           </ul>
