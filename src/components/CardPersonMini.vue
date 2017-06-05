@@ -134,6 +134,7 @@ export default {
 @media screen and (min-width:414px)
   .card-person-mini-main
     font-size 0.875rem
+
   .card-person-mini-header .avatar
     flex 0 0 4rem
     height 4rem

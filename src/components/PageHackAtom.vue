@@ -22,22 +22,22 @@
         <main>
           <p>There is $50,000 worth of ETH to be won. The prizes for the best apps are as follows:</p>
           <ul class="prizes">
-            <li>
+            <li class="grand">
               <i class="fa fa-trophy"></i>
               <div class="key">Grand Prize</div>
               <div class="value">$20k worth of ETH</div>
             </li>
-            <li>
+            <li class="second">
               <i class="fa fa-trophy"></i>
               <div class="key">2nd Place</div>
               <div class="value">$10k worth of ETH</div>
             </li>
-            <li>
+            <li class="third">
               <i class="fa fa-trophy"></i>
               <div class="key">3rd Place</div>
               <div class="value">$6k worth of ETH</div>
             </li>
-            <li>
+            <li class="fourth">
               <i class="fa fa-trophy"></i>
               <div class="key">4th Place</div>
               <div class="value">$4k worth of ETH</div>
@@ -47,15 +47,24 @@
       </div>
     </section>
 
-    <section class="ha-section judging">
+    <section class="ha-section participate">
       <div class="ha-container">
         <header>Participate from Anywhere</header>
         <main>
           <p>To participate in the hackathon, all you need to do is:</p>
-          <ol>
-            <li>1. Sign up by June 24</li>
-            <li>2. Build your app</li>
-            <li>3. Submit by July 9  at 10:00 AM PDT </li>
+          <ol class="participation-steps">
+            <li>
+              <div class="key">1.</div>
+              <div class="value">Sign up by June 24</div>
+            </li>
+            <li>
+              <div class="key">2.</div>
+              <div class="value">Build your app</div>
+            </li>
+            <li>
+              <div class="key">3.</div>
+              <div class="value">Submit by July 9  at 10:00 AM PDT</div>
+            </li>
           </ol>
         </main>
       </div>
@@ -145,7 +154,7 @@
     </section>
     <section class="ha-section ha-section-hashtag">
       <div class="ha-container">
-        <header><a href="https://twitter.com/intent/tweet?text=I'm%20going%20to%20%23hackatom2017"><i class="fa fa-twatter"></i> #hackatom2017</a></header>
+        <header><a href="https://twitter.com/intent/tweet?text=I'm%20going%20to%20%23hackatom2017%20@cosmos_hq"><i class="fa fa-twatter"></i> #hackatom2017</a></header>
       </div>
     </section>
   </div>
@@ -209,7 +218,9 @@ export default {
       display block
       font-weight 600
   ul
-    margin-bottom 1.5rem
+    margin 1.75rem 0
+    li
+      font-size 1.25rem
   p
     font-size 1em
     margin-bottom 1.5rem
@@ -285,14 +296,17 @@ export default {
       padding 0.5rem
       margin -0.5rem
       li
+        flex 0 0 11rem
+        height 11rem
         border 1px solid bc
-        padding 1rem
         background c-app-fg
         margin 0.5rem
 
         display flex
         flex-flow column nowrap
         align-items center
+        justify-content center
+
         i.fa
           margin-bottom 0.5rem
           border 1px solid bc
@@ -306,18 +320,38 @@ export default {
           color light
           font-size 2rem
         .key
-          font-weight bold
+          font-weight 600
         .value
           color light
-    ol
+
+        &.grand i.fa
+          background url(../assets/images/hackatom/atom-avatar.png) center center no-repeat
+          background-size cover
+          color transparent
+        &.second i.fa
+          color hsl(51,100%,50%)
+        &.third i.fa
+          color hsl(0,0%,75%)
+        &.fourth i.fa
+          color hsl(30,75.6%,60.4)
+
+    .participation-steps
       max-width 24rem
       margin 0 auto
       text-align left
       li
+        display flex
         border 1px solid bc
-        font-weight bold
-        padding 1rem
         background c-app-fg
+        align-items center
+        .key, .value
+          padding 0.75rem 1rem
+        .key
+          font-weight bold
+          width 3rem
+        .value
+          flex 1
+          border-left 1px solid bc
       li + li
         border-top none
         
@@ -339,17 +373,17 @@ export default {
   .ha-header
     display flex
     flex-flow row nowrap
-    align-items stretch
+    align-items center
     align-content stretch
     .image
       background #fff url('../assets/images/hackatom/header.jpg') center center no-repeat
       background-size cover
-      width 192px
+      width 193px
       height 512px
+      border-right 1px solid bc
     .ha-container
       flex 1
-      padding-top 3em
-      padding-bottom 2em
+      padding 0 3rem
     h1
       strong
         display inline
@@ -371,7 +405,15 @@ export default {
         margin-right auto
       .prizes
         li
-          padding 1.5rem
+          flex 0 0 13.5rem
+          height 13.5rem
+          i.fa
+            margin-bottom 1rem
+            width 6rem
+            height 6rem
+            border-radius 3rem
+          .key
+            font-size 1.25rem
 
     &.ha-section-location
       .ha-container
@@ -387,8 +429,6 @@ export default {
       .ni-btn
         margin 0 auto 1.5rem
 
-@media screen and (min-width: 768px)
-
   .ha-section main .locations
     flex-flow row wrap
     align-items center
@@ -401,18 +441,18 @@ export default {
 
 @media screen and (min-width: 1024px)
   .ha-header
-    align-items center
     .image
-      width 384px
+      width 385px
 
-@media screen and (min-width: 1200px)
-  .ha-header
-    .image
-      width 512px
   .ha-section main .judges
     display flex
     margin 0 -0.5rem
     .card-person-mini
       flex 1
       margin 0.5rem
+
+@media screen and (min-width: 1200px)
+  .ha-header
+    .image
+      width 513px
 </style>
