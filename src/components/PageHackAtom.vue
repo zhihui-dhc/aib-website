@@ -105,6 +105,7 @@
                 <div class="value">San Francisco</div>
               </div>
             </a></li>
+            <!--
             <li><a href="https://www.meetup.com/Cosmos-Seoul/events/240518515/" target="_blank">
               <img src="../assets/images/hackatom/loc-seoul.jpg">
               <div class="kv">
@@ -119,6 +120,7 @@
                 <div class="value">Shanghai</div>
               </div>
             </a></li>
+            -->
           </ul>
         </main>
       </div>
@@ -148,7 +150,7 @@
             icon="clock-o"
             value="Sign Up for HackAtom">
           </btn>
-          <p><strong>The latest date to submit your plan is June 24. Start early so you'll have more time!</strong> For inquiries about hackathon, please contact us at <a href="mailto:hello@tendermint.com">hello@tendermint.com</a>.</p>
+          <p>For inquiries about hackathon, please contact us at <a href="mailto:hello@tendermint.com">hello@tendermint.com</a>.</p>
         </main>
       </div>
     </section>
