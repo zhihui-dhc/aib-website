@@ -43,6 +43,7 @@
               <div class="value">$4k worth of ETH</div>
             </li>
           </ul>
+          <P>Five prizes of $2,000 worth of ETH will also be awarded to recognize the hardworking volunteers who help us during HackAtom.</p>
         </main>
       </div>
     </section>
