@@ -105,7 +105,6 @@
                 <div class="value">San Francisco</div>
               </div>
             </a></li>
-            <!--
             <li><a href="https://www.meetup.com/Cosmos-Seoul/events/240518515/" target="_blank">
               <img src="../assets/images/hackatom/loc-seoul.jpg">
               <div class="kv">
@@ -113,6 +112,7 @@
                 <div class="value">Seoul</div>
               </div>
             </a></li>
+            <!--
             <li><a href="https://www.meetup.com/Cosmos-Shanghai/events/240518574/" target="_blank">
               <img src="../assets/images/hackatom/loc-shanghai.jpg">
               <div class="kv">
