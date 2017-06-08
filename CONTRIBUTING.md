@@ -36,7 +36,9 @@ Then, write the blog post in Markdown. Do not include the post title in the body
 
 ### Include Images
 
-(Images are not supported yet.)
+To include an image in a blog post, place the image in the `./static/images/` directory. Link to the image in the following format:
+
+    <img alt="Application Architecture" src="../static/images/tm-app-example.png">
 
 ### Build
 Please run the following command to build the blog.
