@@ -1,6 +1,5 @@
 ~~~
 title: "Cosmos: Creating Interoperable Blockchains — Part 1"
-slug: cosmos-creating-interoperable-blockchains-part-1
 date: 2017-01-17
 author: Jae Kwon
 excerpt: Part 1 of a series on Cosmos, the internet of blockchains powered by the Tendermint consensus engine.

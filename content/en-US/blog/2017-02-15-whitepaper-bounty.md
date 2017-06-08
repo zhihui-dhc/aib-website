@@ -1,6 +1,5 @@
 ~~~
 title: "Cosmos Whitepaper Bounty"
-slug: cosmos-whitepaper-bounty
 date: 2017-02-15
 author: The Cosmonauts
 ~~~

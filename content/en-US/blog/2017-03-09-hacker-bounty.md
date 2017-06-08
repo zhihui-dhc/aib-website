@@ -1,6 +1,5 @@
 ~~~
 title: "Think Like a Hacker. Make It Big."
-slug: fundraiser-flow-bounty
 date: 2017-03-09
 author: The Cosmonauts
 excerpt: Keeping the fundraiser safe for all parties is critical and dealing with both tokens adds additional surface area for attacks and potential issues. That is why are extending, as of today, ample rewards for anyone with both the time and skills to really dig into our flows.

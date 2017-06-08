@@ -73,6 +73,7 @@
     "stylus": "0.54.5",
     "stylus-loader": "3.0.1",
     "to-pascal-case": "1.0.0",
+    "to-slug-case": "^1.0.0",
     "url-loader": "0.5.8",
     "vue-analytics": "4.1.0",
     "vue-head": "2.0.11",

@@ -3,6 +3,7 @@ let fs = require('fs')
 let glob = require('glob')
 let hljs = require('highlight.js')
 let moment = require('moment')
+let toSlugCase = require('to-slug-case')
 let toPascalCase = require('to-pascal-case')
 let yaml = require('js-yaml')
 
@@ -33,7 +34,7 @@ function postsToObjs (files) {
 
     // set the post metadata
     post.title = metaData.title
-    post.slug = metaData.slug
+    post.slug = toSlugCase(metaData.title)
     post.author = metaData.author
     post.excerpt = metaData.excerpt
     post.date = moment(metaData.date).valueOf() // ms since epoch

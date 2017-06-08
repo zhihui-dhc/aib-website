@@ -1,6 +1,5 @@
 ~~~
 title: "Fundraiser Was a Resounding Success"
-slug: fundraiser-results
 date: 2017-04-06
 author: The Cosmonauts
 excerpt: What a fantasitc fundraiser! Thanks to everyone!

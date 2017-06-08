@@ -297,7 +297,7 @@ export default {
       align-items center
       justify-content center
       padding 0.5rem
-      margin -0.5rem
+      margin -0.5rem 1rem
       li
         flex 0 0 11rem
         height 11rem

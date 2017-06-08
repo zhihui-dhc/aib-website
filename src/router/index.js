@@ -5,6 +5,12 @@ const routes = [
   { path: '/', component: r('Index') },
 
   { path: '/blog', component: r('BlogIndex') },
+  { path: '/blog/purpose-of-cosmos', redirect: '/blog/why-we-are-building-the-internet-of-blockchains' },
+  { path: '/blog/fundraiser-flow-bounty', redirect: '/blog/think-like-a-hacker-make-it-big' },
+  { path: '/blog/fundraiser-delay-announcement-ii', redirect: '/blog/new-date-fundraiser-date-moved-to-april-6' },
+  { path: '/blog/atom-supply-distribution', redirect: '/blog/atom-supply-and-distribution' },
+  { path: '/blog/inflation-cosmos', redirect: '/blog/understanding-inflation-in-cosmos' },
+  { path: '/blog/fundraiser-results', redirect: '/blog/fundraiser-was-a-resounding-success' },
   { path: '/blog/:entry', component: r('BlogEntry') },
 
   { path: '/faq', name: 'faq', component: r('Faq') },
@@ -20,6 +26,7 @@ const routes = [
 
   { path: '/hackatom', name: 'hackatom', component: r('HackAtom') },
 
+  // redirects
   // wildcards
   { path: '/404', component: r('404') },
   { path: '*', component: r('404') }

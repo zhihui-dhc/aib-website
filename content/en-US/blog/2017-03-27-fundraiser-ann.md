@@ -1,6 +1,5 @@
 ~~~
 title: "New Date: Fundraiser Date Moved to April 6"
-slug: fundraiser-delay-announcement-ii
 date: 2017-03-27
 author: The Cosmonauts
 excerpt: Many of you have been asking us for more information and updates. The date we announced for our fundraiser is almost here.

@@ -1,6 +1,5 @@
 ~~~
 title: "Cosmos Roadmap"
-slug: cosmos-roadmap
 date: 2017-02-09
 author: The Cosmonauts
 ~~~

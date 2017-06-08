@@ -1,6 +1,5 @@
 ~~~
 title: "Cosmos Fundraiser Date"
-slug: cosmos-fundraiser-date
 date: 2017-03-15
 author: The Cosmonauts
 excerpt: We have very exciting news - We are launching the Cosmos fundraiser on March 31st, at 6am PDT.

@@ -4570,6 +4570,12 @@ to-pascal-case@1.0.0:
   dependencies:
     to-space-case "^1.0.0"
 
+to-slug-case@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/to-slug-case/-/to-slug-case-1.0.0.tgz#92acde53471055a33c830719e8eb78387206d813"
+  dependencies:
+    to-space-case "^1.0.0"
+
 to-space-case@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/to-space-case/-/to-space-case-1.0.0.tgz#b052daafb1b2b29dc770cea0163e5ec0ebc9fc17"

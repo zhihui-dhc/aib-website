@@ -1,6 +1,5 @@
 ~~~
 title: "Understanding Inflation in Cosmos"
-slug: inflation-cosmos
 date: 2017-04-04
 author: The Cosmonauts
 excerpt: An examination of the inflation dynamics in Cosmos.

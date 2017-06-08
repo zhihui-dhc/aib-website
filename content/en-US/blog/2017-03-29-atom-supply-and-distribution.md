@@ -1,6 +1,5 @@
 ~~~
 title: "Atom Supply and Distribution"
-slug: atom-supply-distribution
 date: 2017-03-29
 author: Brian Fabian Crain
 excerpt: A lot of people have been asking us how many atoms will be created and how they will be distributed.
