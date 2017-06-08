@@ -291,6 +291,8 @@ export default {
             color #fff
             text-transform uppercase
             letter-spacing 0.05em
+    .prizes + p
+      margin-top 1.5rem
     .prizes
       display flex
       flex-flow row wrap
@@ -408,8 +410,8 @@ export default {
         margin-right auto
       .prizes
         li
-          flex 0 0 13.5rem
-          height 13.5rem
+          flex 0 0 12rem
+          height 12rem
           i.fa
             margin-bottom 1rem
             width 6rem
