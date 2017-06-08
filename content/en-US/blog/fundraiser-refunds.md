@@ -23,7 +23,7 @@ The fundraiser terms stated a limit of 1M USD per contributor.
 For the purpose of the fundraiser, the price of ether was $45.23 USD.
 Thus, the maximum acceptable contribution was 22109.21954455008 ETH.
 An excited member of the community disregarded this limit and sent us 40k ETH.
-So we sent back 17890 ETH, and kept the difference as an administration fee.
+So we sent back 17890 ETH, and kept the difference (0.78045544992 ETH) as an administration fee.
 
 Rest assured, we were able to secure a signed statement from the Cosmic Whale 
 requesting the funds back to the sending address and we complied.
