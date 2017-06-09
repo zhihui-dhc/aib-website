@@ -4,6 +4,10 @@
       <div class="image"></div>
       <div class="ha-container">
         <main>
+          <a class="alert" href="https://medium.com/cosmos-blockchain/cosmos-hackatom-is-underway-52c6032f6a61" target="_blank">
+            <span class="key"><i class="fa fa-exclamation-circle"></i> Update:</span>
+            <span class="value">Cosmos HackAtom is Underway &rarr;</span>
+          </a>
           <h1><strong>Hack</strong>Atom 2017</h1>
           <ul>
             <li>June 9 &ndash; July 9</li>
@@ -209,6 +213,23 @@ export default {
 
 .ha-header
   display flex
+
+  .alert
+    display block
+    border 1px solid bc
+    line-height 1.5rem
+    padding 0.25rem 0.5rem
+    margin-bottom 1rem
+    color txt
+    .key
+      text-transform uppercase
+      font-weight bold
+      font-size 0.75rem
+    .value
+      color link
+      font-weight 400
+      
+
   h1
     font-size 3em
     font-weight 200
@@ -237,11 +258,8 @@ export default {
     font-size 1.25em
   header + main
     margin-top 0.75rem
+
   main
-    iframe
-      position absolute
-      left 0
-      width 100%
     p
       margin-bottom 1.5em
       &:last-child
@@ -383,7 +401,7 @@ export default {
     .image
       background #fff url('../assets/images/hackatom/header.jpg') center center no-repeat
       background-size cover
-      width 193px
+      width 97px
       height 512px
       border-right 1px solid bc
     .ha-container
@@ -447,7 +465,7 @@ export default {
 @media screen and (min-width: 1024px)
   .ha-header
     .image
-      width 385px
+      width 257px
 
   .ha-section main .judges
     display flex
