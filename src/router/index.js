@@ -24,7 +24,8 @@ const routes = [
   { path: '/whitepaper/en-US', redirect: '/whitepaper' },
   { path: '/whitepaper/:locale', name: 'whitepaper-localized', component: r('Whitepaper') },
 
-  { path: '/hackatom', name: 'hackatom', component: r('HackAtom') },
+  { path: '/hackatom', name: 'hackatom-en-us', component: r('HackAtom') },
+  { path: '/hackatom/zh-cn', name: 'hackatom-zh-cn', component: r('HackAtomZhCn') },
 
   // redirects
   // wildcards

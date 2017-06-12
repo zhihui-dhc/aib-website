@@ -6,70 +6,70 @@
       <div class="ha-container">
         <main>
           <a class="alert" href="https://medium.com/cosmos-blockchain/cosmos-hackatom-is-underway-52c6032f6a61" target="_blank">
-            <span class="key"><i class="fa fa-exclamation-circle"></i> Update:</span>
-            <span class="value">Cosmos HackAtom is Underway &rarr;</span>
+            <span class="key"><i class="fa fa-exclamation-circle"></i> 更新：</span>
+            <span class="value">CosmosHackAtom正在进行 &rarr;</span>
           </a>
           <h1><strong>Hack</strong>Atom 2017</h1>
           <ul>
-            <li>June 9 &ndash; July 9</li>
-            <li>$50k to be won</li>
-            <li>Participate from anywhere</li>
+            <li>6月9日-7月9日</li>
+            <li>来自世界各地的参与者</li>
+            <li>5万美元的奖金等待您的获取</li>
           </ul>
-          <p><strong>HackAtom</strong> is seeking individuals and teams worldwide for a $50k hackathon from June 9 – July 9, 2017. Participants will turn innovative ideas into working applications, with rewards from the Cosmos community.</p>
-          <p>HackAtom is four weeks long. You'll build a real product while the crypto and blockchain communities watch and cast their vote on the project that captures their imagination. Tell the story behind your innovative idea, turn it into a working product, get other members to join, and build something cool!</p>
+          <p><strong>HackAtom</strong>正在全球范围内寻找个人或者团队来参加总奖金高达5万美金的黑客马拉松活动。活动时间从6月9日至7月9日。参与者将创新的想法转化为可运行的应用程序，就能从Cosmos社区赢取奖金。</p>
+          <p>HackAtom大赛为期四周，期间您将创建一个真正的产品。加密和区块链社区会观赛并投票，选出他们满意的项目。说出你创新想法背后的故事，并把它变成一个有用的产品。同时，带动大家一起参与，共同打造超酷的东西。</p>
         </main>
       </div>
     </header>
 
     <section class="ha-section judging">
       <div class="ha-container">
-        <header>Prizes</header>
+        <header>奖品</header>
         <main>
-          <p>There is $50,000 worth of ETH to be won. The prizes for the best apps are as follows:</p>
+          <p>活动奖金是价值5万美金的以太币（ETH）。奖金对获奖应用的分配方案如下：</p>
           <ul class="prizes">
             <li class="grand">
               <i class="fa fa-trophy"></i>
-              <div class="key">Grand Prize</div>
-              <div class="value">$20k worth of ETH</div>
+              <div class="key">大奖</div>
+              <div class="value">价值2万美金的以太币</div>
             </li>
             <li class="second">
               <i class="fa fa-trophy"></i>
-              <div class="key">2nd Place</div>
-              <div class="value">$10k worth of ETH</div>
+              <div class="key">第二名</div>
+              <div class="value">价值 1万美金的以太币</div>
             </li>
             <li class="third">
               <i class="fa fa-trophy"></i>
-              <div class="key">3rd Place</div>
-              <div class="value">$6k worth of ETH</div>
+              <div class="key">第三名</div>
+              <div class="value">价值6000美金的以太币</div>
             </li>
             <li class="fourth">
               <i class="fa fa-trophy"></i>
-              <div class="key">4th Place</div>
-              <div class="value">$4k worth of ETH</div>
+              <div class="key">第四名</div>
+              <div class="value">价值4000美金的以太币</div>
             </li>
           </ul>
-          <P>Five prizes of $2,000 worth of ETH will also be awarded to recognize the hardworking volunteers who help us during HackAtom.</p>
+          <P>还有5份（每份价值2千美金的以太币）奖品，奖励给那些我们认可的在活动期间辛苦工作的志愿者。</p>
         </main>
       </div>
     </section>
 
     <section class="ha-section participate">
       <div class="ha-container">
-        <header>Participate from Anywhere</header>
+        <header>从世界各地参与</header>
         <main>
-          <p>To participate in the hackathon, all you need to do is:</p>
+          <p>想要参与黑客马拉松（hackathon），你需做到以下几点：</p>
           <ol class="participation-steps">
             <li>
               <div class="key">1.</div>
-              <div class="value">Sign up by June 24</div>
+              <div class="value">6月24日前注册</div>
             </li>
             <li>
               <div class="key">2.</div>
-              <div class="value">Build your app</div>
+              <div class="value">构建你的应用</div>
             </li>
             <li>
               <div class="key">3.</div>
-              <div class="value">Submit by July 9  at 10:00 AM PDT</div>
+              <div class="value">于太平洋时间七月九日上午十时前提交</div>
             </li>
           </ol>
         </main>
@@ -78,9 +78,9 @@
 
     <section class="ha-section meetup">
       <div class="ha-container">
-        <header>Meetup with Cosmonauts</header>
+        <header>与Cosmonauts聚会</header>
         <main>
-          <p>We're having HackAtom meetups around the world on June 9 2017, at 7:00 PM local time. If you're located nearby&mdash;please do come join us! Meet us to get free tips and support while building your app.</p>
+          <p>2017年6月9日当地时间下午7:00，我们将在世界各地举办HackAtom聚会。如果你在附近，请来加入我们！在构建应用时，请与我们联系，以获取免费提示和支持。</p>
           <ul class="locations">
             <li><a href="https://www.meetup.com/Cosmos-Berlin/" target="_blank">
               <img src="../assets/images/hackatom/loc-berlin.jpg">
@@ -133,9 +133,9 @@
 
     <section class="ha-section judging">
       <div class="ha-container">
-        <header>Judging</header>
+        <header>评审</header>
         <main>
-          <p>We’re looking for a high level of professionalism and quality, and have invited experienced hackers and entrepreneurs to influence the competition right from the start. You’ll be rewarded by the judges and the community.</p>
+          <p>我们期待的是高水平的专业性和质量，因此从一开始就邀请了经验丰富的黑客和企业家来影响本次竞赛。你将会获得来自社区与评审员的专业评审。</p>
           <div class="judges">
             <card-person-mini v-for="p in ppl('hackatom')" :person="p" :key="p.id">
             </card-person-mini>
@@ -145,17 +145,17 @@
     </section>
     <section class="ha-section ha-section-join">
       <div class="ha-container">
-        <header>Sign Up to Particpate</header>
+        <header>报名参加</header>
         <main>
-          <p>Enter your details in the form to participate in Cosmos HackAtom. You’ll receive further instructions on how to compete.</p>
+          <p>在表单中，填写你的详细信息，并提交，以参与CosmosHackAtom。您将收到关于如何比赛的进一步说明。</p>
           <btn
             type="anchor"
             :href="hackathonLink"
             size="lg"
             icon="clock-o"
-            value="Sign Up for HackAtom">
+            value="注册参与HackAtom">
           </btn>
-          <p>For inquiries about hackathon, please contact us at <a href="mailto:hello@tendermint.com">hello@tendermint.com</a>.</p>
+          <p>想要咨询黑客马拉松活动，请通过邮件与我们联系：<a href="mailto:hello@tendermint.com">hello@tendermint.com</a>。</p>
         </main>
       </div>
     </section>
@@ -169,11 +169,11 @@
 
 <script>
 import { mapGetters } from 'vuex'
+import Btn from '@nylira/vue-button'
 import CardPersonMini from './CardPersonMini'
 import LocaleMenu from './PageHackAtomLocaleMenu'
 import NiSection from './NiSection'
 import PageHeader from '@nylira/vue-page-header'
-import Btn from '@nylira/vue-button'
 export default {
   name: 'page-hackatom',
   components: {
