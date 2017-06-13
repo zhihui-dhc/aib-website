@@ -61,7 +61,7 @@
           <ol class="participation-steps">
             <li>
               <div class="key">1.</div>
-              <div class="value">Sign up by June 24</div>
+              <div class="value">Sign up</div>
             </li>
             <li>
               <div class="key">2.</div>

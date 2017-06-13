@@ -61,7 +61,7 @@
           <ol class="participation-steps">
             <li>
               <div class="key">1.</div>
-              <div class="value">6月24日前注册</div>
+              <div class="value">注册</div>
             </li>
             <li>
               <div class="key">2.</div>
