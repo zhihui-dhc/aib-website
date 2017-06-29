@@ -1,7 +1,7 @@
 ~~~
 title: "Fundraiser Refunds"
 slug: fundraiser-refunds
-date: 2017-05-30
+date: 2017-06-29
 author: The Cosmonauts
 excerpt: An update on fundraiser refunds
 ~~~
