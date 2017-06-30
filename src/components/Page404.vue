@@ -9,7 +9,7 @@
       <p><strong>Whoops!</strong> The page you visited either does not exist or has been deleted in a website reshuffle. We're sorry for the inconvenience. Try visiting one of these pages below:</p>
       <ul>
         <li><router-link :to="'/'">Home</router-link></li>
-        <li><router-link :to="'/blog'">Blog</router-link></li>
+        <li><a href="https://blog.cosmos.network" target="_blank">Blog</a></li>
         <li><router-link :to="'/plan'">Plan</router-link></li>
         <li><router-link :to="'/faq'">FAQ</router-link></li>
         <li><router-link :to="'/whitepaper'">Whitepaper</router-link></li>

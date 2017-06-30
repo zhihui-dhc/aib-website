@@ -2,7 +2,7 @@
   <div class="page-index">
     <section-cover></section-cover>
     <section-media></section-media>
-    <section-recent-posts></section-recent-posts>
+    <!--<section-recent-posts></section-recent-posts>-->
     <section class="section-home sh-video">
       <h2>What is Cosmos?</h2>
       <iframe src="https://player.vimeo.com/video/183530279?title=0&byline=0&portrait=0" width="1024" height="576" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>

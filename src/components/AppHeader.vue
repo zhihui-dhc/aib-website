@@ -13,7 +13,8 @@
 
   <menu class="menu-popup menu-app" v-if="activeMenuApp || desktop">
     <nav class="nav-app">
-      <router-link to="/blog" @click.native="close" exact>Blog</router-link>
+      <a href="https://blog.cosmos.network"
+        @click.native="close" target="_blank">Blog</a>
       <router-link to="/plan" @click.native="close" exact>Plan</router-link>
       <router-link to="/faq" @click.native="close" exact>FAQ</router-link>
       <router-link to="/whitepaper" @click.native="close" exact>Whitepaper</router-link>

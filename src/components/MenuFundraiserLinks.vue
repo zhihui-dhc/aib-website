@@ -3,10 +3,11 @@
     <a class="mf-link" :href="config.FUNDRAISER_URL">
       <i class="fa fa-external-link"></i> <strong>Open Fundraiser</strong>
     </a>
-    <router-link class="mf-link" to="/blog/fundraiser-results">
+
+    <a class="mf-link" href="https://blog.cosmos.network/fundraiser-was-a-resounding-success-bf378b96fe00" target="_blank">
       <i class="fa fa-hourglass-end"></i>
       Fundraiser Results
-    </router-link>
+    </a>
     <!--
     <a class="mf-link" :href="docs.btc">
       <i class="fa fa-file-pdf-o"></i> BTC Tutorial

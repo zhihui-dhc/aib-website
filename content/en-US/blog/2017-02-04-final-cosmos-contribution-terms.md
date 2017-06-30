@@ -1,6 +1,6 @@
 ~~~
 title: "Final Cosmos Contribution Terms"
-date: 2017-04-04
+date: 2017-02-04
 author: The Cosmonauts
 excerpt: A lot of people have been asking us how many atoms will be created and how they will be distributed.
 ~~~

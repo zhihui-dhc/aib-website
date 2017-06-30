@@ -13,7 +13,7 @@
         <section>
           <header>Cosmos</header>
           <nav>
-            <router-link :to="'/blog'">Blog</router-link>
+            <a href="https://blog.cosmos.network" target="_blank">Blog</a>
             <router-link :to="'/plan'">Plan</router-link>
             <router-link :to="'/faq'">FAQ</router-link>
             <router-link :to="'/whitepaper'">Whitepaper</router-link>
