@@ -5,6 +5,7 @@ const routes = [
   { path: '/', component: r('Index') },
 
   { path: '/blog', component: r('BlogIndex') },
+
   { path: '/blog/purpose-of-cosmos', redirect: '/blog/why-we-are-building-the-internet-of-blockchains' },
   { path: '/blog/fundraiser-flow-bounty', redirect: '/blog/think-like-a-hacker-make-it-big' },
   { path: '/blog/fundraiser-delay-announcement-ii', redirect: '/blog/new-date-fundraiser-date-moved-to-april-6' },

@@ -3,6 +3,7 @@ title: "New Date: Fundraiser Date Moved to April 6"
 date: 2017-03-27
 author: The Cosmonauts
 excerpt: Many of you have been asking us for more information and updates. The date we announced for our fundraiser is almost here.
+redirect: https://blog.cosmos.network/new-date-fundraiser-date-moved-to-april-6-a2214e004fdc
 ~~~
 
 ### Fundraiser date moved to April 6, 6am PDT

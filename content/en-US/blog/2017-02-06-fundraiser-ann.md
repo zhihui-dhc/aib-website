@@ -3,6 +3,7 @@ title: "Fundraiser Delay Announcement"
 date: 2017-02-06
 author: Jae Kwon
 excerpt: Although February 28th was the most recently cited launch date for our Cosmos fundraising event, after careful consideration we've decided to push this event back a bit further.
+redirect: https://blog.cosmos.network/fundraiser-delay-announcement-602268200894
 ~~~
 
 Dear backers and long term supporters,

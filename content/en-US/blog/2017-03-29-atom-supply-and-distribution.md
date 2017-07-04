@@ -3,6 +3,7 @@ title: "Atom Supply and Distribution"
 date: 2017-03-29
 author: Brian Fabian Crain
 excerpt: A lot of people have been asking us how many atoms will be created and how they will be distributed.
+redirect: https://blog.cosmos.network/atom-supply-and-distribution-b4dd3404ff26
 ~~~
 
 A lot of people have been asking us how many atoms will be created and how they

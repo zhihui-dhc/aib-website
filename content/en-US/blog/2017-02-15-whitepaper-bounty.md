@@ -2,6 +2,7 @@
 title: "Cosmos Whitepaper Bounty"
 date: 2017-02-15
 author: The Cosmonauts
+redirect: https://blog.cosmos.network/cosmos-whitepaper-bounty-d7ad84d434da
 ~~~
 
 Out here in Cosmos land, we have been hard at work getting everything prepared

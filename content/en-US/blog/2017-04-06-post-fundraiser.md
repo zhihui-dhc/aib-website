@@ -3,6 +3,7 @@ title: "Fundraiser Was a Resounding Success"
 date: 2017-04-06
 author: The Cosmonauts
 excerpt: What a fantasitc fundraiser! Thanks to everyone!
+redirect: https://blog.cosmos.network/fundraiser-was-a-resounding-success-bf378b96fe00
 ~~~
 
 Wow. That was remarkable. Within seconds of opening [the fundraiser](https://fundraiser.cosmos.network) at 6am PDT this morning, 

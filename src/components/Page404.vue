@@ -3,6 +3,7 @@
     <page-header
       title="Error 404"
       subtitle="Page Not Found"
+      slot="header"
       type="split">
     </page-header>
     <article-body>

@@ -2,6 +2,7 @@
 title: "Cosmos Roadmap"
 date: 2017-02-09
 author: The Cosmonauts
+redirect: https://blog.cosmos.network/cosmos-roadmap-28d7a478df51
 ~~~
 
 In Cosmos land, we have been hard at work with getting everything ready for the

@@ -3,6 +3,7 @@ title: "Understanding Inflation in Cosmos"
 date: 2017-04-04
 author: The Cosmonauts
 excerpt: An examination of the inflation dynamics in Cosmos.
+redirect: https://blog.cosmos.network/understanding-inflation-in-cosmos-622651c83303
 ~~~
 
 Many people have asked us how the Cosmos inflation rate works. Inflation is a

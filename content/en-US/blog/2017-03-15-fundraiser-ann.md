@@ -3,6 +3,7 @@ title: "Cosmos Fundraiser Date"
 date: 2017-03-15
 author: The Cosmonauts
 excerpt: We have very exciting news - We are launching the Cosmos fundraiser on March 31st, at 6am PDT.
+redirect: https://blog.cosmos.network/cosmos-fundraiser-date-6510c3265486
 ~~~
 
 > NOTICE: The fundraiser launch date has been moved to **April 6th, 6am PDT**. [Learn more](./fundraiser-delay-announcement-ii)

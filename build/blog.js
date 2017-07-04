@@ -37,6 +37,7 @@ function postsToObjs (files) {
     post.slug = toSlugCase(metaData.title)
     post.author = metaData.author
     post.excerpt = metaData.excerpt
+    post.redirect = metaData.redirect
     post.date = moment(metaData.date).valueOf() // ms since epoch
     post.description = metaData.description
     // post.dateFriendly = moment(post.date, 'x').format('LL')

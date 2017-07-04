@@ -35,6 +35,9 @@ export default {
     OverlayBtn,
     PageHeader
   },
+  created () {
+    window.location.replace(this.entry.redirect)
+  },
   computed: {
     entrySubtitle () {
       let value = this.entry.dateFriendly
@@ -47,13 +50,23 @@ export default {
       let slug = this.$route.params.entry
       return this.allPosts.find(p => p.slug === slug)
     },
-    facebookUrl () {
+    email () {
+      let url = 'mailto:?Subject='
+      url += `Check out this Cosmos blog post: ${this.entry.title}`
+      return url
+    },
+    facebook () {
       let url = 'https://www.facebook.com/sharer/sharer.php?u='
       if (this.entry) url += `${this.entry.title} ${window.location.href}`
       else url += ` ${window.location.href}`
       return url
     },
-    twitterUrl () {
+    reddit () {
+      let url = `http://www.reddit.com/submit?url=${window.location.href}&title=`
+      url += this.entry.title
+      return url
+    },
+    twitter () {
       let url = 'https://twitter.com/home?status='
       if (this.entry) url += `${this.entry.title} ${window.location.href}`
       else url += ` ${window.location.href}`

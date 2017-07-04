@@ -12,7 +12,8 @@
         :key="post.slug"
         :title="post.title"
         :desc="post.description"
-        :url="'/blog/' + post.slug"
+        :url-old="'/blog/' + post.slug"
+        :url="post.redirect"
         :meta="post.dateFriendly + ' · ' + post.author">
       </card-post>
     </ni-section>
@@ -38,6 +39,9 @@ export default {
       return this.allPosts
     },
     ...mapGetters(['allPosts'])
+  },
+  created () {
+    window.location.replace('https://blog.cosmos.network')
   },
   data: () => ({
     metadata: {
