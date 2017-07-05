@@ -15,7 +15,7 @@
             <li>$50k to be won</li>
             <li>Participate from anywhere</li>
           </ul>
-          <p><strong>HackAtom</strong> is seeking individuals and teams worldwide for a $50k hackathon from June 9 – July 9, 2017. Participants will turn innovative ideas into working applications, with rewards from the Cosmos community.</p>
+          <p><strong>HackAtom</strong> is seeking individuals and teams worldwide for a $50k open-source hackathon from June 9 – July 9, 2017. Participants will turn innovative ideas into working applications, with rewards from the Cosmos community.</p>
           <p>HackAtom is four weeks long. You'll build a real product while the crypto and blockchain communities watch and cast their vote on the project that captures their imagination. Tell the story behind your innovative idea, turn it into a working product, get other members to join, and build something cool!</p>
         </main>
       </div>
@@ -25,7 +25,7 @@
       <div class="ha-container">
         <header>Prizes</header>
         <main>
-          <p>There is $50,000 worth of ETH to be won. The prizes for the best apps are as follows:</p>
+          <p>There is $50,000 worth of ETH to be won. The prizes for the best open source apps are as follows:</p>
           <ul class="prizes">
             <li class="grand">
               <i class="fa fa-trophy"></i>
@@ -65,7 +65,7 @@
             </li>
             <li>
               <div class="key">2.</div>
-              <div class="value">Build your app</div>
+              <div class="value">Build your open source app</div>
             </li>
             <li>
               <div class="key">3.</div>
