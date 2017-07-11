@@ -5,17 +5,17 @@
       <div class="image"></div>
       <div class="ha-container">
         <main>
-          <a class="alert" href="https://medium.com/cosmos-blockchain/cosmos-hackatom-is-underway-52c6032f6a61" target="_blank">
+          <a class="alert" href="https://blog.cosmos.network/announcing-the-cosmos-hackatom-winners-9fc083098da" target="_blank">
             <span class="key"><i class="fa fa-exclamation-circle"></i> Update:</span>
-            <span class="value">Cosmos HackAtom is Underway &rarr;</span>
+            <span class="value">Announcing the 1st Cosmos HackAtom Winners &rarr;</span>
           </a>
-          <h1><strong>Hack</strong>Atom 2017</h1>
+          <h1><strong>Hack</strong>Atom 2017 #2</h1>
           <ul>
-            <li>June 9 &ndash; July 9</li>
+            <li>August 5 &ndash; September 5</li>
             <li>$50k to be won</li>
             <li>Participate from anywhere</li>
           </ul>
-          <p><strong>HackAtom</strong> is seeking individuals and teams worldwide for a $50k open-source hackathon from June 9 – July 9, 2017. Participants will turn innovative ideas into working applications, with rewards from the Cosmos community.</p>
+          <p><strong>HackAtom</strong> is seeking individuals and teams worldwide for a $50k open-source hackathon from August 5 – September 5, 2017. Participants will turn innovative ideas into working applications, with rewards from the Cosmos community.</p>
           <p>HackAtom is four weeks long. You'll build a real product while the crypto and blockchain communities watch and cast their vote on the project that captures their imagination. Tell the story behind your innovative idea, turn it into a working product, get other members to join, and build something cool!</p>
         </main>
       </div>
@@ -69,7 +69,7 @@
             </li>
             <li>
               <div class="key">3.</div>
-              <div class="value">Submit by July 9  at 10:00 AM PDT</div>
+              <div class="value">Submit by September 5 at 10:00 AM PDT</div>
             </li>
           </ol>
         </main>
@@ -80,7 +80,7 @@
       <div class="ha-container">
         <header>Meetup with Cosmonauts</header>
         <main>
-          <p>We're having HackAtom meetups around the world on June 9 2017, at 7:00 PM local time. If you're located nearby&mdash;please do come join us! Meet us to get free tips and support while building your app.</p>
+          <p>We're having HackAtom meetups around the world. If you're located nearby&mdash;please do come join us! Meet us to get free tips and support while building your app.</p>
           <ul class="locations">
             <li><a href="https://www.meetup.com/Cosmos-Berlin/" target="_blank">
               <img src="../assets/images/hackatom/loc-berlin.jpg">
