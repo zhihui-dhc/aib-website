@@ -1,6 +1,6 @@
 <template lang='pug'>
 .app-bottom(v-bind:class="{ 'toc-visible': tocVisible }")
-  section-call-to-action
+  section-bottom
   footer.app-footer
     .sections
       section.copyright
@@ -41,11 +41,11 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import SectionCallToAction from './SectionCallToAction'
+import SectionBottom from './SectionBottom'
 export default {
   name: 'app-footer',
   components: {
-    SectionCallToAction
+    SectionBottom
   },
   computed: {
     ...mapGetters([

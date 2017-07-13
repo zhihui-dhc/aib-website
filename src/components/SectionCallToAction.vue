@@ -12,6 +12,7 @@
           size="lg"
           value="Fundraiser Ended"
           icon="external-link"
+          target="_blank"
           :href="config.FUNDRAISER_URL">
         </btn>
         <div class="section-cta-description">Join <a href="http://slack.cosmos.network">#cosmos</a> on Slack to chat.</div>
@@ -46,6 +47,7 @@ export default {
 @import '../styles/variables.styl'
 
 .section-cta
+  border-top 1px solid bc
   background c-app-fg
 
 .section-cta-container

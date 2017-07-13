@@ -1,6 +1,6 @@
 <template>
   <div class="mf-links">
-    <a class="mf-link" :href="config.FUNDRAISER_URL">
+    <a class="mf-link" :href="config.FUNDRAISER_URL" target="_blank">
       <i class="fa fa-external-link"></i> <strong>Open Fundraiser</strong>
     </a>
 
