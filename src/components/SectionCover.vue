@@ -65,12 +65,13 @@ export default {
     margin-bottom 0.5*x
     img
       height 3rem
+      opacity 0.9
 
   .tagline
     color hsl(0,0,50%)
-    letter-spacing 0.075rem
+    letter-spacing 0.055rem
     text-transform uppercase
-    font-weight 300
+    font-weight 500
     margin-bottom 2rem
 
   .introduction

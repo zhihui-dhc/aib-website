@@ -113,6 +113,7 @@ export default {
   background alpha(#fff, 95%)
   backdrop-filter blur(0.125rem)
   shadow()
+  font-weight 400
 
   .container
     max-width 1024px

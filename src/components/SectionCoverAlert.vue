@@ -22,7 +22,7 @@ export default {
 
 .cover-alert
   display block
-  border 1px solid hsl(0,0,20%)
+  border 1px solid hsl(0,0,15%)
   padding 0.4375rem 0.75rem
   margin-bottom 2rem
   font-size 0.75rem
@@ -41,7 +41,7 @@ export default {
     right 0.25rem
     font-size 3rem
     line-height 1
-    color hsl(0,0,55%)
+    color hsl(0,0,25%)
     z-index -1
 
   .key
