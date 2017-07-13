@@ -1,54 +1,42 @@
-<template>
-  <div class="app-bottom" v-bind:class="{ 'toc-visible': tocVisible }">
-    <section-call-to-action></section-call-to-action>
-    <footer class="app-footer">
-      <div class="sections">
-        <section class="copyright">
-          <span>&copy; {{ new Date().getFullYear() }} Interchain Foundation</span>
-          <span class="address">
-            <p>c/o Gubelstrasse 11</p>
-            <p>6300 Zug, Switzerland</p>
-          </span>
-        </section>
-        <section>
-          <header>Cosmos</header>
-          <nav>
-            <a href="https://blog.cosmos.network" target="_blank">Blog</a>
-            <router-link :to="'/plan'">Plan</router-link>
-            <router-link :to="'/faq'">FAQ</router-link>
-            <router-link :to="'/whitepaper'">Whitepaper</router-link>
-            <router-link :to="'/about'">About</router-link>
-          </nav>
-        </section>
-        <section>
-          <header>Community</header>
-          <a href="https://bitcointalk.org/index.php?topic=1607111.0">
-            <i class="fa fa-btc"></i>BitcoinTalk
-          </a>
-          <a href="http://webchat.freenode.net/?channels=%23cosmos_network">
-            <i class="fa fa-commenting-o"></i>IRC
-          </a>
-          <a href="https://www.reddit.com/r/thecosmos">
-            <i class="fa fa-reddit"></i>Reddit
-          </a>
-          <a href="http://slack.cosmos.network">
-            <i class="fa fa-slick"></i>Slack
-          </a>
-          <a href="https://twitter.com/cosmos_hq">
-            <i class="fa fa-twatter"></i>Twitter
-          </a>
-        </section>
-        <section>
-          <header>Tendermint</header>
-          <a href="https://tendermint.com/blog">Blog</a>
-          <a href="https://tendermint.com/about">About</a>
-          <a href="https://tendermint.com/careers">Careers</a>
-          <a href="https://tendermint.com/press">Press</a>
-          <a href="https://tendermint.com/contact">Contact</a>
-        </section>
-      </div>
-    </footer>
-  </div>
+<template lang='pug'>
+.app-bottom(v-bind:class="{ 'toc-visible': tocVisible }")
+  section-call-to-action
+  footer.app-footer
+    .sections
+      section.copyright
+        span © {{ new Date().getFullYear() }} Interchain Foundation
+        span.address
+          p c/o Gubelstrasse 11
+          p 6300 Zug, Switzerland
+      section
+        header All In Bits
+        nav
+          router-link(to="/") Cosmos
+          a(href='https://ethermint.network') Ethermint
+          a(href='https://tendermint.com') Tendermint
+      section
+        header Community
+        a(href='https://bitcointalk.org/index.php?topic=1607111.0')
+          i.fa.fa-btc
+          | BitcoinTalk
+        a(href='http://webchat.freenode.net/?channels=%23cosmos_network')
+          i.fa.fa-commenting-o
+          | IRC
+        a(href='https://www.reddit.com/r/thecosmos')
+          i.fa.fa-reddit
+          | Reddit
+        a(href='http://slack.cosmos.network')
+          i.fa.fa-slick
+          | Slack
+        a(href='https://twitter.com/cosmos_hq')
+          i.fa.fa-twatter
+          | Twitter
+      section
+        header Developers
+        a(href='https://github.com/tendermint/tendermint/wiki/Contributing' target='_blank') Contributing
+        a(href='https://tendermint.com/careers' target='_blank') Careers
+        a(href='https://github.com/cosmos' target='_blank') GitHub (Cosmos)
+        a(href='https://github.com/tendermint' target='_blank') GitHub (Tendermint)
 </template>
 
 <script>
