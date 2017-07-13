@@ -1,35 +1,41 @@
 <template>
-  <section class="section-cover">
-    <div class="sc-container">
-      <div class="sc-logo">
-        <img src="../assets/images/cosmos_logo.png">
-        <div class="subtitle">Internet of Blockchains</div>
-        <p class="sc-desc">We will be hosting <strong><router-link to="/hackatom">HackAtom 2017 #2</router-link></strong>, a $50,000 Cosmos hackathon, in August.</p>
+  <section class="section-home-cover">
+    <img class="section-home-logo" src="../assets/images/bg-cover.png">
+    <div class="section-container">
+      <section-cover-alert></section-cover-alert>
+      <h1><img src="../assets/images/cosmos-logo-white-alpha.png"></h1>
+      <p class="tagline">Internet of Blockchains</p>
+      <p class="introduction">Cosmos is a network and a framework for interoperability between blockchains.</p>
+      <div class="btns">
+        <btn
+          type="link"
+          to="/whitepaper"
+          size="lg"
+          icon="file-text-o"
+          value="Whitepaper">
+        </btn>
+        <btn
+          type="anchor"
+          href="http://slack.cosmos.network"
+          size="lg"
+          icon="comments-o"
+          theme="alpha-black"
+          target="_blank"
+          value="Chat on Slack">
+        </btn>
       </div>
-      <div class="sc-fundraiser">
-        <p class="sc-desc">We will be hosting <strong><router-link to="/hackatom">HackAtom 2017 #2</router-link></strong>, a $50,000 Cosmos hackathon, in August.</p>
-        <form-email-signup></form-email-signup>
-        <section-cover-links></section-cover-links>
-        <div class="sc-countdown">
-          <i class="fa fa-hourglass-end"></i>
-        </div>
-      </div>
+      <p class="source"><i class="fa fa-github"></i> View source code on <a href="https://github.com/cosmos" target="_blank">GitHub</a></p>
     </div>
   </section>
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
-import FormEmailSignup from './FormEmailSignup'
-import SectionCoverLinks from './SectionCoverLinks'
+import SectionCoverAlert from './SectionCoverAlert'
+import Btn from '@nylira/vue-button'
 export default {
-  name: 'menu-fundraiser',
   components: {
-    FormEmailSignup,
-    SectionCoverLinks
-  },
-  computed: {
-    ...mapGetters(['config'])
+    SectionCoverAlert,
+    Btn
   }
 }
 </script>
@@ -37,131 +43,128 @@ export default {
 <style lang="stylus">
 @require '../styles/variables.styl'
 
-.section-cover
-  background url('../assets/images/cover_image.png') center center
+.section-home-cover
+  background #111
+  position relative
+  border-bottom 1px solid lighten(mcolor, 10%)
+  margin-top -3rem
 
-.sc-container
-  max-width 1024px
-  margin 0 auto
-  padding 1.5rem 0
+  .section-container
+    margin-top 3rem
+    padding 2*x 1.5*x
+    position relative
+    z-index 5
 
-.sc-logo
-  display flex
-  flex-flow column nowrap
-  align-items center
-  justify-content center
-  padding 3rem
-
-  img
-    height 2.5rem
-    margin-bottom 0.5rem
-
-  .subtitle
+  h1
     text-transform uppercase
-    color dim
-    font-size 0.9rem
-    letter-spacing 0.05em
-    font-weight 500
+    color hsl(0,0,100%)
+    font-weight 600
+    line-height 1
+    font-size 2.75*x
+    letter-spacing 0.66rem
+    margin-bottom 0.5*x
+    img
+      height 3rem
 
-  .sc-desc
-    display none
+  .tagline
+    color hsl(0,0,50%)
+    letter-spacing 0.075rem
+    text-transform uppercase
+    font-weight 300
+    margin-bottom 2rem
 
-.sc-desc
-  max-width 22rem
-  text-align center
-  margin 0 auto
-  line-height 2
-  font-weight 400
+  .introduction
+    color hsl(0,0,75%)
+    max-width 20*x
+    font-size 1.25*x
+    margin-bottom 3*x
 
-  .ni-time-left
-    display inline
-    font-weight bold
-    white-space nowrap
+  .btns
+    margin-bottom x
+    .ni-btn
+      width 100%
+      margin-bottom 0.5*x
+      max-width 18*x
 
-.sc-fundraiser
-  padding 0 1.5rem 3rem
-  max-width 40rem
-  margin 0 auto
-  display flex
-  justify-content center
-  flex-flow column nowrap
+  .source
+    color hsl(0,0,50%)
+    i.fa
+      padding-right 0.25rem
+    a
+      color hsl(0,0,75%)
+      font-weight 500
 
-  p, .form-email-signup
-    margin-bottom 1.5rem
-
-.sc-countdown
+.section-home-logo
   display none
 
 @media screen and (min-width: 360px)
-  .sc-container
-    padding 2rem 0
-  .sc-logo
-    img
-      height 2.75rem
-    .subtitle
-      font-size 1rem
-
-  .sc-fundraiser
-    padding-left 2rem
-    padding-right 2rem
-    padding-bottom 4rem
-
-    .form-email-signup, #fundraiser-btn
-      margin-bottom 2rem
+  .section-home-cover .section-container
+    padding 3*x 1.75*x
 
 @media screen and (min-width: 414px)
-  .sc-logo
-    img
-      height 2.6rem
-    .subtitle
-      font-size 0.975rem
+  .section-home-cover .section-container
+    padding 3*x 2.25*x
 
-  .sc-fundraiser
-    padding-left 3rem
-    padding-right 3rem
-
-    .form-email-signup, #fundraiser-btn
-      margin-bottom 2rem
+    h1
+      font-size 3*x
+    .tagline
+      font-size 1.095*x
 
 @media screen and (min-width: 768px)
-  .sc-logo
-    img
-      height 3rem
-    .subtitle
-      font-size 1.125rem
+  .section-home-cover .section-container
+    padding 4*x 2*x
+    max-width 640px
+    margin-left auto
+    margin-right auto
 
-  .sc-desc
-    font-size 1.33rem
-    font-weight 400
+    .introduction
+      font-size 1.5*x
+      max-width 28*x
 
-  .sc-fundraiser
-    .sc-desc
-      margin-bottom 3rem
-    .form-email-signup, #fundraiser-btn
-      shadow()
-      width 100%
+    .btns
+      margin-bottom 1.5*x
+      display flex
+      flex-flow row nowrap
+      max-width 32*x
+      .ni-btn
+        margin 0
+        margin-right x
+
+  .section-home-cover
+    overflow hidden
+    
+  .section-home-logo
+    display block
+    width 80vw
+    height 80vw
+    position absolute
+    top -2.5vw
+    right -20vw
+    opacity 0.15
 
 @media screen and (min-width: 1024px)
-  .sc-container
-    display flex
-    height 75vh
-    max-height 56.25vw
-    padding 3rem 0
+  .section-home-cover .section-container
+    max-width 900px
+    .tagline
+      margin-bottom 3*x
+    .introduction
+      margin-bottom 4*x
 
-  .sc-logo, .sc-fundraiser
-    flex 1
-    padding 0 3rem
+  .section-home-logo
+    top -7.5vw
+    right -20vw
 
-  .sc-logo
-    align-items flex-start
-    .subtitle
-      margin-bottom 3rem
-    .sc-desc
-      text-align left
-      display block
-      margin 0
+@media screen and (min-width: 1280px)
+  .section-home-cover .section-container
+    padding 5*x 2*x 6*x
+    max-width 1080px
 
-  .sc-fundraiser
-    .sc-desc
-      display none
+  .section-home-logo
+    width 70vw
+    height 70vw
+
+@media screen and (min-width: 1680px)
+  .section-home-logo
+    top -15vw
+    right -15vw
 </style>
