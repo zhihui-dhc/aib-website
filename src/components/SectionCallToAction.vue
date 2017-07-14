@@ -25,13 +25,11 @@
 import { mapGetters } from 'vuex'
 import Btn from '@nylira/vue-button'
 import FormEmailSignup from './FormEmailSignup'
-import TimeRemaining from './TimeRemaining'
 export default {
   name: 'section-cta',
   components: {
     Btn,
-    FormEmailSignup,
-    TimeRemaining
+    FormEmailSignup
   },
   computed: {
     ...mapGetters(['config'])

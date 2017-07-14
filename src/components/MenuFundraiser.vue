@@ -14,11 +14,9 @@
 <script>
 import { mapGetters } from 'vuex'
 import MenuFundraiserLinks from './MenuFundraiserLinks'
-import TimeLeft from './TimeLeft'
 export default {
   name: 'menu-fundraiser',
   components: {
-    TimeLeft,
     MenuFundraiserLinks
   },
   computed: {
