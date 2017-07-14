@@ -9,7 +9,7 @@ export default {
   name: 'page-redirect-to-medium',
   mounted () {
     document.title = 'Redirecting to Medium - Cosmos - Internet of Blockchains'
-    // window.location.replace('https://blog.cosmos.network')
+    window.location.replace('https://blog.cosmos.network')
   }
 }
 </script>
