@@ -14,6 +14,8 @@
           router-link(to="/") Cosmos
           a(href='https://ethermint.network') Ethermint
           a(href='https://tendermint.com') Tendermint
+          span &mdash;
+          router-link(to='/privacy') Privacy
       section
         header Community
         a(href='https://bitcointalk.org/index.php?topic=1607111.0')

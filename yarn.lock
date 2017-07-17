@@ -6,13 +6,13 @@
   version "2.2.13"
   resolved "https://registry.yarnpkg.com/@nylira/vue-article-body/-/vue-article-body-2.2.13.tgz#2f157028faee5f5484af41dd39b9604151edced9"
 
-"@nylira/vue-button@^3.1.1":
-  version "3.1.1"
-  resolved "https://registry.yarnpkg.com/@nylira/vue-button/-/vue-button-3.1.1.tgz#9d3badbba6919819d5f2515164f2f2e71223f4c6"
+"@nylira/vue-button@^3.3.2":
+  version "3.3.2"
+  resolved "https://registry.yarnpkg.com/@nylira/vue-button/-/vue-button-3.3.2.tgz#a9f1e7181e05a46c98ecefc35dcdca211aaadca6"
 
-"@nylira/vue-input@^3.0.4":
-  version "3.0.4"
-  resolved "https://registry.yarnpkg.com/@nylira/vue-input/-/vue-input-3.0.4.tgz#081e2e3ad07b927f73ec0564ee667c7cdfd7ddb9"
+"@nylira/vue-input@^3.3.0":
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/@nylira/vue-input/-/vue-input-3.3.0.tgz#38020017c07147eb091a858db1092d7b7010b4e7"
 
 "@nylira/vue-notifications@1.0.4":
   version "1.0.4"
@@ -4346,7 +4346,7 @@ right-align@^0.1.1:
   dependencies:
     align-text "^0.1.1"
 
-rimraf@2, rimraf@^2.2.8, rimraf@^2.5.1, rimraf@^2.5.2, rimraf@^2.6.1:
+rimraf@2, rimraf@^2.2.8, rimraf@^2.5.1, rimraf@^2.6.1:
   version "2.6.1"
   resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-2.6.1.tgz#c2338ec643df7a1b7fe5c54fa86f57428a55f33d"
   dependencies:
@@ -4958,15 +4958,14 @@ vue-loader@11.3.4:
     vue-style-loader "^2.0.0"
     vue-template-es2015-compiler "^1.2.2"
 
-vue-markdown-loader@0.6.2:
-  version "0.6.2"
-  resolved "https://registry.yarnpkg.com/vue-markdown-loader/-/vue-markdown-loader-0.6.2.tgz#836792c7f9a54cdbb459080c75d0f4bbbddc4489"
+vue-markdown-loader@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/vue-markdown-loader/-/vue-markdown-loader-1.0.0.tgz#255a2608e388991faa354618e4f4b642ebb7e0db"
   dependencies:
     cheerio "^0.20.0"
     highlight.js "^9.4.0"
     loader-utils "^0.2.15"
     markdown-it "^6.0.5"
-    rimraf "^2.5.2"
 
 vue-router@2.3.1:
   version "2.3.1"

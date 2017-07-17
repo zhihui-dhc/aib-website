@@ -10,6 +10,7 @@ const routes = [
   { path: '/about', name: 'about', component: r('About') },
   { path: '/whitepaper', name: 'whitepaper', component: r('Whitepaper') },
   { path: '/whitepaper/:locale', name: 'whitepaper-localized', component: r('Whitepaper') },
+  { path: '/privacy', name: 'privacy', component: r('Privacy') },
 
   { path: '/hackatom', name: 'hackatom-en-us', component: r('HackAtom') },
   { path: '/hackatom/zh-cn', name: 'hackatom-zh-cn', component: r('HackAtomZhCn') },

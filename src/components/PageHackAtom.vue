@@ -117,7 +117,6 @@
                 <div class="value">Seoul</div>
               </div>
             </a></li>
-            <!--
             <li><a href="https://www.meetup.com/Cosmos-Shanghai/events/240518574/" target="_blank">
               <img src="../assets/images/hackatom/loc-shanghai.jpg">
               <div class="kv">
@@ -125,7 +124,6 @@
                 <div class="value">Shanghai</div>
               </div>
             </a></li>
-            -->
           </ul>
         </main>
       </div>
@@ -149,8 +147,7 @@
         <main>
           <p>Enter your details in the form to participate in Cosmos HackAtom. You’ll receive further instructions on how to compete.</p>
           <btn
-            type="anchor"
-            :href="hackathonLink"
+            @click.native="setModal(true)"
             size="lg"
             icon="clock-o"
             value="Sign Up for HackAtom">
@@ -164,11 +161,13 @@
         <header><a href="https://twitter.com/intent/tweet?text=I'm%20going%20to%20%23hackatom2017%20@cosmos_hq"><i class="fa fa-twatter"></i> #hackatom2017</a></header>
       </div>
     </section>
+    <modal-agreement v-if='hackatom.modal'></modal-agreement>
   </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
+import ModalAgreement from './ModalAgreement'
 import CardPersonMini from './CardPersonMini'
 import LocaleMenu from './PageHackAtomLocaleMenu'
 import NiSection from './NiSection'
@@ -180,17 +179,13 @@ export default {
     Btn,
     CardPersonMini,
     LocaleMenu,
+    ModalAgreement,
     NiSection,
     PageHeader
   },
   computed: {
-    ...mapGetters(['allPeople'])
+    ...mapGetters(['allPeople', 'hackatom'])
   },
-  data: () => ({
-    hackathonLink: 'http://www.hackathon.io/cosmos-hackathon',
-    formLink: 'https://docs.google.com/forms/d/e/1FAIpQLSfLjR9_0W6AatYgbxYSVcsOx3Pw16GdV9kZDP_NgplOFHa-bA/viewform?usp=sf_link',
-    mapKey: 'AIzaSyCw3IcF-q9yY_33PAFDPP4gJGfJQphN8M0'
-  }),
   head: {
     title () {
       return {
@@ -201,7 +196,10 @@ export default {
     }
   },
   methods: {
-    ppl (tag) { return this.allPeople.filter(p => p.tags.includes(tag)) }
+    ppl (tag) { return this.allPeople.filter(p => p.tags.includes(tag)) },
+    setModal (value) {
+      this.$store.commit('setHackAtomModal', value)
+    }
   }
 }
 </script>
