@@ -16,7 +16,7 @@
             <li>Participate from anywhere</li>
           </ul>
           <p><strong>HackAtom</strong> is seeking individuals and teams worldwide for a $50k open-source hackathon from August 5 – September 5, 2017. Participants will turn innovative ideas into working applications, with rewards from the Cosmos community.</p>
-          <p>HackAtom is four weeks long. You'll build a real product while the crypto and blockchain communities watch and cast their vote on the project that captures their imagination. Tell the story behind your innovative idea, turn it into a working product, get other members to join, and build something cool!</p>
+          <p>HackAtom is four weeks long. You'll build a real product while the crypto and blockchain communities watch and cast their vote on the project that captures their imagination. Tell the story behind your innovative idea, turn it into a working product, get other members to join, and build something cool! <a @click='setModal(true)'>Sign up now!</a></p>
         </main>
       </div>
     </header>
@@ -61,7 +61,7 @@
           <ol class="participation-steps">
             <li>
               <div class="key">1.</div>
-              <div class="value">Sign up</div>
+              <div class="value"><a @click='setModal(true)'>Sign up</a></div>
             </li>
             <li>
               <div class="key">2.</div>
@@ -230,7 +230,6 @@ export default {
       color link
       font-weight 400
       
-
   h1
     font-size 3em
     font-weight 200
@@ -310,6 +309,7 @@ export default {
             color #fff
             text-transform uppercase
             letter-spacing 0.05em
+
     .prizes + p
       margin-top 1.5rem
     .prizes

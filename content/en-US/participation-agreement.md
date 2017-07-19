@@ -6,7 +6,9 @@ The Hackathon is governed by this Hackathon Participation Agreement ("Agreement"
 
 By entering the Hackathon, you ("Participant") agree to abide by the Agreement which is a binding legal agreement between Participant and Cosmos with respect to the Hackathon.
 
-Participation in the Hackathon Participant must be at least 18 years of age to be eligible to participate in the Hackathon.
+## Participation in the Hackathon
+
+Participant must be at least 18 years of age to be eligible to participate in the Hackathon.
 
 In addition to the Agreement, Participant agrees to abide by the Hackathon Code of Conduct posted at https://hackcodeofconduct.org/ and additional documents, if any, provided in connection with the Hackathon (collectively "Additional Documents") posted on our site at https://cosmos.network/hackatom.
 
