@@ -72,6 +72,7 @@ export default {
 
     .ni-modal-container
       flex 1
+      height 100vh
       max-height 100vh
       max-width 40rem + 6rem
       display flex
