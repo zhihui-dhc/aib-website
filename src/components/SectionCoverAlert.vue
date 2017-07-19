@@ -1,8 +1,8 @@
 <template>
   <router-link class="cover-alert" to="/hackatom">
-    <span class="key">ANNOUNCEMENT:</span>
+    <span class="key">HACKATOM:</span>
     <span class="value">
-      We will be hosting HackAtom 2017 #2, a $50,000 Cosmos hackathon, in August.
+      We will host HackAtom 2017 #2, a $50,000 Cosmos hackathon starting August 5th.
     </span>
     <i class="fa fa-angle-double-right" aria-hidden="true"></i>
   </router-link>
@@ -28,6 +28,7 @@ export default {
   font-size 0.75rem
   position relative
   overflow hidden
+  background hsla(0,0,100,0.1)
   &:hover
     border-color hsl(0,0,35%)
 
@@ -41,7 +42,7 @@ export default {
     right 0.25rem
     font-size 3rem
     line-height 1
-    color hsl(0,0,25%)
+    color hsl(0,0,45%)
     z-index -1
 
   .key
