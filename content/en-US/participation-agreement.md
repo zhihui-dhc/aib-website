@@ -76,7 +76,7 @@ Cosmos reserves the right not to award a prize in the event of an insufficient n
 
 All cryptocurrency prize payments will be made within 14 days to only one nominated wallet address per prize.
 
-# Publicity and Privacy
+## Publicity and Privacy
 
 Participant understands that the Hackathon may be photographed, videotaped, recorded, etc. and hereby grants Cosmos and/or ICF the right to use or refrain from using Participant's name and/or likeness in any and all footage about Participant's participation in the Hackathon and Participant's Hackathon submission in any manner or media that Cosmos and/or ICF sees fit without Participant's review or approval and without compensation.
 
@@ -84,13 +84,13 @@ If you do not wish to be photographed, videotaped or recorded, please notify ICF
 
 By participating in the Hackathon, Participants agree that their personal data provided as part of the Hackathon may be used for the purposes of the Hackathon. Cosmos and ICF will use Participant's personal data subject to the Cosmos Privacy Policy at http://cosmos.network/privacy
 
-# Liability Release and Indemnity
+## Liability Release and Indemnity
 
 UNDER NO CIRCUMSTANCES WILL COSMOS OR ICF, BE LIABLE FOR ANY DIRECT, INCIDENTAL, INDIRECT, SPECIAL OR CONSEQUENTIAL DAMAGES IN CONNECTION WITH, ARISING OUT OF OR RELATING IN ANY WAY TO THE HACKATHON AND/OR THIS AGREEMENT.
 
 Participant shall indemnify and hold Cosmos, ICF and its officers, directors, employees, successors and assigns harmless against any claims, losses, damages, liabilities and expenses (including reasonable attorneys' and other professionals' fees) incurred by Cosmos in connection with, arising out of or relating in any way to the Hackathon and/or this Agreement.
 
-# Governing Law and Severability
+## Governing Law and Severability
 
 All disputes, claims and causes of action arising out of or in connection with the Hackathon, prizes or the Agreement shall be resolved individually, without resort to any form of class action, and exclusively by the state courts of Switzerland and each of the Participants submit to the exclusive jurisdiction and venue of such courts for the purpose of any such action. This Agreement shall be governed by and construed in accordance with the laws of Switzerland without regard to any conflict of laws rules and principles. If for any reason any provision of this Agreement is adjudicated to be unenforceable, that provision of the Agreement will be enforced to the maximum extent permissible so as to effect the intent of the parties, and the remainder of this Agreement will continue in full force and effect.
 
