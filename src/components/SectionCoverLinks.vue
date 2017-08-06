@@ -14,9 +14,9 @@
     </btn>
     <btn
       type="anchor"
-      href="http://slack.cosmos.network"
-      icon="slick"
-      value="Chat on Slack">
+      href="https://cosmos.rocket.chat"
+      icon="rocket"
+      value="Chat on Rocket">
     </btn>
   </div>
 </template>

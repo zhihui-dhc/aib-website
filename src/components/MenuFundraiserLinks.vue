@@ -22,9 +22,9 @@
     <a class="mf-link" :href="docs.terms">
       <i class="fa fa-file-pdf-o"></i> Contribution Terms
     </a>
-    <a class="mf-link" href="http://slack.cosmos.network">
-      <i class="fa fa-slick"></i>
-      Discuss on Slack
+    <a class="mf-link" href="https://cosmos.rocket.chat">
+      <i class="fa fa-rocket"></i>
+      Discuss on Rocket
     </a>
   </div>
 </template>

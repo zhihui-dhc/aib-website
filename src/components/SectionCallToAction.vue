@@ -15,7 +15,7 @@
           target="_blank"
           :href="config.FUNDRAISER_URL">
         </btn>
-        <div class="section-cta-description">Join <a href="http://slack.cosmos.network">#cosmos</a> on Slack to chat.</div>
+        <div class="section-cta-description">Join <a href="https://cosmos.rocket.chat">#cosmos</a> on Slack to chat.</div>
       </main>
     </div>
   </div>

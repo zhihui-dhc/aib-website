@@ -27,9 +27,9 @@
         a(href='https://www.reddit.com/r/thecosmos')
           i.fa.fa-reddit
           | Reddit
-        a(href='http://slack.cosmos.network')
-          i.fa.fa-slick
-          | Slack
+        a(href='https://cosmos.rocket.chat')
+          i.fa.fa-rocket
+          | Chat on Rocket
         a(href='https://twitter.com/cosmos_hq')
           i.fa.fa-twatter
           | Twitter

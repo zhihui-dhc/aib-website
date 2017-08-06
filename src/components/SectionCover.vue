@@ -16,12 +16,12 @@
         </btn>
         <btn
           type="anchor"
-          href="http://slack.cosmos.network"
+          href="https://cosmos.rocket.chat"
           size="lg"
           icon="comments-o"
           theme="alpha-black"
           target="_blank"
-          value="Chat on Slack">
+          value="Chat on Rocket">
         </btn>
       </div>
       <p class="source"><i class="fa fa-github"></i> View source code on <a href="https://github.com/cosmos" target="_blank">GitHub</a></p>

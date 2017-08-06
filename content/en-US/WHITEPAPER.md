@@ -4,7 +4,7 @@
 Jae Kwon [jae@tendermint.com](mailto:jae@tendermint.com)<br/>
 Ethan Buchman [ethan@tendermint.com](mailto:ethan@tendermint.com)
 
-For discussions, [join our Slack](http://slack.cosmos.network)!
+For discussions, [join our Rocket](https://cosmos.rocket.chat)!
 
 _NOTE: If you can read this on GitHub, then we're still actively developing this
 document.  Please check regularly for updates!_
