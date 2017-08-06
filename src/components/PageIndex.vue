@@ -15,7 +15,7 @@
             <h3>Purpose</h3>
             <p><strong>Cosmos</strong> is a project with an ambitious mission: To create a network of distributed ledgers that will solve long-standing problems in the cryptocurrency and blockchain communities.</p>
             <h3>Architecture</h3>
-            <p>The Cosmos network consists of many independent, parallel blockchains, called zones, each powered by classical Byzantine fault-tolerant (BFT) consensus protocols like <a href='http://tendermint.com'>Tendermint</a> (already used by platforms like <a href='https://erisindustries.com/components/erisdb/'>ErisDB</a>). Some zones act as hubs with respect to other zones, allowing many zones to interoperate through a shared hub. The architecture is a more general application of the Bitcoin sidechains concept, using classic BFT and Proof-of-Stake algorithms, instead of Proof-of-Work.</p>
+            <p>The Cosmos network consists of many independent, parallel blockchains, called zones, each powered by classical Byzantine fault-tolerant (BFT) consensus protocols like <a href='http://tendermint.com'>Tendermint</a> (already used by platforms like <a href='https://github.com/hyperledger/burrow'>Hyperledger's Burrow</a>). Some zones act as hubs with respect to other zones, allowing many zones to interoperate through a shared hub. The architecture is a more general application of the Bitcoin sidechains concept, using classic BFT and Proof-of-Stake algorithms, instead of Proof-of-Work.</p>
           </div>
           <div class="col">
             <h3>Cosmos Hub</h3>
