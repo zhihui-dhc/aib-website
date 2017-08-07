@@ -15,7 +15,6 @@
           value="Whitepaper">
         </btn>
         <btn
-          target="_blank"
           type="anchor"
           href="https://cosmos.rocket.chat"
           size="lg"
