@@ -45,7 +45,7 @@
         <div class="image"><img class="" src="../assets/images/ex_evm_sharding.png"></div>
         <div class="section-content">
           <h2>Scalability</h2>
-          <p>Scaling is another open issue for blockchains. Both Ethereum and Bitcoin support only a fraction of the transactions seen daily on payment networks like Visa or Mastercard. In contrast, zones allow Cosmos to scale out indefinitely. If your transaction speed slows in one zone because too many people are using it, you simply add another zone to the hub and direct half the users over that zone, thereby doubling your transaction speed. Meanwhile, the Cosmos hub ensures that any zones connected to it remain in sync."</p>
+          <p>Scaling is another open issue for blockchains. Both Ethereum and Bitcoin support only a fraction of the transactions seen daily on payment networks like Visa or Mastercard. In contrast, zones allow Cosmos to scale out indefinitely. If your transaction speed slows in one zone because too many people are using it, you simply add another zone to the hub and direct half the users over that zone, thereby doubling your transaction speed. Meanwhile, the Cosmos hub ensures that any zones connected to it remain in sync.</p>
         </div>
       </div>
     </section>
