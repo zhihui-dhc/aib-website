@@ -1,6 +1,6 @@
 # [cosmos.network](https://cosmos.network)
 
-> The homepage for Cosmos, the Internet of Blockchains.
+> The website for Cosmos, the Internet of Blockchains.
 
 ## Production
 
@@ -24,13 +24,13 @@ Make sure you're running Node 6 LTS or higher.
 
 ``` bash
 # install dependencies
-yarn install
+npm install
 
 # write some required files
-yarn run build
+npm run build
 
 # serve with hot reload at localhost:8700
-yarn run dev
+npm run dev
 ```
 
 ## Contributing 
