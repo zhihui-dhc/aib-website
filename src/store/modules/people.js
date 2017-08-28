@@ -133,18 +133,6 @@ const state = {
       tags: ['aib']
     },
     {
-      slug: 'paul-homer',
-      name: 'Paul Homer',
-      title: 'Software Engineer',
-      bio: 'Paul is an experienced software developer with a long history of building sophisticated commercial products. He desires to leverage his experiences to help Tendermint become a reliable part of the world\'s technology infrastructure.',
-      ids: {
-        email: 'paul',
-        github: 'phomer',
-        linkedin: 'paulhomer'
-      },
-      tags: ['aib']
-    },
-    {
       slug: 'henny-han',
       name: 'Ash Han',
       title: 'Advisor',
