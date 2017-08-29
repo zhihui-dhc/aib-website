@@ -1,41 +1,30 @@
-<template>
-  <section class="section-home-cover">
-    <img class="section-home-logo" src="../assets/images/bg-cover.png">
-    <div class="section-container">
-      <section-cover-alert></section-cover-alert>
-      <h1><img src="../assets/images/cosmos-logo-white-alpha.png"></h1>
-      <p class="tagline">Internet of Blockchains</p>
-      <p class="introduction">Cosmos is a network and a framework for interoperability between blockchains.</p>
-      <div class="btns">
-        <btn
-          type="link"
-          to="/whitepaper"
-          size="lg"
-          icon="file-text-o"
-          value="Whitepaper">
-        </btn>
-        <btn
-          type="anchor"
-          href="https://cosmos.rocket.chat"
-          size="lg"
-          icon="comments-o"
-          theme="alpha-black"
-          target="_blank"
-          value="Chat on Rocket">
-        </btn>
-      </div>
-      <p class="source"><i class="fa fa-github"></i> View source code on <a href="https://github.com/cosmos" target="_blank">GitHub</a></p>
-    </div>
-  </section>
+<template lang='pug'>
+section.section-home-cover
+  img.section-home-logo(src='../assets/images/bg-cover.png')
+  .section-container
+    section-cover-alert
+    h1
+      img(src='../assets/images/cosmos-logo-white-alpha.png')
+    p.tagline Internet of Blockchains
+    p.introduction Cosmos is a network and a framework for interoperability between blockchains.
+    .btns
+      form-email-signup
+      btn(type='anchor', href='https://cosmos.rocket.chat', size='lg', icon='comments-o', theme='alpha-black', target='_blank', value='Chat on Rocket')
+    p.source
+      i.fa.fa-github
+      |  View source code on 
+      a(href='https://github.com/cosmos', target='_blank') GitHub
 </template>
 
 <script>
 import SectionCoverAlert from './SectionCoverAlert'
+import FormEmailSignup from './FormEmailSignup'
 import Btn from '@nylira/vue-button'
 export default {
   components: {
-    SectionCoverAlert,
-    Btn
+    Btn,
+    FormEmailSignup,
+    SectionCoverAlert
   }
 }
 </script>
@@ -82,10 +71,14 @@ export default {
 
   .btns
     margin-bottom x
-    .ni-btn
+    display flex
+    flex-flow column
+    align-items flex-start
+    justify-content flex-start
+    > *
       width 100%
-      margin-bottom 0.5*x
-      max-width 18*x
+      max-width 21rem
+      margin 0 0 0.5rem
 
   .source
     color hsl(0,0,50%)
@@ -114,22 +107,13 @@ export default {
 @media screen and (min-width: 768px)
   .section-home-cover .section-container
     padding 4*x 2*x
-    max-width 640px
+    max-width 720px
     margin-left auto
     margin-right auto
 
     .introduction
       font-size 1.5*x
       max-width 28*x
-
-    .btns
-      margin-bottom 1.5*x
-      display flex
-      flex-flow row nowrap
-      max-width 32*x
-      .ni-btn
-        margin 0
-        margin-right x
 
   .section-home-cover
     overflow hidden
@@ -145,11 +129,25 @@ export default {
 
 @media screen and (min-width: 1024px)
   .section-home-cover .section-container
-    max-width 900px
+    max-width 960px
     .tagline
       margin-bottom 3*x
     .introduction
-      margin-bottom 4*x
+      margin-bottom 3*x
+
+    .btns
+      margin-bottom 1.5*x
+      display flex
+      flex-flow row nowrap
+      max-width 40rem
+      > *
+        margin-bottom 0
+      form
+        margin-right 1.5rem
+        flex 1
+        max-width 100%
+      .ni-btn
+        width 14rem
 
   .section-home-logo
     top -7.5vw

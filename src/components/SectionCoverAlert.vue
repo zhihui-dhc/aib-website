@@ -28,7 +28,6 @@ export default {
   font-size 0.75rem
   position relative
   overflow hidden
-  background hsla(0,0,100,0.1)
   &:hover
     border-color hsl(0,0,35%)
 
