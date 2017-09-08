@@ -7,15 +7,7 @@
       type="split">
     </page-header>
     <ni-section>
-      <div slot="title">Interchain Foundation Counsel</div>
-      <card-person
-        v-for="person in ppl('interchain')"
-        :key="person.slug"
-        :person="person">
-      </card-person>
-    </ni-section>
-    <ni-section>
-      <div slot="title">All In Bits, Inc.</div>
+      <div slot="title">All In Bits - Team</div>
       <card-person
         v-for="person in ppl('aib')"
         :key="person.slug"
@@ -23,9 +15,17 @@
       </card-person>
     </ni-section>
     <ni-section>
-      <div slot="title">Advisors</div>
+      <div slot="title">All In Bits - Advisors</div>
       <card-person
         v-for="person in ppl('advisors')"
+        :key="person.slug"
+        :person="person">
+      </card-person>
+    </ni-section>
+    <ni-section>
+      <div slot="title">Interchain Foundation Council</div>
+      <card-person
+        v-for="person in ppl('interchain')"
         :key="person.slug"
         :person="person">
       </card-person>
@@ -54,7 +54,7 @@ export default {
     return {
       metadata: {
         title: 'About',
-        desc: 'Information about the Cosmos team.'
+        desc: 'Cosmos is being built by All In Bits, the same team that created <a href="https://tendermint.com">Tendermint</a>.<br><br>On this page you can learn about the All In Bits team, our advisors, and the Interchain Foundation.'
       }
     }
   },
