@@ -2,7 +2,7 @@
   <page-split>
     <page-header
       :title="metadata.title"
-      :subtitle="metadata.desc"
+      subtitle="All In Bits, Inc. is currently working full time on bringing Cosmos to reality.<br><br><a href='https://tendermint.com/careers' target='_blank'>We are hiring!</a>"
       slot="header"
       type="split">
     </page-header>
@@ -54,7 +54,7 @@ export default {
     return {
       metadata: {
         title: 'About',
-        desc: 'Cosmos is being built by All In Bits, the same team that created <a href="https://tendermint.com">Tendermint</a>.<br><br>On this page you can learn about the All In Bits team, our advisors, and the Interchain Foundation.'
+        desc: 'All In Bits, Inc. is currently working full time on bringing Cosmos to reality. We are hiring!'
       }
     }
   },

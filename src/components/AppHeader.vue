@@ -1,45 +1,29 @@
-<template>
-<header class="app-header">
-  <div class="container">
-
-  <div class="header-item" @click="toggleMenuApp" v-if="!desktop">
-    <i v-if="!activeMenuApp" class="fa fa-bars"></i>
-    <i v-else class="fa fa-times"></i>
-  </div>
-
-  <router-link to="/" class="header-item">
-    <img src="../assets/images/cosmos-logo-black-alpha.png" alt="Cosmos Logo">
-  </router-link>
-
-  <menu class="menu-popup menu-app" v-if="activeMenuApp || desktop">
-    <nav class="nav-app">
-      <router-link to="/plan" @click.native="close" exact>Plan</router-link>
-      <router-link to="/whitepaper" @click.native="close" exact>Whitepaper</router-link>
-      <router-link to="/faq" @click.native="close" exact>FAQ</router-link>
-      <a href="https://blog.cosmos.network" @click.native="close" target="_blank">Blog</a>
-      <router-link to="/about" @click.native="close" exact>About</router-link>
-    </nav>
-    <nav>
-      <a href="https://github.com/cosmos/cosmos" target="_blank">GitHub</a>
-    </nav>
-  </menu>
-
-  <div class="header-item header-item-alert" @click="toggleMenuFundraiser">
-    <i v-if="!activeMenuFundraiser" class="fa fa-hourglass-end">
-      <!--<span class="alert">1</span>-->
-    </i>
-    <i v-else class="fa fa-times"></i>
-    <span class="label" v-if="desktop">Fundraiser</span>
-  </div>
-
-  <menu-fundraiser
-    :status="fundraiserStatus"
-    v-if="activeMenuFundraiser"
-    @click.native="toggleMenuFundraiser">
-  </menu-fundraiser>
-
-  </div>
-</header>
+<template lang='pug'>
+header.app-header
+  .container
+    .header-item(@click='toggleMenuApp', v-if='!desktop')
+      i.fa.fa-bars(v-if='!activeMenuApp')
+      i.fa.fa-times(v-else='')
+    router-link.header-item(to='/')
+      img(src='../assets/images/cosmos-logo-black-alpha.png', alt='Cosmos Logo')
+    menu.menu-popup.menu-app(v-if='activeMenuApp || desktop')
+      nav.nav-app
+        router-link(to='/plan', @click.native='close', exact='') Plan
+        router-link(to='/whitepaper', @click.native='close', exact='') Whitepaper
+        router-link(to='/faq', @click.native='close', exact='') FAQ
+        router-link(to='/about', @click.native='close', exact='') About
+      nav.nav-external
+        a(href='https://tendermint.com/careers', @click.native='close', target='_blank')
+          | Careers #[i.fa.fa-external-link]
+        a(href='https://blog.cosmos.network' @click.native='close' target='_blank')
+          | Blog #[i.fa.fa-medium]
+        // a(href='https://github.com/cosmos/cosmos' @click.native='close' target='_blank')
+          | GitHub #[i.fa.fa-github]
+    .header-item.header-item-alert(@click='toggleMenuFundraiser')
+      i.fa.fa-hourglass-end(v-if='!activeMenuFundraiser')
+      i.fa.fa-times(v-else='')
+      span.label(v-if='desktop') Fundraiser
+    menu-fundraiser(:status='fundraiserStatus', v-if='activeMenuFundraiser', @click.native='toggleMenuFundraiser')
 </template>
 
 <script>
@@ -195,15 +179,11 @@ export default {
 
   .menu-app
     nav
-      a,
+      a
         display flex
         align-items center
         cursor pointer
-        i.fa
-          margin-right 0.25rem
-        img
-          height 1rem
-          margin-right 0.1rem
+        font-weight 400
 
   .menu-popup
     z-index 101
@@ -280,8 +260,13 @@ export default {
         padding 0 1rem
         color txt
         line-height 3rem
+        i.fa
+          color alpha(txt, 50%)
+          margin-left 0.5rem
         &:hover
           color link
+          i.fa
+            color link
         &.router-link-active
           background linear-gradient(top, hsl(0,0,96%), hsl(0,0,98%))
           cursor default
