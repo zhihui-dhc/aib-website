@@ -7,8 +7,8 @@
       value="HackAtom 2017 Information">
     </btn>
     <btn
-      type="link"
-      to="/blog/fundraiser-results"
+      type="anchor"
+      href="https://blog.cosmos.network/fundraiser-was-a-resounding-success-bf378b96fe00"
       icon="hourglass-end"
       value="Fundraiser Results">
     </btn>

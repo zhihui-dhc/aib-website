@@ -46,7 +46,7 @@ Nesse relato nós apresentamos a Cosmos, uma novela da arquitetura de rede block
 esses problemas. Cosmos é uma rede de muitos blockchains independentes, chamados
 Zonas. As zonas são alimentadas pelo Tendermint Coreork [\[8\]][8], que fornece uma
 alta performace, consistência, segurança
-[PBFT-como](http://tendermint.com/blog/tendermint-vs-pbft/) um mecanismo de consenso
+[PBFT-como](https://blog.cosmos.network/tendermint-vs-pbft-12e9f294c9ab) um mecanismo de consenso
 rigoroso, onde [fork-responsável](#fork-responsável) tem-se garantias de deter
 comportamentos maliciosos. O algoritmo de consenso BFT do Tendermint Core é
 bem adaptado para integrar blockchains públicas de prova de estaca.

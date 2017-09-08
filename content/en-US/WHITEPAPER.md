@@ -49,7 +49,7 @@ Here we present Cosmos, a novel blockchain network architecture that addresses a
 of these problems.  Cosmos is a network of many independent blockchains, called
 zones.  The zones are powered by Tendermint Core [\[8\]][8], which provides a
 high-performance, consistent, secure
-[PBFT-like](http://tendermint.com/blog/tendermint-vs-pbft/) consensus engine,
+[PBFT-like](https://blog.cosmos.network/tendermint-vs-pbft-12e9f294c9ab) consensus engine,
 where strict [fork-accountability](#fork-accountability) guarantees hold over
 the behaviour of malicious actors.  Tendermint Core's BFT consensus algorithm is
 well suited for scaling public proof-of-stake blockchains.

@@ -55,7 +55,7 @@ override any information in this plan in case of any conflicts.
 
 * The ICF’s fundraising goal will be soft-capped at USD $10,000,000 with a
   greater hidden cap during the first 6 hours.  For more details, see our
-  blog post on the [atom supply and distribution](https://cosmos.network/blog/atom-supply-distribution).
+  blog post on the [atom supply and distribution](https://blog.cosmos.network/atom-supply-and-distribution-b4dd3404ff26).
 
 * After the Fundraiser, the total number of atoms distributed multiplied by 1/3
   is inflated and allocated for the ICF, AIB, and the Initial Donors.
@@ -199,7 +199,7 @@ the sanctioned protocol, or otherwise collude to disrupt the network.
 
 ### Cosmos Roadmap
 
-_See the [Cosmos Roadmap](/blog/cosmos-roadmap) for more info._
+_See the [Cosmos Roadmap](https://blog.cosmos.network/cosmos-roadmap-28d7a478df51) for more info._
 
 #### Cosmos Essential Software and Services
 
