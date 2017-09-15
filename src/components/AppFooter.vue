@@ -24,7 +24,7 @@
         a(href='http://webchat.freenode.net/?channels=%23cosmos_network')
           i.fa.fa-commenting-o
           | IRC
-        a(href='https://www.reddit.com/r/thecosmos')
+        a(href='https://www.reddit.com/r/cosmosnetwork')
           i.fa.fa-reddit
           | Reddit
         a(href='https://cosmos.rocket.chat')
