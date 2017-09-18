@@ -1,4 +1,5 @@
 export const allPeople = state => state.people.all
+export const allEvent = state => state.event.all
 export const allPosts = state => state.posts.all
 export const faqElementsVisible = state => state.toc.faq.elementsVisible
 export const faqTocVisible = state => state.toc.faq.tocVisible
