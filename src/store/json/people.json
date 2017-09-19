@@ -2,7 +2,7 @@
   {
     "slug": "jae-kwon",
     "name": "Jae Kwon",
-    "title": "Tendermint CEO & Founder",
+    "title": "CEO & Founder",
     "bio": "Jae Kwon created Tendermint to save the world from needlessly wasting electricity to secure distributed ledgers. Along the way he realized that using quorums and cryptography instead of energy and hashing affords many advantages such as speed and scalability.",
     "ids": {
       "email": "jae",
@@ -16,7 +16,7 @@
   {
     "slug": "ethan-buchman",
     "name": "Ethan Buchman",
-    "title": "Tendermint CTO & Cofounder",
+    "title": "CTO & Cofounder",
     "bio": "Ethan sees consensus algorithms as a 21st century means for promoting social cohesion. He is driven to empower humans with new ways to coordinate and reach agreement at scale.",
     "ids": {
       "email": "ethan",
@@ -141,7 +141,7 @@
   {
     "slug": "gautier-marin",
     "name": "Gautier Marin",
-    "title": "Partnership Manager",
+    "title": "Governance Lead",
     "bio": "",
     "ids": {
       "email": "gautier",
