@@ -2,33 +2,39 @@
   <page-split>
     <page-header
       :title="metadata.title"
-      subtitle="The Tendermint team is currently working full time on bringing Cosmos to reality.<br><br><a href='https://tendermint.com/careers' target='_blank'>We are hiring!</a>"
+      subtitle="Cosmos is run by the Interchain Foundation (ICF).<br><br>The Tendermint team has been contracted by the ICF to develop the Cosmos Essential Software Services (CESS).<br><br><a href='https://tendermint.com/careers' target='_blank'>Tendermint is hiring!</a>"
       slot="header"
       type="split">
     </page-header>
     <ni-section>
       <div slot="title">Interchain Foundation Council</div>
-      <card-person
-        v-for="person in ppl('interchain')"
-        :key="person.slug"
-        :person="person">
-      </card-person>
+      <div class="people">
+        <card-person
+          v-for="person in ppl('interchain')"
+          :key="person.slug"
+          :person="person">
+        </card-person>
+      </div>
     </ni-section>
     <ni-section>
       <div slot="title">Tendermint Team</div>
-      <card-person
-        v-for="person in ppl('aib')"
-        :key="person.slug"
-        :person="person">
-      </card-person>
+      <div class="people">
+        <card-person
+          v-for="person in ppl('aib')"
+          :key="person.slug"
+          :person="person">
+        </card-person>
+      </div>
     </ni-section>
     <ni-section>
       <div slot="title">Tendermint Advisors</div>
-      <card-person
-        v-for="person in ppl('advisors')"
-        :key="person.slug"
-        :person="person">
-      </card-person>
+      <div class="people">
+        <card-person
+          v-for="person in ppl('advisors')"
+          :key="person.slug"
+          :person="person">
+        </card-person>
+      </div>
     </ni-section>
   </page-split>
 </template>
@@ -81,3 +87,24 @@ export default {
   }
 }
 </script>
+
+<style lang="stylus">
+@import '../styles/variables.styl'
+
+.people
+  max-width 960px
+
+@media screen and (min-width: 720px)
+  .people
+    display flex
+    flex-flow row wrap
+
+    .person-wrapper
+      flex 0 0 50%
+
+@media screen and (min-width: 960px)
+  .people
+    margin 0 auto
+    .person-wrapper
+      flex 0 0 33.333%
+</style>
