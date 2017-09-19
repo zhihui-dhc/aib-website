@@ -9,7 +9,7 @@
           p c/o Gubelstrasse 11
           p 6300 Zug, Switzerland
       section
-        header All In Bits
+        header Other Projects
         nav
           router-link(to="/") Cosmos
           a(href='https://ethermint.network') Ethermint
@@ -24,7 +24,7 @@
         a(href='http://webchat.freenode.net/?channels=%23cosmos_network')
           i.fa.fa-commenting-o
           | IRC
-        a(href='https://www.reddit.com/r/thecosmos')
+        a(href='https://www.reddit.com/r/cosmosnetwork')
           i.fa.fa-reddit
           | Reddit
         a(href='https://cosmos.rocket.chat')
@@ -36,7 +36,7 @@
       section
         header Developers
         a(href='https://github.com/tendermint/tendermint/wiki/Contributing' target='_blank') Contributing
-        a(href='https://tendermint.com/careers' target='_blank') Careers
+        a(href='https://tendermint.com/careers' target='_blank') Work at Tendermint
         a(href='https://github.com/cosmos' target='_blank') GitHub (Cosmos)
         a(href='https://github.com/tendermint' target='_blank') GitHub (Tendermint)
 </template>

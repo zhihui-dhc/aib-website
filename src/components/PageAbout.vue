@@ -2,12 +2,20 @@
   <page-split>
     <page-header
       :title="metadata.title"
-      subtitle="All In Bits, Inc. is currently working full time on bringing Cosmos to reality.<br><br><a href='https://tendermint.com/careers' target='_blank'>We are hiring!</a>"
+      subtitle="The Tendermint team is currently working full time on bringing Cosmos to reality.<br><br><a href='https://tendermint.com/careers' target='_blank'>We are hiring!</a>"
       slot="header"
       type="split">
     </page-header>
     <ni-section>
-      <div slot="title">All In Bits - Team</div>
+      <div slot="title">Interchain Foundation Council</div>
+      <card-person
+        v-for="person in ppl('interchain')"
+        :key="person.slug"
+        :person="person">
+      </card-person>
+    </ni-section>
+    <ni-section>
+      <div slot="title">Tendermint Team</div>
       <card-person
         v-for="person in ppl('aib')"
         :key="person.slug"
@@ -15,17 +23,9 @@
       </card-person>
     </ni-section>
     <ni-section>
-      <div slot="title">All In Bits - Advisors</div>
+      <div slot="title">Tendermint Advisors</div>
       <card-person
         v-for="person in ppl('advisors')"
-        :key="person.slug"
-        :person="person">
-      </card-person>
-    </ni-section>
-    <ni-section>
-      <div slot="title">Interchain Foundation Council</div>
-      <card-person
-        v-for="person in ppl('interchain')"
         :key="person.slug"
         :person="person">
       </card-person>
@@ -54,7 +54,7 @@ export default {
     return {
       metadata: {
         title: 'About',
-        desc: 'All In Bits, Inc. is currently working full time on bringing Cosmos to reality. We are hiring!'
+        desc: 'Tendermint, Inc. is currently working full time on bringing Cosmos to reality. We are hiring!'
       }
     }
   },
