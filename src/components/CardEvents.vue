@@ -1,5 +1,5 @@
 <template>
-  <ul class="clearfix">
+  <ul class="clearfix card-event">
     <li v-for="item in events">
       <div class="content">
         <div>
@@ -28,7 +28,8 @@
 
 
 <style lang="stylus">
-  @require '../styles/variables.styl'
+@require '../styles/variables.styl'
+.card-event
   .clearfix
     padding-bottom 20px
 
@@ -90,5 +91,4 @@
   @media screen  and (max-width: 768px)
     li
       width 100%
-
 </style>
