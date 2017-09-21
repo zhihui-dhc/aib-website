@@ -7,7 +7,7 @@
       </div>
       <div class="text">
         <div class="name">{{ person.name }}</div>
-        <div class="title">{{ person.title }}</div>
+        <div class="title">{{ person.groups[group] }}</div>
       </div>
     </div>
     <modal-person
@@ -40,7 +40,7 @@ export default {
       this.activePopup = state
     }
   },
-  props: ['person']
+  props: ['person', 'group']
 }
 </script>
 
