@@ -2,23 +2,12 @@
   <page-split>
     <page-header
       :title="metadata.title"
-      subtitle="Cosmos is run by the Interchain Foundation (ICF).<br><br>The Tendermint team has been contracted by the ICF to develop the Cosmos Essential Software Services (CESS).<br><br><a href='https://tendermint.com/careers' target='_blank'>Tendermint is hiring!</a>"
+      subtitle="The current All In Bits team."
       slot="header"
       type="split">
     </page-header>
     <ni-section>
-      <div slot="title">Interchain Foundation</div>
-      <div class="people">
-        <card-person
-          group="icf"
-          v-for="person in ppl('icf')"
-          :key="person.slug"
-          :person="person">
-        </card-person>
-      </div>
-    </ni-section>
-    <ni-section>
-      <div slot="title">Tendermint Team</div>
+      <div slot="title">Team</div>
       <div class="people">
         <card-person
           group="aib"
