@@ -7,6 +7,7 @@ const routes = [
   { path: '/faq', name: 'faq', component: r('Faq') },
   { path: '/plan', name: 'plan', component: r('Plan') },
   { path: '/plan/:locale', name: 'plan-localized', component: r('Plan') },
+  { path: '/events', name: 'events', component: r('Events') },
   { path: '/about', name: 'about', component: r('About') },
   { path: '/whitepaper', name: 'whitepaper', component: r('Whitepaper') },
   { path: '/whitepaper/:locale', name: 'whitepaper-localized', component: r('Whitepaper') },

@@ -1,8 +1,8 @@
 <template>
-  <router-link class="cover-alert" to="/events">
-    <span class="key">EVENT:</span>
+  <router-link class="cover-alert" to="/hackatom">
+    <span class="key">HACKATOM:</span>
     <span class="value">
-      We will be at UC Berkeley on October 2-3 for the Crypto Economics Security Conference (CESC 2017). Come join us!
+      We will host HackAtom 2017 #2, a $50,000 Cosmos hackathon starting August 5th.
     </span>
     <i class="fa fa-angle-double-right" aria-hidden="true"></i>
   </router-link>
