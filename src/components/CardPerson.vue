@@ -11,6 +11,7 @@
       </div>
     </div>
     <modal-person
+      :group="group"
       :person="person"
       v-if="activePopup"
       @click.native="setPopup(false)">
