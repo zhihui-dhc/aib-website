@@ -3,26 +3,10 @@ function r (page) { return () => import('../components/Page' + page) }
 
 const routes = [
   { path: '/', component: r('Index') },
-  { path: '/blog', component: r('RedirectToMedium') },
-  { path: '/faq', name: 'faq', component: r('Faq') },
-  { path: '/plan', name: 'plan', component: r('Plan') },
-  { path: '/plan/:locale', name: 'plan-localized', component: r('Plan') },
-  { path: '/events', name: 'events', component: r('Events') },
   { path: '/about', name: 'about', component: r('About') },
-  { path: '/whitepaper', name: 'whitepaper', component: r('Whitepaper') },
-  { path: '/whitepaper/:locale', name: 'whitepaper-localized', component: r('Whitepaper') },
-  { path: '/privacy', name: 'privacy', component: r('Privacy') },
-
-  { path: '/hackatom', name: 'hackatom-en-us', component: r('HackAtom') },
-  { path: '/hackatom/zh-cn', name: 'hackatom-zh-cn', component: r('HackAtomZhCn') },
-
-  // redirects
-  { path: '/whitepaper/en-US', redirect: '/whitepaper' },
-  { path: '/blog/:entry', redirect: '/blog' },
-
-  // wildcards
-  { path: '/404', component: r('404') },
-  { path: '*', component: r('404') }
+  { path: '/offices', component: r('Offices') },
+  { path: '/careers', component: r('CareersIndex') },
+  { path: '/careers/:entry', component: r('CareersEntry') }
 ]
 
 const router = new VueRouter({

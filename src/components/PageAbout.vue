@@ -7,18 +7,7 @@
       type="split">
     </page-header>
     <ni-section>
-      <div slot="title">Interchain Foundation</div>
-      <div class="people">
-        <card-person
-          group="icf"
-          v-for="person in ppl('icf')"
-          :key="person.slug"
-          :person="person">
-        </card-person>
-      </div>
-    </ni-section>
-    <ni-section>
-      <div slot="title">Tendermint Team</div>
+      <div slot="title">Team</div>
       <div class="people">
         <card-person
           group="aib"
@@ -28,6 +17,7 @@
         </card-person>
       </div>
     </ni-section>
+
   </page-split>
 </template>
 
@@ -80,9 +70,8 @@ export default {
 }
 </script>
 
-<style lang="stylus">
+<style scoped lang="stylus">
 @import '../styles/variables.styl'
-
 .people
   max-width 1024px
 

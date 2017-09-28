@@ -45,7 +45,7 @@ export default {
 }
 </script>
 
-<style lang="stylus">
+<style scoped lang="stylus">
 @import '../styles/variables.styl'
 
 .card-person
