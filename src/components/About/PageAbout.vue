@@ -24,7 +24,7 @@
 <script>
 import { mapGetters } from 'vuex'
 import CardPerson from './CardPerson'
-import NiSection from './NiSection'
+import NiSection from '../NiSection'
 import PageHeader from '@nylira/vue-page-header'
 import PageSplit from '@nylira/vue-page-split'
 export default {
@@ -71,7 +71,7 @@ export default {
 </script>
 
 <style scoped lang="stylus">
-@import '../styles/variables.styl'
+@import '../../styles/variables.styl'
 .people
   max-width 1024px
 

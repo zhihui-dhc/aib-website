@@ -1,12 +1,15 @@
 import VueRouter from 'vue-router'
-function r (page) { return () => import('../components/Page' + page) }
-
+const Index = resolve => require(['../components/Index/PageIndex'], resolve)
+const About = resolve => require(['../components/About/PageAbout'], resolve)
+const Offices = resolve => require(['../components/Offices/PageOffices'], resolve)
+const CareersIndex = resolve => require(['../components/Career/PageCareersIndex'], resolve)
+const CareersEntry = resolve => require(['../components/Career/PageCareersEntry'], resolve)
 const routes = [
-  { path: '/', component: r('Index') },
-  { path: '/about', name: 'about', component: r('About') },
-  { path: '/offices', component: r('Offices') },
-  { path: '/careers', component: r('CareersIndex') },
-  { path: '/careers/:entry', component: r('CareersEntry') }
+  { path: '/', component: Index },
+  { path: '/about', name: 'about', component: About },
+  { path: '/offices', component: Offices },
+  { path: '/careers', component: CareersIndex },
+  { path: '/careers/:entry', component: CareersEntry }
 ]
 
 const router = new VueRouter({

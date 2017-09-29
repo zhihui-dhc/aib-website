@@ -23,3 +23,9 @@ export default {
   }
 }
 </script>
+<style scoped lang="stylus">
+  @require '../../styles/variables.styl'
+  .page-index
+    background: url(../../assets/img/background.png)
+
+</style>

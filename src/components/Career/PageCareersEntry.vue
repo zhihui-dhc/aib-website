@@ -91,7 +91,7 @@ export default {
 
 
 <style  scoped  lang="stylus">
-@require '../styles/variables.styl'
+@require '../../styles/variables.styl'
 
 .page-career-entry
   .tags

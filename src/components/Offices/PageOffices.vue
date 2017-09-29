@@ -15,7 +15,7 @@
 <script>
   import { mapGetters } from 'vuex'
   import CardOffices from './CardOffices'
-  import NiSection from './NiSection'
+  import NiSection from '../NiSection'
   import PageHeader from '@nylira/vue-page-header'
   import PageSplit from '@nylira/vue-page-split'
 

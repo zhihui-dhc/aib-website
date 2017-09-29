@@ -33,7 +33,7 @@ export default {
   },
   computed: {
     avatarSrc () {
-      return require('../assets/images/people/' + this.person.slug + '.jpg')
+      return require('../../assets/images/people/' + this.person.slug + '.jpg')
     }
   },
   methods: {
@@ -46,7 +46,7 @@ export default {
 </script>
 
 <style scoped lang="stylus">
-@import '../styles/variables.styl'
+@import '../../styles/variables.styl'
 
 .card-person
   padding 0.5rem

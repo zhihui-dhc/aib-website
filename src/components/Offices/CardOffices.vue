@@ -22,7 +22,7 @@
 </script>
 
 <style lang="stylus">
-  @require '../styles/variables.styl'
+  @require '../../styles/variables.styl'
   .card-offices
     margin-left 20vw
     overflow hidden

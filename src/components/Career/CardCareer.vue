@@ -27,7 +27,7 @@ export default {
 </script>
 
 <style scoped lang="stylus">
-@require '../styles/variables.styl'
+@require '../../styles/variables.styl'
 
 .card-career + .card-career
   border-top none

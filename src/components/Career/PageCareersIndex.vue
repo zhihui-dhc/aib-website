@@ -32,7 +32,7 @@
 import { mapGetters } from 'vuex'
 import { union, orderBy } from 'lodash'
 import CardCareer from './CardCareer'
-import NiSection from './NiSection'
+import NiSection from '../NiSection'
 import PageHeader from '@nylira/vue-page-header'
 import PageSplit from '@nylira/vue-page-split'
 export default {
@@ -89,7 +89,7 @@ export default {
 
 
 <style scoped lang="stylus">
-@require '../styles/variables.styl'
+@require '../../styles/variables.styl'
 
 .page-careers-index
   .tags

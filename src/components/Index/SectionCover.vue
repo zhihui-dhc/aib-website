@@ -1,12 +1,12 @@
 <template lang='pug'>
 section.section-home-cover
   .section-container
-    img(src="../assets/img/All_In_Bits.png")
+    img(src="../../assets/img/All_In_Bits.png")
     div.link
       a(href='https://cosmos.network/',target='_blank')
-        img(style="margin-left: 12px;",src="../assets/img/cosmos.png")
+        img(style="margin-left: 12px;",src="../../assets/img/cosmos.png")
       a(href='https://tendermint.com/',target='_blank')
-        img(style="margin-left: 14px;",src="../assets/img/tindermint.png")
+        img(style="margin-left: 14px;",src="../../assets/img/tindermint.png")
 </template>
 
 <script>
@@ -16,12 +16,10 @@ export default {
 </script>
 
 <style scoped lang="stylus">
-@require '../styles/variables.styl'
+@require '../../styles/variables.styl'
 
 .section-home-cover
-  flex: 1;
-  background-color: rebeccapurple;
-  background: url(../assets/img/background.png) ;
+  background: url(../../assets/img/background.png) ;
 
   .section-container
     padding 2*x 1.5*x
