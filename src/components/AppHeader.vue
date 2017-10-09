@@ -4,50 +4,35 @@ header.app-header
     .header-item(@click='toggleMenuApp', v-if='!desktop')
       i.fa.fa-bars(v-if='!activeMenuApp')
       i.fa.fa-times(v-else='')
-    router-link.header-item(to='/')
-      img(src='../assets/images/cosmos-logo-black-alpha.png', alt='Cosmos Logo')
+    router-link.center.header-item(to='/')
+      img(src='../assets/img/logo.png', alt='All In Bits')
     menu.menu-popup.menu-app(v-if='activeMenuApp || desktop')
       nav.nav-app
-        router-link(to='/plan', @click.native='close', exact='') Plan
-        router-link(to='/whitepaper', @click.native='close', exact='') Whitepaper
-        router-link(to='/faq', @click.native='close', exact='') FAQ
-        router-link(to='/events', @click.native='close', exact='') Events
+        router-link(to='/', @click.native='close', exact='') Home
         router-link(to='/about', @click.native='close', exact='') About
-      nav.nav-external
-        // a(href='https://tendermint.com/careers', @click.native='close', target='_blank')
-          | Careers #[i.fa.fa-external-link]
-        a(href='https://blog.cosmos.network' @click.native='close' target='_blank')
-          | Blog #[i.fa.fa-medium]
-        // a(href='https://github.com/cosmos/cosmos' @click.native='close' target='_blank')
-          | GitHub #[i.fa.fa-github]
-    .header-item.header-item-alert(@click='toggleMenuFundraiser')
-      i.fa.fa-hourglass-end(v-if='!activeMenuFundraiser')
-      i.fa.fa-times(v-else='')
-      span.label(v-if='desktop') Fundraiser
-    menu-fundraiser(:status='fundraiserStatus', v-if='activeMenuFundraiser', @click.native='toggleMenuFundraiser')
+        router-link(to='/offices', @click.native='close', exact='') Offices
+        router-link(to='/careers', @click.native='close', exact='') Careers
+
+
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
 import disableScroll from 'disable-scroll'
-import MenuFundraiser from './MenuFundraiser'
+
 export default {
   name: 'app-header',
-  components: {
-    MenuFundraiser
-  },
   computed: {
     ...mapGetters(['config'])
   },
   data: () => ({
     activeMenuApp: false,
-    activeMenuFundraiser: false,
+
     desktop: false
   }),
   methods: {
     close () {
       this.activeMenuApp = false
-      this.activeMenuFundraiser = false
       disableScroll.off()
     },
     goto (route) {
@@ -84,7 +69,7 @@ export default {
 }
 </script>
 
-<style lang="stylus">
+<style scoped lang="stylus">
 @require '../styles/variables.styl'
 
 .app-header
@@ -191,6 +176,8 @@ export default {
     user-select none
 
 @media screen and (max-width:1023px)
+  .center
+        margin 0 auto
   .menu-popup
     height 100vh
     position fixed
@@ -258,7 +245,7 @@ export default {
       flex-flow row
       align-items center
       > a
-        padding 0 1rem
+        padding 0 3rem
         color txt
         line-height 3rem
         i.fa

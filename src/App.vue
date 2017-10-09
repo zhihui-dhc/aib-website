@@ -1,34 +1,24 @@
 <template>
   <div id="app">
-    <app-header></app-header>
-    <div id="app-content">
-      <router-view></router-view>
-    </div>
+    <app-header class="header"></app-header>
+    <router-view class="main"></router-view>
     <app-footer></app-footer>
-    <notifications
-      color="hsl(208,100%,25%)"
-      :notifications="notifications">
-    </notifications>
+
   </div>
 </template>
 
 <script>
 import AppHeader from './components/AppHeader.vue'
 import AppFooter from './components/AppFooter.vue'
-import Notifications from '@nylira/vue-notifications'
+
 import store from './store/index.js'
-import { mapGetters } from 'vuex'
 
 export default {
   components: {
     AppHeader,
     AppFooter,
-    Notifications,
     enRss: require('./assets/rss/en.xml'),
     koRss: require('./assets/rss/ko.xml')
-  },
-  computed: {
-    ...mapGetters(['notifications'])
   },
   head: {
     meta () {
@@ -78,3 +68,4 @@ export default {
 </script>
 
 <style src="./styles/app.styl" lang="stylus"></style>
+
