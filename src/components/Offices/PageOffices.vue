@@ -1,8 +1,8 @@
 <template>
   <page-split class="PageOffices">
     <page-header
-      title="Offices"
-      subtitle="Join us at Tendermint to build and improve <a href='https://cosmos.network'>Cosmos</a> and Tendermint.<br><br>Jobs here are constantly updated. If your specialty is unlisted, we encourage you to still apply."
+      :title="metadata.title"
+      :subtitle="metadata.desc"
       type="split"
       slot="header">
     </page-header>

@@ -1,7 +1,7 @@
 {
-  "name": "cosmos-network",
+  "name": "aib-website",
   "version": "1.0.0",
-  "description": "The website for Cosmos, Internet of Blockchains",
+  "description": "The website for All In Bits, Inc.",
   "author": "All In Bits, Inc.",
   "private": true,
   "scripts": {
