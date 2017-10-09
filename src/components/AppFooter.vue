@@ -1,8 +1,6 @@
 <template >
   <div class="footer">
-    <div class="footer_center">
-        Copyright 2017 All In Bits, Inc.
-    </div>
+    &copy; 2017 All In Bits, Inc.
   </div>
 </template>
 
@@ -13,19 +11,11 @@ export default {
 </script>
 
 <style scoped lang="stylus">
-  @require '../styles/variables.styl'
+@require '../styles/variables.styl'
 
-  .footer
-    box-shadow: 0 -1px 0 0 rgba(0,0,0,0.1);
-    height: 40px;
-    margin-top: -40px;
-    position: relative;
-    text-align: center;
-    background-color: #fff;
-    .footer_center
-      max-width: 1024px;
-      margin: 0 auto;
-      font-size: 14px;
-      line-height: 40px
-
+.footer
+  height 3rem
+  border-top 1px solid bc
+  line-height 3rem
+  text-align center
 </style>

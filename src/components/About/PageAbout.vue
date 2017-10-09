@@ -7,7 +7,6 @@
       type="split">
     </page-header>
     <ni-section>
-      <div slot="title">Team</div>
       <div class="people">
         <card-person
           group="aib"
@@ -17,7 +16,6 @@
         </card-person>
       </div>
     </ni-section>
-
   </page-split>
 </template>
 

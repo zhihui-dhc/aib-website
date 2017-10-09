@@ -56,7 +56,7 @@
       "website": "nylira.com"
     },
     "groups": {
-      "aib": "Chief Design Officer"
+      "aib": "Head of Design"
     }
   },
   {
@@ -72,19 +72,7 @@
       "website": "epicenter.tv"
     },
     "groups": {
-      "aib": "Chief Operating Officer"
-    }
-  },
-  {
-    "slug": "jim-yang",
-    "name": "Jim Yang",
-    "bio": "Jim Yang co-founded Identyx, where he served as CEO until its acquisition by Red Hat. Identyx developed an open source enterprise identity management software.",
-    "ids": {
-      "linkedin": "jimyang"
-    },
-    "groups": {
-      "aib": "Strategy Officer",
-      "icf": "Advisor"
+      "aib": "Head of Research"
     }
   },
   {
@@ -375,6 +363,18 @@
     },
     "groups": {
       "aib": "Advisor"
+    }
+  },
+  {
+    "slug": "jim-yang",
+    "name": "Jim Yang",
+    "bio": "Jim Yang co-founded Identyx, where he served as CEO until its acquisition by Red Hat. Identyx developed an open source enterprise identity management software.",
+    "ids": {
+      "linkedin": "jimyang"
+    },
+    "groups": {
+      "aib": "Strategy",
+      "icf": "Advisor"
     }
   },
   {

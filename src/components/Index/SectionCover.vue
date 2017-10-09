@@ -1,12 +1,10 @@
 <template lang='pug'>
 section.section-home-cover
-  .section-container
-    img(src="../../assets/img/All_In_Bits.png")
-    div.link
-      a(href='https://cosmos.network/',target='_blank')
-        img(style="margin-left: 12px;",src="../../assets/img/cosmos.png")
-      a(href='https://tendermint.com/',target='_blank')
-        img(style="margin-left: 14px;",src="../../assets/img/tindermint.png")
+  .logos
+    a.logo(href='https://cosmos.network/',target='_blank')
+      img(src="../../assets/images/logo-cosmos.png")
+    a.logo(href='https://tendermint.com/',target='_blank')
+      img(src="../../assets/images/logo-tendermint.png")
 </template>
 
 <script>
@@ -15,46 +13,54 @@ export default {
 }
 </script>
 
-<style scoped lang="stylus">
+<style lang="stylus">
 @require '../../styles/variables.styl'
 
 .section-home-cover
-  background: url(../../assets/img/background.png) ;
+  background #000
+  min-height 85vh
 
-  .section-container
-    padding 2*x 1.5*x
-    position relative
-    z-index 5
+  display flex
+  .logos
+    flex 1
 
-    padding-top 16rem
+    padding 2vw
+
+    display flex
+    flex-flow column nowrap
+    align-items center
+    justify-content center
+
+    max-width 1024px
+    margin 0 auto
+
+  a.logo
+    flex 1
+    margin 2vw
     text-align center
-    .link
-      font-size 0
-      margin-top: 1vh;
-      img
-        border 1px solid rgba(0,0,0,0)
-        margin-right  10px
-        transition border 1s;
-
-      img:hover
-        border 1px solid #44ffd1
-
-@media screen and (max-width:1023px)
-  .section-container
-    padding-top 8rem !important
-@media screen and (max-width:1023px)
-  .section-container
     img
-      width 400px
-    .link
-        img
-          width 200px
-@media screen and (max-width:667px)
-  .section-container
-    img
-      width 260px
-    .link
+      margin 0 auto
+
+      display block
+      width 65vw
+      border 1px solid transparent
+
+    &:hover img
+      border 1px solid hsl(0,0,50)
+      box-shadow hsl(0,0,25) 0.5rem 0.5rem 0 0
+
+@media screen and (min-width: 768px)
+  .section-home-cover
+    a.logo img
+        width 50vw
+
+@media screen and (min-width: 1024px)
+  .section-home-cover
+    .logos
+      flex-flow row nowrap
+      padding 2vw 0
+    a.logo
+      margin 2vw 0
       img
-        width 50%
-        min-width 200px
+        width 30vw
 </style>

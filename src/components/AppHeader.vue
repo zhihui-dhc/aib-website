@@ -4,16 +4,13 @@ header.app-header
     .header-item(@click='toggleMenuApp', v-if='!desktop')
       i.fa.fa-bars(v-if='!activeMenuApp')
       i.fa.fa-times(v-else='')
-    router-link.center.header-item(to='/')
-      img(src='../assets/img/logo.png', alt='All In Bits')
+    router-link.header-item(to='/') All In Bits
+    .header-item
     menu.menu-popup.menu-app(v-if='activeMenuApp || desktop')
       nav.nav-app
-        router-link(to='/', @click.native='close', exact='') Home
-        router-link(to='/about', @click.native='close', exact='') About
-        router-link(to='/offices', @click.native='close', exact='') Offices
-        router-link(to='/careers', @click.native='close', exact='') Careers
-
-
+        router-link(to='/about', @click.native='close' exact) About
+        router-link(to='/offices', @click.native='close' exact) Offices
+        router-link(to='/careers', @click.native='close' exact) Careers
 </template>
 
 <script>
@@ -98,6 +95,7 @@ export default {
     padding 0 1rem
 
     color txt
+    font-weight bold
     cursor pointer
     &:hover
       color link
@@ -176,8 +174,6 @@ export default {
     user-select none
 
 @media screen and (max-width:1023px)
-  .center
-        margin 0 auto
   .menu-popup
     height 100vh
     position fixed
