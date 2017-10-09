@@ -2,7 +2,7 @@
   <page-split>
     <page-header
       :title="metadata.title"
-      subtitle="The current All In Bits team."
+      subtitle="The All In Bits team."
       slot="header"
       type="split">
     </page-header>
@@ -40,7 +40,7 @@ export default {
     return {
       metadata: {
         title: 'About',
-        desc: 'Tendermint, Inc. is currently working full time on bringing Cosmos to reality. We are hiring!'
+        desc: 'The current All In Bits team.'
       }
     }
   },
@@ -49,7 +49,7 @@ export default {
       return {
         inner: this.metadata.title,
         separator: '-',
-        complement: 'Cosmos - Internet of Blockchains'
+        complement: 'All In Bits, Inc.'
       }
     },
     meta () {

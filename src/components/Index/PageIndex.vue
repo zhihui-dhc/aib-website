@@ -15,9 +15,9 @@ export default {
   head: {
     title () {
       return {
-        inner: 'All In Bits',
+        inner: 'Welcome',
         separator: '-',
-        complement: 'Internet of Blockchains'
+        complement: 'All In Bits, Inc.'
       }
     }
   }

@@ -33,8 +33,8 @@
     data () {
       return {
         metadata: {
-          title: 'offices',
-          desc: 'Tendermint, Inc. is currently working full time on bringing Cosmos to reality. We are hiring!'
+          title: 'Offices',
+          desc: 'All In Bits, Inc. has offices in San Francisco, Toronto, and Berlin.'
         }
       }
     },
@@ -43,7 +43,7 @@
         return {
           inner: this.metadata.title,
           separator: '-',
-          complement: 'Cosmos - Internet of Blockchains'
+          complement: 'All In Bits, Inc.'
         }
       }
     }

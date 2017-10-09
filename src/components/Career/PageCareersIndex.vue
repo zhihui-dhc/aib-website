@@ -82,7 +82,7 @@ export default {
     }
   },
   mounted () {
-    document.title = 'Careers - Tendermint'
+    document.title = 'Careers - All In Bits, Inc.'
   }
 }
 </script>
