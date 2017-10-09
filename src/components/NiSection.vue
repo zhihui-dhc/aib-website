@@ -13,7 +13,7 @@
   </section>
 </template>
 
-<style lang="stylus">
+<style scoped lang="stylus">
 @require '../styles/variables.styl'
 
 .ni-section

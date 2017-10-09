@@ -1,28 +1,15 @@
 import VueRouter from 'vue-router'
-function r (page) { return require('../components/Page' + page) }
-
+const Index = resolve => require(['../components/Index/PageIndex'], resolve)
+const About = resolve => require(['../components/About/PageAbout'], resolve)
+const Offices = resolve => require(['../components/Offices/PageOffices'], resolve)
+const CareersIndex = resolve => require(['../components/Career/PageCareersIndex'], resolve)
+const CareersEntry = resolve => require(['../components/Career/PageCareersEntry'], resolve)
 const routes = [
-  { path: '/', component: r('Index') },
-  { path: '/blog', component: r('RedirectToMedium') },
-  { path: '/faq', name: 'faq', component: r('Faq') },
-  { path: '/plan', name: 'plan', component: r('Plan') },
-  { path: '/plan/:locale', name: 'plan-localized', component: r('Plan') },
-  { path: '/events', name: 'events', component: r('Events') },
-  { path: '/about', name: 'about', component: r('About') },
-  { path: '/whitepaper', name: 'whitepaper', component: r('Whitepaper') },
-  { path: '/whitepaper/:locale', name: 'whitepaper-localized', component: r('Whitepaper') },
-  { path: '/privacy', name: 'privacy', component: r('Privacy') },
-
-  { path: '/hackatom', name: 'hackatom-en-us', component: r('HackAtom') },
-  { path: '/hackatom/zh-cn', name: 'hackatom-zh-cn', component: r('HackAtomZhCn') },
-
-  // redirects
-  { path: '/whitepaper/en-US', redirect: '/whitepaper' },
-  { path: '/blog/:entry', redirect: '/blog' },
-
-  // wildcards
-  { path: '/404', component: r('404') },
-  { path: '*', component: r('404') }
+  { path: '/', component: Index },
+  { path: '/about', name: 'about', component: About },
+  { path: '/offices', component: Offices },
+  { path: '/careers', component: CareersIndex },
+  { path: '/careers/:entry', component: CareersEntry }
 ]
 
 const router = new VueRouter({
