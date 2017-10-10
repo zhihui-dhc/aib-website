@@ -13,7 +13,6 @@
 </div>
 </template>
 
-
 <script>
 import { image } from '../../scripts/cdn.js'
 export default {

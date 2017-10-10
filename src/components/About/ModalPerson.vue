@@ -61,7 +61,7 @@ export default {
 </script>
 
 <style scoped lang="stylus">
-@import '../../styles/variables.styl'
+@import '~@/styles/variables.styl'
 
 .modal-wrapper
   position fixed
