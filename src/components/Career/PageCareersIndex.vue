@@ -5,12 +5,6 @@
       subtitle="Join us at All In Bits to build and improve <a href='https://cosmos.network'>Cosmos</a> and Tendermint.<br><br>Jobs here are constantly updated. If your specialty is unlisted, we encourage you to still apply."
       type="split"
       slot="header">
-      <!--
-      <div class="tags">
-        <div id="tag-all" class="tag active" @click="setActiveTag($event)">all</div>
-        <div class="tag" v-for="tag in tags" @click="setActiveTag($event,tag)">{{ tag }}</div>
-      </div>
-      -->
     </page-header>
     <ni-section v-if="technical.length > 0">
       <div slot="title">Technical Positions</div>
