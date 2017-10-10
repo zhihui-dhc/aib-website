@@ -1,7 +1,7 @@
 <template>
   <div class="modal-wrapper">
     <div class="modal-person">
-      <img class="avatar" :src="avatarSrc">
+      <img class="avatar" :src="portrait(person.slug)">
       <div class="text">
         <div class="name">{{ person.name }}</div>
         <div class="title">{{ person.groups[group] }}</div>
@@ -41,16 +41,15 @@
 <script>
 import disableScroll from 'disable-scroll'
 import CardPerson from './CardPerson'
+import { portrait } from '../../scripts/cdn.js'
 export default {
   name: 'section-people',
   components: {
     CardPerson
   },
-  computed: {
-    avatarSrc () {
-      return require('../../assets/images/people/' + this.person.slug + '.jpg')
-    }
-  },
+  data: () => ({
+    portrait: portrait
+  }),
   mounted () {
     disableScroll.on()
   },

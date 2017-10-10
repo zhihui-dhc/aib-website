@@ -1,24 +1,26 @@
 <template>
-  <div class="card-offices">
-    <div class="flexlist" v-for="item in offices">
-      <div class="img-box">
-        <img :src="'./static/offices/'+item.img">
-      </div>
-      <div class="text">
-        <div class="title">{{item.title}}</div>
-        <div class="subTitle">{{item.subTitle}}</div>
-        <div class="address">{{item.address}}</div>
-      </div>
+<div class="card-offices">
+  <div class="flexlist" v-for="i in offices">
+    <div class="img-box">
+      <img :src="image('offices', i.slug)">
+    </div>
+    <div class="text">
+      <div class="title">{{i.title}}</div>
+      <div class="subTitle">{{i.subTitle}}</div>
+      <div class="address">{{i.address}}</div>
     </div>
   </div>
+</div>
 </template>
 
 
 <script>
-  export default {
-    name: 'card-offices',
-    props: ['offices']
-  }
+import { image } from '../../scripts/cdn.js'
+export default {
+  name: 'card-offices',
+  data: () => ({ image: image }),
+  props: ['offices']
+}
 </script>
 
 <style lang="stylus">
@@ -34,6 +36,9 @@
       .img-box
         float left
         width 110px
+        img
+          width 110px
+          height 110px
       .text
         width: 290px;
         float left

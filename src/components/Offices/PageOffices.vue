@@ -6,15 +6,14 @@
       type="split"
       slot="header">
     </page-header>
-    <card-offices :offices="allOffices">
-    </card-offices>
+    <card-office :offices="allOffices">
+    </card-office>
   </page-split>
 </template>
 
-
 <script>
   import { mapGetters } from 'vuex'
-  import CardOffices from './CardOffices'
+  import CardOffice from './CardOffice'
   import NiSection from '../NiSection'
   import PageHeader from '@nylira/vue-page-header'
   import PageSplit from '@nylira/vue-page-split'
@@ -25,7 +24,7 @@
       NiSection,
       PageHeader,
       PageSplit,
-      CardOffices
+      CardOffice
     },
     computed: {
       ...mapGetters(['allOffices'])
