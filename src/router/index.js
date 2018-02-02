@@ -19,7 +19,7 @@ const routes = [
   { path: '/careers/ethereum-developer', redirect: '/careers/developer-ethereum' },
   { path: '/careers/p2p-networking-engineer', redirect: '/careers/developer-p2p' },
   { path: '/careers/ops-office-manager', redirect: '/careers/office-manager-sf' },
-  { path: '/careers/berlin-office-manager', redirect: '/careers/office-manager-berlin' },
+  { path: '/careers/berlin-office-manager', redirect: '/careers/office-manager-berlin' }
 ]
 
 const router = new VueRouter({
