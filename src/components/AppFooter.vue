@@ -1,6 +1,6 @@
 <template >
   <div class="footer">
-    &copy; 2017 All In Bits, Inc.
+    &copy; {{ new Date().getFullYear() }} All In Bits, Inc.
   </div>
 </template>
 
@@ -11,7 +11,7 @@ export default {
 </script>
 
 <style scoped lang="stylus">
-@require '../styles/variables.styl'
+@require '~variables'
 
 .footer
   height 3rem

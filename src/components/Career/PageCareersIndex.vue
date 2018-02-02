@@ -1,30 +1,27 @@
-<template>
-  <page-split class="page-careers-index">
-    <page-header
-      title="Careers"
-      subtitle="Join us at All In Bits to build and improve <a href='https://cosmos.network'>Cosmos</a> and Tendermint.<br><br>Jobs here are constantly updated. If your specialty is unlisted, we encourage you to still apply."
-      type="split"
-      slot="header">
-    </page-header>
-    <ni-section v-if="technical.length > 0">
-      <div slot="title">Technical Positions</div>
-      <card-career v-for="c in technical" :key="c.id" :career="c"></card-career>
-    </ni-section>
-    <ni-section v-if="operations.length > 0">
-      <div slot="title">Operations Positions</div>
-      <card-career v-for="c in operations" :key="c.id" :career="c"></card-career>
-    </ni-section>
-    <ni-section v-if="community.length > 0">
-      <div slot="title">Community Positions</div>
-      <card-career v-for="c in community" :key="c.id" :career="c"></card-career>
-    </ni-section>
-  </page-split>
+<template lang="pug">
+page-split.page-careers-index
+  page-header(
+    title='Careers'
+    subtitle="Join us at All In Bits to build and improve <a href='https://cosmos.network'>Cosmos</a> and Tendermint.<br><br>Jobs here are constantly updated. If your specialty is unlisted, we encourage you to still apply."
+    type='split'
+    slot='header')
+
+  ni-section(v-if='technical.length > 0')
+    div(slot='title') Technical Positions
+    card-career(v-for='c in technical', :key='c.id', :career='c')
+
+  ni-section(v-if='operations.length > 0')
+    div(slot='title') Operations Positions
+    card-career(v-for='c in operations', :key='c.id', :career='c')
+
+  ni-section(v-if='community.length > 0')
+    div(slot='title') Community Positions
+    card-career(v-for='c in community', :key='c.id', :career='c')
 </template>
 
 <script>
-
 import { mapGetters } from 'vuex'
-import { union, orderBy } from 'lodash'
+import { orderBy } from 'lodash'
 import CardCareer from './CardCareer'
 import NiSection from '../NiSection'
 import PageHeader from '@nylira/vue-page-header'
@@ -38,52 +35,30 @@ export default {
     PageSplit
   },
   computed: {
-    tags () {
-      let tags = []
-      this.careers.map(function (career) {
-        tags = union(tags, career.tags)
-      })
-      return tags
-    },
     technical () {
-      return this.careers.filter(c => c.area === 'technical' && c.weight !== 0)
+      return this.careers.filter(c => c.area === 'technical')
     },
     operations () {
-      return this.careers.filter(c => c.area === 'operations' && c.weight !== 0)
+      return this.careers.filter(c => c.area === 'operations')
     },
     community () {
-      return this.careers.filter(c => c.area === 'community' && c.weight !== 0)
+      return this.careers.filter(c => c.area === 'community')
     },
     careers () {
       let orderedCareers = orderBy(this.allCareers, ['title'], ['asc'])
       return orderedCareers
-
-      /*
-      let activeTag = this.activeTag
-
-      if (activeTag === 'all') {
-        return orderedCareers
-      } else {
-        return orderedCareers.filter(career => career.tags.includes(activeTag))
-      }
-      */
     },
     ...mapGetters(['allCareers'])
   },
-  data () {
-    return {
-      activeTag: 'all'
-    }
-  },
   mounted () {
-    document.title = 'Careers - All In Bits, Inc.'
+    document.title = 'Careers - All In Bits'
   }
 }
 </script>
 
 
-<style scoped lang="stylus">
-@require '../../styles/variables.styl'
+<style lang="stylus">
+@require '~variables'
 
 .page-careers-index
   .tags
