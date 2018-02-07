@@ -9,7 +9,17 @@ const routes = [
   { path: '/about', name: 'about', component: About },
   { path: '/offices', component: Offices },
   { path: '/careers', component: CareersIndex },
-  { path: '/careers/:entry', component: CareersEntry }
+  { path: '/careers/:entry', component: CareersEntry },
+
+  // redirect old JSON Career urls to new Markdown Career urls
+  { path: '/careers/networking-consensus-engineer',
+    redirect: '/careers/developer-consensus' },
+  { path: '/careers/apps-developer', redirect: '/careers/developer-cosmos' },
+  { path: '/careers/devops-sysops-engineer', redirect: '/careers/developer-devops' },
+  { path: '/careers/ethereum-developer', redirect: '/careers/developer-ethereum' },
+  { path: '/careers/p2p-networking-engineer', redirect: '/careers/developer-p2p' },
+  { path: '/careers/ops-office-manager', redirect: '/careers/office-manager-sf' },
+  { path: '/careers/berlin-office-manager', redirect: '/careers/office-manager-berlin' }
 ]
 
 const router = new VueRouter({
